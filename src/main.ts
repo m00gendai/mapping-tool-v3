@@ -1,7 +1,7 @@
 import "./styles/globals.css"
 import L, { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
-import { placeCoords } from "./utils/queryFunctions"
+import { placeCoords, placeLoci } from "./utils/queryFunctions"
 
 interface QueryInput{
   designation: string
@@ -30,6 +30,10 @@ inputArea.className="sidebar_inputArea"
 const fieldDesignations: QueryInput[] = [
   {
     designation: "Coordinates", 
+    value: "",
+  },
+  {
+    designation: "LOCI",
     value: "",
   },
 ]
@@ -65,7 +69,7 @@ fieldDesignations.forEach(field =>{
       if(value === ""){
         return
       }
-      const results:string[][] = placeCoords(value)!
+      const results:string[][] = field.designation === "Coordinates" ? placeCoords(value)! : placeLoci(value)!
       results.forEach(result =>{
         const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
         markerArray.push(marker)
