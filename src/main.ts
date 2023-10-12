@@ -14,7 +14,10 @@ interface State{
 
 const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
 
-const mapWidth:string = getComputedStyle(document.getElementById("map")!).width
+let mapWidth:string = getComputedStyle(document.getElementById("map")!).width
+window.addEventListener("resize", function(){
+  mapWidth = getComputedStyle(document.getElementById("map")!).width
+})
 
 const state: State ={
   popupVisible: false
@@ -137,6 +140,9 @@ clearMakers.addEventListener("click", function(){
 })
 
 document.getElementById("toolbar")!.style.width = mapWidth
+window.addEventListener("resize", function(){
+  document.getElementById("toolbar")!.style.width = mapWidth
+})
 document.getElementById("toolbar")?.appendChild(clearMakers)
 document.getElementById("toolbar")?.appendChild(popupToggle)
 document.getElementById("toolbar")?.appendChild(focusSwitzerland)
