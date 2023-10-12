@@ -69,7 +69,11 @@ fieldDesignations.forEach(field =>{
       })
       const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
       const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
-      map.fitBounds(bnds)
+      if(bounds.length > 1){
+        map.fitBounds(bnds)
+      } else {
+        map.setView(markerArray[0].getLatLng(), 10)
+      }
     })
 
     textareaField.appendChild(textarea)
