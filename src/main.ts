@@ -40,6 +40,10 @@ const fieldDesignations: QueryInput[] = [
     designation: "NAVAID",
     value: "",
   },
+  {
+    designation: "WAYPOINT",
+    value: "",
+  },
 ]
 
 const markerArray: L.Marker[] = []
