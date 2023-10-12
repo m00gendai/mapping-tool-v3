@@ -1,5 +1,5 @@
 import "./styles/globals.css"
-import L, { LatLngBoundsExpression, LatLngBoundsLiteral, marker } from "leaflet"
+import L, { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
 import { placeCoords } from "./utils/queryFunctions"
 
@@ -12,7 +12,7 @@ interface State{
   popupVisible: boolean
 }
 
-const map: L.Map = L.map('map').setView([51.505, -0.09], 13);
+const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
 
 const mapWidth:string = getComputedStyle(document.getElementById("map")!).width
 
@@ -36,6 +36,13 @@ const fieldDesignations: QueryInput[] = [
 
 const markerArray: L.Marker[] = []
 
+function clearMarkers(){
+  markerArray.forEach(marker =>{
+    marker.removeFrom(map)
+  })
+  markerArray.length = 0
+}
+
 fieldDesignations.forEach(field =>{
     const textareaField: HTMLDivElement = document.createElement("div")
     textareaField.className=`sidebar_area`
@@ -50,10 +57,7 @@ fieldDesignations.forEach(field =>{
     button.innerHTML=field.designation
 
     button.addEventListener("click", function(){
-      markerArray.forEach(marker =>{
-        marker.removeFrom(map)
-      })
-      markerArray.length = 0
+      clearMarkers()
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
       const value: string = target?.value
@@ -104,5 +108,21 @@ popupToggle.addEventListener("click", function(){
   state.popupVisible = !state.popupVisible
 })
 
+const focusSwitzerland: HTMLButtonElement = document.createElement("button")
+focusSwitzerland.innerText = "Focus Switzerland"
+focusSwitzerland.className="toolbar_button"
+focusSwitzerland.addEventListener("click", function(){
+  map.setView([46.80, 8.22], 8);
+})
+
+const clearMakers: HTMLButtonElement = document.createElement("button")
+clearMakers.innerText = "Clear Markers"
+clearMakers.className="toolbar_button"
+clearMakers.addEventListener("click", function(){
+  clearMarkers()
+})
+
 document.getElementById("toolbar")!.style.width = mapWidth
+document.getElementById("toolbar")?.appendChild(clearMakers)
 document.getElementById("toolbar")?.appendChild(popupToggle)
+document.getElementById("toolbar")?.appendChild(focusSwitzerland)
