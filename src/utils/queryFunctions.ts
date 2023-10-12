@@ -1,4 +1,5 @@
 import { calcDegToDec } from "./conversions"
+import {airports} from "../EAD_Data/EAD_AD_ALL"
 
 export function placeCoords(coordinatesValue:string){
     const coordsArray: string[] = coordinatesValue.split(/\s+/g) // s+ is one or more whitespace characters
@@ -35,4 +36,28 @@ export function placeCoords(coordinatesValue:string){
     })
     
     return returnCoordinates
+}
+
+export function placeLoci(lociValue:string){
+    const newAirports = airports.map(data => {return [
+        data.codeId, 
+        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
+        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`,
+        data.txtName]}) 
+    const newAirportCodes = newAirports.map(code => {return code[0]}) // makes a one dimensional array just with airport codes
+    const multiLocis:string[][] = []
+    const multiPorts = lociValue.toUpperCase().split(" ") // splits the input separated by space and makes an array
+    multiPorts.forEach(multiPort => { // for every searched loci...
+        for(const airport of newAirports){ // ...and for every airport array of the multi dimensional airport data array...
+            if(multiPort.toUpperCase() == airport[0].toUpperCase()){ // if the searched loci equals the airport code of the airport data array...
+                multiLocis.push([airport[1], airport[2], `${airport[0]}<br>${airport[3]}`])
+            } 
+        }
+    })
+    const unknownAirports = multiPorts.filter(airport => { return newAirportCodes.indexOf(airport) == -1; }) // filters the searched locis array for items not present in the airport codes array...
+    if(unknownAirports.length > 0){
+        alert(`Airports ${unknownAirports.join(" ")} not found`) //... and alerts each one
     }
+    
+    return multiLocis
+}
