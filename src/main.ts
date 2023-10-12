@@ -1,7 +1,7 @@
 import "./styles/globals.css"
-import L, { LatLngBoundsExpression, LatLngBoundsLiteral, marker } from "leaflet"
+import L, { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
-import { placeCoords } from "./utils/queryFunctions"
+import { placeCoords, placeLoci, placeNavaid } from "./utils/queryFunctions"
 
 interface QueryInput{
   designation: string
@@ -12,7 +12,7 @@ interface State{
   popupVisible: boolean
 }
 
-const map: L.Map = L.map('map').setView([51.505, -0.09], 13);
+const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
 
 const mapWidth:string = getComputedStyle(document.getElementById("map")!).width
 
@@ -32,9 +32,28 @@ const fieldDesignations: QueryInput[] = [
     designation: "Coordinates", 
     value: "",
   },
+  {
+    designation: "LOCI",
+    value: "",
+  },
+  {
+    designation: "NAVAID",
+    value: "",
+  },
+  {
+    designation: "WAYPOINT",
+    value: "",
+  },
 ]
 
 const markerArray: L.Marker[] = []
+
+function clearMarkers(){
+  markerArray.forEach(marker =>{
+    marker.removeFrom(map)
+  })
+  markerArray.length = 0
+}
 
 fieldDesignations.forEach(field =>{
     const textareaField: HTMLDivElement = document.createElement("div")
@@ -50,10 +69,7 @@ fieldDesignations.forEach(field =>{
     button.innerHTML=field.designation
 
     button.addEventListener("click", function(){
-      markerArray.forEach(marker =>{
-        marker.removeFrom(map)
-      })
-      markerArray.length = 0
+      clearMarkers()
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
       const value: string = target?.value
@@ -61,7 +77,9 @@ fieldDesignations.forEach(field =>{
       if(value === ""){
         return
       }
-      const results:string[][] = placeCoords(value)!
+      const results:string[][] = field.designation === "Coordinates" ? placeCoords(value)! : 
+                                  field.designation === "LOCI" ? placeLoci(value)!  :
+                                  placeNavaid(value)!
       results.forEach(result =>{
         const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
         markerArray.push(marker)
@@ -104,5 +122,21 @@ popupToggle.addEventListener("click", function(){
   state.popupVisible = !state.popupVisible
 })
 
+const focusSwitzerland: HTMLButtonElement = document.createElement("button")
+focusSwitzerland.innerText = "Focus Switzerland"
+focusSwitzerland.className="toolbar_button"
+focusSwitzerland.addEventListener("click", function(){
+  map.setView([46.80, 8.22], 8);
+})
+
+const clearMakers: HTMLButtonElement = document.createElement("button")
+clearMakers.innerText = "Clear Markers"
+clearMakers.className="toolbar_button"
+clearMakers.addEventListener("click", function(){
+  clearMarkers()
+})
+
 document.getElementById("toolbar")!.style.width = mapWidth
+document.getElementById("toolbar")?.appendChild(clearMakers)
 document.getElementById("toolbar")?.appendChild(popupToggle)
+document.getElementById("toolbar")?.appendChild(focusSwitzerland)
