@@ -15,9 +15,66 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar{
+    background: red;
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1/1.5;
+    overflow-y: scroll;
+}
+
+#sidebarInner{
+    background: green;
+    position: relative;
+    width: 100%;
 }
 
 #map{
+    position: relative;
     height: 100%;
     width: 100%;
+}
+
+.sidebar_inputArea{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.sidebar_area{
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 3rem;
+    margin: 0.5rem 0;
+}
+
+.sidebar_textarea{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0 0.5rem 0;
+}
+
+.sidebar_button{
+    position: relative;
+    width: 30%;
+    color: blue;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
