@@ -14,6 +14,8 @@ interface State{
 
 const map: L.Map = L.map('map').setView([51.505, -0.09], 13);
 
+const mapWidth:string = getComputedStyle(document.getElementById("map")!).width
+
 const state: State ={
   popupVisible: false
 }
@@ -85,6 +87,7 @@ document.getElementById("sidebarInner")?.appendChild(inputArea)
 
 const popupToggle: HTMLButtonElement = document.createElement("button")
 popupToggle.innerText="Popup Toggle"
+popupToggle.className="toolbar_button"
 popupToggle.addEventListener("click", function(){
   if(state.popupVisible){
     const popups: NodeList = document.querySelectorAll(".leaflet-popup-close-button")
@@ -100,4 +103,6 @@ popupToggle.addEventListener("click", function(){
   }
   state.popupVisible = !state.popupVisible
 })
-document.getElementById("sidebarInner")?.appendChild(popupToggle)
+
+document.getElementById("toolbar")!.style.width = mapWidth
+document.getElementById("toolbar")?.appendChild(popupToggle)

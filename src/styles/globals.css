@@ -37,7 +37,8 @@ body{
 #map{
     position: relative;
     height: 100%;
-    width: 100%;
+    display: flex;
+    flex-grow: 1;
 }
 
 .sidebar_inputArea{
@@ -77,4 +78,20 @@ body{
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+#toolbar{
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    height: 5rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.toolbar_button{
+    z-index: 1001;
 }
