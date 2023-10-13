@@ -21,17 +21,22 @@ body{
 }
 
 #sidebar{
-    background: red;
+    background-color: #2d3436;
+background-image: linear-gradient(180deg, #2d3436 0%, #000000 50%);
     position: relative;
     height: 100%;
-    aspect-ratio: 1/1.5;
+    width: 30%;
     overflow-y: scroll;
+    direction: rtl;
+    box-shadow: 5px 0px 5px 0px black;
+    z-index:1000;
 }
 
 #sidebarInner{
-    background: green;
+    background: rgba(255,255,255,0);
     position: relative;
     width: 100%;
+    direction: ltr;
 }
 
 #map{
@@ -65,9 +70,12 @@ body{
     position: relative;
     width: 70%;
     height: 100%;
-    padding: 0;
+    padding: 2px;
     border: 0;
     margin: 0 0.5rem 0;
+    background:rgba(255,255,255,0.1);
+    color: white;
+    font-family: monospace;
 }
 
 .sidebar_button{
@@ -82,16 +90,30 @@ body{
 
 #toolbar{
     position: absolute;
-    bottom: 2rem;
-    right: 0;
-    height: 5rem;
+    bottom: 1rem;
+    right: 25px;
+    height: 3rem;
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
+    background-color: #2d3436;
+background-image: linear-gradient(180deg, #2d3436 0%, #000000 50%);
+border-radius: 50px;
+overflow: hidden;
 }
 
 .toolbar_button{
-    z-index: 1001;
+    position: relative;
+    border: 0;
+    outline: 2px solid white;
+    box-sizing: border-box;
+    height: 100%;
+    background: rgba(255,255,255,0);
+    color: white;
+    margin: 0 1px;
+}
+.toolbar_button:hover{
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
 }
