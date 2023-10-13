@@ -35,7 +35,8 @@ inputArea.className="sidebar_inputArea"
 
 const queryAllState:QueryInput = {
   designation: "ALL",
-  value: ""
+  value: "",
+  type: ""
 }
 
 const fieldDesignations: QueryInput[] = [
