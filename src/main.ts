@@ -1,6 +1,6 @@
-import "./styles/globals.css"
 import L, { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
+import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { createIcon } from "./configs"
@@ -13,6 +13,13 @@ interface QueryInput{
 
 interface State{
   popupVisible: boolean
+  sidebarSelect: string
+}
+
+interface SidebarFlag{
+  type: string
+  icon: string
+  text: string
 }
 
 const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
@@ -23,8 +30,20 @@ window.addEventListener("resize", function(){
 })
 
 const state: State ={
-  popupVisible: false
+  popupVisible: false,
+  sidebarSelect: "query",
 }
+
+function setSidebarVisibility(state:State){
+  const sidebars:NodeList = document.querySelectorAll(".sidebarInner")
+  sidebars.forEach(sidebar =>{
+    const item = sidebar as HTMLElement
+    document.getElementById(`${item.id}`)!.style.display = "none"
+  })
+  document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.style.display = "flex"
+}
+
+setSidebarVisibility(state)
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -71,6 +90,31 @@ const fieldDesignations: QueryInput[] = [
     type: "brgdist"
   },
 ]
+
+const sidebarFlags:SidebarFlag[] = [
+  {
+    type: "query",
+    icon: "public/position-marker.svg",
+    text: "Query items on map"
+  },
+  {
+    type: "conversion",
+    icon: "public/calculator.svg",
+    text: "Unit conversions"
+  },
+]
+
+sidebarFlags.forEach(flag =>{
+  const button:HTMLButtonElement = document.createElement("button")
+  button.className="flagButton"
+  button.style.backgroundImage = `url("${flag.icon}")`
+  button.title = flag.text
+  document.getElementById("sidebarFlags")?.appendChild(button)
+  button.addEventListener("click", function(){
+    state.sidebarSelect = flag.type
+    setSidebarVisibility(state)
+  })
+})
 
 const markerArray: L.Marker[] = []
 
@@ -223,7 +267,7 @@ fieldDesignations.forEach(field =>{
     inputArea.appendChild(textareaField)
 })
 
-document.getElementById("sidebarInner")?.appendChild(inputArea)
+document.getElementById("sidebarInner_query")?.appendChild(inputArea)
 
 const popupToggle: HTMLButtonElement = document.createElement("button")
 popupToggle.innerText="Popup Toggle"
