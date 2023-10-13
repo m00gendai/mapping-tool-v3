@@ -48,7 +48,7 @@ const fieldDesignations: QueryInput[] = [
   {
     designation: "PLACE",
     value: "",
-    type: "place"
+    type: "location"
   },
   {
     designation: "NAVAID",
