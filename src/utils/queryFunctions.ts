@@ -166,3 +166,20 @@ export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert
     })
     return newMarkerArray
 }
+
+// RETURNS QUERY RESULT FOR PLACES
+
+export async function placePlace(placeField:string){
+    let multiPlaces:string[][] = []
+    const query:string[] = placeField.split(",")
+    for(const search of query){
+        const places = await fetch(`https://api.geoapify.com/v1/geocode/search?text=${search}&bias=countrycode:ch&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`).then(result => result.json())
+        console.log(places)
+        for(const place of places.features){
+            if(!(place.properties.result_type === "amenity" && place.properties.street)){
+                multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}`])
+            }
+        }
+    }
+    return multiPlaces
+}

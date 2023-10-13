@@ -1,7 +1,7 @@
 import "./styles/globals.css"
 import L, { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
-import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep } from "./utils/queryFunctions"
+import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { createIcon } from "./configs"
 
@@ -41,14 +41,14 @@ const queryAllState:QueryInput = {
 
 const fieldDesignations: QueryInput[] = [
   {
-    designation: "COORD", 
-    value: "",
-    type: "coordinate"
-  },
-  {
     designation: "LOCI",
     value: "",
     type: "airport"
+  },
+  {
+    designation: "PLACE",
+    value: "",
+    type: "place"
   },
   {
     designation: "NAVAID",
@@ -59,6 +59,11 @@ const fieldDesignations: QueryInput[] = [
     designation: "WAYPOINT",
     value: "",
     type: "waypoint"
+  },
+  {
+    designation: "COORD", 
+    value: "",
+    type: "coordinate"
   },
   {
     designation: "BRG/DIST",
@@ -159,7 +164,7 @@ fieldDesignations.forEach(field =>{
     button.className="sidebar_button"
     button.innerHTML=field.designation
 
-    button.addEventListener("click", function(){
+    button.addEventListener("click", async function(){
       clearMarkers()
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
@@ -172,7 +177,8 @@ fieldDesignations.forEach(field =>{
                                   field.designation === "LOCI" ? placeLoci(value)!  :
                                   field.designation === "NAVAID" ? placeNavaid(value)! :
                                   field.designation === "WAYPOINT" ? placeRep(value)! :
-                                  placeBrgDist(value)!
+                                  field.designation === "BRG/DIST" ? placeBrgDist(value)! :
+                                  await placePlace(value)!
         addMarker(results, field.type)
       markerArray.forEach(marker =>{
         marker.addTo(map)
