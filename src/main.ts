@@ -258,9 +258,9 @@ clearMakers.addEventListener("click", function(){
   clearMarkers()
 })
 
-document.getElementById("toolbar")!.style.width = mapWidth
+document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
 window.addEventListener("resize", function(){
-  document.getElementById("toolbar")!.style.width = mapWidth
+  document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
 })
 document.getElementById("toolbar")?.appendChild(clearMakers)
 document.getElementById("toolbar")?.appendChild(popupToggle)
