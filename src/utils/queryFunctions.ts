@@ -1,6 +1,9 @@
 import { calcDegToDec } from "./conversions"
-import {airports} from "../EAD_Data/EAD_AD_ALL"
-import {navaids} from "../EAD_Data/EAD_NAV_ALL"
+import { airports } from "../EAD_Data/EAD_AD_ALL"
+import { navaids } from "../EAD_Data/EAD_NAV_ALL"
+import { waypoints } from "../EAD_Data/EAD_WPT_ALL"
+
+import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 
 // RETURNS QUERY RESULTS FOR COORDINATES
 export function placeCoords(coordinatesValue:string){
@@ -90,5 +93,76 @@ export function placeNavaid(navaidValue:String){
             alert(`Navaids ${unknownNavaids.join(" ")} not found`)
         }
         return multiNavs
-    
+}
+
+// RETURNS QUERY RESULT FOR WAYPOINTS
+export function placeRep(repField:string){
+
+    const newReps = waypoints.map(data => {return [
+        data.codeId, 
+        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
+        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`]})
+    const newRepCodes = newReps.map(code => {return code[0]})
+    let multiWays:string[][] = []
+    const multiReps = repField.toUpperCase().split(" ")
+    multiReps.forEach(multiRep => {
+        for(const rep of newReps){
+            if(multiRep.toUpperCase() == rep[0].toUpperCase()){
+                multiWays.push([rep[1], rep[2], rep[0]])
+            }
+        }
+    })
+    const unknownReps = multiReps.filter(rep => { return newRepCodes.indexOf(rep) == -1 })
+    if(unknownReps.length > 0){ 
+        alert(`Reporting Points ${unknownReps.join(" ")} not found`)
+    }
+    return multiWays
+}
+
+// RETURNS QUERY RESULT FOR POINT AT BEARGING/DISTANCE FROM NAVAID
+export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert 360° azimuth to 180/-180 bearing
+    const mappedNavaidsLatLng = navaids.map(data => {return [
+        data.codeId, 
+        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
+        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`,
+        data.txtName]})
+    const mappedWaypointsLatLng = waypoints.map(data => {return [
+        data.codeId, 
+        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
+        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`]})
+    const brgDistArray = BrgDistValue.split(/\s+/g) // s+ is one or more whitespace characters
+    let newMarkerArray:string[][] = []
+    brgDistArray.forEach(brgDist => {
+        if(brgDist.match(/\b([a-zA-Z]){3}[0-9]{3}[0-9]{3}\b/g)){ 
+            const navaid:string = brgDist.substring(0,3).toUpperCase()
+            const bearing:number = parseInt(brgDist.substring(3,6))
+            const distanceNM:number = parseInt(brgDist.substring(6,9))
+            const distanceM:number = (distanceNM*1.852)*1000
+            for(const mappedNavaid of mappedNavaidsLatLng){
+                if(mappedNavaid[0] == navaid){
+                    const lat:number = parseFloat(mappedNavaid[1])
+                    const lon:number = parseFloat(mappedNavaid[2])
+                    const p1 = new LatLon(lat, lon)
+                    const p2 = p1.destinationPoint(distanceM, bearing)
+                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${navaid}${brgDist.substring(3,6)}${brgDist.substring(6,9)}`])
+                }
+            }
+        }
+        if(brgDist.match(/\b([a-zA-Z]){5}[0-9]{3}[0-9]{3}\b/g)){ 
+            const waypoint:string = brgDist.substring(0,5).toUpperCase()
+            const bearing:number = parseInt(brgDist.substring(5,8))
+            const distanceNM:number = parseInt(brgDist.substring(8,11))
+            const distanceM:number = (distanceNM*1.852)*1000
+            for(const mappedWaypoint of mappedWaypointsLatLng){
+                if(mappedWaypoint[0] == waypoint){
+                    const lat:number = parseFloat(mappedWaypoint[1])
+                    const lon:number = parseFloat(mappedWaypoint[2])
+                    const p1 = new LatLon(lat, lon)
+                    const p2 = p1.destinationPoint(distanceM, bearing)
+                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${waypoint}${brgDist.substring(5,8)}${brgDist.substring(8,11)}`])
+                }
+            }
+        }
+    })
+    return newMarkerArray
 }
