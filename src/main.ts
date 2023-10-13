@@ -117,6 +117,7 @@ async function queryTriggerAll(){
   const deconstructedWaypoints:string[] = deconstructedRte[2]
   const deconstructedCoord:string[] = deconstructedRte[3]
   const deconstructedBrgDist:string[] = deconstructedRte[4]
+  const deconstructedOther:string[] = deconstructedRte[5]
 
   if(deconstructedNavaids.length !== 0){
     const results: string[][] = placeNavaid(deconstructedNavaids.join(" "))
@@ -137,6 +138,10 @@ async function queryTriggerAll(){
   if(deconstructedBrgDist.length !== 0){
     const results: string[][] = placeBrgDist(deconstructedBrgDist.join(" "))
     addMarker(results, "brgdist")
+  }
+  if(deconstructedOther.length !== 0){
+    const results: string[][] = await placePlace(deconstructedOther.join(" "))
+    addMarker(results, "location")
   }
 
 markerArray.forEach(marker =>{

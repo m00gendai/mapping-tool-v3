@@ -1,6 +1,7 @@
 import { airports } from "../EAD_Data/EAD_AD_ALL"
 import { navaids } from "../EAD_Data/EAD_NAV_ALL"
 import { waypoints } from "../EAD_Data/EAD_WPT_ALL"
+import _ from "lodash"
 
 const sameNameLocationsWaypoints = [
     "EVIAN", "ROCHE"
@@ -14,9 +15,9 @@ export function routeDeconstructor(rte:string){
     const foundWaypoints:string[] = checkWaypoints(rte, mappedWaypoints)
     const foundBearingDistance:string[] = checkBearingDistance(rte)
     const foundLocis:string[] = checkLocis(rte, mappedAirports)
-   // const foundOther = checkOther(rte, foundNavaids, foundWaypoints, foundLocis)
+    const foundOther = checkOther(rte, foundNavaids, foundWaypoints, foundLocis)
     const foundCoordinates = checkCoordinates(rte)
-    return [foundNavaids, foundLocis, foundWaypoints, foundCoordinates, foundBearingDistance]
+    return [foundNavaids, foundLocis, foundWaypoints, foundCoordinates, foundBearingDistance, foundOther]
 }
 
 function checkNavaids(rte:string, mappedNavaids:string[]){
@@ -83,13 +84,13 @@ function checkWaypoints(rte:string, mappedWaypoints:string[]){
     }
     return waypoints
 }
-/*
-function checkOther(rte, navaids, waypoints, locis){
+
+function checkOther(rte:string, navaids:string[], waypoints:string[], locis:string[]){
     rte = _.deburr(rte)
     const otherMatch = rte.match(/\b([A-Z]){3,}\b/g)
-    let otherWords = []
-    let checkArray = []
-    let checkArray2 = ["VFR", "IFR", "DCT", "STAY", "VOR", "NDB", "DME", "TACAN", "VORTAC", "SID", "STAR", "ILS"]
+    let otherWords:string[] = []
+    let checkArray:string[] = []
+    let checkArray2:string[] = ["VFR", "IFR", "DCT", "STAY", "VOR", "NDB", "DME", "TACAN", "VORTAC", "SID", "STAR", "ILS"]
     if(navaids){
         navaids.forEach(navaid => {
             checkArray.push(navaid)
@@ -119,7 +120,6 @@ function checkOther(rte, navaids, waypoints, locis){
     }
     return otherWords
 }
-*/
 
 function checkCoordinates(rte:string){
     // coord 1234N01234E
