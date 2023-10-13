@@ -2,6 +2,7 @@ import "./styles/globals.css"
 import L, { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep } from "./utils/queryFunctions"
+import { routeDeconstructor } from "./utils/routeDeconstructor"
 
 interface QueryInput{
   designation: string
@@ -29,6 +30,11 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const inputArea = document.createElement("div")
 inputArea.className="sidebar_inputArea"
+
+const queryAllState:QueryInput = {
+  designation: "ALL",
+  value: ""
+}
 
 const fieldDesignations: QueryInput[] = [
   {
@@ -61,6 +67,84 @@ function clearMarkers(){
   })
   markerArray.length = 0
 }
+
+const queryAllField: HTMLDivElement = document.createElement("div")
+queryAllField.className=`sidebar_area`
+const queryAll: HTMLTextAreaElement = document.createElement("textarea")
+queryAll.className="sidebar_textarea"
+queryAll.id = `sidebar_textarea_queryAll`
+const queryAllButton: HTMLButtonElement = document.createElement("button")
+queryAllButton.className="sidebar_button"
+queryAllButton.innerHTML=queryAllState.designation
+
+queryAllField.appendChild(queryAll)
+queryAllField.appendChild(queryAllButton)
+inputArea.appendChild(queryAllField)
+
+queryAllButton.addEventListener("click", function(){
+  clearMarkers()
+  queryAllState.value = ""
+  const target = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
+  const value: string = target?.value
+  queryAllState.value = value
+  if(value === ""){
+    return
+  }
+  const deconstructedRte:string[][] = routeDeconstructor(value.toUpperCase())
+  // navaids, locis, waypoints, coordinates, brgDist
+  const deconstructedNavaids:string[] = deconstructedRte[0]
+  const deconstructedLocis:string[] = deconstructedRte[1]
+  const deconstructedWaypoints:string[] = deconstructedRte[2]
+  const deconstructedCoord:string[] = deconstructedRte[3]
+  const deconstructedBrgDist:string[] = deconstructedRte[4]
+
+  if(deconstructedNavaids.length !== 0){
+    const results: string[][] = placeNavaid(deconstructedNavaids.join(" "))
+    results.forEach(result =>{
+      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
+      markerArray.push(marker)
+    })
+  }
+  if(deconstructedLocis.length !== 0){
+    const results: string[][] = placeLoci(deconstructedLocis.join(" "))
+    results.forEach(result =>{
+      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
+      markerArray.push(marker)
+    })
+  }
+  if(deconstructedWaypoints.length !== 0){
+    const results: string[][] = placeRep(deconstructedWaypoints.join(" "))
+    results.forEach(result =>{
+      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
+      markerArray.push(marker)
+    })
+  }
+  if(deconstructedCoord.length !== 0){
+    const results: string[][] = placeCoords(deconstructedCoord.join(" "))
+    results.forEach(result =>{
+      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
+      markerArray.push(marker)
+    })
+  }
+  if(deconstructedBrgDist.length !== 0){
+    const results: string[][] = placeBrgDist(deconstructedBrgDist.join(" "))
+    results.forEach(result =>{
+      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
+      markerArray.push(marker)
+    })
+  }
+
+markerArray.forEach(marker =>{
+  marker.addTo(map)
+})
+const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
+const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
+if(bounds.length > 1){
+  map.fitBounds(bnds)
+} else {
+  map.setView(markerArray[0].getLatLng(), 10)
+}
+})
 
 fieldDesignations.forEach(field =>{
     const textareaField: HTMLDivElement = document.createElement("div")
