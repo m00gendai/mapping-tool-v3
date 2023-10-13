@@ -3,10 +3,12 @@ import L, { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
+import { createIcon } from "./configs"
 
 interface QueryInput{
   designation: string
   value: string
+  type: string
 }
 
 interface State{
@@ -33,29 +35,35 @@ inputArea.className="sidebar_inputArea"
 
 const queryAllState:QueryInput = {
   designation: "ALL",
-  value: ""
+  value: "",
+  type: ""
 }
 
 const fieldDesignations: QueryInput[] = [
   {
     designation: "COORD", 
     value: "",
+    type: "coordinate"
   },
   {
     designation: "LOCI",
     value: "",
+    type: "airport"
   },
   {
     designation: "NAVAID",
     value: "",
+    type: "navaid",
   },
   {
     designation: "WAYPOINT",
     value: "",
+    type: "waypoint"
   },
   {
     designation: "BRG/DIST",
     value: "",
+    type: "brgdist"
   },
 ]
 
@@ -81,6 +89,13 @@ queryAllField.appendChild(queryAll)
 queryAllField.appendChild(queryAllButton)
 inputArea.appendChild(queryAllField)
 
+function addMarker(results:string[][], type:string){
+  results.forEach(result =>{
+    const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])], {icon:createIcon(type)}).bindPopup(result[2], {autoClose: false})
+    markerArray.push(marker)
+  })
+}
+
 queryAllButton.addEventListener("click", function(){
   clearMarkers()
   queryAllState.value = ""
@@ -100,38 +115,23 @@ queryAllButton.addEventListener("click", function(){
 
   if(deconstructedNavaids.length !== 0){
     const results: string[][] = placeNavaid(deconstructedNavaids.join(" "))
-    results.forEach(result =>{
-      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
-      markerArray.push(marker)
-    })
+    addMarker(results, "navaid")
   }
   if(deconstructedLocis.length !== 0){
     const results: string[][] = placeLoci(deconstructedLocis.join(" "))
-    results.forEach(result =>{
-      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
-      markerArray.push(marker)
-    })
+    addMarker(results, "airport")
   }
   if(deconstructedWaypoints.length !== 0){
     const results: string[][] = placeRep(deconstructedWaypoints.join(" "))
-    results.forEach(result =>{
-      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
-      markerArray.push(marker)
-    })
+    addMarker(results, "waypoint")
   }
   if(deconstructedCoord.length !== 0){
     const results: string[][] = placeCoords(deconstructedCoord.join(" "))
-    results.forEach(result =>{
-      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
-      markerArray.push(marker)
-    })
+    addMarker(results, "coordinate")
   }
   if(deconstructedBrgDist.length !== 0){
     const results: string[][] = placeBrgDist(deconstructedBrgDist.join(" "))
-    results.forEach(result =>{
-      const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
-      markerArray.push(marker)
-    })
+    addMarker(results, "brgdist")
   }
 
 markerArray.forEach(marker =>{
@@ -173,10 +173,7 @@ fieldDesignations.forEach(field =>{
                                   field.designation === "NAVAID" ? placeNavaid(value)! :
                                   field.designation === "WAYPOINT" ? placeRep(value)! :
                                   placeBrgDist(value)!
-      results.forEach(result =>{
-        const marker: L.Marker<any> = L.marker([parseFloat(result[0]), parseFloat(result[1])]).bindPopup(result[2], {autoClose: false})
-        markerArray.push(marker)
-      })
+        addMarker(results, field.type)
       markerArray.forEach(marker =>{
         marker.addTo(map)
       })
