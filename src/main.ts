@@ -48,7 +48,7 @@ const fieldDesignations: QueryInput[] = [
   {
     designation: "PLACE",
     value: "",
-    type: "place"
+    type: "location"
   },
   {
     designation: "NAVAID",
@@ -101,7 +101,7 @@ function addMarker(results:string[][], type:string){
   })
 }
 
-queryAllButton.addEventListener("click", function(){
+async function queryTriggerAll(){
   clearMarkers()
   queryAllState.value = ""
   const target = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
@@ -149,23 +149,21 @@ if(bounds.length > 1){
 } else {
   map.setView(markerArray[0].getLatLng(), 10)
 }
+}
+
+queryAllButton.addEventListener("click", function(){
+  queryTriggerAll()
 })
 
-fieldDesignations.forEach(field =>{
-    const textareaField: HTMLDivElement = document.createElement("div")
-    textareaField.className=`sidebar_area`
+queryAllField.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    e.preventDefault()
+    queryTriggerAll()
+  }
+})
 
-    const textarea: HTMLTextAreaElement = document.createElement("textarea")
-    textarea.className="sidebar_textarea"
-    textarea.id = `sidebar_textarea_${field.designation}`
-    textarea.value = field.value
-    
-    const button: HTMLButtonElement = document.createElement("button")
-    button.className="sidebar_button"
-    button.innerHTML=field.designation
-
-    button.addEventListener("click", async function(){
-      clearMarkers()
+async function queryTrigger(field:QueryInput){
+  clearMarkers()
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
       const value: string = target?.value
@@ -190,6 +188,29 @@ fieldDesignations.forEach(field =>{
       } else {
         map.setView(markerArray[0].getLatLng(), 10)
       }
+}
+
+fieldDesignations.forEach(field =>{
+    const textareaField: HTMLDivElement = document.createElement("div")
+    textareaField.className=`sidebar_area`
+
+    const textarea: HTMLTextAreaElement = document.createElement("textarea")
+    textarea.className="sidebar_textarea"
+    textarea.id = `sidebar_textarea_${field.designation}`
+    textarea.value = field.value
+    textarea.addEventListener("keypress", function(e){
+      if(e.key === "Enter"){
+        e.preventDefault()
+        queryTrigger(field)
+      }
+    })
+    
+    const button: HTMLButtonElement = document.createElement("button")
+    button.className="sidebar_button"
+    button.innerHTML=field.designation
+
+    button.addEventListener("click", function(){
+      queryTrigger(field)
     })
 
     textareaField.appendChild(textarea)
