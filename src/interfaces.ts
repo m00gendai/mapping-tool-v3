@@ -8,6 +8,15 @@ export interface State{
     popupVisible: boolean
     sidebarSelect: string
     totalDistance: number
+    setSpeed: number
+    setDep: string
+    setDist: number[]
+    setDest: string
+    setTime: number[]
+    setTimeFields: number
+    setTotalDist: number
+    setTotalTime:number
+    markerClicks: number
 }
 
 export interface SidebarFlag{
