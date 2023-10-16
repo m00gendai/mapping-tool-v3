@@ -5,7 +5,7 @@ import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { fieldDesignations, queryAllState, state, sidebarFlags } from "./configs"
-import { generateArcLine, createIcon, calculateDist } from "./utils/generalUtils"
+import { generateArcLine, createIcon, buildTable } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
 
@@ -33,7 +33,7 @@ function clearPolylineArray(){
   })
   polylineDecoratorArry.length = 0
   polylineMarkerArray.length = 0
-  document.getElementById("polylineField")!.innerText = ""
+  document.getElementById("polylineField_table_body")!.innerText = ""
   document.getElementById("polylineField")!.style.display = "none"
   state.totalDistance = 0
 }
@@ -140,30 +140,32 @@ async function queryTriggerAll(){
     addMarker(results, "location")
   }
 
-markerArray.forEach(marker =>{
+  document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
+    const inputField = document.getElementById("polylineField_speed")! as HTMLInputElement
+    state.setSpeed = parseInt(inputField.value)
+    const timeFields:NodeList = document.querySelectorAll(".polylineField_table_body_time")
+    timeFields.forEach((timeField, index) =>{
+      const time = state.setDist[index]/state.setSpeed
+      const n = new Date(0,0);
+      n.setSeconds(+time * 60 * 60);
+      const htmlTimeField = timeField as HTMLElement
+      htmlTimeField.innerText = n.toTimeString().slice(0, 8)
+    })
+  })
+
+markerArray.forEach((marker) =>{
   marker.addTo(map)
   marker.addEventListener("dblclick", function(){
     polylineMarkerArray.push(marker)
+    
     if(polylineMarkerArray.length > 1){
+      buildTable(polylineMarkerArray, state)
+    state.markerClicks = state.markerClicks + 1
       document.getElementById("polylineField")!.style.display = "flex"
       const polyline = L.polyline(generateArcLine(polylineMarkerArray),{color:"red"})
       polylineArray.push(polyline)
-      const lineFeed: HTMLDivElement = document.createElement("div")
-      lineFeed.className="polylineField_lineFeed"
-      document.getElementById("polylineField")!.appendChild(lineFeed)
-      state.totalDistance = state.totalDistance + calculateDist(
-        polylineMarkerArray[polylineMarkerArray.length-2].getLatLng().lat, 
-        polylineMarkerArray[polylineMarkerArray.length-2].getLatLng().lng, 
-        polylineMarkerArray[polylineMarkerArray.length-1].getLatLng().lat, 
-        polylineMarkerArray[polylineMarkerArray.length-1].getLatLng().lng, 
-      )
-      const innerTxt: string = `${polylineMarkerArray[polylineMarkerArray.length-2].getPopup()!.getContent()!.toString().split("<br>")[0]} ${(calculateDist(
-        polylineMarkerArray[polylineMarkerArray.length-2].getLatLng().lat, 
-        polylineMarkerArray[polylineMarkerArray.length-2].getLatLng().lng, 
-        polylineMarkerArray[polylineMarkerArray.length-1].getLatLng().lat, 
-        polylineMarkerArray[polylineMarkerArray.length-1].getLatLng().lng, 
-        )/1852).toFixed(2)}NM ${polylineMarkerArray[polylineMarkerArray.length-1].getPopup()!.getContent()!.toString().split("<br>")[0]} ${(state.totalDistance/1852).toFixed(2)}NM`
-        lineFeed.innerHTML += innerTxt
+      
+
     }
     polylineArray.forEach(polyline =>{
       polyline.addTo(map)
