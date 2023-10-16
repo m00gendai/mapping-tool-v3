@@ -1,14 +1,59 @@
-import L from "leaflet"
+import { QueryInput, State, SidebarFlag } from "./interfaces"
 
-export function createIcon(type:string){
-    const icon = L.icon({
-        iconUrl: `/marker_${type}.png`,
-        iconSize: [38, 38],
-        iconAnchor: [14, 38],
-        popupAnchor: [0, -40],
-        shadowUrl: '',
-        shadowSize: [68, 95],
-        shadowAnchor: [22, 94]
-    })
-    return icon
+export const state: State ={
+    popupVisible: false,
+    sidebarSelect: "query",
+    totalDistance: 0
+  }
+
+export const fieldDesignations: QueryInput[] = [
+    {
+      designation: "LOCI",
+      value: "",
+      type: "airport"
+    },
+    {
+      designation: "PLACE",
+      value: "",
+      type: "location"
+    },
+    {
+      designation: "NAVAID",
+      value: "",
+      type: "navaid",
+    },
+    {
+      designation: "WAYPOINT",
+      value: "",
+      type: "waypoint"
+    },
+    {
+      designation: "COORD", 
+      value: "",
+      type: "coordinate"
+    },
+    {
+      designation: "BRG/DIST",
+      value: "",
+      type: "brgdist"
+    },
+  ]
+
+export const queryAllState:QueryInput = {
+    designation: "ALL",
+    value: "",
+    type: ""
 }
+
+export const sidebarFlags:SidebarFlag[] = [
+    {
+      type: "query",
+      icon: "public/position-marker.svg",
+      text: "Query items on map"
+    },
+    {
+      type: "conversion",
+      icon: "public/calculator.svg",
+      text: "Unit conversions"
+    },
+  ]
