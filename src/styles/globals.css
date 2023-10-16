@@ -183,7 +183,7 @@ body{
     left: calc(50% + 25vw);
     transform: translateX(calc(-50% - 12.5vw));
     width: 50vw;
-    height: 5rem;
+    height: 9rem;
     background: black;
     z-index:1000;
     color: white;
@@ -193,9 +193,35 @@ body{
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
+    font-family: monospace;
 }
 
 .polylineField_lineFeed{
     position:relative;
     width: 100%;
+}
+
+#polylineField_table{
+    position: relative;
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0.5rem 0;
+}
+
+#polylineField_table_head > tr {
+    background: darkgoldenrod;
+}
+
+#polylineField_table_head > tr > th {
+    text-align: left;
+    padding: 0.25rem 1rem;
+    color: black;
+}
+
+#polylineField_table_body > tr:nth-child(even){
+    background: #0f0f0f;
+}
+
+#polylineField_table_body > tr > td {
+    padding: 0.25rem 1rem;
 }
