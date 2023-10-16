@@ -3,7 +3,16 @@ import { QueryInput, State, SidebarFlag } from "./interfaces"
 export const state: State ={
     popupVisible: false,
     sidebarSelect: "query",
-    totalDistance: 0
+    totalDistance: 0,
+    setSpeed: 0,
+    setDep: "",
+    setDist: [],
+    setDest: "",
+    setTime: [],
+    setTimeFields: 0,
+    setTotalDist: 0,
+    setTotalTime: 0,
+    markerClicks: 0,
   }
 
 export const fieldDesignations: QueryInput[] = [
