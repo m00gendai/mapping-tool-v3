@@ -225,3 +225,46 @@ body{
 #polylineField_table_body > tr > td {
     padding: 0.25rem 1rem;
 }
+
+#layerGroup{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 3rem;
+    height: 3rem;
+    background: #000;
+    z-index:1000;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-row-gap: 1rem;
+}
+
+.layerGroup_column{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    background: #000;
+}
+
+.layerGroup_column_name{
+    position: relative;
+    width: 100%;
+    text-align: left;
+    background: darkgoldenrod;
+}
+
+.layerGroup_column_content{
+    position: relative;
+    width: 100%;
+    background: blue;
+}
+
+.layerGroup_column_content_item{
+    position: relative;
+    width: 90%;
+    background: pink;
+}
