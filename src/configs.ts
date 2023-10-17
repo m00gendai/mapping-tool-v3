@@ -93,8 +93,14 @@ export const layerGroups:LayerGroup[] = [
         id: "EBBUCTR",
         data: "",
       },
+      {
+        name: "LD - Croatia",
+        id: "LDZOCTR",
+        data: "",
+      },
     ]
   },
+  /*
   {
     name: "Other",
     layers: [
@@ -109,7 +115,9 @@ export const layerGroups:LayerGroup[] = [
         data: "",
       },
     ]
-  },{
+  },
+  */
+  {
     name: "FIR",
     layers: [
       {
@@ -117,8 +125,19 @@ export const layerGroups:LayerGroup[] = [
         id: "EBBUFIR",
         data: "",
       },
+      {
+        name: "ED - Germany",
+        id: "EDXXFIR",
+        data: "",
+      },
+      {
+        name: "LD - Croatia",
+        id: "LDZOFIR",
+        data: "",
+      },
     ]
   },
+  /*
   {
     name: "VFR Reporting Points",
     layers: [
@@ -134,4 +153,5 @@ export const layerGroups:LayerGroup[] = [
       },
     ]
   },
+  */
 ]
