@@ -1,4 +1,4 @@
-import { QueryInput, State, SidebarFlag } from "./interfaces"
+import { QueryInput, State, SidebarFlag, LayerGroup } from "./interfaces"
 
 export const state: State ={
     popupVisible: false,
@@ -13,6 +13,8 @@ export const state: State ={
     setTotalDist: 0,
     setTotalTime: 0,
     markerClicks: 0,
+    layerGroupVisible: false,
+    checkedLayers: []
   }
 
 export const fieldDesignations: QueryInput[] = [
@@ -66,3 +68,70 @@ export const sidebarFlags:SidebarFlag[] = [
       text: "Unit conversions"
     },
   ]
+
+export const layerGroups:LayerGroup[] = [
+  {
+    name: "TMA",
+    layers: [
+      {
+        name: "EB - Belgium & Luxembourg",
+        id: "EBBUTMA",
+        data: "",
+      },
+      {
+        name: "LD - Croatia",
+        id: "LDZOTMA",
+        data: "",
+      },
+    ]
+  },
+  {
+    name: "CTR",
+    layers: [
+      {
+        name: "EB - Belgium & Luxembourg",
+        id: "EBBUCTR",
+        data: "",
+      },
+    ]
+  },
+  {
+    name: "Other",
+    layers: [
+      {
+        name: "LSAG / LSAZ Boudnary",
+        id: "LSASBDRY",
+        data: "",
+      },
+      {
+        name: "Italy ARO Boudnary",
+        id: "LIMMBDRY",
+        data: "",
+      },
+    ]
+  },{
+    name: "FIR",
+    layers: [
+      {
+        name: "EB - Belgium & Luxembourg",
+        id: "EBBUFIR",
+        data: "",
+      },
+    ]
+  },
+  {
+    name: "VFR Reporting Points",
+    layers: [
+      {
+        name: "LD - Croatia",
+        id: "LDZOREP",
+        data: "",
+      },
+      {
+        name: "LJ - Slovenia",
+        id: "LJLAREP",
+        data: "",
+      },
+    ]
+  },
+]
