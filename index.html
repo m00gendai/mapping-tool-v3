@@ -9,10 +9,32 @@
   <body>
     <div id="app">
       <div id="sidebar">
-        <div id="sidebarInner"></div>
+        <div id="sidebarFlags"></div>
+        <div id="sidebarInner_query" class="sidebarInner"></div>
+        <div id="sidebarInner_conversion" class="sidebarInner"></div>
       </div>
       <div id="map"></div>
       <div id="toolbar"></div>
+      <div id="layerGroup" title="Toggle overlays such as FIR, TMA, CTR etc"></div>
+      <div id="polylineField">
+        <label for="polylineField_speed">Speed in Knots: </label>
+        <input name="speed" type="number" id="polylineField_speed" />
+        <table id="polylineField_table">
+          <thead id="polylineField_table_head">
+            <tr>
+              <th>DEP</th>
+              <th>DIST</th>
+              <th>DEST</th>
+              <th>TIME</th>
+              <th>TOTALDIST</th>
+              <th>TOTALTIME</th>
+            </tr>
+          </thead>
+          <tbody id="polylineField_table_body">
+
+          </tbody>
+        </table>
+      </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>

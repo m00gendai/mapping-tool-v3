@@ -1,78 +1,25 @@
-import "./styles/globals.css"
-import L, { LatLngBoundsLiteral } from "leaflet"
+import * as L from "leaflet"
+import { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
+import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { createIcon } from "./configs"
-
-interface QueryInput{
-  designation: string
-  value: string
-  type: string
-}
-
-interface State{
-  popupVisible: boolean
-}
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups } from "./configs"
+import { generateArcLine, createIcon, buildTable } from "./utils/generalUtils"
+import "leaflet-polylinedecorator"
+import { QueryInput, State } from "./interfaces"
+import { getLayer } from "./layers"
 
 const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
-
-let mapWidth:string = getComputedStyle(document.getElementById("map")!).width
-window.addEventListener("resize", function(){
-  mapWidth = getComputedStyle(document.getElementById("map")!).width
-})
-
-const state: State ={
-  popupVisible: false
-}
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-const inputArea = document.createElement("div")
-inputArea.className="sidebar_inputArea"
-
-const queryAllState:QueryInput = {
-  designation: "ALL",
-  value: "",
-  type: ""
-}
-
-const fieldDesignations: QueryInput[] = [
-  {
-    designation: "LOCI",
-    value: "",
-    type: "airport"
-  },
-  {
-    designation: "PLACE",
-    value: "",
-    type: "location"
-  },
-  {
-    designation: "NAVAID",
-    value: "",
-    type: "navaid",
-  },
-  {
-    designation: "WAYPOINT",
-    value: "",
-    type: "waypoint"
-  },
-  {
-    designation: "COORD", 
-    value: "",
-    type: "coordinate"
-  },
-  {
-    designation: "BRG/DIST",
-    value: "",
-    type: "brgdist"
-  },
-]
-
 const markerArray: L.Marker[] = []
+const polylineMarkerArray: L.Marker[] = []
+const polylineArray: L.Polyline[] = []
+const polylineDecoratorArry: L.PolylineDecorator[] = []
+const layerArray: (string | L.GeoJSON)[][] = []
+
+document.getElementById("polylineField")!.style.display = "none"
+const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
+speedInput.value = ""
 
 function clearMarkers(){
   markerArray.forEach(marker =>{
@@ -80,6 +27,69 @@ function clearMarkers(){
   })
   markerArray.length = 0
 }
+function clearPolylineArray(){
+  polylineArray.forEach(polyline =>{
+    polyline.removeFrom(map)
+  })
+  polylineArray.length = 0
+  polylineDecoratorArry.forEach(decorator =>{
+    decorator.removeFrom(map)
+  })
+  polylineDecoratorArry.length = 0
+  polylineMarkerArray.length = 0
+  document.getElementById("polylineField_table_body")!.innerText = ""
+  document.getElementById("polylineField")!.style.display = "none"
+  state.totalDistance = 0
+  state.setSpeed = 0
+  state.setDep = ""
+  state.setDist= []
+  state.setDest = ""
+  state.setTime=[]
+  state.setTimeFields=0
+  state.setTotalDist= 0
+  state.setTotalTime= 0
+  state.markerClicks= 0
+  speedInput.value = ""
+}
+
+let mapWidth:string = getComputedStyle(document.getElementById("map")!).width
+window.addEventListener("resize", function(){
+  mapWidth = getComputedStyle(document.getElementById("map")!).width
+})
+
+function setSidebarVisibility(state:State){
+  const sidebars:NodeList = document.querySelectorAll(".sidebarInner")
+  sidebars.forEach(sidebar =>{
+    const item = sidebar as HTMLElement
+    document.getElementById(`${item.id}`)!.style.display = "none"
+  })
+  document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.style.display = "flex"
+}
+
+setSidebarVisibility(state)
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+
+
+const inputArea = document.createElement("div")
+inputArea.className="sidebar_inputArea"
+
+sidebarFlags.forEach(flag =>{
+  const button:HTMLButtonElement = document.createElement("button")
+  button.className="flagButton"
+  button.style.backgroundImage = `url("${flag.icon}")`
+  button.title = flag.text
+  document.getElementById("sidebarFlags")?.appendChild(button)
+  button.addEventListener("click", function(){
+    state.sidebarSelect = flag.type
+    setSidebarVisibility(state)
+  })
+})
+
+
 
 const queryAllField: HTMLDivElement = document.createElement("div")
 queryAllField.className=`sidebar_area`
@@ -103,6 +113,7 @@ function addMarker(results:string[][], type:string){
 
 async function queryTriggerAll(){
   clearMarkers()
+  clearPolylineArray()
   queryAllState.value = ""
   const target = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
   const value: string = target?.value
@@ -144,8 +155,47 @@ async function queryTriggerAll(){
     addMarker(results, "location")
   }
 
-markerArray.forEach(marker =>{
+  document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
+    const inputField = document.getElementById("polylineField_speed")! as HTMLInputElement
+    state.setSpeed = parseInt(inputField.value)
+    const timeFields:NodeList = document.querySelectorAll(".polylineField_table_body_time")
+    timeFields.forEach((timeField, index) =>{
+      const time = state.setDist[index]/state.setSpeed
+      const n = new Date(0,0);
+      n.setSeconds(+time * 60 * 60);
+      const htmlTimeField = timeField as HTMLElement
+      htmlTimeField.innerText = n.toTimeString().slice(0, 8)
+    })
+  })
+
+markerArray.forEach((marker) =>{
   marker.addTo(map)
+  marker.addEventListener("dblclick", function(){
+    polylineMarkerArray.push(marker)
+    
+    if(polylineMarkerArray.length > 1){
+      buildTable(polylineMarkerArray, state)
+    state.markerClicks = state.markerClicks + 1
+      document.getElementById("polylineField")!.style.display = "flex"
+      const polyline = L.polyline(generateArcLine(polylineMarkerArray),{color:"red"})
+      polylineArray.push(polyline)
+      
+
+    }
+    polylineArray.forEach(polyline =>{
+      polyline.addTo(map)
+      const decorator: L.PolylineDecorator = L.polylineDecorator(polyline, {
+        patterns: [
+            // defines a pattern of 10px-wide dashes, repeated every 20px on the line
+            {offset: 0, repeat: 20, symbol: L.Symbol.arrowHead({pixelSize: 10, pathOptions:{fillOpacity: 1, weight: 0, color: "red"}})}
+        ]
+      })
+      polylineDecoratorArry.push(decorator)
+    })
+    polylineDecoratorArry.forEach(decorator =>{
+      decorator.addTo(map)
+    })
+  })
 })
 const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
 const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
@@ -169,6 +219,7 @@ queryAllField.addEventListener("keypress", function(e){
 
 async function queryTrigger(field:QueryInput){
   clearMarkers()
+  clearPolylineArray()
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
       const value: string = target?.value
@@ -223,12 +274,13 @@ fieldDesignations.forEach(field =>{
     inputArea.appendChild(textareaField)
 })
 
-document.getElementById("sidebarInner")?.appendChild(inputArea)
+document.getElementById("sidebarInner_query")?.appendChild(inputArea)
 
-const popupToggle: HTMLButtonElement = document.createElement("button")
-popupToggle.innerText="Popup Toggle"
-popupToggle.className="toolbar_button"
-popupToggle.addEventListener("click", function(){
+const popupToggleButton: HTMLButtonElement = document.createElement("button")
+popupToggleButton.innerText="Popup Toggle"
+popupToggleButton.className="toolbar_button"
+popupToggleButton.title="Toggles all marker popups on or off"
+popupToggleButton.addEventListener("click", function(){
   if(state.popupVisible){
     const popups: NodeList = document.querySelectorAll(".leaflet-popup-close-button")
     popups.forEach(popup =>{
@@ -244,24 +296,114 @@ popupToggle.addEventListener("click", function(){
   state.popupVisible = !state.popupVisible
 })
 
-const focusSwitzerland: HTMLButtonElement = document.createElement("button")
-focusSwitzerland.innerText = "Focus Switzerland"
-focusSwitzerland.className="toolbar_button"
-focusSwitzerland.addEventListener("click", function(){
+const focusSwitzerlandButton: HTMLButtonElement = document.createElement("button")
+focusSwitzerlandButton.innerText = "Focus Switzerland"
+focusSwitzerlandButton.className="toolbar_button"
+focusSwitzerlandButton.title="Centers the map so that the whole of Switzerland is visible"
+focusSwitzerlandButton.addEventListener("click", function(){
   map.setView([46.80, 8.22], 8);
 })
 
-const clearMakers: HTMLButtonElement = document.createElement("button")
-clearMakers.innerText = "Clear Markers"
-clearMakers.className="toolbar_button"
-clearMakers.addEventListener("click", function(){
+const clearMarkersButton: HTMLButtonElement = document.createElement("button")
+clearMarkersButton.innerText = "Clear Markers"
+clearMarkersButton.className="toolbar_button"
+clearMarkersButton.title = "Removes all markes from the map"
+clearMarkersButton.addEventListener("click", function(){
   clearMarkers()
+  clearPolylineArray()
+})
+
+const clearPolylinesButton: HTMLButtonElement = document.createElement("button")
+clearPolylinesButton.innerText = "Clear Lines"
+clearPolylinesButton.className="toolbar_button"
+clearPolylinesButton.title="Removes all drawn lines between markers and resets any time/distance values"
+clearPolylinesButton.addEventListener("click", function(){
+  clearPolylineArray()
 })
 
 document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
 window.addEventListener("resize", function(){
   document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
 })
-document.getElementById("toolbar")?.appendChild(clearMakers)
-document.getElementById("toolbar")?.appendChild(popupToggle)
-document.getElementById("toolbar")?.appendChild(focusSwitzerland)
+document.getElementById("toolbar")?.appendChild(clearMarkersButton)
+document.getElementById("toolbar")?.appendChild(clearPolylinesButton)
+document.getElementById("toolbar")?.appendChild(popupToggleButton)
+document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
+
+const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
+layerGroup.innerHTML = `<img src="./public/stack.svg" class="layerGroup_icon"/>`
+layerGroup.addEventListener("click", function(){
+  if(!state.layerGroupVisible){
+    layerGroup.innerHTML = ""
+    layerGroup.style.width = `${parseFloat(mapWidth)-75}px`
+    layerGroup.style.overflow = "hidden"
+    setTimeout(function(){
+      layerGroup.style.height = "auto"
+      layerGroup.style.overflow = "visible"
+    },200)
+    
+    state.layerGroupVisible = !state.layerGroupVisible
+
+    layerGroups.forEach(group =>{
+      const column: HTMLDivElement = document.createElement("div")
+      column.className = "layerGroup_column"
+
+      const column_name: HTMLDivElement = document.createElement("div")
+      const column_content: HTMLDivElement = document.createElement("div")
+      column.appendChild(column_name)
+      column_name.className = "layerGroup_column_name"
+      column_name.innerText = group.name
+
+      column.appendChild(column_content)
+      column_content.className = "layerGroup_column_content"
+      group.layers.forEach(layer =>{
+        const column_content_item: HTMLDivElement = document.createElement("div")
+        column_content_item.className = "layerGroup_column_content_item"
+
+        const column_content_checkbox: HTMLInputElement = document.createElement("input")
+        column_content_checkbox.id = layer.id
+        column_content_checkbox.type = "checkbox"
+        if(state.checkedLayers.includes(layer.id)){
+          column_content_checkbox.checked = true
+        }
+        column_content_checkbox.addEventListener("click", function(){
+          if(column_content_checkbox.checked){
+            if(!state.checkedLayers.includes(layer.id)){
+              state.checkedLayers = [...state.checkedLayers, layer.id]
+              const setLayer:L.GeoJSON = getLayer(layer)
+              setLayer.addTo(map)
+              layerArray.push([layer.id, setLayer])
+            }
+          }
+          if(!column_content_checkbox.checked){
+            const removeItemIndex = state.checkedLayers.indexOf(layer.id)
+            state.checkedLayers.splice(removeItemIndex, 1)
+            layerArray.forEach(item =>{
+              if(item[0] === layer.id){
+                const toBeRemovedLayer = item[1] as L.GeoJSON
+                toBeRemovedLayer.removeFrom(map)
+              }
+            })
+          }
+        })
+        const column_content_label: HTMLLabelElement = document.createElement("label")
+        column_content_label.htmlFor = layer.id
+        column_content_label.innerText = layer.name
+
+        column_content_item.appendChild(column_content_checkbox)
+        column_content_item.appendChild(column_content_label)
+        column_content.appendChild(column_content_item)
+
+      })
+      layerGroup.appendChild(column)
+    })
+  }
+})
+layerGroup.addEventListener("mouseleave", function(){
+  if(state.layerGroupVisible){
+    layerGroup.style.width = `3rem`
+    layerGroup.style.height = `3rem`
+    state.layerGroupVisible = !state.layerGroupVisible
+    layerGroup.innerHTML = `<img src="./public/stack.svg" class="layerGroup_icon"/>`
+  }
+})
