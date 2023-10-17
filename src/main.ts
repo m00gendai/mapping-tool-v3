@@ -16,6 +16,8 @@ const polylineArray: L.Polyline[] = []
 const polylineDecoratorArry: L.PolylineDecorator[] = []
 
 document.getElementById("polylineField")!.style.display = "none"
+const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
+speedInput.value = ""
 
 function clearMarkers(){
   markerArray.forEach(marker =>{
@@ -36,6 +38,16 @@ function clearPolylineArray(){
   document.getElementById("polylineField_table_body")!.innerText = ""
   document.getElementById("polylineField")!.style.display = "none"
   state.totalDistance = 0
+  state.setSpeed = 0
+  state.setDep = ""
+  state.setDist= []
+  state.setDest = ""
+  state.setTime=[]
+  state.setTimeFields=0
+  state.setTotalDist= 0
+  state.setTotalTime= 0
+  state.markerClicks= 0
+  speedInput.value = ""
 }
 
 let mapWidth:string = getComputedStyle(document.getElementById("map")!).width
