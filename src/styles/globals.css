@@ -236,7 +236,14 @@ body{
     z-index:1000;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-row-gap: 1rem;
+    grid-gap: 0.25rem;
+    font-family: monospace;
+    padding: 0.25rem;
+    transition: 0.2s;
+}
+
+#layerGroup:hover{
+    cursor: pointer;
 }
 
 .layerGroup_column{
@@ -260,11 +267,16 @@ body{
 .layerGroup_column_content{
     position: relative;
     width: 100%;
-    background: blue;
+    color: white;
 }
 
 .layerGroup_column_content_item{
     position: relative;
     width: 90%;
-    background: pink;
+}
+
+.layerGroup_icon{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
 }
