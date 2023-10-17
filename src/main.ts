@@ -4,10 +4,11 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags } from "./configs"
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups } from "./configs"
 import { generateArcLine, createIcon, buildTable } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
+import "leaflet-groupedlayercontrol"
 
 const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
@@ -69,7 +70,6 @@ setSidebarVisibility(state)
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
 
 const inputArea = document.createElement("div")
 inputArea.className="sidebar_inputArea"
@@ -322,3 +322,65 @@ document.getElementById("toolbar")?.appendChild(clearMakers)
 document.getElementById("toolbar")?.appendChild(clearPolylines)
 document.getElementById("toolbar")?.appendChild(popupToggle)
 document.getElementById("toolbar")?.appendChild(focusSwitzerland)
+
+const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
+layerGroup.addEventListener("click", function(){
+  if(!state.layerGroupVisible){
+    layerGroup.style.width = `${parseFloat(mapWidth)-75}px`
+    layerGroup.style.height = "auto"
+    state.layerGroupVisible = !state.layerGroupVisible
+
+    layerGroups.forEach(group =>{
+      const column: HTMLDivElement = document.createElement("div")
+      column.className = "layerGroup_column"
+
+      const column_name: HTMLDivElement = document.createElement("div")
+      const column_content: HTMLDivElement = document.createElement("div")
+      column.appendChild(column_name)
+      column_name.className = "layerGroup_column_name"
+      column_name.innerText = group.name
+
+      column.appendChild(column_content)
+      column_content.className = "layerGroup_column_content"
+      group.layers.forEach(layer =>{
+        const column_content_item: HTMLDivElement = document.createElement("div")
+        column_content_item.className = "layerGroup_column_content_item"
+
+        const column_content_checkbox: HTMLInputElement = document.createElement("input")
+        column_content_checkbox.id = layer.id
+        column_content_checkbox.type = "checkbox"
+        if(state.checkedLayers.includes(layer.id)){
+          column_content_checkbox.checked = true
+        }
+        column_content_checkbox.addEventListener("click", function(){
+          if(column_content_checkbox.checked){
+            if(!state.checkedLayers.includes(layer.id)){
+              state.checkedLayers = [...state.checkedLayers, layer.id]
+            }
+          }
+          if(!column_content_checkbox.checked){
+            const removeItemIndex = state.checkedLayers.indexOf(layer.id)
+            state.checkedLayers.splice(removeItemIndex, 1)
+          }
+        })
+        const column_content_label: HTMLLabelElement = document.createElement("label")
+        column_content_label.htmlFor = layer.id
+        column_content_label.innerText = layer.name
+
+        column_content_item.appendChild(column_content_checkbox)
+        column_content_item.appendChild(column_content_label)
+        column_content.appendChild(column_content_item)
+
+      })
+      layerGroup.appendChild(column)
+    })
+  }
+})
+layerGroup.addEventListener("mouseleave", function(){
+  if(state.layerGroupVisible){
+    layerGroup.style.width = `3rem`
+    layerGroup.style.height = `3rem`
+    state.layerGroupVisible = !state.layerGroupVisible
+    layerGroup.innerHTML = ""
+  }
+})
