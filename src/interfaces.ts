@@ -17,10 +17,23 @@ export interface State{
     setTotalDist: number
     setTotalTime:number
     markerClicks: number
+    layerGroupVisible: boolean
+    checkedLayers: string[]
 }
 
 export interface SidebarFlag{
     type: string
     icon: string
     text: string
+}
+
+export interface LayerGroup{
+    name: string
+    layers:LayerGroup_layer[]
+}
+
+interface LayerGroup_layer{
+    name: string
+    id: string
+    data: string
 }
