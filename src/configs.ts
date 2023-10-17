@@ -59,12 +59,12 @@ export const queryAllState:QueryInput = {
 export const sidebarFlags:SidebarFlag[] = [
     {
       type: "query",
-      icon: "public/position-marker.svg",
+      icon: "/position-marker.svg",
       text: "Query items on map"
     },
     {
       type: "conversion",
-      icon: "public/calculator.svg",
+      icon: "/calculator.svg",
       text: "Unit conversions"
     },
   ]

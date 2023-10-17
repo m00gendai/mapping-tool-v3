@@ -331,7 +331,7 @@ document.getElementById("toolbar")?.appendChild(popupToggleButton)
 document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
-layerGroup.innerHTML = `<img src="./public/stack.svg" class="layerGroup_icon"/>`
+layerGroup.innerHTML = `<img src="/stack.svg" class="layerGroup_icon"/>`
 layerGroup.addEventListener("click", function(){
   if(!state.layerGroupVisible){
     layerGroup.innerHTML = ""
@@ -404,6 +404,6 @@ layerGroup.addEventListener("mouseleave", function(){
     layerGroup.style.width = `3rem`
     layerGroup.style.height = `3rem`
     state.layerGroupVisible = !state.layerGroupVisible
-    layerGroup.innerHTML = `<img src="./public/stack.svg" class="layerGroup_icon"/>`
+    layerGroup.innerHTML = `<img src="/stack.svg" class="layerGroup_icon"/>`
   }
 })
