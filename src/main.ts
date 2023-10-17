@@ -8,7 +8,6 @@ import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups } fr
 import { generateArcLine, createIcon, buildTable } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
-import "leaflet-groupedlayercontrol"
 import { getLayer } from "./layers"
 
 const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
