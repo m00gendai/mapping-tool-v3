@@ -276,10 +276,11 @@ fieldDesignations.forEach(field =>{
 
 document.getElementById("sidebarInner_query")?.appendChild(inputArea)
 
-const popupToggle: HTMLButtonElement = document.createElement("button")
-popupToggle.innerText="Popup Toggle"
-popupToggle.className="toolbar_button"
-popupToggle.addEventListener("click", function(){
+const popupToggleButton: HTMLButtonElement = document.createElement("button")
+popupToggleButton.innerText="Popup Toggle"
+popupToggleButton.className="toolbar_button"
+popupToggleButton.title="Toggles all marker popups on or off"
+popupToggleButton.addEventListener("click", function(){
   if(state.popupVisible){
     const popups: NodeList = document.querySelectorAll(".leaflet-popup-close-button")
     popups.forEach(popup =>{
@@ -295,25 +296,28 @@ popupToggle.addEventListener("click", function(){
   state.popupVisible = !state.popupVisible
 })
 
-const focusSwitzerland: HTMLButtonElement = document.createElement("button")
-focusSwitzerland.innerText = "Focus Switzerland"
-focusSwitzerland.className="toolbar_button"
-focusSwitzerland.addEventListener("click", function(){
+const focusSwitzerlandButton: HTMLButtonElement = document.createElement("button")
+focusSwitzerlandButton.innerText = "Focus Switzerland"
+focusSwitzerlandButton.className="toolbar_button"
+focusSwitzerlandButton.title="Centers the map so that the whole of Switzerland is visible"
+focusSwitzerlandButton.addEventListener("click", function(){
   map.setView([46.80, 8.22], 8);
 })
 
-const clearMakers: HTMLButtonElement = document.createElement("button")
-clearMakers.innerText = "Clear Markers"
-clearMakers.className="toolbar_button"
-clearMakers.addEventListener("click", function(){
+const clearMarkersButton: HTMLButtonElement = document.createElement("button")
+clearMarkersButton.innerText = "Clear Markers"
+clearMarkersButton.className="toolbar_button"
+clearMarkersButton.title = "Removes all markes from the map"
+clearMarkersButton.addEventListener("click", function(){
   clearMarkers()
   clearPolylineArray()
 })
 
-const clearPolylines: HTMLButtonElement = document.createElement("button")
-clearPolylines.innerText = "Clear Lines"
-clearPolylines.className="toolbar_button"
-clearPolylines.addEventListener("click", function(){
+const clearPolylinesButton: HTMLButtonElement = document.createElement("button")
+clearPolylinesButton.innerText = "Clear Lines"
+clearPolylinesButton.className="toolbar_button"
+clearPolylinesButton.title="Removes all drawn lines between markers and resets any time/distance values"
+clearPolylinesButton.addEventListener("click", function(){
   clearPolylineArray()
 })
 
@@ -321,10 +325,10 @@ document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
 window.addEventListener("resize", function(){
   document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
 })
-document.getElementById("toolbar")?.appendChild(clearMakers)
-document.getElementById("toolbar")?.appendChild(clearPolylines)
-document.getElementById("toolbar")?.appendChild(popupToggle)
-document.getElementById("toolbar")?.appendChild(focusSwitzerland)
+document.getElementById("toolbar")?.appendChild(clearMarkersButton)
+document.getElementById("toolbar")?.appendChild(clearPolylinesButton)
+document.getElementById("toolbar")?.appendChild(popupToggleButton)
+document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = `<img src="./public/stack.svg" class="layerGroup_icon"/>`
