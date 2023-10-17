@@ -1,4 +1,5 @@
 import * as EB from "./Layer_Data/EB.json"
+import * as ED from "./Layer_Data/ED.json"
 import * as LD from "./Layer_Data/LD.json"
 import { GeoJsonObject, GeoJsonProperties } from "geojson";
 import { LayerGroup_layer } from "./interfaces"
@@ -6,6 +7,9 @@ import { LayerGroup_layer } from "./interfaces"
 function getCountry(string:string){
     if(string === "EB"){
         return EB as GeoJsonObject
+    }
+    if(string === "ED"){
+        return ED as GeoJsonObject
     }
     if(string === "LD"){
         return LD as GeoJsonObject
