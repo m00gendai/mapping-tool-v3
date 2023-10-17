@@ -370,7 +370,8 @@ layerGroup.addEventListener("click", function(){
             state.checkedLayers.splice(removeItemIndex, 1)
             layerArray.forEach(item =>{
               if(item[0] === layer.id){
-                item[1].removeFrom(map)
+                const toBeRemovedLayer = item[1] as L.GeoJSON
+                toBeRemovedLayer.removeFrom(map)
               }
             })
           }
