@@ -327,10 +327,17 @@ document.getElementById("toolbar")?.appendChild(popupToggle)
 document.getElementById("toolbar")?.appendChild(focusSwitzerland)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
+layerGroup.innerHTML = `<img src="./public/stack.svg" class="layerGroup_icon"/>`
 layerGroup.addEventListener("click", function(){
   if(!state.layerGroupVisible){
+    layerGroup.innerHTML = ""
     layerGroup.style.width = `${parseFloat(mapWidth)-75}px`
-    layerGroup.style.height = "auto"
+    layerGroup.style.overflow = "hidden"
+    setTimeout(function(){
+      layerGroup.style.height = "auto"
+      layerGroup.style.overflow = "visible"
+    },200)
+    
     state.layerGroupVisible = !state.layerGroupVisible
 
     layerGroups.forEach(group =>{
@@ -393,6 +400,6 @@ layerGroup.addEventListener("mouseleave", function(){
     layerGroup.style.width = `3rem`
     layerGroup.style.height = `3rem`
     state.layerGroupVisible = !state.layerGroupVisible
-    layerGroup.innerHTML = ""
+    layerGroup.innerHTML = `<img src="./public/stack.svg" class="layerGroup_icon"/>`
   }
 })
