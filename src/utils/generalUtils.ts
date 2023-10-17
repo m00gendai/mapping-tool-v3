@@ -52,6 +52,8 @@ export function buildTable(polylineMarkerArray:L.Marker[], state:State){
       tdTime.id= `polylineField_table_body_time_${state.markerClicks}`
       const tdTotalDist:HTMLTableCellElement = document.createElement("td")
       const tdTotalTime:HTMLTableCellElement = document.createElement("td")
+      tdTotalTime.className = "polylineField_table_body_totalTime"
+      tdTotalTime.id=`polylineField_table_body_totalTime_${state.markerClicks}`
       lineFeed.appendChild(tdDep)
       lineFeed.appendChild(tdDist)
       lineFeed.appendChild(tdDest)
@@ -68,25 +70,20 @@ export function buildTable(polylineMarkerArray:L.Marker[], state:State){
         )/1852)]
       tdDist.innerText = state.setDist[state.markerClicks].toFixed(2)
       state.setDest = `${polylineMarkerArray[polylineMarkerArray.length-1].getPopup()!.getContent()!.toString().split("<br>")[0]}`
-      const time = state.setDist[state.markerClicks-1]/state.setSpeed
+      /*const time = state.setDist[state.markerClicks]/state.setSpeed
       const n = new Date(0,0);
       n.setSeconds(+time * 60 * 60);
-      state.setTotalTime = state.setTotalTime + time
-      console.log(state.setTotalTime)
-      tdTime.innerText = n.toTimeString().slice(0, 8)
+      tdTime.innerText = n.toTimeString().slice(0, 8)*/
       tdDest.innerText = state.setDest
-      state.totalDistance = state.totalDistance + (calculateDist(
+      state.setTotalDist = state.setTotalDist + (calculateDist(
         polylineMarkerArray[polylineMarkerArray.length-2].getLatLng().lat, 
         polylineMarkerArray[polylineMarkerArray.length-2].getLatLng().lng, 
         polylineMarkerArray[polylineMarkerArray.length-1].getLatLng().lat, 
         polylineMarkerArray[polylineMarkerArray.length-1].getLatLng().lng, 
         )/1852)
-      tdTotalDist.innerText  = `${(state.totalDistance).toFixed(2)}NM`
-      const m = new Date(0,0)
-      m.setSeconds(+state.setTotalTime * 60 * 60)
-        tdTotalTime.innerText = m.toTimeString().slice(0, 8)
-
-      const timeFields:NodeList = document.querySelectorAll(".polylineField_table_body_time")
+      tdTotalDist.innerText  = `${(state.setTotalDist).toFixed(2)}NM`
+  const timeFields:NodeList = document.querySelectorAll(".polylineField_table_body_time")
+  const totalTimeFields:NodeList = document.querySelectorAll(".polylineField_table_body_totalTime")
     timeFields.forEach((timeField, index) =>{
       const time = state.setDist[index]/state.setSpeed
       const n = new Date(0,0);
@@ -94,6 +91,17 @@ export function buildTable(polylineMarkerArray:L.Marker[], state:State){
       const htmlTimeField = timeField as HTMLElement
       htmlTimeField.innerText = n.toTimeString().slice(0, 8)
     })
+
+      const time = state.setTotalDist/state.setSpeed
+      const n = new Date(0,0);
+      n.setSeconds(+time * 60 * 60);
+      const htmlTimeField = totalTimeFields[state.markerClicks] as HTMLElement
+        htmlTimeField.innerText = n.toTimeString().slice(0, 8) 
+      if(htmlTimeField.innerHTML.includes("Invalid")){
+        htmlTimeField.innerText = ""
+      }
+    
+    
       state.setTimeFields = state.setTimeFields + 1
 
 }
