@@ -75,22 +75,22 @@ export const layerGroups:LayerGroup[] = [
     layers: [
       {
         name: "EB - Belgium & Luxembourg",
-        id: "EBTMA",
+        id: "EBBUTMA",
         data: "",
       },
       {
         name: "LD - Croatia",
-        id: "LDTMA",
+        id: "LDZOTMA",
         data: "",
       },
     ]
   },
   {
-    name: "CTA",
+    name: "CTR",
     layers: [
       {
         name: "EB - Belgium & Luxembourg",
-        id: "EBCTA",
+        id: "EBBUCTR",
         data: "",
       },
     ]
@@ -100,12 +100,12 @@ export const layerGroups:LayerGroup[] = [
     layers: [
       {
         name: "LSAG / LSAZ Boudnary",
-        id: "LSBDRY",
+        id: "LSASBDRY",
         data: "",
       },
       {
         name: "Italy ARO Boudnary",
-        id: "LIBDRY",
+        id: "LIMMBDRY",
         data: "",
       },
     ]
@@ -113,8 +113,8 @@ export const layerGroups:LayerGroup[] = [
     name: "FIR",
     layers: [
       {
-        name: "LS - Switzerland",
-        id: "LSFIR",
+        name: "EB - Belgium & Luxembourg",
+        id: "EBBUFIR",
         data: "",
       },
     ]
@@ -124,12 +124,12 @@ export const layerGroups:LayerGroup[] = [
     layers: [
       {
         name: "LD - Croatia",
-        id: "LDREP",
+        id: "LDZOREP",
         data: "",
       },
       {
         name: "LJ - Slovenia",
-        id: "LJREP",
+        id: "LJLAREP",
         data: "",
       },
     ]
