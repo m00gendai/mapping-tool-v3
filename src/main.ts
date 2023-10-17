@@ -1,38 +1,59 @@
-import L, { LatLngBoundsLiteral } from "leaflet"
+import * as L from "leaflet"
+import { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { createIcon } from "./configs"
-
-interface QueryInput{
-  designation: string
-  value: string
-  type: string
-}
-
-interface State{
-  popupVisible: boolean
-  sidebarSelect: string
-}
-
-interface SidebarFlag{
-  type: string
-  icon: string
-  text: string
-}
+import { fieldDesignations, queryAllState, state, sidebarFlags } from "./configs"
+import { generateArcLine, createIcon, buildTable } from "./utils/generalUtils"
+import "leaflet-polylinedecorator"
+import { QueryInput, State } from "./interfaces"
 
 const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
+const markerArray: L.Marker[] = []
+const polylineMarkerArray: L.Marker[] = []
+const polylineArray: L.Polyline[] = []
+const polylineDecoratorArry: L.PolylineDecorator[] = []
+
+document.getElementById("polylineField")!.style.display = "none"
+const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
+speedInput.value = ""
+
+function clearMarkers(){
+  markerArray.forEach(marker =>{
+    marker.removeFrom(map)
+  })
+  markerArray.length = 0
+}
+function clearPolylineArray(){
+  polylineArray.forEach(polyline =>{
+    polyline.removeFrom(map)
+  })
+  polylineArray.length = 0
+  polylineDecoratorArry.forEach(decorator =>{
+    decorator.removeFrom(map)
+  })
+  polylineDecoratorArry.length = 0
+  polylineMarkerArray.length = 0
+  document.getElementById("polylineField_table_body")!.innerText = ""
+  document.getElementById("polylineField")!.style.display = "none"
+  state.totalDistance = 0
+  state.setSpeed = 0
+  state.setDep = ""
+  state.setDist= []
+  state.setDest = ""
+  state.setTime=[]
+  state.setTimeFields=0
+  state.setTotalDist= 0
+  state.setTotalTime= 0
+  state.markerClicks= 0
+  speedInput.value = ""
+}
 
 let mapWidth:string = getComputedStyle(document.getElementById("map")!).width
 window.addEventListener("resize", function(){
   mapWidth = getComputedStyle(document.getElementById("map")!).width
 })
-
-const state: State ={
-  popupVisible: false,
-  sidebarSelect: "query",
-}
 
 function setSidebarVisibility(state:State){
   const sidebars:NodeList = document.querySelectorAll(".sidebarInner")
@@ -49,60 +70,9 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+
 const inputArea = document.createElement("div")
 inputArea.className="sidebar_inputArea"
-
-const queryAllState:QueryInput = {
-  designation: "ALL",
-  value: "",
-  type: ""
-}
-
-const fieldDesignations: QueryInput[] = [
-  {
-    designation: "LOCI",
-    value: "",
-    type: "airport"
-  },
-  {
-    designation: "PLACE",
-    value: "",
-    type: "location"
-  },
-  {
-    designation: "NAVAID",
-    value: "",
-    type: "navaid",
-  },
-  {
-    designation: "WAYPOINT",
-    value: "",
-    type: "waypoint"
-  },
-  {
-    designation: "COORD", 
-    value: "",
-    type: "coordinate"
-  },
-  {
-    designation: "BRG/DIST",
-    value: "",
-    type: "brgdist"
-  },
-]
-
-const sidebarFlags:SidebarFlag[] = [
-  {
-    type: "query",
-    icon: "public/position-marker.svg",
-    text: "Query items on map"
-  },
-  {
-    type: "conversion",
-    icon: "public/calculator.svg",
-    text: "Unit conversions"
-  },
-]
 
 sidebarFlags.forEach(flag =>{
   const button:HTMLButtonElement = document.createElement("button")
@@ -116,14 +86,7 @@ sidebarFlags.forEach(flag =>{
   })
 })
 
-const markerArray: L.Marker[] = []
 
-function clearMarkers(){
-  markerArray.forEach(marker =>{
-    marker.removeFrom(map)
-  })
-  markerArray.length = 0
-}
 
 const queryAllField: HTMLDivElement = document.createElement("div")
 queryAllField.className=`sidebar_area`
@@ -147,6 +110,7 @@ function addMarker(results:string[][], type:string){
 
 async function queryTriggerAll(){
   clearMarkers()
+  clearPolylineArray()
   queryAllState.value = ""
   const target = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
   const value: string = target?.value
@@ -188,8 +152,47 @@ async function queryTriggerAll(){
     addMarker(results, "location")
   }
 
-markerArray.forEach(marker =>{
+  document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
+    const inputField = document.getElementById("polylineField_speed")! as HTMLInputElement
+    state.setSpeed = parseInt(inputField.value)
+    const timeFields:NodeList = document.querySelectorAll(".polylineField_table_body_time")
+    timeFields.forEach((timeField, index) =>{
+      const time = state.setDist[index]/state.setSpeed
+      const n = new Date(0,0);
+      n.setSeconds(+time * 60 * 60);
+      const htmlTimeField = timeField as HTMLElement
+      htmlTimeField.innerText = n.toTimeString().slice(0, 8)
+    })
+  })
+
+markerArray.forEach((marker) =>{
   marker.addTo(map)
+  marker.addEventListener("dblclick", function(){
+    polylineMarkerArray.push(marker)
+    
+    if(polylineMarkerArray.length > 1){
+      buildTable(polylineMarkerArray, state)
+    state.markerClicks = state.markerClicks + 1
+      document.getElementById("polylineField")!.style.display = "flex"
+      const polyline = L.polyline(generateArcLine(polylineMarkerArray),{color:"red"})
+      polylineArray.push(polyline)
+      
+
+    }
+    polylineArray.forEach(polyline =>{
+      polyline.addTo(map)
+      const decorator: L.PolylineDecorator = L.polylineDecorator(polyline, {
+        patterns: [
+            // defines a pattern of 10px-wide dashes, repeated every 20px on the line
+            {offset: 0, repeat: 20, symbol: L.Symbol.arrowHead({pixelSize: 10, pathOptions:{fillOpacity: 1, weight: 0, color: "red"}})}
+        ]
+      })
+      polylineDecoratorArry.push(decorator)
+    })
+    polylineDecoratorArry.forEach(decorator =>{
+      decorator.addTo(map)
+    })
+  })
 })
 const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
 const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
@@ -213,6 +216,7 @@ queryAllField.addEventListener("keypress", function(e){
 
 async function queryTrigger(field:QueryInput){
   clearMarkers()
+  clearPolylineArray()
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
       const value: string = target?.value
@@ -300,6 +304,14 @@ clearMakers.innerText = "Clear Markers"
 clearMakers.className="toolbar_button"
 clearMakers.addEventListener("click", function(){
   clearMarkers()
+  clearPolylineArray()
+})
+
+const clearPolylines: HTMLButtonElement = document.createElement("button")
+clearPolylines.innerText = "Clear Lines"
+clearPolylines.className="toolbar_button"
+clearPolylines.addEventListener("click", function(){
+  clearPolylineArray()
 })
 
 document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
@@ -307,5 +319,6 @@ window.addEventListener("resize", function(){
   document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
 })
 document.getElementById("toolbar")?.appendChild(clearMakers)
+document.getElementById("toolbar")?.appendChild(clearPolylines)
 document.getElementById("toolbar")?.appendChild(popupToggle)
 document.getElementById("toolbar")?.appendChild(focusSwitzerland)
