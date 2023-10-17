@@ -9,12 +9,14 @@ import { generateArcLine, createIcon, buildTable } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
 import "leaflet-groupedlayercontrol"
+import { getLayer } from "./layers"
 
 const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
 const polylineMarkerArray: L.Marker[] = []
 const polylineArray: L.Polyline[] = []
 const polylineDecoratorArry: L.PolylineDecorator[] = []
+const layerArray: (string | L.GeoJSON)[][] = []
 
 document.getElementById("polylineField")!.style.display = "none"
 const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
@@ -70,6 +72,8 @@ setSidebarVisibility(state)
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+
 
 const inputArea = document.createElement("div")
 inputArea.className="sidebar_inputArea"
@@ -356,11 +360,19 @@ layerGroup.addEventListener("click", function(){
           if(column_content_checkbox.checked){
             if(!state.checkedLayers.includes(layer.id)){
               state.checkedLayers = [...state.checkedLayers, layer.id]
+              const setLayer:L.GeoJSON = getLayer(layer)
+              setLayer.addTo(map)
+              layerArray.push([layer.id, setLayer])
             }
           }
           if(!column_content_checkbox.checked){
             const removeItemIndex = state.checkedLayers.indexOf(layer.id)
             state.checkedLayers.splice(removeItemIndex, 1)
+            layerArray.forEach(item =>{
+              if(item[0] === layer.id){
+                item[1].removeFrom(map)
+              }
+            })
           }
         })
         const column_content_label: HTMLLabelElement = document.createElement("label")
