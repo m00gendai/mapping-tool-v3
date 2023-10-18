@@ -20,11 +20,11 @@ export interface State{
     layerGroupVisible: boolean
     checkedLayers: string[]
     layerGroupBuffer: boolean
+    darkmode: boolean
 }
 
 export interface SidebarFlag{
     type: string
-    icon: string
     text: string
 }
 

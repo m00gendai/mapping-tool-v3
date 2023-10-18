@@ -16,6 +16,7 @@ export const state: State ={
     layerGroupVisible: false,
     checkedLayers: [],
     layerGroupBuffer: true,
+    darkmode: true,
   }
 
 export const fieldDesignations: QueryInput[] = [
@@ -60,12 +61,10 @@ export const queryAllState:QueryInput = {
 export const sidebarFlags:SidebarFlag[] = [
     {
       type: "query",
-      icon: "/position-marker.svg",
       text: "Query items on map"
     },
     {
       type: "conversion",
-      icon: "/calculator.svg",
       text: "Unit conversions"
     },
   ]
