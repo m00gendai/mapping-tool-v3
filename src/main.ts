@@ -10,7 +10,7 @@ import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
 import { getLayer } from "./layers"
 
-const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
+const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
 const polylineMarkerArray: L.Marker[] = []
 const polylineArray: L.Polyline[] = []
@@ -198,11 +198,9 @@ markerArray.forEach((marker) =>{
 })
 const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
 const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
-if(bounds.length > 1){
-  map.fitBounds(bnds)
-} else {
-  map.setView(markerArray[0].getLatLng(), 10)
-}
+const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
+      const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
+map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebarVisible ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
 }
 
 queryAllButton.addEventListener("click", function(){
@@ -238,11 +236,10 @@ async function queryTrigger(field:QueryInput){
       })
       const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
       const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
-      if(bounds.length > 1){
-        map.fitBounds(bnds)
-      } else {
-        map.setView(markerArray[0].getLatLng(), 10)
-      }
+      const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
+      const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
+        map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebarVisible ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
+     
 }
 
 fieldDesignations.forEach(field =>{
@@ -329,6 +326,7 @@ colorModeButton.addEventListener("click", function(){
   state.darkmode = !state.darkmode
   buildSidebarFlags()
   layerGroup.innerHTML = createSVG("layerGroup", state)
+  document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
 })
 
 document.getElementById("toolbar")!.style.width = "50vw"
@@ -429,4 +427,26 @@ layerGroup.addEventListener("mouseleave", function(){
 
 layerGroup.addEventListener("mouseenter", function(){
   state.layerGroupBuffer = true
+})
+
+document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
+document.getElementById("sidebarToggle")!.addEventListener("click", function(){
+  if(state.sidebarVisible){
+    document.getElementById("sidebar")!.style.left = "calc(-25vw - 1rem)"
+    document.getElementById("zoom")!.style.left = "calc(1rem + 10px)"
+    document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
+  }
+  if(!state.sidebarVisible){
+    document.getElementById("sidebar")!.style.left = "1rem"
+    document.getElementById("zoom")!.style.left ="calc(25vw + 1rem + 10px)"
+    document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
+  }
+  state.sidebarVisible = !state.sidebarVisible
+})
+
+document.getElementById("zoomIn")!.addEventListener("click", function(){
+  map.zoomIn()
+})
+document.getElementById("zoomOut")!.addEventListener("click", function(){
+  map.zoomOut()
 })
