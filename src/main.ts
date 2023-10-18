@@ -10,7 +10,7 @@ import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
 import { getLayer } from "./layers"
 
-const map: L.Map = L.map('map').setView([46.80, 8.22], 8);
+const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
 const polylineMarkerArray: L.Marker[] = []
 const polylineArray: L.Polyline[] = []
@@ -51,11 +51,6 @@ function clearPolylineArray(){
   state.markerClicks= 0
   speedInput.value = ""
 }
-
-let mapWidth:string = getComputedStyle(document.getElementById("map")!).width
-window.addEventListener("resize", function(){
-  mapWidth = getComputedStyle(document.getElementById("map")!).width
-})
 
 function setSidebarVisibility(state:State){
   const sidebars:NodeList = document.querySelectorAll(".sidebarInner")
@@ -203,11 +198,9 @@ markerArray.forEach((marker) =>{
 })
 const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
 const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
-if(bounds.length > 1){
-  map.fitBounds(bnds)
-} else {
-  map.setView(markerArray[0].getLatLng(), 10)
-}
+const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
+      const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
+map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebarVisible ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
 }
 
 queryAllButton.addEventListener("click", function(){
@@ -243,11 +236,10 @@ async function queryTrigger(field:QueryInput){
       })
       const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
       const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
-      if(bounds.length > 1){
-        map.fitBounds(bnds)
-      } else {
-        map.setView(markerArray[0].getLatLng(), 10)
-      }
+      const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
+      const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
+        map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebarVisible ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
+     
 }
 
 fieldDesignations.forEach(field =>{
@@ -334,12 +326,11 @@ colorModeButton.addEventListener("click", function(){
   state.darkmode = !state.darkmode
   buildSidebarFlags()
   layerGroup.innerHTML = createSVG("layerGroup", state)
+  document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
 })
 
-document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
-window.addEventListener("resize", function(){
-  document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
-})
+document.getElementById("toolbar")!.style.width = "50vw"
+
 document.getElementById("toolbar")?.appendChild(clearMarkersButton)
 document.getElementById("toolbar")?.appendChild(clearPolylinesButton)
 document.getElementById("toolbar")?.appendChild(popupToggleButton)
@@ -350,11 +341,12 @@ const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = createSVG("layerGroup", state)
 
 layerGroup.addEventListener("click", function(){
-layerGroup.style.display = "grid"
+layerGroup.style.gridTemplateColumns = "repeat(auto-fill, minmax(250px, 1fr))"
+layerGroup.style.placeItems = "start center"
   state.layerGroupBuffer = true
   if(!state.layerGroupVisible){
     layerGroup.innerHTML = ""
-    layerGroup.style.width = `${parseFloat(mapWidth)-75}px`
+    layerGroup.style.width = `60vw`
     layerGroup.style.overflow = "hidden"
     setTimeout(function(){
       layerGroup.style.height = "auto"
@@ -427,11 +419,34 @@ layerGroup.addEventListener("mouseleave", function(){
       layerGroup.style.height = `3rem`
       state.layerGroupVisible = !state.layerGroupVisible
       layerGroup.innerHTML = createSVG("layerGroup", state)
-      layerGroup.style.display="flex"
+      layerGroup.style.gridTemplateColumns = "1fr"
+      layerGroup.style.placeItems = "center center"
     }
   },500)
 })
 
 layerGroup.addEventListener("mouseenter", function(){
   state.layerGroupBuffer = true
+})
+
+document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
+document.getElementById("sidebarToggle")!.addEventListener("click", function(){
+  if(state.sidebarVisible){
+    document.getElementById("sidebar")!.style.left = "calc(-25vw - 1rem)"
+    document.getElementById("zoom")!.style.left = "calc(1rem + 10px)"
+    document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
+  }
+  if(!state.sidebarVisible){
+    document.getElementById("sidebar")!.style.left = "1rem"
+    document.getElementById("zoom")!.style.left ="calc(25vw + 1rem + 10px)"
+    document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
+  }
+  state.sidebarVisible = !state.sidebarVisible
+})
+
+document.getElementById("zoomIn")!.addEventListener("click", function(){
+  map.zoomIn()
+})
+document.getElementById("zoomOut")!.addEventListener("click", function(){
+  map.zoomOut()
 })

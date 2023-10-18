@@ -17,6 +17,7 @@ export const state: State ={
     checkedLayers: [],
     layerGroupBuffer: true,
     darkmode: true,
+    sidebarVisible: true,
   }
 
 export const fieldDesignations: QueryInput[] = [
