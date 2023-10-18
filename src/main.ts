@@ -52,11 +52,6 @@ function clearPolylineArray(){
   speedInput.value = ""
 }
 
-let mapWidth:string = getComputedStyle(document.getElementById("map")!).width
-window.addEventListener("resize", function(){
-  mapWidth = getComputedStyle(document.getElementById("map")!).width
-})
-
 function setSidebarVisibility(state:State){
   const sidebars:NodeList = document.querySelectorAll(".sidebarInner")
   sidebars.forEach(sidebar =>{
@@ -336,10 +331,8 @@ colorModeButton.addEventListener("click", function(){
   layerGroup.innerHTML = createSVG("layerGroup", state)
 })
 
-document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
-window.addEventListener("resize", function(){
-  document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
-})
+document.getElementById("toolbar")!.style.width = "50vw"
+
 document.getElementById("toolbar")?.appendChild(clearMarkersButton)
 document.getElementById("toolbar")?.appendChild(clearPolylinesButton)
 document.getElementById("toolbar")?.appendChild(popupToggleButton)
@@ -350,11 +343,12 @@ const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = createSVG("layerGroup", state)
 
 layerGroup.addEventListener("click", function(){
-layerGroup.style.display = "grid"
+layerGroup.style.gridTemplateColumns = "repeat(auto-fill, minmax(250px, 1fr))"
+layerGroup.style.placeItems = "start center"
   state.layerGroupBuffer = true
   if(!state.layerGroupVisible){
     layerGroup.innerHTML = ""
-    layerGroup.style.width = `${parseFloat(mapWidth)-75}px`
+    layerGroup.style.width = `60vw`
     layerGroup.style.overflow = "hidden"
     setTimeout(function(){
       layerGroup.style.height = "auto"
@@ -427,7 +421,8 @@ layerGroup.addEventListener("mouseleave", function(){
       layerGroup.style.height = `3rem`
       state.layerGroupVisible = !state.layerGroupVisible
       layerGroup.innerHTML = createSVG("layerGroup", state)
-      layerGroup.style.display="flex"
+      layerGroup.style.gridTemplateColumns = "1fr"
+      layerGroup.style.placeItems = "center center"
     }
   },500)
 })
