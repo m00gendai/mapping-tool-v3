@@ -14,7 +14,8 @@ export const state: State ={
     setTotalTime: 0,
     markerClicks: 0,
     layerGroupVisible: false,
-    checkedLayers: []
+    checkedLayers: [],
+    layerGroupBuffer: true,
   }
 
 export const fieldDesignations: QueryInput[] = [
