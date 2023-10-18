@@ -332,7 +332,10 @@ document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = `<img src="/stack.svg" class="layerGroup_icon"/>`
+
 layerGroup.addEventListener("click", function(){
+
+  state.layerGroupBuffer = true
   if(!state.layerGroupVisible){
     layerGroup.innerHTML = ""
     layerGroup.style.width = `${parseFloat(mapWidth)-75}px`
@@ -399,11 +402,19 @@ layerGroup.addEventListener("click", function(){
     })
   }
 })
+
 layerGroup.addEventListener("mouseleave", function(){
-  if(state.layerGroupVisible){
-    layerGroup.style.width = `3rem`
-    layerGroup.style.height = `3rem`
-    state.layerGroupVisible = !state.layerGroupVisible
-    layerGroup.innerHTML = `<img src="/stack.svg" class="layerGroup_icon"/>`
-  }
+  state.layerGroupBuffer = false
+  setTimeout(function(){
+    if(state.layerGroupVisible && !state.layerGroupBuffer){
+      layerGroup.style.width = `3rem`
+      layerGroup.style.height = `3rem`
+      state.layerGroupVisible = !state.layerGroupVisible
+      layerGroup.innerHTML = `<img src="/stack.svg" class="layerGroup_icon"/>`
+    }
+  },500)
+})
+
+layerGroup.addEventListener("mouseenter", function(){
+  state.layerGroupBuffer = true
 })
