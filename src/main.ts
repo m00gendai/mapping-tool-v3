@@ -5,7 +5,7 @@ import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups } from "./configs"
-import { generateArcLine, createIcon, buildTable } from "./utils/generalUtils"
+import { generateArcLine, createIcon, buildTable, createSVG } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
 import { getLayer } from "./layers"
@@ -77,18 +77,22 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const inputArea = document.createElement("div")
 inputArea.className="sidebar_inputArea"
 
-sidebarFlags.forEach(flag =>{
-  const button:HTMLButtonElement = document.createElement("button")
-  button.className="flagButton"
-  button.style.backgroundImage = `url("${flag.icon}")`
-  button.title = flag.text
-  document.getElementById("sidebarFlags")?.appendChild(button)
-  button.addEventListener("click", function(){
-    state.sidebarSelect = flag.type
-    setSidebarVisibility(state)
+function buildSidebarFlags(){
+  document.getElementById("sidebarFlags")!.innerHTML = ""
+  sidebarFlags.forEach(flag =>{
+    const button:HTMLButtonElement = document.createElement("button")
+    button.className="flagButton"
+    button.innerHTML = createSVG(flag.type, state)
+    button.title = flag.text
+    document.getElementById("sidebarFlags")?.appendChild(button)
+    button.addEventListener("click", function(){
+      state.sidebarSelect = flag.type
+      setSidebarVisibility(state)
+    })
   })
-})
+}
 
+buildSidebarFlags()
 
 
 const queryAllField: HTMLDivElement = document.createElement("div")
@@ -321,6 +325,17 @@ clearPolylinesButton.addEventListener("click", function(){
   clearPolylineArray()
 })
 
+const colorModeButton: HTMLButtonElement = document.createElement("button")
+colorModeButton.innerText = "Change Color Mode"
+colorModeButton.className="toolbar_button"
+colorModeButton.title="Toggle between Dark and Light Theme"
+colorModeButton.addEventListener("click", function(){
+  document.body.classList.toggle("lightMode")
+  state.darkmode = !state.darkmode
+  buildSidebarFlags()
+  layerGroup.innerHTML = createSVG("layerGroup", state)
+})
+
 document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
 window.addEventListener("resize", function(){
   document.getElementById("toolbar")!.style.width = `${parseFloat(mapWidth)-50}px`
@@ -329,12 +344,13 @@ document.getElementById("toolbar")?.appendChild(clearMarkersButton)
 document.getElementById("toolbar")?.appendChild(clearPolylinesButton)
 document.getElementById("toolbar")?.appendChild(popupToggleButton)
 document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
+document.getElementById("toolbar")?.appendChild(colorModeButton)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
-layerGroup.innerHTML = `<img src="/stack.svg" class="layerGroup_icon"/>`
+layerGroup.innerHTML = createSVG("layerGroup", state)
 
 layerGroup.addEventListener("click", function(){
-
+layerGroup.style.display = "grid"
   state.layerGroupBuffer = true
   if(!state.layerGroupVisible){
     layerGroup.innerHTML = ""
@@ -410,7 +426,8 @@ layerGroup.addEventListener("mouseleave", function(){
       layerGroup.style.width = `3rem`
       layerGroup.style.height = `3rem`
       state.layerGroupVisible = !state.layerGroupVisible
-      layerGroup.innerHTML = `<img src="/stack.svg" class="layerGroup_icon"/>`
+      layerGroup.innerHTML = createSVG("layerGroup", state)
+      layerGroup.style.display="flex"
     }
   },500)
 })

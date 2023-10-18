@@ -1,10 +1,19 @@
 :root{
-    --backgroundColor: var(--backgroundColor);
+    --backgroundColor: #000;
     --backgroundColor_light: #2a2a2a;
     --backgroundColor_highlight: darkgoldenrod;
     --fontColor: #fff;
     --fontColor_highlight: darkgoldenrod;
     --border_color: #fff;
+}
+
+.lightMode{
+    --backgroundColor: #fff;
+    --backgroundColor_light: #d2d2d2;
+    --backgroundColor_highlight: goldenrod;
+    --fontColor: #000;
+    --fontColor_highlight: goldenrod;
+    --border_color: #000;
 }
 
 body{
@@ -63,10 +72,13 @@ body{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-size: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
     background-color: var(--backgroundColor);
+}
+
+.flagButton > svg{
+    position: relative;
+    width: 90%;
+    height: 90%;
 }
 
 .flagButton:hover{
@@ -121,7 +133,7 @@ body{
     width: 65%;
     height: 100%;
     border: 0;
-    background:#0a0a0a;
+    background:var(--backgroundColor_light);
     color: var(--fontColor);
     font-family: monospace;
     padding: 0;
@@ -155,21 +167,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--backgroundColor);
-    border-radius: 50px;
+    background-color: transparent;
     overflow: hidden;
-    box-shadow: 0px 5px 5px 0px #000;
 }
 
 .toolbar_button{
     position: relative;
     border: 0;
-    outline: 2px solid var(--border_color);
+    outline: 0;
     box-sizing: border-box;
     height: 100%;
     background: var(--backgroundColor);
     color: var(--fontColor);
-    margin: 0 1px;
+    margin: 0 0.25rem;
 }
 .toolbar_button:hover{
     cursor: pointer;
@@ -243,12 +253,20 @@ body{
     height: 3rem;
     background: var(--backgroundColor);
     z-index:1000;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 0.25rem;
     font-family: monospace;
     padding: 0.25rem;
     transition: 0.2s;
+}
+
+#layerGroup > svg{
+    position: relative;
+    width: 90%;
+    height: 90%;
 }
 
 #layerGroup:hover{
@@ -282,10 +300,4 @@ body{
 .layerGroup_column_content_item{
     position: relative;
     width: 90%;
-}
-
-.layerGroup_icon{
-    position: relative;
-    width: 3rem;
-    height: 3rem;
 }
