@@ -412,13 +412,20 @@ colorModeButton.addEventListener("click", function(){
   focusSwitzerlandButton.innerHTML = createSVG("focusSwitzerland", state)
   colorModeButton.innerHTML = createSVG("colorMode", state)
   popupToggleButton.innerHTML = createSVG("togglePopup", state)
+  vfrChartButton.innerHTML = createSVG("vfrChart", state)
 })
 
 document.getElementById("toolbar")!.style.width = "50vw"
 
+const vfrChartButton: HTMLButtonElement = document.createElement("button")
+vfrChartButton.innerHTML = createSVG("vfrChart", state)
+vfrChartButton.className="toolbar_button"
+vfrChartButton.title="Select VFR Charts to overlay on the map"
+
 document.getElementById("toolbar")?.appendChild(clearMarkersButton)
 document.getElementById("toolbar")?.appendChild(clearPolylinesButton)
 document.getElementById("toolbar")?.appendChild(popupToggleButton)
+document.getElementById("toolbar")?.appendChild(vfrChartButton)
 document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
 document.getElementById("toolbar")?.appendChild(colorModeButton)
 
