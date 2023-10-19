@@ -445,12 +445,12 @@ layerGroup.addEventListener("mouseenter", function(){
 document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
 document.getElementById("sidebarToggle")!.addEventListener("click", function(){
   if(state.sidebarVisible){
-    document.getElementById("sidebar")!.style.left = "calc(-25vw - 1rem)"
+    document.getElementById("sidebar")!.style.left = "calc(-25vw - 2rem)"
     document.getElementById("zoom")!.style.left = "calc(1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
   }
   if(!state.sidebarVisible){
-    document.getElementById("sidebar")!.style.left = "1rem"
+    document.getElementById("sidebar")!.style.left = "0rem"
     document.getElementById("zoom")!.style.left ="calc(25vw + 1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
   }
