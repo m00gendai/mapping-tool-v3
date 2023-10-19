@@ -69,11 +69,8 @@ body{
     background: var(--backgroundColor);
     position: relative;
     margin: 1rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items:flex-start;
-    flex-wrap: wrap;
-    height: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
     overflow: hidden;
 }
 
@@ -81,7 +78,7 @@ body{
     position: relative;
     height: 100%;
     aspect-ratio: 1.5/1;
-    outline: 2px solid var(--border_color);
+    outline: 0;
     border: 0;
     box-sizing: border-box;
     padding: 0;
