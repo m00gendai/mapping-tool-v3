@@ -4,6 +4,12 @@ export interface QueryInput{
     type: string
   }
 
+export interface BaseMap{
+  type: string
+  layer: string
+  attribution: string
+}
+
 export interface State{
     popupVisible: boolean
     sidebarSelect: string
@@ -22,6 +28,8 @@ export interface State{
     layerGroupBuffer: boolean
     darkmode: boolean
     sidebarVisible: boolean
+    basemapSelect: string
+    baseLayer: L.TileLayer
 }
 
 export interface SidebarFlag{
