@@ -96,6 +96,7 @@ queryAll.id = `sidebar_textarea_queryAll`
 const queryAllButton: HTMLButtonElement = document.createElement("button")
 queryAllButton.className="sidebar_button"
 queryAllButton.innerHTML=queryAllState.designation
+queryAll.placeholder = queryAllState.placeholder
 
 queryAllField.appendChild(queryAll)
 queryAllField.appendChild(queryAllButton)
@@ -298,11 +299,11 @@ async function queryTrigger(field:QueryInput){
 fieldDesignations.forEach(field =>{
     const textareaField: HTMLDivElement = document.createElement("div")
     textareaField.className=`sidebar_area`
-
     const textarea: HTMLTextAreaElement = document.createElement("textarea")
     textarea.className="sidebar_textarea"
     textarea.id = `sidebar_textarea_${field.designation}`
     textarea.value = field.value
+    textarea.placeholder = field.placeholder
     textarea.addEventListener("keypress", function(e){
       if(e.key === "Enter"){
         e.preventDefault()

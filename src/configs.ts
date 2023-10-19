@@ -53,39 +53,46 @@ export const fieldDesignations: QueryInput[] = [
     {
       designation: "LOCI",
       value: "",
-      type: "airport"
+      type: "airport",
+      placeholder: "LSPF LOWI LIML",
     },
     {
       designation: "PLACE",
       value: "",
-      type: "location"
+      type: "location",
+      placeholder: "Hallau,Bad Zurzach,Freiburg im Breisgau,Dübendorf",
     },
     {
       designation: "NAVAID",
       value: "",
       type: "navaid",
+      placeholder: "TRA ZUE KLO",
     },
     {
       designation: "WAYPOINT",
       value: "",
-      type: "waypoint"
+      type: "waypoint",
+      placeholder: "TITIX SONGI AMIKI",
     },
     {
       designation: "COORD", 
       value: "",
-      type: "coordinate"
+      type: "coordinate",
+      placeholder: "4741N00827E 472425N0083823E",
     },
     {
       designation: "BRG/DIST",
       value: "",
-      type: "brgdist"
+      type: "brgdist",
+      placeholder: "TRA090120 MOLUS120010",
     },
   ]
 
 export const queryAllState:QueryInput = {
     designation: "ALL",
     value: "",
-    type: ""
+    type: "",
+    placeholder: "-LSPF1400\n-N0120VFR SCHAFFHAUSEN ZUE 4737N00920E AMIKI GERSA045020 LSZK\n-LSMD0130 LSZH LSPH",
 }
 
 export const sidebarFlags:SidebarFlag[] = [

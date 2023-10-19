@@ -2,6 +2,7 @@ export interface QueryInput{
     designation: string
     value: string
     type: string
+    placeholder: string
   }
 
 export interface BaseMap{

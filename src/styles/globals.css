@@ -149,7 +149,7 @@ body{
     font-family: monospace;
     padding: 0;
     resize: vertical;
-    min-height: 3rem;
+    min-height: 5rem;
 }
 
 .sidebar_button{
@@ -157,7 +157,7 @@ body{
     width: 30%;
     background: var(--backgroundColor);
     color: var(--fontColor);
-    min-height: 3rem;
+    min-height: 5rem;
     margin: 0;
     padding: 0;
     border: 2px solid var(--border_color);
