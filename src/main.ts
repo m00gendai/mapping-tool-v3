@@ -359,6 +359,11 @@ popupToggleButton.addEventListener("click", function(){
    if(!state.popupVisible){
     markerArray.forEach(marker =>{
       marker.openPopup()
+      const bubble = marker.getPopup()!.getElement()!.children[0]! as HTMLElement
+      const bubbleTip = marker.getPopup()!.getElement()!.children[1]!.children[0]! as HTMLElement
+      bubble.style.background = state.darkmode ? "black" : "white"
+      bubble.style.color = state.darkmode ? "white" : "black"
+      bubbleTip.style.background = state.darkmode ? "black" : "white"
     })
   }
   state.popupVisible = !state.popupVisible
