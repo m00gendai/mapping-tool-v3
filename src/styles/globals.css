@@ -336,3 +336,11 @@ body{
     position: relative;
     width: 90%;
 }
+
+.basemapSelect{
+    position: relative;
+    height: 2rem;
+    width: 100%;
+    background: red;
+    margin: 0.5rem 0;
+}
