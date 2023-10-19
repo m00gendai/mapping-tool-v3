@@ -345,7 +345,7 @@ baseMaps.forEach(basemap =>{
 
 
 const popupToggleButton: HTMLButtonElement = document.createElement("button")
-popupToggleButton.innerText="Popup Toggle"
+popupToggleButton.innerHTML = createSVG("togglePopup", state)
 popupToggleButton.className="toolbar_button"
 popupToggleButton.title="Toggles all marker popups on or off"
 popupToggleButton.addEventListener("click", function(){
@@ -370,7 +370,7 @@ popupToggleButton.addEventListener("click", function(){
 })
 
 const focusSwitzerlandButton: HTMLButtonElement = document.createElement("button")
-focusSwitzerlandButton.innerText = "Focus Switzerland"
+focusSwitzerlandButton.innerHTML = createSVG("focusSwitzerland", state)
 focusSwitzerlandButton.className="toolbar_button"
 focusSwitzerlandButton.title="Centers the map so that the whole of Switzerland is visible"
 focusSwitzerlandButton.addEventListener("click", function(){
@@ -378,7 +378,7 @@ focusSwitzerlandButton.addEventListener("click", function(){
 })
 
 const clearMarkersButton: HTMLButtonElement = document.createElement("button")
-clearMarkersButton.innerText = "Clear Markers"
+clearMarkersButton.innerHTML = createSVG("clearMarker", state)
 clearMarkersButton.className="toolbar_button"
 clearMarkersButton.title = "Removes all markes from the map"
 clearMarkersButton.addEventListener("click", function(){
@@ -387,7 +387,7 @@ clearMarkersButton.addEventListener("click", function(){
 })
 
 const clearPolylinesButton: HTMLButtonElement = document.createElement("button")
-clearPolylinesButton.innerText = "Clear Lines"
+clearPolylinesButton.innerHTML = createSVG("removePolyline", state)
 clearPolylinesButton.className="toolbar_button"
 clearPolylinesButton.title="Removes all drawn lines between markers and resets any time/distance values"
 clearPolylinesButton.addEventListener("click", function(){
@@ -395,7 +395,7 @@ clearPolylinesButton.addEventListener("click", function(){
 })
 
 const colorModeButton: HTMLButtonElement = document.createElement("button")
-colorModeButton.innerText = "Change Color Mode"
+colorModeButton.innerHTML = createSVG("colorMode", state)
 colorModeButton.className="toolbar_button"
 colorModeButton.title="Toggle between Dark and Light Theme"
 colorModeButton.addEventListener("click", function(){
@@ -406,6 +406,11 @@ colorModeButton.addEventListener("click", function(){
   document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
   document.getElementById("zoomIn")!.innerHTML = createSVG("zoomIn", state)
   document.getElementById("zoomOut")!.innerHTML = createSVG("zoomOut", state)
+  clearPolylinesButton.innerHTML = createSVG("removePolyline", state)
+  clearMarkersButton.innerHTML = createSVG("clearMarker", state)
+  focusSwitzerlandButton.innerHTML = createSVG("focusSwitzerland", state)
+  colorModeButton.innerHTML = createSVG("colorMode", state)
+  popupToggleButton.innerHTML = createSVG("togglePopup", state)
 })
 
 document.getElementById("toolbar")!.style.width = "50vw"
