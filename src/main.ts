@@ -130,26 +130,44 @@ async function queryTriggerAll(){
   if(deconstructedNavaids.length !== 0){
     const results: string[][] = placeNavaid(deconstructedNavaids.join(" "))
     addMarker(results, "navaid")
+    const textarea = document.getElementById("sidebar_textarea_NAVAID")! as HTMLTextAreaElement
+    textarea.value = deconstructedNavaids.join(" ")
+
   }
   if(deconstructedLocis.length !== 0){
     const results: string[][] = placeLoci(deconstructedLocis.join(" "))
     addMarker(results, "airport")
+    const textarea = document.getElementById("sidebar_textarea_LOCI")! as HTMLTextAreaElement
+    textarea.value = deconstructedLocis.join(" ")
   }
   if(deconstructedWaypoints.length !== 0){
-    const results: string[][] = placeRep(deconstructedWaypoints.join(" "))
+    const results: string[][] = placeRep(deconstructedWaypoints.join(" ")) 
     addMarker(results, "waypoint")
+    const textarea = document.getElementById("sidebar_textarea_WAYPOINT")! as HTMLTextAreaElement
+    textarea.value = deconstructedWaypoints.join(" ")
   }
   if(deconstructedCoord.length !== 0){
     const results: string[][] = placeCoords(deconstructedCoord.join(" "))
     addMarker(results, "coordinate")
+    const textarea = document.getElementById("sidebar_textarea_COORD")! as HTMLTextAreaElement
+    textarea.value = deconstructedCoord.join(" ")
   }
   if(deconstructedBrgDist.length !== 0){
     const results: string[][] = placeBrgDist(deconstructedBrgDist.join(" "))
     addMarker(results, "brgdist")
+    const textarea = document.getElementById("sidebar_textarea_BRG/DIST")! as HTMLTextAreaElement
+    textarea.value = deconstructedBrgDist.join(" ")
   }
   if(deconstructedOther.length !== 0){
     const results: string[][] = await placePlace(deconstructedOther.join(" "))
-    addMarker(results, "location")
+    const textarea = document.getElementById("sidebar_textarea_PLACE")! as HTMLTextAreaElement
+    console.log(results)
+    if(results[0][0] === "ERROR" && results[0][1] === "ERROR" && results[0][2] === "ERROR"){
+      textarea.value = "ERROR GETTING LOCATION INFO"
+    } else {
+      addMarker(results, "location")
+      textarea.value = deconstructedOther.join(",")
+    }
   }
 
   document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
@@ -213,8 +231,7 @@ queryAllField.addEventListener("keypress", function(e){
 })
 
 async function queryTrigger(field:QueryInput){
-  clearMarkers()
-  clearPolylineArray()
+// Does NOT clear marker and polyline array, because it should be used as additive markers, not reset them
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
       const value: string = target?.value
@@ -229,9 +246,47 @@ async function queryTrigger(field:QueryInput){
                                   field.designation === "BRG/DIST" ? placeBrgDist(value)! :
                                   await placePlace(value)!
         addMarker(results, field.type)
-      markerArray.forEach(marker =>{
-        marker.addTo(map)
-      })
+        document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
+          const inputField = document.getElementById("polylineField_speed")! as HTMLInputElement
+          state.setSpeed = parseInt(inputField.value)
+          const timeFields:NodeList = document.querySelectorAll(".polylineField_table_body_time")
+          timeFields.forEach((timeField, index) =>{
+            const time = state.setDist[index]/state.setSpeed
+            const n = new Date(0,0);
+            n.setSeconds(+time * 60 * 60);
+            const htmlTimeField = timeField as HTMLElement
+            htmlTimeField.innerText = n.toTimeString().slice(0, 8)
+          })
+        })
+        markerArray.forEach((marker) =>{
+          marker.addTo(map)
+          marker.addEventListener("dblclick", function(){
+            polylineMarkerArray.push(marker)
+            
+            if(polylineMarkerArray.length > 1){
+              buildTable(polylineMarkerArray, state)
+            state.markerClicks = state.markerClicks + 1
+              document.getElementById("polylineField")!.style.display = "flex"
+              const polyline = L.polyline(generateArcLine(polylineMarkerArray),{color:"red"})
+              polylineArray.push(polyline)
+              
+        
+            }
+            polylineArray.forEach(polyline =>{
+              polyline.addTo(map)
+              const decorator: L.PolylineDecorator = L.polylineDecorator(polyline, {
+                patterns: [
+                    // defines a pattern of 10px-wide dashes, repeated every 20px on the line
+                    {offset: 0, repeat: 20, symbol: L.Symbol.arrowHead({pixelSize: 10, pathOptions:{fillOpacity: 1, weight: 0, color: "red"}})}
+                ]
+              })
+              polylineDecoratorArry.push(decorator)
+            })
+            polylineDecoratorArry.forEach(decorator =>{
+              decorator.addTo(map)
+            })
+          })
+        })
       const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
       const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
       const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
@@ -252,6 +307,7 @@ fieldDesignations.forEach(field =>{
       if(e.key === "Enter"){
         e.preventDefault()
         queryTrigger(field)
+        
       }
     })
     
@@ -261,6 +317,9 @@ fieldDesignations.forEach(field =>{
 
     button.addEventListener("click", function(){
       queryTrigger(field)
+      markerArray.forEach(marker =>{
+        marker.addTo(map)
+      })
     })
 
     textareaField.appendChild(textarea)
@@ -340,6 +399,8 @@ colorModeButton.addEventListener("click", function(){
   buildSidebarFlags()
   layerGroup.innerHTML = createSVG("layerGroup", state)
   document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
+  document.getElementById("zoomIn")!.innerHTML = createSVG("zoomIn", state)
+  document.getElementById("zoomOut")!.innerHTML = createSVG("zoomOut", state)
 })
 
 document.getElementById("toolbar")!.style.width = "50vw"
@@ -456,6 +517,8 @@ document.getElementById("sidebarToggle")!.addEventListener("click", function(){
   }
   state.sidebarVisible = !state.sidebarVisible
 })
+document.getElementById("zoomIn")!.innerHTML = createSVG("zoomIn", state)
+document.getElementById("zoomOut")!.innerHTML = createSVG("zoomOut", state)
 
 document.getElementById("zoomIn")!.addEventListener("click", function(){
   map.zoomIn()
