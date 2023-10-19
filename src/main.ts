@@ -4,8 +4,8 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups } from "./configs"
-import { generateArcLine, createIcon, buildTable, createSVG } from "./utils/generalUtils"
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps } from "./configs"
+import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
 import { getLayer } from "./layers"
@@ -63,9 +63,7 @@ function setSidebarVisibility(state:State){
 
 setSidebarVisibility(state)
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+state.baseLayer.addTo(map)
 
 
 
@@ -272,6 +270,21 @@ fieldDesignations.forEach(field =>{
 
 document.getElementById("sidebarInner_query")?.appendChild(inputArea)
 
+baseMaps.forEach(basemap =>{
+  const basemapButton = document.createElement("div")
+  basemapButton.className="basemapSelect"
+  basemapButton.innerHTML = basemap.type
+  basemapButton.addEventListener("click", function(){
+    state.baseLayer.removeFrom(map)
+    state.baseLayer = L.tileLayer(getBaseLayer(basemap.type), {
+      attribution: getBaseAttribution(basemap.type)
+    })
+    state.baseLayer.addTo(map)
+  })
+  document.getElementById("sidebarInner_basemap")?.appendChild(basemapButton)
+})
+
+
 const popupToggleButton: HTMLButtonElement = document.createElement("button")
 popupToggleButton.innerText="Popup Toggle"
 popupToggleButton.className="toolbar_button"
@@ -432,12 +445,12 @@ layerGroup.addEventListener("mouseenter", function(){
 document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
 document.getElementById("sidebarToggle")!.addEventListener("click", function(){
   if(state.sidebarVisible){
-    document.getElementById("sidebar")!.style.left = "calc(-25vw - 1rem)"
+    document.getElementById("sidebar")!.style.left = "calc(-25vw - 2rem)"
     document.getElementById("zoom")!.style.left = "calc(1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
   }
   if(!state.sidebarVisible){
-    document.getElementById("sidebar")!.style.left = "1rem"
+    document.getElementById("sidebar")!.style.left = "0rem"
     document.getElementById("zoom")!.style.left ="calc(25vw + 1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
   }

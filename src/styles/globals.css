@@ -55,9 +55,9 @@ body{
     display: block;
     position: absolute;
     top: 0;
-    left: 1rem;
+    left: 0rem;
     height: 100%;
-    width: 25vw;
+    width: calc(25vw + 1rem);
     overflow-y: scroll;
     direction: rtl;
     z-index:1000;
@@ -104,7 +104,7 @@ body{
     background: var(--backgroundColor);
     position: relative;
     direction: ltr;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items:flex-start;
@@ -335,4 +335,12 @@ body{
 .layerGroup_column_content_item{
     position: relative;
     width: 90%;
+}
+
+.basemapSelect{
+    position: relative;
+    height: 2rem;
+    width: 100%;
+    background: red;
+    margin: 0.5rem 0;
 }

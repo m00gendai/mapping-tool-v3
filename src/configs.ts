@@ -1,4 +1,5 @@
-import { QueryInput, State, SidebarFlag, LayerGroup } from "./interfaces"
+import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap } from "./interfaces"
+import L from "leaflet"
 
 export const state: State ={
     popupVisible: false,
@@ -18,7 +19,35 @@ export const state: State ={
     layerGroupBuffer: true,
     darkmode: true,
     sidebarVisible: true,
+    basemapSelect: "OSM",
+    baseLayer: L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
+      attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
+  }),
   }
+
+export const baseMaps:BaseMap[] =
+  [
+    {
+      type: `OSM`,
+      layer: `https://tile.openstreetmap.org/{z}/{x}/{y}.png`,
+      attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
+    },
+    {
+      type: "NASA",
+      layer: `https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/WMTS/tile/1.0.0/World_Imagery/{}/{}/{z}/{y}/{x}.jpg`,
+      attribution: `&copy <a href="https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9">Esri, Maxar, Earthstar Geographics, and the GIS User Community</a>`
+    },
+    {
+      type: "SWISSTOPO_LIGHT",
+      layer: `https://api.maptiler.com/maps/ch-swisstopo-lbm-vivid/256/{z}/{x}/{y}.png?key=${import.meta.env.VITE_MAPTILER_API_KEY}`,
+      attribution: `<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> © swisstopo <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://www.swisstopo.admin.ch/en/home.html" target="_blank">&copy; swisstopo</a>`
+    },
+    {
+      type: "SWISSTOPO_DARK",
+      layer: `https://api.maptiler.com/maps/ch-swisstopo-lbm-dark/256/{z}/{x}/{y}.png?key=${import.meta.env.VITE_MAPTILER_API_KEY}`,
+      attribution: `<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> © swisstopo <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://www.swisstopo.admin.ch/en/home.html" target="_blank">&copy; swisstopo</a>`
+    }
+  ]
 
 export const fieldDesignations: QueryInput[] = [
     {
@@ -63,6 +92,10 @@ export const sidebarFlags:SidebarFlag[] = [
     {
       type: "query",
       text: "Query items on map"
+    },
+    {
+      type: "basemap",
+      text: "Select Base Map"
     },
     {
       type: "conversion",
