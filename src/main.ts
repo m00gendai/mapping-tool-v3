@@ -7,7 +7,7 @@ import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers } from "./configs"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
-import { ChartLayer, QueryInput, State } from "./interfaces"
+import { QueryInput, State } from "./interfaces"
 import { getLayer } from "./layers"
 import { getChart } from "./charts"
 
