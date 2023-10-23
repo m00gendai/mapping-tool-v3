@@ -109,6 +109,18 @@ export const sidebarFlags:SidebarFlag[] = [
       type: "conversion",
       text: "Unit conversions"
     },
+    {
+      type: "balloon",
+      text: "Balloon Flight Area"
+    },
+    {
+      type: "settings",
+      text: "Settings"
+    },
+    {
+      type: "info",
+      text: "Info & Legal"
+    },
   ]
 
 export const layerGroups:LayerGroup[] = [
