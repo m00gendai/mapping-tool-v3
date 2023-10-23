@@ -4,11 +4,12 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps } from "./configs"
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers } from "./configs"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State } from "./interfaces"
 import { getLayer } from "./layers"
+import { getChart } from "./charts"
 
 const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
@@ -16,6 +17,7 @@ const polylineMarkerArray: L.Marker[] = []
 const polylineArray: L.Polyline[] = []
 const polylineDecoratorArry: L.PolylineDecorator[] = []
 const layerArray: (string | L.GeoJSON)[][] = []
+const chartArray: L.TileLayer[] = []
 
 document.getElementById("polylineField")!.style.display = "none"
 const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
@@ -162,7 +164,6 @@ async function queryTriggerAll(){
   if(deconstructedOther.length !== 0){
     const results: string[][] = await placePlace(deconstructedOther.join(" "))
     const textarea = document.getElementById("sidebar_textarea_PLACE")! as HTMLTextAreaElement
-    console.log(results)
     if(results[0][0] === "ERROR" && results[0][1] === "ERROR" && results[0][2] === "ERROR"){
       textarea.value = "ERROR GETTING LOCATION INFO"
     } else {
@@ -412,6 +413,7 @@ colorModeButton.addEventListener("click", function(){
   focusSwitzerlandButton.innerHTML = createSVG("focusSwitzerland", state)
   colorModeButton.innerHTML = createSVG("colorMode", state)
   popupToggleButton.innerHTML = createSVG("togglePopup", state)
+  vfrLayerDrawerTrigger.innerHTML = createSVG("drawer", state)
 })
 
 document.getElementById("toolbar")!.style.width = "50vw"
@@ -467,6 +469,7 @@ layerGroup.style.placeItems = "start center"
             if(!state.checkedLayers.includes(layer.id)){
               state.checkedLayers = [...state.checkedLayers, layer.id]
               const setLayer:L.GeoJSON = getLayer(layer)
+              console.log(setLayer)
               setLayer.addTo(map)
               layerArray.push([layer.id, setLayer])
             }
@@ -536,4 +539,52 @@ document.getElementById("zoomIn")!.addEventListener("click", function(){
 })
 document.getElementById("zoomOut")!.addEventListener("click", function(){
   map.zoomOut()
+})
+
+const vfrLayerDrawer = document.createElement("div")
+document.getElementById("app")?.appendChild(vfrLayerDrawer)
+vfrLayerDrawer.id = "vfrLayerDrawer"
+
+const vfrLayerDrawerTrigger = document.createElement("div")
+vfrLayerDrawer.appendChild(vfrLayerDrawerTrigger)
+vfrLayerDrawerTrigger.id = "vfrLayerDrawerTrigger"
+vfrLayerDrawerTrigger.innerHTML = createSVG("drawer", state)
+vfrLayerDrawerTrigger.title = "Overlay Aeronautical Charts over the Map"
+vfrLayerDrawerTrigger.addEventListener("click", function(){
+  if(state.drawerVisible){
+    vfrLayerDrawer.style.right = "calc(-75vw + 5rem + 10px - 0.125rem)"
+  }
+  if(!state.drawerVisible){
+    vfrLayerDrawer.style.right = "0"
+  }
+  state.drawerVisible = !state.drawerVisible
+})
+
+const vfrLayerDrawerInner = document.createElement("div")
+vfrLayerDrawer.appendChild(vfrLayerDrawerInner)
+vfrLayerDrawerInner.id = "vfrLayerDrawerInner"
+
+chartLayers.forEach(layer =>{
+  const layerButton: HTMLButtonElement = document.createElement("button")
+  vfrLayerDrawerInner.appendChild(layerButton)
+  layerButton.innerText = layer.description
+  layerButton.className = "layerButton"
+  layerButton.addEventListener("click", function(){
+    const chart: L.TileLayer = getChart(layer)
+    /*@ts-expect-error */
+    const check:string[] = chartArray.map(chart => chart._url)
+    if(chartArray.length === 0 || !check.includes(layer.url)){
+      chartArray.push(chart)
+      chart.addTo(map)
+    }
+    if(check.includes(layer.url)){
+      chartArray.forEach((chart, index) =>{
+        /*@ts-expect-error */
+        if(chart._url === layer.url){
+          chart.removeFrom(map)
+          chartArray.splice(index, 1)
+        }
+      })
+    }
+  })
 })

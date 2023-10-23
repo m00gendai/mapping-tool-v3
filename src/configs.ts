@@ -1,4 +1,4 @@
-import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap } from "./interfaces"
+import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer } from "./interfaces"
 import L from "leaflet"
 
 export const state: State ={
@@ -23,6 +23,7 @@ export const state: State ={
     baseLayer: L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
       attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
   }),
+    drawerVisible: false,
   }
 
 export const baseMaps:BaseMap[] =
@@ -124,6 +125,11 @@ export const layerGroups:LayerGroup[] = [
         id: "LIMMBDRY",
         data: "",
       },
+      {
+        name: "LS Drone Areas",
+        id: "LSASDRONE",
+        data: "",
+      }
     ]
   },
   {
@@ -251,4 +257,21 @@ export const layerGroups:LayerGroup[] = [
       },
     ]
   },
+]
+
+export const chartLayers:ChartLayer[] = [
+  {
+    id: "LSVFR",
+    country: "LS",
+    type: "VFR",
+    url: 'https://wmts20.geo.admin.ch/1.0.0/ch.vbs.milairspacechart/default/current/3857/{z}/{x}/{y}.png',
+    description: "Switzerland VFR Chart"
+  },
+  {
+    id: "LSGLD",
+    country: "LS",
+    type: "GLD",
+    url: "https://wmts.geo.admin.ch/1.0.0/ch.bazl.segelflugkarte/default/current/3857/{z}/{x}/{y}.png",
+    description: "Switzerland Gilder Chart"
+  }
 ]
