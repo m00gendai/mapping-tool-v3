@@ -15,6 +15,7 @@ import * as LJREP from "./Layer_Data/LJREP.json"
 import * as LDREP from "./Layer_Data/LDREP.json"
 import * as LSBDRY from "./Layer_Data/LSBDRY.json"
 import * as LIBDRY from "./Layer_Data/LIBDRY.json"
+import * as LSDRONE from "./Layer_Data/LSDRONE.json"
 import { Feature, GeoJsonObject, GeoJsonProperties } from "geojson";
 import { LayerGroup_layer } from "./interfaces"
 import L from "leaflet"
@@ -72,6 +73,9 @@ function getCountry(string:string){
     if(string === "LIBDRY"){
         return LIBDRY as GeoJsonObject
     }
+    if(string === "LSDRONE"){
+        return LSDRONE as GeoJsonObject
+    }
 }
 function getColor(type:string){
     if(type === "TMA"){
@@ -83,6 +87,9 @@ function getColor(type:string){
     if(type==="FIR"){
         return "magenta"
     }
+    if(type==="DRONE"){
+        return "lime"
+    }
     return "black"
 }
 
@@ -93,9 +100,11 @@ export function getLayer(layer:LayerGroup_layer){
                                                     getCountry(`${layer.id.substring(0,2)}REP`) : 
                                                 type === "BDRY" ? 
                                                     getCountry(`${layer.id.substring(0,2)}BDRY`) :
+                                                type === "DRONE" ?
+                                                    getCountry(`${layer.id.substring(0,2)}DRONE`) :
                                                 getCountry(layer.id.substring(0,2))
 /* 
-This is absolutely ridiculous, hacky and sketchy as all hell, but it works.
+This is absolutely ridiculous, hacky layerand sketchy as all hell, but it works.
 Judging how wonky Leaflet is with npm and especially TypeScript, I'll take it, though.
 */
 
