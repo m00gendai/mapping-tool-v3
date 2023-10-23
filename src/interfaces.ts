@@ -31,6 +31,7 @@ export interface State{
     sidebarVisible: boolean
     basemapSelect: string
     baseLayer: L.TileLayer
+    drawerVisible: boolean
 }
 
 export interface SidebarFlag{
@@ -79,3 +80,10 @@ export interface JSONLayer {
     coordinates: number[][][]
   }
   
+  export interface ChartLayer {
+    id:string
+    country: string
+    type: string
+    url: string
+    description: string
+  }
