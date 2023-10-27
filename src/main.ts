@@ -12,6 +12,15 @@ import { getLayer } from "./layers"
 import { getChart } from "./charts"
 import { parseCoordinates } from "./utils/conversions"
 
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+      document.getElementById("app")!.style.display = "none"
+      document.getElementById("polylineField")!.style.display = "none"
+  } else {
+    document.getElementById("app")!.style.display = "flex"
+  }
+};
+
 const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
 const polylineMarkerArray: L.Marker[] = []
