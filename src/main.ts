@@ -4,12 +4,13 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers } from "./configs"
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions } from "./configs"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
-import { QueryInput, State } from "./interfaces"
+import { QueryInput, State, Parsed } from "./interfaces"
 import { getLayer } from "./layers"
 import { getChart } from "./charts"
+import { parseCoordinates } from "./utils/conversions"
 
 const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
@@ -111,6 +112,33 @@ function addMarker(results:string[][], type:string){
   })
 }
 
+function plotMarker(marker:L.Marker){
+  polylineMarkerArray.push(marker)
+  
+  if(polylineMarkerArray.length > 1){
+    buildTable(polylineMarkerArray, state)
+  state.markerClicks = state.markerClicks + 1
+    document.getElementById("polylineField")!.style.display = "flex"
+    const polyline = L.polyline(generateArcLine(polylineMarkerArray),{color:"red"})
+    polylineArray.push(polyline)
+    
+
+  }
+  polylineArray.forEach(polyline =>{
+    polyline.addTo(map)
+    const decorator: L.PolylineDecorator = L.polylineDecorator(polyline, {
+      patterns: [
+          // defines a pattern of 10px-wide dashes, repeated every 20px on the line
+          {offset: 0, repeat: 20, symbol: L.Symbol.arrowHead({pixelSize: 10, pathOptions:{fillOpacity: 1, weight: 0, color: "red"}})}
+      ]
+    })
+    polylineDecoratorArry.push(decorator)
+  })
+  polylineDecoratorArry.forEach(decorator =>{
+    decorator.addTo(map)
+  })
+}
+
 async function queryTriggerAll(){
   clearMarkers()
   clearPolylineArray()
@@ -188,30 +216,7 @@ async function queryTriggerAll(){
 markerArray.forEach((marker) =>{
   marker.addTo(map)
   marker.addEventListener("dblclick", function(){
-    polylineMarkerArray.push(marker)
-    
-    if(polylineMarkerArray.length > 1){
-      buildTable(polylineMarkerArray, state)
-    state.markerClicks = state.markerClicks + 1
-      document.getElementById("polylineField")!.style.display = "flex"
-      const polyline = L.polyline(generateArcLine(polylineMarkerArray),{color:"red"})
-      polylineArray.push(polyline)
-      
-
-    }
-    polylineArray.forEach(polyline =>{
-      polyline.addTo(map)
-      const decorator: L.PolylineDecorator = L.polylineDecorator(polyline, {
-        patterns: [
-            // defines a pattern of 10px-wide dashes, repeated every 20px on the line
-            {offset: 0, repeat: 20, symbol: L.Symbol.arrowHead({pixelSize: 10, pathOptions:{fillOpacity: 1, weight: 0, color: "red"}})}
-        ]
-      })
-      polylineDecoratorArry.push(decorator)
-    })
-    polylineDecoratorArry.forEach(decorator =>{
-      decorator.addTo(map)
-    })
+    plotMarker(marker)
   })
 })
 const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
@@ -263,30 +268,7 @@ async function queryTrigger(field:QueryInput){
         markerArray.forEach((marker) =>{
           marker.addTo(map)
           marker.addEventListener("dblclick", function(){
-            polylineMarkerArray.push(marker)
-            
-            if(polylineMarkerArray.length > 1){
-              buildTable(polylineMarkerArray, state)
-            state.markerClicks = state.markerClicks + 1
-              document.getElementById("polylineField")!.style.display = "flex"
-              const polyline = L.polyline(generateArcLine(polylineMarkerArray),{color:"red"})
-              polylineArray.push(polyline)
-              
-        
-            }
-            polylineArray.forEach(polyline =>{
-              polyline.addTo(map)
-              const decorator: L.PolylineDecorator = L.polylineDecorator(polyline, {
-                patterns: [
-                    // defines a pattern of 10px-wide dashes, repeated every 20px on the line
-                    {offset: 0, repeat: 20, symbol: L.Symbol.arrowHead({pixelSize: 10, pathOptions:{fillOpacity: 1, weight: 0, color: "red"}})}
-                ]
-              })
-              polylineDecoratorArry.push(decorator)
-            })
-            polylineDecoratorArry.forEach(decorator =>{
-              decorator.addTo(map)
-            })
+            plotMarker(marker)
           })
         })
       const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
@@ -588,3 +570,82 @@ chartLayers.forEach(layer =>{
     }
   })
 })
+
+const coordinateConversionInput: HTMLSelectElement = document.createElement("select")
+document.getElementById("sidebarInner_conversion")!.appendChild(coordinateConversionInput)
+coordinateConversionInput.addEventListener("change", function(){
+  state.coordinateConversionSelect = coordinateConversionInput.value
+})
+
+coordinateConversions.forEach(conversion =>{
+  const option:HTMLOptionElement = document.createElement("option")
+  option.value = conversion
+  option.text = conversion
+  coordinateConversionInput.appendChild(option)
+})
+
+function calculateCoordinates(){
+  const parsedCoordinates: Parsed = parseCoordinates(coordinateConversionInputField.value, state.coordinateConversionSelect)
+    state.parsedDecimalCoordinates = parsedCoordinates.decimal
+    for(const [key, value] of Object.entries(parsedCoordinates)){
+
+      if(key === "wgs84degMin"){
+        const textarea = document.getElementById(`sidebar_textarea_conversion_0`)! as HTMLTextAreaElement
+        textarea.value = value.join(" ").toUpperCase()
+      }
+      if(key === "wgs84degMinSec"){
+        const textarea = document.getElementById(`sidebar_textarea_conversion_1`)! as HTMLTextAreaElement
+        textarea.value = value.join(" ").toUpperCase()
+      }
+      if(key === "decimal"){
+        const textarea = document.getElementById(`sidebar_textarea_conversion_2`)! as HTMLTextAreaElement
+        textarea.value = value.join(" ").toUpperCase()
+      }
+      if(key === "swissgrid"){
+        const textarea = document.getElementById(`sidebar_textarea_conversion_3`)! as HTMLTextAreaElement
+        textarea.value = value.join(" ").toUpperCase()
+      }
+    }
+}
+
+const coordinateConversionInputField:HTMLTextAreaElement = document.createElement("textarea")
+document.getElementById("sidebarInner_conversion")!.appendChild(coordinateConversionInputField)
+coordinateConversionInputField.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    e.preventDefault()
+    calculateCoordinates()
+  }
+})
+
+const convertCoordinates: HTMLButtonElement = document.createElement("button")
+document.getElementById("sidebarInner_conversion")!.appendChild(convertCoordinates)
+convertCoordinates.innerText = "Convert Coordiantes"
+convertCoordinates.addEventListener("click", function(){
+  calculateCoordinates()
+})
+
+const plotCoordinates: HTMLButtonElement = document.createElement("button")
+document.getElementById("sidebarInner_conversion")!.appendChild(plotCoordinates)
+plotCoordinates.innerText = "Plot Coordiantes"
+plotCoordinates.addEventListener("click", function(){
+  const coords:string[][] = state.parsedDecimalCoordinates.map(coord => [coord.split(",")[0], coord.split(",")[1], coord])
+  addMarker(coords, "coordinate")
+  markerArray.forEach(marker =>{
+    marker.addTo(map)
+    marker.addEventListener("dblclick", function(){
+      plotMarker(marker)
+    })
+  })
+})
+
+
+coordinateConversions.forEach((_, index) =>{
+  const textareaField: HTMLDivElement = document.createElement("div")
+  textareaField.className=`sidebar_area`
+  const textarea: HTMLTextAreaElement = document.createElement("textarea")
+  textareaField.appendChild(textarea)
+  document.getElementById("sidebarInner_conversion")!.appendChild(textareaField)
+  textarea.className="sidebar_textarea"
+  textarea.id = `sidebar_textarea_conversion_${index}`
+})
+
