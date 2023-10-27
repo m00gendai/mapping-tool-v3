@@ -134,13 +134,56 @@ body{
     align-items: center;
     flex-wrap: nowrap;
     margin: 0 0 0.5rem 0;
-    
 }
 .sidebar_area:last-child{
     margin: 0;
 }
 
-.sidebar_textarea{
+.sidebar_area_wrap{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 0.5rem 0;
+    border: 2px solid var(--border_color);
+    box-sizing:border-box;
+}
+.sidebar_area_wrap:last-child{
+    margin: 0 0 1rem 0;
+}
+
+.sidebar_area_details{
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid var(--border_color);
+}
+
+.sidebar_area_summary{
+    color:var(--fontColor);
+    border-bottom: 2px solid var(--border_color);
+}
+
+.sidebar_area_label{
+    width: 100%;
+    text-align: center;
+    font-family: "Arial";
+    color: var(--fontColor);
+    margin: 0.5rem;
+}
+
+.sidebar_area_select{
+    position: relative;
+    width: 100%;
+    margin: 0.5rem 0 0.5rem 0;
+    background: var(--backgroundColor);
+    color: var(--fontColor);
+}
+
+.sidebar_textarea,
+.sidebar_textarea_large,
+.sidebar_textarea_large_noMargin{
     position: relative;
     width: 65%;
     height: 100%;
@@ -153,7 +196,18 @@ body{
     min-height: 5rem;
 }
 
-.sidebar_button{
+.sidebar_textarea_large,
+.sidebar_textarea_large_noMargin{
+    width: 100%;
+    margin: 0.5rem;
+}
+
+.sidebar_textarea_large_noMargin{
+    margin: 0;
+}
+
+.sidebar_button,
+.sidebar_button_large{
     position: relative;
     width: 30%;
     background: var(--backgroundColor);
@@ -165,7 +219,14 @@ body{
     box-sizing: border-box;
 }
 
-.sidebar_button:hover{
+.sidebar_button_large{
+    width: 100%;
+    min-height: 2rem;
+    margin: 0.5rem 0;
+}
+
+.sidebar_button:hover,
+.sidebar_button_large:hover{
     cursor: pointer;
     background: var(--backgroundColor_light);
 }

@@ -571,8 +571,18 @@ chartLayers.forEach(layer =>{
   })
 })
 
+const detailsCoordinate:HTMLDetailsElement = document.createElement("details")
+detailsCoordinate.className="sidebar_area_details"
+/*@ts-expect-error */
+const summaryCoordinate:HTMLSummaryElement = document.createElement("summary")
+summaryCoordinate.innerText = "Coordinate Conversions"
+summaryCoordinate.className="sidebar_area_summary"
+detailsCoordinate.appendChild(summaryCoordinate)
+document.getElementById("sidebarInner_conversion")!.appendChild(detailsCoordinate)
+
 const coordinateConversionInput: HTMLSelectElement = document.createElement("select")
-document.getElementById("sidebarInner_conversion")!.appendChild(coordinateConversionInput)
+coordinateConversionInput.className="sidebar_area_select"
+detailsCoordinate.appendChild(coordinateConversionInput)
 coordinateConversionInput.addEventListener("change", function(){
   state.coordinateConversionSelect = coordinateConversionInput.value
 })
@@ -609,7 +619,8 @@ function calculateCoordinates(){
 }
 
 const coordinateConversionInputField:HTMLTextAreaElement = document.createElement("textarea")
-document.getElementById("sidebarInner_conversion")!.appendChild(coordinateConversionInputField)
+detailsCoordinate.appendChild(coordinateConversionInputField)
+coordinateConversionInputField.className="sidebar_textarea_large_noMargin"
 coordinateConversionInputField.addEventListener("keypress", function(e){
   if(e.key === "Enter"){
     e.preventDefault()
@@ -618,15 +629,17 @@ coordinateConversionInputField.addEventListener("keypress", function(e){
 })
 
 const convertCoordinates: HTMLButtonElement = document.createElement("button")
-document.getElementById("sidebarInner_conversion")!.appendChild(convertCoordinates)
+detailsCoordinate.appendChild(convertCoordinates)
 convertCoordinates.innerText = "Convert Coordiantes"
+convertCoordinates.className="sidebar_button_large"
 convertCoordinates.addEventListener("click", function(){
   calculateCoordinates()
 })
 
 const plotCoordinates: HTMLButtonElement = document.createElement("button")
-document.getElementById("sidebarInner_conversion")!.appendChild(plotCoordinates)
+detailsCoordinate.appendChild(plotCoordinates)
 plotCoordinates.innerText = "Plot Coordiantes"
+plotCoordinates.className="sidebar_button_large"
 plotCoordinates.addEventListener("click", function(){
   const coords:string[][] = state.parsedDecimalCoordinates.map(coord => [coord.split(",")[0], coord.split(",")[1], coord])
   addMarker(coords, "coordinate")
@@ -639,13 +652,19 @@ plotCoordinates.addEventListener("click", function(){
 })
 
 
-coordinateConversions.forEach((_, index) =>{
+coordinateConversions.forEach((conversion, index) =>{
   const textareaField: HTMLDivElement = document.createElement("div")
-  textareaField.className=`sidebar_area`
+  textareaField.className=`sidebar_area_wrap`
+  const label:HTMLLabelElement = document.createElement("label")
+  label.htmlFor = "sidebar_textarea_conversion_${index}"
+  label.innerText=conversion
+  label.className = "sidebar_area_label"
+  textareaField.appendChild(label)
   const textarea: HTMLTextAreaElement = document.createElement("textarea")
   textareaField.appendChild(textarea)
-  document.getElementById("sidebarInner_conversion")!.appendChild(textareaField)
-  textarea.className="sidebar_textarea"
+  detailsCoordinate.appendChild(textareaField)
+  textarea.className="sidebar_textarea_large"
+  textarea.disabled = true
   textarea.id = `sidebar_textarea_conversion_${index}`
 })
 
