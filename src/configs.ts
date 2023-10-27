@@ -24,6 +24,8 @@ export const state: State ={
       attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
   }),
     drawerVisible: false,
+    coordinateConversionSelect: "WGS84 Deg Min",
+    parsedDecimalCoordinates: []
   }
 
 export const baseMaps:BaseMap[] =
@@ -286,4 +288,8 @@ export const chartLayers:ChartLayer[] = [
     url: "https://wmts.geo.admin.ch/1.0.0/ch.bazl.segelflugkarte/default/current/3857/{z}/{x}/{y}.png",
     description: "Switzerland Gilder Chart"
   }
+]
+
+export const coordinateConversions:string[] = [
+  "WGS84 Deg Min", "WGS84 Deg Min Sec", "Decimal", "Swissgrid"
 ]
