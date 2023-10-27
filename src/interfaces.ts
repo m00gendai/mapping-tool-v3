@@ -32,6 +32,8 @@ export interface State{
     basemapSelect: string
     baseLayer: L.TileLayer
     drawerVisible: boolean
+    coordinateConversionSelect: string
+    parsedDecimalCoordinates: string[]
 }
 
 export interface SidebarFlag{
@@ -87,3 +89,24 @@ export interface JSONLayer {
     url: string
     description: string
   }
+
+export interface Coord{
+	verbatimCoordinates: string
+	verbatimLatitude: string
+	verbatimLongitude: string
+	decimalLatitude: number
+	decimalLongitude: number
+	decimalCoordinates: string
+}
+
+export interface Parsed{
+  wgs84degMin: string[]
+  wgs84degMinSec: string[]
+  decimal: string[]
+  swissgrid: string[]
+}
+
+export interface Forwarded{
+  x: number
+  y: number
+}
