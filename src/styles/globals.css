@@ -163,6 +163,8 @@ body{
 .sidebar_area_summary{
     color:var(--fontColor);
     border-bottom: 2px solid var(--border_color);
+    font-family: "Arial";
+    font-size: 1.25rem;
 }
 
 .sidebar_area_label{
