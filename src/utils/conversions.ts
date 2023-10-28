@@ -105,3 +105,11 @@ export function calcDegToDec(coord:string) {
 	const converted:Coord = convert(coord)
 	return [converted.decimalLatitude.toString(), converted.decimalLongitude.toString()]
 }
+
+export function eetToDecimalHours(eet:string){
+	const hours: number = parseInt(eet.substring(0,2))
+	const minutes: number = parseInt(eet.substring(2,4))
+	const decimalMinutes: number = minutes/60
+	const decimalHours:number = hours + decimalMinutes
+	return decimalHours
+}
