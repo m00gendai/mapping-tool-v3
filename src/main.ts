@@ -682,45 +682,69 @@ coordinateConversions.forEach((conversion, index) =>{
   textarea.id = `sidebar_textarea_conversion_${index}`
 })
 
+const balloonCoordinateInputField: HTMLDivElement = document.createElement("div")
+balloonCoordinateInputField.className = "sidebar_area_wrap"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonCoordinateInputField)
+
 const balloonCoordinateInputLabel: HTMLLabelElement = document.createElement("label")
 balloonCoordinateInputLabel.htmlFor = "balloon_starting_coordinate"
 balloonCoordinateInputLabel.innerText = "DEP Coordinate as in FPL"
-document.getElementById("sidebarInner_balloon")!.appendChild(balloonCoordinateInputLabel)
+balloonCoordinateInputLabel.className ="sidebar_area_label"
+balloonCoordinateInputField.appendChild(balloonCoordinateInputLabel)
 const balloonCoordinateInput: HTMLInputElement = document.createElement("input")
 balloonCoordinateInput.type ="text"
 balloonCoordinateInput.id = "balloon_starting_coordinate"
 balloonCoordinateInput.placeholder = "4710N00710E or 471030N0071030E"
-document.getElementById("sidebarInner_balloon")!.appendChild(balloonCoordinateInput)
+balloonCoordinateInput.className="sidebar_input_large"
+balloonCoordinateInputField.appendChild(balloonCoordinateInput)
+
+const balloonSpeedInputField: HTMLDivElement = document.createElement("div")
+balloonSpeedInputField.className = "sidebar_area_wrap"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonSpeedInputField)
 
 const balloonSpeedInputLabel: HTMLLabelElement = document.createElement("label")
 balloonSpeedInputLabel.htmlFor = "balloon_speed"
 balloonSpeedInputLabel.innerText = "Speed in Knots as in FPL"
-document.getElementById("sidebarInner_balloon")!.appendChild(balloonSpeedInputLabel)
+balloonSpeedInputLabel.className ="sidebar_area_label"
+balloonSpeedInputField.appendChild(balloonSpeedInputLabel)
 const balloonSpeedInput: HTMLInputElement = document.createElement("input")
 balloonSpeedInput.type ="text"
 balloonSpeedInput.id = "balloon_speed"
 balloonSpeedInput.placeholder = "0010 or 0100"
-document.getElementById("sidebarInner_balloon")!.appendChild(balloonSpeedInput)
+balloonSpeedInput.className="sidebar_input_large"
+balloonSpeedInputField.appendChild(balloonSpeedInput)
+
+const balloonTEETInputField: HTMLDivElement = document.createElement("div")
+balloonTEETInputField.className = "sidebar_area_wrap"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonTEETInputField)
 
 const balloonTEETInputLabel: HTMLLabelElement = document.createElement("label")
 balloonTEETInputLabel.htmlFor = "balloon_TEET"
 balloonTEETInputLabel.innerText = "Total EET as in FPL"
-document.getElementById("sidebarInner_balloon")!.appendChild(balloonTEETInputLabel)
+balloonTEETInputLabel.className ="sidebar_area_label"
+balloonTEETInputField.appendChild(balloonTEETInputLabel)
 const balloonTEETInput: HTMLInputElement = document.createElement("input")
 balloonTEETInput.type ="text"
 balloonTEETInput.id = "balloon_TEET"
 balloonTEETInput.placeholder = "0500 or 2359"
-document.getElementById("sidebarInner_balloon")!.appendChild(balloonTEETInput)
+balloonTEETInput.className="sidebar_input_large"
+balloonTEETInputField.appendChild(balloonTEETInput)
+
+const balloonDriftInputField: HTMLDivElement = document.createElement("div")
+balloonDriftInputField.className = "sidebar_area_wrap"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonDriftInputField)
 
 const balloonDriftInputLabel: HTMLLabelElement = document.createElement("label")
 balloonDriftInputLabel.htmlFor = "balloon_drift"
 balloonDriftInputLabel.innerText = "Drifting as in FPL (if known)"
-document.getElementById("sidebarInner_balloon")!.appendChild(balloonDriftInputLabel)
+balloonDriftInputLabel.className ="sidebar_area_label"
+balloonDriftInputField.appendChild(balloonDriftInputLabel)
 const balloonDriftInput: HTMLInputElement = document.createElement("input")
 balloonDriftInput.type ="text"
 balloonDriftInput.id = "balloon_drift"
 balloonDriftInput.placeholder = "095 or 265"
-document.getElementById("sidebarInner_balloon")!.appendChild(balloonDriftInput)
+balloonDriftInput.className="sidebar_input_large"
+balloonDriftInputField.appendChild(balloonDriftInput)
 
 function clearBalloonCircle(){
   geodesicCircleArray.forEach(geodesicCircle =>{
