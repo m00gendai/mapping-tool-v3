@@ -179,6 +179,11 @@ export const layerGroups:LayerGroup[] = [
         id: "LDZOCTR",
         data: "",
       },
+      {
+        name: "LK - Czech Republic",
+        id: "LKAACTR",
+        data: "",
+      },
     ]
   },
   {
@@ -192,6 +197,11 @@ export const layerGroups:LayerGroup[] = [
       {
         name: "LD - Croatia",
         id: "LDZOTMA",
+        data: "",
+      },
+      {
+        name: "LK - Czech Republic",
+        id: "LKAATMA",
         data: "",
       },
       {
@@ -212,6 +222,11 @@ export const layerGroups:LayerGroup[] = [
       {
         name: "EB - Belgium & Luxembourg",
         id: "EBBUFIR",
+        data: "",
+      },
+      {
+        name: "LK - Czech Republic",
+        id: "LKAAFIR",
         data: "",
       },
       {

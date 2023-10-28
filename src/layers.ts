@@ -11,6 +11,7 @@ import * as BI from "./Layer_Data/BI.json"
 import * as EI from "./Layer_Data/EI.json"
 import * as EG from "./Layer_Data/EG.json"
 import * as LE from "./Layer_Data/LE.json"
+import * as LK from "./Layer_Data/LK.json"
 import * as LJREP from "./Layer_Data/LJREP.json"
 import * as LDREP from "./Layer_Data/LDREP.json"
 import * as LSBDRY from "./Layer_Data/LSBDRY.json"
@@ -60,6 +61,9 @@ function getCountry(string:string){
     }
     if(string === "LE"){
         return LE as GeoJsonObject
+    }
+    if(string === "LK"){
+        return LK as GeoJsonObject
     }
     if(string === "LJREP"){
         return LJREP as GeoJsonObject
