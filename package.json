@@ -27,6 +27,7 @@
     "leaflet": "^1.9.4",
     "leaflet-arc": "^1.0.2",
     "leaflet-polylinedecorator": "^1.6.0",
+    "leaflet.geodesic": "^2.7.1",
     "lodash": "^4.17.21",
     "proj4": "^2.9.2",
     "transform-coordinates": "^1.0.0"
