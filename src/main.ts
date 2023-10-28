@@ -10,7 +10,9 @@ import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed } from "./interfaces"
 import { getLayer } from "./layers"
 import { getChart } from "./charts"
-import { parseCoordinates } from "./utils/conversions"
+import { parseCoordinates, calcDegToDec, eetToDecimalHours } from "./utils/conversions"
+import "leaflet.geodesic"
+import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
@@ -28,6 +30,9 @@ const polylineArray: L.Polyline[] = []
 const polylineDecoratorArry: L.PolylineDecorator[] = []
 const layerArray: (string | L.GeoJSON)[][] = []
 const chartArray: L.TileLayer[] = []
+const geodesicCircleArray: L.GeodesicCircle[] = []
+const balloonMarkerArray: L.Marker[] = []
+const geodesicLineArray: L.Geodesic[] = []
 
 document.getElementById("polylineField")!.style.display = "none"
 const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
@@ -676,4 +681,103 @@ coordinateConversions.forEach((conversion, index) =>{
   textarea.disabled = true
   textarea.id = `sidebar_textarea_conversion_${index}`
 })
+
+const balloonCoordinateInputLabel: HTMLLabelElement = document.createElement("label")
+balloonCoordinateInputLabel.htmlFor = "balloon_starting_coordinate"
+balloonCoordinateInputLabel.innerText = "DEP Coordinate as in FPL"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonCoordinateInputLabel)
+const balloonCoordinateInput: HTMLInputElement = document.createElement("input")
+balloonCoordinateInput.type ="text"
+balloonCoordinateInput.id = "balloon_starting_coordinate"
+balloonCoordinateInput.placeholder = "4710N00710E or 471030N0071030E"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonCoordinateInput)
+
+const balloonSpeedInputLabel: HTMLLabelElement = document.createElement("label")
+balloonSpeedInputLabel.htmlFor = "balloon_speed"
+balloonSpeedInputLabel.innerText = "Speed in Knots as in FPL"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonSpeedInputLabel)
+const balloonSpeedInput: HTMLInputElement = document.createElement("input")
+balloonSpeedInput.type ="text"
+balloonSpeedInput.id = "balloon_speed"
+balloonSpeedInput.placeholder = "0010 or 0100"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonSpeedInput)
+
+const balloonTEETInputLabel: HTMLLabelElement = document.createElement("label")
+balloonTEETInputLabel.htmlFor = "balloon_TEET"
+balloonTEETInputLabel.innerText = "Total EET as in FPL"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonTEETInputLabel)
+const balloonTEETInput: HTMLInputElement = document.createElement("input")
+balloonTEETInput.type ="text"
+balloonTEETInput.id = "balloon_TEET"
+balloonTEETInput.placeholder = "0500 or 2359"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonTEETInput)
+
+const balloonDriftInputLabel: HTMLLabelElement = document.createElement("label")
+balloonDriftInputLabel.htmlFor = "balloon_drift"
+balloonDriftInputLabel.innerText = "Drifting as in FPL (if known)"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonDriftInputLabel)
+const balloonDriftInput: HTMLInputElement = document.createElement("input")
+balloonDriftInput.type ="text"
+balloonDriftInput.id = "balloon_drift"
+balloonDriftInput.placeholder = "095 or 265"
+document.getElementById("sidebarInner_balloon")!.appendChild(balloonDriftInput)
+
+function clearBalloonCircle(){
+  geodesicCircleArray.forEach(geodesicCircle =>{
+    geodesicCircle.removeFrom(map)
+  })
+  geodesicCircleArray.length = 0
+  balloonMarkerArray.forEach(marker =>{
+    marker.removeFrom(map)
+  })
+  balloonMarkerArray.length = 0
+  geodesicLineArray.forEach(geodesicLine =>{
+    geodesicLine.removeFrom(map)
+  })
+  geodesicLineArray.length = 0
+}
+
+const plotBalloonCircle: HTMLButtonElement = document.createElement("button")
+plotBalloonCircle.innerText = "Plot Circle"
+plotBalloonCircle.className = "sidebar_button_large"
+document.getElementById("sidebarInner_balloon")!.appendChild(plotBalloonCircle)
+plotBalloonCircle.addEventListener("click", function(){
+  clearBalloonCircle()
+  const start:string[] = calcDegToDec(balloonCoordinateInput.value)
+  const speed: number = parseFloat(balloonSpeedInput.value)*1.852
+  const teet: string = balloonTEETInput.value
+  const decimalTeet:number = eetToDecimalHours(teet)
+  const dist: number = speed*decimalTeet
+  const startCoord = new L.LatLng(parseFloat(start[0]), parseFloat(start[1]))
+  const geodesicCircle = new L.GeodesicCircle(startCoord, {radius: dist*1000, steps: 180})
+  geodesicCircleArray.push(geodesicCircle)
+  const startMarker: L.Marker<any> = L.marker([parseFloat(start[0]), parseFloat(start[1])], {icon:createIcon("coordinate")}).bindPopup(`Balloon Starting Point:\n${start[0]},${start[1]}`, {autoClose: false})
+  balloonMarkerArray.push(startMarker)
+  if(balloonDriftInput.value !== ""){
+    const p1 = new LatLon(parseFloat(start[0]), parseFloat(start[1]))
+    const p2 = p1.destinationPoint((dist*1000), parseInt(balloonDriftInput.value))
+    const endMarker: L.Marker<any> = L.marker([parseFloat(p2._lat.toString()), parseFloat(p2._lon.toString())], {icon:createIcon("coordinate")}).bindPopup(`Balloon approximate destination:\n${p2._lat.toString()},${p2._lon.toString()}`, {autoClose: false})
+    balloonMarkerArray.push(endMarker)
+    const geodesicLine: L.Geodesic = L.geodesic([startCoord, new L.LatLng(p2._lat, p2._lon)])
+    geodesicLineArray.push(geodesicLine)
+    geodesicLineArray.forEach(geodesicLine =>{
+      geodesicLine.addTo(map)
+    })
+  }
+  balloonMarkerArray.forEach(marker =>{
+    marker.addTo(map)
+  })
+  geodesicCircleArray.forEach(geodesicCircle =>{
+    geodesicCircle.addTo(map)
+  })
+})
+
+const removeBalloonCircle: HTMLButtonElement = document.createElement("button")
+removeBalloonCircle.innerText = "Remove Circle"
+removeBalloonCircle.className = "sidebar_button_large"
+document.getElementById("sidebarInner_balloon")!.appendChild(removeBalloonCircle)
+removeBalloonCircle.addEventListener("click", function(){
+  clearBalloonCircle()
+})
+
 
