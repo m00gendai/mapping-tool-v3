@@ -29,6 +29,10 @@ body{
     margin: 0;
 }
 
+label{
+    color: var(--fontColor);
+}
+
 #app{
     position: relative;
     width: 100%;
