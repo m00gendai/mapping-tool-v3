@@ -431,6 +431,7 @@ layerGroup.style.placeItems = "start center"
     layerGroup.innerHTML = ""
     layerGroup.style.width = `60vw`
     layerGroup.style.overflow = "hidden"
+    layerGroup.style.overflowY = "hidden"
     setTimeout(function(){
       layerGroup.style.height = "auto"
       layerGroup.style.overflow = "visible"
