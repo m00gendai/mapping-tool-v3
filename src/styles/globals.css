@@ -451,10 +451,14 @@ label{
 
 .basemapSelect{
     position: relative;
-    height: 2rem;
+    height: 10rem;
     width: 100%;
-    background: red;
+    display: flex;
     margin: 0.5rem 0;
+}
+
+.basemapSelect > .leaflet-control-container{
+    display: none;
 }
 
 #vfrLayerDrawer{
