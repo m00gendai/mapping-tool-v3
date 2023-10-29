@@ -5,6 +5,7 @@
     --fontColor: #fff;
     --fontColor_highlight: darkgoldenrod;
     --border_color: #fff;
+    --border_highlight: darkgoldenrod;
 }
 
 .lightMode{
@@ -14,6 +15,7 @@
     --fontColor: #000;
     --fontColor_highlight: goldenrod;
     --border_color: #000;
+    --border_highlight: goldenrod;
 }
 
 body{
@@ -454,11 +456,27 @@ label{
     height: 10rem;
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0.5rem 0;
+    box-sizing:border-box;
+    border: 2px solid var(--border_color);
 }
 
-.basemapSelect > .leaflet-control-container{
+.basemapSelect_inner{
+    position: relative;
+    height: calc(100% - 0.5rem);
+    width: calc(100% - 0.5rem);
+    display: flex;
+    box-sizing:border-box;
+}
+
+.basemapSelect_inner > .leaflet-control-container{
     display: none;
+}
+
+.selectedBorder{
+    border: 2px solid var(--border_highlight);
 }
 
 #vfrLayerDrawer{

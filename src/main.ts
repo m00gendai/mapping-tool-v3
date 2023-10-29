@@ -330,15 +330,29 @@ document.getElementById("sidebarInner_query")?.appendChild(inputArea)
 baseMaps.forEach(basemap =>{
   const basemapButton = document.createElement("div")
   basemapButton.className="basemapSelect"
-  const mapThumb: L.Map = L.map(basemapButton, {zoomControl:true}).setView([46.80, 8.22], 6);
+  basemapButton.id = `basemapSelect_${basemap.type}`
+  const basemapButtonInner = document.createElement("div")
+  basemapButtonInner.className="basemapSelect_inner"
+  basemapButton.appendChild(basemapButtonInner)
+  const mapThumb: L.Map = L.map(basemapButtonInner, {zoomControl:true})  
   disableControls(mapThumb)
+  setTimeout(function(){
+    mapThumb.invalidateSize(true)
+    mapThumb.setView([46.80, 8.22], 6);
+  },1000)
   L.tileLayer(getBaseLayer(basemap.type)).addTo(mapThumb)
+  if(basemap.type === state.basemapSelect){
+    basemapButton.classList.toggle("selectedBorder")
+  }
   basemapButton.addEventListener("click", function(){
+    document.getElementById(`basemapSelect_${state.basemapSelect}`)!.classList.toggle("selectedBorder")
+    basemapButton.classList.toggle("selectedBorder")
     state.baseLayer.removeFrom(map)
     state.baseLayer = L.tileLayer(getBaseLayer(basemap.type), {
       attribution: getBaseAttribution(basemap.type)
     })
     state.baseLayer.addTo(map)
+    state.basemapSelect = basemap.type
   })
   document.getElementById("sidebarInner_basemap")?.appendChild(basemapButton)
 })
