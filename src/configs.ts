@@ -17,9 +17,9 @@ export const state: State ={
     layerGroupVisible: false,
     checkedLayers: [],
     layerGroupBuffer: true,
-    darkmode: true,
+    darkmode: typeof localStorage.getItem("AMTV3_darkmode") !== null ? JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}") : true,
     sidebarVisible: true,
-    basemapSelect: "OSM",
+    basemapSelect: typeof localStorage.getItem("AMTV3_basemap") === "string" ? localStorage.getItem("AMTV3_basemap") || "{}" : "OSM",
     baseLayer: L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
       attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
   }),
