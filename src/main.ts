@@ -448,6 +448,16 @@ document.getElementById("toolbar")?.appendChild(colorModeButton)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = createSVG("layerGroup", state)
+console.log(state.checkedLayers)
+layerGroups.forEach(group =>{
+  group.layers.forEach(layer =>{
+    if(state.checkedLayers.includes(layer.id)){
+      const setLayer:L.GeoJSON = getLayer(layer)
+      setLayer.addTo(map)
+      layerArray.push([layer.id, setLayer])
+    }
+  })
+})
 
 layerGroup.addEventListener("click", function(){
 layerGroup.style.gridTemplateColumns = "repeat(auto-fill, minmax(250px, 1fr))"
@@ -492,6 +502,7 @@ layerGroup.style.placeItems = "start center"
           if(column_content_checkbox.checked){
             if(!state.checkedLayers.includes(layer.id)){
               state.checkedLayers = [...state.checkedLayers, layer.id]
+              localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
               const setLayer:L.GeoJSON = getLayer(layer)
               setLayer.addTo(map)
               layerArray.push([layer.id, setLayer])
@@ -500,6 +511,7 @@ layerGroup.style.placeItems = "start center"
           if(!column_content_checkbox.checked){
             const removeItemIndex = state.checkedLayers.indexOf(layer.id)
             state.checkedLayers.splice(removeItemIndex, 1)
+            localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
             layerArray.forEach(item =>{
               if(item[0] === layer.id){
                 const toBeRemovedLayer = item[1] as L.GeoJSON
