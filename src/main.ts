@@ -5,9 +5,9 @@ import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions } from "./configs"
-import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution } from "./utils/generalUtils"
+import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
-import { QueryInput, State, Parsed } from "./interfaces"
+import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
 import { getLayer } from "./layers"
 import { getChart } from "./charts"
 import { parseCoordinates, calcDegToDec, eetToDecimalHours } from "./utils/conversions"
@@ -434,6 +434,7 @@ layerGroup.style.placeItems = "start center"
     setTimeout(function(){
       layerGroup.style.height = "auto"
       layerGroup.style.overflow = "visible"
+      layerGroup.style.overflowY = "scroll"
     },200)
     
     state.layerGroupVisible = !state.layerGroupVisible
@@ -450,10 +451,10 @@ layerGroup.style.placeItems = "start center"
 
       column.appendChild(column_content)
       column_content.className = "layerGroup_column_content"
-      group.layers.forEach(layer =>{
+      const sortedGroupLayers:LayerGroup_layer[] = group.layers.sort((a,b) => sortLayersByName(a,b))
+      sortedGroupLayers.forEach(layer =>{
         const column_content_item: HTMLDivElement = document.createElement("div")
         column_content_item.className = "layerGroup_column_content_item"
-
         const column_content_checkbox: HTMLInputElement = document.createElement("input")
         column_content_checkbox.id = layer.id
         column_content_checkbox.type = "checkbox"
@@ -465,7 +466,6 @@ layerGroup.style.placeItems = "start center"
             if(!state.checkedLayers.includes(layer.id)){
               state.checkedLayers = [...state.checkedLayers, layer.id]
               const setLayer:L.GeoJSON = getLayer(layer)
-              console.log(setLayer)
               setLayer.addTo(map)
               layerArray.push([layer.id, setLayer])
             }
@@ -484,7 +484,7 @@ layerGroup.style.placeItems = "start center"
         const column_content_label: HTMLLabelElement = document.createElement("label")
         column_content_label.htmlFor = layer.id
         column_content_label.innerText = layer.name
-
+        column_content_label.className= "layerGroup_column_content_label"
         column_content_item.appendChild(column_content_checkbox)
         column_content_item.appendChild(column_content_label)
         column_content.appendChild(column_content_item)
