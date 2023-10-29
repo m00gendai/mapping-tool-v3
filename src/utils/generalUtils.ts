@@ -2,7 +2,7 @@ import L from "leaflet"
 import arc from "arc"
 import "leaflet-arc"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
-import { BaseMap, State } from "../interfaces"
+import { BaseMap, State, LayerGroup_layer } from "../interfaces"
 import {baseMaps} from "../configs"
 
 // This generates the coordinate array needed for great circle aware polylines
@@ -171,4 +171,10 @@ export function getBaseAttribution(type:string){
   const map:BaseMap[] = baseMaps.filter(basemap =>  basemap.type === type
     )
     return map[0].attribution
+}
+
+export function sortLayersByName(layerA:LayerGroup_layer, layerB:LayerGroup_layer){
+  const nameA:string = layerA.name
+  const nameB:string = layerB.name
+  return nameA > nameB ? 1 : nameA < nameB ? -1 : 0
 }

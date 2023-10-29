@@ -86,13 +86,19 @@ function getColor(type:string){
         return "blue"
     }
     if(type ==="CTR"){
-        return "gold"
+        return "orange"
     }
     if(type==="FIR"){
-        return "magenta"
+        return "darkmagenta"
     }
-    if(type==="DRONE"){
-        return "lime"
+    if(type==="Schutzgebiete"){
+        return "green"
+    }
+    if(type==="Sperrgebiete"){
+        return "red"
+    }
+    if(type==="uebrige"){
+        return "red"
     }
     return "black"
 }
@@ -119,6 +125,20 @@ L.GeoJSON = L.geoJSON(country, {style: {color: ""}, pointToLayer: function(geoJs
 }}).bindTooltip(function (layer) {
     /*@ts-expect-error */
      return `${layer.feature.properties.Name}`  
+    },{sticky: true})
+    :
+    type ==="DRONE" ?
+    /*@ts-expect-error */
+L.GeoJSON = L.geoJSON(country, {
+    /*@ts-expect-error */
+    style: function(feature:GeoJsonProperties){
+        return {color: getColor(feature?.properties.name)}},
+    filter: function(feature:GeoJsonProperties) {
+            return feature?.properties.name
+        
+    }}).bindTooltip(function(layer){"name"
+      /*@ts-expect-error */
+      return `<strong>${layer.feature.properties.Name_DE}</strong><br><br><strong>Restriktionen:</strong><br>${layer.feature.properties.Restr_DE}<br><strong>Bewilligungen:</strong><br>${layer.feature.properties.Bew_St_DE}`
     },{sticky: true})
     :
 /*@ts-expect-error */

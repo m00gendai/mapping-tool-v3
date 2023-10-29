@@ -45,6 +45,11 @@ label{
     overflow: hidden;
 }
 
+.leaflet-tooltip{
+    width: 50ch;
+    white-space: normal;
+}
+
 #sidebarToggle{
     position: relative;
     width: 1rem;
@@ -366,7 +371,7 @@ label{
     width: 3rem;
     height: 3rem;
     background: var(--backgroundColor);
-    z-index:1000;
+    z-index:1200;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 0.5rem;
@@ -374,6 +379,7 @@ label{
     font-family: monospace;
     padding: 0.25rem;
     transition: 0.2s;
+    max-height: 90vh;
 }
 
 #layerGroup > svg{
@@ -402,6 +408,8 @@ label{
     width: 100%;
     text-align: left;
     background: var(--backgroundColor_highlight);
+    font-family: "Arial";
+    padding: 0.25rem;
 }
 
 .layerGroup_column_content{
@@ -412,7 +420,33 @@ label{
 
 .layerGroup_column_content_item{
     position: relative;
-    width: 90%;
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.layerGroup_column_content_item:hover{
+    background: var(--backgroundColor_light);
+}
+
+.layerGroup_column_content_item input{
+    position: relative;
+    margin: 0.125rem;
+    height: 50%;
+    aspect-ratio: 1/1;
+}
+
+.layerGroup_column_content_label{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: monospace;
+    font-size: 0.875rem;
 }
 
 .basemapSelect{

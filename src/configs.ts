@@ -130,17 +130,17 @@ export const layerGroups:LayerGroup[] = [
     name: "Other",
     layers: [
       {
-        name: "LSAG / LSAZ Boudnary",
+        name: "LS - Geneva/Zurich Boudnary",
         id: "LSASBDRY",
         data: "",
       },
       {
-        name: "Italy ARO Boudnary",
+        name: "LI - Italy ARO Boudnary",
         id: "LIMMBDRY",
         data: "",
       },
       {
-        name: "LS Drone Areas",
+        name: "LS - Drone Areas",
         id: "LSASDRONE",
         data: "",
       }
