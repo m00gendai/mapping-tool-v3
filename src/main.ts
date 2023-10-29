@@ -20,6 +20,14 @@ document.onreadystatechange = function() {
       document.getElementById("polylineField")!.style.display = "none"
   } else {
     document.getElementById("app")!.style.display = "flex"
+    if(!JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}" )){
+        document.body.classList.toggle("lightMode")
+    }
+    if(typeof localStorage.getItem("AMTV3_basemap") === "string"){
+      state.baseLayer = L.tileLayer(getBaseLayer(localStorage.getItem("AMTV3_basemap") || "{}"))
+      state.basemapSelect = localStorage.getItem("AMTV3_basemap") || "{}"
+    } 
+    state.baseLayer.addTo(map)
   }
 };
 
@@ -80,7 +88,7 @@ function setSidebarVisibility(state:State){
 
 setSidebarVisibility(state)
 
-state.baseLayer.addTo(map)
+
 
 
 
@@ -164,7 +172,7 @@ async function queryTriggerAll(){
     return
   }
   const deconstructedRte:string[][] = routeDeconstructor(value.toUpperCase())
-  // navaids, locis, waypoints, coordinates, brgDist
+  // navaids, locis, waypoints, coordinates, brgDistypeof localStorage.getItem("AMTV3_basemap") !== null ? localStorage.getItem("AMTV
   const deconstructedNavaids:string[] = deconstructedRte[0]
   const deconstructedLocis:string[] = deconstructedRte[1]
   const deconstructedWaypoints:string[] = deconstructedRte[2]
@@ -353,6 +361,7 @@ baseMaps.forEach(basemap =>{
     })
     state.baseLayer.addTo(map)
     state.basemapSelect = basemap.type
+    localStorage.setItem("AMTV3_basemap", state.basemapSelect)
   })
   document.getElementById("sidebarInner_basemap")?.appendChild(basemapButton)
 })
@@ -415,6 +424,7 @@ colorModeButton.title="Toggle between Dark and Light Theme"
 colorModeButton.addEventListener("click", function(){
   document.body.classList.toggle("lightMode")
   state.darkmode = !state.darkmode
+  localStorage.setItem("AMTV3_darkmode", JSON.stringify(state.darkmode))
   buildSidebarFlags()
   layerGroup.innerHTML = createSVG("layerGroup", state)
   document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
@@ -820,5 +830,4 @@ document.getElementById("sidebarInner_balloon")!.appendChild(removeBalloonCircle
 removeBalloonCircle.addEventListener("click", function(){
   clearBalloonCircle()
 })
-
 
