@@ -178,3 +178,13 @@ export function sortLayersByName(layerA:LayerGroup_layer, layerB:LayerGroup_laye
   const nameB:string = layerB.name
   return nameA > nameB ? 1 : nameA < nameB ? -1 : 0
 }
+
+export function disableControls(map:L.Map){
+  map.dragging.disable();
+  map.touchZoom.disable();
+  map.doubleClickZoom.disable();
+  map.scrollWheelZoom.disable();
+  map.boxZoom.disable();
+  map.keyboard.disable();
+  if (map.tap) map.tap.disable();
+}

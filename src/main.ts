@@ -5,7 +5,7 @@ import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions } from "./configs"
-import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName } from "./utils/generalUtils"
+import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
 import { getLayer } from "./layers"
@@ -236,7 +236,7 @@ markerArray.forEach((marker) =>{
 const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
 const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
 const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
-      const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
+const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
 map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebarVisible ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
 }
 
@@ -330,7 +330,9 @@ document.getElementById("sidebarInner_query")?.appendChild(inputArea)
 baseMaps.forEach(basemap =>{
   const basemapButton = document.createElement("div")
   basemapButton.className="basemapSelect"
-  basemapButton.innerHTML = basemap.type
+  const mapThumb: L.Map = L.map(basemapButton, {zoomControl:true}).setView([46.80, 8.22], 6);
+  disableControls(mapThumb)
+  L.tileLayer(getBaseLayer(basemap.type)).addTo(mapThumb)
   basemapButton.addEventListener("click", function(){
     state.baseLayer.removeFrom(map)
     state.baseLayer = L.tileLayer(getBaseLayer(basemap.type), {
@@ -431,6 +433,7 @@ layerGroup.style.placeItems = "start center"
     layerGroup.innerHTML = ""
     layerGroup.style.width = `60vw`
     layerGroup.style.overflow = "hidden"
+    layerGroup.style.overflowY = "hidden"
     setTimeout(function(){
       layerGroup.style.height = "auto"
       layerGroup.style.overflow = "visible"
