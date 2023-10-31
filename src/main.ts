@@ -77,6 +77,13 @@ function clearPolylineArray(){
   speedInput.value = ""
 }
 
+function resizeMinimap(map:L.Map){
+  setTimeout(function(){
+    map.invalidateSize(true)
+    map.setView([46.80, 8.22], 6);
+  },100)
+}
+
 function setSidebarVisibility(state:State){
   const sidebars:NodeList = document.querySelectorAll(".sidebarInner")
   sidebars.forEach(sidebar =>{
@@ -84,6 +91,35 @@ function setSidebarVisibility(state:State){
     document.getElementById(`${item.id}`)!.style.display = "none"
   })
   document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.style.display = "flex"
+  if(state.sidebarSelect === "basemap"){
+    baseMaps.forEach(basemap =>{
+      const basemapButton = document.createElement("div")
+      basemapButton.className="basemapSelect"
+      basemapButton.id = `basemapSelect_${basemap.type}`
+      const basemapButtonInner = document.createElement("div")
+      basemapButtonInner.className="basemapSelect_inner"
+      basemapButton.appendChild(basemapButtonInner)
+      const mapThumb: L.Map = L.map(basemapButtonInner, {zoomControl:true})  
+      disableControls(mapThumb)
+      resizeMinimap(mapThumb)
+      L.tileLayer(getBaseLayer(basemap.type)).addTo(mapThumb)
+      if(basemap.type === state.basemapSelect){
+        basemapButton.classList.toggle("selectedBorder")
+      }
+      basemapButton.addEventListener("click", function(){
+        document.getElementById(`basemapSelect_${state.basemapSelect}`)!.classList.toggle("selectedBorder")
+        basemapButton.classList.toggle("selectedBorder")
+        state.baseLayer.removeFrom(map)
+        state.baseLayer = L.tileLayer(getBaseLayer(basemap.type), {
+          attribution: getBaseAttribution(basemap.type)
+        })
+        state.baseLayer.addTo(map)
+        state.basemapSelect = basemap.type
+        localStorage.setItem("AMTV3_basemap", state.basemapSelect)
+      })
+      document.getElementById("sidebarInner_basemap")?.appendChild(basemapButton)
+    })
+  }
 }
 
 setSidebarVisibility(state)
@@ -335,36 +371,7 @@ fieldDesignations.forEach(field =>{
 
 document.getElementById("sidebarInner_query")?.appendChild(inputArea)
 
-baseMaps.forEach(basemap =>{
-  const basemapButton = document.createElement("div")
-  basemapButton.className="basemapSelect"
-  basemapButton.id = `basemapSelect_${basemap.type}`
-  const basemapButtonInner = document.createElement("div")
-  basemapButtonInner.className="basemapSelect_inner"
-  basemapButton.appendChild(basemapButtonInner)
-  const mapThumb: L.Map = L.map(basemapButtonInner, {zoomControl:true})  
-  disableControls(mapThumb)
-  setTimeout(function(){
-    mapThumb.invalidateSize(true)
-    mapThumb.setView([46.80, 8.22], 6);
-  },1000)
-  L.tileLayer(getBaseLayer(basemap.type)).addTo(mapThumb)
-  if(basemap.type === state.basemapSelect){
-    basemapButton.classList.toggle("selectedBorder")
-  }
-  basemapButton.addEventListener("click", function(){
-    document.getElementById(`basemapSelect_${state.basemapSelect}`)!.classList.toggle("selectedBorder")
-    basemapButton.classList.toggle("selectedBorder")
-    state.baseLayer.removeFrom(map)
-    state.baseLayer = L.tileLayer(getBaseLayer(basemap.type), {
-      attribution: getBaseAttribution(basemap.type)
-    })
-    state.baseLayer.addTo(map)
-    state.basemapSelect = basemap.type
-    localStorage.setItem("AMTV3_basemap", state.basemapSelect)
-  })
-  document.getElementById("sidebarInner_basemap")?.appendChild(basemapButton)
-})
+
 
 
 const popupToggleButton: HTMLButtonElement = document.createElement("button")
@@ -473,7 +480,7 @@ layerGroup.style.placeItems = "start center"
     layerGroup.innerHTML = ""
     layerGroup.style.width = `60vw`
     layerGroup.style.overflow = "hidden"
-    layerGroup.style.overflowY = "hidden"
+    layerGroup.style.maxHeight = "calc(100svh - 30px)"
     setTimeout(function(){
       layerGroup.style.height = "auto"
       layerGroup.style.overflow = "visible"
@@ -550,6 +557,7 @@ layerGroup.addEventListener("mouseleave", function(){
       layerGroup.innerHTML = createSVG("layerGroup", state)
       layerGroup.style.gridTemplateColumns = "1fr"
       layerGroup.style.placeItems = "center center"
+      layerGroup.style.overflowY = "hidden"
     }
   },500)
 })
