@@ -110,3 +110,17 @@ export interface Forwarded{
   x: number
   y: number
 }
+
+export interface Setting{
+  name: string
+  type: string
+  max?: string | undefined
+  min?: string | undefined
+  step?: string | undefined
+  item?: Item[] | undefined
+}
+
+interface Item{
+  name: string
+  value: string | number
+}
