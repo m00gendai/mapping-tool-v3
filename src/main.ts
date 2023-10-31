@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions } from "./configs"
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings } from "./configs"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
@@ -20,6 +20,14 @@ document.onreadystatechange = function() {
       document.getElementById("polylineField")!.style.display = "none"
   } else {
     document.getElementById("app")!.style.display = "flex"
+    if(!JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}" )){
+        document.body.classList.toggle("lightMode")
+    }
+    if(typeof localStorage.getItem("AMTV3_basemap") === "string"){
+      state.baseLayer = L.tileLayer(getBaseLayer(localStorage.getItem("AMTV3_basemap") || "{}"))
+      state.basemapSelect = localStorage.getItem("AMTV3_basemap") || "{}"
+    } 
+    state.baseLayer.addTo(map)
   }
 };
 
@@ -80,7 +88,7 @@ function setSidebarVisibility(state:State){
 
 setSidebarVisibility(state)
 
-state.baseLayer.addTo(map)
+
 
 
 
@@ -164,7 +172,7 @@ async function queryTriggerAll(){
     return
   }
   const deconstructedRte:string[][] = routeDeconstructor(value.toUpperCase())
-  // navaids, locis, waypoints, coordinates, brgDist
+  // navaids, locis, waypoints, coordinates, brgDistypeof localStorage.getItem("AMTV3_basemap") !== null ? localStorage.getItem("AMTV
   const deconstructedNavaids:string[] = deconstructedRte[0]
   const deconstructedLocis:string[] = deconstructedRte[1]
   const deconstructedWaypoints:string[] = deconstructedRte[2]
@@ -353,6 +361,7 @@ baseMaps.forEach(basemap =>{
     })
     state.baseLayer.addTo(map)
     state.basemapSelect = basemap.type
+    localStorage.setItem("AMTV3_basemap", state.basemapSelect)
   })
   document.getElementById("sidebarInner_basemap")?.appendChild(basemapButton)
 })
@@ -408,13 +417,10 @@ clearPolylinesButton.addEventListener("click", function(){
   clearPolylineArray()
 })
 
-const colorModeButton: HTMLButtonElement = document.createElement("button")
-colorModeButton.innerHTML = createSVG("colorMode", state)
-colorModeButton.className="toolbar_button"
-colorModeButton.title="Toggle between Dark and Light Theme"
-colorModeButton.addEventListener("click", function(){
+function triggerColorChange(){
   document.body.classList.toggle("lightMode")
   state.darkmode = !state.darkmode
+  localStorage.setItem("AMTV3_darkmode", JSON.stringify(state.darkmode))
   buildSidebarFlags()
   layerGroup.innerHTML = createSVG("layerGroup", state)
   document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
@@ -423,10 +429,21 @@ colorModeButton.addEventListener("click", function(){
   clearPolylinesButton.innerHTML = createSVG("removePolyline", state)
   clearMarkersButton.innerHTML = createSVG("clearMarker", state)
   focusSwitzerlandButton.innerHTML = createSVG("focusSwitzerland", state)
-  colorModeButton.innerHTML = createSVG("colorMode", state)
   popupToggleButton.innerHTML = createSVG("togglePopup", state)
   vfrLayerDrawerTrigger.innerHTML = createSVG("drawer", state)
-})
+  const inputRanges: NodeList = document.querySelectorAll(".custom_range_thumb")
+  inputRanges.forEach(item =>{
+    const thumb = item as HTMLElement
+    if(!state.darkmode){
+      thumb.classList.remove("on")
+      thumb.classList.add("off")
+    }
+    if(state.darkmode){
+      thumb.classList.remove("off")
+      thumb.classList.add("on")
+    }
+  })
+}
 
 document.getElementById("toolbar")!.style.width = "50vw"
 
@@ -434,10 +451,19 @@ document.getElementById("toolbar")?.appendChild(clearMarkersButton)
 document.getElementById("toolbar")?.appendChild(clearPolylinesButton)
 document.getElementById("toolbar")?.appendChild(popupToggleButton)
 document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
-document.getElementById("toolbar")?.appendChild(colorModeButton)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = createSVG("layerGroup", state)
+
+layerGroups.forEach(group =>{
+  group.layers.forEach(layer =>{
+    if(state.checkedLayers.includes(layer.id)){
+      const setLayer:L.GeoJSON = getLayer(layer)
+      setLayer.addTo(map)
+      layerArray.push([layer.id, setLayer])
+    }
+  })
+})
 
 layerGroup.addEventListener("click", function(){
 layerGroup.style.gridTemplateColumns = "repeat(auto-fill, minmax(250px, 1fr))"
@@ -482,6 +508,7 @@ layerGroup.style.placeItems = "start center"
           if(column_content_checkbox.checked){
             if(!state.checkedLayers.includes(layer.id)){
               state.checkedLayers = [...state.checkedLayers, layer.id]
+              localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
               const setLayer:L.GeoJSON = getLayer(layer)
               setLayer.addTo(map)
               layerArray.push([layer.id, setLayer])
@@ -490,6 +517,7 @@ layerGroup.style.placeItems = "start center"
           if(!column_content_checkbox.checked){
             const removeItemIndex = state.checkedLayers.indexOf(layer.id)
             state.checkedLayers.splice(removeItemIndex, 1)
+            localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
             layerArray.forEach(item =>{
               if(item[0] === layer.id){
                 const toBeRemovedLayer = item[1] as L.GeoJSON
@@ -821,4 +849,58 @@ removeBalloonCircle.addEventListener("click", function(){
   clearBalloonCircle()
 })
 
+settings.forEach(setting =>{
+  const settingsItem: HTMLDivElement = document.createElement("div")
+  document.getElementById("sidebarInner_settings")!.appendChild(settingsItem)
+  settingsItem.className="sidebarInner_settings_item"
 
+  const settingsTitle = document.createElement("div")
+  settingsItem.appendChild(settingsTitle)
+  settingsTitle.innerText = setting.name
+  settingsTitle.className = "sidebarInner_settings_title"
+
+  if(setting.type === "range"){
+    const rangeBox: HTMLDivElement = document.createElement("div")
+    settingsItem.appendChild(rangeBox)
+    rangeBox.className="sidebarInner_settings_rangebox"
+    const range: HTMLInputElement = document.createElement("input")
+    rangeBox.appendChild(range)
+    range.type = setting.type
+    range.min = setting.min || ""
+    range.max = setting.max || ""
+    range.step = setting.step || ""
+    range.value = state.darkmode ? "1" : "0"
+    const customElement: HTMLDivElement = createRangeInput()
+    rangeBox.appendChild(customElement)
+    if(setting.name === "Darkmode"){
+      rangeBox.addEventListener("click", function(){
+        if(range.value === "0"){
+          triggerColorChange()
+          customElement.children[0].classList.remove("range_thumb_left")
+          customElement.children[0].classList.add("range_thumb_right")
+        }
+        if(range.value === "1"){
+          triggerColorChange()
+          customElement.children[0].classList.remove("range_thumb_right")
+          customElement.children[0].classList.add("range_thumb_left")
+          
+        }
+        range.value = range.value === "1" ? "0" : "1"
+      })
+    }
+    
+  }
+})
+
+function createRangeInput(){
+  const track: HTMLDivElement = document.createElement("div")
+  track.className = "custom_range_track"
+  
+  const thumb: HTMLDivElement = document.createElement("div")
+  thumb.className = "custom_range_thumb"
+  thumb.classList.add(state.darkmode ? "on" : "off")
+  thumb.classList.add(state.darkmode ? "range_thumb_right" : "range_thumb_left")
+  track.appendChild(thumb)
+
+  return track
+}
