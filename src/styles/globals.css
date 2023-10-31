@@ -6,6 +6,8 @@
     --fontColor_highlight: darkgoldenrod;
     --border_color: #fff;
     --border_highlight: darkgoldenrod;
+    --range_on: lime;
+    --range_off: red;
 }
 
 .lightMode{
@@ -16,6 +18,8 @@
     --fontColor_highlight: goldenrod;
     --border_color: #000;
     --border_highlight: goldenrod;
+    --range_on: green;
+    --range_off: darkred;
 }
 
 body{
@@ -537,3 +541,71 @@ label{
     margin: 0;
 }
 
+.sidebarInner_settings_item{
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    color: var(--fontColor);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border_color);
+    margin: 0 0 0.5rem 0;
+    padding: 0 0 0.5rem 0;
+}
+
+.sidebarInner_settings_title{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidebarInner_settings_rangebox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sidebarInner_settings_rangebox > input{
+    position: relative;
+    width: 2rem;
+    pointer-events: none;
+    display: none;
+}
+
+.custom_range_track{
+    position: relative;
+    width: 2rem;
+    height: 1rem;
+    border: 1px solid var(--border_color);
+    border-radius: 50px;
+}
+
+.custom_range_thumb{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.75rem;
+    aspect-ratio: 1/1;
+    transition: 0.5s;
+    border-radius: 180px;
+}
+
+.off{
+    background-color: var(--range_off);
+}
+
+.on{
+    background-color: var(--range_on);
+}
+
+.range_thumb_left{
+    left: 0.125rem;
+}
+
+.range_thumb_right{
+    right: 0.125rem;
+}
