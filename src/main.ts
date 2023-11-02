@@ -12,6 +12,7 @@ import { getLayer } from "./layers"
 import { getChart } from "./charts"
 import { parseCoordinates, calcDegToDec, eetToDecimalHours } from "./utils/conversions"
 import "leaflet.geodesic"
+import { coordinateBox } from "./components/CoordinateBox"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 
 document.onreadystatechange = function() {
@@ -31,7 +32,7 @@ document.onreadystatechange = function() {
   }
 };
 
-const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
+export const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
 const polylineMarkerArray: L.Marker[] = []
 const polylineArray: L.Polyline[] = []
@@ -41,6 +42,18 @@ const chartArray: L.TileLayer[] = []
 const geodesicCircleArray: L.GeodesicCircle[] = []
 const balloonMarkerArray: L.Marker[] = []
 const geodesicLineArray: L.Geodesic[] = []
+
+map.addEventListener("mousemove", function(e){
+  const coordinates:Parsed = parseCoordinates(`${e.latlng.lat},${e.latlng.lng}`, "Decimal")
+  document.getElementById("coords")!.innerHTML = ""
+  document.getElementById("coords")!.style.height = state.coordinateBoxSelect.length <= 2 ? "3rem" : `${state.coordinateBoxSelect.length+1}rem`
+  for(const [_key, value] of Object.entries(coordinates)){
+    if(state.coordinateBoxSelect.includes(value.name)){
+      coordinateBox(value)
+    }
+  }
+    
+})
 
 document.getElementById("polylineField")!.style.display = "none"
 const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
@@ -571,11 +584,13 @@ document.getElementById("sidebarToggle")!.addEventListener("click", function(){
   if(state.sidebarVisible){
     document.getElementById("sidebar")!.style.left = "calc(-25vw - 2rem)"
     document.getElementById("zoom")!.style.left = "calc(1rem + 10px)"
+    document.getElementById("coords")!.style.left = "calc(1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
   }
   if(!state.sidebarVisible){
     document.getElementById("sidebar")!.style.left = "0rem"
     document.getElementById("zoom")!.style.left ="calc(25vw + 1rem + 10px)"
+    document.getElementById("coords")!.style.left ="calc(25vw + 1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
   }
   state.sidebarVisible = !state.sidebarVisible
@@ -663,24 +678,23 @@ coordinateConversions.forEach(conversion =>{
 
 function calculateCoordinates(){
   const parsedCoordinates: Parsed = parseCoordinates(coordinateConversionInputField.value, state.coordinateConversionSelect)
-    state.parsedDecimalCoordinates = parsedCoordinates.decimal
+    state.parsedDecimalCoordinates = parsedCoordinates.decimal.coordinates
     for(const [key, value] of Object.entries(parsedCoordinates)){
-
       if(key === "wgs84degMin"){
         const textarea = document.getElementById(`sidebar_textarea_conversion_0`)! as HTMLTextAreaElement
-        textarea.value = value.join(" ").toUpperCase()
+        textarea.value = value.coordinates.join(" ").toUpperCase()
       }
       if(key === "wgs84degMinSec"){
         const textarea = document.getElementById(`sidebar_textarea_conversion_1`)! as HTMLTextAreaElement
-        textarea.value = value.join(" ").toUpperCase()
+        textarea.value = value.coordinates.join(" ").toUpperCase()
       }
       if(key === "decimal"){
         const textarea = document.getElementById(`sidebar_textarea_conversion_2`)! as HTMLTextAreaElement
-        textarea.value = value.join(" ").toUpperCase()
+        textarea.value = value.coordinates.join(" ").toUpperCase()
       }
       if(key === "swissgrid"){
         const textarea = document.getElementById(`sidebar_textarea_conversion_3`)! as HTMLTextAreaElement
-        textarea.value = value.join(" ").toUpperCase()
+        textarea.value = value.coordinates.join(" ").toUpperCase()
       }
     }
 }
