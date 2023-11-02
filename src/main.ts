@@ -108,7 +108,7 @@ function setSidebarVisibility(state:State){
     document.getElementById(`${item.id}`)!.style.display = "none"
   })
   document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.style.display = "flex"
-  if(state.sidebarSelect === "basemap"){
+  if(state.sidebarSelect === "basemap" && document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.childElementCount === 0){
     baseMaps.forEach(basemap =>{
       const basemapButton = document.createElement("div")
       basemapButton.className="basemapSelect"
@@ -873,7 +873,6 @@ settings.forEach(setting =>{
   settingsTitle.className = "sidebarInner_settings_title"
 
   if(setting.type === "range"){
-    console.log(state)
     const rangeBox: HTMLDivElement = document.createElement("div")
     settingsItem.appendChild(rangeBox)
     rangeBox.className="sidebarInner_settings_rangebox"
