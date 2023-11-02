@@ -615,7 +615,7 @@ label{
     bottom: 1.5rem;
     left: calc(25vw + 1rem + 10px);
     z-index: 1010;
-    width: 20rem;
+    width: 15rem;
     background: var(--backgroundColor);
     color: var(--fontColor);
     font-size: 0.75rem;
