@@ -33,10 +33,10 @@ body{
     left: 0;
     padding: 0;
     margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 label{
-    font-family: "Arial";
     color: var(--fontColor);
     color: var(--fontColor);
 }
@@ -180,7 +180,6 @@ label{
 .sidebar_area_summary{
     color:var(--fontColor);
     border-bottom: 2px solid var(--border_color);
-    font-family: "Arial";
     font-size: 1.25rem;
 }
 
@@ -414,7 +413,6 @@ label{
     width: 100%;
     text-align: left;
     background: var(--backgroundColor_highlight);
-    font-family: "Arial";
     padding: 0.25rem;
 }
 
@@ -567,6 +565,10 @@ label{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.sidebarInner_settings_rangebox:hover{
+    cursor: pointer;
 }
 
 .sidebarInner_settings_rangebox > input{
