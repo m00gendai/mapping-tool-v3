@@ -1,4 +1,4 @@
-import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting } from "./interfaces"
+import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed } from "./interfaces"
 import L from "leaflet"
 
 export const state: State ={
@@ -26,6 +26,8 @@ export const state: State ={
     drawerVisible: false,
     coordinateConversionSelect: "WGS84 Deg Min",
     parsedDecimalCoordinates: [],
+    coordinateBoxVisible: true,
+    coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
 }
 
 export const baseMaps:BaseMap[] =
@@ -338,3 +340,10 @@ export const settings:Setting[] = [
     step: "1"
   },
 ]
+
+export const parsed: Parsed = {
+  wgs84degMin: {name: "WGS84", coordinates: []},
+  wgs84degMinSec: {name: "WGS84 dms", coordinates: []},
+  decimal: {name: "Decimal", coordinates: []},
+  swissgrid: {name: "Swissgrid", coordinates: []},
+}
