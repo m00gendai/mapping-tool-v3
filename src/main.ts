@@ -221,7 +221,7 @@ function plotMarker(marker:L.Marker){
     const decorator: L.PolylineDecorator = L.polylineDecorator(polyline, {
       patterns: [
           // defines a pattern of 10px-wide dashes, repeated every 20px on the line
-          {offset: 0, repeat: 20, symbol: L.Symbol.arrowHead({pixelSize: 10, pathOptions:{fillOpacity: 1, weight: 0, color: "red"}})}
+          {offset: 10, repeat: 20, symbol: L.Symbol.arrowHead({pixelSize: 10, pathOptions:{fillOpacity: 1, weight: 0, color: "red"}})}
       ]
     })
     polylineDecoratorArry.push(decorator)
