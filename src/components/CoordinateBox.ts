@@ -12,8 +12,8 @@ export function coordinateBox(value: ParsedItem){
       boxTitle.className = "coords_box_title"
       boxContent.className = "coords_box_content"
       boxContent.innerHTML = value.name === "WGS84" ? `${value.coordinates}` :
-                                value.name === "Decimal" ? `${parseFloat(value.coordinates[0].split(",")[0]).toFixed(4)}, ${parseFloat(value.coordinates[0].split(",")[1]).toFixed(4)}` : 
-                                `${Math.ceil(parseFloat(value.coordinates[0].split(",")[0]))}, ${Math.ceil(parseFloat(value.coordinates[0].split(",")[1]))}`
+                                value.name === "Decimal" ? `${parseFloat(value.coordinates[0].split(",")[0]).toFixed(4)} ${parseFloat(value.coordinates[0].split(",")[1]).toFixed(4)}` : 
+                                `${Math.ceil(parseFloat(value.coordinates[0].split(",")[0]))} ${Math.ceil(parseFloat(value.coordinates[0].split(",")[1]))}`
       document.getElementById("coords")!.appendChild(box)
       box.appendChild(boxContent)
 }
