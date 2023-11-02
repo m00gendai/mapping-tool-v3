@@ -21,6 +21,12 @@ document.onreadystatechange = function() {
       document.getElementById("polylineField")!.style.display = "none"
   } else {
     document.getElementById("app")!.style.display = "flex"
+    document.getElementById("zoom")!.style.width = "1.5rem"
+    document.getElementById("zoom")!.style.height = "3rem"
+    document.getElementById("polylineField")!.style.width = "50rem"
+    document.getElementById("polylineField")!.style.height = "9rem";
+    document.getElementById("sidebar")!.style.height = "100%";
+    document.getElementById("sidebar")!.style.width = "calc(25vw + 1rem)";
     if(!JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}" )){
         document.body.classList.toggle("lightMode")
     }
@@ -48,7 +54,7 @@ map.addEventListener("mousemove", function(e){
     document.getElementById("coords")!.style.display = "flex"
     const coordinates:Parsed = parseCoordinates(`${e.latlng.lat},${e.latlng.lng}`, "Decimal")
     document.getElementById("coords")!.innerHTML = ""
-    document.getElementById("coords")!.style.height = state.coordinateBoxSelect.length <= 2 ? "3rem" : `${state.coordinateBoxSelect.length+1}rem`
+    document.getElementById("coords")!.style.height = "3rem"
     for(const [_key, value] of Object.entries(coordinates)){
       if(state.coordinateBoxSelect.includes(value.name)){
         coordinateBox(value)
@@ -476,7 +482,8 @@ document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = createSVG("layerGroup", state)
-
+layerGroup.style.width ="3rem"
+layerGroup.style.height = "3rem"
 layerGroups.forEach(group =>{
   group.layers.forEach(layer =>{
     if(state.checkedLayers.includes(layer.id)){
