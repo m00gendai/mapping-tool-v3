@@ -1,25 +1,31 @@
 :root{
-    --backgroundColor: #000;
-    --backgroundColor_light: #2a2a2a;
+    --backgroundColor: #050505;
+    --backgroundColor_light: #444;
     --backgroundColor_highlight: darkgoldenrod;
-    --fontColor: #fff;
+    --fontColor: #cacaca;
+    --fontColor_persistent: #cacaca;
     --fontColor_highlight: darkgoldenrod;
-    --border_color: #fff;
+    --border_color: #cacaca;
     --border_highlight: darkgoldenrod;
     --range_on: lime;
     --range_off: red;
+    --button_body: #1E283C;
+    --button_body_hover: #2850A0;
+
 }
 
 .lightMode{
-    --backgroundColor: #fff;
+    --backgroundColor: #fafafa;
     --backgroundColor_light: #d2d2d2;
     --backgroundColor_highlight: goldenrod;
-    --fontColor: #000;
+    --fontColor: #050505;
     --fontColor_highlight: goldenrod;
-    --border_color: #000;
+    --border_color: #050505;
     --border_highlight: goldenrod;
     --range_on: green;
     --range_off: darkred;
+    --button_body: #2850A0;
+    --button_body_hover: #1E283C;
 }
 
 body{
@@ -238,12 +244,12 @@ label{
 .sidebar_button_large{
     position: relative;
     width: 30%;
-    background: var(--backgroundColor);
-    color: var(--fontColor);
+    background: var(--button_body);
+    color: var(--fontColor_persistent);
+    border: 0;
     min-height: 5rem;
     margin: 0;
     padding: 0;
-    border: 2px solid var(--border_color);
     box-sizing: border-box;
 }
 
@@ -256,7 +262,7 @@ label{
 .sidebar_button:hover,
 .sidebar_button_large:hover{
     cursor: pointer;
-    background: var(--backgroundColor_light);
+    background: var(--button_body_hover);
 }
 
 #toolbar{
@@ -280,7 +286,6 @@ label{
     height: 100%;
     aspect-ratio: 1/1;
     background: var(--backgroundColor);
-    color: var(--fontColor);
     margin: 0 0.25rem;
 }
 .toolbar_button:hover{
