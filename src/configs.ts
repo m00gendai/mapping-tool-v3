@@ -26,7 +26,7 @@ export const state: State ={
     drawerVisible: false,
     coordinateConversionSelect: "WGS84 Deg Min",
     parsedDecimalCoordinates: [],
-    coordinateBoxVisible: true,
+    coordinateBoxVisible: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
     coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
 }
 
@@ -339,7 +339,15 @@ export const settings:Setting[] = [
     min: "0",
     step: "1"
   },
+  {
+    name: "Coordinate Tooltip",
+    type: "range",
+    max: "1",
+    min: "0",
+    step: "1",
+  }
 ]
+
 
 export const parsed: Parsed = {
   wgs84degMin: {name: "WGS84", coordinates: []},
