@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings } from "./configs"
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings, infos } from "./configs"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
@@ -135,6 +135,17 @@ function setSidebarVisibility(state:State){
         localStorage.setItem("AMTV3_basemap", state.basemapSelect)
       })
       document.getElementById("sidebarInner_basemap")?.appendChild(basemapButton)
+    })
+  }
+  if(state.sidebarSelect === "info" && document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.childElementCount === 0){
+    infos.forEach(info =>{
+      const title:HTMLHeadingElement = document.createElement("h1")
+      title.innerHTML = info.title
+      document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.appendChild(title)
+      const content:HTMLDivElement = document.createElement("div")
+      content.className="textcontent"
+      content.innerHTML = info.content
+      document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.appendChild(content)
     })
   }
 }

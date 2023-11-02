@@ -1,5 +1,8 @@
-import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed } from "./interfaces"
+import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed, Info } from "./interfaces"
 import L from "leaflet"
+
+const date: Date = new Date()
+const currentYear:number = date.getFullYear()
 
 export const state: State ={
     popupVisible: false,
@@ -355,3 +358,56 @@ export const parsed: Parsed = {
   decimal: {name: "Decimal", coordinates: []},
   swissgrid: {name: "Swissgrid", coordinates: []},
 }
+
+export const infos:Info[] = [
+  {
+    title: "General",
+    content: `AIM Mapping Tool is an open source application developed by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a> as a supplementary tool for <a href="https://www.skyguide.ch/services/aeronautical-information-management" target="_blank">skyguide AIM Services</a>, 
+              specifically to aid in plotting VFR flight plan routes. 
+              Although it features official Swiss federal map and Eurocontrol data, it is not an official application and thus 
+              shall not be used for navigational purposes. `
+  },
+  {
+    title: "EAD Data AIRAC Date",
+    content: `19 MAY 22 uploaded 21.05.2022`
+  },
+  {
+    title: "Overlay Data Sources",
+    content: `
+    <ul>
+      <li>Swiss VFR Chart and Drone Areas via <a href="https://www.geo.admin.ch/en/geo-services/geo-services/portrayal-services-web-mapping/web-map-tiling-services-wmts.html" target="_blank">swisstopo</a></li>
+      <li>French VFR Chart via <a href="https://geoservices.ign.fr/" target="_blank">IGN</a></li>
+      <li>German VFR Chart via <a href="https://www.dfs.de/dfs_homepage/en/Services/Customer%20Relations/INSPIRE/" target="_blank">DFS</a></li>
+      <li>Airspace layers (CTR, TMA) via <a href="https://www.openaip.net/" target="_blank">openAIP.net</a>, custom linted & validated (and sometimes fixed) by Marcel Weber</li>
+      <li>Airspace layer Switzerland from <a href="https://www.skyguide.ch/services/aeronautical-information-management" target="_blank">skyguide AIM Services</a></li>
+      <li>Airspace layers (FIR) by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
+      <li>VFR Reporting Points Slovenia & Croatia by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
+      <li>LSAG/LSAZ Boundary by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
+      <li>Italy ARO Boundary by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
+    </ul>
+    `
+  },
+  {
+    title: "POI Data Sources",
+    content: `
+    <ul>
+      <li>Place names and coordinates via <a href="https://www.geoapify.com/places-api" target="_blank">geoapify</a></li>
+      <li>ICAO Location Indicators, Navaids and Waypoints from <a href="https://www.ead.eurocontrol.int/cms-eadbasic/opencms/en/login/ead-basic/" target="_blank">European AIS Database</a></li>
+    </ul>
+    `
+  },
+  {
+    title: "Attributions",
+    content: `
+    <ul>
+      <li>Markers by <a href="https://www.flaticon.com/packs/location-59" target="_blank">Freepik - Flaticon</a></li>
+      <li>Flag Markers by <a href="https://www.flaticon.com/packs/country-flags" target="_blank">Freepik - Flaticon</a></li>
+    </ul>
+    `
+  },
+  {
+    title: "Legal",
+    content: `
+    © 2021-${currentYear} <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a> for <a href="https://www.skyguide.ch/services/aeronautical-information-management" target="_blank">skyguide AIM Services</a>`
+  }
+]
