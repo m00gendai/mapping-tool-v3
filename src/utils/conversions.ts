@@ -1,18 +1,15 @@
 import convert from "geo-coordinates-parser"
-import { Coord, Parsed, Forwarded } from "../interfaces"
+import { Coord, Forwarded } from "../interfaces"
+import { parsed } from "../configs"
 import "proj4"
 import { Dms } from "geodesy/latlon-ellipsoidal-datum"
 import transformation from "transform-coordinates"
 
 export function parseCoordinates(value:string, option:string){
-	// Options: "WGS84 Deg Min", "WGS84 Deg Min Sec", "Decimal", "Swissgrid"
+	// Options: "WGS84 Deg Min", "WGS84 Deg Min Sec", "Decimal", "Swissgrid"	
 
-	// This is the object to be returned, filled with coordinate arrays in each format
-	const parsed: Parsed = {
-		wgs84degMin: [],
-		wgs84degMinSec: [],
-		decimal: [],
-		swissgrid: [],
+	for(const [_key, value] of Object.entries(parsed)){
+		value.coordinates.length = 0
 	}
 
 	if(option === "WGS84 Deg Min"){
@@ -23,17 +20,17 @@ export function parseCoordinates(value:string, option:string){
 				return
 			}
 		})
-		parsed.wgs84degMin = [...parsed.wgs84degMin, ...value.split(" ")]
-		parsed.wgs84degMinSec = [...parsed.wgs84degMinSec, ...value.split(" ").map(value => {
+		parsed.wgs84degMin.coordinates = [...parsed.wgs84degMin.coordinates, ...value.split(" ")]
+		parsed.wgs84degMinSec.coordinates = [...parsed.wgs84degMinSec.coordinates, ...value.split(" ").map(value => {
 			return `${Dms.toLat(parseFloat(calcDegToDec(value)[0]), "dms").replaceAll(/°|\′|\″| /g, "")}${Dms.toLon(parseFloat(calcDegToDec(value)[1]), "dms").replaceAll(/°|\′|\″| /g, "")}`
 		})]
 		const decimal:string[][] = value.split(" ").map(value => calcDegToDec(value))
-		parsed.decimal = [...parsed.decimal, ...decimal.map(value => `${value[0]},${value[1]}`) ]
+		parsed.decimal.coordinates = [...parsed.decimal.coordinates, ...decimal.map(value => `${value[0]},${value[1]}`) ]
 		const c:Forwarded[] = decimal.map(value=> {
 			const transform = transformation('EPSG:4326', 'EPSG:2056')
 			return transform.forward({x: parseFloat(value[1]), y: parseFloat(value[0])})
 		})
-		parsed.swissgrid = [...parsed.swissgrid, ...c.map(value=> `${value.x},${value.y}`)]
+		parsed.swissgrid.coordinates = [...parsed.swissgrid.coordinates, ...c.map(value=> `${value.x},${value.y}`)]
 	}
 	if(option === "WGS84 Deg Min Sec"){
 		// checks for deg min sec coords only, format 471500N0072500E)
@@ -43,40 +40,38 @@ export function parseCoordinates(value:string, option:string){
 				return
 			}
 		})
-		parsed.wgs84degMin = [...parsed.wgs84degMin, ...value.split(" ").map(value => {
+		parsed.wgs84degMin.coordinates = [...parsed.wgs84degMin.coordinates, ...value.split(" ").map(value => {
 			return `${Dms.toLat(parseFloat(calcDegToDec(value)[0]), "dm", 0).replaceAll(/°|\′|\″| /g, "")}${Dms.toLon(parseFloat(calcDegToDec(value)[1]), "dm", 0).replaceAll(/°|\′|\″| /g, "")}`
 		})]
-		parsed.wgs84degMinSec = [...parsed.wgs84degMinSec, ...value.split(" ")]
+		parsed.wgs84degMinSec.coordinates = [...parsed.wgs84degMinSec.coordinates, ...value.split(" ")]
 		const decimal:string[][] = value.split(" ").map(value => calcDegToDec(value))
-		parsed.decimal = [...parsed.decimal, ...decimal.map(value => `${value[0]},${value[1]}`) ]
+		parsed.decimal.coordinates = [...parsed.decimal.coordinates, ...decimal.map(value => `${value[0]},${value[1]}`) ]
 		const c:Forwarded[] = decimal.map(value=> {
 			const transform = transformation('EPSG:4326', 'EPSG:2056')
 			return transform.forward({x: parseFloat(value[1]), y: parseFloat(value[0])})
 		})
-		parsed.swissgrid = [...parsed.swissgrid, ...c.map(value=> `${value.x},${value.y}`)]
+		parsed.swissgrid.coordinates = [...parsed.swissgrid.coordinates, ...c.map(value=> `${value.x},${value.y}`)]
 	}
 	if(option === "Decimal"){
 		// checks for decimal degree coords only, format 47.1...,7.1...)
 		value.split(" ").forEach(value => {
-			if(!value.match("^([0-9]{1,2}).([0-9]+),([0-9]{1,3}).([0-9]+)$")){
+			if(!value.match("^-*([0-9]{1,2})(.([0-9]+))?,-*([0-9]{1,3})(.([0-9]+))?$")){
 				alert(`Error with coordinate ${value}.\nOnly decimal coordinates allowed.\nPlease adhere to format {d}.{n},{d}.{n}\nExample: 47.1333,7.1333`)
 				return
 			}
 		})
-		parsed.wgs84degMin = [...parsed.wgs84degMin, ...value.split(" ").map(value => {
+		parsed.wgs84degMin.coordinates = [...parsed.wgs84degMin.coordinates, ...value.split(" ").map(value => {
 			return `${Dms.toLat(parseFloat(value.split(",")[0]), "dm", 0).replaceAll(/°|\′|\″| /g, "")}${Dms.toLon(parseFloat(value.split(",")[1]), "dm", 0).replaceAll(/°|\′|\″| /g, "")}`
 		})]
-		parsed.wgs84degMinSec = [...parsed.wgs84degMinSec, ...value.split(" ").map(value => {
+		parsed.wgs84degMinSec.coordinates = [...parsed.wgs84degMinSec.coordinates, ...value.split(" ").map(value => {
 			return `${Dms.toLat(parseFloat(value.split(",")[0]), "dms", 0).replaceAll(/°|\′|\″| /g, "")}${Dms.toLon(parseFloat(value.split(",")[1]), "dms", 0).replaceAll(/°|\′|\″| /g, "")}`
 		})]
-		parsed.decimal = [...parsed.decimal, ...value.split(" ")]
+		parsed.decimal.coordinates = [...parsed.decimal.coordinates, ...value.split(" ")]
 		const c:Forwarded[] = value.split(" ").map(value=> {
 			const transform = transformation('EPSG:4326', 'EPSG:2056')
-			console.log(value.split(",")[1])
-			console.log(value.split(",")[0])
 			return transform.forward({x: parseFloat(value.split(",")[1]), y: parseFloat(value.split(",")[0])})
 		})
-		parsed.swissgrid = [...parsed.swissgrid, ...c.map(value=> `${value.x},${value.y}`)]
+		parsed.swissgrid.coordinates = [...parsed.swissgrid.coordinates, ...c.map(value=> `${value.x},${value.y}`)]
 	}
 	if(option === "Swissgrid"){
 		value.split(" ").forEach(value => {
@@ -88,14 +83,14 @@ export function parseCoordinates(value:string, option:string){
 		const c:Forwarded[] = value.split(" ").map(value=> {
 			const transform = transformation('EPSG:2056', 'EPSG:4326')
 			return transform.forward({x: parseFloat(value.split(",")[0]), y: parseFloat(value.split(",")[1])})})
-		parsed.wgs84degMin = [...parsed.wgs84degMin, ...c.map(value => {
+		parsed.wgs84degMin.coordinates = [...parsed.wgs84degMin.coordinates, ...c.map(value => {
 			return `${Dms.toLat(value.y, "dm", 0).replaceAll(/°|\′|\″| /g, "")}${Dms.toLon(value.x, "dm", 0).replaceAll(/°|\′|\″| /g, "")}`
 		})]
-		parsed.wgs84degMinSec = [...parsed.wgs84degMinSec, ...c.map(value => {
+		parsed.wgs84degMinSec.coordinates = [...parsed.wgs84degMinSec.coordinates, ...c.map(value => {
 			return `${Dms.toLat(value.y, "dms", 0).replaceAll(/°|\′|\″| /g, "")}${Dms.toLon(value.x, "dms", 0).replaceAll(/°|\′|\″| /g, "")}`
 		})]
-		parsed.decimal = [...parsed.decimal, ...c.map(value => `${value.y},${value.x}`)]
-		parsed.swissgrid = [...parsed.swissgrid, ...value.split(" ")]
+		parsed.decimal.coordinates = [...parsed.decimal.coordinates, ...c.map(value => `${value.y},${value.x}`)]
+		parsed.swissgrid.coordinates = [...parsed.swissgrid.coordinates, ...value.split(" ")]
 	}
 	return parsed
 }

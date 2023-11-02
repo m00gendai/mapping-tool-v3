@@ -1,4 +1,4 @@
-import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting } from "./interfaces"
+import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed } from "./interfaces"
 import L from "leaflet"
 
 export const state: State ={
@@ -26,6 +26,8 @@ export const state: State ={
     drawerVisible: false,
     coordinateConversionSelect: "WGS84 Deg Min",
     parsedDecimalCoordinates: [],
+    coordinateBoxVisible: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
+    coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
 }
 
 export const baseMaps:BaseMap[] =
@@ -337,4 +339,19 @@ export const settings:Setting[] = [
     min: "0",
     step: "1"
   },
+  {
+    name: "Coordinate Tooltip",
+    type: "range",
+    max: "1",
+    min: "0",
+    step: "1",
+  }
 ]
+
+
+export const parsed: Parsed = {
+  wgs84degMin: {name: "WGS84", coordinates: []},
+  wgs84degMinSec: {name: "WGS84 dms", coordinates: []},
+  decimal: {name: "Decimal", coordinates: []},
+  swissgrid: {name: "Swissgrid", coordinates: []},
+}

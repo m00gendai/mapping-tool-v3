@@ -34,6 +34,8 @@ export interface State{
     drawerVisible: boolean
     coordinateConversionSelect: string
     parsedDecimalCoordinates: string[]
+    coordinateBoxVisible: boolean
+    coordinateBoxSelect: string[]
 }
 
 export interface SidebarFlag{
@@ -100,10 +102,15 @@ export interface Coord{
 }
 
 export interface Parsed{
-  wgs84degMin: string[]
-  wgs84degMinSec: string[]
-  decimal: string[]
-  swissgrid: string[]
+  wgs84degMin: ParsedItem
+  wgs84degMinSec: ParsedItem
+  decimal: ParsedItem
+  swissgrid: ParsedItem
+}
+
+export interface ParsedItem{
+  coordinates: string[]
+  name: string
 }
 
 export interface Forwarded{
