@@ -11,7 +11,8 @@
     --range_off: red;
     --button_body: #1E283C;
     --button_body_hover: #2850A0;
-
+    --link: #2850A0;
+    --link_visited: #1E283C;
 }
 
 .lightMode{
@@ -44,6 +45,26 @@ body{
 
 label{
     color: var(--fontColor);
+    color: var(--fontColor);
+}
+
+h1{
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--fontColor);
+}
+
+a{
+    color: var(--link);
+}
+a:visited{
+    color: var(--link_visited);
+}
+
+.textcontent{
+    position: relative;
+    width: 100%;
     color: var(--fontColor);
 }
 

@@ -131,3 +131,8 @@ interface Item{
   name: string
   value: string | number
 }
+
+export interface Info{
+  title: string
+  content: string
+}
