@@ -12,6 +12,7 @@ import { getLayer } from "./layers"
 import { getChart } from "./charts"
 import { parseCoordinates, calcDegToDec, eetToDecimalHours } from "./utils/conversions"
 import "leaflet.geodesic"
+import { coordinateBox } from "./components/CoordinateBox"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 
 document.onreadystatechange = function() {
@@ -31,7 +32,7 @@ document.onreadystatechange = function() {
   }
 };
 
-const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
+export const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 const markerArray: L.Marker[] = []
 const polylineMarkerArray: L.Marker[] = []
 const polylineArray: L.Polyline[] = []
@@ -41,6 +42,22 @@ const chartArray: L.TileLayer[] = []
 const geodesicCircleArray: L.GeodesicCircle[] = []
 const balloonMarkerArray: L.Marker[] = []
 const geodesicLineArray: L.Geodesic[] = []
+
+map.addEventListener("mousemove", function(e){
+  if(state.coordinateBoxVisible){
+    document.getElementById("coords")!.style.display = "flex"
+    const coordinates:Parsed = parseCoordinates(`${e.latlng.lat},${e.latlng.lng}`, "Decimal")
+    document.getElementById("coords")!.innerHTML = ""
+    document.getElementById("coords")!.style.height = state.coordinateBoxSelect.length <= 2 ? "3rem" : `${state.coordinateBoxSelect.length+1}rem`
+    for(const [_key, value] of Object.entries(coordinates)){
+      if(state.coordinateBoxSelect.includes(value.name)){
+        coordinateBox(value)
+      }
+    }
+  } else {
+    document.getElementById("coords")!.style.display = "none"
+  } 
+})
 
 document.getElementById("polylineField")!.style.display = "none"
 const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
@@ -427,7 +444,6 @@ clearPolylinesButton.addEventListener("click", function(){
 function triggerColorChange(){
   document.body.classList.toggle("lightMode")
   state.darkmode = !state.darkmode
-  localStorage.setItem("AMTV3_darkmode", JSON.stringify(state.darkmode))
   buildSidebarFlags()
   layerGroup.innerHTML = createSVG("layerGroup", state)
   document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
@@ -438,18 +454,6 @@ function triggerColorChange(){
   focusSwitzerlandButton.innerHTML = createSVG("focusSwitzerland", state)
   popupToggleButton.innerHTML = createSVG("togglePopup", state)
   vfrLayerDrawerTrigger.innerHTML = createSVG("drawer", state)
-  const inputRanges: NodeList = document.querySelectorAll(".custom_range_thumb")
-  inputRanges.forEach(item =>{
-    const thumb = item as HTMLElement
-    if(!state.darkmode){
-      thumb.classList.remove("on")
-      thumb.classList.add("off")
-    }
-    if(state.darkmode){
-      thumb.classList.remove("off")
-      thumb.classList.add("on")
-    }
-  })
 }
 
 document.getElementById("toolbar")!.style.width = "50vw"
@@ -571,11 +575,13 @@ document.getElementById("sidebarToggle")!.addEventListener("click", function(){
   if(state.sidebarVisible){
     document.getElementById("sidebar")!.style.left = "calc(-25vw - 2rem)"
     document.getElementById("zoom")!.style.left = "calc(1rem + 10px)"
+    document.getElementById("coords")!.style.left = "calc(1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
   }
   if(!state.sidebarVisible){
     document.getElementById("sidebar")!.style.left = "0rem"
     document.getElementById("zoom")!.style.left ="calc(25vw + 1rem + 10px)"
+    document.getElementById("coords")!.style.left ="calc(25vw + 1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
   }
   state.sidebarVisible = !state.sidebarVisible
@@ -663,24 +669,23 @@ coordinateConversions.forEach(conversion =>{
 
 function calculateCoordinates(){
   const parsedCoordinates: Parsed = parseCoordinates(coordinateConversionInputField.value, state.coordinateConversionSelect)
-    state.parsedDecimalCoordinates = parsedCoordinates.decimal
+    state.parsedDecimalCoordinates = parsedCoordinates.decimal.coordinates
     for(const [key, value] of Object.entries(parsedCoordinates)){
-
       if(key === "wgs84degMin"){
         const textarea = document.getElementById(`sidebar_textarea_conversion_0`)! as HTMLTextAreaElement
-        textarea.value = value.join(" ").toUpperCase()
+        textarea.value = value.coordinates.join(" ").toUpperCase()
       }
       if(key === "wgs84degMinSec"){
         const textarea = document.getElementById(`sidebar_textarea_conversion_1`)! as HTMLTextAreaElement
-        textarea.value = value.join(" ").toUpperCase()
+        textarea.value = value.coordinates.join(" ").toUpperCase()
       }
       if(key === "decimal"){
         const textarea = document.getElementById(`sidebar_textarea_conversion_2`)! as HTMLTextAreaElement
-        textarea.value = value.join(" ").toUpperCase()
+        textarea.value = value.coordinates.join(" ").toUpperCase()
       }
       if(key === "swissgrid"){
         const textarea = document.getElementById(`sidebar_textarea_conversion_3`)! as HTMLTextAreaElement
-        textarea.value = value.join(" ").toUpperCase()
+        textarea.value = value.coordinates.join(" ").toUpperCase()
       }
     }
 }
@@ -868,6 +873,7 @@ settings.forEach(setting =>{
   settingsTitle.className = "sidebarInner_settings_title"
 
   if(setting.type === "range"){
+    console.log(state)
     const rangeBox: HTMLDivElement = document.createElement("div")
     settingsItem.appendChild(rangeBox)
     rangeBox.className="sidebarInner_settings_rangebox"
@@ -877,21 +883,40 @@ settings.forEach(setting =>{
     range.min = setting.min || ""
     range.max = setting.max || ""
     range.step = setting.step || ""
-    range.value = state.darkmode ? "1" : "0"
-    const customElement: HTMLDivElement = createRangeInput()
+    const customElement: HTMLDivElement = createRangeInput(setting.name)
+    customElement.id = `range_${setting.name}`
     rangeBox.appendChild(customElement)
     if(setting.name === "Darkmode"){
+      range.value = state.darkmode ? "1" : "0"
+      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
       rangeBox.addEventListener("click", function(){
         if(range.value === "0"){
           triggerColorChange()
-          customElement.children[0].classList.remove("range_thumb_left")
-          customElement.children[0].classList.add("range_thumb_right")
+          toggleSwitchOn(customElement)
+          localStorage.setItem("AMTV3_darkmode", JSON.stringify(state.darkmode))
         }
         if(range.value === "1"){
           triggerColorChange()
-          customElement.children[0].classList.remove("range_thumb_right")
-          customElement.children[0].classList.add("range_thumb_left")
-          
+          toggleSwitchOff(customElement)
+          localStorage.setItem("AMTV3_darkmode", JSON.stringify(state.darkmode))
+        }
+        range.value = range.value === "1" ? "0" : "1"
+      })
+    }
+    if(setting.name === "Coordinate Tooltip"){
+      range.value = state.coordinateBoxVisible ? "1" : "0"
+      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
+      rangeBox.addEventListener("click", function(){
+        if(range.value === "0"){
+          state.coordinateBoxVisible = true
+          toggleSwitchOn(customElement)
+          localStorage.setItem("AMTV3_coordinatebox", JSON.stringify(state.coordinateBoxVisible))
+        }
+        if(range.value === "1"){
+          state.coordinateBoxVisible = false
+          toggleSwitchOff(customElement)
+          localStorage.setItem("AMTV3_coordinatebox", JSON.stringify(state.coordinateBoxVisible))
+          document.getElementById("coords")!.style.display = "none"
         }
         range.value = range.value === "1" ? "0" : "1"
       })
@@ -900,15 +925,27 @@ settings.forEach(setting =>{
   }
 })
 
-function createRangeInput(){
+function toggleSwitchOn(customElement:HTMLDivElement){
+  customElement.children[0].classList.remove("range_thumb_left")
+  customElement.children[0].classList.add("range_thumb_right")
+  customElement.children[0].classList.remove("off")
+  customElement.children[0].classList.add("on")
+}
+
+function toggleSwitchOff(customElement:HTMLDivElement){
+  customElement.children[0].classList.remove("range_thumb_right")
+  customElement.children[0].classList.add("range_thumb_left")
+  customElement.children[0].classList.remove("on")
+  customElement.children[0].classList.add("off")
+}
+
+function createRangeInput(name:string){
   const track: HTMLDivElement = document.createElement("div")
   track.className = "custom_range_track"
   
   const thumb: HTMLDivElement = document.createElement("div")
   thumb.className = "custom_range_thumb"
-  thumb.classList.add(state.darkmode ? "on" : "off")
-  thumb.classList.add(state.darkmode ? "range_thumb_right" : "range_thumb_left")
   track.appendChild(thumb)
-
+  track.id = `range_${name}`
   return track
 }
