@@ -485,9 +485,9 @@ layerGroup.innerHTML = createSVG("layerGroup", state)
 layerGroup.style.width ="3rem"
 layerGroup.style.height = "3rem"
 layerGroups.forEach(group =>{
-  group.layers.forEach(layer =>{
+  group.layers.forEach(async layer =>{
     if(state.checkedLayers.includes(layer.id)){
-      const setLayer:L.GeoJSON = getLayer(layer)
+      const setLayer:L.GeoJSON =  await getLayer(layer)
       setLayer.addTo(map)
       layerArray.push([layer.id, setLayer])
     }
@@ -533,12 +533,12 @@ layerGroup.style.placeItems = "start center"
         if(state.checkedLayers.includes(layer.id)){
           column_content_checkbox.checked = true
         }
-        column_content_checkbox.addEventListener("click", function(){
+        column_content_checkbox.addEventListener("click", async function(){
           if(column_content_checkbox.checked){
             if(!state.checkedLayers.includes(layer.id)){
               state.checkedLayers = [...state.checkedLayers, layer.id]
               localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
-              const setLayer:L.GeoJSON = getLayer(layer)
+              const setLayer:L.GeoJSON = await getLayer(layer)
               setLayer.addTo(map)
               layerArray.push([layer.id, setLayer])
             }
