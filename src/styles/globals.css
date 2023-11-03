@@ -127,6 +127,9 @@ a:visited{
     padding: 0;
     margin: 0;
     background-color: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flagButton > svg{
@@ -270,6 +273,9 @@ a:visited{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar_button_large{
@@ -306,6 +312,9 @@ a:visited{
     aspect-ratio: 1/1;
     background: var(--backgroundColor);
     margin: 0 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .toolbar_button:hover{
     cursor: pointer;
@@ -669,4 +678,62 @@ a:visited{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+#alternativeQueryAll{
+    position: absolute;
+    top: 10px;
+    left: calc(1rem + 10px);
+    z-index: 999;
+    width: calc(25vw - 1rem + 5px);
+    min-height: 3rem;
+    max-height: 75vh;
+    background: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alternativeQueryAll_textbox{
+    position: relative;
+    width: calc(85% - 0.25rem);
+    min-height: calc(3rem - 0.5rem);
+    height: calc(100% - 0.5rem);
+    border: 0;
+    padding: 0;
+    background:var(--backgroundColor_light);
+    color: var(--fontColor);
+    font-family: monospace;
+    resize:vertical;
+}
+
+#alternativeQueryAll_textbox:focus{
+    border: 0;
+    outline: 0;
+}
+
+.alternativeQueryAll_button{
+    position: relative;
+    width: calc(15% - 0.25rem);
+    min-height: calc(3rem - 0.5rem);
+    height: calc(100% - 0.5rem);
+    background: var(--button_body);
+    color: var(--fontColor_persistent);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alternativeQueryAll_button:hover{
+    cursor: pointer;
+    background: var(--button_body_hover);
+}
+
+.alternativeQueryAll_button > svg{
+    position: relative;
+    width: 80%;
+    height: 80%;
 }
