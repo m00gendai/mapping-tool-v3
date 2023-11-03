@@ -18,7 +18,7 @@ export const state: State ={
     setTotalTime: 0,
     markerClicks: 0,
     layerGroupVisible: false,
-    checkedLayers: typeof localStorage.getItem("AMTV3_layers") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layers") || "{}") : ["LSASBDRY"],
+    checkedLayers: typeof localStorage.getItem("AMTV3_layers") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layers") || "{}") : [],
     layerGroupBuffer: true,
     darkmode: typeof localStorage.getItem("AMTV3_darkmode") !== null ? JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}") : true,
     sidebarVisible: true,
@@ -155,12 +155,12 @@ export const layerGroups:LayerGroup[] = [
     name: "Other",
     layers: [
       {
-        name: "LS - Geneva/Zurich Boudnary",
+        name: "LS - Geneva/Zurich Boundary",
         id: "LSASBDRY",
         data: "",
       },
       {
-        name: "LI - Italy ARO Boudnary",
+        name: "LI - Italy ARO Boundary",
         id: "LIMMBDRY",
         data: "",
       },
