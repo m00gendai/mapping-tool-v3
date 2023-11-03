@@ -202,13 +202,19 @@ a:visited{
 .sidebar_area_details{
     position: relative;
     width: 100%;
-    border-bottom: 2px solid var(--border_color);
+    margin: 0 0 0.5rem 0;
 }
 
 .sidebar_area_summary{
     color:var(--fontColor);
-    border-bottom: 2px solid var(--border_color);
-    font-size: 1.25rem;
+    font-size: 1rem;
+    background: var(--button_body);
+    padding: 0.25rem;
+    user-select: none;
+}
+
+.sidebar_area_summary:hover{
+    cursor: pointer;
 }
 
 .sidebar_area_label{
@@ -250,7 +256,8 @@ a:visited{
     margin: 0;
 }
 
-.sidebar_input_large{
+.sidebar_input_large,
+.sidebar_input_large_noMargin{
     position: relative;
     width: 100%;
     height: 1.5rem;
@@ -261,6 +268,11 @@ a:visited{
     padding: 0;
     margin: 0.5rem;
 }
+
+.sidebar_input_large_noMargin{
+    margin: 0;
+}
+
 
 .sidebar_button,
 .sidebar_button_large{
@@ -316,6 +328,12 @@ a:visited{
     justify-content: center;
     align-items: center;
 }
+
+.toolbar_button > svg{
+    position: relative;
+    width: 90%;
+}
+
 .toolbar_button:hover{
     cursor: pointer;
     background: var(--backgroundColor_light);
@@ -349,6 +367,12 @@ a:visited{
 #zoomIn:hover,
 #zoomOut:hover{
     background: var(--backgroundColor_light);
+}
+
+#zoomIn > svg,
+#zoomOut > svg{
+    position: relative;
+    width: 50%;
 }
 
 #polylineField{
@@ -417,7 +441,6 @@ a:visited{
 #layerGroup > svg{
     position: relative;
     width: 90%;
-    height: 90%;
 }
 
 #layerGroup:hover{
@@ -536,7 +559,6 @@ a:visited{
 #vfrLayerDrawerTrigger > svg{
     position: relative;
     width: calc(90% - 1rem - 0.125rem);
-    aspect-ratio: 1/1;
     margin: 0 0 0 10%;
 }
 
@@ -734,6 +756,5 @@ a:visited{
 
 .alternativeQueryAll_button > svg{
     position: relative;
-    width: 80%;
-    height: 80%;
+    width: 50%;
 }
