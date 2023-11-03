@@ -119,6 +119,7 @@ export interface Forwarded{
 }
 
 export interface Setting{
+  id: string
   name: string
   type: string
   max?: string | undefined
