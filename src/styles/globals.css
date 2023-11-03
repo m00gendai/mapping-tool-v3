@@ -351,6 +351,11 @@ a:visited{
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
+#zoom:hover{
+    cursor: pointer;
+}
+
 #zoomIn,
 #zoomOut {
     position: relative;
@@ -436,6 +441,7 @@ a:visited{
     padding: 0.25rem;
     transition: 0.2s;
     max-height: 90vh;
+    user-select: none;
 }
 
 #layerGroup > svg{
@@ -503,6 +509,10 @@ a:visited{
     font-size: 0.875rem;
 }
 
+.layerGroup_column_content_label:hover{
+    cursor: pointer;
+}
+
 .basemapSelect{
     position: relative;
     height: 10rem;
@@ -513,6 +523,10 @@ a:visited{
     margin: 0.5rem 0;
     box-sizing:border-box;
     border: 2px solid var(--border_color);
+}
+
+.basemapSelect:hover{
+    cursor: pointer;
 }
 
 .basemapSelect_inner{
@@ -556,6 +570,11 @@ a:visited{
     align-items: center;
 }
 
+#vfrLayerDrawerTrigger:hover{
+    cursor:pointer;
+    background: var(--backgroundColor_light);
+}
+
 #vfrLayerDrawerTrigger > svg{
     position: relative;
     width: calc(90% - 1rem - 0.125rem);
@@ -578,6 +597,14 @@ a:visited{
     border: 0;
     outline: 0;
     margin: 0 0.5rem 0 0;
+    background-color: var(--button_body);
+    color: var(--fontColor_persistent);
+}
+
+.layerButton:hover{
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--button_body_hover);
 }
 
 .layerButton:first-child{
