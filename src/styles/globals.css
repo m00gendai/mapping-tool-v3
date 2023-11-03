@@ -79,7 +79,8 @@ a:visited{
 }
 
 .leaflet-tooltip{
-    width: 50ch;
+    max-width: 50ch;
+    width: max-content;
     white-space: normal;
 }
 
