@@ -4,13 +4,13 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings, infos } from "./configs"
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings, infos, distanceConversions, distances, speeds, speedConversions } from "./configs"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
 import { getLayer } from "./layers"
 import { getChart } from "./charts"
-import { parseCoordinates, calcDegToDec, eetToDecimalHours } from "./utils/conversions"
+import { parseCoordinates, calcDegToDec, eetToDecimalHours, convertDistance, convertSpeed } from "./utils/conversions"
 import "leaflet.geodesic"
 import { coordinateBox } from "./components/CoordinateBox"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
@@ -774,6 +774,139 @@ coordinateConversions.forEach((conversion, index) =>{
   textarea.disabled = true
   textarea.id = `sidebar_textarea_conversion_${index}`
 })
+
+const detailsDistance:HTMLDetailsElement = document.createElement("details")
+detailsDistance.className="sidebar_area_details"
+/*@ts-expect-error */
+const summaryDistance:HTMLSummaryElement = document.createElement("summary")
+summaryDistance.innerText = "Distance Conversions"
+summaryDistance.className="sidebar_area_summary"
+detailsDistance.appendChild(summaryDistance)
+document.getElementById("sidebarInner_conversion")!.appendChild(detailsDistance)
+
+const distanceConversionInput: HTMLSelectElement = document.createElement("select")
+distanceConversionInput.className="sidebar_area_select"
+detailsDistance.appendChild(distanceConversionInput)
+distanceConversionInput.addEventListener("change", function(){
+  state.distanceConversionSelect = distanceConversionInput.value
+})
+
+distanceConversions.forEach(conversion =>{
+  const option:HTMLOptionElement = document.createElement("option")
+  option.value = conversion
+  option.text = conversion
+  distanceConversionInput.appendChild(option)
+})
+
+const distanceConversionInputField:HTMLInputElement = document.createElement("input")
+detailsDistance.appendChild(distanceConversionInputField)
+distanceConversionInputField.className="sidebar_input_large_noMargin"
+distanceConversionInputField.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    e.preventDefault()
+    convertDistance(distanceConversionInputField.value, state.distanceConversionSelect)
+    for(const [_key, value] of Object.entries(distances)){
+      const target = document.getElementById(`sidebar_textarea_conversion_${value.name}`)! as HTMLInputElement
+      target.value = value.value
+    }
+  }
+})
+
+const convertDistanceButton: HTMLButtonElement = document.createElement("button")
+detailsDistance.appendChild(convertDistanceButton)
+convertDistanceButton.innerText = "Convert Distance"
+convertDistanceButton.className="sidebar_button_large"
+convertDistanceButton.addEventListener("click", function(){
+  convertDistance(distanceConversionInputField.value, state.distanceConversionSelect)
+    for(const [_key, value] of Object.entries(distances)){
+      const target = document.getElementById(`sidebar_textarea_conversion_${value.name}`)! as HTMLInputElement
+      target.value = value.value
+    }
+})
+
+distanceConversions.forEach((conversion) =>{
+  const textareaField: HTMLDivElement = document.createElement("div")
+  textareaField.className=`sidebar_area_wrap`
+  const label:HTMLLabelElement = document.createElement("label")
+  label.htmlFor = "sidebar_textarea_conversion_${index}"
+  label.innerText=conversion
+  label.className = "sidebar_area_label"
+  textareaField.appendChild(label)
+  const textarea: HTMLInputElement = document.createElement("input")
+  textareaField.appendChild(textarea)
+  detailsDistance.appendChild(textareaField)
+  textarea.className="sidebar_input_large"
+  textarea.disabled = true
+  textarea.id = `sidebar_textarea_conversion_${conversion}`
+})
+
+const detailsSpeed:HTMLDetailsElement = document.createElement("details")
+detailsSpeed.className="sidebar_area_details"
+/*@ts-expect-error */
+const summarySpeed:HTMLSummaryElement = document.createElement("summary")
+summarySpeed.innerText = "Speed Conversions"
+summarySpeed.className="sidebar_area_summary"
+detailsSpeed.appendChild(summarySpeed)
+document.getElementById("sidebarInner_conversion")!.appendChild(detailsSpeed)
+
+const speedConversionInput: HTMLSelectElement = document.createElement("select")
+speedConversionInput.className="sidebar_area_select"
+detailsSpeed.appendChild(speedConversionInput)
+speedConversionInput.addEventListener("change", function(){
+  state.speedConversionSelect = speedConversionInput.value
+})
+
+speedConversions.forEach(conversion =>{
+  const option:HTMLOptionElement = document.createElement("option")
+  option.value = conversion
+  option.text = conversion
+  speedConversionInput.appendChild(option)
+})
+
+const speedConversionInputField:HTMLInputElement = document.createElement("input")
+detailsSpeed.appendChild(speedConversionInputField)
+speedConversionInputField.className="sidebar_input_large_noMargin"
+speedConversionInputField.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    e.preventDefault()
+    convertSpeed(speedConversionInputField.value, state.speedConversionSelect)
+    for(const [_key, value] of Object.entries(speeds)){
+      const target = document.getElementById(`sidebar_textarea_conversion_${value.name}`)! as HTMLInputElement
+      target.value = value.value
+    }
+  }
+})
+
+const convertSpeedButton: HTMLButtonElement = document.createElement("button")
+detailsSpeed.appendChild(convertSpeedButton)
+convertSpeedButton.innerText = "Convert Speed"
+convertSpeedButton.className="sidebar_button_large"
+convertSpeedButton.addEventListener("click", function(){
+  convertSpeed(speedConversionInputField.value, state.speedConversionSelect)
+    for(const [_key, value] of Object.entries(speeds)){
+      const target = document.getElementById(`sidebar_textarea_conversion_${value.name}`)! as HTMLInputElement
+      target.value = value.value
+    }
+})
+
+speedConversions.forEach((conversion) =>{
+  const textareaField: HTMLDivElement = document.createElement("div")
+  textareaField.className=`sidebar_area_wrap`
+  const label:HTMLLabelElement = document.createElement("label")
+  label.htmlFor = "sidebar_textarea_conversion_${index}"
+  label.innerText=conversion
+  label.className = "sidebar_area_label"
+  textareaField.appendChild(label)
+  const textarea: HTMLInputElement = document.createElement("input")
+  textareaField.appendChild(textarea)
+  detailsSpeed.appendChild(textareaField)
+  textarea.className="sidebar_input_large"
+  textarea.disabled = true
+  textarea.id = `sidebar_textarea_conversion_${conversion}`
+})
+
+
+
 
 const balloonCoordinateInputField: HTMLDivElement = document.createElement("div")
 balloonCoordinateInputField.className = "sidebar_area_wrap"

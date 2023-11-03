@@ -1,6 +1,6 @@
 import convert from "geo-coordinates-parser"
 import { Coord, Forwarded } from "../interfaces"
-import { parsed } from "../configs"
+import { parsed, distances, speeds } from "../configs"
 import "proj4"
 import { Dms } from "geodesy/latlon-ellipsoidal-datum"
 import transformation from "transform-coordinates"
@@ -107,4 +107,64 @@ export function eetToDecimalHours(eet:string){
 	const decimalMinutes: number = minutes/60
 	const decimalHours:number = hours + decimalMinutes
 	return decimalHours
+}
+
+export function convertDistance(value:string, unit: string){
+	console.log(value)
+	console.log(unit)
+	if(unit === "Meter"){
+		console.log("m")
+		fillFromMeter(parseFloat(value))
+	}
+	if(unit === "Feet"){
+		console.log("ft")
+		fillFromMeter(parseFloat(value)/3.2808)
+	}
+	if(unit === "Statute Mile"){
+		console.log("sm")
+		fillFromMeter(parseFloat(value)/0.00062137)
+	}
+	if(unit === "Natical Mile"){
+		console.log("nm")
+		fillFromMeter(parseFloat(value)*1852)
+	}
+	if(unit === "Kilometer"){
+		console.log("km")
+		fillFromMeter(parseFloat(value)*1000)
+	}
+}
+
+function fillFromMeter(value: number){
+	console.log(value)
+	distances.m.value = value
+	distances.ft.value = value*3.2808
+	distances.sm.value = value*0.00062137
+	distances.nm.value = value/1852
+	distances.km.value = value/1000
+}
+
+export function convertSpeed(value:string, unit: string){
+	if(unit === "km/h"){
+		fillFromMs(parseFloat(value)/3.6)
+	}
+	if(unit === "mph"){
+		fillFromMs(parseFloat(value)/2.237)
+	}
+	if(unit === "m/s"){
+		fillFromMs(parseFloat(value))
+	}
+	if(unit === "Knots"){
+		fillFromMs(parseFloat(value)/1.944)
+	}
+	if(unit === "Mach"){
+		fillFromMs(parseFloat(value)*343)
+	}
+}
+
+function fillFromMs(value: number){
+	speeds.ms.value = value
+	speeds.kmh.value = value*3.6
+	speeds.mph.value = value*2.237
+	speeds.kt.value = value*1.944
+	speeds.mach.value = value/343
 }
