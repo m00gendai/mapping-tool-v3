@@ -1,4 +1,4 @@
-import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed, Info } from "./interfaces"
+import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed, Info, Distance, Speed } from "./interfaces"
 import L from "leaflet"
 
 const date: Date = new Date()
@@ -28,6 +28,8 @@ export const state: State ={
   }),
     drawerVisible: false,
     coordinateConversionSelect: "WGS84 Deg Min",
+    distanceConversionSelect: "Feet",
+    speedConversionSelect: "km/h",
     parsedDecimalCoordinates: [],
     coordinateBoxVisible: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
     coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
@@ -334,6 +336,14 @@ export const coordinateConversions:string[] = [
   "WGS84 Deg Min", "WGS84 Deg Min Sec", "Decimal", "Swissgrid"
 ]
 
+export const distanceConversions: string[] = [
+  "Feet", "Meter", "Statute Mile", "Nautical Mile", "Kilometer"
+]
+
+export const speedConversions: string[] = [
+  "km/h", "mph", "m/s", "Knots", "Mach"
+]
+
 export const settings:Setting[] = [
   {
     id: "darkmodeToggle",
@@ -367,6 +377,22 @@ export const parsed: Parsed = {
   wgs84degMinSec: {name: "WGS84 dms", coordinates: []},
   decimal: {name: "Decimal", coordinates: []},
   swissgrid: {name: "Swissgrid", coordinates: []},
+}
+
+export const distances:Distance = {
+  m: {name: "Meter", value: 0},
+  ft: {name: "Feet", value: 0},
+  sm: {name: "Statute Mile", value: 0},
+  nm: {name: "Nautical Mile", value: 0},
+  km: {name: "Kilometer", value: 0},
+}
+
+export const speeds:Speed = {
+  kmh: {name: "km/h", value: 0},
+  mph: {name: "mph", value: 0},
+  ms: {name: "m/s", value: 0},
+  kt: {name: "Knots", value: 0},
+  mach: {name: "Mach", value: 0},
 }
 
 export const infos:Info[] = [

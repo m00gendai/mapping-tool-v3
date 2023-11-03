@@ -33,6 +33,8 @@ export interface State{
     baseLayer: L.TileLayer
     drawerVisible: boolean
     coordinateConversionSelect: string
+    distanceConversionSelect: string
+    speedConversionSelect: string
     parsedDecimalCoordinates: string[]
     coordinateBoxVisible: boolean
     coordinateBoxSelect: string[]
@@ -111,6 +113,27 @@ export interface Parsed{
 export interface ParsedItem{
   coordinates: string[]
   name: string
+}
+
+export interface Distance{
+  ft: UnitItem
+  m: UnitItem
+  sm: UnitItem
+  nm: UnitItem
+  km: UnitItem
+}
+
+export interface Speed{
+  kmh: UnitItem
+  mph: UnitItem
+  ms: UnitItem
+  kt: UnitItem
+  mach: UnitItem
+}
+
+interface UnitItem{
+  name: string
+  value: number
 }
 
 export interface Forwarded{
