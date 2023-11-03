@@ -329,6 +329,20 @@ export const chartLayers:ChartLayer[] = [
     type: "GLD",
     url: "https://wmts.geo.admin.ch/1.0.0/ch.bazl.segelflugkarte/default/current/3857/{z}/{x}/{y}.png",
     description: "Switzerland Gilder Chart"
+  },
+  {
+    id: "LFVFR",
+    country: "LF",
+    type: "VFR",
+    url: `https://wxs.ign.fr/${import.meta.env.VITE_IGN_FRANCE_API_KEY}/geoportail/wmts?service=WMTS&request=GetTile&version=1.0.0&tilematrixset=PM&tilematrix={z}&tilecol={x}&tilerow={y}&layer=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-OACI&format=image/jpeg&style=normal`,
+    description: "France VFR Chart"
+  },
+  {
+    id: "EDVFR",
+    country: "ED",
+    type: "VFR",
+    url: `https://ais.dfs.de/static-maps/icao500/tiles/{z}/{x}/{y}.png`,
+    description: "Germany VFR Chart"
   }
 ]
 
