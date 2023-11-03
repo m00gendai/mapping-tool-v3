@@ -21,7 +21,7 @@ export const state: State ={
     checkedLayers: typeof localStorage.getItem("AMTV3_layers") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layers") || "{}") : [],
     layerGroupBuffer: true,
     darkmode: typeof localStorage.getItem("AMTV3_darkmode") !== null ? JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}") : true,
-    sidebarVisible: true,
+    sidebarVisible: typeof localStorage.getItem("AMTV3_sidebar") !== null ? JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}") : true,
     basemapSelect: typeof localStorage.getItem("AMTV3_basemap") === "string" ? localStorage.getItem("AMTV3_basemap") || "{}" : "OSM",
     baseLayer: L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
       attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
@@ -336,6 +336,7 @@ export const coordinateConversions:string[] = [
 
 export const settings:Setting[] = [
   {
+    id: "darkmodeToggle",
     name: "Darkmode",
     type: "range",
     max: "1",
@@ -343,7 +344,16 @@ export const settings:Setting[] = [
     step: "1"
   },
   {
+    id: "coordinateBox",
     name: "Coordinate Tooltip",
+    type: "range",
+    max: "1",
+    min: "0",
+    step: "1",
+  },
+  {
+    id: "sidebarToggle",
+    name: "Show sidebar by default",
     type: "range",
     max: "1",
     min: "0",

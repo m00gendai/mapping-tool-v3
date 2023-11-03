@@ -35,6 +35,18 @@ document.onreadystatechange = function() {
       state.basemapSelect = localStorage.getItem("AMTV3_basemap") || "{}"
     } 
     state.baseLayer.addTo(map)
+    if(typeof localStorage.getItem("AMTV3_sidebar") === "string"){
+      if(!JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}")){
+        document.getElementById("sidebar")!.style.left = "calc(-25vw - 2rem)"
+        document.getElementById("coords")!.style.left = "calc(1rem + 10px)"
+        document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
+      }
+      if(JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}")){
+        document.getElementById("sidebar")!.style.left = "0rem"
+        document.getElementById("coords")!.style.left ="calc(25vw + 1rem + 10px)"
+        document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
+      }
+    }
   }
 };
 
@@ -231,12 +243,19 @@ function plotMarker(marker:L.Marker){
   })
 }
 
-async function queryTriggerAll(){
+async function queryTriggerAll(from: string){
   clearMarkers()
   clearPolylineArray()
   queryAllState.value = ""
-  const target = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
-  const value: string = target?.value
+  const targetA = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
+  const targetB = document.getElementById(`alternativeQueryAll_textbox`) as HTMLInputElement
+  const value: string = from === "sidebar" ? targetA.value : targetB.value
+  if(from === "sidebar"){
+    targetB.value = targetA.value
+  }
+  if(from === "map"){
+    targetA.value = targetB.value
+  }
   queryAllState.value = value
   if(value === ""){
     return
@@ -319,13 +338,13 @@ map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebarVisible ? parseInt
 }
 
 queryAllButton.addEventListener("click", function(){
-  queryTriggerAll()
+  queryTriggerAll("sidebar")
 })
 
 queryAllField.addEventListener("keypress", function(e){
   if(e.key === "Enter"){
     e.preventDefault()
-    queryTriggerAll()
+    queryTriggerAll("sidebar")
   }
 })
 
@@ -592,13 +611,11 @@ document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_l
 document.getElementById("sidebarToggle")!.addEventListener("click", function(){
   if(state.sidebarVisible){
     document.getElementById("sidebar")!.style.left = "calc(-25vw - 2rem)"
-    document.getElementById("zoom")!.style.left = "calc(1rem + 10px)"
     document.getElementById("coords")!.style.left = "calc(1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
   }
   if(!state.sidebarVisible){
     document.getElementById("sidebar")!.style.left = "0rem"
-    document.getElementById("zoom")!.style.left ="calc(25vw + 1rem + 10px)"
     document.getElementById("coords")!.style.left ="calc(25vw + 1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
   }
@@ -903,7 +920,7 @@ settings.forEach(setting =>{
     const customElement: HTMLDivElement = createRangeInput(setting.name)
     customElement.id = `range_${setting.name}`
     rangeBox.appendChild(customElement)
-    if(setting.name === "Darkmode"){
+    if(setting.id === "darkmodeToggle"){
       range.value = state.darkmode ? "1" : "0"
       range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
       rangeBox.addEventListener("click", function(){
@@ -920,7 +937,7 @@ settings.forEach(setting =>{
         range.value = range.value === "1" ? "0" : "1"
       })
     }
-    if(setting.name === "Coordinate Tooltip"){
+    if(setting.id === "coordinateBox"){
       range.value = state.coordinateBoxVisible ? "1" : "0"
       range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
       rangeBox.addEventListener("click", function(){
@@ -938,7 +955,23 @@ settings.forEach(setting =>{
         range.value = range.value === "1" ? "0" : "1"
       })
     }
-    
+    if(setting.id === "sidebarToggle"){
+      range.value = state.sidebarVisible ? "1" : "0"
+      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
+      rangeBox.addEventListener("click", function(){
+        if(range.value === "0"){
+          state.sidebarVisible = true
+          toggleSwitchOn(customElement)
+          localStorage.setItem("AMTV3_sidebar", JSON.stringify(state.sidebarVisible))
+        }
+        if(range.value === "1"){
+          state.sidebarVisible = false
+          toggleSwitchOff(customElement)
+          localStorage.setItem("AMTV3_sidebar", JSON.stringify(state.sidebarVisible))
+        }
+        range.value = range.value === "1" ? "0" : "1"
+      })
+    }
   }
 })
 
@@ -966,3 +999,24 @@ function createRangeInput(name:string){
   track.id = `range_${name}`
   return track
 }
+
+const minimalQueryAllTextBox: HTMLTextAreaElement = document.createElement("textarea")
+document.getElementById("alternativeQueryAll")!.appendChild(minimalQueryAllTextBox)
+minimalQueryAllTextBox.id = "alternativeQueryAll_textbox"
+minimalQueryAllTextBox.placeholder = "Query entire route"
+
+const minimalQueryAllButton: HTMLButtonElement = document.createElement("button")
+document.getElementById("alternativeQueryAll")!.appendChild(minimalQueryAllButton)
+minimalQueryAllButton.className = "alternativeQueryAll_button"
+minimalQueryAllButton.innerHTML = createSVG("minimalSearch", state)
+
+minimalQueryAllButton.addEventListener("click", function(){
+  queryTriggerAll("map")
+})
+
+minimalQueryAllTextBox.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    e.preventDefault()
+    queryTriggerAll("map")
+  }
+})
