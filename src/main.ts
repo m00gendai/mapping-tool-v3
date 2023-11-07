@@ -14,7 +14,6 @@ import { parseCoordinates, calcDegToDec, eetToDecimalHours, convertDistance, con
 import "leaflet.geodesic"
 import { coordinateBox } from "./components/CoordinateBox"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
-import VanillaContextMenu from "vanilla-context-menu";
 
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
@@ -79,80 +78,120 @@ map.addEventListener("mousemove", function(e){
 })
 
 map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
+  if(document.getElementById("contextMenu")){
+    document.getElementById("map")!.removeChild(document.getElementById("contextMenu")!)
+  }
+  state.contextMenuVisible = true
   const coordinates:Parsed = parseCoordinates(`${e.latlng.lat},${e.latlng.lng}`, "Decimal")
-  new VanillaContextMenu({
-    scope: document.getElementById("map")!,
-    theme: state.darkmode ? "black" : "white",
-    customThemeClass: `context-menu-custom-theme`,
-    menuItems:[
-      {
-        label: "Set Marker",
-        callback: () => {
-          addMarker([
-            [coordinates.decimal.coordinates[0].split(",")[0],
-            coordinates.decimal.coordinates[0].split(",")[1],
-            `Custom Marker<br>
-            Decimal: 
-            ${parseFloat(coordinates.decimal.coordinates[0].split(",")[0]).toFixed(4)},
-            ${parseFloat(coordinates.decimal.coordinates[0].split(",")[1]).toFixed(4)}
-            <br>
-            WGS84: ${coordinates.wgs84degMin.coordinates}
-            <br>
-            Swissgrid: 
-            ${Math.ceil(parseFloat(coordinates.swissgrid.coordinates[0].split(",")[0]))} 
-            ${Math.ceil(parseFloat(coordinates.swissgrid.coordinates[0].split(",")[1]))}
-            `]],
-            "custom"
-          )
-          markerArray.forEach(marker =>{
-            marker.addTo(map)
-            marker.addEventListener("dblclick", function(){
-              plotMarker(marker)
-            })
-          })
-        }
-      },
-      "hr",
-      {
-        label: "Delete all Markers",
-        callback: () => {
-          toolbarFunctions["clearMarker"]()
-          toolbarFunctions["removePolyline"]()
-        }
-      },
-      {
-        label: "Delete all Marker Lines",
-        callback: () => {
-          toolbarFunctions["removePolyline"]()
-        }
-      },
-      {
-        label: "Toggle Popups",
-        callback: () => {
-          toolbarFunctions["togglePopup"]()
-        }
-      },
-      "hr",
-      {
-        label: "Focus Switzerland",
-        callback: () => {
-          toolbarFunctions["focusSwitzerland"]()
-        }
-      },
-      {
-        label: "Focus Europe",
-        callback: () => {
-          toolbarFunctions["focusEurope"]()
-        }
-      },
-      {
-        label: "Focus World",
-        callback: () => {
-          toolbarFunctions["focusWorld"]()
-        }
-      }
-    ]
+  const contextMenu: HTMLDivElement = document.createElement("div")
+  document.getElementById("map")!.appendChild(contextMenu)
+  contextMenu.className="contextMenu"
+  contextMenu.id = "contextMenu"
+
+  
+  const item1 = document.createElement("div")
+  contextMenu.appendChild(item1)
+  item1.innerText = "Set Marker"
+  item1.className = "contextMenu_item"
+  item1.addEventListener("click", function(){
+    addMarker([
+      [coordinates.decimal.coordinates[0].split(",")[0],
+      coordinates.decimal.coordinates[0].split(",")[1],
+      `Custom Marker<br>
+      Decimal: 
+      ${parseFloat(coordinates.decimal.coordinates[0].split(",")[0]).toFixed(4)},
+      ${parseFloat(coordinates.decimal.coordinates[0].split(",")[1]).toFixed(4)}
+      <br>
+      WGS84: ${coordinates.wgs84degMin.coordinates}
+      <br>
+      Swissgrid: 
+      ${Math.ceil(parseFloat(coordinates.swissgrid.coordinates[0].split(",")[0]))} 
+      ${Math.ceil(parseFloat(coordinates.swissgrid.coordinates[0].split(",")[1]))}
+      `]],
+      "custom"
+    )
+    markerArray.forEach(marker =>{
+      marker.addTo(map)
+      marker.addEventListener("dblclick", function(){
+        plotMarker(marker)
+      })
+    })
+    document.getElementById("map")!.removeChild(document.getElementById("contextMenu")!)
+    state.contextMenuVisible = false
   })
+  const divider1 = document.createElement("hr")
+  contextMenu.appendChild(divider1)
+  const item2 = document.createElement("div")
+  contextMenu.appendChild(item2)
+  item2.innerText = "Delete all Markers"
+  item2.className = "contextMenu_item"
+  item2.addEventListener("click", function(){
+    toolbarFunctions["clearMarker"]()
+    toolbarFunctions["removePolyline"]()
+  })
+  const item3 = document.createElement("div")
+  contextMenu.appendChild(item3)
+  item3.innerText = "Delete all Marker Lines"
+  item3.className = "contextMenu_item"
+  item3.addEventListener("click", function(){
+    toolbarFunctions["removePolyline"]()
+  })
+  const item4 = document.createElement("div")
+  contextMenu.appendChild(item4)
+  item4.innerText = "Toggle Marker Popups"
+  item4.className = "contextMenu_item"
+  item4.addEventListener("click", function(){
+    toolbarFunctions["togglePopup"]()
+  })
+  const divider2 = document.createElement("hr")
+  contextMenu.appendChild(divider2)
+  const item5 = document.createElement("div")
+  contextMenu.appendChild(item5)
+  item5.innerText = "Focus Switzerland"
+  item5.className = "contextMenu_item"
+  item5.addEventListener("click", function(){
+    toolbarFunctions["focusSwitzerland"]()
+  })
+  const item6 = document.createElement("div")
+  contextMenu.appendChild(item6)
+  item6.innerText = "Focus Europe"
+  item6.className = "contextMenu_item"
+  item6.addEventListener("click", function(){
+    toolbarFunctions["focusEurope"]()
+  })
+  const item7 = document.createElement("div")
+  contextMenu.appendChild(item7)
+  item7.innerText = "Focus World"
+  item7.className = "contextMenu_item"
+  item7.addEventListener("click", function(){
+    toolbarFunctions["focusWorld"]()
+  })
+
+
+  const mapContainerWidth = getComputedStyle(document.getElementById("map")!).width
+  const mapContainerHeight = getComputedStyle(document.getElementById("map")!).height
+  const contextMenuWidth = getComputedStyle(document.getElementById("contextMenu")!).width
+  const contextMenuHeight = getComputedStyle(document.getElementById("contextMenu")!).height
+  let lower = false
+  let wider = false
+  contextMenu.style.top = `${e.containerPoint.y}px`
+  if(e.containerPoint.y + parseFloat(contextMenuHeight) > parseFloat(mapContainerHeight)){
+    lower = true
+  }
+  contextMenu.style.left = `${e.containerPoint.x}px`
+  if(e.containerPoint.x + parseFloat(contextMenuWidth) > parseFloat(mapContainerWidth)){
+    wider = true
+  }
+  contextMenu.style.transform = `translate(${wider ? "-100%" : "0%"}, ${lower ? "-100%" : "0%"})`
+  document.getElementById("map")!.appendChild(contextMenu)
+  
+})
+
+document.getElementById("map")!.addEventListener("click", function(){
+  if(state.contextMenuVisible){
+    document.getElementById("map")!.removeChild(document.getElementById("contextMenu")!)
+    state.contextMenuVisible = false
+  }
 })
 
 document.getElementById("polylineField")!.style.display = "none"
@@ -182,7 +221,7 @@ function setSidebarVisibility(state:State){
       const basemapButtonInner = document.createElement("div")
       basemapButtonInner.className="basemapSelect_inner"
       basemapButton.appendChild(basemapButtonInner)
-      const mapThumb: L.Map = L.map(basemapButtonInner, {zoomControl:true})  
+      const mapThumb: L.Map = L.map(basemapButtonInner, {zoomControl:false})  
       disableControls(mapThumb)
       resizeMinimap(mapThumb)
       L.tileLayer(getBaseLayer(basemap.type)).addTo(mapThumb)
