@@ -38,6 +38,7 @@ export interface State{
     parsedDecimalCoordinates: string[]
     coordinateBoxVisible: boolean
     coordinateBoxSelect: string[]
+    contextMenuVisible: boolean
 }
 
 export interface SidebarFlag{
@@ -159,4 +160,8 @@ interface Item{
 export interface Info{
   title: string
   content: string
+}
+
+export interface ToolbarFunctions{
+  [key: string] : () => unknown;
 }
