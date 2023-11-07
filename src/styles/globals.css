@@ -96,6 +96,11 @@ a:visited{
     z-index: 1001;
 }
 
+#sidebarToggle:hover{
+    cursor: pointer;
+    background: var(--backgroundColor_light);
+}
+
 #sidebar{
     background-color: var(--backgroundColor);
     display: block;
