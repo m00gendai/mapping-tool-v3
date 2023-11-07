@@ -48,7 +48,7 @@ Judging how wonky Leaflet is with npm and especially TypeScript, I'll take it, t
 
 return type==="REP" ? 
 /*@ts-expect-error */
-L.GeoJSON = L.geoJSON(country, {style: {color: ""}, pointToLayer: function(geoJsonPoint:Feature, latlng:L.LatLng) {
+L.GeoJSON = L.geoJSON(country, {style: {color: "", className: "layerItem"}, pointToLayer: function(geoJsonPoint:Feature, latlng:L.LatLng) {
     return L.marker(latlng, {icon: createIcon(`${layer.id.substring(0,2)}REP`)});
 }}).bindTooltip(function (layer) {
     /*@ts-expect-error */
@@ -60,7 +60,7 @@ L.GeoJSON = L.geoJSON(country, {style: {color: ""}, pointToLayer: function(geoJs
 L.GeoJSON = L.geoJSON(country, {
     /*@ts-expect-error */
     style: function(feature:GeoJsonProperties){
-        return {color: getColor(feature?.properties.name)}},
+        return {color: getColor(feature?.properties.name), className: "layerItem"}},
     filter: function(feature:GeoJsonProperties) {
             return feature?.properties.name
         
@@ -70,7 +70,7 @@ L.GeoJSON = L.geoJSON(country, {
     },{sticky: true})
     :
 /*@ts-expect-error */
-L.GeoJSON = L.geoJSON(country, {style: {color: getColor(type)}, filter: function(feature:GeoJsonProperties, layer:L.Layer) {
+L.GeoJSON = L.geoJSON(country, {style: {color: getColor(type), className: "layerItem"}, filter: function(feature:GeoJsonProperties, layer:L.Layer) {
     if(feature?.properties.Type == type){
         return feature.properties.Type
     }}}).bindTooltip(function(layer){

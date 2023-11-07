@@ -161,6 +161,11 @@ a:visited{
     height: 100%;
     display: flex;
     flex-grow: 1;
+    cursor: crosshair;
+}
+
+#map:active{
+    cursor: grabbing;
 }
 
 .sidebar_inputArea{
@@ -814,4 +819,8 @@ a:visited{
 .contextMenu_item:hover{
     cursor: pointer;
     background: var(--backgroundColor_light);
+}
+
+.layerItem:hover{
+    cursor: crosshair;
 }

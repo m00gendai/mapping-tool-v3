@@ -544,8 +544,6 @@ function triggerColorChange(){
   })
 }
 
-document.getElementById("toolbar")!.style.width = "50vw"
-
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = createSVG("layerGroup", state)
 layerGroup.style.width ="3rem"

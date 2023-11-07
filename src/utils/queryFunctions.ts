@@ -10,7 +10,8 @@ export function placeCoords(coordinatesValue:string){
     const coordsArray: string[] = coordinatesValue.split(/\s+/g) // s+ is one or more whitespace characters
     const returnCoordinates:string[][] = []
     coordsArray.forEach(coord => {
-        returnCoordinates.push(calcDegToDec(coord))
+        const coords:string[] = calcDegToDec(coord)
+        returnCoordinates.push([coords[0], coords[1], `${coord}<br>${coords[0]}, ${coords[1]}`])
     })
     return returnCoordinates
 }
