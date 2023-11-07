@@ -786,3 +786,17 @@ a:visited{
     position: relative;
     width: 50%;
 }
+
+.context-menu-custom-theme{
+    background-color: var(--backgroundColor);
+}
+.context-menu-custom-theme hr {
+        background-color: var(--backgroundColor_light);
+}
+.context-menu-custom-theme > *:not(hr){
+    color: var(--fontColor);
+}
+
+.context-menu-custom-theme > *:not(hr):hover{
+    background: var(--backgroundColor_light);
+}
