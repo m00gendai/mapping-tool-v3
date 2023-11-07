@@ -30,7 +30,6 @@
     "leaflet.geodesic": "^2.7.1",
     "lodash": "^4.17.21",
     "proj4": "^2.9.2",
-    "transform-coordinates": "^1.0.0",
-    "vanilla-context-menu": "^1.6.0"
+    "transform-coordinates": "^1.0.0"
   }
 }
