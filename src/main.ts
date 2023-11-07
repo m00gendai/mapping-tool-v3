@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings, infos, distanceConversions, distances, speeds, speedConversions } from "./configs"
+import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings, infos, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
@@ -14,6 +14,7 @@ import { parseCoordinates, calcDegToDec, eetToDecimalHours, convertDistance, con
 import "leaflet.geodesic"
 import { coordinateBox } from "./components/CoordinateBox"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
+import VanillaContextMenu from "vanilla-context-menu";
 
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
@@ -51,7 +52,7 @@ document.onreadystatechange = function() {
 };
 
 export const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
-const markerArray: L.Marker[] = []
+export const markerArray: L.Marker[] = []
 const polylineMarkerArray: L.Marker[] = []
 const polylineArray: L.Polyline[] = []
 const polylineDecoratorArry: L.PolylineDecorator[] = []
@@ -62,7 +63,7 @@ const balloonMarkerArray: L.Marker[] = []
 const geodesicLineArray: L.Geodesic[] = []
 
 map.addEventListener("mousemove", function(e){
-  if(state.coordinateBoxVisible){
+  if(state.coordinateBoxVisible && !state.contextMenuVisible){
     document.getElementById("coords")!.style.display = "flex"
     const coordinates:Parsed = parseCoordinates(`${e.latlng.lat},${e.latlng.lng}`, "Decimal")
     document.getElementById("coords")!.innerHTML = ""
@@ -75,6 +76,83 @@ map.addEventListener("mousemove", function(e){
   } else {
     document.getElementById("coords")!.style.display = "none"
   } 
+})
+
+map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
+  const coordinates:Parsed = parseCoordinates(`${e.latlng.lat},${e.latlng.lng}`, "Decimal")
+  new VanillaContextMenu({
+    scope: document.getElementById("map")!,
+    theme: state.darkmode ? "black" : "white",
+    customThemeClass: `context-menu-custom-theme`,
+    menuItems:[
+      {
+        label: "Set Marker",
+        callback: () => {
+          addMarker([
+            [coordinates.decimal.coordinates[0].split(",")[0],
+            coordinates.decimal.coordinates[0].split(",")[1],
+            `Custom Marker<br>
+            Decimal: 
+            ${parseFloat(coordinates.decimal.coordinates[0].split(",")[0]).toFixed(4)},
+            ${parseFloat(coordinates.decimal.coordinates[0].split(",")[1]).toFixed(4)}
+            <br>
+            WGS84: ${coordinates.wgs84degMin.coordinates}
+            <br>
+            Swissgrid: 
+            ${Math.ceil(parseFloat(coordinates.swissgrid.coordinates[0].split(",")[0]))} 
+            ${Math.ceil(parseFloat(coordinates.swissgrid.coordinates[0].split(",")[1]))}
+            `]],
+            "custom"
+          )
+          markerArray.forEach(marker =>{
+            marker.addTo(map)
+            marker.addEventListener("dblclick", function(){
+              plotMarker(marker)
+            })
+          })
+        }
+      },
+      "hr",
+      {
+        label: "Delete all Markers",
+        callback: () => {
+          clearMarkers()
+        }
+      },
+      {
+        label: "Delete all Marker Lines",
+        callback: () => {
+          clearMarkers()
+          clearPolylineArray()
+        }
+      },
+      {
+        label: "Toggle Popups",
+        callback: () => {
+          toolbarFunctions["togglePopup"]()
+        }
+      },
+      "hr",
+      {
+        label: "Focus Switzerland",
+        callback: () => {
+          toolbarFunctions["focusSwitzerland"]()
+        }
+      },
+      {
+        label: "Focus Europe",
+        callback: () => {
+          toolbarFunctions["focusEurope"]()
+        }
+      },
+      {
+        label: "Focus World",
+        callback: () => {
+          toolbarFunctions["focusWorld"]()
+        }
+      }
+    ]
+  })
 })
 
 document.getElementById("polylineField")!.style.display = "none"
@@ -427,54 +505,20 @@ document.getElementById("sidebarInner_query")?.appendChild(inputArea)
 
 
 
-const popupToggleButton: HTMLButtonElement = document.createElement("button")
-popupToggleButton.innerHTML = createSVG("togglePopup", state)
-popupToggleButton.className="toolbar_button"
-popupToggleButton.title="Toggles all marker popups on or off"
-popupToggleButton.addEventListener("click", function(){
-  if(state.popupVisible){
-    const popups: NodeList = document.querySelectorAll(".leaflet-popup-close-button")
-    popups.forEach(popup =>{
-      const closeButton: HTMLElement = popup as HTMLElement
-      closeButton.click()
-    })
-  }
-   if(!state.popupVisible){
-    markerArray.forEach(marker =>{
-      marker.openPopup()
-      const bubble = marker.getPopup()!.getElement()!.children[0]! as HTMLElement
-      const bubbleTip = marker.getPopup()!.getElement()!.children[1]!.children[0]! as HTMLElement
-      bubble.style.background = state.darkmode ? "#050505" : "#fafafa"
-      bubble.style.color = state.darkmode ? "#fafafa" : "#050505"
-      bubbleTip.style.background = state.darkmode ? "#050505" : "#fafafa"
-    })
-  }
-  state.popupVisible = !state.popupVisible
-})
 
-const focusSwitzerlandButton: HTMLButtonElement = document.createElement("button")
-focusSwitzerlandButton.innerHTML = createSVG("focusSwitzerland", state)
-focusSwitzerlandButton.className="toolbar_button"
-focusSwitzerlandButton.title="Centers the map so that the whole of Switzerland is visible"
-focusSwitzerlandButton.addEventListener("click", function(){
-  map.setView([46.80, 8.22], 8);
-})
 
-const clearMarkersButton: HTMLButtonElement = document.createElement("button")
-clearMarkersButton.innerHTML = createSVG("clearMarker", state)
-clearMarkersButton.className="toolbar_button"
-clearMarkersButton.title = "Removes all markes from the map"
-clearMarkersButton.addEventListener("click", function(){
-  clearMarkers()
-  clearPolylineArray()
-})
 
-const clearPolylinesButton: HTMLButtonElement = document.createElement("button")
-clearPolylinesButton.innerHTML = createSVG("removePolyline", state)
-clearPolylinesButton.className="toolbar_button"
-clearPolylinesButton.title="Removes all drawn lines between markers and resets any time/distance values"
-clearPolylinesButton.addEventListener("click", function(){
-  clearPolylineArray()
+
+toolbarButtons.forEach(btn =>{
+  const button: HTMLButtonElement = document.createElement("button")
+  button.innerHTML = createSVG(btn.name, state)
+  button.id = `toolbar_button_${btn.name}`
+  button.className = "toolbar_button"
+  button.title = btn.description
+  document.getElementById("toolbar")?.appendChild(button)
+  button.addEventListener("click", function(){
+   toolbarFunctions[btn.name]()
+  })
 })
 
 function triggerColorChange(){
@@ -485,19 +529,13 @@ function triggerColorChange(){
   document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
   document.getElementById("zoomIn")!.innerHTML = createSVG("zoomIn", state)
   document.getElementById("zoomOut")!.innerHTML = createSVG("zoomOut", state)
-  clearPolylinesButton.innerHTML = createSVG("removePolyline", state)
-  clearMarkersButton.innerHTML = createSVG("clearMarker", state)
-  focusSwitzerlandButton.innerHTML = createSVG("focusSwitzerland", state)
-  popupToggleButton.innerHTML = createSVG("togglePopup", state)
   vfrLayerDrawerTrigger.innerHTML = createSVG("drawer", state)
+  toolbarButtons.forEach(btn =>{
+    document.getElementById(`toolbar_button_${btn.name}`)!.innerHTML = createSVG(btn.name, state)
+  })
 }
 
 document.getElementById("toolbar")!.style.width = "50vw"
-
-document.getElementById("toolbar")?.appendChild(clearMarkersButton)
-document.getElementById("toolbar")?.appendChild(clearPolylinesButton)
-document.getElementById("toolbar")?.appendChild(popupToggleButton)
-document.getElementById("toolbar")?.appendChild(focusSwitzerlandButton)
 
 const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = createSVG("layerGroup", state)
