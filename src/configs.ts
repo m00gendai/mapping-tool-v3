@@ -1,5 +1,6 @@
-import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed, Info, Distance, Speed } from "./interfaces"
+import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed, Info, Distance, Speed, ToolbarFunctions } from "./interfaces"
 import L from "leaflet"
+import { map, markerArray } from "./main"
 
 const date: Date = new Date()
 const currentYear:number = date.getFullYear()
@@ -33,6 +34,7 @@ export const state: State ={
     parsedDecimalCoordinates: [],
     coordinateBoxVisible: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
     coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
+    contextMenuVisible: false,
 }
 
 export const baseMaps:BaseMap[] =
@@ -346,6 +348,13 @@ export const chartLayers:ChartLayer[] = [
   }
 ]
 
+export const parsed: Parsed = {
+  wgs84degMin: {name: "WGS84", coordinates: []},
+  wgs84degMinSec: {name: "WGS84 dms", coordinates: []},
+  decimal: {name: "Decimal", coordinates: []},
+  swissgrid: {name: "Swissgrid", coordinates: []},
+}
+
 export const coordinateConversions:string[] = [
   "WGS84 Deg Min", "WGS84 Deg Min Sec", "Decimal", "Swissgrid"
 ]
@@ -384,14 +393,6 @@ export const settings:Setting[] = [
     step: "1",
   }
 ]
-
-
-export const parsed: Parsed = {
-  wgs84degMin: {name: "WGS84", coordinates: []},
-  wgs84degMinSec: {name: "WGS84 dms", coordinates: []},
-  decimal: {name: "Decimal", coordinates: []},
-  swissgrid: {name: "Swissgrid", coordinates: []},
-}
 
 export const distances:Distance = {
   m: {name: "Meter", value: 0},
@@ -461,3 +462,71 @@ export const infos:Info[] = [
     © 2021-${currentYear} <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a> for <a href="https://www.skyguide.ch/services/aeronautical-information-management" target="_blank">skyguide AIM Services</a>`
   }
 ]
+
+
+
+export const toolbarButtons = [
+  {
+    name: "clearMarker",
+    description: "Removes all markers from the map",
+    function: "focusSwitzerland"
+  },
+  {
+    name: "removePolyline",
+    description: "Removes all drawn lines between markers and resets any time/distance values"
+  },
+  {
+    name: "togglePopup",
+    description: "Toggles all marker popups on or off",
+  },
+  {
+    name: "focusSwitzerland",
+    description: "Centers the map so that the whole of Switzerland is visible",
+  },
+  {
+    name: "focusEurope",
+    description: "Centers the map so that the whole of Europe is visible",
+  },
+  {
+    name: "focusWorld",
+    description: "Centers the map so that the whole World is visible",
+  },
+]
+
+export const toolbarFunctions: ToolbarFunctions ={
+  focusSwitzerland: function focusSwitzerland(){
+    map.setView([46.80, 8.22], 8);
+  },
+  focusEurope: function focusEurope(){
+    map.setView([53.0, 20.0], 4);
+  },
+  focusWorld: function focusWorld(){
+    map.setView([40.87, 34.57], 2);
+  },
+  clearMarker: function clearMarkers(){
+    markerArray.forEach(marker =>{
+      marker.removeFrom(map)
+    })
+    markerArray.length = 0
+  },
+  togglePopup: function togglePopup(){
+    if(state.popupVisible){
+      const popups: NodeList = document.querySelectorAll(".leaflet-popup-close-button")
+      popups.forEach(popup =>{
+        const closeButton: HTMLElement = popup as HTMLElement
+        closeButton.click()
+      })
+    }
+     if(!state.popupVisible){
+      markerArray.forEach(marker =>{
+        marker.openPopup()
+        const bubble = marker.getPopup()!.getElement()!.children[0]! as HTMLElement
+        const bubbleTip = marker.getPopup()!.getElement()!.children[1]!.children[0]! as HTMLElement
+        bubble.style.background = state.darkmode ? "#050505" : "#fafafa"
+        bubble.style.color = state.darkmode ? "#fafafa" : "#050505"
+        bubbleTip.style.background = state.darkmode ? "#050505" : "#fafafa"
+      })
+    }
+    state.popupVisible = !state.popupVisible
+  }
+}
