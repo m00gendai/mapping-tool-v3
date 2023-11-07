@@ -787,16 +787,31 @@ a:visited{
     width: 50%;
 }
 
-.context-menu-custom-theme{
-    background-color: var(--backgroundColor);
-}
-.context-menu-custom-theme hr {
-        background-color: var(--backgroundColor_light);
-}
-.context-menu-custom-theme > *:not(hr){
-    color: var(--fontColor);
+.contextMenu{
+    position: absolute;
+    z-index: 1200;
+    background: var(--backgroundColor);
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-.context-menu-custom-theme > *:not(hr):hover{
+.contextMenu hr{
+    position: relative;
+    width: 100%;
+}
+
+.contextMenu_item{
+    position: relative; 
+    width: 100%;
+    color: var(--fontColor);
+    padding: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.contextMenu_item:hover{
+    cursor: pointer;
     background: var(--backgroundColor_light);
 }
