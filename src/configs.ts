@@ -1,6 +1,6 @@
 import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed, Info, Distance, Speed, ToolbarFunctions } from "./interfaces"
 import L from "leaflet"
-import { map, markerArray } from "./main"
+import { map, markerArray, polylineArray, polylineDecoratorArry, polylineMarkerArray, speedInput } from "./main"
 
 const date: Date = new Date()
 const currentYear:number = date.getFullYear()
@@ -508,6 +508,30 @@ export const toolbarFunctions: ToolbarFunctions ={
       marker.removeFrom(map)
     })
     markerArray.length = 0
+  },
+  removePolyline: function clearPolylineArray(){
+    polylineArray.forEach(polyline =>{
+      polyline.removeFrom(map)
+    })
+    polylineArray.length = 0
+    polylineDecoratorArry.forEach(decorator =>{
+      decorator.removeFrom(map)
+    })
+    polylineDecoratorArry.length = 0
+    polylineMarkerArray.length = 0
+    document.getElementById("polylineField_table_body")!.innerText = ""
+    document.getElementById("polylineField")!.style.display = "none"
+    state.totalDistance = 0
+    state.setSpeed = 0
+    state.setDep = ""
+    state.setDist= []
+    state.setDest = ""
+    state.setTime=[]
+    state.setTimeFields=0
+    state.setTotalDist= 0
+    state.setTotalTime= 0
+    state.markerClicks= 0
+    speedInput.value = ""
   },
   togglePopup: function togglePopup(){
     if(state.popupVisible){

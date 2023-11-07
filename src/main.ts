@@ -53,9 +53,9 @@ document.onreadystatechange = function() {
 
 export const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 export const markerArray: L.Marker[] = []
-const polylineMarkerArray: L.Marker[] = []
-const polylineArray: L.Polyline[] = []
-const polylineDecoratorArry: L.PolylineDecorator[] = []
+export const polylineMarkerArray: L.Marker[] = []
+export const polylineArray: L.Polyline[] = []
+export const polylineDecoratorArry: L.PolylineDecorator[] = []
 const layerArray: (string | L.GeoJSON)[][] = []
 const chartArray: L.TileLayer[] = []
 const geodesicCircleArray: L.GeodesicCircle[] = []
@@ -116,14 +116,14 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
       {
         label: "Delete all Markers",
         callback: () => {
-          clearMarkers()
+          toolbarFunctions["clearMarker"]()
+          toolbarFunctions["removePolyline"]()
         }
       },
       {
         label: "Delete all Marker Lines",
         callback: () => {
-          clearMarkers()
-          clearPolylineArray()
+          toolbarFunctions["removePolyline"]()
         }
       },
       {
@@ -156,39 +156,9 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
 })
 
 document.getElementById("polylineField")!.style.display = "none"
-const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
+export const speedInput = document.getElementById("polylineField_speed")! as HTMLInputElement
 speedInput.value = ""
 
-function clearMarkers(){
-  markerArray.forEach(marker =>{
-    marker.removeFrom(map)
-  })
-  markerArray.length = 0
-}
-function clearPolylineArray(){
-  polylineArray.forEach(polyline =>{
-    polyline.removeFrom(map)
-  })
-  polylineArray.length = 0
-  polylineDecoratorArry.forEach(decorator =>{
-    decorator.removeFrom(map)
-  })
-  polylineDecoratorArry.length = 0
-  polylineMarkerArray.length = 0
-  document.getElementById("polylineField_table_body")!.innerText = ""
-  document.getElementById("polylineField")!.style.display = "none"
-  state.totalDistance = 0
-  state.setSpeed = 0
-  state.setDep = ""
-  state.setDist= []
-  state.setDest = ""
-  state.setTime=[]
-  state.setTimeFields=0
-  state.setTotalDist= 0
-  state.setTotalTime= 0
-  state.markerClicks= 0
-  speedInput.value = ""
-}
 
 function resizeMinimap(map:L.Map){
   setTimeout(function(){
@@ -322,8 +292,8 @@ function plotMarker(marker:L.Marker){
 }
 
 async function queryTriggerAll(from: string){
-  clearMarkers()
-  clearPolylineArray()
+  toolbarFunctions["clearMarker"]()
+  toolbarFunctions["removePolyline"]()
   queryAllState.value = ""
   const targetA = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
   const targetB = document.getElementById(`alternativeQueryAll_textbox`) as HTMLInputElement
