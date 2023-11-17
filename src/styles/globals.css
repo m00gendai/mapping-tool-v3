@@ -559,7 +559,7 @@ a:visited{
 #vfrLayerDrawer{
     position: absolute;
     right: calc(-75vw + 5rem + 10px - 0.125rem);
-    bottom: calc(1.5rem + 3rem + 10px);
+    bottom: calc(1.5rem + 3rem + 10px - 0.125rem);
     width: calc(100vw - 25vw - 1rem - 10px);
     height: 6rem;
     z-index: 1001;
