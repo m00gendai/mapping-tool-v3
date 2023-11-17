@@ -40,6 +40,7 @@ export function createDialog(){
         button.addEventListener("click", function(){
           dialog.close()
           localStorage.setItem("AMTV3_agb", JSON.stringify(true))
+          document.body.removeChild(dialog)
         })
       }
       if(value !== "I accept"){
