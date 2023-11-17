@@ -13,7 +13,13 @@ import { getChart } from "./charts"
 import { parseCoordinates, calcDegToDec, eetToDecimalHours, convertDistance, convertSpeed } from "./utils/conversions"
 import "leaflet.geodesic"
 import { coordinateBox } from "./components/CoordinateBox"
+import { createDialog } from "./components/Dialog"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
+
+if(!state.acceptedLegality){
+createDialog()
+}
+  
 
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
@@ -49,6 +55,7 @@ document.onreadystatechange = function() {
     }
   }
 };
+
 
 export const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 export const markerArray: L.Marker[] = []
@@ -559,8 +566,8 @@ layerGroups.forEach(group =>{
 })
 
 layerGroup.addEventListener("click", function(){
-layerGroup.style.gridTemplateColumns = "repeat(auto-fill, minmax(250px, 1fr))"
-layerGroup.style.placeItems = "start center"
+  layerGroup.style.gridTemplateColumns = "repeat(auto-fill, minmax(250px, 1fr))"
+  layerGroup.style.placeItems = "start center"
   state.layerGroupBuffer = true
   if(!state.layerGroupVisible){
     layerGroup.innerHTML = ""
@@ -627,6 +634,41 @@ layerGroup.style.placeItems = "start center"
         column_content_item.appendChild(column_content_label)
         column_content.appendChild(column_content_item)
 
+        column_name.addEventListener("click", async function(){
+          if(!state.checkedAllLayers.includes(column_name.innerText)){
+            for(const item of column_content.children){
+              const inpt = item.children[0] as HTMLInputElement
+              inpt.checked = true
+              if(!state.checkedLayers.includes(layer.id)){
+                state.checkedLayers = [...state.checkedLayers, layer.id]
+                localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
+                const setLayer:L.GeoJSON = await getLayer(layer)
+                setLayer.addTo(map)
+                layerArray.push([layer.id, setLayer])
+              }
+            }
+            state.checkedAllLayers = [...state.checkedAllLayers, column_name.innerText]
+            localStorage.setItem("AMTV3_layersAll", JSON.stringify(state.checkedAllLayers))
+          }
+          else if(state.checkedAllLayers.includes(column_name.innerText)){
+            for(const item of column_content.children){
+              const inpt = item.children[0] as HTMLInputElement
+              inpt.checked = false
+              const removeItemIndex = state.checkedLayers.indexOf(layer.id)
+              state.checkedLayers.splice(removeItemIndex, 1)
+              localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
+              layerArray.forEach(item =>{
+                if(item[0] === layer.id){
+                  const toBeRemovedLayer = item[1] as L.GeoJSON
+                  toBeRemovedLayer.removeFrom(map)
+                }
+              })
+            }
+            const removeItemIndex = state.checkedLayers.indexOf(column_name.innerText)
+            state.checkedAllLayers.splice(removeItemIndex, 1)
+            localStorage.setItem("AMTV3_layersAll", JSON.stringify(state.checkedAllLayers))
+          }
+        })
       })
       layerGroup.appendChild(column)
     })

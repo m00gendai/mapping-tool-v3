@@ -6,6 +6,7 @@ const date: Date = new Date()
 const currentYear:number = date.getFullYear()
 
 export const state: State ={
+    acceptedLegality: typeof localStorage.getItem("AMTV3_agb") === "string" ? JSON.parse(localStorage.getItem("AMTV3_agb") || "{}") : false,
     popupVisible: false,
     sidebarSelect: "query",
     totalDistance: 0,
@@ -20,6 +21,7 @@ export const state: State ={
     markerClicks: 0,
     layerGroupVisible: false,
     checkedLayers: typeof localStorage.getItem("AMTV3_layers") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layers") || "{}") : [],
+    checkedAllLayers: typeof localStorage.getItem("AMTV3_layersAll") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layersAll") || "{}") : [],
     layerGroupBuffer: true,
     darkmode: typeof localStorage.getItem("AMTV3_darkmode") !== null ? JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}") : true,
     sidebarVisible: typeof localStorage.getItem("AMTV3_sidebar") !== null ? JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}") : true,

@@ -12,6 +12,7 @@ export interface BaseMap{
 }
 
 export interface State{
+  acceptedLegality: boolean
     popupVisible: boolean
     sidebarSelect: string
     totalDistance: number
@@ -26,6 +27,7 @@ export interface State{
     markerClicks: number
     layerGroupVisible: boolean
     checkedLayers: string[]
+    checkedAllLayers: string[]
     layerGroupBuffer: boolean
     darkmode: boolean
     sidebarVisible: boolean
