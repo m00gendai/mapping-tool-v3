@@ -13,7 +13,13 @@ import { getChart } from "./charts"
 import { parseCoordinates, calcDegToDec, eetToDecimalHours, convertDistance, convertSpeed } from "./utils/conversions"
 import "leaflet.geodesic"
 import { coordinateBox } from "./components/CoordinateBox"
+import { createDialog } from "./components/Dialog"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
+
+if(!state.acceptedLegality){
+createDialog()
+}
+  
 
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
@@ -49,6 +55,7 @@ document.onreadystatechange = function() {
     }
   }
 };
+
 
 export const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 export const markerArray: L.Marker[] = []
