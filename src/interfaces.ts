@@ -26,6 +26,7 @@ export interface State{
     markerClicks: number
     layerGroupVisible: boolean
     checkedLayers: string[]
+    checkedAllLayers: string[]
     layerGroupBuffer: boolean
     darkmode: boolean
     sidebarVisible: boolean

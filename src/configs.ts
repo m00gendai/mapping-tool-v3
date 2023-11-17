@@ -20,6 +20,7 @@ export const state: State ={
     markerClicks: 0,
     layerGroupVisible: false,
     checkedLayers: typeof localStorage.getItem("AMTV3_layers") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layers") || "{}") : [],
+    checkedAllLayers: typeof localStorage.getItem("AMTV3_layersAll") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layersAll") || "{}") : [],
     layerGroupBuffer: true,
     darkmode: typeof localStorage.getItem("AMTV3_darkmode") !== null ? JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}") : true,
     sidebarVisible: typeof localStorage.getItem("AMTV3_sidebar") !== null ? JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}") : true,
