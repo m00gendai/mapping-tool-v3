@@ -15,6 +15,29 @@
     --link_visited: #1E283C;
 }
 
+::backdrop{
+    background: black;
+    opacity: 0.75;
+}
+
+.dialog{
+    white-space: normal;
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dialog input{
+    margin: 0 0 1rem 0;
+}
+
+.dialog button{
+    margin: 0 0 1rem 1rem;
+}
+
 .lightMode{
     --backgroundColor: #fafafa;
     --backgroundColor_light: #d2d2d2;
