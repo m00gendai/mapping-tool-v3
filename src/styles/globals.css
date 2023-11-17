@@ -561,8 +561,7 @@ a:visited{
     right: calc(-75vw + 5rem + 10px - 0.125rem);
     bottom: calc(1.5rem + 3rem + 10px);
     width: calc(100vw - 25vw - 1rem - 10px);
-    height: 5rem;
-    background: var(--backgroundColor);
+    height: 6rem;
     z-index: 1001;
     display: flex;
     justify-content: flex-start;
@@ -572,33 +571,36 @@ a:visited{
 
 #vfrLayerDrawerTrigger{
     position: relative;
-    width: calc(4rem + 0.125rem);
+    width: calc(3rem + 0.25rem);
     height: 100%;
-    border-right: 1px solid var(--border_color);
     box-sizing: border-box;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--backgroundColor) 50%, var(--backgroundColor) 100%);
 }
 
 #vfrLayerDrawerTrigger:hover{
     cursor:pointer;
-    background: var(--backgroundColor_light);
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--backgroundColor_light) 50%, var(--backgroundColor_light) 100%);
 }
 
 #vfrLayerDrawerTrigger > svg{
     position: relative;
-    width: calc(90% - 1rem - 0.125rem);
-    margin: 0 0 0 10%;
+    width: 80%;
+    height: 45%;
+    margin: 0 auto 5% auto;
 }
 
 #vfrLayerDrawerInner{
     position: relative;
+    margin: 0 0 0 1rem;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background: var(--backgroundColor);
 }
 
 .layerButton{
@@ -808,6 +810,10 @@ a:visited{
     flex-wrap: wrap;
 }
 
+.contextMenu:hover{
+    cursor: pointer;
+}
+
 .contextMenu hr{
     position: relative;
     width: 100%;
@@ -822,7 +828,6 @@ a:visited{
 }
 
 .contextMenu_item:hover{
-    cursor: pointer;
     background: var(--backgroundColor_light);
 }
 
