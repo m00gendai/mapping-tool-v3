@@ -6,6 +6,7 @@ const date: Date = new Date()
 const currentYear:number = date.getFullYear()
 
 export const state: State ={
+    acceptedLegality: typeof localStorage.getItem("AMTV3_agb") === "string" ? JSON.parse(localStorage.getItem("AMTV3_agb") || "{}") : false,
     popupVisible: false,
     sidebarSelect: "query",
     totalDistance: 0,

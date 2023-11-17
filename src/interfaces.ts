@@ -12,6 +12,7 @@ export interface BaseMap{
 }
 
 export interface State{
+  acceptedLegality: boolean
     popupVisible: boolean
     sidebarSelect: string
     totalDistance: number
