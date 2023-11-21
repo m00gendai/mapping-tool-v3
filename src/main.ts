@@ -147,7 +147,8 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
   contextMenu.appendChild(item4)
   item4.innerText = "Toggle Marker Popups"
   item4.className = "contextMenu_item"
-  item4.addEventListener("click", function(){
+  item4.addEventListener("click", function(e){
+    L.DomEvent.stopPropagation(e)
     toolbarFunctions["togglePopup"]()
   })
   const divider2 = document.createElement("hr")
