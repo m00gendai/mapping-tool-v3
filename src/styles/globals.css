@@ -22,11 +22,11 @@
 
 .dialog{
     white-space: normal;
-    width: 50vw;
     height: 75vh;
+    aspect-ratio: 1/1.25;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
