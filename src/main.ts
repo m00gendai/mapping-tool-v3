@@ -1082,6 +1082,9 @@ document.getElementById("sidebarInner_balloon")!.appendChild(plotBalloonCircle)
 plotBalloonCircle.addEventListener("click", function(){
   clearBalloonCircle()
   const start:string[] = calcDegToDec(balloonCoordinateInput.value)
+  if(start[0]=== "ERROR"){
+    return
+  }
   const speed: number = parseFloat(balloonSpeedInput.value)*1.852
   const teet: string = balloonTEETInput.value
   const decimalTeet:number = eetToDecimalHours(teet)
