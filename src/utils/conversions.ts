@@ -97,8 +97,16 @@ export function parseCoordinates(value:string, option:string){
 
 // function to convert DEG MIN SEC to DECIMAL
 export function calcDegToDec(coord:string) {
-	const converted:Coord = convert(coord)
-	return [converted.decimalLatitude.toString(), converted.decimalLongitude.toString()]
+	let converted:Coord
+	try{
+		converted = convert(coord)
+		return [converted.decimalLatitude.toString(), converted.decimalLongitude.toString()]
+	}
+	catch{
+		alert(`Error with coordinate ${coord}.\nOnly WGS84 coordinates in ICAO Format and Degress Minutes (and Seconds) allowed.\nPlease adhere to format {ddmmss}{N|S}{dddmmss}{E|W}\nExample: 4710N00710E`)
+		return ["ERROR", "ERROR"]
+	}
+	
 }
 
 export function eetToDecimalHours(eet:string){
