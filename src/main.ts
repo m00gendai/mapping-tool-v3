@@ -19,13 +19,10 @@ import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 if(!state.acceptedLegality){
 createDialog()
 }
-  
 
 document.onreadystatechange = function() {
-  if (document.readyState !== "complete") {
-      document.getElementById("app")!.style.display = "none"
-      document.getElementById("polylineField")!.style.display = "none"
-  } else {
+  if (document.readyState === "complete") {
+    document.getElementById("loader")!.style.display = "none"
     document.getElementById("app")!.style.display = "flex"
     document.getElementById("zoom")!.style.width = "1.5rem"
     document.getElementById("zoom")!.style.height = "3rem"
