@@ -167,3 +167,11 @@ export interface Info{
 export interface ToolbarFunctions{
   [key: string] : () => unknown;
 }
+
+export interface EADdata{
+  codeId: string
+	geoLat: string
+	geoLong: string
+	txtName?: string
+	codeType?: string
+}
