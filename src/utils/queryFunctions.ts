@@ -23,13 +23,13 @@ export function placeLoci(lociValue:string){
         data.geoLat,
         data.geoLong,
         data.txtName]}) 
-    const newAirportCodes:string[] = newAirports.map(code => {return code[0]}) // makes a one dimensional array just with airport codes
+    const newAirportCodes:string[] = newAirports.map(code => {return code[0] || ""}) // makes a one dimensional array just with airport codes
     const multiLocis:string[][] = []
     const multiPorts = lociValue.toUpperCase().split(" ") // splits the input separated by space and makes an array
     multiPorts.forEach(multiPort => { // for every searched loci...
         for(const airport of newAirports){ // ...and for every airport array of the multi dimensional airport data array...
-            if(multiPort.toUpperCase() == airport[0].toUpperCase()){ // if the searched loci equals the airport code of the airport data array...
-                multiLocis.push([airport[1], airport[2], `${airport[0]}<br>${airport[3]}`])
+            if(multiPort.toUpperCase() == airport[0]!.toUpperCase()){ // if the searched loci equals the airport code of the airport data array...
+                multiLocis.push([airport[1]!, airport[2]!, `${airport[0]}<br>${airport[3]}`])
             } 
         }
     })
@@ -50,14 +50,14 @@ export function placeNavaid(navaidValue:String){
         data.geoLong,
         data.txtName,
         data.codeType]})
-    const newNavaidCodes:String[] = newNavaids.map(code => {return code[0]})
+    const newNavaidCodes:String[] = newNavaids.map(code => {return code[0] || ""})
 
         let multiNavs:string[][] = []
         const multiAids = navaidValue.toUpperCase().split(" ")
         multiAids.forEach(multiAid => {
             for(const navaid of newNavaids){
-                if(multiAid.toUpperCase() == navaid[0].toUpperCase()){
-                    multiNavs.push([navaid[1], navaid[2], `${navaid[0]} ${navaid[4]}<br>${navaid[3]}`])
+                if(multiAid.toUpperCase() == navaid[0]!.toUpperCase()){
+                    multiNavs.push([navaid[1]!, navaid[2]!, `${navaid[0]} ${navaid[4]}<br>${navaid[3]}`])
                 }
             }
         })
@@ -115,8 +115,8 @@ export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert
             const distanceM:number = (distanceNM*1.852)*1000
             for(const mappedNavaid of mappedNavaidsLatLng){
                 if(mappedNavaid[0] == navaid){
-                    const lat:number = parseFloat(mappedNavaid[1])
-                    const lon:number = parseFloat(mappedNavaid[2])
+                    const lat:number = parseFloat(mappedNavaid[1]!)
+                    const lon:number = parseFloat(mappedNavaid[2]!)
                     const p1 = new LatLon(lat, lon)
                     const p2 = p1.destinationPoint(distanceM, bearing)
                     newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${navaid}${brgDist.substring(3,6)}${brgDist.substring(6,9)}`])
