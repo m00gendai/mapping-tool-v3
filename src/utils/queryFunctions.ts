@@ -20,8 +20,8 @@ export function placeCoords(coordinatesValue:string){
 export function placeLoci(lociValue:string){
     const newAirports = airports.map(data => {return [
         data.codeId, 
-        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
-        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`,
+        data.geoLat,
+        data.geoLong,
         data.txtName]}) 
     const newAirportCodes:string[] = newAirports.map(code => {return code[0]}) // makes a one dimensional array just with airport codes
     const multiLocis:string[][] = []
@@ -46,10 +46,10 @@ export function placeNavaid(navaidValue:String){
 
     const newNavaids = navaids.map(data => {return [
         data.codeId, 
-        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
-        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`,
-        data.txtName ? data.txtName : "",
-        data.codeType ? data.codeType : "DME or TACAN"]})
+        data.geoLat,
+        data.geoLong,
+        data.txtName,
+        data.codeType]})
     const newNavaidCodes:String[] = newNavaids.map(code => {return code[0]})
 
         let multiNavs:string[][] = []
@@ -73,8 +73,9 @@ export function placeRep(repField:string){
 
     const newReps = waypoints.map(data => {return [
         data.codeId, 
-        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
-        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`]})
+        data.geoLat,
+        data.geoLong
+    ]})
     const newRepCodes = newReps.map(code => {return code[0]})
     let multiWays:string[][] = []
     const multiReps = repField.toUpperCase().split(" ")
@@ -96,13 +97,14 @@ export function placeRep(repField:string){
 export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert 360° azimuth to 180/-180 bearing
     const mappedNavaidsLatLng = navaids.map(data => {return [
         data.codeId, 
-        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
-        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`,
+        data.geoLat,
+        data.geoLong,
         data.txtName]})
     const mappedWaypointsLatLng = waypoints.map(data => {return [
         data.codeId, 
-        data.geoLat.charAt(data.geoLat.length-1) == "N" ? data.geoLat.substring(0, data.geoLat.length-1) : `-${data.geoLat.substring(0, data.geoLat.length-1)}`,  
-        data.geoLong.charAt(data.geoLong.length-1) == "E" ? data.geoLong.substring(0, data.geoLong.length-1) : `-${data.geoLong.substring(0, data.geoLong.length-1)}`]})
+        data.geoLat,
+        data.geoLong,
+    ]})
     const brgDistArray = BrgDistValue.split(/\s+/g) // s+ is one or more whitespace characters
     let newMarkerArray:string[][] = []
     brgDistArray.forEach(brgDist => {
