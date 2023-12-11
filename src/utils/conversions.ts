@@ -118,32 +118,28 @@ export function eetToDecimalHours(eet:string){
 }
 
 export function convertDistance(value:string, unit: string){
-	console.log(value)
-	console.log(unit)
+	if(isNaN(parseFloat(value))){
+		alert(`${value} is not a recognized number format.`)
+		return
+	}
 	if(unit === "Meter"){
-		console.log("m")
 		fillFromMeter(parseFloat(value))
 	}
 	if(unit === "Feet"){
-		console.log("ft")
 		fillFromMeter(parseFloat(value)/3.2808)
 	}
 	if(unit === "Statute Mile"){
-		console.log("sm")
 		fillFromMeter(parseFloat(value)/0.00062137)
 	}
 	if(unit === "Natical Mile"){
-		console.log("nm")
 		fillFromMeter(parseFloat(value)*1852)
 	}
 	if(unit === "Kilometer"){
-		console.log("km")
 		fillFromMeter(parseFloat(value)*1000)
 	}
 }
 
 function fillFromMeter(value: number){
-	console.log(value)
 	distances.m.value = value
 	distances.ft.value = value*3.2808
 	distances.sm.value = value*0.00062137
@@ -152,6 +148,10 @@ function fillFromMeter(value: number){
 }
 
 export function convertSpeed(value:string, unit: string){
+	if(isNaN(parseFloat(value))){
+		alert(`${value} is not a recognized number format.`)
+		return
+	}
 	if(unit === "km/h"){
 		fillFromMs(parseFloat(value)/3.6)
 	}
