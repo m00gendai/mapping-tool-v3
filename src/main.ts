@@ -563,6 +563,37 @@ layerGroups.forEach(group =>{
   })
 })
 
+async function doSetLayer(layer:LayerGroup_layer){
+  const chkbxs = document.querySelectorAll(`[id="${layer.id}"]`)
+  chkbxs.forEach(chkbx =>{
+    const inpt = chkbx as HTMLInputElement
+    inpt.checked = true
+  })
+  state.checkedLayers = [...state.checkedLayers, layer.id]
+              localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
+              const setLayer:L.GeoJSON = await getLayer(layer)
+              setLayer.addTo(map)
+              layerArray.push([layer.id, setLayer])
+}
+
+function doRemoveLayer(layer:LayerGroup_layer){
+  const chkbxs = document.querySelectorAll(`[id="${layer.id}"]`)
+  chkbxs.forEach(chkbx =>{
+    const inpt = chkbx as HTMLInputElement
+    inpt.checked = false
+  })
+
+  const removeItemIndex = state.checkedLayers.indexOf(layer.id)
+            state.checkedLayers.splice(removeItemIndex, 1)
+            localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
+            layerArray.forEach(item =>{
+              if(item[0] === layer.id){
+                const toBeRemovedLayer = item[1] as L.GeoJSON
+                toBeRemovedLayer.removeFrom(map)
+              }
+            })
+}
+
 layerGroup.addEventListener("click", function(){
   layerGroup.style.gridTemplateColumns = "repeat(auto-fill, minmax(250px, 1fr))"
   layerGroup.style.placeItems = "start center"
@@ -589,6 +620,28 @@ layerGroup.addEventListener("click", function(){
       column.appendChild(column_name)
       column_name.className = "layerGroup_column_name"
       column_name.innerText = group.name
+      column_name.addEventListener("click", function(){
+        layerGroups.forEach(layerGroup =>{
+          if(layerGroup.name === group.name){
+            if(!state.checkedAllLayers.includes(layerGroup.name)){
+              layerGroup.layers.forEach(layer =>{
+                if(!state.checkedLayers.includes(layer.id)){
+                  doSetLayer(layer)
+                }
+              })
+              state.checkedAllLayers = [...state.checkedAllLayers, layerGroup.name]
+            } else if(state.checkedAllLayers.includes(layerGroup.name)){
+              layerGroup.layers.forEach(layer =>{
+                if(state.checkedLayers.includes(layer.id)){
+                  doRemoveLayer(layer)
+                }
+              })
+              const filtered = state.checkedAllLayers.filter(elem => elem !== layerGroup.name)
+              state.checkedAllLayers = filtered
+            }
+          }
+        })
+      })
 
       column.appendChild(column_content)
       column_content.className = "layerGroup_column_content"
@@ -606,23 +659,11 @@ layerGroup.addEventListener("click", function(){
         column_content_checkbox.addEventListener("click", async function(){
           if(column_content_checkbox.checked){
             if(!state.checkedLayers.includes(layer.id)){
-              state.checkedLayers = [...state.checkedLayers, layer.id]
-              localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
-              const setLayer:L.GeoJSON = await getLayer(layer)
-              setLayer.addTo(map)
-              layerArray.push([layer.id, setLayer])
+              doSetLayer(layer)
             }
           }
           if(!column_content_checkbox.checked){
-            const removeItemIndex = state.checkedLayers.indexOf(layer.id)
-            state.checkedLayers.splice(removeItemIndex, 1)
-            localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
-            layerArray.forEach(item =>{
-              if(item[0] === layer.id){
-                const toBeRemovedLayer = item[1] as L.GeoJSON
-                toBeRemovedLayer.removeFrom(map)
-              }
-            })
+            doRemoveLayer(layer)
           }
         })
         const column_content_label: HTMLLabelElement = document.createElement("label")
