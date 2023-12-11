@@ -598,9 +598,10 @@ layerGroup.addEventListener("click", function(){
         column_content_item.className = "layerGroup_column_content_item"
         const column_content_checkbox: HTMLInputElement = document.createElement("input")
         column_content_checkbox.id = layer.id
+        column_content_checkbox.setAttribute("parent", group.name)
         column_content_checkbox.type = "checkbox"
         if(state.checkedLayers.includes(layer.id)){
-          column_content_checkbox.checked = true
+          column_content_checkbox.setAttribute("checked", "true")
         }
         column_content_checkbox.addEventListener("click", async function(){
           if(column_content_checkbox.checked){
@@ -630,48 +631,15 @@ layerGroup.addEventListener("click", function(){
         column_content_label.className= "layerGroup_column_content_label"
         column_content_item.appendChild(column_content_checkbox)
         column_content_item.appendChild(column_content_label)
-        column_content.appendChild(column_content_item)
-
-        column_name.addEventListener("click", async function(){
-          if(!state.checkedAllLayers.includes(column_name.innerText)){
-            for(const item of column_content.children){
-              const inpt = item.children[0] as HTMLInputElement
-              inpt.checked = true
-              if(!state.checkedLayers.includes(layer.id)){
-                state.checkedLayers = [...state.checkedLayers, layer.id]
-                localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
-                const setLayer:L.GeoJSON = await getLayer(layer)
-                setLayer.addTo(map)
-                layerArray.push([layer.id, setLayer])
-              }
-            }
-            state.checkedAllLayers = [...state.checkedAllLayers, column_name.innerText]
-            localStorage.setItem("AMTV3_layersAll", JSON.stringify(state.checkedAllLayers))
-          }
-          else if(state.checkedAllLayers.includes(column_name.innerText)){
-            for(const item of column_content.children){
-              const inpt = item.children[0] as HTMLInputElement
-              inpt.checked = false
-              const removeItemIndex = state.checkedLayers.indexOf(layer.id)
-              state.checkedLayers.splice(removeItemIndex, 1)
-              localStorage.setItem("AMTV3_layers", JSON.stringify(state.checkedLayers))
-              layerArray.forEach(item =>{
-                if(item[0] === layer.id){
-                  const toBeRemovedLayer = item[1] as L.GeoJSON
-                  toBeRemovedLayer.removeFrom(map)
-                }
-              })
-            }
-            const removeItemIndex = state.checkedLayers.indexOf(column_name.innerText)
-            state.checkedAllLayers.splice(removeItemIndex, 1)
-            localStorage.setItem("AMTV3_layersAll", JSON.stringify(state.checkedAllLayers))
-          }
-        })
+        column_content.appendChild(column_content_item)        
       })
       layerGroup.appendChild(column)
     })
   }
+
 })
+
+
 
 layerGroup.addEventListener("mouseleave", function(){
   state.layerGroupBuffer = false
@@ -1082,9 +1050,21 @@ plotBalloonCircle.addEventListener("click", function(){
   if(start[0]=== "ERROR"){
     return
   }
+  if(balloonSpeedInput.value !== "" && isNaN(parseFloat(balloonSpeedInput.value))){
+    alert(`${balloonSpeedInput.value} is not a recognized number format.`)
+    return
+  }
   const speed: number = parseFloat(balloonSpeedInput.value)*1.852
+  if(balloonTEETInput.value !== "" && isNaN(parseFloat(balloonTEETInput.value))){
+    alert(`${balloonTEETInput.value} is not a recognized number format.`)
+    return
+  }
   const teet: string = balloonTEETInput.value
   const decimalTeet:number = eetToDecimalHours(teet)
+  if(balloonSpeedInput.value === "" || balloonTEETInput.value === "" || balloonCoordinateInput.value === ""){
+    alert("Please fill out at least DEP Coordinates, Speed and Total EET")
+    return
+  }
   const dist: number = speed*decimalTeet
   const startCoord = new L.LatLng(parseFloat(start[0]), parseFloat(start[1]))
   const geodesicCircle = new L.GeodesicCircle(startCoord, {radius: dist*1000, steps: 180})
