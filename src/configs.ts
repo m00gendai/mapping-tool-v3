@@ -422,7 +422,7 @@ export const infos:Info[] = [
   },
   {
     title: "EAD Data AIRAC Date",
-    content: `19 MAY 22 uploaded 21.05.2022`
+    content: `28 DEC 23 uploaded at 08.12.2023`
   },
   {
     title: "Overlay Data Sources",
@@ -431,7 +431,7 @@ export const infos:Info[] = [
       <li>Swiss VFR Chart and Drone Areas via <a href="https://www.geo.admin.ch/en/geo-services/geo-services/portrayal-services-web-mapping/web-map-tiling-services-wmts.html" target="_blank">swisstopo</a></li>
       <li>French VFR Chart via <a href="https://geoservices.ign.fr/" target="_blank">IGN</a></li>
       <li>German VFR Chart via <a href="https://www.dfs.de/dfs_homepage/en/Services/Customer%20Relations/INSPIRE/" target="_blank">DFS</a></li>
-      <li>Airspace layers (CTR, TMA) via <a href="https://www.openaip.net/" target="_blank">openAIP.net</a>, custom linted & validated (and sometimes fixed) by Marcel Weber</li>
+      <li>Airspace layers (CTR, TMA) via <a href="https://www.openaip.net/" target="_blank">openAIP.net</a>, custom linted & validated (and sometimes fixed) by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
       <li>Airspace layer Switzerland from <a href="https://www.skyguide.ch/services/aeronautical-information-management" target="_blank">skyguide AIM Services</a></li>
       <li>Airspace layers (FIR) by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
       <li>VFR Reporting Points Slovenia & Croatia by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
@@ -445,7 +445,7 @@ export const infos:Info[] = [
     content: `
     <ul>
       <li>Place names and coordinates via <a href="https://www.geoapify.com/places-api" target="_blank">geoapify</a></li>
-      <li>ICAO Location Indicators, Navaids and Waypoints from <a href="https://www.ead.eurocontrol.int/cms-eadbasic/opencms/en/login/ead-basic/" target="_blank">European AIS Database</a></li>
+      <li>ICAO Location Indicators, Navaids and Waypoints from <a href="https://www.skyguide.ch/services/aeronautical-information-management" target="_blank">skyguide AIM Services</a></li>
     </ul>
     `
   },
@@ -453,6 +453,7 @@ export const infos:Info[] = [
     title: "Attributions",
     content: `
     <ul>
+      <li>Loading animation by <a href="https://icons8.com/preloaders/en/astronomy" target="_blank">icons8 - Preloaders</a></li>
       <li>Markers by <a href="https://www.flaticon.com/packs/location-59" target="_blank">Freepik - Flaticon</a></li>
       <li>Flag Markers by <a href="https://www.flaticon.com/packs/country-flags" target="_blank">Freepik - Flaticon</a></li>
     </ul>
