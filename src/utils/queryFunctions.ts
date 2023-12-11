@@ -107,6 +107,7 @@ export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert
     ]})
     const brgDistArray = BrgDistValue.split(/\s+/g) // s+ is one or more whitespace characters
     let newMarkerArray:string[][] = []
+    let unknownReps:string[] = []
     brgDistArray.forEach(brgDist => {
         if(brgDist.match(/\b([a-zA-Z]){3}[0-9]{3}[0-9]{3}\b/g)){ 
             const navaid:string = brgDist.substring(0,3).toUpperCase()
@@ -138,7 +139,13 @@ export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert
                 }
             }
         }
+        if(!brgDist.match(/\b([a-zA-Z]){3}[0-9]{3}[0-9]{3}\b/g) && !brgDist.match(/\b([a-zA-Z]){5}[0-9]{3}[0-9]{3}\b/g)){
+            unknownReps.push(brgDist)
+        }
     })
+    if(unknownReps.length > 0){ 
+        alert(`Reporting Points ${unknownReps.join(" ")} not found`)
+    }
     return newMarkerArray
 }
 
