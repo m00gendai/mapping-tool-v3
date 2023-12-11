@@ -40,7 +40,7 @@
 }
 
 .lightMode{
-    --backgroundColor: #fafafa;
+    --backgroundColor: #EDEADE;
     --backgroundColor_light: #d2d2d2;
     --backgroundColor_highlight: goldenrod;
     --fontColor: #050505;
