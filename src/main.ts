@@ -1091,13 +1091,21 @@ plotBalloonCircle.addEventListener("click", function(){
   if(start[0]=== "ERROR"){
     return
   }
+  if(balloonSpeedInput.value.length !== 4){
+    alert(`Speed: ${balloonSpeedInput.value} must be in format {nnnn} (example 0500)`)
+    return
+  }
   if(balloonSpeedInput.value !== "" && isNaN(parseFloat(balloonSpeedInput.value))){
-    alert(`${balloonSpeedInput.value} is not a recognized number format.`)
+    alert(`Speed ${balloonSpeedInput.value} is not a recognized number format.`)
     return
   }
   const speed: number = parseFloat(balloonSpeedInput.value)*1.852
+  if(balloonTEETInput.value.length !== 4){
+    alert(`Total EET: ${balloonTEETInput.value} must be in format {nnnn} (example 0500)`)
+    return
+  }
   if(balloonTEETInput.value !== "" && isNaN(parseFloat(balloonTEETInput.value))){
-    alert(`${balloonTEETInput.value} is not a recognized number format.`)
+    alert(`Total EET: ${balloonTEETInput.value} is not a recognized number format.`)
     return
   }
   const teet: string = balloonTEETInput.value
@@ -1113,6 +1121,14 @@ plotBalloonCircle.addEventListener("click", function(){
   const startMarker: L.Marker<any> = L.marker([parseFloat(start[0]), parseFloat(start[1])], {icon:createIcon("coordinate")}).bindPopup(`Balloon Starting Point:\n${start[0]},${start[1]}`, {autoClose: false})
   balloonMarkerArray.push(startMarker)
   if(balloonDriftInput.value !== ""){
+    if(balloonDriftInput.value.length !== 3){
+      alert(`Drift: ${balloonTEETInput.value} must be in format {nnn} (example 050)`)
+      return
+    }
+    if(balloonDriftInput.value !== "" && isNaN(parseFloat(balloonDriftInput.value))){
+      alert(`Drift: ${balloonDriftInput.value} is not a recognized number format.`)
+      return
+    }
     const p1 = new LatLon(parseFloat(start[0]), parseFloat(start[1]))
     const p2 = p1.destinationPoint((dist*1000), parseInt(balloonDriftInput.value))
     const endMarker: L.Marker<any> = L.marker([parseFloat(p2._lat.toString()), parseFloat(p2._lon.toString())], {icon:createIcon("coordinate")}).bindPopup(`Balloon approximate destination:\n${p2._lat.toString()},${p2._lon.toString()}`, {autoClose: false})
