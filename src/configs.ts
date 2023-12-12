@@ -335,11 +335,25 @@ export const chartLayers:ChartLayer[] = [
     description: "Switzerlad MIL Airspace Chart"
   },
   {
+    id: "LSMILPIL",
+    country: "LS",
+    type: "MIL",
+    url: "https://wmts.geo.admin.ch/1.0.0/ch.vbs.swissmilpilotschart/default/current/3857/{z}/{x}/{y}.png",
+    description: "Switzerland MIL Pilot Chart",
+  },
+  {
     id: "LSGLD",
     country: "LS",
     type: "GLD",
     url: "https://wmts.geo.admin.ch/1.0.0/ch.bazl.segelflugkarte/default/current/3857/{z}/{x}/{y}.png",
     description: "Switzerland Gilder Chart"
+  },
+  {
+    id: "LSAREA",
+    country: "LS",
+    type: "AREA",
+    url: "https://wmts.geo.admin.ch/1.0.0/ch.vbs.sperr-gefahrenzonenkarte/default/current/3857/{z}/{x}/{y}.png",
+    description: "Switzerland Sperr- und Gefahrenzonen Chart"
   },
   {
     id: "LFVFR",
