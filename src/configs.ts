@@ -368,7 +368,21 @@ export const chartLayers:ChartLayer[] = [
     type: "VFR",
     url: `https://ais.dfs.de/static-maps/icao500/tiles/{z}/{x}/{y}.png`,
     description: "Germany VFR Chart"
-  }
+  },
+  {
+    id: "USIFRHI",
+    country: "KD",
+    type: "IFR",
+    url: "http://wms.chartbundle.com/tms/v1.0/enrh/{z}/{x}/{y}.png?type=google",
+    description: "USA IFR ENR High"
+  },
+  {
+    id: "USIFRLO",
+    country: "KD",
+    type: "IFR",
+    url: "http://wms.chartbundle.com/tms/v1.0/enrl/{z}/{x}/{y}.png?type=google",
+    description: "USA IFR ENR Low"
+  },
 ]
 
 export const parsed: Parsed = {
