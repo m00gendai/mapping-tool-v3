@@ -324,8 +324,15 @@ export const chartLayers:ChartLayer[] = [
     id: "LSVFR",
     country: "LS",
     type: "VFR",
-    url: 'https://wmts20.geo.admin.ch/1.0.0/ch.vbs.milairspacechart/default/current/3857/{z}/{x}/{y}.png',
+    url: "https://wmts.geo.admin.ch/1.0.0/ch.bazl.luftfahrtkarten-icao/default/current/3857/{z}/{x}/{y}.png",
     description: "Switzerland VFR Chart"
+  },
+  {
+    id: "LSMIL",
+    country: "LS",
+    type: "MIL",
+    url: 'https://wmts20.geo.admin.ch/1.0.0/ch.vbs.milairspacechart/default/current/3857/{z}/{x}/{y}.png',
+    description: "Switzerlad MIL Airspace Chart"
   },
   {
     id: "LSGLD",
