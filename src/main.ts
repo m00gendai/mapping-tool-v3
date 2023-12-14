@@ -9,7 +9,7 @@ import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBa
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
 import { getLayer } from "./layers"
-import { getChart } from "./charts"
+import { toggleCharts } from "./charts"
 import { parseCoordinates, calcDegToDec, eetToDecimalHours, convertDistance, convertSpeed } from "./utils/conversions"
 import "leaflet.geodesic"
 import { coordinateBox } from "./components/CoordinateBox"
@@ -60,7 +60,7 @@ export const polylineMarkerArray: L.Marker[] = []
 export const polylineArray: L.Polyline[] = []
 export const polylineDecoratorArry: L.PolylineDecorator[] = []
 const layerArray: (string | L.GeoJSON)[][] = []
-const chartArray: L.TileLayer[] = []
+export const chartArray: L.TileLayer[] = []
 const geodesicCircleArray: L.GeodesicCircle[] = []
 const balloonMarkerArray: L.Marker[] = []
 const geodesicLineArray: L.Geodesic[] = []
@@ -148,6 +148,20 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
     L.DomEvent.stopPropagation(e)
     toolbarFunctions["togglePopup"]()
   })
+
+  const divider3 = document.createElement("hr")
+  contextMenu.appendChild(divider3)
+
+  const item8 = document.createElement("div")
+  contextMenu.appendChild(item8)
+  item8.innerText = "Toggle Swiss VFR Chart"
+  item8.className = "contextMenu_item"
+  item8.addEventListener("click", function(){
+    toolbarFunctions["toggleVFR"]()
+  })
+
+ 
+
   const divider2 = document.createElement("hr")
   contextMenu.appendChild(divider2)
   const item5 = document.createElement("div")
@@ -157,6 +171,7 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
   item5.addEventListener("click", function(){
     toolbarFunctions["focusSwitzerland"]()
   })
+
   const item6 = document.createElement("div")
   contextMenu.appendChild(item6)
   item6.innerText = "Focus Europe"
@@ -754,22 +769,7 @@ chartLayers.forEach(layer =>{
   layerButton.innerText = layer.description
   layerButton.className = "layerButton"
   layerButton.addEventListener("click", function(){
-    const chart: L.TileLayer = getChart(layer)
-    /*@ts-expect-error */
-    const check:string[] = chartArray.map(chart => chart._url)
-    if(chartArray.length === 0 || !check.includes(layer.url)){
-      chartArray.push(chart)
-      chart.addTo(map)
-    }
-    if(check.includes(layer.url)){
-      chartArray.forEach((chart, index) =>{
-        /*@ts-expect-error */
-        if(chart._url === layer.url){
-          chart.removeFrom(map)
-          chartArray.splice(index, 1)
-        }
-      })
-    }
+    toggleCharts(layer)
   })
 })
 
@@ -1163,6 +1163,7 @@ settings.forEach(setting =>{
   const settingsTitle = document.createElement("div")
   settingsItem.appendChild(settingsTitle)
   settingsTitle.innerText = setting.name
+  settingsTitle.title = setting.description
   settingsTitle.className = "sidebarInner_settings_title"
 
   if(setting.type === "range"){

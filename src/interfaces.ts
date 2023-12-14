@@ -148,6 +148,7 @@ export interface Setting{
   id: string
   name: string
   type: string
+  description: string
   max?: string | undefined
   min?: string | undefined
   step?: string | undefined

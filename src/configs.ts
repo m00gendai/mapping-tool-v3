@@ -1,6 +1,7 @@
 import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed, Info, Distance, Speed, ToolbarFunctions } from "./interfaces"
 import L from "leaflet"
 import { map, markerArray, polylineArray, polylineDecoratorArry, polylineMarkerArray, speedInput } from "./main"
+import { toggleCharts } from "./charts"
 
 const date: Date = new Date()
 const currentYear:number = date.getFullYear()
@@ -409,6 +410,7 @@ export const settings:Setting[] = [
     id: "darkmodeToggle",
     name: "Darkmode",
     type: "range",
+    description: "Switches between a light and dark background for the interface",
     max: "1",
     min: "0",
     step: "1"
@@ -417,6 +419,7 @@ export const settings:Setting[] = [
     id: "coordinateBox",
     name: "Coordinate Tooltip",
     type: "range",
+    description: "Switches the box that displays the current coordinates when moving the cursor around the map on or off",
     max: "1",
     min: "0",
     step: "1",
@@ -425,6 +428,7 @@ export const settings:Setting[] = [
     id: "sidebarToggle",
     name: "Show sidebar by default",
     type: "range",
+    description: "Sets if the sidebar is hidden or visible on start. Does not impact the sidebar functionality",
     max: "1",
     min: "0",
     step: "1",
@@ -463,9 +467,10 @@ export const infos:Info[] = [
     title: "Overlay Data Sources",
     content: `
     <ul>
-      <li>Swiss VFR Chart and Drone Areas via <a href="https://www.geo.admin.ch/en/geo-services/geo-services/portrayal-services-web-mapping/web-map-tiling-services-wmts.html" target="_blank">swisstopo</a></li>
+      <li>Swiss VFR Charts and Drone Areas via <a href="https://www.geo.admin.ch/en/geo-services/geo-services/portrayal-services-web-mapping/web-map-tiling-services-wmts.html" target="_blank">swisstopo</a></li>
       <li>French VFR Chart via <a href="https://geoservices.ign.fr/" target="_blank">IGN</a></li>
       <li>German VFR Chart via <a href="https://www.dfs.de/dfs_homepage/en/Services/Customer%20Relations/INSPIRE/" target="_blank">DFS</a></li>
+      <li>USA IFR Charts via <a href="http://www.chartbundle.com/charts/" target="_blank">ChartBundle</a></li>
       <li>Airspace layers (CTR, TMA) via <a href="https://www.openaip.net/" target="_blank">openAIP.net</a>, custom linted & validated (and sometimes fixed) by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
       <li>Airspace layer Switzerland from <a href="https://www.skyguide.ch/services/aeronautical-information-management" target="_blank">skyguide AIM Services</a></li>
       <li>Airspace layers (FIR) by <a href="https://linkedin.com/in/marcel-weber-3a05a61bb" target="_blank">Marcel Weber</a></li>
@@ -590,5 +595,8 @@ export const toolbarFunctions: ToolbarFunctions ={
       })
     }
     state.popupVisible = !state.popupVisible
+  },
+  toggleVFR: function toggleVFR(){
+    toggleCharts(chartLayers[0])
   }
 }
