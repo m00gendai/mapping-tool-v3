@@ -1,6 +1,7 @@
 import { QueryInput, State, SidebarFlag, LayerGroup, BaseMap, ChartLayer, Setting, Parsed, Info, Distance, Speed, ToolbarFunctions } from "./interfaces"
 import L from "leaflet"
 import { map, markerArray, polylineArray, polylineDecoratorArry, polylineMarkerArray, speedInput } from "./main"
+import { toggleCharts } from "./charts"
 
 const date: Date = new Date()
 const currentYear:number = date.getFullYear()
@@ -409,6 +410,7 @@ export const settings:Setting[] = [
     id: "darkmodeToggle",
     name: "Darkmode",
     type: "range",
+    description: "Switches between a light and dark background for the interface",
     max: "1",
     min: "0",
     step: "1"
@@ -417,6 +419,7 @@ export const settings:Setting[] = [
     id: "coordinateBox",
     name: "Coordinate Tooltip",
     type: "range",
+    description: "Switches the box that displays the current coordinates when moving the cursor around the map on or off",
     max: "1",
     min: "0",
     step: "1",
@@ -425,6 +428,7 @@ export const settings:Setting[] = [
     id: "sidebarToggle",
     name: "Show sidebar by default",
     type: "range",
+    description: "Sets if the sidebar is hidden or visible on start. Does not impact the sidebar functionality",
     max: "1",
     min: "0",
     step: "1",
@@ -591,5 +595,8 @@ export const toolbarFunctions: ToolbarFunctions ={
       })
     }
     state.popupVisible = !state.popupVisible
+  },
+  toggleVFR: function toggleVFR(){
+    toggleCharts(chartLayers[0])
   }
 }
