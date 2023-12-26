@@ -410,6 +410,10 @@ async function queryTriggerAll(from: string){
   if(deconstructedOther.length !== 0){
     const results: string[][] = await placePlace(deconstructedOther.join(","))
     const textarea = document.getElementById("sidebar_textarea_PLACE")! as HTMLTextAreaElement
+    if(results.length === 0){
+      textarea.value = deconstructedOther.join(",")
+      return
+    }
     if(results[0][0] === "ERROR" && results[0][1] === "ERROR" && results[0][2] === "ERROR"){
       textarea.value = "ERROR GETTING LOCATION INFO"
     } else {
