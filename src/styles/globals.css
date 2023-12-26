@@ -351,6 +351,11 @@ a:visited{
     background: var(--button_body_hover);
 }
 
+.sidebar_button_delete{
+    color: var(--fontColor_persistent);
+    background: var(--range_off);
+}
+
 #toolbar{
     position: absolute;
     bottom: 1.5rem;

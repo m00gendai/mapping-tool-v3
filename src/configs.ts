@@ -510,6 +510,10 @@ export const infos:Info[] = [
 
 export const toolbarButtons = [
   {
+    name: "clearAll",
+    description: "Removes all markers from the map and clears the input fields",
+  },
+  {
     name: "clearMarker",
     description: "Removes all markers from the map",
     function: "focusSwitzerland"
@@ -536,67 +540,96 @@ export const toolbarButtons = [
   },
 ]
 
-export const toolbarFunctions: ToolbarFunctions ={
-  focusSwitzerland: function focusSwitzerland(){
-    map.setView([46.80, 8.22], 8);
-  },
-  focusEurope: function focusEurope(){
-    map.setView([53.0, 20.0], 4);
-  },
-  focusWorld: function focusWorld(){
-    map.setView([40.87, 34.57], 2);
-  },
-  clearMarker: function clearMarkers(){
-    markerArray.forEach(marker =>{
-      marker.removeFrom(map)
+function focusSwitzerland(){
+  map.setView([46.80, 8.22], 8);
+}
+
+function focusEurope(){
+  map.setView([53.0, 20.0], 4);
+}
+
+function focusWorld(){
+  map.setView([40.87, 34.57], 2);
+}
+
+function clearMarkers(){
+  markerArray.forEach(marker =>{
+    marker.removeFrom(map)
+  })
+  markerArray.length = 0
+}
+
+function clearPolylineArray(){
+  polylineArray.forEach(polyline =>{
+    polyline.removeFrom(map)
+  })
+  polylineArray.length = 0
+  polylineDecoratorArry.forEach(decorator =>{
+    decorator.removeFrom(map)
+  })
+  polylineDecoratorArry.length = 0
+  polylineMarkerArray.length = 0
+  document.getElementById("polylineField_table_body")!.innerText = ""
+  document.getElementById("polylineField")!.style.display = "none"
+  state.totalDistance = 0
+  state.setSpeed = 0
+  state.setDep = ""
+  state.setDist= []
+  state.setDest = ""
+  state.setTime=[]
+  state.setTimeFields=0
+  state.setTotalDist= 0
+  state.setTotalTime= 0
+  state.markerClicks= 0
+  speedInput.value = ""
+}
+
+function togglePopup(){
+  if(state.popupVisible){
+    const popups: NodeList = document.querySelectorAll(".leaflet-popup-close-button")
+    popups.forEach(popup =>{
+      const closeButton: HTMLElement = popup as HTMLElement
+      closeButton.click()
     })
-    markerArray.length = 0
-  },
-  removePolyline: function clearPolylineArray(){
-    polylineArray.forEach(polyline =>{
-      polyline.removeFrom(map)
-    })
-    polylineArray.length = 0
-    polylineDecoratorArry.forEach(decorator =>{
-      decorator.removeFrom(map)
-    })
-    polylineDecoratorArry.length = 0
-    polylineMarkerArray.length = 0
-    document.getElementById("polylineField_table_body")!.innerText = ""
-    document.getElementById("polylineField")!.style.display = "none"
-    state.totalDistance = 0
-    state.setSpeed = 0
-    state.setDep = ""
-    state.setDist= []
-    state.setDest = ""
-    state.setTime=[]
-    state.setTimeFields=0
-    state.setTotalDist= 0
-    state.setTotalTime= 0
-    state.markerClicks= 0
-    speedInput.value = ""
-  },
-  togglePopup: function togglePopup(){
-    if(state.popupVisible){
-      const popups: NodeList = document.querySelectorAll(".leaflet-popup-close-button")
-      popups.forEach(popup =>{
-        const closeButton: HTMLElement = popup as HTMLElement
-        closeButton.click()
-      })
-    }
-     if(!state.popupVisible){
-      markerArray.forEach(marker =>{
-        marker.openPopup()
-        const bubble = marker.getPopup()!.getElement()!.children[0]! as HTMLElement
-        const bubbleTip = marker.getPopup()!.getElement()!.children[1]!.children[0]! as HTMLElement
-        bubble.style.background = state.darkmode ? "#050505" : "#fafafa"
-        bubble.style.color = state.darkmode ? "#fafafa" : "#050505"
-        bubbleTip.style.background = state.darkmode ? "#050505" : "#fafafa"
-      })
-    }
-    state.popupVisible = !state.popupVisible
-  },
-  toggleVFR: function toggleVFR(){
-    toggleCharts(chartLayers[0])
   }
+   if(!state.popupVisible){
+    markerArray.forEach(marker =>{
+      marker.openPopup()
+      const bubble = marker.getPopup()!.getElement()!.children[0]! as HTMLElement
+      const bubbleTip = marker.getPopup()!.getElement()!.children[1]!.children[0]! as HTMLElement
+      bubble.style.background = state.darkmode ? "#050505" : "#fafafa"
+      bubble.style.color = state.darkmode ? "#fafafa" : "#050505"
+      bubbleTip.style.background = state.darkmode ? "#050505" : "#fafafa"
+    })
+  }
+  state.popupVisible = !state.popupVisible
+}
+
+function toggleVFR(){
+  toggleCharts(chartLayers[0])
+}
+
+function clearTextareas(){
+  const textareas:NodeListOf<HTMLTextAreaElement> = document.querySelectorAll(".sidebar_textarea")
+  for(const textarea of textareas){
+    textarea.value = ""
+  }
+}
+
+function clearAll(){
+  clearTextareas()
+  clearMarkers()
+  clearPolylineArray()
+}
+
+export const toolbarFunctions: ToolbarFunctions ={
+  clearAll: () => clearAll(),
+  focusSwitzerland: () => focusSwitzerland(),
+  focusEurope: () => focusEurope(),
+  focusWorld: () => focusWorld(),
+  clearMarker: () => clearMarkers(),
+  removePolyline: () => clearPolylineArray(),
+  togglePopup: () => togglePopup(),
+  toggleVFR: () => toggleVFR(),
+  clearTextareas: () => clearTextareas()
 }
