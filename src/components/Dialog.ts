@@ -1,4 +1,4 @@
-import { state } from "../configs"
+import { state } from "../configs/state"
 
 export function createDialog(){
     const dialog: HTMLDialogElement = document.createElement("dialog")
