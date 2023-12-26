@@ -4,7 +4,12 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings, infos, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs"
+import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, settings, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs/generalConfigs"
+import { baseMaps } from "./configs/baseMaps"
+import { layerGroups } from "./configs/layerGroups"
+import { chartLayers } from "./configs/chartLayers";
+import { state } from "./configs/state"
+import { infos } from "./information"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
