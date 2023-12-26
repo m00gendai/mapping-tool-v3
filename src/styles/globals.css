@@ -14,6 +14,8 @@
     --link: #2850A0;
     --link_visited: #1E283C;
     --boxShadow: 0px 0px 5px 0px transparent;
+    --danger: darkred;
+    --dangerHover: red;
 }
 
 ::backdrop{
@@ -349,6 +351,15 @@ a:visited{
 .sidebar_button_large:hover{
     cursor: pointer;
     background: var(--button_body_hover);
+}
+
+.sidebar_button_delete{
+    color: var(--fontColor_persistent);
+    background: var(--danger);
+}
+
+.sidebar_button_delete:hover{
+    background: var(--dangerHover);
 }
 
 #toolbar{
