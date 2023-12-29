@@ -617,6 +617,7 @@ function clearTextareas(){
 }
 
 function clearAll(){
+  console.log("clearing all")
   clearTextareas()
   clearMarkers()
   clearPolylineArray()
