@@ -1,0 +1,36 @@
+import { State } from "../interfaces"
+import L from "leaflet"
+
+export const state: State ={
+    acceptedLegality: typeof localStorage.getItem("AMTV3_agb") === "string" ? JSON.parse(localStorage.getItem("AMTV3_agb") || "{}") : false,
+    popupVisible: false,
+    sidebarSelect: "query",
+    totalDistance: 0,
+    setSpeed: 0,
+    setDep: "",
+    setDist: [],
+    setDest: "",
+    setTime: [],
+    setTimeFields: 0,
+    setTotalDist: 0,
+    setTotalTime: 0,
+    markerClicks: 0,
+    layerGroupVisible: false,
+    checkedLayers: typeof localStorage.getItem("AMTV3_layers") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layers") || "{}") : [],
+    checkedAllLayers: typeof localStorage.getItem("AMTV3_layersAll") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layersAll") || "{}") : [],
+    layerGroupBuffer: true,
+    darkmode: typeof localStorage.getItem("AMTV3_darkmode") !== null ? JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}") : true,
+    sidebarVisible: typeof localStorage.getItem("AMTV3_sidebar") !== null ? JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}") : true,
+    basemapSelect: typeof localStorage.getItem("AMTV3_basemap") === "string" ? localStorage.getItem("AMTV3_basemap") || "{}" : "OSM",
+    baseLayer: L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
+      attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
+  }),
+    drawerVisible: false,
+    coordinateConversionSelect: "WGS84 Deg Min",
+    distanceConversionSelect: "Feet",
+    speedConversionSelect: "km/h",
+    parsedDecimalCoordinates: [],
+    coordinateBoxVisible: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
+    coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
+    contextMenuVisible: false,
+}

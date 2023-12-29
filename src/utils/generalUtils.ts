@@ -3,7 +3,7 @@ import arc from "arc"
 import "leaflet-arc"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 import { BaseMap, State, LayerGroup_layer } from "../interfaces"
-import {baseMaps} from "../configs"
+import {baseMaps} from "../configs/baseMaps"
 
 // This generates the coordinate array needed for great circle aware polylines
 export function generateArcLine(polylineMarkerArray: L.Marker[]){

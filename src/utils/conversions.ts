@@ -1,6 +1,6 @@
 import convert from "geo-coordinates-parser"
 import { Coord, Forwarded } from "../interfaces"
-import { parsed, distances, speeds } from "../configs"
+import { parsed, distances, speeds } from "../configs/generalConfigs"
 import "proj4"
 import { Dms } from "geodesy/latlon-ellipsoidal-datum"
 import transformation from "transform-coordinates"

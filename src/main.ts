@@ -4,7 +4,12 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings, infos, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs"
+import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, settings, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs/generalConfigs"
+import { baseMaps } from "./configs/baseMaps"
+import { layerGroups } from "./configs/layerGroups"
+import { chartLayers } from "./configs/chartLayers";
+import { state } from "./configs/state"
+import { infos } from "./information"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
@@ -130,15 +135,15 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
   item2.innerText = "Delete all Markers"
   item2.className = "contextMenu_item"
   item2.addEventListener("click", function(){
-    toolbarFunctions["clearMarker"]
-    toolbarFunctions["removePolyline"]
+    toolbarFunctions["clearMarker"]()
+    toolbarFunctions["removePolyline"]()
   })
   const item3 = document.createElement("div")
   contextMenu.appendChild(item3)
   item3.innerText = "Delete all Marker Lines"
   item3.className = "contextMenu_item"
   item3.addEventListener("click", function(){
-    toolbarFunctions["removePolyline"]
+    toolbarFunctions["removePolyline"]()
   })
   const item4 = document.createElement("div")
   contextMenu.appendChild(item4)
@@ -146,7 +151,7 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
   item4.className = "contextMenu_item"
   item4.addEventListener("click", function(e){
     L.DomEvent.stopPropagation(e)
-    toolbarFunctions["togglePopup"]
+    toolbarFunctions["togglePopup"]()
   })
 
   const divider3 = document.createElement("hr")
@@ -157,7 +162,7 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
   item8.innerText = "Toggle Swiss VFR Chart"
   item8.className = "contextMenu_item"
   item8.addEventListener("click", function(){
-    toolbarFunctions["toggleVFR"]
+    toolbarFunctions["toggleVFR"]()
   })
 
  
@@ -169,7 +174,7 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
   item5.innerText = "Focus Switzerland"
   item5.className = "contextMenu_item"
   item5.addEventListener("click", function(){
-    toolbarFunctions["focusSwitzerland"]
+    toolbarFunctions["focusSwitzerland"]()
   })
 
   const item6 = document.createElement("div")
@@ -177,14 +182,14 @@ map.addEventListener("contextmenu", function(e:L.LeafletMouseEvent){
   item6.innerText = "Focus Europe"
   item6.className = "contextMenu_item"
   item6.addEventListener("click", function(){
-    toolbarFunctions["focusEurope"]
+    toolbarFunctions["focusEurope"]()
   })
   const item7 = document.createElement("div")
   contextMenu.appendChild(item7)
   item7.innerText = "Focus World"
   item7.className = "contextMenu_item"
   item7.addEventListener("click", function(){
-    toolbarFunctions["focusWorld"]
+    toolbarFunctions["focusWorld"]()
   })
 
 
@@ -351,8 +356,7 @@ function plotMarker(marker:L.Marker){
 }
 
 async function queryTriggerAll(from: string){
-  toolbarFunctions["clearMarker"]
-  toolbarFunctions["removePolyline"]
+
   queryAllState.value = ""
   const targetA = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
   const targetB = document.getElementById(`alternativeQueryAll_textbox`) as HTMLInputElement
@@ -367,6 +371,10 @@ async function queryTriggerAll(from: string){
   if(value === ""){
     return
   }
+  toolbarFunctions["clearAll"]()
+  targetA.value = queryAllState.value.toUpperCase()
+  targetB.value = queryAllState.value.toUpperCase()
+
   const deconstructedRte:string[][] = routeDeconstructor(value.toUpperCase())
   // navaids, locis, waypoints, coordinates, brgDistypeof localStorage.getItem("AMTV3_basemap") !== null ? localStorage.getItem("AMTV
   const deconstructedNavaids:string[] = deconstructedRte[0]
@@ -536,7 +544,7 @@ const clearTextareas: HTMLButtonElement = document.createElement("button")
 clearTextareas.className = "sidebar_button_large sidebar_button_delete"
 clearTextareas.innerText = "Clear Input Text"
 clearTextareas.addEventListener("click", function(){
-  toolbarFunctions.clearTextareas()
+  toolbarFunctions["clearTextareas"]()
 })
 clearTextareas.title = "Clears all input fields but leaves map markers displayed"
 

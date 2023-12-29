@@ -1,4 +1,4 @@
-import { state } from "../configs"
+import { state } from "../configs/state"
 import { ParsedItem } from "../interfaces"
 
 export function coordinateBox(value: ParsedItem){
