@@ -2,7 +2,7 @@ import { calcDegToDec, parseCoordinates } from "./conversions"
 import { airports } from "../EAD_Data/EAD_AD_ALL"
 import { navaids } from "../EAD_Data/EAD_NAV_ALL"
 import { waypoints } from "../EAD_Data/EAD_WPT_ALL"
-
+import { state } from "../configs/state"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 import { Parsed } from "../interfaces"
 
@@ -164,7 +164,7 @@ export async function placePlace(placeField:string){
                 if(!(place.properties.result_type === "amenity" && place.properties.street)){
                     const extractCoords:Parsed = parseCoordinates(`${place.properties.lat},${place.properties.lon}`, "Decimal")
 
-                    multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}<br>${extractCoords.swissgrid.coordinates}`])
+                    multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}${state.placeCoordinateOptIn ? `<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ``}`])
                 }
             }
         } else {
