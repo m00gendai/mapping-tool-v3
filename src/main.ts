@@ -1252,6 +1252,23 @@ settings.forEach(setting =>{
         range.value = range.value === "1" ? "0" : "1"
       })
     }
+    if(setting.id === "placeCoordOptIn"){
+      range.value = state.placeCoordinateOptIn ? "1" : "0"
+      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
+      rangeBox.addEventListener("click", function(){
+        if(range.value === "0"){
+          state.placeCoordinateOptIn = true
+          toggleSwitchOn(customElement)
+          localStorage.setItem("AMTV3_placeCoordOptIn", JSON.stringify(state.placeCoordinateOptIn))
+        }
+        if(range.value === "1"){
+          state.placeCoordinateOptIn = false
+          toggleSwitchOff(customElement)
+          localStorage.setItem("AMTV3_placeCoordOptIn", JSON.stringify(state.placeCoordinateOptIn))
+        }
+        range.value = range.value === "1" ? "0" : "1"
+      })
+    }
   }
 })
 

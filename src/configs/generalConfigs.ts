@@ -126,6 +126,15 @@ export const settings:Setting[] = [
     max: "1",
     min: "0",
     step: "1",
+  },
+  {
+    id: "placeCoordOptIn",
+    name: "Show Coordinates in Place Popups",
+    type: "range",
+    description: "Opt in or out of including coordinates in Place Marker Popup",
+    max: "1",
+    min: "0",
+    step: "1",
   }
 ]
 

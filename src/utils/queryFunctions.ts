@@ -1,9 +1,10 @@
-import { calcDegToDec } from "./conversions"
+import { calcDegToDec, parseCoordinates } from "./conversions"
 import { airports } from "../EAD_Data/EAD_AD_ALL"
 import { navaids } from "../EAD_Data/EAD_NAV_ALL"
 import { waypoints } from "../EAD_Data/EAD_WPT_ALL"
-
+import { state } from "../configs/state"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
+import { Parsed } from "../interfaces"
 
 // RETURNS QUERY RESULTS FOR COORDINATES
 export function placeCoords(coordinatesValue:string){
@@ -161,7 +162,9 @@ export async function placePlace(placeField:string){
             places = await getPlaces.json()
             for(const place of places.features){
                 if(!(place.properties.result_type === "amenity" && place.properties.street)){
-                    multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}`])
+                    const extractCoords:Parsed = parseCoordinates(`${place.properties.lat},${place.properties.lon}`, "Decimal")
+
+                    multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}${state.placeCoordinateOptIn ? `<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ``}`])
                 }
             }
         } else {

@@ -33,4 +33,5 @@ export const state: State ={
     coordinateBoxVisible: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
     coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
     contextMenuVisible: false,
+    placeCoordinateOptIn: typeof localStorage.getItem("AMTV3_placeCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_placeCoordOptIn") || "{}") : [],
 }
