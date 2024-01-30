@@ -156,7 +156,14 @@ export async function placePlace(placeField:string){
     let multiPlaces:string[][] = []
     const query:string[] = placeField.split(",")
     for(const search of query){
+        const timeout:number = setTimeout(()=>{
+            if(!confirm("Geo Request is taking unusually long. OK to wait, Cancel to abort. Other data will still be queried.")){
+                multiPlaces.push(["ERROR", "ERROR", "ERROR"])
+                return
+            }
+        },5000)
         const getPlaces = await fetch(`https://api.geoapify.com/v1/geocode/search?text=${search}&bias=countrycode:ch&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`)
+        clearTimeout(timeout)
         let places
         if(getPlaces.ok){
             places = await getPlaces.json()
