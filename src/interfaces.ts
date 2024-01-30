@@ -41,6 +41,7 @@ export interface State{
     coordinateBoxVisible: boolean
     coordinateBoxSelect: string[]
     contextMenuVisible: boolean
+    placeCoordinateOptIn: boolean
 }
 
 export interface SidebarFlag{

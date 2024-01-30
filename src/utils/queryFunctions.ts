@@ -1,9 +1,10 @@
-import { calcDegToDec } from "./conversions"
+import { calcDegToDec, parseCoordinates } from "./conversions"
 import { airports } from "../EAD_Data/EAD_AD_ALL"
 import { navaids } from "../EAD_Data/EAD_NAV_ALL"
 import { waypoints } from "../EAD_Data/EAD_WPT_ALL"
-
+import { state } from "../configs/state"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
+import { Parsed } from "../interfaces"
 
 // RETURNS QUERY RESULTS FOR COORDINATES
 export function placeCoords(coordinatesValue:string){
@@ -155,13 +156,22 @@ export async function placePlace(placeField:string){
     let multiPlaces:string[][] = []
     const query:string[] = placeField.split(",")
     for(const search of query){
+        const timeout:number = setTimeout(()=>{
+            if(!confirm("Geo Request is taking unusually long. OK to wait, Cancel to abort. Other data will still be queried.")){
+                multiPlaces.push(["ERROR", "ERROR", "ERROR"])
+                return
+            }
+        },5000)
         const getPlaces = await fetch(`https://api.geoapify.com/v1/geocode/search?text=${search}&bias=countrycode:ch&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`)
+        clearTimeout(timeout)
         let places
         if(getPlaces.ok){
             places = await getPlaces.json()
             for(const place of places.features){
                 if(!(place.properties.result_type === "amenity" && place.properties.street)){
-                    multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}`])
+                    const extractCoords:Parsed = parseCoordinates(`${place.properties.lat},${place.properties.lon}`, "Decimal")
+
+                    multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}${state.placeCoordinateOptIn ? `<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ``}`])
                 }
             }
         } else {

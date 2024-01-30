@@ -4,7 +4,12 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, state, sidebarFlags, layerGroups, baseMaps, chartLayers, coordinateConversions, settings, infos, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs"
+import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, settings, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs/generalConfigs"
+import { baseMaps } from "./configs/baseMaps"
+import { layerGroups } from "./configs/layerGroups"
+import { chartLayers } from "./configs/chartLayers";
+import { state } from "./configs/state"
+import { infos } from "./information"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
@@ -365,9 +370,11 @@ async function queryTriggerAll(from: string){
   if(value === ""){
     return
   }
+  document.getElementById("api")!.style.display = "flex"
   toolbarFunctions["clearAll"]()
   targetA.value = queryAllState.value.toUpperCase()
   targetB.value = queryAllState.value.toUpperCase()
+
   const deconstructedRte:string[][] = routeDeconstructor(value.toUpperCase())
   // navaids, locis, waypoints, coordinates, brgDistypeof localStorage.getItem("AMTV3_basemap") !== null ? localStorage.getItem("AMTV
   const deconstructedNavaids:string[] = deconstructedRte[0]
@@ -421,7 +428,7 @@ async function queryTriggerAll(from: string){
       textarea.value = deconstructedOther.join(",")
     }
   }
-
+  document.getElementById("api")!.style.display = "none"
   document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
     const inputField = document.getElementById("polylineField_speed")! as HTMLInputElement
     state.setSpeed = parseInt(inputField.value)
@@ -460,6 +467,7 @@ queryAllField.addEventListener("keypress", function(e){
 })
 
 async function queryTrigger(field:QueryInput){
+  
 // Does NOT clear marker and polyline array, because it should be used as additive markers, not reset them
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
@@ -468,12 +476,14 @@ async function queryTrigger(field:QueryInput){
       if(value === ""){
         return
       }
+      document.getElementById("api")!.style.display = "flex"
       const results:string[][] = field.designation === "COORD" ? placeCoords(value)! : 
                                   field.designation === "LOCI" ? placeLoci(value)!  :
                                   field.designation === "NAVAID" ? placeNavaid(value)! :
                                   field.designation === "WAYPOINT" ? placeRep(value)! :
                                   field.designation === "BRG/DIST" ? placeBrgDist(value)! :
                                   await placePlace(value)!
+                                  document.getElementById("api")!.style.display = "none"
         addMarker(results, field.type)
         document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
           const inputField = document.getElementById("polylineField_speed")! as HTMLInputElement
@@ -1241,6 +1251,23 @@ settings.forEach(setting =>{
           state.sidebarVisible = false
           toggleSwitchOff(customElement)
           localStorage.setItem("AMTV3_sidebar", JSON.stringify(state.sidebarVisible))
+        }
+        range.value = range.value === "1" ? "0" : "1"
+      })
+    }
+    if(setting.id === "placeCoordOptIn"){
+      range.value = state.placeCoordinateOptIn ? "1" : "0"
+      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
+      rangeBox.addEventListener("click", function(){
+        if(range.value === "0"){
+          state.placeCoordinateOptIn = true
+          toggleSwitchOn(customElement)
+          localStorage.setItem("AMTV3_placeCoordOptIn", JSON.stringify(state.placeCoordinateOptIn))
+        }
+        if(range.value === "1"){
+          state.placeCoordinateOptIn = false
+          toggleSwitchOff(customElement)
+          localStorage.setItem("AMTV3_placeCoordOptIn", JSON.stringify(state.placeCoordinateOptIn))
         }
         range.value = range.value === "1" ? "0" : "1"
       })
