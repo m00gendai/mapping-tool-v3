@@ -356,7 +356,6 @@ function plotMarker(marker:L.Marker){
 }
 
 async function queryTriggerAll(from: string){
-
   queryAllState.value = ""
   const targetA = document.getElementById(`sidebar_textarea_queryAll`) as HTMLInputElement
   const targetB = document.getElementById(`alternativeQueryAll_textbox`) as HTMLInputElement
@@ -371,6 +370,7 @@ async function queryTriggerAll(from: string){
   if(value === ""){
     return
   }
+  document.getElementById("api")!.style.display = "flex"
   toolbarFunctions["clearAll"]()
   targetA.value = queryAllState.value.toUpperCase()
   targetB.value = queryAllState.value.toUpperCase()
@@ -428,7 +428,7 @@ async function queryTriggerAll(from: string){
       textarea.value = deconstructedOther.join(",")
     }
   }
-
+  document.getElementById("api")!.style.display = "none"
   document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
     const inputField = document.getElementById("polylineField_speed")! as HTMLInputElement
     state.setSpeed = parseInt(inputField.value)
@@ -467,6 +467,7 @@ queryAllField.addEventListener("keypress", function(e){
 })
 
 async function queryTrigger(field:QueryInput){
+  
 // Does NOT clear marker and polyline array, because it should be used as additive markers, not reset them
       field.value = ""
       const target = document.getElementById(`sidebar_textarea_${field.designation}`) as HTMLInputElement
@@ -475,12 +476,14 @@ async function queryTrigger(field:QueryInput){
       if(value === ""){
         return
       }
+      document.getElementById("api")!.style.display = "flex"
       const results:string[][] = field.designation === "COORD" ? placeCoords(value)! : 
                                   field.designation === "LOCI" ? placeLoci(value)!  :
                                   field.designation === "NAVAID" ? placeNavaid(value)! :
                                   field.designation === "WAYPOINT" ? placeRep(value)! :
                                   field.designation === "BRG/DIST" ? placeBrgDist(value)! :
                                   await placePlace(value)!
+                                  document.getElementById("api")!.style.display = "none"
         addMarker(results, field.type)
         document.getElementById("polylineField_speed")!.addEventListener("keyup", function(){
           const inputField = document.getElementById("polylineField_speed")! as HTMLInputElement
