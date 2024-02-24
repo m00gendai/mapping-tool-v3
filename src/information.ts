@@ -11,7 +11,7 @@ export const infos:Info[] = [
   },
   {
     title: "EAD Data AIRAC Date",
-    content: `25 JAN 24 uploaded 30.01.2024`
+    content: `22 FEB 24 uploaded 24.02.2024`
   },
   {
     title: "Overlay Data Sources",

@@ -253,6 +253,12 @@ export const airports: EADdata[] = [
 	"txtName": "PROTINAL",
 },
 {
+	"codeId": "SKQM",
+	"geoLat": "4.7265056",
+	"geoLong": "-72.5372861",
+	"txtName": "MOROCHITO II",
+},
+{
 	"codeId": "SQLO",
 	"geoLat": "5.6092472",
 	"geoLong": "-70.4209972",
@@ -2126,7 +2132,7 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HRYN",
-	"geoLat": "-2.333",
+	"geoLat": "-2.3333333",
 	"geoLong": "30.2",
 	"txtName": "NEMBA",
 },
@@ -3325,6 +3331,12 @@ export const airports: EADdata[] = [
 	"txtName": "FRANCIS S GABRESKI",
 },
 {
+	"codeId": "HCLB",
+	"geoLat": "5.7383611",
+	"geoLong": "45.7658333",
+	"txtName": "BALANBALE",
+},
+{
 	"codeId": "FVSE",
 	"geoLat": "-17.967",
 	"geoLong": "29.217",
@@ -3668,8 +3680,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "EGXH",
-	"geoLat": "52.34389",
-	"geoLong": "0.785",
+	"geoLat": "52.3428028",
+	"geoLong": "0.7727944",
 	"txtName": "HONINGTON",
 },
 {
@@ -5173,16 +5185,16 @@ export const airports: EADdata[] = [
 	"txtName": "LA ARGENTINA",
 },
 {
-	"codeId": "KCRX",
-	"geoLat": "34.914967222",
-	"geoLong": "-88.603484444",
-	"txtName": "ROSCOE TURNER",
-},
-{
 	"codeId": "EDNK",
 	"geoLat": "48.238533833",
 	"geoLong": "12.976750111",
 	"txtName": "KIRCHDORF/INN",
+},
+{
+	"codeId": "KCRX",
+	"geoLat": "34.914967222",
+	"geoLong": "-88.603484444",
+	"txtName": "ROSCOE TURNER",
 },
 {
 	"codeId": "FAOB",
@@ -7615,6 +7627,12 @@ export const airports: EADdata[] = [
 	"txtName": "GRAND BEREBY/NERO-MER",
 },
 {
+	"codeId": "HCMQ",
+	"geoLat": "6.3036667",
+	"geoLong": "46.2223611",
+	"txtName": "MOQOR -ABUDWAK",
+},
+{
 	"codeId": "HAHU",
 	"geoLat": "13.8309611",
 	"geoLong": "36.88215",
@@ -8302,7 +8320,7 @@ export const airports: EADdata[] = [
 	"codeId": "NZRI",
 	"geoLat": "-44.085",
 	"geoLong": "171.415833",
-	"txtName": "RANGITATA ISLAND",
+	"txtName": "RAKITATA ISLAND",
 },
 {
 	"codeId": "YBLI",
@@ -10861,6 +10879,12 @@ export const airports: EADdata[] = [
 	"txtName": "CHHATRAPATI SHIVAJI MAHARAJ INTERNATIONAL AIRPORT, MUMBAI",
 },
 {
+	"codeId": "OLWI",
+	"geoLat": "33.817",
+	"geoLong": "35.483",
+	"txtName": "HAMAT AIRBASE",
+},
+{
 	"codeId": "FAHL",
 	"geoLat": "-28.0138889",
 	"geoLong": "32.275",
@@ -11285,6 +11309,12 @@ export const airports: EADdata[] = [
 	"geoLat": "47.314262278",
 	"geoLong": "8.026072806",
 	"txtName": "HOLZIKEN",
+},
+{
+	"codeId": "HCMO",
+	"geoLat": "5.355444",
+	"geoLong": "48.514583",
+	"txtName": "HOBYO",
 },
 {
 	"codeId": "RPVE",
@@ -13411,6 +13441,12 @@ export const airports: EADdata[] = [
 	"txtName": "ARBOLETES",
 },
 {
+	"codeId": "LOJE",
+	"geoLat": "47.5752",
+	"geoLong": "12.472852778",
+	"txtName": "ERPFENDORF KITZ-AIR",
+},
+{
 	"codeId": "MYEH",
 	"geoLat": "25.47556",
 	"geoLong": "-76.68139",
@@ -13594,7 +13630,7 @@ export const airports: EADdata[] = [
 	"codeId": "KOGM",
 	"geoLat": "46.845470278",
 	"geoLong": "-89.367091667",
-	"txtName": "ONTONAGON COUNTY - SCHUSTER FLD",
+	"txtName": "ONTONAGON COUNTY/SCHUSTER FLD",
 },
 {
 	"codeId": "RJCW",
@@ -14000,8 +14036,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KMJQ",
-	"geoLat": "43.650138889",
-	"geoLong": "-94.986583333",
+	"geoLat": "43.650780833",
+	"geoLong": "-94.9865725",
 	"txtName": "JACKSON MUNI",
 },
 {
@@ -14332,7 +14368,7 @@ export const airports: EADdata[] = [
 	"codeId": "WATE",
 	"geoLat": "-8.84806",
 	"geoLong": "121.66333",
-	"txtName": "ENDE/HAJI HASAN AROEBOESMAN",
+	"txtName": "ENDE / H. HASAN AROEBOESMAN",
 },
 {
 	"codeId": "HTLO",
@@ -14912,9 +14948,9 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "UHKK",
-	"geoLat": "50.409",
-	"geoLong": "136.9340056",
-	"txtName": "KOMSOLSK-NA-AMURE/KHURBA",
+	"geoLat": "50.40944",
+	"geoLong": "136.93528",
+	"txtName": "KOMSOMOLSK-NA-AMURE/KHURBA",
 },
 {
 	"codeId": "SLVM",
@@ -17726,8 +17762,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "LFIX",
-	"geoLat": "43.3375",
-	"geoLong": "-1.4222222",
+	"geoLat": "43.3363889",
+	"geoLong": "-1.4233333",
 	"txtName": "ITXASSOU",
 },
 {
@@ -18680,8 +18716,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KNEL",
-	"geoLat": "40.035780861",
-	"geoLong": "-74.35137025",
+	"geoLat": "40.035787722",
+	"geoLong": "-74.351365944",
 	"txtName": "LAKEHURST MAXFIELD FLD",
 },
 {
@@ -19046,8 +19082,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HCDE",
-	"geoLat": "2.11556",
-	"geoLong": "45.26444",
+	"geoLat": "2.1221278",
+	"geoLong": "45.2688972",
 	"txtName": "DAYNILE",
 },
 {
@@ -21872,8 +21908,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HCBB",
-	"geoLat": "3.8925",
-	"geoLong": "45.58361",
+	"geoLat": "3.8903639",
+	"geoLong": "45.5831611",
 	"txtName": "BUULABURDE",
 },
 {
@@ -22024,7 +22060,7 @@ export const airports: EADdata[] = [
 	"codeId": "LECC",
 	"geoLat": "38.92917",
 	"geoLong": "1.46639",
-	"txtName": "CAS CURREDO (IBIZA",
+	"txtName": "CAS CURREDO (IBIZA( (HLP)",
 },
 {
 	"codeId": "SEMV",
@@ -22093,6 +22129,12 @@ export const airports: EADdata[] = [
 	"txtName": "WERDOHL-KUENTROP",
 },
 {
+	"codeId": "HCYD",
+	"geoLat": "4.535278",
+	"geoLong": "43.030167",
+	"txtName": "YEED",
+},
+{
 	"codeId": "EPKU",
 	"geoLat": "51.875333333",
 	"geoLong": "21.003083333",
@@ -22157,6 +22199,12 @@ export const airports: EADdata[] = [
 	"geoLat": "62.94667",
 	"geoLong": "23.51889",
 	"txtName": "MENKIJARVI",
+},
+{
+	"codeId": "SKNW",
+	"geoLat": "10.6649222",
+	"geoLong": "-74.1962139",
+	"txtName": "NUEVA CHECA",
 },
 {
 	"codeId": "VYMS",
@@ -22343,6 +22391,12 @@ export const airports: EADdata[] = [
 	"geoLat": "-25.59889",
 	"geoLong": "151.31889",
 	"txtName": "MUNDUBBERA",
+},
+{
+	"codeId": "EBRE",
+	"geoLat": "50.93444",
+	"geoLong": "2.75917",
+	"txtName": "LO-RENINGE",
 },
 {
 	"codeId": "KOFF",
@@ -23119,16 +23173,16 @@ export const airports: EADdata[] = [
 	"txtName": "TIMBIQUI",
 },
 {
-	"codeId": "LEXU",
-	"geoLat": "41.95194",
-	"geoLong": "-7.95722",
-	"txtName": "HELIPUERTO XURES (ORENSE)",
-},
-{
 	"codeId": "FANY",
 	"geoLat": "-24.6855389",
 	"geoLong": "28.4281556",
 	"txtName": "NYLSTROOM",
+},
+{
+	"codeId": "LEXU",
+	"geoLat": "41.95194",
+	"geoLong": "-7.95722",
+	"txtName": "HELIPUERTO XURES (ORENSE)",
 },
 {
 	"codeId": "KLNL",
@@ -24601,16 +24655,16 @@ export const airports: EADdata[] = [
 	"txtName": "BLACKWATER HOSPITAL ",
 },
 {
-	"codeId": "EBEU",
-	"geoLat": "51.15583",
-	"geoLong": "4.40972",
-	"txtName": "EDEGEM / UZA",
-},
-{
 	"codeId": "LOIT",
 	"geoLat": "47.520833333",
 	"geoLong": "12.429666667",
 	"txtName": "ST. JOHANN/TIROL KH",
+},
+{
+	"codeId": "EBEU",
+	"geoLat": "51.15583",
+	"geoLong": "4.40972",
+	"txtName": "EDEGEM / UZA",
 },
 {
 	"codeId": "EGVH",
@@ -25250,8 +25304,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KBAB",
-	"geoLat": "39.136101083",
-	"geoLong": "-121.436585028",
+	"geoLat": "39.136100778",
+	"geoLong": "-121.436586972",
 	"txtName": "BEALE AFB",
 },
 {
@@ -25345,16 +25399,16 @@ export const airports: EADdata[] = [
 	"txtName": "VIRGILIO BARCO VARGAS",
 },
 {
-	"codeId": "FAMS",
-	"geoLat": "-25.69722",
-	"geoLong": "26.91139",
-	"txtName": "MORNINGSIDE FARM",
-},
-{
 	"codeId": "EPZA",
 	"geoLat": "50.700844444",
 	"geoLong": "23.204816667",
 	"txtName": "ZAMOSC",
+},
+{
+	"codeId": "FAMS",
+	"geoLat": "-25.69722",
+	"geoLong": "26.91139",
+	"txtName": "MORNINGSIDE FARM",
 },
 {
 	"codeId": "KRAS",
@@ -28106,8 +28160,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KPRO",
-	"geoLat": "41.828",
-	"geoLong": "-94.159833333",
+	"geoLat": "41.826444444",
+	"geoLong": "-94.159555556",
 	"txtName": "PERRY MUNI",
 },
 {
@@ -31589,6 +31643,12 @@ export const airports: EADdata[] = [
 	"geoLat": "48.791759833",
 	"geoLong": "8.186586222",
 	"txtName": "BADEN-OOS",
+},
+{
+	"codeId": "HCGM",
+	"geoLat": "8.576056",
+	"geoLong": "47.641",
+	"txtName": "GAMBADHE",
 },
 {
 	"codeId": "MPUP",
@@ -35834,8 +35894,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "UHMD",
-	"geoLat": "64.37806",
-	"geoLong": "-173.24333",
+	"geoLat": "64.37889",
+	"geoLong": "-173.2425",
 	"txtName": "PROVIDENIYA BAY",
 },
 {
@@ -36305,6 +36365,12 @@ export const airports: EADdata[] = [
 	"geoLat": "10.66583",
 	"geoLong": "-71.61833",
 	"txtName": "BANCO OCCIDENTAL DE DESCUENTO (BOD)",
+},
+{
+	"codeId": "HCGA",
+	"geoLat": "6.8774444",
+	"geoLong": "49.24825",
+	"txtName": "GARA'AD",
 },
 {
 	"codeId": "VLPS",
@@ -37648,7 +37714,7 @@ export const airports: EADdata[] = [
 	"codeId": "HRYR",
 	"geoLat": "-1.9684472",
 	"geoLong": "30.1383861",
-	"txtName": "KIGALI INTERNATIONAL",
+	"txtName": "KIGALI INTL",
 },
 {
 	"codeId": "YTHD",
@@ -40396,7 +40462,7 @@ export const airports: EADdata[] = [
 	"codeId": "HCMR",
 	"geoLat": "6.780889",
 	"geoLong": "47.455083",
-	"txtName": "GALKIAO",
+	"txtName": "GALKAIO",
 },
 {
 	"codeId": "LFTM",
@@ -41515,12 +41581,6 @@ export const airports: EADdata[] = [
 	"txtName": "NOTTINGHAM",
 },
 {
-	"codeId": "LTFL",
-	"geoLat": "40.78722",
-	"geoLong": "26.60667",
-	"txtName": "KESAN",
-},
-{
 	"codeId": "LFEP",
 	"geoLat": "47.2205556",
 	"geoLong": "4.5602778",
@@ -41531,6 +41591,12 @@ export const airports: EADdata[] = [
 	"geoLat": "-25.8337778",
 	"geoLong": "29.192625",
 	"txtName": "WITBANK",
+},
+{
+	"codeId": "LTFL",
+	"geoLat": "40.78722",
+	"geoLong": "26.60667",
+	"txtName": "KESAN",
 },
 {
 	"codeId": "HCHF",
@@ -41759,6 +41825,12 @@ export const airports: EADdata[] = [
 	"geoLat": "7.93333",
 	"geoLong": "-68.48333",
 	"txtName": "APURITO",
+},
+{
+	"codeId": "SEAF",
+	"geoLat": "-0.8105306",
+	"geoLong": "-79.4773139",
+	"txtName": "MONTANITA",
 },
 {
 	"codeId": "LRBM",
@@ -43592,8 +43664,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KVAD",
-	"geoLat": "30.9687",
-	"geoLong": "-83.192963889",
+	"geoLat": "30.968702778",
+	"geoLong": "-83.192966667",
 	"txtName": "MOODY AFB",
 },
 {
@@ -43661,6 +43733,12 @@ export const airports: EADdata[] = [
 	"geoLat": "-29.6829694",
 	"geoLong": "17.0930778",
 	"txtName": "KLEINSEE",
+},
+{
+	"codeId": "SKJL",
+	"geoLat": "5.8870972",
+	"geoLong": "-71.3184056",
+	"txtName": "LA PIEDRA",
 },
 {
 	"codeId": "YPKG",
@@ -43859,6 +43937,12 @@ export const airports: EADdata[] = [
 	"geoLat": "-36.82444",
 	"geoLong": "-73.05",
 	"txtName": "TORRE LIGURE",
+},
+{
+	"codeId": "SKXE",
+	"geoLat": "4.3636694",
+	"geoLong": "-74.7377694",
+	"txtName": "XIELO",
 },
 {
 	"codeId": "SLTJ",
@@ -44102,8 +44186,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KPMP",
-	"geoLat": "26.247400556",
-	"geoLong": "-80.1112075",
+	"geoLat": "26.24736",
+	"geoLong": "-80.111127222",
 	"txtName": "POMPANO BEACH AIRPARK",
 },
 {
@@ -44834,8 +44918,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HRZA",
-	"geoLat": "-2.46236694",
-	"geoLong": "28.90791167",
+	"geoLat": "-2.4623667",
+	"geoLong": "28.9079111",
 	"txtName": "KAMEMBE",
 },
 {
@@ -47923,16 +48007,16 @@ export const airports: EADdata[] = [
 	"txtName": "NORTHERN PENINSULA",
 },
 {
+	"codeId": "MMLP",
+	"geoLat": "24.0727444",
+	"geoLong": "-110.3625472",
+	"txtName": "LA PAZ AEROPUERTO INTERNACIONAL GRAL. MANUEL MARQUEZ DE LEON",
+},
+{
 	"codeId": "KAND",
 	"geoLat": "34.494583333",
 	"geoLong": "-82.709388889",
 	"txtName": "ANDERSON RGNL",
-},
-{
-	"codeId": "MMLP",
-	"geoLat": "24.072747083",
-	"geoLong": "-110.362541667",
-	"txtName": "LA PAZ AEROPUERTO INTERNACIONAL GRAL. MANUEL MARQUEZ DE LEON",
 },
 {
 	"codeId": "LHBF",
@@ -47950,7 +48034,7 @@ export const airports: EADdata[] = [
 	"codeId": "KPEO",
 	"geoLat": "42.637083333",
 	"geoLong": "-77.052861111",
-	"txtName": "PENN YAN",
+	"txtName": "PENN YAN/YATES CITY",
 },
 {
 	"codeId": "EGHN",
@@ -52075,16 +52159,16 @@ export const airports: EADdata[] = [
 	"txtName": "ROSENTHAL-FIELD-PLOESSEN",
 },
 {
-	"codeId": "KBDJ",
-	"geoLat": "46.136865694",
-	"geoLong": "-89.647610833",
-	"txtName": "BOULDER JUNCTION PAYZER",
-},
-{
 	"codeId": "MRBN",
 	"geoLat": "10.08722",
 	"geoLong": "-83.323111",
 	"txtName": "BATAAN",
+},
+{
+	"codeId": "KBDJ",
+	"geoLat": "46.136865694",
+	"geoLong": "-89.647610833",
+	"txtName": "BOULDER JUNCTION PAYZER",
 },
 {
 	"codeId": "LECO",
@@ -54007,6 +54091,12 @@ export const airports: EADdata[] = [
 	"txtName": "IVUJIVIK",
 },
 {
+	"codeId": "SQDS",
+	"geoLat": "6.265",
+	"geoLong": "-75.5555",
+	"txtName": "SANTA DEBORA",
+},
+{
 	"codeId": "YGDI",
 	"geoLat": "-28.52139",
 	"geoLong": "150.32028",
@@ -55645,6 +55735,12 @@ export const airports: EADdata[] = [
 	"txtName": "BRIDGEWATER",
 },
 {
+	"codeId": "SQEX",
+	"geoLat": "8.3393556",
+	"geoLong": "-75.5560694",
+	"txtName": "EL BRILLANTE",
+},
+{
 	"codeId": "ESMJ",
 	"geoLat": "55.995",
 	"geoLong": "13.05333",
@@ -56038,7 +56134,7 @@ export const airports: EADdata[] = [
 	"codeId": "KSBP",
 	"geoLat": "35.2372725",
 	"geoLong": "-120.642602778",
-	"txtName": "SAN LUIS COUNTY RGNL",
+	"txtName": "SLO COUNTY",
 },
 {
 	"codeId": "LFNH",
@@ -61286,8 +61382,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HCMU",
-	"geoLat": "10.64222",
-	"geoLong": "47.38806",
+	"geoLat": "10.6433833",
+	"geoLong": "47.3893611",
 	"txtName": "ERIGAVO",
 },
 {
@@ -61322,8 +61418,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KMLJ",
-	"geoLat": "33.154226111",
-	"geoLong": "-83.241402778",
+	"geoLat": "33.154225556",
+	"geoLong": "-83.2414075",
 	"txtName": "BALDWIN COUNTY RGNL",
 },
 {
@@ -61699,16 +61795,16 @@ export const airports: EADdata[] = [
 	"txtName": "TENIENTE CORONEL ANDRES MIGUEL SALAZAR MARCANO",
 },
 {
-	"codeId": "SBSP",
-	"geoLat": "-23.62611",
-	"geoLong": "-46.65639",
-	"txtName": "CONGONHAS",
-},
-{
 	"codeId": "SACE",
 	"geoLat": "-31.45",
 	"geoLong": "-64.283",
 	"txtName": "CORDOBA/ESCUELA DE AVIACION MILITAR",
+},
+{
+	"codeId": "SBSP",
+	"geoLat": "-23.62611",
+	"geoLong": "-46.65639",
+	"txtName": "CONGONHAS - DEPUTADO FREITAS NOBRE",
 },
 {
 	"codeId": "KPBI",
@@ -62051,6 +62147,12 @@ export const airports: EADdata[] = [
 	"geoLat": "6.0713194",
 	"geoLong": "-70.3678306",
 	"txtName": "COLINERAS",
+},
+{
+	"codeId": "VNMG",
+	"geoLat": "27.57722",
+	"geoLong": "84.22833",
+	"txtName": "MEGHAULI",
 },
 {
 	"codeId": "KKNB",
@@ -62888,8 +62990,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "FMSD",
-	"geoLat": "-25.03806",
-	"geoLong": "46.95611",
+	"geoLat": "-25.038063139",
+	"geoLong": "46.956018861",
 	"txtName": "TOLAGNARO / MARILLAC",
 },
 {
@@ -63803,6 +63905,12 @@ export const airports: EADdata[] = [
 	"geoLat": "55.025",
 	"geoLong": "-2.60222",
 	"txtName": "SPADEADAM",
+},
+{
+	"codeId": "LEBK",
+	"geoLat": "42.86528",
+	"geoLong": "-7.1875",
+	"txtName": "HELIPUERTO DE BERREA (LUGO) (HLP)",
 },
 {
 	"codeId": "VIKO",
@@ -67064,8 +67172,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KGLH",
-	"geoLat": "33.482881111",
-	"geoLong": "-90.985613889",
+	"geoLat": "33.485248278",
+	"geoLong": "-90.984485917",
 	"txtName": "GREENVILLE MID-DELTA",
 },
 {
@@ -69038,9 +69146,9 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HCAW",
-	"geoLat": "6.179389",
-	"geoLong": "46.193194",
-	"txtName": "ABUDWAK",
+	"geoLat": "6.1794778",
+	"geoLong": "46.1932",
+	"txtName": "ABDUWAK",
 },
 {
 	"codeId": "LTAF",
@@ -69161,6 +69269,12 @@ export const airports: EADdata[] = [
 	"geoLat": "43.1647222",
 	"geoLong": "-0.5602778",
 	"txtName": "OLORON HERRERE",
+},
+{
+	"codeId": "EPRT",
+	"geoLat": "52.364388889",
+	"geoLong": "21.141611111",
+	"txtName": "BMW MARKI",
 },
 {
 	"codeId": "SVAC",
@@ -69879,7 +69993,7 @@ export const airports: EADdata[] = [
 {
 	"codeId": "HRYI",
 	"geoLat": "-2.6",
-	"geoLong": "29.733",
+	"geoLong": "29.7333333",
 	"txtName": "BUTARE",
 },
 {
@@ -71464,7 +71578,7 @@ export const airports: EADdata[] = [
 	"codeId": "KPOE",
 	"geoLat": "31.044782361",
 	"geoLong": "-93.191642083",
-	"txtName": "POLK AAF",
+	"txtName": "MAKS AAF",
 },
 {
 	"codeId": "SQBT",
@@ -71750,9 +71864,9 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "SKCQ",
-	"geoLat": "4.8062056",
-	"geoLong": "-71.6874",
-	"txtName": "CACTUS",
+	"geoLat": "4.8062222",
+	"geoLong": "-74.9873833",
+	"txtName": "LOS CACTUS",
 },
 {
 	"codeId": "EBBZ",
@@ -72566,8 +72680,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HCME",
-	"geoLat": "8.10278",
-	"geoLong": "49.81972",
+	"geoLat": "8.1031889",
+	"geoLong": "49.8188417",
 	"txtName": "EIL",
 },
 {
@@ -72623,6 +72737,12 @@ export const airports: EADdata[] = [
 	"geoLat": "61.970501806",
 	"geoLong": "-132.422128139",
 	"txtName": "ROSS RIVER",
+},
+{
+	"codeId": "HCGS",
+	"geoLat": "6.692",
+	"geoLong": "47.4033111",
+	"txtName": "GALCAIO SOUTH(OSHACO)",
 },
 {
 	"codeId": "FANO",
@@ -73253,12 +73373,6 @@ export const airports: EADdata[] = [
 	"geoLat": "29.54",
 	"geoLong": "20.17",
 	"txtName": "SAHIL",
-},
-{
-	"codeId": "LLEV",
-	"geoLat": "32.265",
-	"geoLong": "34.95167",
-	"txtName": "EYN-VERED",
 },
 {
 	"codeId": "MSBO",
@@ -74913,7 +75027,7 @@ export const airports: EADdata[] = [
 {
 	"codeId": "DAON",
 	"geoLat": "35.01528",
-	"geoLong": "1.45083",
+	"geoLong": "-1.45083",
 	"txtName": "TLEMCEN / ZENATA-MESSALI EL HADJ",
 },
 {
@@ -75902,8 +76016,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KNCY",
-	"geoLat": "37.2679225",
-	"geoLong": "-76.573286111",
+	"geoLat": "37.268377778",
+	"geoLong": "-76.574047222",
 	"txtName": "NWS HELIPAD",
 },
 {
@@ -76831,16 +76945,16 @@ export const airports: EADdata[] = [
 	"txtName": "TUSCOLA AREA",
 },
 {
+	"codeId": "KVLD",
+	"geoLat": "30.781465",
+	"geoLong": "-83.275971944",
+	"txtName": "VALDOSTA RGNL",
+},
+{
 	"codeId": "YDOT",
 	"geoLat": "-19.625",
 	"geoLong": "146.29167",
 	"txtName": "DOTSWOOD",
-},
-{
-	"codeId": "KVLD",
-	"geoLat": "30.781372222",
-	"geoLong": "-83.276219444",
-	"txtName": "VALDOSTA RGNL",
 },
 {
 	"codeId": "FAPV",
@@ -77396,8 +77510,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KNVI",
-	"geoLat": "30.699653056",
-	"geoLong": "-87.1956475",
+	"geoLat": "30.702586111",
+	"geoLong": "-87.192002778",
 	"txtName": "PACE NOLF",
 },
 {
@@ -77953,6 +78067,12 @@ export const airports: EADdata[] = [
 	"txtName": "LOS AGUACATES",
 },
 {
+	"codeId": "EBWK",
+	"geoLat": "50.77139",
+	"geoLong": "3.02806",
+	"txtName": "WERVIK",
+},
+{
 	"codeId": "VOCL",
 	"geoLat": "11.13778",
 	"geoLong": "75.95056",
@@ -78095,6 +78215,12 @@ export const airports: EADdata[] = [
 	"geoLat": "-28.05361",
 	"geoLong": "147.47833",
 	"txtName": "BOLLON",
+},
+{
+	"codeId": "HCBX",
+	"geoLat": "5.8359167",
+	"geoLong": "47.213",
+	"txtName": "BAHDO",
 },
 {
 	"codeId": "RPMA",
@@ -79688,8 +79814,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HCMA",
-	"geoLat": "11.96056",
-	"geoLong": "50.75222",
+	"geoLat": "11.9583917",
+	"geoLong": "50.7489611",
 	"txtName": "ALULA",
 },
 {
@@ -79835,6 +79961,12 @@ export const airports: EADdata[] = [
 	"geoLat": "36.66333",
 	"geoLong": "51.46472",
 	"txtName": "NOSHAHR",
+},
+{
+	"codeId": "SKLQ",
+	"geoLat": "5.03694",
+	"geoLong": "-71.18833",
+	"txtName": "LAS CAMELIAS",
 },
 {
 	"codeId": "MHEI",
@@ -81250,7 +81382,7 @@ export const airports: EADdata[] = [
 	"codeId": "LYBJ",
 	"geoLat": "44.9395222",
 	"geoLong": "20.4456444",
-	"txtName": "BEOGRAD / LISICJI JARAK",
+	"txtName": "BEOGRAD / LISICIJI JARAK",
 },
 {
 	"codeId": "HKKJ",
@@ -81581,6 +81713,12 @@ export const airports: EADdata[] = [
 	"geoLat": "10.14056",
 	"geoLong": "-64.82667",
 	"txtName": "PLATAFORMA DE SERVICIO",
+},
+{
+	"codeId": "EPRK",
+	"geoLat": "49.316333333",
+	"geoLong": "22.493805556",
+	"txtName": "RAJSKIE",
 },
 {
 	"codeId": "YDKH",
@@ -81926,8 +82064,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "HRYG",
-	"geoLat": "-1.67667",
-	"geoLong": "29.25917",
+	"geoLat": "-1.6766667",
+	"geoLong": "29.2591667",
 	"txtName": "GISENYI",
 },
 {
@@ -81947,6 +82085,12 @@ export const airports: EADdata[] = [
 	"geoLat": "36.228555556",
 	"geoLong": "-121.121305556",
 	"txtName": "MESA DEL REY",
+},
+{
+	"codeId": "SKEI",
+	"geoLat": "5.5187833",
+	"geoLong": "-71.1619917",
+	"txtName": "EL DOLAR",
 },
 {
 	"codeId": "LDST",
@@ -82501,6 +82645,12 @@ export const airports: EADdata[] = [
 	"txtName": "MELILLA",
 },
 {
+	"codeId": "LEFU",
+	"geoLat": "38.28167",
+	"geoLong": "-5.4",
+	"txtName": "AERODROMO FUENTE OBEJUNA (CORDOBA)",
+},
+{
 	"codeId": "PFKT",
 	"geoLat": "65.331333333",
 	"geoLong": "-166.465722222",
@@ -82676,8 +82826,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KEZF",
-	"geoLat": "38.266222222",
-	"geoLong": "-77.449388889",
+	"geoLat": "38.266895278",
+	"geoLong": "-77.449240278",
 	"txtName": "SHANNON",
 },
 {
@@ -85713,7 +85863,7 @@ export const airports: EADdata[] = [
 {
 	"codeId": "HRYU",
 	"geoLat": "-1.5",
-	"geoLong": "29.633",
+	"geoLong": "29.6333333",
 	"txtName": "RUHENGERI",
 },
 {
@@ -86948,9 +87098,9 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "EPHN",
-	"geoLat": "52.9075",
-	"geoLong": "23.543611111",
-	"txtName": "NAREW 2",
+	"geoLat": "52.906088889",
+	"geoLong": "23.545533333",
+	"txtName": "PRONAR-NAREW",
 },
 {
 	"codeId": "GADZ",
@@ -87431,12 +87581,6 @@ export const airports: EADdata[] = [
 	"geoLat": "-3.65",
 	"geoLong": "136.6",
 	"txtName": "BUGALAGA",
-},
-{
-	"codeId": "SQCK",
-	"geoLat": "10.6650278",
-	"geoLong": "-74.1966528",
-	"txtName": "LA CHEKA ",
 },
 {
 	"codeId": "KTDO",
@@ -90223,16 +90367,16 @@ export const airports: EADdata[] = [
 	"txtName": "CHOISEUL BAY/TARO ISLAND",
 },
 {
-	"codeId": "LJCE",
-	"geoLat": "45.8999278",
-	"geoLong": "15.5302056",
-	"txtName": "CERKLJE OB KRKI",
-},
-{
 	"codeId": "WIDL",
 	"geoLat": "2.96278",
 	"geoLong": "105.74972",
 	"txtName": "ANAMBAS / LETUNG",
+},
+{
+	"codeId": "LJCE",
+	"geoLat": "45.8999278",
+	"geoLong": "15.5302056",
+	"txtName": "CERKLJE OB KRKI",
 },
 {
 	"codeId": "LDRI",
@@ -91279,16 +91423,16 @@ export const airports: EADdata[] = [
 	"txtName": "PALOICH",
 },
 {
-	"codeId": "LEQE",
-	"geoLat": "42.21556",
-	"geoLong": "-8.42639",
-	"txtName": "HELIPUERTO DE QUEIMADELOS (PONTEVEDRA)",
-},
-{
 	"codeId": "SKPO",
 	"geoLat": "8.1102778",
 	"geoLong": "-75.0111111",
 	"txtName": "LA CONCEPCION",
+},
+{
+	"codeId": "LEQE",
+	"geoLat": "42.21556",
+	"geoLong": "-8.42639",
+	"txtName": "HELIPUERTO DE QUEIMADELOS (PONTEVEDRA)",
 },
 {
 	"codeId": "CYRC",
@@ -91745,6 +91889,12 @@ export const airports: EADdata[] = [
 	"geoLat": "-4.36806",
 	"geoLong": "152.15139",
 	"txtName": "TOMA",
+},
+{
+	"codeId": "SKKA",
+	"geoLat": "5.1064972",
+	"geoLong": "-71.6971806",
+	"txtName": "LA BOHEMIA",
 },
 {
 	"codeId": "ESUI",
@@ -94430,8 +94580,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KAST",
-	"geoLat": "46.157972222",
-	"geoLong": "-123.878611111",
+	"geoLat": "46.157978333",
+	"geoLong": "-123.878623611",
 	"txtName": "ASTORIA RGNL",
 },
 {
@@ -94832,8 +94982,8 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "KVKS",
-	"geoLat": "32.239138889",
-	"geoLong": "-90.928194444",
+	"geoLat": "32.239145",
+	"geoLong": "-90.928195",
 	"txtName": "VICKSBURG MUNI",
 },
 {
@@ -96164,9 +96314,9 @@ export const airports: EADdata[] = [
 },
 {
 	"codeId": "WIBG",
-	"geoLat": "0.84667",
-	"geoLong": "100.37028",
-	"txtName": "PASIR PANGARAIAN/PASIR PANGARAN",
+	"geoLat": "0.845",
+	"geoLong": "100.375",
+	"txtName": "PASIR PANGARAIAN/TUANKU TAMBUSAI",
 },
 {
 	"codeId": "SQYC",
@@ -97363,10 +97513,16 @@ export const airports: EADdata[] = [
 	"txtName": "AMEDEE AAF",
 },
 {
+	"codeId": "LEPM",
+	"geoLat": "28.16583",
+	"geoLong": "-15.40194",
+	"txtName": "HELIPUERTO DE PALMAS PORT (LAS PALMAS) (HLP)",
+},
+{
 	"codeId": "LEJL",
 	"geoLat": "41.47972",
 	"geoLong": "2.23861",
-	"txtName": "HOSPITAL GERMANS TRIAS I PUJOL (BARCELONA) (HLP)",
+	"txtName": "HELIPUERTO HOSPITAL GERMANS TRIAS I PUJOL (BARCELONA) (HLP)",
 },
 {
 	"codeId": "SKST",
@@ -98243,12 +98399,6 @@ export const airports: EADdata[] = [
 	"geoLat": "-16.75139",
 	"geoLong": "47.61944",
 	"txtName": "TSARATANANA",
-},
-{
-	"codeId": "NZAL",
-	"geoLat": "-41.186667",
-	"geoLong": "174.943889",
-	"txtName": "AVALON",
 },
 {
 	"codeId": "NZTB",
