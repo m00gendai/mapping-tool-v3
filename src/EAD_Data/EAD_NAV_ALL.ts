@@ -120,18 +120,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CSN",
-	"geoLat": "8.729417",
-	"geoLong": "106.634889",
-	"txtName": "CON SON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "JLI",
 	"geoLat": "33.14045861",
 	"geoLong": "-116.58593472",
 	"txtName": "JULIAN",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "CSN",
+	"geoLat": "8.729417",
+	"geoLong": "106.634889",
+	"txtName": "CON SON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SNN",
@@ -386,13 +386,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "50.746556",
-	"geoLong": "4.752861",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "NJK",
 	"geoLat": "32.83176389",
 	"geoLong": "-115.68117139",
@@ -400,18 +393,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
+	"codeId": "",
+	"geoLat": "50.746556",
+	"geoLong": "4.752861",
+	"txtName": "",
+	"codeType": "ILS"
+},
+{
 	"codeId": "NH",
 	"geoLat": "37.8217",
 	"geoLong": "68.875",
 	"txtName": "BOKHTAR",
 	"codeType": "NDB"
-},
-{
-	"codeId": "REX",
-	"geoLat": "26.0106306",
-	"geoLong": "-98.2318694",
-	"txtName": "REYNOSA",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "WN",
@@ -426,6 +419,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "66.70125",
 	"txtName": "BELOYARSKIY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "REX",
+	"geoLat": "26.0106306",
+	"geoLong": "-98.2318694",
+	"txtName": "REYNOSA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "RIV",
@@ -729,18 +729,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PDA",
-	"geoLat": "3.8527778",
-	"geoLong": "-67.9038889",
-	"txtName": "PUERTO INIRIDA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TI",
 	"geoLat": "4.9130917",
 	"geoLong": "-1.7649056",
 	"txtName": "TAKORADI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PDA",
+	"geoLat": "3.8527778",
+	"geoLong": "-67.9038889",
+	"txtName": "PUERTO INIRIDA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SJN",
@@ -757,6 +757,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "RU",
+	"geoLat": "35.7331225",
+	"geoLong": "-80.48956528",
+	"txtName": "ROVDY",
+	"codeType": "NDB"
+},
+{
 	"codeId": "IAV",
 	"geoLat": "54.6260278",
 	"geoLong": "25.2821528",
@@ -769,13 +776,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-87.55726028",
 	"txtName": "DANVILLE",
 	"codeType": "TACAN"
-},
-{
-	"codeId": "RU",
-	"geoLat": "35.7331225",
-	"geoLong": "-80.48956528",
-	"txtName": "ROVDY",
-	"codeType": "NDB"
 },
 {
 	"codeId": "NVA",
@@ -876,13 +876,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LNT",
-	"geoLat": "20.956806",
-	"geoLong": "101.400444",
-	"txtName": "LUANGNAMTHA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CIA",
 	"geoLat": "-15.656083",
 	"geoLong": "-56.112028",
@@ -890,10 +883,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NNW",
-	"geoLat": "36.42",
-	"geoLong": "109.485",
-	"txtName": "NANNIWAN",
+	"codeId": "LNT",
+	"geoLat": "20.956806",
+	"geoLong": "101.400444",
+	"txtName": "LUANGNAMTHA",
 	"codeType": "VOR"
 },
 {
@@ -902,6 +895,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "135.220306",
 	"txtName": "KHABAROVSK/NOVY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NNW",
+	"geoLat": "36.42",
+	"geoLong": "109.485",
+	"txtName": "NANNIWAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TE",
@@ -932,18 +932,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KHD",
-	"geoLat": "54.380352778",
-	"geoLong": "10.140572222",
-	"txtName": "KIEL-HOLTENAU",
-	"codeType": "DME"
-},
-{
 	"codeId": "OTK",
 	"geoLat": "-1.210029528",
 	"geoLong": "15.921647333",
 	"txtName": "OLLOMBO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KHD",
+	"geoLat": "54.380352778",
+	"geoLong": "10.140572222",
+	"txtName": "KIEL-HOLTENAU",
+	"codeType": "DME"
 },
 {
 	"codeId": "FOZ",
@@ -967,18 +967,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YOL",
-	"geoLat": "9.292056",
-	"geoLong": "12.424667",
-	"txtName": "YOLA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IKL",
 	"geoLat": "47.480551111",
 	"geoLong": "8.540444972",
 	"txtName": "LSZH 14",
 	"codeType": "DME"
+},
+{
+	"codeId": "YOL",
+	"geoLat": "9.292056",
+	"geoLong": "12.424667",
+	"txtName": "YOLA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BRA",
@@ -1163,13 +1163,6 @@ export const navaids: EADdata[] = [
 	"codeType": "LOC_DME"
 },
 {
-	"codeId": "ABL",
-	"geoLat": "4.78389",
-	"geoLong": "-74.7675",
-	"txtName": "AMBALEMA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YNN",
 	"geoLat": "39.7000333",
 	"geoLong": "20.8213167",
@@ -1182,6 +1175,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "6.056579167",
 	"txtName": "GEILENKIRCHEN",
 	"codeType": "DME"
+},
+{
+	"codeId": "ABL",
+	"geoLat": "4.78389",
+	"geoLong": "-74.7675",
+	"txtName": "AMBALEMA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CBB",
@@ -1296,18 +1296,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "KAM",
-	"geoLat": "37.01667",
-	"geoLong": "41.205306",
-	"txtName": "KAMISHLY",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TM",
 	"geoLat": "-38.921528",
 	"geoLong": "175.313722",
 	"txtName": "TAUMARUNUI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KAM",
+	"geoLat": "37.01667",
+	"geoLong": "41.205306",
+	"txtName": "KAMISHLY",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KI",
@@ -1345,18 +1345,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FY",
-	"geoLat": "17.9308333",
-	"geoLong": "19.1341667",
-	"txtName": "FAYA-LARGEAU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TRP",
 	"geoLat": "37.895972222",
 	"geoLong": "12.513388889",
 	"txtName": "TRAPANI",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "FY",
+	"geoLat": "17.9308333",
+	"geoLong": "19.1341667",
+	"txtName": "FAYA-LARGEAU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HO",
@@ -1478,18 +1478,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BRR",
-	"geoLat": "-12.08",
-	"geoLong": "-45.00722",
-	"txtName": "BARREIRAS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OMD",
 	"geoLat": "30.85194",
 	"geoLong": "49.50528",
 	"txtName": "OMIDIYEH",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "BRR",
+	"geoLat": "-12.08",
+	"geoLong": "-45.00722",
+	"txtName": "BARREIRAS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "UHL",
@@ -1520,18 +1520,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "YMM",
-	"geoLat": "56.6476722",
-	"geoLong": "-111.1224667",
-	"txtName": "FORT MCMURRAY",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DIA",
 	"geoLat": "53.079383306",
 	"geoLong": "21.17565925",
 	"txtName": "DZIALYN",
 	"codeType": "DME"
+},
+{
+	"codeId": "YMM",
+	"geoLat": "56.6476722",
+	"geoLong": "-111.1224667",
+	"txtName": "FORT MCMURRAY",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KGE",
@@ -1590,18 +1590,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CBY",
-	"geoLat": "45.8818806",
-	"geoLong": "5.7572944",
-	"txtName": "CHAMBERY",
-	"codeType": "VOR"
-},
-{
 	"codeId": "D3",
 	"geoLat": "52.6832306",
 	"geoLong": "-113.6062806",
 	"txtName": "PONOKA INDUS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CBY",
+	"geoLat": "45.8818806",
+	"geoLong": "5.7572944",
+	"txtName": "CHAMBERY",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MAM",
@@ -1611,18 +1611,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LDP",
-	"geoLat": "4.6945139",
-	"geoLong": "-61.0296972",
-	"txtName": "LA DIVINA PASTORA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LP",
 	"geoLat": "18.2780222",
 	"geoLong": "99.5074667",
 	"txtName": "LAMPANG",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LDP",
+	"geoLat": "4.6945139",
+	"geoLong": "-61.0296972",
+	"txtName": "LA DIVINA PASTORA",
+	"codeType": "DME"
 },
 {
 	"codeId": "VAL",
@@ -1779,18 +1779,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CBE",
-	"geoLat": "34.8580056",
-	"geoLong": "136.8031694",
-	"txtName": "CHUBU",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HO",
 	"geoLat": "35.21",
 	"geoLong": "107.76833",
 	"txtName": "CHANGWU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CBE",
+	"geoLat": "34.8580056",
+	"geoLong": "136.8031694",
+	"txtName": "CHUBU",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ZDA",
@@ -1884,17 +1884,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AYT",
-	"geoLat": "36.920806",
-	"geoLong": "30.794472",
-	"txtName": "ANTALYA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "JIL",
 	"geoLat": "36.797583",
 	"geoLong": "5.875472",
 	"txtName": "JIJEL",
+	"codeType": "VOR"
+},
+{
+	"codeId": "AYT",
+	"geoLat": "36.920806",
+	"geoLong": "30.794472",
+	"txtName": "ANTALYA",
 	"codeType": "VOR"
 },
 {
@@ -2074,8 +2074,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BTY",
-	"geoLat": "36.80059694",
-	"geoLong": "-116.74764083",
+	"geoLat": "36.80059722",
+	"geoLong": "-116.74764028",
 	"txtName": "BEATTY",
 	"codeType": "VOR"
 },
@@ -2157,6 +2157,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "IOA",
+	"geoLat": "39.6930722",
+	"geoLong": "20.8209472",
+	"txtName": "IOANNINA",
+	"codeType": "NDB"
+},
+{
 	"codeId": "NSH",
 	"geoLat": "33.31833",
 	"geoLong": "108.31167",
@@ -2171,16 +2178,9 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "IOA",
-	"geoLat": "39.6930722",
-	"geoLong": "20.8209472",
-	"txtName": "IOANNINA",
-	"codeType": "NDB"
-},
-{
 	"codeId": "SPA",
-	"geoLat": "37.9177778",
-	"geoLong": "23.9377778",
+	"geoLat": "37.9180194",
+	"geoLong": "23.9379833",
 	"txtName": "ATHINAI",
 	"codeType": "VOR/DME"
 },
@@ -2367,18 +2367,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "HYP",
-	"geoLat": "37.2194325",
-	"geoLong": "-120.40021833",
-	"txtName": "EL NIDO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "UY",
 	"geoLat": "61.28775",
 	"geoLong": "63.663611",
 	"txtName": "SOVETSKIY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HYP",
+	"geoLat": "37.2194325",
+	"geoLong": "-120.40021833",
+	"txtName": "EL NIDO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KR",
@@ -2402,18 +2402,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "HLZ",
-	"geoLat": "52.363395583",
-	"geoLong": "10.795220556",
-	"txtName": "HEHLINGEN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NSD",
 	"geoLat": "32.87989722",
 	"geoLong": "-118.44090833",
 	"txtName": "BEAVER",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "HLZ",
+	"geoLat": "52.363395583",
+	"geoLong": "10.795220556",
+	"txtName": "HEHLINGEN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ITH",
@@ -2514,17 +2514,17 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "ELO",
-	"geoLat": "33.5062778",
-	"geoLong": "6.7877722",
-	"txtName": "EL OUED",
-	"codeType": "NDB"
-},
-{
 	"codeId": "B",
 	"geoLat": "63.547667",
 	"geoLong": "53.792639",
 	"txtName": "UKHTA",
+	"codeType": "NDB"
+},
+{
+	"codeId": "ELO",
+	"geoLat": "33.5062778",
+	"geoLong": "6.7877722",
+	"txtName": "EL OUED",
 	"codeType": "NDB"
 },
 {
@@ -2535,18 +2535,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MAS",
-	"geoLat": "50.971941667",
-	"geoLong": "5.960427778",
-	"txtName": "MAASTRICHT",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MY",
 	"geoLat": "32.77983",
 	"geoLong": "-117.045",
 	"txtName": "DEORO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MAS",
+	"geoLat": "50.971941667",
+	"geoLong": "5.960427778",
+	"txtName": "MAASTRICHT",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NWN",
@@ -2682,18 +2682,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YPG",
-	"geoLat": "49.89966875",
-	"geoLong": "-98.267261889",
-	"txtName": "PORTAGE (SOUTHPORT)",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HAN",
 	"geoLat": "49.964883306",
 	"geoLong": "7.280874889",
 	"txtName": "HAHN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YPG",
+	"geoLat": "49.89966875",
+	"geoLong": "-98.267261889",
+	"txtName": "PORTAGE (SOUTHPORT)",
+	"codeType": "VOR"
 },
 {
 	"codeId": "FXC",
@@ -2794,18 +2794,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LBF",
-	"geoLat": "41.04870444",
-	"geoLong": "-100.74709778",
-	"txtName": "NORTH PLATTE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "EQQ",
 	"geoLat": "33.25694444",
 	"geoLong": "-84.71327",
 	"txtName": "COWETA COUNTY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LBF",
+	"geoLat": "41.04870444",
+	"geoLong": "-100.74709778",
+	"txtName": "NORTH PLATTE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TL",
@@ -2850,13 +2850,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BD",
-	"geoLat": "-33.391611",
-	"geoLong": "-56.515694",
-	"txtName": "DURAZNO",
-	"codeType": "NDB"
-},
-{
 	"codeId": "",
 	"geoLat": "49.7972222",
 	"geoLong": "23.9772222",
@@ -2892,18 +2885,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "50.262417",
-	"geoLong": "57.180278",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "YEA",
 	"geoLat": "50.926135722",
 	"geoLong": "-109.989547806",
 	"txtName": "EMPRESS",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "50.262417",
+	"geoLong": "57.180278",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SML",
@@ -2927,18 +2920,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "PPV",
-	"geoLat": "-23.8398194",
-	"geoLong": "29.4605667",
-	"txtName": "POLOKWANE INTL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LV",
 	"geoLat": "0.4798472",
 	"geoLong": "9.4019833",
 	"txtName": "LIBREVILLE LEON M'BA",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "PPV",
+	"geoLat": "-23.8398194",
+	"geoLong": "29.4605667",
+	"txtName": "POLOKWANE INTL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ATM",
@@ -3221,13 +3214,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BSR",
-	"geoLat": "36.18129556",
-	"geoLong": "-121.64211222",
-	"txtName": "BIG SUR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SNY",
 	"geoLat": "41.0966825",
 	"geoLong": "-102.98299278",
@@ -3235,10 +3221,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GIJ",
-	"geoLat": "41.76861139",
-	"geoLong": "-86.31845194",
-	"txtName": "GIPPER",
+	"codeId": "BSR",
+	"geoLat": "36.18129556",
+	"geoLong": "-121.64211222",
+	"txtName": "BIG SUR",
 	"codeType": "VOR"
 },
 {
@@ -3247,6 +3233,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "38.818",
 	"txtName": "TAGANROG/YUZHNY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GIJ",
+	"geoLat": "41.76861139",
+	"geoLong": "-86.31845194",
+	"txtName": "GIPPER",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BUR",
@@ -3312,18 +3305,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "64.120694",
-	"geoLong": "-21.935944",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "IBA",
 	"geoLat": "40.460417",
 	"geoLong": "50.061778",
 	"txtName": "BAKU",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "64.120694",
+	"geoLong": "-21.935944",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "RUS",
@@ -3347,18 +3340,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LPS",
-	"geoLat": "26.64333",
-	"geoLong": "105.03",
-	"txtName": "LIUPANSHUI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KL",
 	"geoLat": "47.88528",
 	"geoLong": "40.1",
 	"txtName": "KRASNY SULIN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LPS",
+	"geoLat": "26.64333",
+	"geoLong": "105.03",
+	"txtName": "LIUPANSHUI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ABD",
@@ -3529,13 +3522,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MOD",
-	"geoLat": "37.62737444",
-	"geoLong": "-120.95786861",
-	"txtName": "MODESTO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CN",
 	"geoLat": "52.285139",
 	"geoLong": "104.326306",
@@ -3543,9 +3529,16 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "MOD",
+	"geoLat": "37.62737444",
+	"geoLong": "-120.95786861",
+	"txtName": "MODESTO",
+	"codeType": "VOR"
+},
+{
 	"codeId": "BKE",
-	"geoLat": "44.8406",
-	"geoLong": "-117.80787083",
+	"geoLat": "44.84059944",
+	"geoLong": "-117.80786833",
 	"txtName": "BAKER CITY",
 	"codeType": "VOR"
 },
@@ -3592,17 +3585,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AND",
-	"geoLat": "69.287829083",
-	"geoLong": "16.141377667",
-	"txtName": "ANDOYA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LGL",
 	"geoLat": "48.7906",
 	"geoLong": "0.5302861",
 	"txtName": "L'AIGLE",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "AND",
+	"geoLat": "69.287829083",
+	"geoLong": "16.141377667",
+	"txtName": "ANDOYA",
 	"codeType": "VOR/DME"
 },
 {
@@ -3865,18 +3858,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "TRN",
-	"geoLat": "27.86833",
-	"geoLong": "109.29333",
-	"txtName": "TONGREN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MQP",
 	"geoLat": "32.72618056",
 	"geoLong": "-97.99744167",
 	"txtName": "MILLSAP",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "TRN",
+	"geoLat": "27.86833",
+	"geoLong": "109.29333",
+	"txtName": "TONGREN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AC",
@@ -4152,11 +4145,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "LKC",
-	"geoLat": "22.3789222",
-	"geoLong": "113.88375",
-	"txtName": "LUNG KWU CHAU",
-	"codeType": "VOR"
+	"codeId": "GUP",
+	"geoLat": "-11.73639",
+	"geoLong": "-49.13639",
+	"txtName": "GURUPI",
+	"codeType": "DME"
 },
 {
 	"codeId": "LOY",
@@ -4164,13 +4157,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "101.7230889",
 	"txtName": "LOEI",
 	"codeType": "VOR"
-},
-{
-	"codeId": "GUP",
-	"geoLat": "-11.73639",
-	"geoLong": "-49.13639",
-	"txtName": "GURUPI",
-	"codeType": "DME"
 },
 {
 	"codeId": "MGY",
@@ -4236,18 +4222,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "DZP",
-	"geoLat": "-12.8109917",
-	"geoLong": "45.2808667",
-	"txtName": "DZAOUDZI PAMANDZI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MFD",
 	"geoLat": "40.86861222",
 	"geoLong": "-82.59096139",
 	"txtName": "MANSFIELD",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "DZP",
+	"geoLat": "-12.8109917",
+	"geoLong": "45.2808667",
+	"txtName": "DZAOUDZI PAMANDZI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -4418,18 +4404,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "INB",
-	"geoLat": "41.951417",
-	"geoLong": "33.706278",
-	"txtName": "INEBOLU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "WNK",
 	"geoLat": "49.65472",
 	"geoLong": "41.69806",
 	"txtName": "VESHENSKAYA",
 	"codeType": "DME"
+},
+{
+	"codeId": "INB",
+	"geoLat": "41.951417",
+	"geoLong": "33.706278",
+	"txtName": "INEBOLU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BES",
@@ -4467,18 +4453,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "",
-	"geoLat": "53.045063722",
-	"geoLong": "8.779277167",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "USK",
 	"geoLat": "38.683694",
 	"geoLong": "29.475361",
 	"txtName": "USAK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "53.045063722",
+	"geoLong": "8.779277167",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "CDP",
@@ -4488,18 +4474,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PUC",
-	"geoLat": "39.60319167",
-	"geoLong": "-110.75352778",
-	"txtName": "CARBON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DBQ",
 	"geoLat": "42.40146917",
 	"geoLong": "-90.70907806",
 	"txtName": "DUBUQUE",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "PUC",
+	"geoLat": "39.60319167",
+	"geoLong": "-110.75352778",
+	"txtName": "CARBON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "B",
@@ -4558,18 +4544,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "GSH",
-	"geoLat": "41.52515528",
-	"geoLong": "-86.02795333",
-	"txtName": "GOSHEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "Z",
 	"geoLat": "31.71",
 	"geoLong": "118.8383",
 	"txtName": "NANJING/LUKOU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GSH",
+	"geoLat": "41.52515528",
+	"geoLong": "-86.02795333",
+	"txtName": "GOSHEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SO",
@@ -4614,18 +4600,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "BET",
-	"geoLat": "5.7854667",
-	"geoLong": "101.1440694",
-	"txtName": "BETONG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CO",
 	"geoLat": "47.74283",
 	"geoLong": "-116.961",
 	"txtName": "LEENY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BET",
+	"geoLat": "5.7854667",
+	"geoLong": "101.1440694",
+	"txtName": "BETONG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MG",
@@ -4734,17 +4720,10 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "58.748533028",
-	"geoLong": "-94.080575417",
+	"geoLat": "58.724584389",
+	"geoLong": "-94.061814667",
 	"txtName": "",
 	"codeType": "ILS"
-},
-{
-	"codeId": "CJU",
-	"geoLat": "33.38472",
-	"geoLong": "126.62417",
-	"txtName": "JEJU",
-	"codeType": "VOR"
 },
 {
 	"codeId": "RN",
@@ -4752,6 +4731,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "1.1795222",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "CJU",
+	"geoLat": "33.38472",
+	"geoLong": "126.62417",
+	"txtName": "JEJU",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MLD",
@@ -4854,7 +4840,7 @@ export const navaids: EADdata[] = [
 {
 	"codeId": "GGT",
 	"geoLat": "26.134125",
-	"geoLong": "91.5979167",
+	"geoLong": "91.5979194",
 	"txtName": "GUWAHATI",
 	"codeType": "VOR/DME"
 },
@@ -4866,18 +4852,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SHY",
-	"geoLat": "38.04061694",
-	"geoLong": "-92.60241194",
-	"txtName": "SUNSHINE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CMA",
 	"geoLat": "18.7661278",
 	"geoLong": "98.9612167",
 	"txtName": "CHIANG MAI",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SHY",
+	"geoLat": "38.04061694",
+	"geoLong": "-92.60241194",
+	"txtName": "SUNSHINE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ME",
@@ -4901,11 +4887,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "HME",
-	"geoLat": "31.691028",
-	"geoLong": "6.1419111",
-	"txtName": "HASSI MESSAOUD",
-	"codeType": "VOR"
+	"codeId": "MP",
+	"geoLat": "49.6474556",
+	"geoLong": "-1.4573083",
+	"txtName": "",
+	"codeType": "DME"
 },
 {
 	"codeId": "VCD",
@@ -4915,11 +4901,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MP",
-	"geoLat": "49.6474556",
-	"geoLong": "-1.4573083",
-	"txtName": "",
-	"codeType": "DME"
+	"codeId": "HME",
+	"geoLat": "31.691028",
+	"geoLong": "6.1419111",
+	"txtName": "HASSI MESSAOUD",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BRC",
@@ -5055,18 +5041,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BDF",
-	"geoLat": "69.064880417",
-	"geoLong": "18.466174222",
-	"txtName": "BARDUFOSS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PBI",
 	"geoLat": "26.680055",
 	"geoLong": "-80.08648861",
 	"txtName": "PALM BEACH",
 	"codeType": "VOR"
+},
+{
+	"codeId": "BDF",
+	"geoLat": "69.064880417",
+	"geoLong": "18.466174222",
+	"txtName": "BARDUFOSS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "VTB",
@@ -5216,18 +5202,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "50.230361",
-	"geoLong": "57.229972",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "TNJ",
 	"geoLat": "45.2481167",
 	"geoLong": "15.3503472",
 	"txtName": "TOUNJ",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "50.230361",
+	"geoLong": "57.229972",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "TIO",
@@ -5279,11 +5265,11 @@ export const navaids: EADdata[] = [
 	"codeType": "LOC"
 },
 {
-	"codeId": "TAN",
-	"geoLat": "23.66833",
-	"geoLong": "113.24167",
-	"txtName": "YUANTAN",
-	"codeType": "VOR/DME"
+	"codeId": "S",
+	"geoLat": "46.860028",
+	"geoLong": "142.716806",
+	"txtName": "YUZHNO-SAKHALINSK/KHOMUTOVO",
+	"codeType": "NDB"
 },
 {
 	"codeId": "PAA",
@@ -5293,11 +5279,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "S",
-	"geoLat": "46.860028",
-	"geoLong": "142.716806",
-	"txtName": "YUZHNO-SAKHALINSK/KHOMUTOVO",
-	"codeType": "NDB"
+	"codeId": "TAN",
+	"geoLat": "23.66833",
+	"geoLong": "113.24167",
+	"txtName": "YUANTAN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SCO",
@@ -5349,18 +5335,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "YCF",
-	"geoLat": "44.333092278",
-	"geoLong": "-77.704591833",
-	"txtName": "CAMPBELLFORD",
-	"codeType": "DME"
-},
-{
 	"codeId": "LD",
 	"geoLat": "33.66268889",
 	"geoLong": "-101.7231075",
 	"txtName": "LUBBI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YCF",
+	"geoLat": "44.333092278",
+	"geoLong": "-77.704591833",
+	"txtName": "CAMPBELLFORD",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -5440,18 +5426,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "HVN",
-	"geoLat": "41.26231278",
-	"geoLong": "-72.88519028",
-	"txtName": "NEW HAVEN",
-	"codeType": "DME"
-},
-{
 	"codeId": "W",
 	"geoLat": "29.6967",
 	"geoLong": "106.6333",
 	"txtName": "HUIXING",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HVN",
+	"geoLat": "41.26231278",
+	"geoLong": "-72.88519028",
+	"txtName": "NEW HAVEN",
+	"codeType": "DME"
 },
 {
 	"codeId": "PWL",
@@ -5664,18 +5650,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NFW",
-	"geoLat": "32.77139056",
-	"geoLong": "-97.43930333",
-	"txtName": "NAS JRB FORT WORTH",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "RW",
 	"geoLat": "38.70083",
 	"geoLong": "-76.87017",
 	"txtName": "KIRBE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NFW",
+	"geoLat": "32.77139056",
+	"geoLong": "-97.43930333",
+	"txtName": "NAS JRB FORT WORTH",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "TKA",
@@ -5839,13 +5825,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "ANU",
-	"geoLat": "17.1258806",
-	"geoLong": "-61.8001667",
-	"txtName": "V.C. BIRD",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SLG",
 	"geoLat": "36.18924667",
 	"geoLong": "-94.48854944",
@@ -5853,11 +5832,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "INK",
-	"geoLat": "31.87476333",
-	"geoLong": "-103.24377722",
-	"txtName": "WINK",
-	"codeType": "VOR"
+	"codeId": "ANU",
+	"geoLat": "17.1258806",
+	"geoLong": "-61.8001667",
+	"txtName": "V.C. BIRD",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "DJT",
@@ -5867,10 +5846,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "RRC",
-	"geoLat": "23.308639",
-	"geoLong": "85.326778",
-	"txtName": "RANCHI",
+	"codeId": "INK",
+	"geoLat": "31.87476333",
+	"geoLong": "-103.24377722",
+	"txtName": "WINK",
 	"codeType": "VOR"
 },
 {
@@ -5879,6 +5858,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-88.5887417",
 	"txtName": "PUERTO BARRIOS",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "RRC",
+	"geoLat": "23.308639",
+	"geoLong": "85.326778",
+	"txtName": "RANCHI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "2K",
@@ -5923,18 +5909,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PJM",
-	"geoLat": "18.0381167",
-	"geoLong": "-63.1182778",
-	"txtName": "ST. MAARTEN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TQT",
 	"geoLat": "33.6882278",
 	"geoLong": "131.035825",
 	"txtName": "TSUIKI",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "PJM",
+	"geoLat": "18.0381167",
+	"geoLong": "-63.1182778",
+	"txtName": "ST. MAARTEN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "UYR",
@@ -5972,10 +5958,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ZST",
-	"geoLat": "45.227667306",
-	"geoLong": "-65.958463583",
-	"txtName": "ALPINE (SAINT JOHN)",
+	"codeId": "LNZ",
+	"geoLat": "48.237101694",
+	"geoLong": "14.321790278",
+	"txtName": "LINZ",
 	"codeType": "NDB"
 },
 {
@@ -5984,13 +5970,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "0.0044861",
 	"txtName": "GAO/KOROGOUSSOU",
 	"codeType": "VOR"
-},
-{
-	"codeId": "LNZ",
-	"geoLat": "48.237101694",
-	"geoLong": "14.321790278",
-	"txtName": "LINZ",
-	"codeType": "NDB"
 },
 {
 	"codeId": "EV",
@@ -6085,8 +6064,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "CE",
-	"geoLat": "3.295083",
-	"geoLong": "101.451917",
+	"geoLat": "3.29575",
+	"geoLong": "101.4520139",
 	"txtName": "CELEDONIAN",
 	"codeType": "NDB"
 },
@@ -6140,18 +6119,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TRH",
-	"geoLat": "-27.4967583",
-	"geoLong": "-64.9337167",
-	"txtName": "TERMAS DE RIO HONDO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TBE",
 	"geoLat": "37.2586575",
 	"geoLong": "-103.60005583",
 	"txtName": "TOBE",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "TRH",
+	"geoLat": "-27.4967583",
+	"geoLong": "-64.9337167",
+	"txtName": "TERMAS DE RIO HONDO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VSQ",
@@ -6189,6 +6168,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "9G",
+	"geoLat": "51.780083",
+	"geoLong": "-114.68333",
+	"txtName": "SUNDRE",
+	"codeType": "NDB"
+},
+{
 	"codeId": "SBG",
 	"geoLat": "22.9202306",
 	"geoLong": "93.6166639",
@@ -6201,13 +6187,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-83.36666333",
 	"txtName": "DETROIT",
 	"codeType": "VOR"
-},
-{
-	"codeId": "9G",
-	"geoLat": "51.780083",
-	"geoLong": "-114.68333",
-	"txtName": "SUNDRE",
-	"codeType": "NDB"
 },
 {
 	"codeId": "MAR",
@@ -6245,18 +6224,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CG",
-	"geoLat": "-28.168944",
-	"geoLong": "153.504083",
-	"txtName": "GOLD COAST",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NT",
 	"geoLat": "55.0503833",
 	"geoLong": "-1.6426806",
 	"txtName": "NEWCASTLE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CG",
+	"geoLat": "-28.168944",
+	"geoLong": "153.504083",
+	"txtName": "GOLD COAST",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ZAK",
@@ -6329,18 +6308,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "MNM",
-	"geoLat": "45.18015278",
-	"geoLong": "-87.64716528",
-	"txtName": "MENOMINEE",
-	"codeType": "DME"
-},
-{
 	"codeId": "VR",
 	"geoLat": "30.5",
 	"geoLong": "18.53",
 	"txtName": "RAS LANUF",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MNM",
+	"geoLat": "45.18015278",
+	"geoLong": "-87.64716528",
+	"txtName": "MENOMINEE",
+	"codeType": "DME"
 },
 {
 	"codeId": "DQV",
@@ -6392,18 +6371,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MWA",
-	"geoLat": "37.75437889",
-	"geoLong": "-89.01180333",
-	"txtName": "MARION",
-	"codeType": "DME"
-},
-{
 	"codeId": "BG",
 	"geoLat": "44.7275",
 	"geoLong": "-68.71283",
 	"txtName": "TOTTE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MWA",
+	"geoLat": "37.75437889",
+	"geoLong": "-89.01180333",
+	"txtName": "MARION",
+	"codeType": "DME"
 },
 {
 	"codeId": "OG",
@@ -6462,18 +6441,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "RUS",
-	"geoLat": "35.445472",
-	"geoLong": "50.905361",
-	"txtName": "RUDESHUR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BND",
 	"geoLat": "27.216306",
 	"geoLong": "56.360083",
 	"txtName": "BANDAR ABBASS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RUS",
+	"geoLat": "35.445472",
+	"geoLong": "50.905361",
+	"txtName": "RUDESHUR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AQC",
@@ -6504,18 +6483,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "IZIR",
-	"geoLat": "40.069",
-	"geoLong": "32.555639",
-	"txtName": "ANKARA/MURTED",
-	"codeType": "DME"
-},
-{
 	"codeId": "D",
 	"geoLat": "52.0220833",
 	"geoLong": "113.3401667",
 	"txtName": "CHITA/KADALA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IZIR",
+	"geoLat": "40.069",
+	"geoLong": "32.555639",
+	"txtName": "ANKARA/MURTED",
+	"codeType": "DME"
 },
 {
 	"codeId": "HER",
@@ -6876,8 +6855,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "41.292667",
-	"geoLong": "28.756111",
+	"geoLat": "41.265361",
+	"geoLong": "28.758083",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -6889,18 +6868,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "VFA",
-	"geoLat": "37.013521667",
-	"geoLong": "-7.975009167",
-	"txtName": "FARO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "JBR",
 	"geoLat": "35.87491583",
 	"geoLong": "-90.58850361",
 	"txtName": "JONESBORO",
 	"codeType": "VOR"
+},
+{
+	"codeId": "VFA",
+	"geoLat": "37.013521667",
+	"geoLong": "-7.975009167",
+	"txtName": "FARO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "DHI",
@@ -6917,18 +6896,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PWE",
-	"geoLat": "40.20024222",
-	"geoLong": "-96.20629944",
-	"txtName": "PAWNEE CITY",
-	"codeType": "DME"
-},
-{
 	"codeId": "SKZ",
 	"geoLat": "51.414898389",
 	"geoLong": "12.271277222",
 	"txtName": "SCHKEUDITZ",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PWE",
+	"geoLat": "40.20024222",
+	"geoLong": "-96.20629944",
+	"txtName": "PAWNEE CITY",
+	"codeType": "DME"
 },
 {
 	"codeId": "FLO",
@@ -6959,18 +6938,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "OOD",
-	"geoLat": "39.6360775",
-	"geoLong": "-75.30305639",
-	"txtName": "WOODSTOWN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "A",
 	"geoLat": "51.803306",
 	"geoLong": "39.2515",
 	"txtName": "VORONEZH/CHERTOVITSKOYE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OOD",
+	"geoLat": "39.6360775",
+	"geoLong": "-75.30305639",
+	"txtName": "WOODSTOWN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LUR",
@@ -7127,13 +7106,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PBO",
-	"geoLat": "-23.172611",
-	"geoLong": "117.737028",
-	"txtName": "PARABURDOO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PIZ",
 	"geoLat": "69.73647833",
 	"geoLong": "-162.99629389",
@@ -7146,6 +7118,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-135.36579639",
 	"txtName": "MOUNT EDGECUMBE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PBO",
+	"geoLat": "-23.172611",
+	"geoLong": "117.737028",
+	"txtName": "PARABURDOO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CO",
@@ -7302,18 +7281,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TUM",
-	"geoLat": "9.0515611",
-	"geoLong": "-79.4000583",
-	"txtName": "TOCUMEN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SDE",
 	"geoLat": "-27.7791139",
 	"geoLong": "-64.3180806",
 	"txtName": "SANTIAGO DEL ESTERO",
 	"codeType": "VOR"
+},
+{
+	"codeId": "TUM",
+	"geoLat": "9.0515611",
+	"geoLong": "-79.4000583",
+	"txtName": "TOCUMEN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ODX",
@@ -7561,18 +7540,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "PRR",
-	"geoLat": "-22.17306",
-	"geoLong": "-51.42639",
-	"txtName": "PRUDENTE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PX",
 	"geoLat": "45.1662917",
 	"geoLong": "0.9127833",
 	"txtName": "PERIGUEUX BASSILLAC",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PRR",
+	"geoLat": "-22.17306",
+	"geoLong": "-51.42639",
+	"txtName": "PRUDENTE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SIS",
@@ -7631,18 +7610,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GFV",
-	"geoLat": "-19.6049167",
-	"geoLong": "18.1186111",
-	"txtName": "GROOTFONTEIN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "N",
 	"geoLat": "55.50611",
 	"geoLong": "37.47472",
 	"txtName": "OSTAFYEVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GFV",
+	"geoLat": "-19.6049167",
+	"geoLong": "18.1186111",
+	"txtName": "GROOTFONTEIN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "PSM",
@@ -7729,18 +7708,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "RCO",
-	"geoLat": "-9.875972",
-	"geoLong": "-67.905389",
-	"txtName": "RIO BRANCO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "P",
 	"geoLat": "57.764972",
 	"geoLong": "28.383778",
 	"txtName": "PSKOV",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RCO",
+	"geoLat": "-9.875972",
+	"geoLong": "-67.905389",
+	"txtName": "RIO BRANCO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KMH",
@@ -7757,18 +7736,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LFT",
-	"geoLat": "30.19381444",
-	"geoLong": "-91.99257139",
-	"txtName": "LAFAYETTE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RG",
 	"geoLat": "54.599667",
 	"geoLong": "55.843333",
 	"txtName": "UFA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LFT",
+	"geoLat": "30.19381444",
+	"geoLong": "-91.99257139",
+	"txtName": "LAFAYETTE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NY",
@@ -7806,11 +7785,11 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "LEH",
-	"geoLat": "34.1326389",
-	"geoLong": "77.54175",
-	"txtName": "LEH",
-	"codeType": "VOR"
+	"codeId": "G",
+	"geoLat": "54.143056",
+	"geoLong": "45.232361",
+	"txtName": "SARANSK",
+	"codeType": "NDB"
 },
 {
 	"codeId": "MKL",
@@ -7820,11 +7799,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "G",
-	"geoLat": "54.143056",
-	"geoLong": "45.232361",
-	"txtName": "SARANSK",
-	"codeType": "NDB"
+	"codeId": "LEH",
+	"geoLat": "34.1326389",
+	"geoLong": "77.54175",
+	"txtName": "LEH",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VJ",
@@ -7939,18 +7918,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SNT",
-	"geoLat": "14.9390944",
-	"geoLong": "-23.4821222",
-	"txtName": "PRAIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SON",
 	"geoLat": "-15.5066194",
 	"geoLong": "167.2171194",
 	"txtName": "SANTO",
 	"codeType": "DME"
+},
+{
+	"codeId": "SNT",
+	"geoLat": "14.9390944",
+	"geoLong": "-23.4821222",
+	"txtName": "PRAIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TNO",
@@ -7960,18 +7939,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BGS",
-	"geoLat": "42.587167",
-	"geoLong": "27.537972",
-	"txtName": "BURGAS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "45.2343889",
 	"geoLong": "14.5523528",
 	"txtName": "MM14",
 	"codeType": "MKR"
+},
+{
+	"codeId": "BGS",
+	"geoLat": "42.587167",
+	"geoLong": "27.537972",
+	"txtName": "BURGAS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TTE",
@@ -7981,13 +7960,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "NRS",
-	"geoLat": "32.564175",
-	"geoLong": "-117.109755",
-	"txtName": "IMPERIAL BEACH",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "Y",
 	"geoLat": "40.1046083",
 	"geoLong": "44.4505806",
@@ -7995,11 +7967,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "DUS",
-	"geoLat": "51.283187556",
-	"geoLong": "6.753726333",
-	"txtName": "DUESSELDORF",
-	"codeType": "VOR/DME"
+	"codeId": "NRS",
+	"geoLat": "32.564175",
+	"geoLong": "-117.109755",
+	"txtName": "IMPERIAL BEACH",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "IUP",
@@ -8007,6 +7979,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "23.058611",
 	"txtName": "PAJALA",
 	"codeType": "DME"
+},
+{
+	"codeId": "DUS",
+	"geoLat": "51.283187556",
+	"geoLong": "6.753726333",
+	"txtName": "DUESSELDORF",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PHV",
@@ -8065,17 +8044,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YOW",
-	"geoLat": "45.4417444",
-	"geoLong": "-75.8968639",
-	"txtName": "OTTAWA",
-	"codeType": "DME"
-},
-{
 	"codeId": "IHZ",
 	"geoLat": "44.893063389",
 	"geoLong": "-63.513311361",
 	"txtName": "HALIFAX",
+	"codeType": "DME"
+},
+{
+	"codeId": "YOW",
+	"geoLat": "45.4417444",
+	"geoLong": "-75.8968639",
+	"txtName": "OTTAWA",
 	"codeType": "DME"
 },
 {
@@ -8107,18 +8086,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YHY",
-	"geoLat": "60.836265333",
-	"geoLong": "-115.803269167",
-	"txtName": "HAY RIVER",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BG",
 	"geoLat": "43.88417",
 	"geoLong": "133.25306",
 	"txtName": "MURAVEYKA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YHY",
+	"geoLat": "60.836265333",
+	"geoLong": "-115.803269167",
+	"txtName": "HAY RIVER",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PEP",
@@ -8317,17 +8296,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "ORL",
-	"geoLat": "28.54272278",
-	"geoLong": "-81.33501472",
-	"txtName": "ORLANDO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "USK",
 	"geoLat": "38.683694",
 	"geoLong": "29.475361",
 	"txtName": "USAK",
+	"codeType": "VOR"
+},
+{
+	"codeId": "ORL",
+	"geoLat": "28.54272278",
+	"geoLong": "-81.33501472",
+	"txtName": "ORLANDO",
 	"codeType": "VOR"
 },
 {
@@ -8422,18 +8401,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KAM",
-	"geoLat": "18.307806",
-	"geoLong": "42.812306",
-	"txtName": "KHAMIS MUSHAIT / KING KHALED AIR BASE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GVR",
 	"geoLat": "38.75833889",
 	"geoLong": "-85.47064444",
 	"txtName": "HANOVER",
 	"codeType": "DME"
+},
+{
+	"codeId": "KAM",
+	"geoLat": "18.307806",
+	"geoLong": "42.812306",
+	"txtName": "KHAMIS MUSHAIT / KING KHALED AIR BASE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SOA",
@@ -8759,8 +8738,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "51.602981389",
-	"geoLong": "6.118270278",
+	"geoLat": "51.603327778",
+	"geoLong": "6.155571389",
 	"txtName": "",
 	"codeType": "ILS"
 },
@@ -8779,18 +8758,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "XMN",
-	"geoLat": "24.54333",
-	"geoLong": "118.12333",
-	"txtName": "XIAMEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SB",
 	"geoLat": "27.74",
 	"geoLong": "102.165",
 	"txtName": "HEXI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "XMN",
+	"geoLat": "24.54333",
+	"geoLong": "118.12333",
+	"txtName": "XIAMEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KRT",
@@ -8842,18 +8821,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "HRO",
-	"geoLat": "36.31830806",
-	"geoLong": "-93.21327167",
-	"txtName": "HARRISON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "T",
 	"geoLat": "43.847944",
 	"geoLong": "51.117167",
 	"txtName": "AKTAU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HRO",
+	"geoLat": "36.31830806",
+	"geoLong": "-93.21327167",
+	"txtName": "HARRISON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ISM",
@@ -8905,18 +8884,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CLS",
-	"geoLat": "39.707167",
-	"geoLong": "-0.986333",
-	"txtName": "CALLES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "D",
 	"geoLat": "67.493611",
 	"geoLong": "63.936194",
 	"txtName": "VORKUTA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CLS",
+	"geoLat": "39.707167",
+	"geoLong": "-0.986333",
+	"txtName": "CALLES",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -8947,18 +8926,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "49.213625611",
-	"geoLong": "7.117759306",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "CSG",
 	"geoLat": "32.61525222",
 	"geoLong": "-85.01762889",
 	"txtName": "COLUMBUS",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "",
+	"geoLat": "49.213625611",
+	"geoLong": "7.117759306",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SAX",
@@ -9052,18 +9031,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MIL",
-	"geoLat": "-0.896222",
-	"geoLong": "131.289778",
-	"txtName": "SORONG/DOMINE EDWARD OSOK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "Z",
 	"geoLat": "51.814611",
 	"geoLong": "107.477417",
 	"txtName": "ULAN-UDE/MUKHINO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MIL",
+	"geoLat": "-0.896222",
+	"geoLong": "131.289778",
+	"txtName": "SORONG/DOMINE EDWARD OSOK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ULW",
@@ -9129,18 +9108,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "JFK",
-	"geoLat": "40.63288389",
-	"geoLong": "-73.77139167",
-	"txtName": "KENNEDY",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ISV",
 	"geoLat": "37.416861",
 	"geoLong": "-5.878472",
 	"txtName": "SEVILLA",
 	"codeType": "DME"
+},
+{
+	"codeId": "JFK",
+	"geoLat": "40.63288389",
+	"geoLong": "-73.77139167",
+	"txtName": "KENNEDY",
+	"codeType": "VOR"
 },
 {
 	"codeId": "INL",
@@ -9171,11 +9150,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IHEW",
-	"geoLat": "53.878057556",
-	"geoLong": "14.150983",
-	"txtName": "HERINGSDORF",
-	"codeType": "DME"
+	"codeId": "DCN",
+	"geoLat": "23.8428667",
+	"geoLong": "90.4176861",
+	"txtName": "DHAKA",
+	"codeType": "NDB"
 },
 {
 	"codeId": "JJB",
@@ -9183,13 +9162,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "80.0596389",
 	"txtName": "JABALPUR",
 	"codeType": "VOR"
-},
-{
-	"codeId": "DCN",
-	"geoLat": "23.8428667",
-	"geoLong": "90.4176861",
-	"txtName": "DHAKA",
-	"codeType": "NDB"
 },
 {
 	"codeId": "NEM",
@@ -9206,17 +9178,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PVU",
-	"geoLat": "40.21493667",
-	"geoLong": "-111.72131972",
-	"txtName": "PROVO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PKK",
 	"geoLat": "53.19475",
 	"geoLong": "158.434972",
 	"txtName": "PETROPAVLOVSK-KAMCHATSKY/YELIZOVO",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "PVU",
+	"geoLat": "40.21493667",
+	"geoLong": "-111.72131972",
+	"txtName": "PROVO",
 	"codeType": "VOR/DME"
 },
 {
@@ -9325,18 +9297,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "HEL",
-	"geoLat": "60.3378167",
-	"geoLong": "24.9537306",
-	"txtName": "HELSINKI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DE",
 	"geoLat": "3.7907667",
 	"geoLong": "10.13806",
 	"txtName": "EDEA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HEL",
+	"geoLat": "60.3378167",
+	"geoLong": "24.9537306",
+	"txtName": "HELSINKI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CLA",
@@ -9388,18 +9360,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MNK",
-	"geoLat": "43.753333",
-	"geoLong": "59.028333",
-	"txtName": "MUYNAK",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KAY",
 	"geoLat": "14.4790833",
 	"geoLong": "-11.42175",
 	"txtName": "KAYES / DAG-DAG",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "MNK",
+	"geoLat": "43.753333",
+	"geoLong": "59.028333",
+	"txtName": "MUYNAK",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VPK",
@@ -9479,17 +9451,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "YT",
-	"geoLat": "-19.67444",
-	"geoLong": "28.84778",
-	"txtName": "INYATHI",
-	"codeType": "NDB"
-},
-{
 	"codeId": "F",
 	"geoLat": "59.291056",
 	"geoLong": "38.045417",
 	"txtName": "CHEREPOVETS",
+	"codeType": "NDB"
+},
+{
+	"codeId": "YT",
+	"geoLat": "-19.67444",
+	"geoLong": "28.84778",
+	"txtName": "INYATHI",
 	"codeType": "NDB"
 },
 {
@@ -9536,15 +9508,15 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "65.7898583",
-	"geoLong": "24.5823556",
+	"geoLat": "54.481456444",
+	"geoLong": "-128.591091861",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
 {
 	"codeId": "",
-	"geoLat": "54.481456444",
-	"geoLong": "-128.591091861",
+	"geoLat": "65.7898583",
+	"geoLong": "24.5823556",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -9563,18 +9535,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "AWZ",
-	"geoLat": "31.337583",
-	"geoLong": "48.764583",
-	"txtName": "AHWAZ",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "RKZ",
 	"geoLat": "29.355",
 	"geoLong": "89.27167",
 	"txtName": "RIKAZE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "AWZ",
+	"geoLat": "31.337583",
+	"geoLong": "48.764583",
+	"txtName": "AHWAZ",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CV",
@@ -9598,18 +9570,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "53.046402222",
-	"geoLong": "8.766942889",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "SO",
 	"geoLat": "42.969111",
 	"geoLong": "-8.439667",
 	"txtName": "SANTIAGO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "53.046402222",
+	"geoLong": "8.766942889",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "IZD",
@@ -9626,18 +9598,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GOM",
-	"geoLat": "-1.6786",
-	"geoLong": "29.2405167",
-	"txtName": "GOMA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "41.682889",
 	"geoLong": "44.933694",
 	"txtName": "MM 13R",
 	"codeType": "MKR"
+},
+{
+	"codeId": "GOM",
+	"geoLat": "-1.6786",
+	"geoLong": "29.2405167",
+	"txtName": "GOMA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ILO",
@@ -9675,18 +9647,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "50.675915528",
-	"geoLong": "-127.354055917",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "OJT",
 	"geoLat": "35.1841361",
 	"geoLong": "140.3714278",
 	"txtName": "ONJUKU",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "",
+	"geoLat": "50.675915528",
+	"geoLong": "-127.354055917",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "KSC",
@@ -9724,18 +9696,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LSF",
-	"geoLat": "32.33229444",
-	"geoLong": "-84.99311667",
-	"txtName": "LAWSON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "INR",
 	"geoLat": "39.1955",
 	"geoLong": "45.446583",
 	"txtName": "NAKHCHIVAN",
 	"codeType": "DME"
+},
+{
+	"codeId": "LSF",
+	"geoLat": "32.33229444",
+	"geoLong": "-84.99311667",
+	"txtName": "LAWSON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SBG",
@@ -9885,18 +9857,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "COD",
-	"geoLat": "44.62045167",
-	"geoLong": "-108.96491722",
-	"txtName": "CODY",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ZEM",
 	"geoLat": "36.795",
 	"geoLong": "3.57083",
 	"txtName": "ZEMMOURI",
 	"codeType": "VOR"
+},
+{
+	"codeId": "COD",
+	"geoLat": "44.62045167",
+	"geoLong": "-108.96491722",
+	"txtName": "CODY",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MEZ",
@@ -9911,6 +9883,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "30.68528",
 	"txtName": "ODESA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IN",
+	"geoLat": "53.07778",
+	"geoLong": "132.94778",
+	"txtName": "EKIMCHAN",
+	"codeType": "DME"
 },
 {
 	"codeId": "AMN",
@@ -9962,18 +9941,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "OEM",
-	"geoLat": "48.231438889",
-	"geoLong": "14.175216667",
-	"txtName": "LINZ-RWY08",
-	"codeType": "DME"
-},
-{
 	"codeId": "PMV",
 	"geoLat": "40.94378889",
 	"geoLong": "-95.91246944",
 	"txtName": "PLATTSMOUTH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OEM",
+	"geoLat": "48.231438889",
+	"geoLong": "14.175216667",
+	"txtName": "LINZ-RWY08",
+	"codeType": "DME"
 },
 {
 	"codeId": "CON",
@@ -9984,8 +9963,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BTM",
-	"geoLat": "1.1413361",
-	"geoLong": "104.1367722",
+	"geoLat": "1.141333",
+	"geoLong": "104.136778",
 	"txtName": "BATAM/HANG NADIM",
 	"codeType": "VOR/DME"
 },
@@ -10229,7 +10208,7 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "TUL",
-	"geoLat": "36.19625361",
+	"geoLat": "36.19625333",
 	"geoLong": "-95.78809028",
 	"txtName": "TULSA",
 	"codeType": "VORTAC"
@@ -10242,25 +10221,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "41.302639",
-	"geoLong": "33.794083",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "TCK",
 	"geoLat": "24.253611",
 	"geoLong": "120.61875",
 	"txtName": "TAICHUNG/CINGCYUANGANG",
 	"codeType": "DME"
-},
-{
-	"codeId": "",
-	"geoLat": "49.6163083",
-	"geoLong": "6.1843444",
-	"txtName": "",
-	"codeType": "ILS_DME"
 },
 {
 	"codeId": "KHY",
@@ -10270,18 +10235,25 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "",
+	"geoLat": "41.302639",
+	"geoLong": "33.794083",
+	"txtName": "",
+	"codeType": "ILS_DME"
+},
+{
+	"codeId": "",
+	"geoLat": "49.6163083",
+	"geoLong": "6.1843444",
+	"txtName": "",
+	"codeType": "ILS_DME"
+},
+{
 	"codeId": "LVZ",
 	"geoLat": "41.27279889",
 	"geoLong": "-75.68946611",
 	"txtName": "WILKES-BARRE",
 	"codeType": "VOR"
-},
-{
-	"codeId": "ANN",
-	"geoLat": "55.06040861",
-	"geoLong": "-131.57839944",
-	"txtName": "ANNETTE ISLAND",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OB",
@@ -10296,6 +10268,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-79.91746528",
 	"txtName": "BALES",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ANN",
+	"geoLat": "55.06040861",
+	"geoLong": "-131.57839944",
+	"txtName": "ANNETTE ISLAND",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IVC",
@@ -10368,18 +10347,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "KC",
-	"geoLat": "24.9119611",
-	"geoLong": "67.1816417",
-	"txtName": "KARACHI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BQM",
 	"geoLat": "38.23021944",
 	"geoLong": "-85.66474472",
 	"txtName": "BOWMAN",
 	"codeType": "DME"
+},
+{
+	"codeId": "KC",
+	"geoLat": "24.9119611",
+	"geoLong": "67.1816417",
+	"txtName": "KARACHI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TOG",
@@ -10438,11 +10417,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SPA",
-	"geoLat": "37.9177778",
-	"geoLong": "23.9377778",
-	"txtName": "ATHINAI",
-	"codeType": "VOR"
+	"codeId": "DOB",
+	"geoLat": "33.91465278",
+	"geoLong": "-84.50731111",
+	"txtName": "DOBBINS",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "LOV",
@@ -10452,11 +10431,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "DOB",
-	"geoLat": "33.91465278",
-	"geoLong": "-84.50731111",
-	"txtName": "DOBBINS",
-	"codeType": "TACAN"
+	"codeId": "SPA",
+	"geoLat": "37.9180194",
+	"geoLong": "23.9379833",
+	"txtName": "ATHINAI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "STM",
@@ -10564,18 +10543,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "53.2169639",
-	"geoLong": "63.5401722",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "ESC",
 	"geoLat": "5.617583",
 	"geoLong": "5.185583",
 	"txtName": "ESCRAVOS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "53.2169639",
+	"geoLong": "63.5401722",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "AAR",
@@ -10599,18 +10578,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "NWK",
-	"geoLat": "60.94389",
-	"geoLong": "76.46694",
-	"txtName": "NIZHNEVARTOVSK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "JXT",
 	"geoLat": "36.1105575",
 	"geoLong": "-83.4756325",
 	"txtName": "JEFFERSON",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NWK",
+	"geoLat": "60.94389",
+	"geoLong": "76.46694",
+	"txtName": "NIZHNEVARTOVSK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SO",
@@ -10655,18 +10634,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MIU",
-	"geoLat": "11.87075",
-	"geoLong": "13.098",
-	"txtName": "MAIDUGURI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DLG",
 	"geoLat": "58.99423389",
 	"geoLong": "-158.55221944",
 	"txtName": "DILLINGHAM",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "MIU",
+	"geoLat": "11.87075",
+	"geoLong": "13.098",
+	"txtName": "MAIDUGURI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TDT",
@@ -10711,18 +10690,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "VEN",
-	"geoLat": "-27.23083",
-	"geoLong": "-55.83611",
-	"txtName": "ENCARNACION",
-	"codeType": "VOR"
-},
-{
 	"codeId": "OIA",
 	"geoLat": "3.86028",
 	"geoLong": "-51.8",
 	"txtName": "OIAPOQUE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "VEN",
+	"geoLat": "-27.23083",
+	"geoLong": "-55.83611",
+	"txtName": "ENCARNACION",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LK",
@@ -10746,13 +10725,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "VVC",
-	"geoLat": "4.0666667",
-	"geoLong": "-73.3822222",
-	"txtName": "VILLAVICENCIO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "VLB",
 	"geoLat": "5.2896583",
 	"geoLong": "115.2581444",
@@ -10765,6 +10737,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "69.4549472",
 	"txtName": "ZHOB",
 	"codeType": "NDB"
+},
+{
+	"codeId": "VVC",
+	"geoLat": "4.0666667",
+	"geoLong": "-73.3822222",
+	"txtName": "VILLAVICENCIO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -10781,18 +10760,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CEU",
-	"geoLat": "35.8925",
-	"geoLong": "-5.305278",
-	"txtName": "CEUTA",
-	"codeType": "DME"
-},
-{
 	"codeId": "DNC",
 	"geoLat": "43.1374556",
 	"geoLong": "17.8473833",
 	"txtName": "MOSTAR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CEU",
+	"geoLat": "35.8925",
+	"geoLong": "-5.305278",
+	"txtName": "CEUTA",
+	"codeType": "DME"
 },
 {
 	"codeId": "JSV",
@@ -10816,18 +10795,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LZV",
-	"geoLat": "-26.6825556",
-	"geoLong": "15.2467306",
-	"txtName": "LUDERITZ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "E",
 	"geoLat": "44.3185444",
 	"geoLong": "23.9192639",
 	"txtName": "CRAIOVA",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "LZV",
+	"geoLat": "-26.6825556",
+	"geoLong": "15.2467306",
+	"txtName": "LUDERITZ",
+	"codeType": "VOR"
 },
 {
 	"codeId": "YW",
@@ -11019,13 +10998,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SPL",
-	"geoLat": "52.332149528",
-	"geoLong": "4.7498925",
-	"txtName": "AMSTERDAM/SCHIPHOL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ELI",
 	"geoLat": "-33.0375167",
 	"geoLong": "27.8093583",
@@ -11033,11 +11005,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MDI",
-	"geoLat": "-28.12611",
-	"geoLong": "-49.47667",
-	"txtName": "MORRO DA IGREJA",
-	"codeType": "DME"
+	"codeId": "SPL",
+	"geoLat": "52.332149528",
+	"geoLong": "4.7498925",
+	"txtName": "AMSTERDAM/SCHIPHOL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SSC",
@@ -11054,11 +11026,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BDH",
-	"geoLat": "45.11767056",
-	"geoLong": "-95.12706139",
-	"txtName": "WILLMAR",
-	"codeType": "VOR/DME"
+	"codeId": "MDI",
+	"geoLat": "-28.12611",
+	"geoLong": "-49.47667",
+	"txtName": "MORRO DA IGREJA",
+	"codeType": "DME"
 },
 {
 	"codeId": "GJM",
@@ -11066,6 +11038,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-65.28111",
 	"txtName": "GUAJARA-MIRIM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BDH",
+	"geoLat": "45.11767056",
+	"geoLong": "-95.12706139",
+	"txtName": "WILLMAR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CAR",
@@ -11110,13 +11089,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "52.300138889",
-	"geoLong": "4.737161111",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "IAG",
 	"geoLat": "43.11254556",
 	"geoLong": "-78.96023944",
@@ -11124,17 +11096,24 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "PW",
-	"geoLat": "49.080113417",
-	"geoLong": "20.072540417",
-	"txtName": "TATRY WEST",
-	"codeType": "NDB"
+	"codeId": "",
+	"geoLat": "52.300138889",
+	"geoLong": "4.737161111",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SAD",
 	"geoLat": "68.087628278",
 	"geoLong": "13.637041",
 	"txtName": "SANDSUND",
+	"codeType": "NDB"
+},
+{
+	"codeId": "PW",
+	"geoLat": "49.080113417",
+	"geoLong": "20.072540417",
+	"txtName": "TATRY WEST",
 	"codeType": "NDB"
 },
 {
@@ -11157,6 +11136,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "108.008889",
 	"txtName": "PLEIKU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "VCV",
+	"geoLat": "34.59416361",
+	"geoLong": "-117.38999833",
+	"txtName": "VICTORVILLE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FLL",
@@ -11202,8 +11188,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "ABA",
-	"geoLat": "12.50567778",
-	"geoLong": "-69.9431",
+	"geoLat": "12.5056806",
+	"geoLong": "-69.9431028",
 	"txtName": "ARUBA",
 	"codeType": "VOR"
 },
@@ -11271,18 +11257,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "48.331666306",
-	"geoLong": "-70.971755333",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "YUY",
 	"geoLat": "48.172910361",
 	"geoLong": "-78.938642611",
 	"txtName": "ROUYN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "48.331666306",
+	"geoLong": "-70.971755333",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "MF",
@@ -11530,18 +11516,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TSN",
-	"geoLat": "41.62944",
-	"geoLong": "46.01556",
-	"txtName": "TSNORI",
-	"codeType": "DME"
-},
-{
 	"codeId": "RB",
 	"geoLat": "74.746866083",
 	"geoLong": "-94.995031",
 	"txtName": "RESOLUTE BAY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TSN",
+	"geoLat": "41.62944",
+	"geoLong": "46.01556",
+	"txtName": "TSNORI",
+	"codeType": "DME"
 },
 {
 	"codeId": "HUO",
@@ -11551,18 +11537,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SAE",
-	"geoLat": "41.11910306",
-	"geoLong": "-101.77605583",
-	"txtName": "SEARLE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HVS",
 	"geoLat": "34.40653056",
 	"geoLong": "-80.11977556",
 	"txtName": "HARTSVILLE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SAE",
+	"geoLat": "41.11910306",
+	"geoLong": "-101.77605583",
+	"txtName": "SEARLE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "WG",
@@ -11614,18 +11600,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "LPB",
-	"geoLat": "19.910972",
-	"geoLong": "102.171917",
-	"txtName": "LUANG PHABANG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TBD",
 	"geoLat": "29.66432222",
 	"geoLong": "-90.82909306",
 	"txtName": "TIBBY",
 	"codeType": "DME"
+},
+{
+	"codeId": "LPB",
+	"geoLat": "19.910972",
+	"geoLong": "102.171917",
+	"txtName": "LUANG PHABANG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "OS",
@@ -11635,18 +11621,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "INDL",
-	"geoLat": "53.438028",
-	"geoLong": "-6.275056",
-	"txtName": "ILS DME RWY 10L",
-	"codeType": "DME"
-},
-{
 	"codeId": "YGX",
 	"geoLat": "56.35325",
 	"geoLong": "-94.700028",
 	"txtName": "GILLAM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "INDL",
+	"geoLat": "53.438028",
+	"geoLong": "-6.275056",
+	"txtName": "ILS DME RWY 10L",
+	"codeType": "DME"
 },
 {
 	"codeId": "VD",
@@ -11740,18 +11726,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "ODN",
-	"geoLat": "55.5810111",
-	"geoLong": "10.6529889",
-	"txtName": "ODIN",
-	"codeType": "DME"
-},
-{
 	"codeId": "GRT",
 	"geoLat": "40.489288028",
 	"geoLong": "17.410898056",
 	"txtName": "GROTTAGLIE",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "ODN",
+	"geoLat": "55.5810111",
+	"geoLong": "10.6529889",
+	"txtName": "ODIN",
+	"codeType": "DME"
 },
 {
 	"codeId": "GO",
@@ -11838,18 +11824,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PIE",
-	"geoLat": "27.90776444",
-	"geoLong": "-82.68430917",
-	"txtName": "ST PETERSBURG",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "APN",
 	"geoLat": "19.6372917",
 	"geoLong": "-98.3985361",
 	"txtName": "APAN",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "PIE",
+	"geoLat": "27.90776444",
+	"geoLong": "-82.68430917",
+	"txtName": "ST PETERSBURG",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "PON",
@@ -12021,15 +12007,15 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "67.6933639",
-	"geoLong": "24.8497083",
+	"geoLat": "38.756889",
+	"geoLong": "41.637639",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
 {
 	"codeId": "",
-	"geoLat": "38.756889",
-	"geoLong": "41.637639",
+	"geoLat": "67.6933639",
+	"geoLong": "24.8497083",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -12062,18 +12048,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "YKV",
-	"geoLat": "37.54917",
-	"geoLong": "44.2425",
-	"txtName": "YUKSEKOVA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OE",
 	"geoLat": "65.686472",
 	"geoLong": "-18.077639",
 	"txtName": "ODDEYRI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YKV",
+	"geoLat": "37.54917",
+	"geoLong": "44.2425",
+	"txtName": "YUKSEKOVA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MOS",
@@ -12181,18 +12167,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NVV",
-	"geoLat": "-31.38",
-	"geoLong": "19.07111",
-	"txtName": "NIEUWOUDTVILLE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "UBP",
 	"geoLat": "23.023175",
 	"geoLong": "-82.5807417",
 	"txtName": "PLAYA BARACOA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NVV",
+	"geoLat": "-31.38",
+	"geoLong": "19.07111",
+	"txtName": "NIEUWOUDTVILLE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SDO",
@@ -12230,18 +12216,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SH",
-	"geoLat": "66.588083",
-	"geoLong": "66.607917",
-	"txtName": "SALEKHARD",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BCS",
 	"geoLat": "40.6585775",
 	"geoLong": "17.951913333",
 	"txtName": "BRINDISI/CASALE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SH",
+	"geoLat": "66.588083",
+	"geoLong": "66.607917",
+	"txtName": "SALEKHARD",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CHU",
@@ -12377,18 +12363,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "FUZ",
-	"geoLat": "32.88944889",
-	"geoLong": "-97.17942583",
-	"txtName": "RANGER",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LB",
 	"geoLat": "-12.20444",
 	"geoLong": "13.54667",
 	"txtName": "LOBITO (MIL)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FUZ",
+	"geoLat": "32.88944889",
+	"geoLong": "-97.17942583",
+	"txtName": "RANGER",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NG",
@@ -12405,18 +12391,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KFB",
-	"geoLat": "21.346611",
-	"geoLong": "39.171139",
-	"txtName": "KING FAISAL NAVAL BASE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LC",
 	"geoLat": "62.92306",
 	"geoLong": "152.42389",
 	"txtName": "SEYMCHAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KFB",
+	"geoLat": "21.346611",
+	"geoLong": "39.171139",
+	"txtName": "KING FAISAL NAVAL BASE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DBK",
@@ -12433,13 +12419,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ACC",
-	"geoLat": "5.6340694",
-	"geoLong": "-0.1553639",
-	"txtName": "ACCRA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TAO",
 	"geoLat": "36.28833",
 	"geoLong": "120.37",
@@ -12454,11 +12433,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "LBK",
-	"geoLat": "37.8001806",
-	"geoLong": "65.1431778",
-	"txtName": "KERKI",
-	"codeType": "VOR"
+	"codeId": "ACC",
+	"geoLat": "5.6340694",
+	"geoLong": "-0.1553639",
+	"txtName": "ACCRA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SZC",
@@ -12466,6 +12445,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "14.911624333",
 	"txtName": "SZCZECIN/GOLENIOW",
 	"codeType": "DME"
+},
+{
+	"codeId": "LBK",
+	"geoLat": "37.8001806",
+	"geoLong": "65.1431778",
+	"txtName": "KERKI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DBS",
@@ -12573,6 +12559,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "CN",
+	"geoLat": "31.741",
+	"geoLong": "-97.07817",
+	"txtName": "LEROI",
+	"codeType": "NDB"
+},
+{
 	"codeId": "YTE",
 	"geoLat": "38.3886222",
 	"geoLong": "140.3579528",
@@ -12585,20 +12578,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "20.311167",
 	"txtName": "BEOGRAD",
 	"codeType": "VOR"
-},
-{
-	"codeId": "CN",
-	"geoLat": "31.741",
-	"geoLong": "-97.07817",
-	"txtName": "LEROI",
-	"codeType": "NDB"
-},
-{
-	"codeId": "OGN",
-	"geoLat": "59.00528",
-	"geoLong": "29.11111",
-	"txtName": "OSMINO",
-	"codeType": "DME"
 },
 {
 	"codeId": "HQ",
@@ -12620,6 +12599,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-102.17939389",
 	"txtName": "GORDON",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OGN",
+	"geoLat": "59.00528",
+	"geoLong": "29.11111",
+	"txtName": "OSMINO",
+	"codeType": "DME"
 },
 {
 	"codeId": "ATR",
@@ -13126,17 +13112,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CEH",
-	"geoLat": "26.665",
-	"geoLong": "100.72",
-	"txtName": "CHENGHAI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "VTW",
 	"geoLat": "4.324528",
 	"geoLong": "118.139917",
 	"txtName": "TAWAU",
+	"codeType": "VOR"
+},
+{
+	"codeId": "CEH",
+	"geoLat": "26.665",
+	"geoLong": "100.72",
+	"txtName": "CHENGHAI",
 	"codeType": "VOR"
 },
 {
@@ -13154,17 +13140,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IOGN",
-	"geoLat": "40.963639",
-	"geoLong": "38.106444",
-	"txtName": "ORDU GIRESUN",
-	"codeType": "DME"
-},
-{
 	"codeId": "ROZ",
 	"geoLat": "41.6975",
 	"geoLong": "24.73833",
 	"txtName": "ROZHEN",
+	"codeType": "DME"
+},
+{
+	"codeId": "IOGN",
+	"geoLat": "40.963639",
+	"geoLong": "38.106444",
+	"txtName": "ORDU GIRESUN",
 	"codeType": "DME"
 },
 {
@@ -13238,18 +13224,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TD",
-	"geoLat": "43.6169722",
-	"geoLong": "1.3768056",
-	"txtName": "",
-	"codeType": "DME"
-},
-{
 	"codeId": "ST",
 	"geoLat": "17.69191944",
 	"geoLong": "-64.88465",
 	"txtName": "PESTE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TD",
+	"geoLat": "43.6169722",
+	"geoLong": "1.3768056",
+	"txtName": "",
+	"codeType": "DME"
 },
 {
 	"codeId": "STM",
@@ -13308,18 +13294,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "EJA",
-	"geoLat": "7.0286111",
-	"geoLong": "-73.8055556",
-	"txtName": "BARRANCABERMEJA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "VSB",
 	"geoLat": "57.659528",
 	"geoLong": "18.346861",
 	"txtName": "VISBY",
 	"codeType": "VOR"
+},
+{
+	"codeId": "EJA",
+	"geoLat": "7.0286111",
+	"geoLong": "-73.8055556",
+	"txtName": "BARRANCABERMEJA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BOS",
@@ -13350,18 +13336,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "KDP",
-	"geoLat": "14.5097917",
-	"geoLong": "78.7721528",
-	"txtName": "KADAPA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "O",
 	"geoLat": "50.315694",
 	"geoLong": "30.903111",
 	"txtName": "KYIV/BORYSPIL",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "KDP",
+	"geoLat": "14.5097917",
+	"geoLong": "78.7721528",
+	"txtName": "KADAPA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SSN",
@@ -13392,18 +13378,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "56.248985472",
-	"geoLong": "-120.760878583",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "MDM",
 	"geoLat": "43.9099056",
 	"geoLong": "-0.5043361",
 	"txtName": "MARSAN",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "",
+	"geoLat": "56.248985472",
+	"geoLong": "-120.760878583",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "KFR",
@@ -13413,18 +13399,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CAM",
-	"geoLat": "42.99428889",
-	"geoLong": "-73.34401889",
-	"txtName": "CAMBRIDGE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MN",
 	"geoLat": "65.302278",
 	"geoLong": "-14.380083",
 	"txtName": "MYNES",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CAM",
+	"geoLat": "42.99428889",
+	"geoLong": "-73.34401889",
+	"txtName": "CAMBRIDGE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SR",
@@ -13441,18 +13427,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SHR",
-	"geoLat": "44.8423",
-	"geoLong": "-107.06110028",
-	"txtName": "SHERIDAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "WU",
 	"geoLat": "63.723833",
 	"geoLong": "20.415694",
 	"txtName": "UMEA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SHR",
+	"geoLat": "44.8423",
+	"geoLong": "-107.06110028",
+	"txtName": "SHERIDAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -13623,11 +13609,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FFU",
-	"geoLat": "40.27489472",
-	"geoLong": "-111.94053139",
-	"txtName": "FAIRFIELD",
-	"codeType": "VORTAC"
+	"codeId": "ANC",
+	"geoLat": "43.586476111",
+	"geoLong": "13.471259167",
+	"txtName": "ANCONA",
+	"codeType": "DME"
 },
 {
 	"codeId": "EKI",
@@ -13637,11 +13623,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ANC",
-	"geoLat": "43.586476111",
-	"geoLong": "13.471259167",
-	"txtName": "ANCONA",
-	"codeType": "DME"
+	"codeId": "FFU",
+	"geoLat": "40.27489472",
+	"geoLong": "-111.94053139",
+	"txtName": "FAIRFIELD",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "MLD",
@@ -13742,13 +13728,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FOL",
-	"geoLat": "44.193743028",
-	"geoLong": "12.067674056",
-	"txtName": "FORLI'",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NP",
 	"geoLat": "17.3924139",
 	"geoLong": "104.6426222",
@@ -13756,11 +13735,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SND",
-	"geoLat": "44.90306",
-	"geoLong": "110.13028",
-	"txtName": "SAINSHAND",
-	"codeType": "VOR/DME"
+	"codeId": "FOL",
+	"geoLat": "44.193743028",
+	"geoLong": "12.067674056",
+	"txtName": "FORLI'",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ILU",
@@ -13768,6 +13747,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "41.590667",
 	"txtName": "BATUMI",
 	"codeType": "DME"
+},
+{
+	"codeId": "SND",
+	"geoLat": "44.90306",
+	"geoLong": "110.13028",
+	"txtName": "SAINSHAND",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TEB",
@@ -13778,8 +13764,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BAC",
-	"geoLat": "5.5226306",
-	"geoLong": "95.4222917",
+	"geoLat": "5.522639",
+	"geoLong": "95.422306",
 	"txtName": "BANDA ACEH/SULTAN ISKANDAR MUDA",
 	"codeType": "VOR/DME"
 },
@@ -13847,13 +13833,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "40.827083",
-	"geoLong": "47.719667",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "O",
 	"geoLat": "50.315694",
 	"geoLong": "30.903111",
@@ -13861,11 +13840,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LND",
-	"geoLat": "50.1362611",
-	"geoLong": "-5.6369611",
-	"txtName": "LAND'S END",
-	"codeType": "VOR"
+	"codeId": "",
+	"geoLat": "40.827083",
+	"geoLong": "47.719667",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "",
@@ -13875,18 +13854,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
+	"codeId": "LND",
+	"geoLat": "50.1362611",
+	"geoLong": "-5.6369611",
+	"txtName": "LAND'S END",
+	"codeType": "VOR"
+},
+{
 	"codeId": "NEU",
 	"geoLat": "34.1584083",
 	"geoLong": "132.2455028",
 	"txtName": "IWAKUNI",
 	"codeType": "TACAN"
-},
-{
-	"codeId": "CMA",
-	"geoLat": "34.21252111",
-	"geoLong": "-119.09435528",
-	"txtName": "CAMARILLO",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "UQQ",
@@ -13901,6 +13880,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "27.017",
 	"txtName": "CIGLI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CMA",
+	"geoLat": "34.21252111",
+	"geoLong": "-119.09435528",
+	"txtName": "CAMARILLO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ANE",
@@ -13938,13 +13924,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BEL",
-	"geoLat": "-1.384361",
-	"geoLong": "-48.478556",
-	"txtName": "BELEM",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LAM",
 	"geoLat": "27.367139",
 	"geoLong": "53.195222",
@@ -13957,6 +13936,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "33.895222",
 	"txtName": "KARONGA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BEL",
+	"geoLat": "-1.384361",
+	"geoLong": "-48.478556",
+	"txtName": "BELEM",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NKS",
@@ -13980,18 +13966,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "42.913056",
-	"geoLong": "-8.42075",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "EL",
 	"geoLat": "64.081111",
 	"geoLong": "-21.770722",
 	"txtName": "ELLIDAVATN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "42.913056",
+	"geoLong": "-8.42075",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "RAN",
@@ -14008,18 +13994,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BS",
-	"geoLat": "20.449472",
-	"geoLong": "121.974472",
-	"txtName": "BASCO",
-	"codeType": "DME"
-},
-{
 	"codeId": "TDF",
 	"geoLat": "27.7063",
 	"geoLong": "-8.1344778",
 	"txtName": "TINDOUF",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BS",
+	"geoLat": "20.449472",
+	"geoLong": "121.974472",
+	"txtName": "BASCO",
+	"codeType": "DME"
 },
 {
 	"codeId": "LSF",
@@ -14043,18 +14029,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "OZR",
-	"geoLat": "31.26894861",
-	"geoLong": "-85.7263125",
-	"txtName": "CAIRNS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HHH",
 	"geoLat": "29.13832361",
 	"geoLong": "-98.93926139",
 	"txtName": "DEVINE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OZR",
+	"geoLat": "31.26894861",
+	"geoLong": "-85.7263125",
+	"txtName": "CAIRNS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "EHZ",
@@ -14218,13 +14204,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KNY",
-	"geoLat": "37.996889",
-	"geoLong": "32.564694",
-	"txtName": "KONYA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SAL",
 	"geoLat": "-32.98667",
 	"geoLong": "-71.53583",
@@ -14232,11 +14211,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SJT",
-	"geoLat": "31.37495556",
-	"geoLong": "-100.45487028",
-	"txtName": "SAN ANGELO",
-	"codeType": "VOR"
+	"codeId": "KNY",
+	"geoLat": "37.996889",
+	"geoLong": "32.564694",
+	"txtName": "KONYA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FRO",
@@ -14246,11 +14225,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "RON",
-	"geoLat": "45.828813889",
-	"geoLong": "13.360372778",
-	"txtName": "RONCHI DEI LEGIONARI",
-	"codeType": "NDB"
+	"codeId": "SJT",
+	"geoLat": "31.37495556",
+	"geoLong": "-100.45487028",
+	"txtName": "SAN ANGELO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "THA",
@@ -14365,18 +14344,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BGO",
-	"geoLat": "17.3184944",
-	"geoLong": "96.519875",
-	"txtName": "YANGON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GSA",
 	"geoLat": "-3.296528",
 	"geoLong": "116.163",
 	"txtName": "KOTABARU / GUSTI SJAMSIR ALAM",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "BGO",
+	"geoLat": "17.3184944",
+	"geoLong": "96.519875",
+	"txtName": "YANGON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SNT",
@@ -14414,17 +14393,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PAI",
-	"geoLat": "-22.45417",
-	"geoLong": "-43.84056",
-	"txtName": "PIRAI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BKL",
 	"geoLat": "-3.86475",
 	"geoLong": "102.342861",
 	"txtName": "BENGKULU/FATMAWATI SOEKARNO",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "PAI",
+	"geoLat": "-22.45417",
+	"geoLong": "-43.84056",
+	"txtName": "PIRAI",
 	"codeType": "VOR/DME"
 },
 {
@@ -14449,18 +14428,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "VMV",
-	"geoLat": "-20.056778",
-	"geoLong": "30.853611",
-	"txtName": "MASVINGO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "STD",
 	"geoLat": "34.5123639",
 	"geoLong": "134.2742139",
 	"txtName": "SHODO",
 	"codeType": "DME"
+},
+{
+	"codeId": "VMV",
+	"geoLat": "-20.056778",
+	"geoLong": "30.853611",
+	"txtName": "MASVINGO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HL",
@@ -14477,13 +14456,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YDN",
-	"geoLat": "51.104934028",
-	"geoLong": "-100.052340556",
-	"txtName": "DAUPHIN",
-	"codeType": "DME"
-},
-{
 	"codeId": "KD",
 	"geoLat": "50.1526083",
 	"geoLong": "14.6366083",
@@ -14491,11 +14463,25 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
+	"codeId": "YDN",
+	"geoLat": "51.104934028",
+	"geoLong": "-100.052340556",
+	"txtName": "DAUPHIN",
+	"codeType": "DME"
+},
+{
 	"codeId": "ILI",
 	"geoLat": "59.74807722",
 	"geoLong": "-154.90963917",
 	"txtName": "ILIAMNA",
 	"codeType": "DME"
+},
+{
+	"codeId": "XSF",
+	"geoLat": "39.83813",
+	"geoLong": "-83.84062528",
+	"txtName": "SPRINGFIELD",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "BGC",
@@ -14510,13 +14496,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "8.078509806",
 	"txtName": "SIEGERLAND",
 	"codeType": "DME"
-},
-{
-	"codeId": "XSF",
-	"geoLat": "39.83813",
-	"geoLong": "-83.84062528",
-	"txtName": "SPRINGFIELD",
-	"codeType": "TACAN"
 },
 {
 	"codeId": "AUC",
@@ -14540,18 +14519,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "34.5951639",
-	"geoLong": "32.9723083",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "T",
 	"geoLat": "46.9062889",
 	"geoLong": "19.7746583",
 	"txtName": "KECSKEMET LM30",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "34.5951639",
+	"geoLong": "32.9723083",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "PLH",
@@ -14638,6 +14617,13 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
+	"codeId": "MOS",
+	"geoLat": "43.273325",
+	"geoLong": "17.8549806",
+	"txtName": "MOSTAR",
+	"codeType": "DME"
+},
+{
 	"codeId": "FKN",
 	"geoLat": "36.71423444",
 	"geoLong": "-77.01237472",
@@ -14650,13 +14636,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "116.48333",
 	"txtName": "CHAOSHAN",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "MOS",
-	"geoLat": "43.273325",
-	"geoLong": "17.8549806",
-	"txtName": "MOSTAR",
-	"codeType": "DME"
 },
 {
 	"codeId": "TPN",
@@ -14687,18 +14666,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "SLM",
-	"geoLat": "19.7408139",
-	"geoLong": "-99.0059333",
-	"txtName": "LUCIA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CZA",
 	"geoLat": "53.507649611",
 	"geoLong": "16.301037722",
 	"txtName": "CZAPLINEK",
 	"codeType": "DME"
+},
+{
+	"codeId": "SLM",
+	"geoLat": "19.7408139",
+	"geoLong": "-99.0059333",
+	"txtName": "LUCIA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MLT",
@@ -14715,17 +14694,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "KAE",
-	"geoLat": "37.700778",
-	"geoLong": "128.753778",
-	"txtName": "GANGWON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "WGD",
 	"geoLat": "48.78075",
 	"geoLong": "44.3435",
 	"txtName": "VOLGOGRAD/GUMRAK",
+	"codeType": "VOR"
+},
+{
+	"codeId": "KAE",
+	"geoLat": "37.700778",
+	"geoLong": "128.753778",
+	"txtName": "GANGWON",
 	"codeType": "VOR"
 },
 {
@@ -14806,18 +14785,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TBK",
-	"geoLat": "-9.4085",
-	"geoLong": "119.248278",
-	"txtName": "TAMBOLAKA / LEDE KALUMBANG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HH",
 	"geoLat": "-16.689611",
 	"geoLong": "-151.027028",
 	"txtName": "HUAHINE FARE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TBK",
+	"geoLat": "-9.4085",
+	"geoLong": "119.248278",
+	"txtName": "TAMBOLAKA / LEDE KALUMBANG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "5F",
@@ -14834,18 +14813,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SPW",
-	"geoLat": "43.16217694",
-	"geoLong": "-95.20099194",
-	"txtName": "SPENCER",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GND",
 	"geoLat": "12.0081417",
 	"geoLong": "-61.7800722",
 	"txtName": "MAURICE BISHOP",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SPW",
+	"geoLat": "43.16217694",
+	"geoLong": "-95.20099194",
+	"txtName": "SPENCER",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "S",
@@ -14862,18 +14841,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "HOS",
-	"geoLat": "38.3494889",
-	"geoLong": "26.1427083",
-	"txtName": "CHIOS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TV",
 	"geoLat": "-18.5855",
 	"geoLong": "-173.96967",
 	"txtName": "VAVAU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HOS",
+	"geoLat": "38.3494889",
+	"geoLong": "26.1427083",
+	"txtName": "CHIOS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IKN",
@@ -14904,18 +14883,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "OSH",
-	"geoLat": "40.6061694",
-	"geoLong": "72.80205",
-	"txtName": "OSH",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NCP",
 	"geoLat": "21.0384444",
 	"geoLong": "-86.8553583",
 	"txtName": "NICHUPTE",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "OSH",
+	"geoLat": "40.6061694",
+	"geoLong": "72.80205",
+	"txtName": "OSH",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SPO",
@@ -14932,18 +14911,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "GEI",
-	"geoLat": "-34.0068583",
-	"geoLong": "22.3708972",
-	"txtName": "GEORGE",
-	"codeType": "DME"
-},
-{
 	"codeId": "IL",
 	"geoLat": "39.58126167",
 	"geoLong": "-75.61394222",
 	"txtName": "HADIN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GEI",
+	"geoLat": "-34.0068583",
+	"geoLong": "22.3708972",
+	"txtName": "GEORGE",
+	"codeType": "DME"
 },
 {
 	"codeId": "SFL",
@@ -14989,8 +14968,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BEA",
-	"geoLat": "12.50161778",
-	"geoLong": "-70.02077472",
+	"geoLat": "12.50161889",
+	"geoLong": "-70.0208",
 	"txtName": "BEATRIX",
 	"codeType": "VOR/DME"
 },
@@ -15058,18 +15037,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "INL",
-	"geoLat": "48.56579833",
-	"geoLong": "-93.40567778",
-	"txtName": "INTERNATIONAL FALLS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DIR",
 	"geoLat": "18.9814722",
 	"geoLong": "12.8805",
 	"txtName": "DIRKOU",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "INL",
+	"geoLat": "48.56579833",
+	"geoLong": "-93.40567778",
+	"txtName": "INTERNATIONAL FALLS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -15086,18 +15065,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CPT",
-	"geoLat": "51.4915722",
-	"geoLong": "-1.2196917",
-	"txtName": "COMPTON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "K",
 	"geoLat": "71.715",
 	"geoLong": "128.9083",
 	"txtName": "TIKSI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CPT",
+	"geoLat": "51.4915722",
+	"geoLong": "-1.2196917",
+	"txtName": "COMPTON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BW",
@@ -15114,18 +15093,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
-	"codeId": "RIC",
-	"geoLat": "37.50234778",
-	"geoLong": "-77.32027611",
-	"txtName": "RICHMOND",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "50.489528",
 	"geoLong": "4.555389",
 	"txtName": "",
 	"codeType": "MKR"
+},
+{
+	"codeId": "RIC",
+	"geoLat": "37.50234778",
+	"geoLong": "-77.32027611",
+	"txtName": "RICHMOND",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HMD",
@@ -15233,18 +15212,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LXA",
-	"geoLat": "29.29667",
-	"geoLong": "90.99833",
-	"txtName": "LHASA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IM",
 	"geoLat": "45.72733",
 	"geoLong": "-88.13267",
 	"txtName": "KORDS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LXA",
+	"geoLat": "29.29667",
+	"geoLong": "90.99833",
+	"txtName": "LHASA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HNB",
@@ -15289,18 +15268,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "40.094417",
-	"geoLong": "32.578611",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "6F",
 	"geoLat": "52.520029333",
 	"geoLong": "-56.295703417",
 	"txtName": "PORT HOPE SIMPSON",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "40.094417",
+	"geoLong": "32.578611",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "PAE",
@@ -15415,18 +15394,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "STA",
-	"geoLat": "10.9625",
-	"geoLong": "-74.2405556",
-	"txtName": "SANTA MARTA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "N",
 	"geoLat": "65.500278",
 	"geoLong": "72.680194",
 	"txtName": "NADYM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "STA",
+	"geoLat": "10.9625",
+	"geoLong": "-74.2405556",
+	"txtName": "SANTA MARTA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "YAY",
@@ -15437,8 +15416,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "NCL",
-	"geoLat": "16.562639",
-	"geoLong": "-24.283167",
+	"geoLat": "16.5626639",
+	"geoLong": "-24.2831861",
 	"txtName": "SAO NICOLAU",
 	"codeType": "NDB"
 },
@@ -15590,13 +15569,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "39.121639",
-	"geoLong": "30.11525",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "BI",
 	"geoLat": "69.41083",
 	"geoLong": "86.21194",
@@ -15604,11 +15576,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MP",
-	"geoLat": "49.6380056",
-	"geoLong": "-1.3723111",
-	"txtName": "CHERBOURG MAUPERTUS",
-	"codeType": "NDB"
+	"codeId": "",
+	"geoLat": "39.121639",
+	"geoLong": "30.11525",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "NZ",
@@ -15660,18 +15632,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "37.41675",
-	"geoLong": "-5.908722",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "DWI",
 	"geoLat": "51.526127139",
 	"geoLong": "7.634376667",
 	"txtName": "DORTMUND-WICKEDE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "37.41675",
+	"geoLong": "-5.908722",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "KEA",
@@ -15793,18 +15765,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "QSV",
-	"geoLat": "-0.301694",
-	"geoLong": "-78.343806",
-	"txtName": "QUITO - VOR SUR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "VKL",
 	"geoLat": "51.6554306",
 	"geoLong": "5.7069778",
 	"txtName": "VOLKEL",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "QSV",
+	"geoLat": "-0.301694",
+	"geoLong": "-78.343806",
+	"txtName": "QUITO - VOR SUR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LT",
@@ -15870,13 +15842,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CAS",
-	"geoLat": "38.74825806",
-	"geoLong": "-9.36201778",
-	"txtName": "CASCAIS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DBK",
 	"geoLat": "42.5538444",
 	"geoLong": "18.2774417",
@@ -15884,10 +15849,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SSY",
-	"geoLat": "40.546417",
-	"geoLong": "-3.575194",
-	"txtName": "SAN SEBASTIAN DE LOS REYES",
+	"codeId": "CAS",
+	"geoLat": "38.74825806",
+	"geoLong": "-9.36201778",
+	"txtName": "CASCAIS",
 	"codeType": "VOR"
 },
 {
@@ -15905,6 +15870,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "SSY",
+	"geoLat": "40.546417",
+	"geoLong": "-3.575194",
+	"txtName": "SAN SEBASTIAN DE LOS REYES",
+	"codeType": "VOR"
+},
+{
 	"codeId": "SE",
 	"geoLat": "55.79583",
 	"geoLong": "43.16",
@@ -15919,17 +15891,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SRN",
-	"geoLat": "45.645984444",
-	"geoLong": "9.021579722",
-	"txtName": "SARONNO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TLE",
 	"geoLat": "9.5734972",
 	"geoLong": "-0.8471333",
 	"txtName": "TAMALE",
+	"codeType": "VOR"
+},
+{
+	"codeId": "SRN",
+	"geoLat": "45.645984444",
+	"geoLong": "9.021579722",
+	"txtName": "SARONNO",
 	"codeType": "VOR"
 },
 {
@@ -15982,18 +15954,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "RAB",
-	"geoLat": "15.008635528",
-	"geoLong": "-90.470339694",
-	"txtName": "RABINAL",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "WAS",
 	"geoLat": "52.171166667",
 	"geoLong": "20.951638889",
 	"txtName": "WARSZAWA/OKECIE",
 	"codeType": "DME"
+},
+{
+	"codeId": "RAB",
+	"geoLat": "15.008635528",
+	"geoLong": "-90.470339694",
+	"txtName": "RABINAL",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "GVE",
@@ -16080,18 +16052,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "FIT",
-	"geoLat": "37.013028",
-	"geoLong": "-7.956083",
-	"txtName": "",
-	"codeType": "LOC"
-},
-{
 	"codeId": "LC",
 	"geoLat": "39.9983",
 	"geoLong": "119.785",
 	"txtName": "SHANHAIGUAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FIT",
+	"geoLat": "37.013028",
+	"geoLong": "-7.956083",
+	"txtName": "",
+	"codeType": "LOC"
 },
 {
 	"codeId": "MIQ",
@@ -16129,18 +16101,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LP",
-	"geoLat": "61.0423139",
-	"geoLong": "28.1280444",
-	"txtName": "LAPPEENRANTA",
-	"codeType": "DME"
-},
-{
 	"codeId": "HON",
 	"geoLat": "29.13333",
 	"geoLong": "15.95",
 	"txtName": "HON",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LP",
+	"geoLat": "61.0423139",
+	"geoLong": "28.1280444",
+	"txtName": "LAPPEENRANTA",
+	"codeType": "DME"
 },
 {
 	"codeId": "MA",
@@ -16213,18 +16185,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "DJZ",
-	"geoLat": "30.26333",
-	"geoLong": "112.44833",
-	"txtName": "JINGZHOU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LYZ",
 	"geoLat": "30.97235889",
 	"geoLong": "-84.52496972",
 	"txtName": "WILLIS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DJZ",
+	"geoLat": "30.26333",
+	"geoLong": "112.44833",
+	"txtName": "JINGZHOU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TUT",
@@ -16374,17 +16346,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GSB",
-	"geoLat": "35.33519806",
-	"geoLong": "-77.97131722",
-	"txtName": "SEYMOUR JOHNSON",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "DYR",
 	"geoLat": "36.01854972",
 	"geoLong": "-89.31769167",
 	"txtName": "DYERSBURG",
+	"codeType": "TACAN"
+},
+{
+	"codeId": "GSB",
+	"geoLat": "35.33519806",
+	"geoLong": "-77.97131722",
+	"txtName": "SEYMOUR JOHNSON",
 	"codeType": "TACAN"
 },
 {
@@ -16542,17 +16514,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BKO",
-	"geoLat": "12.5466111",
-	"geoLong": "-7.9296944",
-	"txtName": "BAMAKO / SENOU",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TNA",
 	"geoLat": "-5.0625",
 	"geoLong": "-42.825",
 	"txtName": "TERESINA",
+	"codeType": "VOR"
+},
+{
+	"codeId": "BKO",
+	"geoLat": "12.5466111",
+	"geoLong": "-7.9296944",
+	"txtName": "BAMAKO / SENOU",
 	"codeType": "VOR"
 },
 {
@@ -16570,6 +16542,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
+	"codeId": "OLY",
+	"geoLat": "38.71821722",
+	"geoLong": "-88.1726375",
+	"txtName": "OLNEY",
+	"codeType": "NDB"
+},
+{
 	"codeId": "PYA",
 	"geoLat": "42.64395333",
 	"geoLong": "-77.05618306",
@@ -16577,10 +16556,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "OLY",
-	"geoLat": "38.71821722",
-	"geoLong": "-88.1726375",
-	"txtName": "OLNEY",
+	"codeId": "BS",
+	"geoLat": "32.0253889",
+	"geoLong": "20.3158889",
+	"txtName": "BENINA",
 	"codeType": "NDB"
 },
 {
@@ -16589,13 +16568,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "27.66917",
 	"txtName": "HLYBOKAJE",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "BS",
-	"geoLat": "32.0253889",
-	"geoLong": "20.3158889",
-	"txtName": "BENINA",
-	"codeType": "NDB"
 },
 {
 	"codeId": "OOM",
@@ -16654,18 +16626,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AMR",
-	"geoLat": "36.833167",
-	"geoLong": "-2.259417",
-	"txtName": "ALMERIA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SLT",
 	"geoLat": "32.5185944",
 	"geoLong": "74.3433972",
 	"txtName": "SIALKOT",
 	"codeType": "VOR"
+},
+{
+	"codeId": "AMR",
+	"geoLat": "36.833167",
+	"geoLong": "-2.259417",
+	"txtName": "ALMERIA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CTR",
@@ -16759,17 +16731,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GZD",
-	"geoLat": "54.387793306",
-	"geoLong": "18.425264333",
-	"txtName": "GDANSK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CDB",
 	"geoLat": "37.847167",
 	"geoLong": "-4.848139",
 	"txtName": "CORDOBA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "GZD",
+	"geoLat": "54.387793306",
+	"geoLong": "18.425264333",
+	"txtName": "GDANSK",
 	"codeType": "VOR/DME"
 },
 {
@@ -16822,17 +16794,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "VNA",
-	"geoLat": "-8.845575",
-	"geoLong": "13.2472861",
-	"txtName": "LUANDA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MYV",
 	"geoLat": "39.09864472",
 	"geoLong": "-121.5730575",
 	"txtName": "MARYSVILLE",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "VNA",
+	"geoLat": "-8.845575",
+	"geoLong": "13.2472861",
+	"txtName": "LUANDA",
 	"codeType": "VOR/DME"
 },
 {
@@ -16962,18 +16934,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CVT",
-	"geoLat": "35.7266833",
-	"geoLong": "140.7999111",
-	"txtName": "CHOSHI",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "VV",
 	"geoLat": "33.64641111",
 	"geoLong": "-83.02176667",
 	"txtName": "JUNNE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CVT",
+	"geoLat": "35.7266833",
+	"geoLong": "140.7999111",
+	"txtName": "CHOSHI",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "BL",
@@ -17074,11 +17046,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CBA",
-	"geoLat": "-17.421333",
-	"geoLong": "-66.178944",
-	"txtName": "COCHABAMBA",
-	"codeType": "VOR/DME"
+	"codeId": "CI",
+	"geoLat": "41.88567",
+	"geoLong": "-91.80233",
+	"txtName": "CINDY",
+	"codeType": "NDB"
 },
 {
 	"codeId": "KIH",
@@ -17088,11 +17060,11 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "CI",
-	"geoLat": "41.88567",
-	"geoLong": "-91.80233",
-	"txtName": "CINDY",
-	"codeType": "NDB"
+	"codeId": "CBA",
+	"geoLat": "-17.421333",
+	"geoLong": "-66.178944",
+	"txtName": "COCHABAMBA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PWA",
@@ -17109,18 +17081,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FUE",
-	"geoLat": "28.382472",
-	"geoLong": "-13.866167",
-	"txtName": "FUERTEVENTURA",
-	"codeType": "DME"
-},
-{
 	"codeId": "RQY",
 	"geoLat": "38.89394361",
 	"geoLong": "-79.859415",
 	"txtName": "RANDOLPH COUNTY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FUE",
+	"geoLat": "28.382472",
+	"geoLong": "-13.866167",
+	"txtName": "FUERTEVENTURA",
+	"codeType": "DME"
 },
 {
 	"codeId": "CHI",
@@ -17172,6 +17144,13 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
+	"codeId": "WXI",
+	"geoLat": "36.36333",
+	"geoLong": "114.91667",
+	"txtName": "WEIXIAN",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "UTS",
 	"geoLat": "62.092528",
 	"geoLong": "129.78475",
@@ -17184,13 +17163,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "23.2171694",
 	"txtName": "DIDIMON",
 	"codeType": "VOR"
-},
-{
-	"codeId": "WXI",
-	"geoLat": "36.36333",
-	"geoLong": "114.91667",
-	"txtName": "WEIXIAN",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MOV",
@@ -17235,17 +17207,17 @@ export const navaids: EADdata[] = [
 	"codeType": "LOC_DME"
 },
 {
-	"codeId": "VBA",
-	"geoLat": "3.324806",
-	"geoLong": "101.456917",
-	"txtName": "BATU ARANG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PZA",
 	"geoLat": "-9.76917",
 	"geoLong": "-70.705",
 	"txtName": "PUERTO ESPERANZA",
+	"codeType": "VOR"
+},
+{
+	"codeId": "VBA",
+	"geoLat": "3.324825",
+	"geoLong": "101.4605861",
+	"txtName": "BATU ARANG",
 	"codeType": "VOR"
 },
 {
@@ -17368,18 +17340,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "65.530806",
-	"geoLong": "22.150778",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "NK",
 	"geoLat": "55.17333",
 	"geoLong": "166.04722",
 	"txtName": "NIKOLSKOYE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "65.530806",
+	"geoLong": "22.150778",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "ERE",
@@ -17592,18 +17564,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BW",
-	"geoLat": "63.82722",
-	"geoLong": "57.28583",
-	"txtName": "VUKTYL",
-	"codeType": "DME"
-},
-{
 	"codeId": "C",
 	"geoLat": "47.475308472",
 	"geoLong": "21.593114444",
 	"txtName": "DEBRECEN 04R",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BW",
+	"geoLat": "63.82722",
+	"geoLong": "57.28583",
+	"txtName": "VUKTYL",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -17620,18 +17592,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "ROS",
-	"geoLat": "47.500889",
-	"geoLong": "39.933556",
-	"txtName": "ROSTOV-NA-DONU/PLATOV",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SIO",
 	"geoLat": "46.2155",
 	"geoLong": "7.288778",
 	"txtName": "SION",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "ROS",
+	"geoLat": "47.500889",
+	"geoLong": "39.933556",
+	"txtName": "ROSTOV-NA-DONU/PLATOV",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CFA",
@@ -17648,18 +17620,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "DVC",
-	"geoLat": "37.80873972",
-	"geoLong": "-108.93127389",
-	"txtName": "DOVE CREEK",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "HUR",
 	"geoLat": "40.33",
 	"geoLong": "116.74833",
 	"txtName": "HUAIROU",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "DVC",
+	"geoLat": "37.80873972",
+	"geoLong": "-108.93127389",
+	"txtName": "DOVE CREEK",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "",
@@ -17718,18 +17690,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "IFSW",
-	"geoLat": "50.040037472",
-	"geoLong": "8.581453722",
-	"txtName": "FRANKFURT IFSW",
-	"codeType": "DME"
-},
-{
 	"codeId": "IK",
 	"geoLat": "41.017825",
 	"geoLong": "-87.90376833",
 	"txtName": "LUKOW",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IFSW",
+	"geoLat": "50.040037472",
+	"geoLong": "8.581453722",
+	"txtName": "FRANKFURT IFSW",
+	"codeType": "DME"
 },
 {
 	"codeId": "TKK",
@@ -17774,18 +17746,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "AV",
-	"geoLat": "-38.048889",
-	"geoLong": "144.458944",
-	"txtName": "AVALON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IL",
 	"geoLat": "45.429333",
 	"geoLong": "29.577611",
 	"txtName": "VYLKOVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "AV",
+	"geoLat": "-38.048889",
+	"geoLong": "144.458944",
+	"txtName": "AVALON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "GBE",
@@ -17858,18 +17830,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ZHO",
-	"geoLat": "33.665",
-	"geoLong": "114.655",
-	"txtName": "ZHOUKOU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MKT",
 	"geoLat": "30.042139",
 	"geoLong": "31.275444",
 	"txtName": "MOQUATTAM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ZHO",
+	"geoLat": "33.665",
+	"geoLong": "114.655",
+	"txtName": "ZHOUKOU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PWL",
@@ -17886,18 +17858,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "DK",
-	"geoLat": "38.750667",
-	"geoLong": "-27.079111",
-	"txtName": "",
-	"codeType": "LOC"
-},
-{
 	"codeId": "NA",
 	"geoLat": "-18.0474417",
 	"geoLong": "178.5591167",
 	"txtName": "NAUSORI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DK",
+	"geoLat": "38.750667",
+	"geoLong": "-27.079111",
+	"txtName": "",
+	"codeType": "LOC"
 },
 {
 	"codeId": "VQ",
@@ -17929,17 +17901,17 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "39.635944",
-	"geoLong": "27.926778",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
-	"codeId": "",
 	"geoLat": "65.669694",
 	"geoLong": "-18.07125",
 	"txtName": "",
 	"codeType": "ILS"
+},
+{
+	"codeId": "",
+	"geoLat": "39.635944",
+	"geoLong": "27.926778",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "AZQ",
@@ -18096,6 +18068,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "FM",
+	"geoLat": "-21.249833",
+	"geoLong": "-175.144722",
+	"txtName": "FUAAMOTU",
+	"codeType": "NDB"
+},
+{
 	"codeId": "GLW",
 	"geoLat": "55.16278",
 	"geoLong": "37.79861",
@@ -18103,10 +18082,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "FM",
-	"geoLat": "-21.249833",
-	"geoLong": "-175.144722",
-	"txtName": "FUAAMOTU",
+	"codeId": "PK",
+	"geoLat": "69.803333",
+	"geoLong": "170.583417",
+	"txtName": "PEVEK",
 	"codeType": "NDB"
 },
 {
@@ -18115,13 +18094,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "104.6383361",
 	"txtName": "NAKHON PHANOM",
 	"codeType": "VOR"
-},
-{
-	"codeId": "PK",
-	"geoLat": "69.803333",
-	"geoLong": "170.583417",
-	"txtName": "PEVEK",
-	"codeType": "NDB"
 },
 {
 	"codeId": "PLT",
@@ -18145,17 +18117,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "DNY",
-	"geoLat": "42.17828056",
-	"geoLong": "-74.95694056",
-	"txtName": "DELANCEY",
-	"codeType": "VOR"
-},
-{
 	"codeId": "AGC",
 	"geoLat": "40.27864389",
 	"geoLong": "-80.04085472",
 	"txtName": "ALLEGHENY",
+	"codeType": "VOR"
+},
+{
+	"codeId": "DNY",
+	"geoLat": "42.17828056",
+	"geoLong": "-74.95694056",
+	"txtName": "DELANCEY",
 	"codeType": "VOR"
 },
 {
@@ -18234,13 +18206,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-105.56333",
 	"txtName": "MOOSE JAW",
 	"codeType": "VORTAC"
-},
-{
-	"codeId": "UTS",
-	"geoLat": "30.74074889",
-	"geoLong": "-95.59086806",
-	"txtName": "HUNTSVILLE",
-	"codeType": "NDB"
 },
 {
 	"codeId": "BH",
@@ -18376,18 +18341,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "IFI",
-	"geoLat": "35.80526611",
-	"geoLong": "-98.00391528",
-	"txtName": "KINGFISHER",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "COA",
 	"geoLat": "43.365556",
 	"geoLong": "-8.328417",
 	"txtName": "LA CORUNA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IFI",
+	"geoLat": "35.80526611",
+	"geoLong": "-98.00391528",
+	"txtName": "KINGFISHER",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "IID",
@@ -18411,13 +18376,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PXM",
-	"geoLat": "15.8751056",
-	"geoLong": "-97.0817139",
-	"txtName": "ESCONDIDO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LSV",
 	"geoLat": "36.24465556",
 	"geoLong": "-115.02508333",
@@ -18425,10 +18383,10 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "SVD",
-	"geoLat": "-12.906417",
-	"geoLong": "-38.321361",
-	"txtName": "SALVADOR",
+	"codeId": "PXM",
+	"geoLat": "15.8751056",
+	"geoLong": "-97.0817139",
+	"txtName": "ESCONDIDO",
 	"codeType": "VOR"
 },
 {
@@ -18436,6 +18394,13 @@ export const navaids: EADdata[] = [
 	"geoLat": "30.20675944",
 	"geoLong": "-98.70575528",
 	"txtName": "STONEWALL",
+	"codeType": "VOR"
+},
+{
+	"codeId": "SVD",
+	"geoLat": "-12.906417",
+	"geoLong": "-38.321361",
+	"txtName": "SALVADOR",
 	"codeType": "VOR"
 },
 {
@@ -18453,18 +18418,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "MTC",
-	"geoLat": "42.61288833",
-	"geoLong": "-82.83177111",
-	"txtName": "SELFRIDGE",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "IA",
 	"geoLat": "41.98433",
 	"geoLong": "-87.789",
 	"txtName": "TAFFS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MTC",
+	"geoLat": "42.61288833",
+	"geoLong": "-82.83177111",
+	"txtName": "SELFRIDGE",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "BAM",
@@ -18523,18 +18488,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
-	"codeId": "FNV",
-	"geoLat": "-21.1351444",
-	"geoLong": "27.425972",
-	"txtName": "FRANCISTOWN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "UP",
 	"geoLat": "45.92722",
 	"geoLong": "47.06028",
 	"txtName": "ZENZELI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FNV",
+	"geoLat": "-21.1351444",
+	"geoLong": "27.425972",
+	"txtName": "FRANCISTOWN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "JUF",
@@ -18642,18 +18607,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "DHB",
-	"geoLat": "30.69833",
-	"geoLong": "113.97167",
-	"txtName": "HEBAOHU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TMZ",
 	"geoLat": "30.07361",
 	"geoLong": "-95.55556",
 	"txtName": "TOMBALL (HOUSTON)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DHB",
+	"geoLat": "30.69833",
+	"geoLong": "113.97167",
+	"txtName": "HEBAOHU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SRA",
@@ -18677,13 +18642,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "IL",
-	"geoLat": "56.832861",
-	"geoLong": "53.46675",
-	"txtName": "IZHEVSK",
-	"codeType": "DME"
-},
-{
 	"codeId": "POA",
 	"geoLat": "19.54114",
 	"geoLong": "-154.97222778",
@@ -18696,6 +18654,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "67.56667",
 	"txtName": "GHARO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IL",
+	"geoLat": "56.832861",
+	"geoLong": "53.46675",
+	"txtName": "IZHEVSK",
+	"codeType": "DME"
 },
 {
 	"codeId": "TRI",
@@ -18845,18 +18810,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "MGR",
-	"geoLat": "53.404278",
-	"geoLong": "58.757583",
-	"txtName": "MAGNITOGORSK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NDB",
 	"geoLat": "68.84012972",
 	"geoLong": "-153.31599083",
 	"txtName": "EAST KURUPA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MGR",
+	"geoLat": "53.404278",
+	"geoLong": "58.757583",
+	"txtName": "MAGNITOGORSK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KW",
@@ -18957,18 +18922,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "IOK",
-	"geoLat": "56.705917",
-	"geoLong": "47.898389",
-	"txtName": "YOSHKAR-OLA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ZB",
 	"geoLat": "31.3559333",
 	"geoLong": "69.4599028",
 	"txtName": "ZHOB",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "IOK",
+	"geoLat": "56.705917",
+	"geoLong": "47.898389",
+	"txtName": "YOSHKAR-OLA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -19034,18 +18999,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "FZL",
-	"geoLat": "39.586611",
-	"geoLong": "47.207583",
-	"txtName": "FUZULI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "57.640639",
 	"geoLong": "12.259639",
 	"txtName": "ESGG MM 03",
 	"codeType": "MKR"
+},
+{
+	"codeId": "FZL",
+	"geoLat": "39.586611",
+	"geoLong": "47.207583",
+	"txtName": "FUZULI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CGC",
@@ -19076,13 +19041,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "TBO",
-	"geoLat": "-31.751028",
-	"geoLong": "-55.928611",
-	"txtName": "TACUAREMBO",
-	"codeType": "NDB"
-},
-{
 	"codeId": "SAB",
 	"geoLat": "6.1960778",
 	"geoLong": "6.6897944",
@@ -19097,18 +19055,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "VTB",
-	"geoLat": "39.78075",
-	"geoLong": "-3.464028",
-	"txtName": "VILLATOBAS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GOI",
 	"geoLat": "37.95873917",
 	"geoLong": "-85.97667111",
 	"txtName": "GODMAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "VTB",
+	"geoLat": "39.78075",
+	"geoLong": "-3.464028",
+	"txtName": "VILLATOBAS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ISJ",
@@ -19265,6 +19223,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "MML",
+	"geoLat": "44.44841222",
+	"geoLong": "-95.82476194",
+	"txtName": "MARSHALL",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "CUC",
 	"geoLat": "7.9333333",
 	"geoLong": "-72.5136111",
@@ -19277,13 +19242,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "130.3896278",
 	"txtName": "FUKUOKA",
 	"codeType": "VOR"
-},
-{
-	"codeId": "MML",
-	"geoLat": "44.44841222",
-	"geoLong": "-95.82476194",
-	"txtName": "MARSHALL",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -19335,18 +19293,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FGG",
-	"geoLat": "41.429544028",
-	"geoLong": "15.531242111",
-	"txtName": "FOGGIA",
-	"codeType": "DME"
-},
-{
 	"codeId": "LOJ",
 	"geoLat": "-3.995583",
 	"geoLong": "-79.366583",
 	"txtName": "LOJA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FGG",
+	"geoLat": "41.429544028",
+	"geoLong": "15.531242111",
+	"txtName": "FOGGIA",
+	"codeType": "DME"
 },
 {
 	"codeId": "GLV",
@@ -19412,18 +19370,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "HRL",
-	"geoLat": "26.22922472",
-	"geoLong": "-97.65226472",
-	"txtName": "HARLINGEN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "AJ",
 	"geoLat": "30.74125",
 	"geoLong": "49.684083",
 	"txtName": "AGHAJARI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HRL",
+	"geoLat": "26.22922472",
+	"geoLong": "-97.65226472",
+	"txtName": "HARLINGEN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PO",
@@ -19440,18 +19398,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "46.9252889",
-	"geoLong": "19.7315028",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "OUA",
 	"geoLat": "12.3339917",
 	"geoLong": "-1.5251806",
 	"txtName": "OUAGADOUGOU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "46.9252889",
+	"geoLong": "19.7315028",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "RBO",
@@ -19476,8 +19434,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "OFF",
-	"geoLat": "41.11723333",
-	"geoLong": "-95.90001111",
+	"geoLat": "41.11723056",
+	"geoLong": "-95.90000833",
 	"txtName": "OFFUTT",
 	"codeType": "TACAN"
 },
@@ -19531,18 +19489,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "",
-	"geoLat": "-41.317194",
-	"geoLong": "174.807556",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "ZAR",
 	"geoLat": "32.9520167",
 	"geoLong": "12.02285",
 	"txtName": "ZWARA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "-41.317194",
+	"geoLong": "174.807556",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "PRT",
@@ -19790,18 +19748,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CFB",
-	"geoLat": "42.15749028",
-	"geoLong": "-76.13647167",
-	"txtName": "BINGHAMTON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CO",
 	"geoLat": "43.11877694",
 	"geoLong": "-71.45242944",
 	"txtName": "EPSOM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CFB",
+	"geoLat": "42.15749028",
+	"geoLong": "-76.13647167",
+	"txtName": "BINGHAMTON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -19860,18 +19818,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "MAV",
-	"geoLat": "3.9402778",
-	"geoLong": "41.8641667",
-	"txtName": "MANDERA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "WN",
 	"geoLat": "-41.3372278",
 	"geoLong": "174.8169611",
 	"txtName": "WELLINGTON",
 	"codeType": "VOR"
+},
+{
+	"codeId": "MAV",
+	"geoLat": "3.9402778",
+	"geoLong": "41.8641667",
+	"txtName": "MANDERA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CAR",
@@ -19902,13 +19860,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PKY",
-	"geoLat": "-2.247806",
-	"geoLong": "113.951278",
-	"txtName": "PALANGKA RAYA / TJILIK RIWUT",
-	"codeType": "VOR"
-},
-{
 	"codeId": "FCS",
 	"geoLat": "38.68069861",
 	"geoLong": "-104.75692028",
@@ -19921,6 +19872,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "9.3350139",
 	"txtName": "VAMDRUP",
 	"codeType": "DME"
+},
+{
+	"codeId": "PKY",
+	"geoLat": "-2.247806",
+	"geoLong": "113.951278",
+	"txtName": "PALANGKA RAYA / TJILIK RIWUT",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LXI",
@@ -20021,18 +19979,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "AXM",
-	"geoLat": "4.46",
-	"geoLong": "-75.7655556",
-	"txtName": "ARMENIA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "WG",
 	"geoLat": "-19.4612",
 	"geoLong": "169.2246194",
 	"txtName": "TANNA/WHITE GRASS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "AXM",
+	"geoLat": "4.46",
+	"geoLong": "-75.7655556",
+	"txtName": "ARMENIA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MLN",
@@ -20084,18 +20042,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PEQ",
-	"geoLat": "31.46931444",
-	"geoLong": "-103.57475444",
-	"txtName": "PECOS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YWB",
 	"geoLat": "49.810539306",
 	"geoLong": "-119.630631417",
 	"txtName": "WESTBANK (KELOWNA)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PEQ",
+	"geoLat": "31.46931444",
+	"geoLong": "-103.57475444",
+	"txtName": "PECOS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MCL",
@@ -20266,6 +20224,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "BSE",
+	"geoLat": "23.89167",
+	"geoLong": "106.645",
+	"txtName": "BOSE",
+	"codeType": "VOR"
+},
+{
 	"codeId": "LNA",
 	"geoLat": "30.8494639",
 	"geoLong": "75.9637167",
@@ -20273,10 +20238,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BSE",
-	"geoLat": "23.89167",
-	"geoLong": "106.645",
-	"txtName": "BOSE",
+	"codeId": "HZN",
+	"geoLat": "39.5164",
+	"geoLong": "-118.99768667",
+	"txtName": "HAZEN",
 	"codeType": "VOR"
 },
 {
@@ -20285,13 +20250,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-85.43120972",
 	"txtName": "WIREGRASS",
 	"codeType": "VORTAC"
-},
-{
-	"codeId": "HZN",
-	"geoLat": "39.5164",
-	"geoLong": "-118.99768667",
-	"txtName": "HAZEN",
-	"codeType": "VOR"
 },
 {
 	"codeId": "UPB",
@@ -20413,18 +20371,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "PE",
-	"geoLat": "51.71833",
-	"geoLong": "40.18917",
-	"txtName": "PETROVSKOYE",
-	"codeType": "DME"
-},
-{
 	"codeId": "PU",
 	"geoLat": "43.3205361",
 	"geoLong": "-0.3051083",
 	"txtName": "PAU PYRENEES",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PE",
+	"geoLat": "51.71833",
+	"geoLong": "40.18917",
+	"txtName": "PETROVSKOYE",
+	"codeType": "DME"
 },
 {
 	"codeId": "CLL",
@@ -20490,18 +20448,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "59.651056",
-	"geoLong": "17.959694",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "MAS",
 	"geoLat": "-2.303472",
 	"geoLong": "-78.120889",
 	"txtName": "MACAS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "59.651056",
+	"geoLong": "17.959694",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "LGC",
@@ -20581,18 +20539,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "STM",
-	"geoLat": "-2.426417",
-	"geoLong": "-54.817556",
-	"txtName": "SANTAREM",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IAD",
 	"geoLat": "51.1896278",
 	"geoLong": "4.469475",
 	"txtName": "ANTWERPEN",
 	"codeType": "DME"
+},
+{
+	"codeId": "STM",
+	"geoLat": "-2.426417",
+	"geoLong": "-54.817556",
+	"txtName": "SANTAREM",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TEA",
@@ -20616,11 +20574,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MBS",
-	"geoLat": "43.53164833",
-	"geoLong": "-84.07730306",
-	"txtName": "SAGINAW",
-	"codeType": "VOR/DME"
+	"codeId": "MPG",
+	"geoLat": "39.32667",
+	"geoLong": "-82.43667",
+	"txtName": "VINTON CO (MC ARTHUR)",
+	"codeType": "NDB"
 },
 {
 	"codeId": "AGO",
@@ -20630,18 +20588,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MPG",
-	"geoLat": "39.32667",
-	"geoLong": "-82.43667",
-	"txtName": "VINTON CO (MC ARTHUR)",
-	"codeType": "NDB"
-},
-{
 	"codeId": "KB",
 	"geoLat": "50.386389",
 	"geoLong": "30.884083",
 	"txtName": "KYIV/BORYSPIL",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MBS",
+	"geoLat": "43.53164833",
+	"geoLong": "-84.07730306",
+	"txtName": "SAGINAW",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -20651,18 +20609,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "YCS",
-	"geoLat": "37.67833",
-	"geoLong": "121",
-	"txtName": "PENGLAI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "37.428056",
 	"geoLong": "38.875861",
 	"txtName": "",
 	"codeType": "MKR"
+},
+{
+	"codeId": "YCS",
+	"geoLat": "37.67833",
+	"geoLong": "121",
+	"txtName": "PENGLAI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -20693,18 +20651,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LOB",
-	"geoLat": "14.8762028",
-	"geoLong": "100.6598583",
-	"txtName": "LOP BURI",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "MUD",
 	"geoLat": "-8.331075",
 	"geoLong": "157.2549056",
 	"txtName": "MUNDA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LOB",
+	"geoLat": "14.8762028",
+	"geoLong": "100.6598583",
+	"txtName": "LOP BURI",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "JJB",
@@ -20770,18 +20728,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SHA",
-	"geoLat": "52.721",
-	"geoLong": "-8.885222",
-	"txtName": "SHANNON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NGF",
 	"geoLat": "21.45167",
 	"geoLong": "-157.75333",
 	"txtName": "KANEOHE BAY (MOKAPU)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SHA",
+	"geoLat": "52.721",
+	"geoLong": "-8.885222",
+	"txtName": "SHANNON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ELN",
@@ -20798,18 +20756,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "IOA",
-	"geoLat": "45.459182",
-	"geoLong": "-73.737569278",
-	"txtName": "MONTREAL",
-	"codeType": "DME"
-},
-{
 	"codeId": "EGN",
 	"geoLat": "37.7661944",
 	"geoLong": "23.4263528",
 	"txtName": "AIGINA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IOA",
+	"geoLat": "45.459182",
+	"geoLong": "-73.737569278",
+	"txtName": "MONTREAL",
+	"codeType": "DME"
 },
 {
 	"codeId": "MLS",
@@ -20826,18 +20784,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SQS",
-	"geoLat": "33.46384944",
-	"geoLong": "-90.27735056",
-	"txtName": "SIDON",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "A",
 	"geoLat": "53.371667",
 	"geoLong": "83.573528",
 	"txtName": "BARNAUL/MIKHAYLOVKA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SQS",
+	"geoLat": "33.46384944",
+	"geoLong": "-90.27735056",
+	"txtName": "SIDON",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "FK",
@@ -20931,18 +20889,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
-	"codeId": "GAV",
-	"geoLat": "-26.5148972",
-	"geoLong": "27.6764361",
-	"txtName": "GRASMERE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PR",
 	"geoLat": "1.6659972",
 	"geoLong": "7.4123583",
 	"txtName": "PRINCIPE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GAV",
+	"geoLat": "-26.5148972",
+	"geoLong": "27.6764361",
+	"txtName": "GRASMERE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BLU",
@@ -21036,13 +20994,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BCD",
-	"geoLat": "10.775222",
-	"geoLong": "123.020611",
-	"txtName": "BACOLOD",
-	"codeType": "DME"
-},
-{
 	"codeId": "TO",
 	"geoLat": "39.12036556",
 	"geoLong": "-95.68708361",
@@ -21050,11 +21001,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NNK",
-	"geoLat": "4.137833",
-	"geoLong": "117.664056",
-	"txtName": "NUNUKAN",
-	"codeType": "VOR/DME"
+	"codeId": "BCD",
+	"geoLat": "10.775222",
+	"geoLong": "123.020611",
+	"txtName": "BACOLOD",
+	"codeType": "DME"
 },
 {
 	"codeId": "MLY",
@@ -21064,6 +21015,13 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
+	"codeId": "NNK",
+	"geoLat": "4.137833",
+	"geoLong": "117.664056",
+	"txtName": "NUNUKAN",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "",
 	"geoLat": "40.27990075",
 	"geoLong": "-3.742423472",
@@ -21071,17 +21029,17 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "IAE",
-	"geoLat": "38.947722",
-	"geoLong": "-1.851056",
-	"txtName": "ALBACETE",
-	"codeType": "DME"
-},
-{
 	"codeId": "GLE",
 	"geoLat": "48.994528",
 	"geoLong": "2.557417",
 	"txtName": "",
+	"codeType": "DME"
+},
+{
+	"codeId": "IAE",
+	"geoLat": "38.947722",
+	"geoLong": "-1.851056",
+	"txtName": "ALBACETE",
 	"codeType": "DME"
 },
 {
@@ -21155,18 +21113,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "HB",
-	"geoLat": "-42.832778",
-	"geoLong": "147.510667",
-	"txtName": "HOBART",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "31.7139111",
 	"geoLong": "35.9772722",
 	"txtName": "",
 	"codeType": "ILS_DME"
+},
+{
+	"codeId": "HB",
+	"geoLat": "-42.832778",
+	"geoLong": "147.510667",
+	"txtName": "HOBART",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "LQ",
@@ -21183,18 +21141,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "THX",
-	"geoLat": "19.4555",
-	"geoLong": "103.181028",
-	"txtName": "XIENGKHUANG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ADK",
 	"geoLat": "51.87187639",
 	"geoLong": "-176.6759875",
 	"txtName": "MOUNT MOFFETT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "THX",
+	"geoLat": "19.4555",
+	"geoLong": "103.181028",
+	"txtName": "XIENGKHUANG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FA",
@@ -21239,6 +21197,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "MN",
+	"geoLat": "8.61778",
+	"geoLong": "16.0725",
+	"txtName": "MOUNDOU",
+	"codeType": "NDB"
+},
+{
 	"codeId": "IDJ",
 	"geoLat": "47.50770667",
 	"geoLong": "-94.92330889",
@@ -21253,13 +21218,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MN",
-	"geoLat": "8.61778",
-	"geoLong": "16.0725",
-	"txtName": "MOUNDOU",
-	"codeType": "NDB"
-},
-{
 	"codeId": "SAV",
 	"geoLat": "48.7962444",
 	"geoLong": "7.4479806",
@@ -21267,18 +21225,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ODR",
-	"geoLat": "37.32420083",
-	"geoLong": "-79.97898583",
-	"txtName": "WOODRUM",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BD",
 	"geoLat": "52.44222",
 	"geoLong": "103.19472",
 	"txtName": "RAZDOLYE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ODR",
+	"geoLat": "37.32420083",
+	"geoLong": "-79.97898583",
+	"txtName": "WOODRUM",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CLT",
@@ -21401,8 +21359,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "41.306917",
-	"geoLong": "2.107222",
+	"geoLat": "41.296778",
+	"geoLong": "2.074972",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -21435,18 +21393,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TFO",
-	"geoLat": "-17.89333",
-	"geoLong": "-41.51389",
-	"txtName": "TEOFILO OTONI",
-	"codeType": "DME"
-},
-{
 	"codeId": "MKR",
 	"geoLat": "55.2122528",
 	"geoLong": "9.3209556",
 	"txtName": "MM 29R",
 	"codeType": "MKR"
+},
+{
+	"codeId": "TFO",
+	"geoLat": "-17.89333",
+	"geoLong": "-41.51389",
+	"txtName": "TEOFILO OTONI",
+	"codeType": "DME"
 },
 {
 	"codeId": "VME",
@@ -21610,18 +21568,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "BGO",
-	"geoLat": "17.3184944",
-	"geoLong": "96.519875",
-	"txtName": "YANGON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BT",
 	"geoLat": "30.58291917",
 	"geoLong": "-91.21107917",
 	"txtName": "RUNDI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BGO",
+	"geoLat": "17.3184944",
+	"geoLong": "96.519875",
+	"txtName": "YANGON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "RVC",
@@ -21659,17 +21617,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PKE",
-	"geoLat": "34.10197278",
-	"geoLong": "-114.68206639",
-	"txtName": "PARKER",
-	"codeType": "VOR"
-},
-{
 	"codeId": "FYM",
 	"geoLat": "29.3975",
 	"geoLong": "30.39306",
 	"txtName": "FAYOUM",
+	"codeType": "VOR"
+},
+{
+	"codeId": "PKE",
+	"geoLat": "34.10197278",
+	"geoLong": "-114.68206639",
+	"txtName": "PARKER",
 	"codeType": "VOR"
 },
 {
@@ -21680,18 +21638,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "TBZ",
-	"geoLat": "38.148194",
-	"geoLong": "46.212694",
-	"txtName": "TABRIZ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HHM",
 	"geoLat": "66.90126389",
 	"geoLong": "-162.5643825",
 	"txtName": "HOTHAM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TBZ",
+	"geoLat": "38.148194",
+	"geoLong": "46.212694",
+	"txtName": "TABRIZ",
+	"codeType": "VOR"
 },
 {
 	"codeId": "FBY",
@@ -21841,17 +21799,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TNO",
-	"geoLat": "55.7740944",
-	"geoLong": "11.4391889",
-	"txtName": "TRANO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ISR",
 	"geoLat": "27.234389",
 	"geoLong": "60.722333",
 	"txtName": "IRAN SHAHR",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "TNO",
+	"geoLat": "55.7740944",
+	"geoLong": "11.4391889",
+	"txtName": "TRANO",
 	"codeType": "VOR/DME"
 },
 {
@@ -21932,6 +21890,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "SCG",
+	"geoLat": "48.25990472",
+	"geoLong": "-92.47460167",
+	"txtName": "SCOTT",
+	"codeType": "NDB"
+},
+{
 	"codeId": "SOF",
 	"geoLat": "42.698111",
 	"geoLong": "23.389389",
@@ -21944,13 +21909,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "8.589528",
 	"txtName": "MAKURDI",
 	"codeType": "VOR"
-},
-{
-	"codeId": "SCG",
-	"geoLat": "48.25990472",
-	"geoLong": "-92.47460167",
-	"txtName": "SCOTT",
-	"codeType": "NDB"
 },
 {
 	"codeId": "TOP",
@@ -21974,13 +21932,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MKW",
-	"geoLat": "-0.8964778",
-	"geoLong": "134.0503667",
-	"txtName": "MANOKWARI / RENDANI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MP",
 	"geoLat": "60.75278",
 	"geoLong": "77.63389",
@@ -21988,10 +21939,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CXS",
-	"geoLat": "-29.19806",
-	"geoLong": "-51.18861",
-	"txtName": "DOSUL",
+	"codeId": "MKW",
+	"geoLat": "-0.8964778",
+	"geoLong": "134.0503667",
+	"txtName": "MANOKWARI / RENDANI",
 	"codeType": "VOR"
 },
 {
@@ -22000,6 +21951,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "11.539526111",
 	"txtName": "COCHSTEDT OM RWY 26R",
 	"codeType": "MKR"
+},
+{
+	"codeId": "CXS",
+	"geoLat": "-29.19806",
+	"geoLong": "-51.18861",
+	"txtName": "DOSUL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CE",
@@ -22037,18 +21995,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PGA",
-	"geoLat": "-25.53778",
-	"geoLong": "-48.52972",
-	"txtName": "PARANAGUA",
-	"codeType": "DME"
-},
-{
 	"codeId": "WN",
 	"geoLat": "49.206056",
 	"geoLong": "28.664167",
 	"txtName": "VINNYTSIA/GAVRYSHIVKA",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "PGA",
+	"geoLat": "-25.53778",
+	"geoLong": "-48.52972",
+	"txtName": "PARANAGUA",
+	"codeType": "DME"
 },
 {
 	"codeId": "TOP",
@@ -22114,18 +22072,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AKN",
-	"geoLat": "58.7247125",
-	"geoLong": "-156.75234667",
-	"txtName": "KING SALMON",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "TAI",
 	"geoLat": "47.74667",
 	"geoLong": "88.08333",
 	"txtName": "ALTAY",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "AKN",
+	"geoLat": "58.7247125",
+	"geoLong": "-156.75234667",
+	"txtName": "KING SALMON",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "L",
@@ -22156,13 +22114,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CNA",
-	"geoLat": "45.6595611",
-	"geoLong": "-0.3116333",
-	"txtName": "COGNAC",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IRA",
 	"geoLat": "35.3407444",
 	"geoLong": "25.1851444",
@@ -22175,6 +22126,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "14.2440556",
 	"txtName": "MAROUA-SALAK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CNA",
+	"geoLat": "45.6595611",
+	"geoLong": "-0.3116333",
+	"txtName": "COGNAC",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CRN",
@@ -22252,6 +22210,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-84.97845222",
 	"txtName": "HINCH MOUNTAIN",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "PNY",
+	"geoLat": "48.618623056",
+	"geoLong": "17.827879167",
+	"txtName": "PIESTANY",
+	"codeType": "DME"
 },
 {
 	"codeId": "BSA",
@@ -22352,18 +22317,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "56.088583",
-	"geoLong": "13.172861",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "KA",
 	"geoLat": "55.6096861",
 	"geoLong": "12.6781972",
 	"txtName": "",
 	"codeType": "LOC"
+},
+{
+	"codeId": "",
+	"geoLat": "56.088583",
+	"geoLong": "13.172861",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "CLA",
@@ -22576,18 +22541,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "41.3055",
-	"geoLong": "2.09975",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "YEN",
 	"geoLat": "40.257333",
 	"geoLong": "29.562917",
 	"txtName": "YENISEHIR",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "",
+	"geoLat": "41.3055",
+	"geoLong": "2.09975",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "AB",
@@ -22632,18 +22597,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ILO",
-	"geoLat": "-17.691139",
-	"geoLong": "-71.350639",
-	"txtName": "ILO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "FB",
 	"geoLat": "4.4038117",
 	"geoLong": "7.1763667",
 	"txtName": "BONNY/FINIMA AIRSTRIP",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ILO",
+	"geoLat": "-17.691139",
+	"geoLong": "-71.350639",
+	"txtName": "ILO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SAW",
@@ -22667,18 +22632,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BHU",
-	"geoLat": "23.2802444",
-	"geoLong": "69.6657583",
-	"txtName": "BHUJ",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OR",
 	"geoLat": "28.29444",
 	"geoLong": "19.94778",
 	"txtName": "WAHA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BHU",
+	"geoLat": "23.2802444",
+	"geoLong": "69.6657583",
+	"txtName": "BHUJ",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MCC",
@@ -22709,17 +22674,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FJS",
-	"geoLat": "41.44966917",
-	"geoLong": "-122.8064475",
-	"txtName": "FORT JONES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "XSJ",
 	"geoLat": "24.68333",
 	"geoLong": "102.8",
 	"txtName": "JINNING",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "FJS",
+	"geoLat": "41.44966917",
+	"geoLong": "-122.8064475",
+	"txtName": "FORT JONES",
 	"codeType": "VOR/DME"
 },
 {
@@ -22745,8 +22710,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "49.940346167",
-	"geoLong": "-119.375577167",
+	"geoLat": "49.962909778",
+	"geoLong": "-119.376997917",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -22807,18 +22772,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "IIO",
-	"geoLat": "10.841167",
-	"geoLong": "122.495167",
-	"txtName": "DME 20",
-	"codeType": "DME"
-},
-{
 	"codeId": "B",
 	"geoLat": "39.797167",
 	"geoLong": "64.487417",
 	"txtName": "BUKHARA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IIO",
+	"geoLat": "10.841167",
+	"geoLong": "122.495167",
+	"txtName": "DME 20",
+	"codeType": "DME"
 },
 {
 	"codeId": "KDA",
@@ -22839,13 +22804,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "-12.406639",
 	"geoLong": "130.857028",
 	"txtName": "BAGOT",
-	"codeType": "NDB"
-},
-{
-	"codeId": "CAA",
-	"geoLat": "44.5512944",
-	"geoLong": "-1.1199667",
-	"txtName": "CAZAUX",
 	"codeType": "NDB"
 },
 {
@@ -23017,17 +22975,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KFA",
-	"geoLat": "26.497528",
-	"geoLong": "49.778611",
-	"txtName": "DAMMAM / KING FAHD INTERNATIONAL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LYA",
 	"geoLat": "34.74167",
 	"geoLong": "112.395",
 	"txtName": "LUOYANG",
+	"codeType": "VOR"
+},
+{
+	"codeId": "KFA",
+	"geoLat": "26.497528",
+	"geoLong": "49.778611",
+	"txtName": "DAMMAM / KING FAHD INTERNATIONAL",
 	"codeType": "VOR"
 },
 {
@@ -23108,18 +23066,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PVH",
-	"geoLat": "-8.714028",
-	"geoLong": "-63.903472",
-	"txtName": "PORTO VELHO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MW",
 	"geoLat": "47.11571111",
 	"geoLong": "-119.27450944",
 	"txtName": "PELLY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PVH",
+	"geoLat": "-8.714028",
+	"geoLong": "-63.903472",
+	"txtName": "PORTO VELHO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BZE",
@@ -23185,18 +23143,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "AQB",
-	"geoLat": "29.58361",
-	"geoLong": "35.00833",
-	"txtName": "KING HUSSEIN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ESS",
 	"geoLat": "31.4012667",
 	"geoLong": "-9.6869194",
 	"txtName": "ESSAOUIRA / MOGADOR",
 	"codeType": "VOR"
+},
+{
+	"codeId": "AQB",
+	"geoLat": "29.58361",
+	"geoLong": "35.00833",
+	"txtName": "KING HUSSEIN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -23332,18 +23290,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CAY",
-	"geoLat": "41.513778",
-	"geoLong": "32.044556",
-	"txtName": "CAYCUMA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ENW",
 	"geoLat": "42.59907694",
 	"geoLong": "-87.93167167",
 	"txtName": "KENOSHA",
 	"codeType": "DME"
+},
+{
+	"codeId": "CAY",
+	"geoLat": "41.513778",
+	"geoLong": "32.044556",
+	"txtName": "CAYCUMA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IPR",
@@ -23423,18 +23381,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "GRU",
-	"geoLat": "53.521244444",
-	"geoLong": "18.781341667",
-	"txtName": "GRUDZIADZ",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NB",
 	"geoLat": "45.1474944",
 	"geoLong": "-0.5499028",
 	"txtName": "NB",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GRU",
+	"geoLat": "53.521244444",
+	"geoLong": "18.781341667",
+	"txtName": "GRUDZIADZ",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ENO",
@@ -23472,18 +23430,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ON",
-	"geoLat": "51.50528",
-	"geoLong": "156.50417",
-	"txtName": "OZERNAYA",
-	"codeType": "DME"
-},
-{
 	"codeId": "",
 	"geoLat": "69.277361528",
 	"geoLong": "16.159787861",
 	"txtName": "",
 	"codeType": "DF"
+},
+{
+	"codeId": "ON",
+	"geoLat": "51.50528",
+	"geoLong": "156.50417",
+	"txtName": "OZERNAYA",
+	"codeType": "DME"
 },
 {
 	"codeId": "ZW",
@@ -23507,18 +23465,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "IZG",
-	"geoLat": "39.1218917",
-	"geoLong": "46.7513389",
-	"txtName": "ZANGILAN",
-	"codeType": "DME"
-},
-{
 	"codeId": "K",
 	"geoLat": "52.352778",
 	"geoLong": "104.205417",
 	"txtName": "IRKUTSK-2/VOSTOCHNY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IZG",
+	"geoLat": "39.1218917",
+	"geoLong": "46.7513389",
+	"txtName": "ZANGILAN",
+	"codeType": "DME"
 },
 {
 	"codeId": "FYM",
@@ -23619,18 +23577,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "AAL",
-	"geoLat": "57.1037194",
-	"geoLong": "9.9955778",
-	"txtName": "AALBORG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PO",
 	"geoLat": "43.3141194",
 	"geoLong": "-0.1662167",
 	"txtName": "PAU PYRENEES",
 	"codeType": "NDB"
+},
+{
+	"codeId": "AAL",
+	"geoLat": "57.1037194",
+	"geoLong": "9.9955778",
+	"txtName": "AALBORG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -23794,13 +23752,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "YKV",
-	"geoLat": "37.54917",
-	"geoLong": "44.2425",
-	"txtName": "YUKSEKOVA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TRT",
 	"geoLat": "12.2764694",
 	"geoLong": "102.3190944",
@@ -23808,10 +23759,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TNN",
-	"geoLat": "23.135306",
-	"geoLong": "120.206194",
-	"txtName": "SIGANG",
+	"codeId": "YKV",
+	"geoLat": "37.54917",
+	"geoLong": "44.2425",
+	"txtName": "YUKSEKOVA",
 	"codeType": "VOR"
 },
 {
@@ -23820,6 +23771,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "38.03556",
 	"txtName": "CHULKOVO",
 	"codeType": "DME"
+},
+{
+	"codeId": "TNN",
+	"geoLat": "23.135306",
+	"geoLong": "120.206194",
+	"txtName": "SIGANG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ROI",
@@ -23920,11 +23878,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "TBK",
-	"geoLat": "28.364694",
-	"geoLong": "36.61025",
-	"txtName": "TABUK / PRINCE SULTAN BIN ABDULAZIZ",
-	"codeType": "VORTAC"
+	"codeId": "LC",
+	"geoLat": "30.193",
+	"geoLong": "-93.26317",
+	"txtName": "KEYLI",
+	"codeType": "NDB"
 },
 {
 	"codeId": "BLA",
@@ -23941,11 +23899,11 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "LC",
-	"geoLat": "30.193",
-	"geoLong": "-93.26317",
-	"txtName": "KEYLI",
-	"codeType": "NDB"
+	"codeId": "TBK",
+	"geoLat": "28.364694",
+	"geoLong": "36.61025",
+	"txtName": "TABUK / PRINCE SULTAN BIN ABDULAZIZ",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "OEG",
@@ -23969,6 +23927,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "B",
+	"geoLat": "56.360389",
+	"geoLong": "101.737944",
+	"txtName": "BRATSK",
+	"codeType": "NDB"
+},
+{
 	"codeId": "LWL",
 	"geoLat": "41.14480278",
 	"geoLong": "-114.97751111",
@@ -23976,11 +23941,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "B",
-	"geoLat": "56.360389",
-	"geoLong": "101.737944",
-	"txtName": "BRATSK",
-	"codeType": "NDB"
+	"codeId": "MOJ",
+	"geoLat": "38.708785944",
+	"geoLong": "-9.033547361",
+	"txtName": "MONTIJO",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "MAV",
@@ -23995,13 +23960,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "72.7845667",
 	"txtName": "OSH",
 	"codeType": "DME"
-},
-{
-	"codeId": "MOJ",
-	"geoLat": "38.708785944",
-	"geoLong": "-9.033547361",
-	"txtName": "MONTIJO",
-	"codeType": "TACAN"
 },
 {
 	"codeId": "BHL",
@@ -24095,18 +24053,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ANX",
-	"geoLat": "39.09542389",
-	"geoLong": "-94.12883472",
-	"txtName": "NAPOLEON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SUD",
 	"geoLat": "35.5227389",
 	"geoLong": "24.1586056",
 	"txtName": "CHANIA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ANX",
+	"geoLat": "39.09542389",
+	"geoLong": "-94.12883472",
+	"txtName": "NAPOLEON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "PG",
@@ -24125,7 +24083,7 @@ export const navaids: EADdata[] = [
 {
 	"codeId": "UHA",
 	"geoLat": "22.9788389",
-	"geoLong": "-82.4266472",
+	"geoLong": "-82.4263889",
 	"txtName": "HABANA",
 	"codeType": "VOR"
 },
@@ -24207,13 +24165,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GCV",
-	"geoLat": "31.09795972",
-	"geoLong": "-88.48612889",
-	"txtName": "GREENE COUNTY",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "ON",
 	"geoLat": "58.584444",
 	"geoLong": "16.382028",
@@ -24226,6 +24177,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "141.303233",
 	"txtName": "VANIMO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GCV",
+	"geoLat": "31.09795972",
+	"geoLong": "-88.48612889",
+	"txtName": "GREENE COUNTY",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "AN",
@@ -24270,13 +24228,6 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "DIB",
-	"geoLat": "21.396028",
-	"geoLong": "103.004472",
-	"txtName": "DIEN BIEN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IMA",
 	"geoLat": "45.617371389",
 	"geoLong": "8.7286515",
@@ -24291,18 +24242,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "ISE",
-	"geoLat": "54.963611",
-	"geoLong": "24.100028",
-	"txtName": "KAUNAS",
-	"codeType": "DME"
-},
-{
 	"codeId": "",
 	"geoLat": "36.9425",
 	"geoLong": "37.50472",
 	"txtName": "MM ANTEP 28R",
 	"codeType": "MKR"
+},
+{
+	"codeId": "ISE",
+	"geoLat": "54.963611",
+	"geoLong": "24.100028",
+	"txtName": "KAUNAS",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -24382,18 +24333,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "AKO",
-	"geoLat": "40.155555",
-	"geoLong": "-103.17971472",
-	"txtName": "AKRON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ARG",
 	"geoLat": "36.11002",
 	"geoLong": "-90.95369333",
 	"txtName": "WALNUT RIDGE",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "AKO",
+	"geoLat": "40.155555",
+	"geoLong": "-103.17971472",
+	"txtName": "AKRON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TNR",
@@ -24424,18 +24375,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ESE",
-	"geoLat": "55.522631972",
-	"geoLong": "8.558665556",
-	"txtName": "ESEBO",
-	"codeType": "DME"
-},
-{
 	"codeId": "GRA",
 	"geoLat": "41.060016667",
 	"geoLong": "14.088716667",
 	"txtName": "GRAZZANISE",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "ESE",
+	"geoLat": "55.522631972",
+	"geoLong": "8.558665556",
+	"txtName": "ESEBO",
+	"codeType": "DME"
 },
 {
 	"codeId": "TBK",
@@ -24445,18 +24396,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "PRR",
-	"geoLat": "-22.17306",
-	"geoLong": "-51.42639",
-	"txtName": "PRUDENTE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TKH",
 	"geoLat": "32.24531833",
 	"geoLong": "-91.02582528",
 	"txtName": "TALLULAH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PRR",
+	"geoLat": "-22.17306",
+	"geoLong": "-51.42639",
+	"txtName": "PRUDENTE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CC",
@@ -24544,8 +24495,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BTM",
-	"geoLat": "1.1413361",
-	"geoLong": "104.1367722",
+	"geoLat": "1.141333",
+	"geoLong": "104.136778",
 	"txtName": "BATAM/HANG NADIM",
 	"codeType": "VOR"
 },
@@ -24648,13 +24599,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "YCE",
-	"geoLat": "35.11833",
-	"geoLong": "111.03333",
-	"txtName": "YUNCHENG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "Z",
 	"geoLat": "49.2276215",
 	"geoLong": "18.594640833",
@@ -24711,18 +24655,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "RZN",
-	"geoLat": "45.820445",
-	"geoLong": "-92.37451556",
-	"txtName": "SIREN",
-	"codeType": "DME"
-},
-{
 	"codeId": "KMN",
 	"geoLat": "42.625917",
 	"geoLong": "27.588917",
 	"txtName": "KAMENAR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RZN",
+	"geoLat": "45.820445",
+	"geoLong": "-92.37451556",
+	"txtName": "SIREN",
+	"codeType": "DME"
 },
 {
 	"codeId": "VG",
@@ -24837,13 +24781,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "58.586139",
-	"geoLong": "16.227444",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "JJC",
 	"geoLat": "36.41639",
 	"geoLong": "-81.82417",
@@ -24852,10 +24789,10 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "51.22536025",
-	"geoLong": "6.514448722",
+	"geoLat": "58.586139",
+	"geoLong": "16.227444",
 	"txtName": "",
-	"codeType": "ILS"
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "KY",
@@ -24863,6 +24800,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "123.74667",
 	"txtName": "WANGBINGOU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "51.22536025",
+	"geoLong": "6.514448722",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "ATE",
@@ -25012,18 +24956,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "IERW",
-	"geoLat": "50.980213333",
-	"geoLong": "10.969988139",
-	"txtName": "ERFURT IERW",
-	"codeType": "DME"
-},
-{
 	"codeId": "ALG",
 	"geoLat": "47.997381389",
 	"geoLong": "10.262189861",
 	"txtName": "ALLGAEU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IERW",
+	"geoLat": "50.980213333",
+	"geoLong": "10.969988139",
+	"txtName": "ERFURT IERW",
+	"codeType": "DME"
 },
 {
 	"codeId": "BUN",
@@ -25033,18 +24977,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YZD",
-	"geoLat": "31.885333",
-	"geoLong": "54.300806",
-	"txtName": "YAZD",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "TU",
 	"geoLat": "25.9900833",
 	"geoLong": "63.0298278",
 	"txtName": "TURBAT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YZD",
+	"geoLat": "31.885333",
+	"geoLong": "54.300806",
+	"txtName": "YAZD",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "PTS",
@@ -25194,18 +25138,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "ESP",
-	"geoLat": "38.424132889",
-	"geoLong": "-9.185654056",
-	"txtName": "ESPICHEL",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "41.632694",
 	"geoLong": "44.997083",
 	"txtName": "OM 31L",
 	"codeType": "MKR"
+},
+{
+	"codeId": "ESP",
+	"geoLat": "38.424132889",
+	"geoLong": "-9.185654056",
+	"txtName": "ESPICHEL",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OY",
@@ -25346,13 +25290,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-113.99028625",
 	"txtName": "",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "DO",
-	"geoLat": "-33.35975",
-	"geoLong": "-56.54975",
-	"txtName": "DURAZNO",
-	"codeType": "NDB"
 },
 {
 	"codeId": "BRI",
@@ -25670,18 +25607,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "WG",
-	"geoLat": "-35.16575",
-	"geoLong": "147.469083",
-	"txtName": "WAGGA WAGGA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GMA",
 	"geoLat": "44.36234361",
 	"geoLong": "-71.68590556",
 	"txtName": "MAHN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "WG",
+	"geoLat": "-35.16575",
+	"geoLong": "147.469083",
+	"txtName": "WAGGA WAGGA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TR",
@@ -25754,18 +25691,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YMM",
-	"geoLat": "56.6476722",
-	"geoLong": "-111.1224667",
-	"txtName": "FORT MCMURRAY",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "C",
 	"geoLat": "52.275583",
 	"geoLong": "104.362944",
 	"txtName": "IRKUTSK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YMM",
+	"geoLat": "56.6476722",
+	"geoLong": "-111.1224667",
+	"txtName": "FORT MCMURRAY",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BVG",
@@ -25936,18 +25873,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MIL",
-	"geoLat": "36.7475083",
-	"geoLong": "24.5194556",
-	"txtName": "MILOS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "EZM",
 	"geoLat": "32.13169194",
 	"geoLong": "-83.1539425",
 	"txtName": "EASTMAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MIL",
+	"geoLat": "36.7475083",
+	"geoLong": "24.5194556",
+	"txtName": "MILOS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KO",
@@ -25972,16 +25909,9 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BIS",
-	"geoLat": "34.77595",
-	"geoLong": "5.7636167",
+	"geoLat": "34.7760861",
+	"geoLong": "5.7637306",
 	"txtName": "BISKRA",
-	"codeType": "VOR/DME"
-},
-{
-	"codeId": "ARI",
-	"geoLat": "34.986778",
-	"geoLong": "-3.02925",
-	"txtName": "NADOR / EL AROUI",
 	"codeType": "VOR/DME"
 },
 {
@@ -25990,6 +25920,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-0.7049389",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "ARI",
+	"geoLat": "34.986778",
+	"geoLong": "-3.02925",
+	"txtName": "NADOR / EL AROUI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OZT",
@@ -26041,18 +25978,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "VCN",
-	"geoLat": "39.53767111",
-	"geoLong": "-74.96714389",
-	"txtName": "CEDAR LAKE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KG",
 	"geoLat": "-30.789833",
 	"geoLong": "121.452778",
 	"txtName": "KALGOORLIE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "VCN",
+	"geoLat": "39.53767111",
+	"geoLong": "-74.96714389",
+	"txtName": "CEDAR LAKE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TRE",
@@ -26076,18 +26013,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "JTG",
-	"geoLat": "30.87167",
-	"geoLong": "104.39",
-	"txtName": "JINTANG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PG",
 	"geoLat": "58.26325",
 	"geoLong": "12.4145",
 	"txtName": "TROLLHATTAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "JTG",
+	"geoLat": "30.87167",
+	"geoLong": "104.39",
+	"txtName": "JINTANG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ENS",
@@ -26111,18 +26048,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "",
-	"geoLat": "67.249222",
-	"geoLong": "23.058583",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "TIR",
 	"geoLat": "2.21917",
 	"geoLong": "-55.94167",
 	"txtName": "TIRIOS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "67.249222",
+	"geoLong": "23.058583",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "",
@@ -26335,18 +26272,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "KMB",
-	"geoLat": "-8.6266667",
-	"geoLong": "25.2483333",
-	"txtName": "KAMINA BASE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BPL",
 	"geoLat": "47.444077556",
 	"geoLong": "19.262272806",
 	"txtName": "BUDAPEST 13L",
 	"codeType": "DME"
+},
+{
+	"codeId": "KMB",
+	"geoLat": "-8.6266667",
+	"geoLong": "25.2483333",
+	"txtName": "KAMINA BASE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VTK",
@@ -26461,18 +26398,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "PTG",
-	"geoLat": "45.3127916666667",
-	"geoLong": "15.8055722222222",
-	"txtName": "PETROVA GORA",
-	"codeType": "DME"
-},
-{
 	"codeId": "",
 	"geoLat": "58.790806",
 	"geoLong": "16.946083",
 	"txtName": "ESKN MM 26",
 	"codeType": "MKR"
+},
+{
+	"codeId": "PTG",
+	"geoLat": "45.3127916666667",
+	"geoLong": "15.8055722222222",
+	"txtName": "PETROVA GORA",
+	"codeType": "DME"
 },
 {
 	"codeId": "CBL",
@@ -26510,18 +26447,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "47.697389",
-	"geoLong": "67.716444",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "FR",
 	"geoLat": "40.77652778",
 	"geoLong": "-73.48241667",
 	"txtName": "FRIKK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "47.697389",
+	"geoLong": "67.716444",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SZ",
@@ -26559,13 +26496,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PNZ",
-	"geoLat": "40.911805556",
-	"geoLong": "12.957277778",
-	"txtName": "PONZA",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "",
 	"geoLat": "42.5743917",
 	"geoLong": "18.2357861",
@@ -26573,9 +26503,16 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
+	"codeId": "PNZ",
+	"geoLat": "40.911805556",
+	"geoLong": "12.957277778",
+	"txtName": "PONZA",
+	"codeType": "TACAN"
+},
+{
 	"codeId": "CKV",
-	"geoLat": "36.62198556",
-	"geoLong": "-87.41265333",
+	"geoLat": "36.62198611",
+	"geoLong": "-87.41265917",
 	"txtName": "CLARKSVILLE",
 	"codeType": "VOR/DME"
 },
@@ -26615,18 +26552,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "RSK",
-	"geoLat": "57.3108611",
-	"geoLong": "25.15425",
-	"txtName": "RAISKUMS",
-	"codeType": "DME"
-},
-{
 	"codeId": "GLZ",
 	"geoLat": "-3.42556",
 	"geoLong": "-78.56528",
 	"txtName": "GUALAQUIZA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RSK",
+	"geoLat": "57.3108611",
+	"geoLong": "25.15425",
+	"txtName": "RAISKUMS",
+	"codeType": "DME"
 },
 {
 	"codeId": "HLD",
@@ -26776,18 +26713,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LAI",
-	"geoLat": "-25.9471389",
-	"geoLong": "27.9186389",
-	"txtName": "LANSERIA",
-	"codeType": "DME"
-},
-{
 	"codeId": "OL",
 	"geoLat": "52.749",
 	"geoLong": "-8.823889",
 	"txtName": "SHANNON",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LAI",
+	"geoLat": "-25.9471389",
+	"geoLong": "27.9186389",
+	"txtName": "LANSERIA",
+	"codeType": "DME"
 },
 {
 	"codeId": "MD",
@@ -26853,13 +26790,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SMT",
-	"geoLat": "22.3376194",
-	"geoLong": "113.9820722",
-	"txtName": "SIU MO TO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DXG",
 	"geoLat": "39.475",
 	"geoLong": "116.39333",
@@ -26872,6 +26802,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "108.93",
 	"txtName": "ANKANGFUQIANGDONG",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SMT",
+	"geoLat": "22.3376194",
+	"geoLong": "113.9820722",
+	"txtName": "SIU MO TO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BKW",
@@ -26902,17 +26839,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "CPO",
-	"geoLat": "-21.70056",
-	"geoLong": "-41.30778",
-	"txtName": "CAMPOS",
-	"codeType": "DME"
-},
-{
 	"codeId": "PRT",
 	"geoLat": "41.272970917",
 	"geoLong": "-8.687973639",
 	"txtName": "PORTO",
+	"codeType": "DME"
+},
+{
+	"codeId": "CPO",
+	"geoLat": "-21.70056",
+	"geoLong": "-41.30778",
+	"txtName": "CAMPOS",
 	"codeType": "DME"
 },
 {
@@ -26944,18 +26881,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "-43.500355361",
-	"geoLong": "172.518944333",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "LU",
 	"geoLat": "44.9610389",
 	"geoLong": "17.2923472",
 	"txtName": "BANJA LUKA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "-43.500355361",
+	"geoLong": "172.518944333",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "CB",
@@ -27196,18 +27133,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "AKE",
-	"geoLat": "32.4802361",
-	"geoLong": "130.1609667",
-	"txtName": "AMAKUSA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OEX",
 	"geoLat": "48.108859139",
 	"geoLong": "16.571538806",
 	"txtName": "WIEN-SCHWECHAT-RWY29",
 	"codeType": "DME"
+},
+{
+	"codeId": "AKE",
+	"geoLat": "32.4802361",
+	"geoLong": "130.1609667",
+	"txtName": "AMAKUSA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KU",
@@ -27413,11 +27350,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KHM",
-	"geoLat": "37.540111",
-	"geoLong": "36.952944",
-	"txtName": "KAHRAMANMARAS",
-	"codeType": "VOR/DME"
+	"codeId": "BU",
+	"geoLat": "39.81927889",
+	"geoLong": "-83.20463194",
+	"txtName": "BOUTN",
+	"codeType": "NDB"
 },
 {
 	"codeId": "BRD",
@@ -27427,13 +27364,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "FAY",
-	"geoLat": "34.98555111",
-	"geoLong": "-78.87506389",
-	"txtName": "FAYETTEVILLE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LOZ",
 	"geoLat": "37.03315028",
 	"geoLong": "-84.11007472",
@@ -27441,11 +27371,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BU",
-	"geoLat": "39.81927889",
-	"geoLong": "-83.20463194",
-	"txtName": "BOUTN",
-	"codeType": "NDB"
+	"codeId": "FAY",
+	"geoLat": "34.98555111",
+	"geoLong": "-78.87506389",
+	"txtName": "FAYETTEVILLE",
+	"codeType": "VOR"
+},
+{
+	"codeId": "KHM",
+	"geoLat": "37.540111",
+	"geoLong": "36.952944",
+	"txtName": "KAHRAMANMARAS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PY",
@@ -27602,18 +27539,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "UPP",
-	"geoLat": "20.20054111",
-	"geoLong": "-155.84326667",
-	"txtName": "UPOLU POINT",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "ATP",
 	"geoLat": "14.800278",
 	"geoLong": "107.02",
 	"txtName": "ATTAPEU",
 	"codeType": "VOR"
+},
+{
+	"codeId": "UPP",
+	"geoLat": "20.20054111",
+	"geoLong": "-155.84326667",
+	"txtName": "UPOLU POINT",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "ELV",
@@ -27728,18 +27665,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CDP",
-	"geoLat": "39.697694",
-	"geoLong": "3.434361",
-	"txtName": "CAPDEPERA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CYN",
 	"geoLat": "39.81733806",
 	"geoLong": "-74.43162583",
 	"txtName": "COYLE",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "CDP",
+	"geoLat": "39.697694",
+	"geoLong": "3.434361",
+	"txtName": "CAPDEPERA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SNT",
@@ -27778,8 +27715,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "KD",
-	"geoLat": "50.1234306",
-	"geoLong": "14.5533889",
+	"geoLat": "50.1233611",
+	"geoLong": "14.5533611",
 	"txtName": "KBELY DME 24",
 	"codeType": "DME"
 },
@@ -27798,13 +27735,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "UHN",
-	"geoLat": "41.310417",
-	"geoLong": "28.755778",
-	"txtName": "ISTANBUL AD",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MU",
 	"geoLat": "-29.3026028",
 	"geoLong": "27.5056444",
@@ -27817,6 +27747,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-87.327",
 	"txtName": "GARIE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "UHN",
+	"geoLat": "41.310417",
+	"geoLong": "28.755778",
+	"txtName": "ISTANBUL AD",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KTN",
@@ -27861,18 +27798,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LRN",
-	"geoLat": "18.4540028",
-	"geoLong": "-68.9118472",
-	"txtName": "LA ROMANA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ST",
 	"geoLat": "49.25889",
 	"geoLong": "43.67944",
 	"txtName": "SIROTINSKAYA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LRN",
+	"geoLat": "18.4540028",
+	"geoLong": "-68.9118472",
+	"txtName": "LA ROMANA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BAN",
@@ -27938,17 +27875,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "TUN",
-	"geoLat": "48.309333611",
-	"geoLong": "15.979700833",
-	"txtName": "TULLN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "JMU",
 	"geoLat": "46.84167",
 	"geoLong": "130.465",
 	"txtName": "JIAMUSI",
+	"codeType": "VOR"
+},
+{
+	"codeId": "TUN",
+	"geoLat": "48.309333611",
+	"geoLong": "15.979700833",
+	"txtName": "TULLN",
 	"codeType": "VOR"
 },
 {
@@ -27957,13 +27894,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-55.9689972",
 	"txtName": "POSADAS",
 	"codeType": "VOR"
-},
-{
-	"codeId": "GV",
-	"geoLat": "46.288694",
-	"geoLong": "47.940361",
-	"txtName": "ASTRAKHAN",
-	"codeType": "NDB"
 },
 {
 	"codeId": "NAH",
@@ -27994,18 +27924,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "49.968977778",
-	"geoLong": "6.684952778",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "EAG",
 	"geoLat": "42.451389",
 	"geoLong": "-2.314694",
 	"txtName": "LOGRONO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "49.968977778",
+	"geoLong": "6.684952778",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "PPT",
@@ -28141,18 +28071,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PRS",
-	"geoLat": "38.172059222",
-	"geoLong": "13.079818528",
-	"txtName": "PUNTA RAISI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NDO",
 	"geoLat": "-4.33333",
 	"geoLong": "15.31667",
 	"txtName": "N'DOLO (KINSHASA)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PRS",
+	"geoLat": "38.172059222",
+	"geoLong": "13.079818528",
+	"txtName": "PUNTA RAISI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SBH",
@@ -28169,11 +28099,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "UHT",
-	"geoLat": "63.560361",
-	"geoLong": "53.793472",
-	"txtName": "UKHTA",
-	"codeType": "VOR/DME"
+	"codeId": "PYF",
+	"geoLat": "31.86266306",
+	"geoLong": "-96.19747194",
+	"txtName": "PYRAMID",
+	"codeType": "NDB"
 },
 {
 	"codeId": "MDA",
@@ -28183,11 +28113,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PYF",
-	"geoLat": "31.86266306",
-	"geoLong": "-96.19747194",
-	"txtName": "PYRAMID",
-	"codeType": "NDB"
+	"codeId": "UHT",
+	"geoLat": "63.560361",
+	"geoLong": "53.793472",
+	"txtName": "UKHTA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MON",
@@ -28218,18 +28148,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LBR",
-	"geoLat": "27.2936028",
-	"geoLong": "94.097925",
-	"txtName": "LILABARI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KU",
 	"geoLat": "53.57333",
 	"geoLong": "37.055",
 	"txtName": "SKURATOVO",
 	"codeType": "DME"
+},
+{
+	"codeId": "LBR",
+	"geoLat": "27.2936028",
+	"geoLong": "94.097925",
+	"txtName": "LILABARI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MAH",
@@ -28365,18 +28295,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CHE",
-	"geoLat": "40.52008167",
-	"geoLong": "-107.30490111",
-	"txtName": "HAYDEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NFG",
 	"geoLat": "33.27458611",
 	"geoLong": "-117.38638611",
 	"txtName": "CAMP PENDLETON",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "CHE",
+	"geoLat": "40.52008167",
+	"geoLong": "-107.30490111",
+	"txtName": "HAYDEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MG",
@@ -28414,18 +28344,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "HLG",
-	"geoLat": "40.25990194",
-	"geoLong": "-80.56862472",
-	"txtName": "WHEELING",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HY",
 	"geoLat": "43.0961667",
 	"geoLong": "6.1463528",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "HLG",
+	"geoLat": "40.25990194",
+	"geoLong": "-80.56862472",
+	"txtName": "WHEELING",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AHC",
@@ -28519,18 +28449,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "EYP",
-	"geoLat": "5.2761111",
-	"geoLong": "-72.4266667",
-	"txtName": "EL YOPAL",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KFB",
 	"geoLat": "21.346611",
 	"geoLong": "39.171139",
 	"txtName": "KING FAISAL NAVAL BASE",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "EYP",
+	"geoLat": "5.2761111",
+	"geoLong": "-72.4266667",
+	"txtName": "EL YOPAL",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HON",
@@ -28624,6 +28554,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "PD",
+	"geoLat": "39.90117",
+	"geoLong": "-75.09483",
+	"txtName": "SPEEZ",
+	"codeType": "NDB"
+},
+{
 	"codeId": "IZK",
 	"geoLat": "22.8885",
 	"geoLong": "57.7618694",
@@ -28638,20 +28575,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PD",
-	"geoLat": "39.90117",
-	"geoLong": "-75.09483",
-	"txtName": "SPEEZ",
-	"codeType": "NDB"
-},
-{
-	"codeId": "ANY",
-	"geoLat": "-6.974694",
-	"geoLong": "110.380111",
-	"txtName": "SEMARANG/JENDERAL AHMAD YANI INTERNATIONAL",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KMC",
 	"geoLat": "36.3964694",
 	"geoLong": "136.4042528",
@@ -28664,6 +28587,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "145.71029611",
 	"txtName": "SAIPAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ANY",
+	"geoLat": "-6.974694",
+	"geoLong": "110.380111",
+	"txtName": "SEMARANG/JENDERAL AHMAD YANI INTERNATIONAL",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MRV",
@@ -28806,18 +28736,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TFS",
-	"geoLat": "28.002444",
-	"geoLong": "-16.687917",
-	"txtName": "TENERIFE SUR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IBK",
 	"geoLat": "43.0654139",
 	"geoLong": "74.498775",
 	"txtName": "MANAS",
 	"codeType": "DME"
+},
+{
+	"codeId": "TFS",
+	"geoLat": "28.002444",
+	"geoLong": "-16.687917",
+	"txtName": "TENERIFE SUR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IBG",
@@ -28855,13 +28785,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TSI",
-	"geoLat": "25.0675",
-	"geoLong": "121.565194",
-	"txtName": "TAPEI/SONGSHAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "AG",
 	"geoLat": "44.13944",
 	"geoLong": "39.02667",
@@ -28869,17 +28792,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "TSI",
+	"geoLat": "25.0675",
+	"geoLong": "121.565194",
+	"txtName": "TAPEI/SONGSHAN",
+	"codeType": "VOR"
+},
+{
 	"codeId": "SB",
 	"geoLat": "12.5727361",
 	"geoLong": "-13.3585333",
 	"txtName": "SAMBAILO",
-	"codeType": "NDB"
-},
-{
-	"codeId": "SJ",
-	"geoLat": "45.391608389",
-	"geoLong": "-65.818811167",
-	"txtName": "SAINT JOHN",
 	"codeType": "NDB"
 },
 {
@@ -28946,11 +28869,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MLG",
-	"geoLat": "36.67875",
-	"geoLong": "-4.506639",
-	"txtName": "MALAGA",
-	"codeType": "VOR"
+	"codeId": "JTI",
+	"geoLat": "-17.837380583",
+	"geoLong": "-51.735799056",
+	"txtName": "JTI",
+	"codeType": "DME"
 },
 {
 	"codeId": "KCE",
@@ -28965,6 +28888,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-3.634528",
 	"txtName": "GRANADA/ARMILLA",
 	"codeType": "DME"
+},
+{
+	"codeId": "MLG",
+	"geoLat": "36.67875",
+	"geoLong": "-4.506639",
+	"txtName": "MALAGA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VLN",
@@ -29114,13 +29044,6 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "EVG",
-	"geoLat": "8.6230833",
-	"geoLong": "-71.6640556",
-	"txtName": "EL VIGIA",
-	"codeType": "NDB"
-},
-{
 	"codeId": "DZF",
 	"geoLat": "32.416306",
 	"geoLong": "48.416917",
@@ -29142,18 +29065,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LEN",
-	"geoLat": "26.536139",
-	"geoLong": "54.851167",
-	"txtName": "BANDAR LENGEH",
-	"codeType": "VOR"
-},
-{
 	"codeId": "YEU",
 	"geoLat": "29.33167",
 	"geoLong": "120.03167",
 	"txtName": "YIWU",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "LEN",
+	"geoLat": "26.536139",
+	"geoLong": "54.851167",
+	"txtName": "BANDAR LENGEH",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -29227,8 +29150,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "UZX",
-	"geoLat": "44.983365",
-	"geoLong": "-64.919589306",
+	"geoLat": "44.9833333",
+	"geoLong": "-64.9197222",
 	"txtName": "GREENWOOD",
 	"codeType": "TACAN"
 },
@@ -29373,18 +29296,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NVO",
-	"geoLat": "50.822674306",
-	"geoLong": "6.63653425",
-	"txtName": "NOERVENICH",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "LJ",
 	"geoLat": "50.927054306",
 	"geoLong": "7.0622955",
 	"txtName": "KOELN-BONN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NVO",
+	"geoLat": "50.822674306",
+	"geoLong": "6.63653425",
+	"txtName": "NOERVENICH",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "ABM",
@@ -29415,18 +29338,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "-45.935333",
-	"geoLong": "170.184389",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "YIL",
 	"geoLat": "53.85333",
 	"geoLong": "-94.65333",
 	"txtName": "ISLAND LAKE",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "-45.935333",
+	"geoLong": "170.184389",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "S",
@@ -29450,17 +29373,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "CTB",
-	"geoLat": "-25.532028",
-	"geoLong": "-49.167667",
-	"txtName": "CURITIBA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CKB",
 	"geoLat": "39.25321778",
 	"geoLong": "-80.26786167",
 	"txtName": "CLARKSBURG",
+	"codeType": "VOR"
+},
+{
+	"codeId": "CTB",
+	"geoLat": "-25.532028",
+	"geoLong": "-49.167667",
+	"txtName": "CURITIBA",
 	"codeType": "VOR"
 },
 {
@@ -29625,13 +29548,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "IBA",
-	"geoLat": "38.868333",
-	"geoLong": "1.365944",
-	"txtName": "IBIZA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SRV",
 	"geoLat": "-3.447111",
 	"geoLong": "-80.009389",
@@ -29639,10 +29555,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "AFI",
-	"geoLat": "50.9076694",
-	"geoLong": "4.1389694",
-	"txtName": "AFFLIGEM",
+	"codeId": "IBA",
+	"geoLat": "38.868333",
+	"geoLong": "1.365944",
+	"txtName": "IBIZA",
 	"codeType": "VOR/DME"
 },
 {
@@ -29651,6 +29567,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-89.116990417",
 	"txtName": "ILOPANGO",
 	"codeType": "VOR"
+},
+{
+	"codeId": "AFI",
+	"geoLat": "50.9076694",
+	"geoLong": "4.1389694",
+	"txtName": "AFFLIGEM",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SCV",
@@ -29982,17 +29905,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MUN",
-	"geoLat": "9.7434444",
-	"geoLong": "-63.1531667",
-	"txtName": "MATURIN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CGG",
 	"geoLat": "44.68141806",
 	"geoLong": "-84.72859694",
 	"txtName": "GRAYLING",
+	"codeType": "VOR"
+},
+{
+	"codeId": "MUN",
+	"geoLat": "9.7434444",
+	"geoLong": "-63.1531667",
+	"txtName": "MATURIN",
 	"codeType": "VOR"
 },
 {
@@ -30052,17 +29975,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "REC",
-	"geoLat": "-8.136583",
-	"geoLong": "-34.927306",
-	"txtName": "RECIFE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RUD",
 	"geoLat": "52.830536111",
 	"geoLong": "23.707136111",
 	"txtName": "SKUPOWO",
+	"codeType": "VOR"
+},
+{
+	"codeId": "REC",
+	"geoLat": "-8.136583",
+	"geoLong": "-34.927306",
+	"txtName": "RECIFE",
 	"codeType": "VOR"
 },
 {
@@ -30185,11 +30108,11 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "VBZ",
-	"geoLat": "38.889917",
-	"geoLong": "-6.815778",
-	"txtName": "BADAJOZ",
-	"codeType": "VOR/DME"
+	"codeId": "IFN",
+	"geoLat": "32.74639",
+	"geoLong": "51.82472",
+	"txtName": "ESFAHAN",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "IMA",
@@ -30199,11 +30122,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "IFN",
-	"geoLat": "32.74639",
-	"geoLong": "51.82472",
-	"txtName": "ESFAHAN",
-	"codeType": "TACAN"
+	"codeId": "VBZ",
+	"geoLat": "38.889917",
+	"geoLong": "-6.815778",
+	"txtName": "BADAJOZ",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "QHA",
@@ -30262,18 +30185,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GAO",
-	"geoLat": "16.2456889",
-	"geoLong": "0.0044861",
-	"txtName": "GAO/KOROGOUSSOU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CRD",
 	"geoLat": "37.789972",
 	"geoLong": "29.704028",
 	"txtName": "CARDAK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GAO",
+	"geoLat": "16.2456889",
+	"geoLong": "0.0044861",
+	"txtName": "GAO/KOROGOUSSOU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KD",
@@ -30353,18 +30276,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SJE",
-	"geoLat": "2.5325",
-	"geoLong": "-72.6397222",
-	"txtName": "SAN JOSE DEL GUAVIARE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LAM",
 	"geoLat": "38.90236925",
 	"geoLong": "16.254639667",
 	"txtName": "LAMEZIA",
 	"codeType": "DME"
+},
+{
+	"codeId": "SJE",
+	"geoLat": "2.5325",
+	"geoLong": "-72.6397222",
+	"txtName": "SAN JOSE DEL GUAVIARE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NDD",
@@ -30549,18 +30472,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TAF",
-	"geoLat": "-17.5471194",
-	"geoLong": "-149.6015083",
-	"txtName": "TAHITI FAA'A",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SMO",
 	"geoLat": "37.6854917",
 	"geoLong": "26.9166056",
 	"txtName": "SAMOS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TAF",
+	"geoLat": "-17.5471194",
+	"geoLong": "-149.6015083",
+	"txtName": "TAHITI FAA'A",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LMN",
@@ -30591,18 +30514,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "VNE",
-	"geoLat": "45.5564556",
-	"geoLong": "4.883425",
-	"txtName": "VIENNE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "FRS",
 	"geoLat": "41.642580556",
 	"geoLong": "13.292216389",
 	"txtName": "FROSINONE",
 	"codeType": "DME"
+},
+{
+	"codeId": "VNE",
+	"geoLat": "45.5564556",
+	"geoLong": "4.883425",
+	"txtName": "VIENNE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "PVL",
@@ -30672,13 +30595,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "35.9201528",
 	"geoLong": "74.3350806",
 	"txtName": "GILGIT",
-	"codeType": "NDB"
-},
-{
-	"codeId": "MP",
-	"geoLat": "-33.343167",
-	"geoLong": "-56.491167",
-	"txtName": "DURAZNO",
 	"codeType": "NDB"
 },
 {
@@ -30815,18 +30731,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KAE",
-	"geoLat": "37.700778",
-	"geoLong": "128.753778",
-	"txtName": "GANGWON",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "DHB",
 	"geoLat": "30.69833",
 	"geoLong": "113.97167",
 	"txtName": "HEBAOHU",
 	"codeType": "VOR"
+},
+{
+	"codeId": "KAE",
+	"geoLat": "37.700778",
+	"geoLong": "128.753778",
+	"txtName": "GANGWON",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "",
@@ -31032,18 +30948,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KKP",
-	"geoLat": "12.7844472",
-	"geoLong": "79.7135778",
-	"txtName": "KANCHEEPURAM",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KAR",
 	"geoLat": "40.556694",
 	"geoLong": "43.103972",
 	"txtName": "KARS",
 	"codeType": "VOR"
+},
+{
+	"codeId": "KKP",
+	"geoLat": "12.7844472",
+	"geoLong": "79.7135778",
+	"txtName": "KANCHEEPURAM",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NZ",
@@ -31060,18 +30976,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SAT",
-	"geoLat": "37.9166667",
-	"geoLong": "23.9141667",
-	"txtName": "ATHINAI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YUX",
 	"geoLat": "68.778325694",
 	"geoLong": "-81.239401167",
 	"txtName": "HALL BEACH",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SAT",
+	"geoLat": "37.9168389",
+	"geoLong": "23.9144389",
+	"txtName": "ATHINAI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AUR",
@@ -31095,18 +31011,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MON",
-	"geoLat": "35.754944",
-	"geoLong": "10.748194",
-	"txtName": "MONASTIR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TU",
 	"geoLat": "60.515975",
 	"geoLong": "22.2802944",
 	"txtName": "TURKU",
 	"codeType": "DME"
+},
+{
+	"codeId": "MON",
+	"geoLat": "35.754944",
+	"geoLong": "10.748194",
+	"txtName": "MONASTIR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "PB",
@@ -31151,17 +31067,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LA",
-	"geoLat": "31.51935",
-	"geoLong": "74.4000139",
-	"txtName": "LAHORE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SJE",
 	"geoLat": "24.8219333",
 	"geoLong": "125.1438056",
 	"txtName": "SHIMOJISHIMA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "LA",
+	"geoLat": "31.51935",
+	"geoLong": "74.4000139",
+	"txtName": "LAHORE",
 	"codeType": "VOR/DME"
 },
 {
@@ -31333,18 +31249,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "VBD",
-	"geoLat": "-8.480667",
-	"geoLong": "13.371861",
-	"txtName": "BARRA DO DANDE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TBN",
 	"geoLat": "43.6218361",
 	"geoLong": "1.3714583",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "VBD",
+	"geoLat": "-8.480667",
+	"geoLong": "13.371861",
+	"txtName": "BARRA DO DANDE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "UBL",
@@ -31389,18 +31305,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SJU",
-	"geoLat": "18.44628056",
-	"geoLong": "-65.9895075",
-	"txtName": "SAN JUAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RYD",
 	"geoLat": "29.96691667",
 	"geoLong": "-81.65766667",
 	"txtName": "REYNOLDS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SJU",
+	"geoLat": "18.44628056",
+	"geoLong": "-65.9895075",
+	"txtName": "SAN JUAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "WN",
@@ -31557,18 +31473,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "RBS",
-	"geoLat": "40.58170139",
-	"geoLong": "-88.16426778",
-	"txtName": "ROBERTS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BUR",
 	"geoLat": "51.5190111",
 	"geoLong": "-0.6771917",
 	"txtName": "BURNHAM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RBS",
+	"geoLat": "40.58170139",
+	"geoLong": "-88.16426778",
+	"txtName": "ROBERTS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TRS",
@@ -31620,18 +31536,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CSI",
-	"geoLat": "29.92235444",
-	"geoLong": "-99.21448583",
-	"txtName": "CENTER POINT",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ML",
 	"geoLat": "-37.660139",
 	"geoLong": "144.842",
 	"txtName": "MELBOURNE",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "CSI",
+	"geoLat": "29.92235444",
+	"geoLong": "-99.21448583",
+	"txtName": "CENTER POINT",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DGO",
@@ -31837,18 +31753,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "SBR",
-	"geoLat": "-7.373944",
-	"geoLong": "112.771222",
-	"txtName": "SURABAYA/JUANDA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "RG",
 	"geoLat": "-21.20778",
 	"geoLong": "-159.82139",
 	"txtName": "RAROTONGA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SBR",
+	"geoLat": "-7.373944",
+	"geoLong": "112.771222",
+	"txtName": "SURABAYA/JUANDA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -32033,18 +31949,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SPP",
-	"geoLat": "12.5825",
-	"geoLong": "-81.7052778",
-	"txtName": "SAN ANDRES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ROR",
 	"geoLat": "7.36861",
 	"geoLong": "134.55028",
 	"txtName": "KOROR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SPP",
+	"geoLat": "12.5825",
+	"geoLong": "-81.7052778",
+	"txtName": "SAN ANDRES",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "YGL",
@@ -32118,8 +32034,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "60.3318972",
-	"geoLong": "24.98175",
+	"geoLat": "60.3138944",
+	"geoLong": "24.9388833",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -32222,18 +32138,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "DWN",
-	"geoLat": "45.0874625",
-	"geoLong": "-94.45384972",
-	"txtName": "DARWIN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ZH",
 	"geoLat": "-6.11167",
 	"geoLong": "140.26667",
 	"txtName": "BOVEN DIGOEL / TANAH MERAH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DWN",
+	"geoLat": "45.0874625",
+	"geoLong": "-94.45384972",
+	"txtName": "DARWIN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -32418,13 +32334,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SG",
-	"geoLat": "25.070417",
-	"geoLong": "121.529583",
-	"txtName": "TAIPEI/SONGSHAN",
-	"codeType": "NDB"
-},
-{
 	"codeId": "",
 	"geoLat": "40.498389",
 	"geoLong": "-3.559194",
@@ -32460,18 +32369,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "YN",
-	"geoLat": "40.0931472",
-	"geoLong": "44.4415917",
-	"txtName": "EREBUNI",
-	"codeType": "NDB_MKR"
-},
-{
 	"codeId": "RAG",
 	"geoLat": "29.1",
 	"geoLong": "19.04",
 	"txtName": "RAGUBA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YN",
+	"geoLat": "40.0931472",
+	"geoLong": "44.4415917",
+	"txtName": "EREBUNI",
+	"codeType": "NDB_MKR"
 },
 {
 	"codeId": "HO",
@@ -32607,18 +32516,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "KNR",
-	"geoLat": "11.915875",
-	"geoLong": "75.5338556",
-	"txtName": "KANNUR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HCM",
 	"geoLat": "37.44866",
 	"geoLong": "-76.71135389",
 	"txtName": "HARCUM",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "KNR",
+	"geoLat": "11.915875",
+	"geoLong": "75.5338556",
+	"txtName": "KANNUR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "DLC",
@@ -32985,17 +32894,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AUR",
-	"geoLat": "14.571644028",
-	"geoLong": "-90.532916639",
-	"txtName": "LA AURORA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "EKN",
 	"geoLat": "38.91443583",
 	"geoLong": "-80.0992725",
 	"txtName": "ELKINS",
+	"codeType": "VOR"
+},
+{
+	"codeId": "AUR",
+	"geoLat": "14.571644028",
+	"geoLong": "-90.532916639",
+	"txtName": "LA AURORA",
 	"codeType": "VOR"
 },
 {
@@ -33041,18 +32950,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "MSN",
-	"geoLat": "43.144835",
-	"geoLong": "-89.33969694",
-	"txtName": "MADISON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IFN",
 	"geoLat": "33.500111",
 	"geoLong": "-5.16025",
 	"txtName": "IFRANE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MSN",
+	"geoLat": "43.144835",
+	"geoLong": "-89.33969694",
+	"txtName": "MADISON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "YRB",
@@ -33139,18 +33048,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "YJH",
-	"geoLat": "45.3040611",
-	"geoLong": "-65.8910611",
-	"txtName": "SAINT JOHN",
-	"codeType": "DME"
-},
-{
 	"codeId": "W",
 	"geoLat": "50.495",
 	"geoLong": "30.366389",
 	"txtName": "KYIV/ANTONOV-1",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YJH",
+	"geoLat": "45.3040611",
+	"geoLong": "-65.8910611",
+	"txtName": "SAINT JOHN",
+	"codeType": "DME"
 },
 {
 	"codeId": "CFB",
@@ -33181,18 +33090,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "VAB",
-	"geoLat": "38.947111",
-	"geoLong": "-1.859306",
-	"txtName": "ALBACETE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "THS",
 	"geoLat": "17.235225",
 	"geoLong": "99.8220083",
 	"txtName": "SUKHOTHAI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "VAB",
+	"geoLat": "38.947111",
+	"geoLong": "-1.859306",
+	"txtName": "ALBACETE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "PTW",
@@ -33244,18 +33153,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SGR",
-	"geoLat": "34.0027556",
-	"geoLong": "74.7555778",
-	"txtName": "SRINAGAR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YI",
 	"geoLat": "42.17417",
 	"geoLong": "-83.6215",
 	"txtName": "YIPPS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SGR",
+	"geoLat": "34.0027556",
+	"geoLong": "74.7555778",
+	"txtName": "SRINAGAR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MMT",
@@ -33636,11 +33545,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PRG",
-	"geoLat": "11.7815",
-	"geoLong": "-70.135",
-	"txtName": "PARAGUANA",
-	"codeType": "VOR/DME"
+	"codeId": "SA",
+	"geoLat": "38.44967",
+	"geoLong": "-121.54617",
+	"txtName": "EXECC",
+	"codeType": "NDB"
 },
 {
 	"codeId": "ZCO",
@@ -33650,17 +33559,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SA",
-	"geoLat": "38.44967",
-	"geoLong": "-121.54617",
-	"txtName": "EXECC",
-	"codeType": "NDB"
-},
-{
-	"codeId": "WRB",
-	"geoLat": "51.505696667",
-	"geoLong": "9.11091425",
-	"txtName": "WARBURG",
+	"codeId": "PRG",
+	"geoLat": "11.7815",
+	"geoLong": "-70.135",
+	"txtName": "PARAGUANA",
 	"codeType": "VOR/DME"
 },
 {
@@ -33668,6 +33570,13 @@ export const navaids: EADdata[] = [
 	"geoLat": "-38.9504028",
 	"geoLong": "-68.1547611",
 	"txtName": "NEUQUEN / PTE. PERON",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "WRB",
+	"geoLat": "51.505696667",
+	"geoLong": "9.11091425",
+	"txtName": "WARBURG",
 	"codeType": "VOR/DME"
 },
 {
@@ -33790,18 +33699,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "49.437141667",
-	"geoLong": "7.579972222",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "SIR",
 	"geoLat": "37.976722",
 	"geoLong": "41.836722",
 	"txtName": "SIIRT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "49.437141667",
+	"geoLong": "7.579972222",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "BDP",
@@ -33867,18 +33776,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SIA",
-	"geoLat": "18.5010222",
-	"geoLong": "-77.9241194",
-	"txtName": "SANGSTER",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ENE",
 	"geoLat": "43.42567222",
 	"geoLong": "-70.61352556",
 	"txtName": "KENNEBUNK",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SIA",
+	"geoLat": "18.5010222",
+	"geoLong": "-77.9241194",
+	"txtName": "SANGSTER",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TBG",
@@ -34007,18 +33916,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "VTN",
-	"geoLat": "-32.73861",
-	"geoLong": "-71.49611",
-	"txtName": "VENTANAS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "L",
 	"geoLat": "70.63167",
 	"geoLong": "147.94667",
 	"txtName": "CHOKURDAKH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "VTN",
+	"geoLat": "-32.73861",
+	"geoLong": "-71.49611",
+	"txtName": "VENTANAS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TRN",
@@ -34147,18 +34056,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BG",
-	"geoLat": "60.307575639",
-	"geoLong": "5.213366833",
-	"txtName": "BERGEN/FLESLAND",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "FD",
 	"geoLat": "36.93",
 	"geoLong": "120.6317",
 	"txtName": "LAIYANG",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BG",
+	"geoLat": "60.307575639",
+	"geoLong": "5.213366833",
+	"txtName": "BERGEN/FLESLAND",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "",
@@ -34182,13 +34091,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NGS",
-	"geoLat": "30.61515556",
-	"geoLong": "-86.93736667",
-	"txtName": "SANTA ROSA",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "TR",
 	"geoLat": "52.15",
 	"geoLong": "93.905",
@@ -34196,11 +34098,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ZAW",
-	"geoLat": "32.77861",
-	"geoLong": "12.64639",
-	"txtName": "ZAWIA",
-	"codeType": "VOR/DME"
+	"codeId": "NGS",
+	"geoLat": "30.61515556",
+	"geoLong": "-86.93736667",
+	"txtName": "SANTA ROSA",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "MVA",
@@ -34210,10 +34112,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PLG",
-	"geoLat": "-0.1786111",
-	"geoLong": "-74.7755556",
-	"txtName": "PUERTO LEGUIZAMO",
+	"codeId": "ZAW",
+	"geoLat": "32.77861",
+	"geoLong": "12.64639",
+	"txtName": "ZAWIA",
 	"codeType": "VOR/DME"
 },
 {
@@ -34231,17 +34133,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "PLG",
+	"geoLat": "-0.1786111",
+	"geoLong": "-74.7755556",
+	"txtName": "PUERTO LEGUIZAMO",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "BRD",
 	"geoLat": "37.495056",
 	"geoLong": "57.323278",
 	"txtName": "BOJNORD",
-	"codeType": "VOR"
-},
-{
-	"codeId": "PKN",
-	"geoLat": "-2.718472",
-	"geoLong": "111.687722",
-	"txtName": "PANGKALAN BUN/ISKANDAR",
 	"codeType": "VOR"
 },
 {
@@ -34250,6 +34152,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "42.65694",
 	"txtName": "ABHA",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "PKN",
+	"geoLat": "-2.718472",
+	"geoLong": "111.687722",
+	"txtName": "PANGKALAN BUN/ISKANDAR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DQO",
@@ -34287,18 +34196,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "IBM",
-	"geoLat": "50.908306",
-	"geoLong": "4.502111",
-	"txtName": "BRUSSELS NATIONAL",
-	"codeType": "DME"
-},
-{
 	"codeId": "SK",
 	"geoLat": "12.910667",
 	"geoLong": "5.18475",
 	"txtName": "SOKOTO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IBM",
+	"geoLat": "50.908306",
+	"geoLong": "4.502111",
+	"txtName": "BRUSSELS NATIONAL",
+	"codeType": "DME"
 },
 {
 	"codeId": "PDT",
@@ -34392,18 +34301,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "CRK",
-	"geoLat": "51.8406083",
-	"geoLong": "-8.4942694",
-	"txtName": "CORK",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ML",
 	"geoLat": "-7.93333",
 	"geoLong": "112.71667",
 	"txtName": "MALANG/ABDUL RAHMAN SALEH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CRK",
+	"geoLat": "51.8406083",
+	"geoLong": "-8.4942694",
+	"txtName": "CORK",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KPS",
@@ -34420,18 +34329,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ULD",
-	"geoLat": "51.811722",
-	"geoLong": "107.439972",
-	"txtName": "ULAN-UDE/MUKHINO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ORE",
 	"geoLat": "48.72385",
 	"geoLong": "2.3239861",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "ULD",
+	"geoLat": "51.811722",
+	"geoLong": "107.439972",
+	"txtName": "ULAN-UDE/MUKHINO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BGH",
@@ -34504,13 +34413,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "-25.370056",
-	"geoLong": "31.115361",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "AT",
 	"geoLat": "-20.00333",
 	"geoLong": "-158.10667",
@@ -34523,6 +34425,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "3.0116167",
 	"txtName": "OOSTENDE",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "",
+	"geoLat": "-25.370056",
+	"geoLong": "31.115361",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "CBN",
@@ -34651,18 +34560,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MNW",
-	"geoLat": "44.239611",
-	"geoLong": "43.053556",
-	"txtName": "MINERALNYYE VODY",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ABD",
 	"geoLat": "-7.9327639",
 	"geoLong": "112.7131111",
 	"txtName": "MALANG / ABDUL RACHMAN SALEH",
 	"codeType": "VOR"
+},
+{
+	"codeId": "MNW",
+	"geoLat": "44.239611",
+	"geoLong": "43.053556",
+	"txtName": "MINERALNYYE VODY",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TYR",
@@ -34861,17 +34770,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "ZQA",
-	"geoLat": "25.025528",
-	"geoLong": "-77.446444",
-	"txtName": "NASSAU",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PNH",
 	"geoLat": "35.23506222",
 	"geoLong": "-101.69903083",
 	"txtName": "PANHANDLE",
+	"codeType": "VOR"
+},
+{
+	"codeId": "ZQA",
+	"geoLat": "25.025528",
+	"geoLong": "-77.446444",
+	"txtName": "NASSAU",
 	"codeType": "VOR"
 },
 {
@@ -34917,18 +34826,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HBL",
-	"geoLat": "15.3651417",
-	"geoLong": "75.0965889",
-	"txtName": "HUBBALLI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SRH",
 	"geoLat": "50.8361056",
 	"geoLong": "-0.2934833",
 	"txtName": "SHOREHAM",
 	"codeType": "DME"
+},
+{
+	"codeId": "HBL",
+	"geoLat": "15.3651417",
+	"geoLong": "75.0965889",
+	"txtName": "HUBBALLI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BIS",
@@ -34966,13 +34875,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TIF",
-	"geoLat": "21.486472",
-	"geoLong": "40.54725",
-	"txtName": "TAIF INTERNATIONAL AIRPORT",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "BU",
 	"geoLat": "43.00017",
 	"geoLong": "-78.65083",
@@ -34985,6 +34887,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "50.829556",
 	"txtName": "SYKTYVKAR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TIF",
+	"geoLat": "21.486472",
+	"geoLong": "40.54725",
+	"txtName": "TAIF INTERNATIONAL AIRPORT",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "BEJ",
@@ -35148,17 +35057,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "DTS",
-	"geoLat": "2.6623889",
-	"geoLong": "101.5593333",
-	"txtName": "TANJUNG SEPAT",
-	"codeType": "DME"
-},
-{
 	"codeId": "OEN",
 	"geoLat": "48.091373889",
 	"geoLong": "16.592456861",
 	"txtName": "WIEN-SCHWECHAT-RWY34",
+	"codeType": "DME"
+},
+{
+	"codeId": "DTS",
+	"geoLat": "2.6623889",
+	"geoLong": "101.5593333",
+	"txtName": "TANJUNG SEPAT",
 	"codeType": "DME"
 },
 {
@@ -35337,13 +35246,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "MJV",
-	"geoLat": "39.435194",
-	"geoLong": "2.758306",
-	"txtName": "MALLORCA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GVA",
 	"geoLat": "46.253917",
 	"geoLong": "6.132222",
@@ -35356,6 +35258,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "2.2862417",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "MJV",
+	"geoLat": "39.435194",
+	"geoLong": "2.758306",
+	"txtName": "MALLORCA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BO",
@@ -35502,13 +35411,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "53.595406694",
 	"geoLong": "14.88148725",
 	"txtName": "SZCZECIN",
-	"codeType": "VOR"
-},
-{
-	"codeId": "YCE",
-	"geoLat": "35.11833",
-	"geoLong": "111.03333",
-	"txtName": "YUNCHENG",
 	"codeType": "VOR"
 },
 {
@@ -35666,18 +35568,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IME",
-	"geoLat": "34.6762444",
-	"geoLong": "131.7798806",
-	"txtName": "IWAMI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BDA",
 	"geoLat": "9.102139",
 	"geoLong": "6.017528",
 	"txtName": "BIDA",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "IME",
+	"geoLat": "34.6762444",
+	"geoLong": "131.7798806",
+	"txtName": "IWAMI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NKW",
@@ -35694,13 +35596,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "CUY",
-	"geoLat": "16.931611",
-	"geoLong": "121.748083",
-	"txtName": "CAUAYAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SS",
 	"geoLat": "34.80895",
 	"geoLong": "72.3519583",
@@ -35713,6 +35608,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-79.76593167",
 	"txtName": "EVANS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CUY",
+	"geoLat": "16.931611",
+	"geoLong": "121.748083",
+	"txtName": "CAUAYAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CIV",
@@ -35827,6 +35729,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "MF",
+	"geoLat": "42.45083",
+	"geoLong": "-122.91333",
+	"txtName": "PUMIE",
+	"codeType": "NDB"
+},
+{
 	"codeId": "PKI",
 	"geoLat": "-25.390028",
 	"geoLong": "31.101889",
@@ -35834,10 +35743,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MF",
-	"geoLat": "42.45083",
-	"geoLong": "-122.91333",
-	"txtName": "PUMIE",
+	"codeId": "AB",
+	"geoLat": "8.997371083",
+	"geoLong": "38.820154889",
+	"txtName": "ADDIS ABEBA",
 	"codeType": "NDB"
 },
 {
@@ -35846,13 +35755,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-91.78574889",
 	"txtName": "CEDAR RAPIDS",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "AB",
-	"geoLat": "8.997371083",
-	"geoLong": "38.820154889",
-	"txtName": "ADDIS ABEBA",
-	"codeType": "NDB"
 },
 {
 	"codeId": "",
@@ -36079,13 +35981,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PEQ",
-	"geoLat": "31.46931444",
-	"geoLong": "-103.57475444",
-	"txtName": "PECOS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MD",
 	"geoLat": "1.480833",
 	"geoLong": "124.838528",
@@ -36098,6 +35993,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "2.7995972",
 	"txtName": "AVORD",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PEQ",
+	"geoLat": "31.46931444",
+	"geoLong": "-103.57475444",
+	"txtName": "PECOS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ISB",
@@ -36135,18 +36037,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "39.498472",
-	"geoLong": "-0.505667",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "SGO",
 	"geoLat": "39.674194",
 	"geoLong": "-0.207806",
 	"txtName": "SAGUNTO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "39.498472",
+	"geoLong": "-0.505667",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "ITR",
@@ -36254,18 +36156,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "OKC",
-	"geoLat": "52.169758556",
-	"geoLong": "20.960051389",
-	"txtName": "WARSZAWA/OKECIE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MS",
 	"geoLat": "44.85411806",
 	"geoLong": "-74.91577444",
 	"txtName": "MISSE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OKC",
+	"geoLat": "52.169758556",
+	"geoLong": "20.960051389",
+	"txtName": "WARSZAWA/OKECIE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HVE",
@@ -36296,13 +36198,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ISUR",
-	"geoLat": "37.437278",
-	"geoLong": "38.884389",
-	"txtName": "SANLIURFA/GAP",
-	"codeType": "DME"
-},
-{
 	"codeId": "M",
 	"geoLat": "54.250806",
 	"geoLong": "48.20475",
@@ -36310,10 +36205,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "JVL",
-	"geoLat": "56.5048611",
-	"geoLong": "23.9282222",
-	"txtName": "JAUNSVIRLAUKA",
+	"codeId": "ISUR",
+	"geoLat": "37.437278",
+	"geoLong": "38.884389",
+	"txtName": "SANLIURFA/GAP",
 	"codeType": "DME"
 },
 {
@@ -36322,6 +36217,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "108.491944",
 	"txtName": "PANGANDARAN / NUSAWIRU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "JVL",
+	"geoLat": "56.5048611",
+	"geoLong": "23.9282222",
+	"txtName": "JAUNSVIRLAUKA",
+	"codeType": "DME"
 },
 {
 	"codeId": "PH",
@@ -36359,18 +36261,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "MUN",
-	"geoLat": "34.977778",
-	"geoLong": "126.384833",
-	"txtName": "MUAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "E",
 	"geoLat": "50.311667",
 	"geoLong": "30.878667",
 	"txtName": "KYIV/BORYSPIL",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "MUN",
+	"geoLat": "34.977778",
+	"geoLong": "126.384833",
+	"txtName": "MUAN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TZO",
@@ -36394,18 +36296,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "RIN",
-	"geoLat": "14.67083",
-	"geoLong": "49.39139",
-	"txtName": "MUKALLA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "EAU",
 	"geoLat": "44.89767",
 	"geoLong": "-91.478535",
 	"txtName": "EAU CLAIRE",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "RIN",
+	"geoLat": "14.67083",
+	"geoLong": "49.39139",
+	"txtName": "MUKALLA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -36436,13 +36338,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MNS",
-	"geoLat": "43.0669222",
-	"geoLong": "74.5209083",
-	"txtName": "BISHKEK/MANAS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "YXU",
 	"geoLat": "43.037910556",
 	"geoLong": "-81.148929611",
@@ -36455,6 +36350,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "143.11725",
 	"txtName": "COEN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MNS",
+	"geoLat": "43.0669222",
+	"geoLong": "74.5209083",
+	"txtName": "BISHKEK/MANAS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DL",
@@ -36478,18 +36380,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "44.5638167",
-	"geoLong": "26.0813222",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "LO",
 	"geoLat": "55.35111",
 	"geoLong": "37.52694",
 	"txtName": "KLIMOVSK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "44.5638167",
+	"geoLong": "26.0813222",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "DDC",
@@ -36502,7 +36404,7 @@ export const navaids: EADdata[] = [
 	"codeId": "HSR",
 	"geoLat": "22.36889917",
 	"geoLong": "71.03111111",
-	"txtName": "HIRASAR",
+	"txtName": "RAJKOT",
 	"codeType": "VOR"
 },
 {
@@ -36534,18 +36436,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TBK",
-	"geoLat": "36.978167",
-	"geoLong": "8.883583",
-	"txtName": "TABARKA/AIN DRAHAM",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BX",
 	"geoLat": "50.622472",
 	"geoLong": "36.655472",
 	"txtName": "BELGOROD",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TBK",
+	"geoLat": "36.978167",
+	"geoLong": "8.883583",
+	"txtName": "TABARKA/AIN DRAHAM",
+	"codeType": "VOR"
 },
 {
 	"codeId": "XKC",
@@ -36562,11 +36464,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LE",
-	"geoLat": "8.43694",
-	"geoLong": "20.63139",
-	"txtName": "NDELE",
-	"codeType": "VOR/DME"
+	"codeId": "MR",
+	"geoLat": "43.88444",
+	"geoLong": "133.25278",
+	"txtName": "MURAVEYKA",
+	"codeType": "DME"
 },
 {
 	"codeId": "GS",
@@ -36574,6 +36476,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-80.03567",
 	"txtName": "MARKY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LE",
+	"geoLat": "8.43694",
+	"geoLong": "20.63139",
+	"txtName": "NDELE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "LPN",
@@ -36695,18 +36604,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "CDV",
-	"geoLat": "-34.1129667",
-	"geoLong": "19.4778861",
-	"txtName": "CALEDON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IKS",
 	"geoLat": "52.32915",
 	"geoLong": "16.979013889",
 	"txtName": "KRZESINY",
 	"codeType": "DME"
+},
+{
+	"codeId": "CDV",
+	"geoLat": "-34.1129667",
+	"geoLong": "19.4778861",
+	"txtName": "CALEDON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "VEN",
@@ -36724,8 +36633,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "49.893313111",
-	"geoLong": "-97.225323667",
+	"geoLat": "49.909962833",
+	"geoLong": "-97.250404639",
 	"txtName": "",
 	"codeType": "ILS"
 },
@@ -36793,18 +36702,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LA",
-	"geoLat": "31.51935",
-	"geoLong": "74.4000139",
-	"txtName": "LAHORE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BK",
 	"geoLat": "57.878639",
 	"geoLong": "55.951889",
 	"txtName": "PERM/BOLSHOE SAVINO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LA",
+	"geoLat": "31.51935",
+	"geoLong": "74.4000139",
+	"txtName": "LAHORE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HLI",
@@ -36919,13 +36828,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NUK",
-	"geoLat": "64.190927778",
-	"geoLong": "-51.680922222",
-	"txtName": "",
-	"codeType": "LOC"
-},
-{
 	"codeId": "CBH",
 	"geoLat": "25.445389",
 	"geoLong": "60.421306",
@@ -36933,18 +36835,11 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "FJC",
-	"geoLat": "29.9283",
-	"geoLong": "104.3033",
-	"txtName": "FUJIACHANG",
-	"codeType": "VOR"
-},
-{
-	"codeId": "MKR",
-	"geoLat": "40.518725",
-	"geoLong": "22.9698",
-	"txtName": "MIKRA",
-	"codeType": "VOR"
+	"codeId": "NUK",
+	"geoLat": "64.190927778",
+	"geoLong": "-51.680922222",
+	"txtName": "",
+	"codeType": "LOC"
 },
 {
 	"codeId": "YN",
@@ -36961,6 +36856,20 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
+	"codeId": "FJC",
+	"geoLat": "29.9283",
+	"geoLong": "104.3033",
+	"txtName": "FUJIACHANG",
+	"codeType": "VOR"
+},
+{
+	"codeId": "MKR",
+	"geoLat": "40.518725",
+	"geoLong": "22.9698",
+	"txtName": "MIKRA",
+	"codeType": "VOR"
+},
+{
 	"codeId": "GLT",
 	"geoLat": "45.416325",
 	"geoLong": "27.9277444",
@@ -36973,13 +36882,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "32.984139",
 	"txtName": "ESENBOGA",
 	"codeType": "DME"
-},
-{
-	"codeId": "HCY",
-	"geoLat": "44.91400528",
-	"geoLong": "-108.44318361",
-	"txtName": "COWLEY",
-	"codeType": "NDB"
 },
 {
 	"codeId": "KHG",
@@ -37094,18 +36996,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "DYB",
-	"geoLat": "37.873694",
-	"geoLong": "40.208361",
-	"txtName": "DIYARBAKIR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "OA",
 	"geoLat": "28.165",
 	"geoLong": "19.09667",
 	"txtName": "SAMAH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DYB",
+	"geoLat": "37.873694",
+	"geoLong": "40.208361",
+	"txtName": "DIYARBAKIR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TBN",
@@ -37241,18 +37143,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "LJU",
-	"geoLat": "56.083111",
-	"geoLong": "13.20125",
-	"txtName": "LJUNGBYHED",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "9X",
 	"geoLat": "50.632111",
 	"geoLong": "-111.921556",
 	"txtName": "BROOKS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LJU",
+	"geoLat": "56.083111",
+	"geoLong": "13.20125",
+	"txtName": "LJUNGBYHED",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AKT",
@@ -37351,13 +37253,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-4.4322222",
 	"txtName": "LANVEOC POULMIC",
 	"codeType": "NDB"
-},
-{
-	"codeId": "OKT",
-	"geoLat": "34.6712806",
-	"geoLong": "134.0150722",
-	"txtName": "OKAYAMA",
-	"codeType": "TACAN"
 },
 {
 	"codeId": "DJT",
@@ -37598,18 +37493,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GBV",
-	"geoLat": "-24.5977139",
-	"geoLong": "25.8324556",
-	"txtName": "GABORONE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GF",
 	"geoLat": "41.57417",
 	"geoLong": "-81.47117",
 	"txtName": "HOGAF",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GBV",
+	"geoLat": "-24.5977139",
+	"geoLong": "25.8324556",
+	"txtName": "GABORONE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ML",
@@ -37836,18 +37731,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "OKM",
-	"geoLat": "35.69307444",
-	"geoLong": "-95.86595444",
-	"txtName": "OKMULGEE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ZN",
 	"geoLat": "33.939833",
 	"geoLong": "8.005222",
 	"txtName": "TOZEUR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OKM",
+	"geoLat": "35.69307444",
+	"geoLong": "-95.86595444",
+	"txtName": "OKMULGEE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MZ",
@@ -37878,6 +37773,13 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
+	"codeId": "IMR",
+	"geoLat": "55.52083",
+	"geoLong": "46.35778",
+	"txtName": "SHUMERLYA",
+	"codeType": "DME"
+},
+{
 	"codeId": "DTY",
 	"geoLat": "52.1801417",
 	"geoLong": "-1.1137889",
@@ -37892,11 +37794,11 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "IMR",
-	"geoLat": "55.52083",
-	"geoLong": "46.35778",
-	"txtName": "SHUMERLYA",
-	"codeType": "DME"
+	"codeId": "BCR",
+	"geoLat": "31.66667",
+	"geoLong": "-2.24167",
+	"txtName": "BECHAR",
+	"codeType": "NDB"
 },
 {
 	"codeId": "VBJ",
@@ -37904,13 +37806,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "13.52775",
 	"txtName": "BOM JESUS",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "BCR",
-	"geoLat": "31.66667",
-	"geoLong": "-2.24167",
-	"txtName": "BECHAR",
-	"codeType": "NDB"
 },
 {
 	"codeId": "SBI",
@@ -37976,18 +37871,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SRQ",
-	"geoLat": "27.40701556",
-	"geoLong": "-82.5636625",
-	"txtName": "SARASOTA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MKK",
 	"geoLat": "21.13811111",
 	"geoLong": "-157.16741667",
 	"txtName": "MOLOKAI",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SRQ",
+	"geoLat": "27.40701556",
+	"geoLong": "-82.5636625",
+	"txtName": "SARASOTA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ZP",
@@ -38116,18 +38011,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "SDD",
-	"geoLat": "52.374524778",
-	"geoLong": "13.503672944",
-	"txtName": "BERLIN/SCHOENEFELD",
-	"codeType": "DME"
-},
-{
 	"codeId": "OTL",
 	"geoLat": "44.5702556",
 	"geoLong": "26.0006167",
 	"txtName": "OTOPENI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SDD",
+	"geoLat": "52.374524778",
+	"geoLong": "13.503672944",
+	"txtName": "BERLIN/SCHOENEFELD",
+	"codeType": "DME"
 },
 {
 	"codeId": "CKW",
@@ -38200,18 +38095,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "ISPA",
-	"geoLat": "55.2192611",
-	"geoLong": "9.286525",
-	"txtName": "SKRYDSTRUP",
-	"codeType": "DME"
-},
-{
 	"codeId": "DAA",
 	"geoLat": "38.66158944",
 	"geoLong": "-77.11010583",
 	"txtName": "DAVEE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ISPA",
+	"geoLat": "55.2192611",
+	"geoLong": "9.286525",
+	"txtName": "SKRYDSTRUP",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -38305,17 +38200,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PBN",
-	"geoLat": "21.6513306",
-	"geoLong": "69.6557028",
-	"txtName": "PORBANDAR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TUS",
 	"geoLat": "32.09520278",
 	"geoLong": "-110.914855",
 	"txtName": "TUCSON",
+	"codeType": "VOR"
+},
+{
+	"codeId": "PBN",
+	"geoLat": "21.6513306",
+	"geoLong": "69.6557028",
+	"txtName": "PORBANDAR",
 	"codeType": "VOR"
 },
 {
@@ -38347,18 +38242,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ISEF",
-	"geoLat": "40.971944",
-	"geoLong": "28.807917",
-	"txtName": "ISTANBUL/ATATURK",
-	"codeType": "DME"
-},
-{
 	"codeId": "MKA",
 	"geoLat": "44.52111",
 	"geoLong": "-98.95917",
 	"txtName": "HAND (MILLER)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ISEF",
+	"geoLat": "40.971944",
+	"geoLong": "28.807917",
+	"txtName": "ISTANBUL/ATATURK",
+	"codeType": "DME"
 },
 {
 	"codeId": "BR",
@@ -38389,17 +38284,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KPC",
-	"geoLat": "35.4218222",
-	"geoLong": "27.1469111",
-	"txtName": "KARPATHOS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LJB",
 	"geoLat": "43.77333",
 	"geoLong": "125.85167",
 	"txtName": "WANCHANG",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "KPC",
+	"geoLat": "35.4218222",
+	"geoLong": "27.1469111",
+	"txtName": "KARPATHOS",
 	"codeType": "VOR/DME"
 },
 {
@@ -38417,11 +38312,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PTL",
-	"geoLat": "-9.36333",
-	"geoLong": "-40.56167",
-	"txtName": "PETROLINA",
-	"codeType": "VOR/DME"
+	"codeId": "NE",
+	"geoLat": "57.03778",
+	"geoLong": "37.99528",
+	"txtName": "NERL",
+	"codeType": "NDB"
 },
 {
 	"codeId": "DYY",
@@ -38431,18 +38326,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
+	"codeId": "PTL",
+	"geoLat": "-9.36333",
+	"geoLong": "-40.56167",
+	"txtName": "PETROLINA",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "SGD",
 	"geoLat": "61.155288583",
 	"geoLong": "7.130711083",
 	"txtName": "SOGNDAL/HAUKASEN",
 	"codeType": "LOC_DME"
-},
-{
-	"codeId": "NE",
-	"geoLat": "57.03778",
-	"geoLong": "37.99528",
-	"txtName": "NERL",
-	"codeType": "NDB"
 },
 {
 	"codeId": "CAI",
@@ -38522,17 +38417,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NDM",
-	"geoLat": "65.480167",
-	"geoLong": "72.706333",
-	"txtName": "NADYM",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KIV",
 	"geoLat": "-0.0918778",
 	"geoLong": "34.7232778",
 	"txtName": "KISUMU",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "NDM",
+	"geoLat": "65.480167",
+	"geoLong": "72.706333",
+	"txtName": "NADYM",
 	"codeType": "VOR/DME"
 },
 {
@@ -38543,18 +38438,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TPL",
-	"geoLat": "44.1435",
-	"geoLong": "20.744444",
-	"txtName": "TOPOLA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NL",
 	"geoLat": "57.730583",
 	"geoLong": "12.344222",
 	"txtName": "GOTEBORG/LANDVETTER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TPL",
+	"geoLat": "44.1435",
+	"geoLong": "20.744444",
+	"txtName": "TOPOLA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "GWV",
@@ -38634,13 +38529,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "50.982126111",
-	"geoLong": "10.943872167",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "DB",
 	"geoLat": "21.398417",
 	"geoLong": "103.006583",
@@ -38648,11 +38536,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FLO",
-	"geoLat": "50.8766639",
-	"geoLong": "5.1345333",
-	"txtName": "FLORA",
-	"codeType": "VOR"
+	"codeId": "",
+	"geoLat": "50.982126111",
+	"geoLong": "10.943872167",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "DOZ",
@@ -38660,6 +38548,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-68.790806",
 	"txtName": "MENDOZA",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "FLO",
+	"geoLat": "50.8766639",
+	"geoLong": "5.1345333",
+	"txtName": "FLORA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "FE",
@@ -38802,18 +38697,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PNZ",
-	"geoLat": "53.113861",
-	"geoLong": "45.017667",
-	"txtName": "PENZA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OOC",
 	"geoLat": "31.65744472",
 	"geoLong": "-93.07760778",
 	"txtName": "NATCHITOCHES",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PNZ",
+	"geoLat": "53.113861",
+	"geoLong": "45.017667",
+	"txtName": "PENZA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MCM",
@@ -38831,8 +38726,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "NVS",
-	"geoLat": "40.36861",
-	"geoLong": "-4.24944",
+	"geoLat": "40.368667",
+	"geoLong": "-4.249333",
 	"txtName": "NAVAS DEL REY",
 	"codeType": "VOR/DME"
 },
@@ -38921,18 +38816,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BMK",
-	"geoLat": "54.262972",
-	"geoLong": "48.2255",
-	"txtName": "ULYANOVSK/BARATAYEVKA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BUB",
 	"geoLat": "50.9023306",
 	"geoLong": "4.5380861",
 	"txtName": "BRUSSELS",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "BMK",
+	"geoLat": "54.262972",
+	"geoLong": "48.2255",
+	"txtName": "ULYANOVSK/BARATAYEVKA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CLL",
@@ -39089,18 +38984,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "VOO",
-	"geoLat": "60.548931028",
-	"geoLong": "5.128792",
-	"txtName": "VOLLO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MJF",
 	"geoLat": "33.06626694",
 	"geoLong": "-96.06139333",
 	"txtName": "ARVILLA",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "VOO",
+	"geoLat": "60.548931028",
+	"geoLong": "5.128792",
+	"txtName": "VOLLO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PDT",
@@ -39173,13 +39068,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "RND",
-	"geoLat": "29.51916944",
-	"geoLong": "-98.285175",
-	"txtName": "RANDOLPH",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "IL",
 	"geoLat": "34.19136639",
 	"geoLong": "-77.86631278",
@@ -39187,17 +39075,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IFCW",
-	"geoLat": "50.043001222",
-	"geoLong": "8.583064306",
-	"txtName": "FRANKFURT IFNW",
-	"codeType": "DME"
+	"codeId": "RND",
+	"geoLat": "29.51916944",
+	"geoLong": "-98.285175",
+	"txtName": "RANDOLPH",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "ITR",
 	"geoLat": "43.30325",
 	"geoLong": "68.537306",
 	"txtName": "TURKESTAN",
+	"codeType": "DME"
+},
+{
+	"codeId": "IFCW",
+	"geoLat": "50.043001222",
+	"geoLong": "8.583064306",
+	"txtName": "FRANKFURT IFNW",
 	"codeType": "DME"
 },
 {
@@ -39250,13 +39145,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HDF",
-	"geoLat": "33.77632972",
-	"geoLong": "-117.18532444",
-	"txtName": "HOMELAND",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BIH",
 	"geoLat": "37.37695",
 	"geoLong": "-118.36652639",
@@ -39264,11 +39152,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SGO",
-	"geoLat": "19.4073167",
-	"geoLong": "-70.6038056",
-	"txtName": "SANTIAGO",
-	"codeType": "VOR/DME"
+	"codeId": "HDF",
+	"geoLat": "33.77632972",
+	"geoLong": "-117.18532444",
+	"txtName": "HOMELAND",
+	"codeType": "VOR"
 },
 {
 	"codeId": "RAV",
@@ -39283,6 +39171,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-54.503528",
 	"txtName": "FOZ",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SGO",
+	"geoLat": "19.4073167",
+	"geoLong": "-70.6038056",
+	"txtName": "SANTIAGO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SVL",
@@ -39400,7 +39295,7 @@ export const navaids: EADdata[] = [
 	"codeId": "YY",
 	"geoLat": "-6.893222",
 	"geoLong": "107.553944",
-	"txtName": "BANDUNG",
+	"txtName": "BANDUNG / HUSEIN SASTRANEGARA",
 	"codeType": "NDB"
 },
 {
@@ -39593,18 +39488,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "41.259056",
-	"geoLong": "28.727806",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "PL",
 	"geoLat": "30.3915",
 	"geoLong": "-84.23567",
 	"txtName": "PALEE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "41.259056",
+	"geoLong": "28.727806",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "PR",
@@ -39733,17 +39628,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MVC",
-	"geoLat": "31.45932556",
-	"geoLong": "-87.35253806",
-	"txtName": "MONROEVILLE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SBI",
 	"geoLat": "45.7809056",
 	"geoLong": "24.0878056",
 	"txtName": "SIBIU",
+	"codeType": "VOR"
+},
+{
+	"codeId": "MVC",
+	"geoLat": "31.45932556",
+	"geoLong": "-87.35253806",
+	"txtName": "MONROEVILLE",
 	"codeType": "VOR"
 },
 {
@@ -39873,18 +39768,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PG",
-	"geoLat": "26.9528361",
-	"geoLong": "64.1369611",
-	"txtName": "PANJGUR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "54.371983806",
 	"geoLong": "10.031859278",
 	"txtName": "KIEL OM RW08",
 	"codeType": "MKR"
+},
+{
+	"codeId": "PG",
+	"geoLat": "26.9528361",
+	"geoLong": "64.1369611",
+	"txtName": "PANJGUR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KZ",
@@ -39964,18 +39859,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "OLS",
-	"geoLat": "31.41495417",
-	"geoLong": "-110.84889778",
-	"txtName": "NOGALES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BK",
 	"geoLat": "29.895",
 	"geoLong": "121.3333",
 	"txtName": "LISHE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OLS",
+	"geoLat": "31.41495417",
+	"geoLong": "-110.84889778",
+	"txtName": "NOGALES",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "LSA",
@@ -40006,11 +39901,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DMU",
-	"geoLat": "41.812865889",
-	"geoLong": "-8.195354111",
-	"txtName": "MURO",
-	"codeType": "DME"
+	"codeId": "K",
+	"geoLat": "64.710639",
+	"geoLong": "177.726722",
+	"txtName": "ANADYR/UGOLNY",
+	"codeType": "NDB"
 },
 {
 	"codeId": "DSA",
@@ -40020,10 +39915,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "K",
-	"geoLat": "64.710639",
-	"geoLong": "177.726722",
-	"txtName": "ANADYR/UGOLNY",
+	"codeId": "DMU",
+	"geoLat": "41.812865889",
+	"geoLong": "-8.195354111",
+	"txtName": "MURO",
+	"codeType": "DME"
+},
+{
+	"codeId": "NS",
+	"geoLat": "43.303444",
+	"geoLong": "21.825028",
+	"txtName": "NIS",
 	"codeType": "NDB"
 },
 {
@@ -40032,13 +39934,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "44.942694",
 	"txtName": "MAKU",
 	"codeType": "VOR"
-},
-{
-	"codeId": "NS",
-	"geoLat": "43.303444",
-	"geoLong": "21.825028",
-	"txtName": "NIS",
-	"codeType": "NDB"
 },
 {
 	"codeId": "MIP",
@@ -40083,11 +39978,11 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "CSN",
-	"geoLat": "8.729417",
-	"geoLong": "106.634889",
-	"txtName": "CON SON",
-	"codeType": "VOR"
+	"codeId": "",
+	"geoLat": "53.641422028",
+	"geoLong": "10.010314639",
+	"txtName": "MM EDDH RWY 23",
+	"codeType": "MKR"
 },
 {
 	"codeId": "PG",
@@ -40097,18 +39992,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GED",
-	"geoLat": "50.411946472",
-	"geoLong": "9.249163917",
-	"txtName": "GEDERN",
-	"codeType": "TACAN"
-},
-{
-	"codeId": "",
-	"geoLat": "53.641422028",
-	"geoLong": "10.010314639",
-	"txtName": "MM EDDH RWY 23",
-	"codeType": "MKR"
+	"codeId": "CSN",
+	"geoLat": "8.729417",
+	"geoLong": "106.634889",
+	"txtName": "CON SON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KSA",
@@ -40174,20 +40062,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "GEY",
-	"geoLat": "44.51151833",
-	"geoLong": "-108.08291528",
-	"txtName": "GREYBULL",
-	"codeType": "NDB"
-},
-{
-	"codeId": "DKI",
-	"geoLat": "-5.961194",
-	"geoLong": "107.035528",
-	"txtName": "JAKARTA / SOEKARNO-HATTA INTL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ILP",
 	"geoLat": "27.921806",
 	"geoLong": "-15.389889",
@@ -40200,6 +40074,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "27.007389",
 	"txtName": "IZMIR/CIGLI",
 	"codeType": "DME"
+},
+{
+	"codeId": "DKI",
+	"geoLat": "-5.961194",
+	"geoLong": "107.035528",
+	"txtName": "JAKARTA / SOEKARNO-HATTA INTL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BGR",
@@ -40279,18 +40160,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MRE",
-	"geoLat": "40.7387917",
-	"geoLong": "140.7053333",
-	"txtName": "AOMORI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MW",
 	"geoLat": "39.57818583",
 	"geoLong": "-84.32353028",
 	"txtName": "ONIDA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MRE",
+	"geoLat": "40.7387917",
+	"geoLong": "140.7053333",
+	"txtName": "AOMORI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "JOS",
@@ -40342,11 +40223,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "ASB",
-	"geoLat": "38.0031639",
-	"geoLong": "58.3355556",
-	"txtName": "ASHGABAT",
-	"codeType": "VOR"
+	"codeId": "WDT",
+	"geoLat": "51.4474",
+	"geoLong": "4.343925",
+	"txtName": "WOENSDRECHT",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "BNU",
@@ -40356,18 +40237,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "ASB",
+	"geoLat": "38.0031639",
+	"geoLong": "58.3355556",
+	"txtName": "ASHGABAT",
+	"codeType": "VOR"
+},
+{
 	"codeId": "IEZC",
 	"geoLat": "39.716583",
 	"geoLong": "39.508111",
 	"txtName": "ERZINCAN",
 	"codeType": "DME"
-},
-{
-	"codeId": "WDT",
-	"geoLat": "51.4474",
-	"geoLong": "4.343925",
-	"txtName": "WOENSDRECHT",
-	"codeType": "TACAN"
 },
 {
 	"codeId": "",
@@ -40692,17 +40573,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MSR",
-	"geoLat": "12.2295722",
-	"geoLong": "76.6519389",
-	"txtName": "MYSURU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BBB",
 	"geoLat": "19.0861694",
 	"geoLong": "72.8747028",
 	"txtName": "MUMBAI",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "MSR",
+	"geoLat": "12.2295722",
+	"geoLong": "76.6519389",
+	"txtName": "MYSURU",
 	"codeType": "VOR/DME"
 },
 {
@@ -40727,18 +40608,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "VJB",
-	"geoLat": "1.664",
-	"geoLong": "103.660889",
-	"txtName": "JOHOR BAHRU",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HST",
 	"geoLat": "25.48997972",
 	"geoLong": "-80.37941333",
 	"txtName": "HOMESTEAD",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "VJB",
+	"geoLat": "1.664",
+	"geoLong": "103.660889",
+	"txtName": "JOHOR BAHRU",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LOA",
@@ -41000,18 +40881,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CGT",
-	"geoLat": "31.21",
-	"geoLong": "121.19333",
-	"txtName": "CHONGGU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HU",
 	"geoLat": "38.12361889",
 	"geoLong": "-97.92688417",
 	"txtName": "SALTT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CGT",
+	"geoLat": "31.21",
+	"geoLong": "121.19333",
+	"txtName": "CHONGGU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MRN",
@@ -41084,18 +40965,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BDR",
-	"geoLat": "37.257667",
-	"geoLong": "27.63775",
-	"txtName": "MILAS BODRUM",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IQH",
 	"geoLat": "60.119027028",
 	"geoLong": "-128.830534361",
 	"txtName": "WATSON LAKE",
 	"codeType": "DME"
+},
+{
+	"codeId": "BDR",
+	"geoLat": "37.257667",
+	"geoLong": "27.63775",
+	"txtName": "MILAS BODRUM",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "STG",
@@ -41105,18 +40986,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "DTA",
-	"geoLat": "39.30226222",
-	"geoLong": "-112.50555944",
-	"txtName": "DELTA",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "NTL",
 	"geoLat": "44.5665111",
 	"geoLong": "14.3910528",
 	"txtName": "LOSINJ",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "DTA",
+	"geoLat": "39.30226222",
+	"geoLong": "-112.50555944",
+	"txtName": "DELTA",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "",
@@ -41287,18 +41168,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TER",
-	"geoLat": "49.5228889",
-	"geoLong": "25.6983889",
-	"txtName": "TERNOPIL",
-	"codeType": "DME"
-},
-{
 	"codeId": "U",
 	"geoLat": "59.812444",
 	"geoLong": "30.226861",
 	"txtName": "SANKT-PETERBURG/PULKOVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TER",
+	"geoLat": "49.5228889",
+	"geoLong": "25.6983889",
+	"txtName": "TERNOPIL",
+	"codeType": "DME"
 },
 {
 	"codeId": "TOY",
@@ -41413,13 +41294,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ROX",
-	"geoLat": "11.596917",
-	"geoLong": "122.755111",
-	"txtName": "ROXAS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NBR",
 	"geoLat": "-30.32075",
 	"geoLong": "149.831139",
@@ -41427,9 +41301,16 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "ROX",
+	"geoLat": "11.596917",
+	"geoLong": "122.755111",
+	"txtName": "ROXAS",
+	"codeType": "VOR"
+},
+{
 	"codeId": "BKE",
-	"geoLat": "44.8406",
-	"geoLong": "-117.80787083",
+	"geoLat": "44.84059944",
+	"geoLong": "-117.80786833",
 	"txtName": "BAKER CITY",
 	"codeType": "VOR/DME"
 },
@@ -41483,17 +41364,17 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "WNG",
-	"geoLat": "37.432944",
-	"geoLong": "126.45",
-	"txtName": "WANGSAN (INCHEON)",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SLL",
 	"geoLat": "17.0498194",
 	"geoLong": "54.1158083",
 	"txtName": "SALALAH",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "WNG",
+	"geoLat": "37.432944",
+	"geoLong": "126.45",
+	"txtName": "WANGSAN (INCHEON)",
 	"codeType": "VOR/DME"
 },
 {
@@ -41546,18 +41427,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GDA",
-	"geoLat": "37.183167",
-	"geoLong": "-3.990917",
-	"txtName": "GRANADA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IGR",
 	"geoLat": "40.730944",
 	"geoLong": "46.331139",
 	"txtName": "GANJA",
 	"codeType": "DME"
+},
+{
+	"codeId": "GDA",
+	"geoLat": "37.183167",
+	"geoLong": "-3.990917",
+	"txtName": "GRANADA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TOU",
@@ -41602,13 +41483,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SUF",
-	"geoLat": "31.49833",
-	"geoLong": "120.43167",
-	"txtName": "SHUOFANG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NZ",
 	"geoLat": "60.986528",
 	"geoLong": "76.552083",
@@ -41621,6 +41495,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "32.548194",
 	"txtName": "",
 	"codeType": "MKR"
+},
+{
+	"codeId": "SUF",
+	"geoLat": "31.49833",
+	"geoLong": "120.43167",
+	"txtName": "SHUOFANG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LVD",
@@ -41749,18 +41630,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "VTN",
-	"geoLat": "18.010361",
-	"geoLong": "102.540472",
-	"txtName": "VIENTIANE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "DKK",
 	"geoLat": "42.4904",
 	"geoLong": "-79.27410278",
 	"txtName": "DUNKIRK",
 	"codeType": "DME"
+},
+{
+	"codeId": "VTN",
+	"geoLat": "18.010361",
+	"geoLong": "102.540472",
+	"txtName": "VIENTIANE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FDN",
@@ -42022,17 +41903,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "TSH",
-	"geoLat": "10.818306",
-	"geoLong": "106.650556",
-	"txtName": "TAN SON NHAT",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GRO",
 	"geoLat": "42.760888889",
 	"geoLong": "11.077305556",
 	"txtName": "GROSSETO",
+	"codeType": "VOR"
+},
+{
+	"codeId": "TSH",
+	"geoLat": "10.818306",
+	"geoLong": "106.650556",
+	"txtName": "TAN SON NHAT",
 	"codeType": "VOR"
 },
 {
@@ -42043,17 +41924,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KB",
-	"geoLat": "-16.514472",
-	"geoLong": "28.885806",
-	"txtName": "KARIBA",
-	"codeType": "NDB"
-},
-{
 	"codeId": "CU",
 	"geoLat": "40.12167",
 	"geoLong": "116.37167",
 	"txtName": "SHAHE",
+	"codeType": "NDB"
+},
+{
+	"codeId": "KB",
+	"geoLat": "-16.514472",
+	"geoLong": "28.885806",
+	"txtName": "KARIBA",
 	"codeType": "NDB"
 },
 {
@@ -42204,18 +42085,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MQG",
-	"geoLat": "46.38155778",
-	"geoLong": "-116.86951028",
-	"txtName": "NEZ PERCE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KKW",
 	"geoLat": "-5.0333333",
 	"geoLong": "18.8166667",
 	"txtName": "KIKWIT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MQG",
+	"geoLat": "46.38155778",
+	"geoLong": "-116.86951028",
+	"txtName": "NEZ PERCE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "YSY",
@@ -42365,18 +42246,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "JRS",
-	"geoLat": "21.9159167",
-	"geoLong": "84.0617778",
-	"txtName": "JHARSUGUDA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YQF",
 	"geoLat": "52.128315889",
 	"geoLong": "-113.8994",
 	"txtName": "RED DEER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "JRS",
+	"geoLat": "21.9159167",
+	"geoLong": "84.0617778",
+	"txtName": "JHARSUGUDA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NRG",
@@ -42519,17 +42400,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SOF",
-	"geoLat": "42.698111",
-	"geoLong": "23.389389",
-	"txtName": "SOFIA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NPT",
 	"geoLat": "19.6265556",
 	"geoLong": "96.1955833",
 	"txtName": "NAYPYITAW",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SOF",
+	"geoLat": "42.698111",
+	"geoLong": "23.389389",
+	"txtName": "SOFIA",
 	"codeType": "VOR/DME"
 },
 {
@@ -42687,18 +42568,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "NII",
-	"geoLat": "43.336774611",
-	"geoLong": "21.850315778",
-	"txtName": "NIS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DF",
 	"geoLat": "56.274028",
 	"geoLong": "15.265444",
 	"txtName": "RONNEBY",
 	"codeType": "DME"
+},
+{
+	"codeId": "NII",
+	"geoLat": "43.336774611",
+	"geoLong": "21.850315778",
+	"txtName": "NIS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LA",
@@ -42722,18 +42603,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CMX",
-	"geoLat": "47.17026167",
-	"geoLong": "-88.48539306",
-	"txtName": "HOUGHTON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ELF",
 	"geoLat": "55.29614944",
 	"geoLong": "-162.78924056",
 	"txtName": "ELFEE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CMX",
+	"geoLat": "47.17026167",
+	"geoLong": "-88.48539306",
+	"txtName": "HOUGHTON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AGO",
@@ -42750,18 +42631,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ROU",
-	"geoLat": "49.4656472",
-	"geoLong": "1.2806278",
-	"txtName": "ROUEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BRG",
 	"geoLat": "29.843917",
 	"geoLong": "50.26725",
 	"txtName": "BAHREGAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ROU",
+	"geoLat": "49.4656472",
+	"geoLong": "1.2806278",
+	"txtName": "ROUEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ATP",
@@ -42841,10 +42722,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SCC",
-	"geoLat": "70.19919833",
-	"geoLong": "-148.41615944",
-	"txtName": "DEADHORSE",
+	"codeId": "WFX",
+	"geoLat": "30.6067",
+	"geoLong": "104.4917",
+	"txtName": "WUFENGXI",
 	"codeType": "VOR/DME"
 },
 {
@@ -42855,24 +42736,24 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "WFX",
-	"geoLat": "30.6067",
-	"geoLong": "104.4917",
-	"txtName": "WUFENGXI",
+	"codeId": "SCC",
+	"geoLat": "70.19919833",
+	"geoLong": "-148.41615944",
+	"txtName": "DEADHORSE",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "URH",
-	"geoLat": "33.94418611",
-	"geoLong": "-96.39183611",
-	"txtName": "TEXOMA",
-	"codeType": "DME"
 },
 {
 	"codeId": "LMX",
 	"geoLat": "37.36233972",
 	"geoLong": "-115.19305833",
 	"txtName": "ALAMO",
+	"codeType": "DME"
+},
+{
+	"codeId": "URH",
+	"geoLat": "33.94418611",
+	"geoLong": "-96.39183611",
+	"txtName": "TEXOMA",
 	"codeType": "DME"
 },
 {
@@ -42897,18 +42778,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "CJN",
-	"geoLat": "11.2313889",
-	"geoLong": "-72.4930556",
-	"txtName": "CERREJON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IMSL",
 	"geoLat": "45.639496417",
 	"geoLong": "8.733161417",
 	"txtName": "MILANO/MALPENSA",
 	"codeType": "DME"
+},
+{
+	"codeId": "CJN",
+	"geoLat": "11.2313889",
+	"geoLong": "-72.4930556",
+	"txtName": "CERREJON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "GTE",
@@ -43030,18 +42911,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MPK",
-	"geoLat": "4.37825",
-	"geoLong": "18.5248333",
-	"txtName": "BANGUI / M'POKO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SPY",
 	"geoLat": "57.15699917",
 	"geoLong": "-170.23299194",
 	"txtName": "ST PAUL ISLAND",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MPK",
+	"geoLat": "4.37825",
+	"geoLong": "18.5248333",
+	"txtName": "BANGUI / M'POKO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -43107,13 +42988,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MA",
-	"geoLat": "36.955615028",
-	"geoLong": "-25.167470972",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "IL",
 	"geoLat": "31.02409528",
 	"geoLong": "-97.70812361",
@@ -43126,6 +43000,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-76.40325194",
 	"txtName": "PATUXENT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MA",
+	"geoLat": "36.955615028",
+	"geoLong": "-25.167470972",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "BGD",
@@ -43271,7 +43152,7 @@ export const navaids: EADdata[] = [
 	"codeId": "DBN",
 	"geoLat": "21.3735",
 	"geoLong": "103.007889",
-	"txtName": "PUT DIEN BIEN",
+	"txtName": "DIEN BIEN",
 	"codeType": "VOR"
 },
 {
@@ -43308,13 +43189,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-38.92889",
 	"txtName": "MARAGOGIPE",
 	"codeType": "DME"
-},
-{
-	"codeId": "HC",
-	"geoLat": "53.874198306",
-	"geoLong": "14.182153806",
-	"txtName": "HERINGSDORF",
-	"codeType": "NDB"
 },
 {
 	"codeId": "IHR",
@@ -43366,24 +43240,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ULQ",
-	"geoLat": "4.0922222",
-	"geoLong": "-76.2233333",
-	"txtName": "TULUA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ARD",
 	"geoLat": "21.227694",
 	"geoLong": "55.265028",
 	"txtName": "ARADAH",
-	"codeType": "VOR/DME"
-},
-{
-	"codeId": "TCA",
-	"geoLat": "-18.05778",
-	"geoLong": "-70.27639",
-	"txtName": "TACNA",
 	"codeType": "VOR/DME"
 },
 {
@@ -43394,10 +43254,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CME",
-	"geoLat": "18.6604389",
-	"geoLong": "-91.8051472",
-	"txtName": "CARMEN",
+	"codeId": "TCA",
+	"geoLat": "-18.05778",
+	"geoLong": "-70.27639",
+	"txtName": "TACNA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "ULQ",
+	"geoLat": "4.0922222",
+	"geoLong": "-76.2233333",
+	"txtName": "TULUA",
 	"codeType": "VOR/DME"
 },
 {
@@ -43406,6 +43273,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "2.6466167",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "CME",
+	"geoLat": "18.6604389",
+	"geoLong": "-91.8051472",
+	"txtName": "CARMEN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MHM",
@@ -43436,18 +43310,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IDMN",
-	"geoLat": "36.696389",
-	"geoLong": "28.787583",
-	"txtName": "MUGLA/DALAMAN",
-	"codeType": "DME"
-},
-{
 	"codeId": "ORS",
 	"geoLat": "47.9374",
 	"geoLong": "2.2426389",
 	"txtName": "ORLEANS SAINT DENIS DE L'HOTEL",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IDMN",
+	"geoLat": "36.696389",
+	"geoLong": "28.787583",
+	"txtName": "MUGLA/DALAMAN",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -43499,13 +43373,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "TBC",
-	"geoLat": "36.12131194",
-	"geoLong": "-111.26958778",
-	"txtName": "TUBA CITY",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "SZL",
 	"geoLat": "38.7357",
 	"geoLong": "-93.55043056",
@@ -43513,11 +43380,11 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "UTR",
-	"geoLat": "25.8232861",
-	"geoLong": "71.4828361",
-	"txtName": "UTTARLAI",
-	"codeType": "VOR"
+	"codeId": "TBC",
+	"geoLat": "36.12131194",
+	"geoLong": "-111.26958778",
+	"txtName": "TUBA CITY",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "GAZ",
@@ -43525,6 +43392,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "37.472944",
 	"txtName": "GAZIANTEP",
 	"codeType": "NDB"
+},
+{
+	"codeId": "UTR",
+	"geoLat": "25.8232861",
+	"geoLong": "71.4828361",
+	"txtName": "UTTARLAI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "XMN",
@@ -43604,18 +43478,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GRM",
-	"geoLat": "40.72944",
-	"geoLong": "43.84722",
-	"txtName": "GYUMRI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RE",
 	"geoLat": "65.926472",
 	"geoLong": "-22.431528",
 	"txtName": "REYKJANESSKOLI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GRM",
+	"geoLat": "40.72944",
+	"geoLong": "43.84722",
+	"txtName": "GYUMRI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MOL",
@@ -43646,18 +43520,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "",
-	"geoLat": "",
-	"geoLong": "",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "REG",
 	"geoLat": "38.045903278",
 	"geoLong": "15.6645385",
 	"txtName": "REGGIO CALABRIA",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "",
+	"geoLong": "",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "PX",
@@ -43716,13 +43590,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AJF",
-	"geoLat": "29.789528",
-	"geoLong": "40.071694",
-	"txtName": "AL JOUF",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LLO",
 	"geoLat": "30.79634194",
 	"geoLong": "-98.78738861",
@@ -43730,11 +43597,25 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
+	"codeId": "AJF",
+	"geoLat": "29.789528",
+	"geoLong": "40.071694",
+	"txtName": "AL JOUF",
+	"codeType": "VOR"
+},
+{
 	"codeId": "IS",
 	"geoLat": "35.24387583",
 	"geoLong": "-77.69838833",
 	"txtName": "STALS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YYJ",
+	"geoLat": "48.727050083",
+	"geoLong": "-123.484489",
+	"txtName": "VICTORIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ODI",
@@ -43748,13 +43629,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "49.769719361",
 	"geoLong": "-86.984321528",
 	"txtName": "GERALDTON",
-	"codeType": "VOR"
-},
-{
-	"codeId": "YYJ",
-	"geoLat": "48.727050083",
-	"geoLong": "-123.484489",
-	"txtName": "VICTORIA",
 	"codeType": "VOR"
 },
 {
@@ -43779,13 +43653,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "63.187889",
-	"geoLong": "14.532",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "IWES",
 	"geoLat": "54.910537194",
 	"geoLong": "8.339708611",
@@ -43794,8 +43661,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "43.655552639",
-	"geoLong": "-79.6314115",
+	"geoLat": "63.187889",
+	"geoLong": "14.532",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -43805,6 +43672,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-87.41385139",
 	"txtName": "AIRBE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "43.655552639",
+	"geoLong": "-79.6314115",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "PRX",
@@ -43863,18 +43737,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "KPT",
-	"geoLat": "47.745774222",
-	"geoLong": "10.349834306",
-	"txtName": "KEMPTEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MU",
 	"geoLat": "49.653028",
 	"geoLong": "100.174167",
 	"txtName": "MUREN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KPT",
+	"geoLat": "47.745774222",
+	"geoLong": "10.349834306",
+	"txtName": "KEMPTEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HTG",
@@ -43975,18 +43849,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KIA",
-	"geoLat": "24.886056",
-	"geoLong": "46.759389",
-	"txtName": "RIYADH / KING KHALED INTERNATIONAL",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "AR",
 	"geoLat": "-34.823444",
 	"geoLong": "-56.006278",
 	"txtName": "CARRASCO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KIA",
+	"geoLat": "24.886056",
+	"geoLong": "46.759389",
+	"txtName": "RIYADH / KING KHALED INTERNATIONAL",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "SOA",
@@ -44423,13 +44297,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BVL",
-	"geoLat": "40.7260975",
-	"geoLong": "-113.75741722",
-	"txtName": "BONNEVILLE",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "TLC",
 	"geoLat": "19.3328667",
 	"geoLong": "-99.5610333",
@@ -44444,17 +44311,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "COL",
-	"geoLat": "50.783528611",
-	"geoLong": "7.594176111",
-	"txtName": "COLA",
-	"codeType": "VOR/DME"
+	"codeId": "BVL",
+	"geoLat": "40.7260975",
+	"geoLong": "-113.75741722",
+	"txtName": "BONNEVILLE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "GRA",
 	"geoLat": "-53.77525",
 	"geoLong": "-67.745694",
 	"txtName": "RIO GRANDE",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "COL",
+	"geoLat": "50.783528611",
+	"geoLong": "7.594176111",
+	"txtName": "COLA",
 	"codeType": "VOR/DME"
 },
 {
@@ -44514,13 +44388,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "STL",
-	"geoLat": "38.86072333",
-	"geoLong": "-90.48234889",
-	"txtName": "ST LOUIS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BRI",
 	"geoLat": "51.3814417",
 	"geoLong": "-2.7175389",
@@ -44528,11 +44395,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BML",
-	"geoLat": "32.416875",
-	"geoLong": "-6.2980222",
-	"txtName": "BENI-MELLAL",
-	"codeType": "VOR/DME"
+	"codeId": "STL",
+	"geoLat": "38.86072333",
+	"geoLong": "-90.48234889",
+	"txtName": "ST LOUIS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MZD",
@@ -44542,10 +44409,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LOZ",
-	"geoLat": "37.03315028",
-	"geoLong": "-84.11007472",
-	"txtName": "LONDON",
+	"codeId": "BML",
+	"geoLat": "32.416875",
+	"geoLong": "-6.2980222",
+	"txtName": "BENI-MELLAL",
 	"codeType": "VOR/DME"
 },
 {
@@ -44554,6 +44421,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-104.679",
 	"txtName": "HORSE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LOZ",
+	"geoLat": "37.03315028",
+	"geoLong": "-84.11007472",
+	"txtName": "LONDON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AUG",
@@ -44640,18 +44514,18 @@ export const navaids: EADdata[] = [
 	"codeType": "LOC"
 },
 {
-	"codeId": "BLV",
-	"geoLat": "43.304389",
-	"geoLong": "-2.935889",
-	"txtName": "BILBAO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SAY",
 	"geoLat": "58.2154778",
 	"geoLong": "-6.3290806",
 	"txtName": "STORNOWAY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BLV",
+	"geoLat": "43.304389",
+	"geoLong": "-2.935889",
+	"txtName": "BILBAO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "RFD",
@@ -44759,13 +44633,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "37.957111",
-	"geoLong": "32.551167",
-	"txtName": "",
-	"codeType": "MKR"
-},
-{
 	"codeId": "TMK",
 	"geoLat": "-4.517139",
 	"geoLong": "136.867222",
@@ -44815,18 +44682,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DLF",
-	"geoLat": "29.36089167",
-	"geoLong": "-100.771725",
-	"txtName": "LAUGHLIN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "Z",
 	"geoLat": "41.252611",
 	"geoLong": "69.247278",
 	"txtName": "TASHKENT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DLF",
+	"geoLat": "29.36089167",
+	"geoLong": "-100.771725",
+	"txtName": "LAUGHLIN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "UDN",
@@ -44913,17 +44780,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KLO",
-	"geoLat": "11.683556",
-	"geoLong": "122.383278",
-	"txtName": "KALIBO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KHG",
 	"geoLat": "29.263889",
 	"geoLong": "50.316861",
 	"txtName": "KHARK ISLAND",
+	"codeType": "VOR"
+},
+{
+	"codeId": "KLO",
+	"geoLat": "11.683556",
+	"geoLong": "122.383278",
+	"txtName": "KALIBO",
 	"codeType": "VOR"
 },
 {
@@ -45018,17 +44885,17 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "MZL",
-	"geoLat": "5.0538889",
-	"geoLong": "-75.5288889",
-	"txtName": "MANIZALES",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GGN",
 	"geoLat": "36.929083",
 	"geoLong": "54.375917",
 	"txtName": "GORGAN",
+	"codeType": "VOR"
+},
+{
+	"codeId": "MZL",
+	"geoLat": "5.0538889",
+	"geoLong": "-75.5288889",
+	"txtName": "MANIZALES",
 	"codeType": "VOR"
 },
 {
@@ -45060,18 +44927,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LBV",
-	"geoLat": "26.828185",
-	"geoLong": "-81.39143833",
-	"txtName": "LA BELLE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "N",
 	"geoLat": "-34.584917",
 	"geoLong": "-58.368889",
 	"txtName": "AEROPARQUE JORGE NEWBERY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LBV",
+	"geoLat": "26.828185",
+	"geoLong": "-81.39143833",
+	"txtName": "LA BELLE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BUU",
@@ -45158,6 +45025,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "RFH",
+	"geoLat": "31.29333",
+	"geoLong": "34.285",
+	"txtName": "GAZA",
+	"codeType": "NDB"
+},
+{
 	"codeId": "MH",
 	"geoLat": "47.6147083",
 	"geoLong": "7.5101806",
@@ -45165,10 +45039,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "RFH",
-	"geoLat": "31.29333",
-	"geoLong": "34.285",
-	"txtName": "GAZA",
+	"codeId": "HGT",
+	"geoLat": "35.96116667",
+	"geoLong": "-121.18916667",
+	"txtName": "HUNTER LIGGETT",
 	"codeType": "NDB"
 },
 {
@@ -45184,13 +45058,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "158.79139",
 	"txtName": "KHALAKTYRKA",
 	"codeType": "DME"
-},
-{
-	"codeId": "HGT",
-	"geoLat": "35.96116667",
-	"geoLong": "-121.18916667",
-	"txtName": "HUNTER LIGGETT",
-	"codeType": "NDB"
 },
 {
 	"codeId": "PNA",
@@ -45305,17 +45172,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "RQR",
-	"geoLat": "30.08750028",
-	"geoLong": "-90.58862528",
-	"txtName": "RESERVE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "UCU",
 	"geoLat": "19.9778",
 	"geoLong": "-75.8226556",
 	"txtName": "SANTIAGO DE CUBA",
+	"codeType": "VOR"
+},
+{
+	"codeId": "RQR",
+	"geoLat": "30.08750028",
+	"geoLong": "-90.58862528",
+	"txtName": "RESERVE",
 	"codeType": "VOR"
 },
 {
@@ -45406,7 +45273,7 @@ export const navaids: EADdata[] = [
 	"codeId": "WZ",
 	"geoLat": "50.63556",
 	"geoLong": "128.03528",
-	"txtName": "SREDNEBELOYE",
+	"txtName": "SREDNEBELAYA",
 	"codeType": "NDB"
 },
 {
@@ -45414,13 +45281,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "40.51833",
 	"geoLong": "112.495",
 	"txtName": "LIANGCHENG",
-	"codeType": "NDB"
-},
-{
-	"codeId": "AWS",
-	"geoLat": "32.292675",
-	"geoLong": "-85.02326444",
-	"txtName": "LAWSON",
 	"codeType": "NDB"
 },
 {
@@ -45438,13 +45298,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "AGG",
-	"geoLat": "27.1572806",
-	"geoLong": "77.9565528",
-	"txtName": "AGRA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CUN",
 	"geoLat": "21.0251083",
 	"geoLong": "-86.8587167",
@@ -45459,6 +45312,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "AGG",
+	"geoLat": "27.1572806",
+	"geoLong": "77.9565528",
+	"txtName": "AGRA",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "BF",
 	"geoLat": "63.522167",
 	"geoLong": "53.776722",
@@ -45466,18 +45326,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "GSA",
-	"geoLat": "6.075667",
-	"geoLong": "125.092194",
-	"txtName": "TAMBLER",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NO",
 	"geoLat": "63.413667",
 	"geoLong": "18.977056",
 	"txtName": "ORNSKOLDSVIK",
 	"codeType": "DME"
+},
+{
+	"codeId": "GSA",
+	"geoLat": "6.075667",
+	"geoLong": "125.092194",
+	"txtName": "TAMBLER",
+	"codeType": "VOR"
 },
 {
 	"codeId": "UMH",
@@ -45613,18 +45473,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YZU",
-	"geoLat": "54.14565325",
-	"geoLong": "-115.797205889",
-	"txtName": "WHITECOURT",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "51.039759778",
 	"geoLong": "12.580674056",
 	"txtName": "OM EDAC RWY 22",
 	"codeType": "MKR"
+},
+{
+	"codeId": "YZU",
+	"geoLat": "54.14565325",
+	"geoLong": "-115.797205889",
+	"txtName": "WHITECOURT",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MRE",
@@ -45641,18 +45501,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "",
-	"geoLat": "-36.796641778",
-	"geoLong": "174.62013375",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "LJT",
 	"geoLat": "43.10977472",
 	"geoLong": "-88.03728139",
 	"txtName": "TIMMERMAN",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "-36.796641778",
+	"geoLong": "174.62013375",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "CNA",
@@ -45690,13 +45550,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DAN",
-	"geoLat": "37.015611",
-	"geoLong": "35.448194",
-	"txtName": "INCIRLIK",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "A",
 	"geoLat": "30.074028",
 	"geoLong": "31.359167",
@@ -45704,11 +45557,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HRV",
-	"geoLat": "29.85019472",
-	"geoLong": "-90.00298417",
-	"txtName": "HARVEY",
-	"codeType": "VORTAC"
+	"codeId": "DAN",
+	"geoLat": "37.015611",
+	"geoLong": "35.448194",
+	"txtName": "INCIRLIK",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "",
@@ -45718,11 +45571,11 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "LBU",
-	"geoLat": "48.9129745",
-	"geoLong": "9.340227528",
-	"txtName": "LUBURG",
-	"codeType": "VOR"
+	"codeId": "HRV",
+	"geoLat": "29.85019472",
+	"geoLong": "-90.00298417",
+	"txtName": "HARVEY",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "PT",
@@ -45732,17 +45585,24 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SM",
-	"geoLat": "6.286117",
-	"geoLong": "-10.762783",
-	"txtName": "MONROVIA/ SPRIGGS",
-	"codeType": "NDB"
+	"codeId": "LBU",
+	"geoLat": "48.9129745",
+	"geoLong": "9.340227528",
+	"txtName": "LUBURG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "AMF",
 	"geoLat": "67.1052425",
 	"geoLong": "-157.86014972",
 	"txtName": "AMBLER",
+	"codeType": "NDB"
+},
+{
+	"codeId": "SM",
+	"geoLat": "6.286117",
+	"geoLong": "-10.762783",
+	"txtName": "MONROVIA/ SPRIGGS",
 	"codeType": "NDB"
 },
 {
@@ -45802,18 +45662,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "63.963139",
-	"geoLong": "-22.605444",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "HS",
 	"geoLat": "65.927028",
 	"geoLong": "-17.43875",
 	"txtName": "HUSAVIK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "63.963139",
+	"geoLong": "-22.605444",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "PHG",
@@ -45858,18 +45718,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "28.050806",
-	"geoLong": "-16.554306",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "OCT",
 	"geoLat": "34.04417",
 	"geoLong": "131.04972",
 	"txtName": "OZUKI",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "",
+	"geoLat": "28.050806",
+	"geoLong": "-16.554306",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "VLI",
@@ -45886,11 +45746,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "GRB",
-	"geoLat": "44.55516",
-	"geoLong": "-88.19485722",
-	"txtName": "GREEN BAY",
-	"codeType": "VOR"
+	"codeId": "AM",
+	"geoLat": "20.98889",
+	"geoLong": "105.86139",
+	"txtName": "GIA LAM",
+	"codeType": "NDB"
 },
 {
 	"codeId": "BIG",
@@ -45900,11 +45760,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "AM",
-	"geoLat": "20.98889",
-	"geoLong": "105.86139",
-	"txtName": "GIA LAM",
-	"codeType": "NDB"
+	"codeId": "GRB",
+	"geoLat": "44.55516",
+	"geoLong": "-88.19485722",
+	"txtName": "GREEN BAY",
+	"codeType": "VOR"
 },
 {
 	"codeId": "FWH",
@@ -45935,18 +45795,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BXK",
-	"geoLat": "33.45345861",
-	"geoLong": "-112.82459361",
-	"txtName": "BUCKEYE",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "",
 	"geoLat": "40.400889",
 	"geoLong": "-3.490722",
 	"txtName": "OM 33L",
 	"codeType": "MKR"
+},
+{
+	"codeId": "BXK",
+	"geoLat": "33.45345861",
+	"geoLong": "-112.82459361",
+	"txtName": "BUCKEYE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "AEA",
@@ -45963,18 +45823,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BAM",
-	"geoLat": "51.327758611",
-	"geoLong": "7.176984139",
-	"txtName": "BARMEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RC",
 	"geoLat": "23.316917",
 	"geoLong": "85.321778",
 	"txtName": "RANCHI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BAM",
+	"geoLat": "51.327758611",
+	"geoLong": "7.176984139",
+	"txtName": "BARMEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BUD",
@@ -46054,18 +45914,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "",
-	"geoLat": "59.233694",
-	"geoLong": "15.039833",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "YZS",
 	"geoLat": "64.1485",
 	"geoLong": "-83.30475",
 	"txtName": "CORAL HARBOUR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "59.233694",
+	"geoLong": "15.039833",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "CVV",
@@ -46110,20 +45970,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "EV",
-	"geoLat": "68.476187028",
-	"geoLong": "16.679833194",
-	"txtName": "EVENES",
-	"codeType": "ILS_DME"
-},
-{
-	"codeId": "",
-	"geoLat": "54.412669444",
-	"geoLong": "17.738758333",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "IYC",
 	"geoLat": "51.099237139",
 	"geoLong": "-114.022954333",
@@ -46136,6 +45982,20 @@ export const navaids: EADdata[] = [
 	"geoLong": "-95.89333",
 	"txtName": "FLICK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "54.412669444",
+	"geoLong": "17.738758333",
+	"txtName": "",
+	"codeType": "ILS_DME"
+},
+{
+	"codeId": "EV",
+	"geoLat": "68.476187028",
+	"geoLong": "16.679833194",
+	"txtName": "EVENES",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "BND",
@@ -46215,17 +46075,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SGM",
-	"geoLat": "25.08167",
-	"geoLong": "102.52",
-	"txtName": "XISHAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TRC",
 	"geoLat": "25.5639639",
 	"geoLong": "-103.4084083",
 	"txtName": "TORREON",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SGM",
+	"geoLat": "25.08167",
+	"geoLong": "102.52",
+	"txtName": "XISHAN",
 	"codeType": "VOR/DME"
 },
 {
@@ -46390,13 +46250,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TKT",
-	"geoLat": "40.334944",
-	"geoLong": "36.425667",
-	"txtName": "TOKAT",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ITO",
 	"geoLat": "43.670362417",
 	"geoLong": "-79.634296972",
@@ -46409,6 +46262,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "14.112333",
 	"txtName": "ESGJ OM 19",
 	"codeType": "MKR"
+},
+{
+	"codeId": "TKT",
+	"geoLat": "40.334944",
+	"geoLong": "36.425667",
+	"txtName": "TOKAT",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "2B",
@@ -46600,18 +46460,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LTO",
-	"geoLat": "25.9806556",
-	"geoLong": "-111.3495278",
-	"txtName": "LORETO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MB",
 	"geoLat": "-37.9765",
 	"geoLong": "145.090333",
 	"txtName": "MOORABBIN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LTO",
+	"geoLat": "25.9806556",
+	"geoLong": "-111.3495278",
+	"txtName": "LORETO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "JSK",
@@ -46621,18 +46481,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ZAO",
-	"geoLat": "22.245",
-	"geoLong": "113.61167",
-	"txtName": "JIUZHOU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "DAR",
 	"geoLat": "31.783167",
 	"geoLong": "56.994556",
 	"txtName": "DARBAND",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ZAO",
+	"geoLat": "22.245",
+	"geoLong": "113.61167",
+	"txtName": "JIUZHOU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "GGO",
@@ -46677,18 +46537,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "AUA",
-	"geoLat": "26.471611",
-	"geoLong": "38.140639",
-	"txtName": "ALULA INTERNATIONAL",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LM",
 	"geoLat": "60.389917",
 	"geoLong": "15.58475",
 	"txtName": "BORLANGE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "AUA",
+	"geoLat": "26.471611",
+	"geoLong": "38.140639",
+	"txtName": "ALULA INTERNATIONAL",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BNS",
@@ -46817,18 +46677,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "RBX",
-	"geoLat": "35.920505",
-	"geoLong": "-75.69693528",
-	"txtName": "WRIGHT BROTHERS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PSE",
 	"geoLat": "17.99244722",
 	"geoLong": "-66.51917694",
 	"txtName": "PONCE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "RBX",
+	"geoLat": "35.920505",
+	"geoLong": "-75.69693528",
+	"txtName": "WRIGHT BROTHERS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BMT",
@@ -46894,18 +46754,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MUD",
-	"geoLat": "-8.331075",
-	"geoLong": "157.2549056",
-	"txtName": "MUNDA",
-	"codeType": "DME"
-},
-{
 	"codeId": "CR",
 	"geoLat": "12.00028",
 	"geoLong": "109.21639",
 	"txtName": "CAM RANH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MUD",
+	"geoLat": "-8.331075",
+	"geoLong": "157.2549056",
+	"txtName": "MUNDA",
+	"codeType": "DME"
 },
 {
 	"codeId": "SML",
@@ -46929,18 +46789,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MMV",
-	"geoLat": "12.9876361",
-	"geoLong": "80.1550222",
-	"txtName": "CHENNAI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "L",
 	"geoLat": "62.08972",
 	"geoLong": "65.61194",
 	"txtName": "NYAGAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MMV",
+	"geoLat": "12.9876361",
+	"geoLong": "80.1550222",
+	"txtName": "CHENNAI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HAO",
@@ -46985,13 +46845,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SFD",
-	"geoLat": "7.88275",
-	"geoLong": "-67.439",
-	"txtName": "SAN FERNANDO DE APURE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "EWC",
 	"geoLat": "40.82493278",
 	"geoLong": "-80.21154556",
@@ -47006,10 +46859,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "JPU",
-	"geoLat": "39.44118028",
-	"geoLong": "-81.37476056",
-	"txtName": "PARKERSBURG",
+	"codeId": "SFD",
+	"geoLat": "7.88275",
+	"geoLong": "-67.439",
+	"txtName": "SAN FERNANDO DE APURE",
 	"codeType": "VOR/DME"
 },
 {
@@ -47018,6 +46871,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "55.840528",
 	"txtName": "UFA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "JPU",
+	"geoLat": "39.44118028",
+	"geoLong": "-81.37476056",
+	"txtName": "PARKERSBURG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PAL",
@@ -47510,18 +47370,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ARU",
-	"geoLat": "-10.981917",
-	"geoLong": "-37.077389",
-	"txtName": "CAJU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "AEL",
 	"geoLat": "43.681735",
 	"geoLong": "-93.370755",
 	"txtName": "ALBERT LEA",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ARU",
+	"geoLat": "-10.981917",
+	"geoLong": "-37.077389",
+	"txtName": "CAJU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OTG",
@@ -47615,18 +47475,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ADL",
-	"geoLat": "43.454472",
-	"geoLong": "39.962111",
-	"txtName": "SOCHI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KRT",
 	"geoLat": "14.9173194",
 	"geoLong": "102.1398111",
 	"txtName": "KHORAT",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ADL",
+	"geoLat": "43.454472",
+	"geoLong": "39.962111",
+	"txtName": "SOCHI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IDE",
@@ -47790,6 +47650,13 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
+	"codeId": "MF",
+	"geoLat": "-13.2633583",
+	"geoLong": "31.9014222",
+	"txtName": "MFUWE",
+	"codeType": "NDB"
+},
+{
 	"codeId": "AST",
 	"geoLat": "51.001556",
 	"geoLong": "71.433444",
@@ -47802,13 +47669,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "29.343611",
 	"txtName": "SABIHA GOKCEN",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "MF",
-	"geoLat": "-13.2633583",
-	"geoLong": "31.9014222",
-	"txtName": "MFUWE",
-	"codeType": "NDB"
 },
 {
 	"codeId": "EW",
@@ -47874,18 +47734,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "IUCC",
+	"geoLat": "41.265361",
+	"geoLong": "28.758083",
+	"txtName": "ISTANBUL AD",
+	"codeType": "DME"
+},
+{
 	"codeId": "SIN",
 	"geoLat": "41.980825",
 	"geoLong": "22.3655167",
 	"txtName": "SINKO",
 	"codeType": "VOR"
-},
-{
-	"codeId": "IUCC",
-	"geoLat": "41.265389",
-	"geoLong": "28.758083",
-	"txtName": "ISTANBUL AD",
-	"codeType": "DME"
 },
 {
 	"codeId": "PR",
@@ -48231,13 +48091,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ST",
-	"geoLat": "-31.450667",
-	"geoLong": "-57.996722",
-	"txtName": "SALTO",
-	"codeType": "NDB"
-},
-{
 	"codeId": "SQQ",
 	"geoLat": "55.890472",
 	"geoLong": "23.402389",
@@ -48406,11 +48259,11 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "ANW",
-	"geoLat": "42.56911389",
-	"geoLong": "-99.98966111",
-	"txtName": "AINSWORTH",
-	"codeType": "VOR"
+	"codeId": "UH",
+	"geoLat": "47.330194",
+	"geoLong": "110.664056",
+	"txtName": "UNDURKHAAN",
+	"codeType": "NDB"
 },
 {
 	"codeId": "SJD",
@@ -48420,18 +48273,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "ANW",
+	"geoLat": "42.56911389",
+	"geoLong": "-99.98966111",
+	"txtName": "AINSWORTH",
+	"codeType": "VOR"
+},
+{
 	"codeId": "UBN",
 	"geoLat": "53.4075",
 	"geoLong": "109.00806",
 	"txtName": "UST-BARGUZIN",
 	"codeType": "DME"
-},
-{
-	"codeId": "UH",
-	"geoLat": "47.330194",
-	"geoLong": "110.664056",
-	"txtName": "UNDURKHAAN",
-	"codeType": "NDB"
 },
 {
 	"codeId": "BQ",
@@ -48959,13 +48812,6 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "DIB",
-	"geoLat": "21.396028",
-	"geoLong": "103.004472",
-	"txtName": "DIEN BIEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MAH",
 	"geoLat": "30.556361",
 	"geoLong": "49.149472",
@@ -49008,18 +48854,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "CZM",
-	"geoLat": "20.5074722",
-	"geoLong": "-86.912",
-	"txtName": "COZUMEL",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SQS",
 	"geoLat": "33.46384944",
 	"geoLong": "-90.27735056",
 	"txtName": "SIDON",
 	"codeType": "VOR"
+},
+{
+	"codeId": "CZM",
+	"geoLat": "20.5074722",
+	"geoLong": "-86.912",
+	"txtName": "COZUMEL",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MH",
@@ -49113,18 +48959,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BCN",
-	"geoLat": "51.72556",
-	"geoLong": "-3.26306",
-	"txtName": "BRECON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MKO",
 	"geoLat": "37.4401833",
 	"geoLong": "25.3450028",
 	"txtName": "MIKONOS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BCN",
+	"geoLat": "51.72556",
+	"geoLong": "-3.26306",
+	"txtName": "BRECON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NV",
@@ -49162,17 +49008,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SEY",
-	"geoLat": "41.64167",
-	"geoLong": "123.47833",
-	"txtName": "SHENYANG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "STJ",
 	"geoLat": "39.9605775",
 	"geoLong": "-94.92522028",
 	"txtName": "ST JOSEPH",
+	"codeType": "VOR"
+},
+{
+	"codeId": "SEY",
+	"geoLat": "41.64167",
+	"geoLong": "123.47833",
+	"txtName": "SHENYANG",
 	"codeType": "VOR"
 },
 {
@@ -49288,18 +49134,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "YQV",
-	"geoLat": "51.264054861",
-	"geoLong": "-102.468722111",
-	"txtName": "YORKTON",
-	"codeType": "DME"
-},
-{
 	"codeId": "CNE",
 	"geoLat": "49.1156611",
 	"geoLong": "-0.3212389",
 	"txtName": "CAEN CARPIQUET",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YQV",
+	"geoLat": "51.264054861",
+	"geoLong": "-102.468722111",
+	"txtName": "YORKTON",
+	"codeType": "DME"
 },
 {
 	"codeId": "TPG",
@@ -49309,18 +49155,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "-37.016528",
-	"geoLong": "174.774306",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "JWN",
 	"geoLat": "24.6",
 	"geoLong": "24.6694444",
 	"txtName": "JWANENG",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "-37.016528",
+	"geoLong": "174.774306",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "UIN",
@@ -49358,18 +49204,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KTH",
-	"geoLat": "39.106778",
-	"geoLong": "30.134778",
-	"txtName": "ZAFER",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "JD",
 	"geoLat": "51.81917",
 	"geoLong": "143.16722",
 	"txtName": "NOGLIKI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KTH",
+	"geoLat": "39.106778",
+	"geoLong": "30.134778",
+	"txtName": "ZAFER",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "X",
@@ -49407,18 +49253,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LNO",
-	"geoLat": "50.5859139",
-	"geoLong": "5.710275",
-	"txtName": "OLNO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TDA",
 	"geoLat": "54.404816667",
 	"geoLong": "16.358168889",
 	"txtName": "DARLOWO",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "LNO",
+	"geoLat": "50.5859139",
+	"geoLong": "5.710275",
+	"txtName": "OLNO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "B",
@@ -49435,18 +49281,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "FYG",
-	"geoLat": "32.88333",
-	"geoLong": "115.73333",
-	"txtName": "FUYANG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RD",
 	"geoLat": "59.517556",
 	"geoLong": "16.604528",
 	"txtName": "STOCKHOLM/VASTERAS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FYG",
+	"geoLat": "32.88333",
+	"geoLong": "115.73333",
+	"txtName": "FUYANG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -49498,18 +49344,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BUK",
-	"geoLat": "40.241861",
-	"geoLong": "33.104917",
-	"txtName": "CUBUK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "38.878278",
 	"geoLong": "-6.797944",
 	"txtName": "MM 31",
 	"codeType": "MKR"
+},
+{
+	"codeId": "BUK",
+	"geoLat": "40.241861",
+	"geoLong": "33.104917",
+	"txtName": "CUBUK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PE",
@@ -49764,18 +49610,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CSV",
-	"geoLat": "-33.2522972",
-	"geoLong": "19.4381167",
-	"txtName": "CERES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GTF",
 	"geoLat": "47.44998",
 	"geoLong": "-111.41216472",
 	"txtName": "GREAT FALLS",
 	"codeType": "VOR"
+},
+{
+	"codeId": "CSV",
+	"geoLat": "-33.2522972",
+	"geoLong": "19.4381167",
+	"txtName": "CERES",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FOK",
@@ -49869,18 +49715,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "68.3527444",
-	"geoLong": "23.4058778",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "A",
 	"geoLat": "55.550889",
 	"geoLong": "52.066444",
 	"txtName": "BEGISHEVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "68.3527444",
+	"geoLong": "23.4058778",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "TCH",
@@ -49981,18 +49827,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "ARI",
-	"geoLat": "39.645806",
-	"geoLong": "43.027083",
-	"txtName": "AGRI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TRO",
 	"geoLat": "32.79583",
 	"geoLong": "12.82778",
 	"txtName": "JODAY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ARI",
+	"geoLat": "39.645806",
+	"geoLong": "43.027083",
+	"txtName": "AGRI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "POL",
@@ -50016,18 +49862,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KSH",
-	"geoLat": "34.311111",
-	"geoLong": "47.027778",
-	"txtName": "KERMANSHAH",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "CRC",
 	"geoLat": "-16.19389",
 	"geoLong": "-67.72167",
 	"txtName": "COROICO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KSH",
+	"geoLat": "34.311111",
+	"geoLong": "47.027778",
+	"txtName": "KERMANSHAH",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "CAR",
@@ -50140,13 +49986,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-68.544005778",
 	"txtName": "",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "TZT",
-	"geoLat": "34.3261722",
-	"geoLong": "133.9538417",
-	"txtName": "TAKAMATSU",
-	"codeType": "TACAN"
 },
 {
 	"codeId": "IDU",
@@ -50345,17 +50184,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NEM",
-	"geoLat": "27.932028",
-	"geoLong": "35.292444",
-	"txtName": "NEOM/NEOM BAY AIRPORT",
-	"codeType": "VOR"
-},
-{
 	"codeId": "YFB",
 	"geoLat": "63.7416583",
 	"geoLong": "-68.473275",
 	"txtName": "FROBAY (IQALUIT)",
+	"codeType": "VOR"
+},
+{
+	"codeId": "NEM",
+	"geoLat": "27.932028",
+	"geoLong": "35.292444",
+	"txtName": "NEOM/NEOM BAY AIRPORT",
 	"codeType": "VOR"
 },
 {
@@ -50366,18 +50205,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "LFA",
-	"geoLat": "8.2418333",
-	"geoLong": "-72.2699444",
-	"txtName": "LA FRIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "X",
 	"geoLat": "57.930889",
 	"geoLong": "56.053167",
 	"txtName": "PERM/BOLSHOE SAVINO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LFA",
+	"geoLat": "8.2418333",
+	"geoLong": "-72.2699444",
+	"txtName": "LA FRIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SBI",
@@ -50408,18 +50247,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NBC",
-	"geoLat": "32.47903333",
-	"geoLong": "-80.71733167",
-	"txtName": "BEAUFORT",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "TN",
 	"geoLat": "-18.316056",
 	"geoLong": "47.113778",
 	"txtName": "ANKAZOBE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NBC",
+	"geoLat": "32.47903333",
+	"geoLong": "-80.71733167",
+	"txtName": "BEAUFORT",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "YQT",
@@ -50458,8 +50297,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "LET",
-	"geoLat": "-4.195",
-	"geoLong": "-69.94",
+	"geoLat": "-4.18778",
+	"geoLong": "-69.93944",
 	"txtName": "LETICIA",
 	"codeType": "VOR/DME"
 },
@@ -50534,18 +50373,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "FRS",
-	"geoLat": "39.453586444",
-	"geoLong": "-31.210433972",
-	"txtName": "FLORES",
-	"codeType": "DME"
-},
-{
 	"codeId": "CW",
 	"geoLat": "29.53333",
 	"geoLong": "12.83333",
 	"txtName": "HAMADA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FRS",
+	"geoLat": "39.453586444",
+	"geoLong": "-31.210433972",
+	"txtName": "FLORES",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -50555,18 +50394,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "",
-	"geoLat": "50.316361",
-	"geoLong": "30.903222",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "GO",
 	"geoLat": "56.64111",
 	"geoLong": "92.65361",
 	"txtName": "GOREVOYE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "50.316361",
+	"geoLong": "30.903222",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "TUG",
@@ -50667,18 +50506,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "KOS",
-	"geoLat": "10.589667",
-	"geoLong": "103.642167",
-	"txtName": "SIHANOUK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CVT",
 	"geoLat": "40.367778",
 	"geoLong": "-3.773389",
 	"txtName": "MADRID/CUATRO VIENTOS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KOS",
+	"geoLat": "10.589667",
+	"geoLong": "103.642167",
+	"txtName": "SIHANOUK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ABH",
@@ -50709,18 +50548,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BHD",
-	"geoLat": "50.3986",
-	"geoLong": "-3.4936889",
-	"txtName": "BERRY HEAD",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KPO",
 	"geoLat": "35.977194",
 	"geoLong": "129.474528",
 	"txtName": "POHANG",
 	"codeType": "VOR"
+},
+{
+	"codeId": "TR",
+	"geoLat": "36.55550083",
+	"geoLong": "-82.31785472",
+	"txtName": "MOCCA",
+	"codeType": "NDB"
 },
 {
 	"codeId": "ROS",
@@ -50730,11 +50569,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TR",
-	"geoLat": "36.55550083",
-	"geoLong": "-82.31785472",
-	"txtName": "MOCCA",
-	"codeType": "NDB"
+	"codeId": "BHD",
+	"geoLat": "50.3986",
+	"geoLong": "-3.4936889",
+	"txtName": "BERRY HEAD",
+	"codeType": "VOR"
 },
 {
 	"codeId": "GLN",
@@ -50982,17 +50821,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IQQ",
-	"geoLat": "-20.57083",
-	"geoLong": "-70.18306",
-	"txtName": "IQUIQUE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PXR",
 	"geoLat": "33.43301722",
 	"geoLong": "-111.97020194",
 	"txtName": "PHOENIX",
+	"codeType": "VOR"
+},
+{
+	"codeId": "IQQ",
+	"geoLat": "-20.57083",
+	"geoLong": "-70.18306",
+	"txtName": "IQUIQUE",
 	"codeType": "VOR"
 },
 {
@@ -51087,13 +50926,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KNA",
-	"geoLat": "13.0279778",
-	"geoLong": "32.9064417",
-	"txtName": "KENANA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "WBA",
 	"geoLat": "52.5159028",
 	"geoLong": "-2.2617611",
@@ -51106,6 +50938,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "27.1502528",
 	"txtName": "KARPATHOS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KNA",
+	"geoLat": "13.0279778",
+	"geoLong": "32.9064417",
+	"txtName": "KENANA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SAL",
@@ -51164,18 +51003,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CIM",
-	"geoLat": "36.49139694",
-	"geoLong": "-104.87199972",
-	"txtName": "CIMARRON",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "IAC",
 	"geoLat": "53.434083",
 	"geoLong": "-6.262",
 	"txtName": "ILS DME RWY 16",
 	"codeType": "DME"
+},
+{
+	"codeId": "CIM",
+	"geoLat": "36.49139694",
+	"geoLong": "-104.87199972",
+	"txtName": "CIMARRON",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "WGM",
@@ -51318,17 +51157,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MCA",
-	"geoLat": "-22.345",
-	"geoLong": "-41.76889",
-	"txtName": "MACAE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CCB",
 	"geoLat": "11.0335722",
 	"geoLong": "77.0483222",
 	"txtName": "COIMBATORE",
+	"codeType": "VOR"
+},
+{
+	"codeId": "MCA",
+	"geoLat": "-22.345",
+	"geoLong": "-41.76889",
+	"txtName": "MACAE",
 	"codeType": "VOR"
 },
 {
@@ -51344,6 +51183,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "106.96333",
 	"txtName": "DENGKOU",
 	"codeType": "VOR"
+},
+{
+	"codeId": "RP",
+	"geoLat": "52.97778",
+	"geoLong": "138.82528",
+	"txtName": "KHERPUCHI",
+	"codeType": "DME"
 },
 {
 	"codeId": "BZM",
@@ -51416,18 +51262,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "IPL",
-	"geoLat": "32.74886667",
-	"geoLong": "-115.50858194",
-	"txtName": "IMPERIAL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PQ",
 	"geoLat": "30.54817",
 	"geoLong": "-88.55317",
 	"txtName": "TLOTT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IPL",
+	"geoLat": "32.74886667",
+	"geoLong": "-115.50858194",
+	"txtName": "IMPERIAL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LBB",
@@ -51451,18 +51297,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ULD",
-	"geoLat": "-18.87667",
-	"geoLong": "-48.22139",
-	"txtName": "UBERLANDIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LS",
 	"geoLat": "67.470917",
 	"geoLong": "86.531667",
 	"txtName": "IGARKA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ULD",
+	"geoLat": "-18.87667",
+	"geoLong": "-48.22139",
+	"txtName": "UBERLANDIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "OAX",
@@ -51521,18 +51367,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GAL",
-	"geoLat": "64.73812778",
-	"geoLong": "-156.77713611",
-	"txtName": "GALENA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "DIA",
 	"geoLat": "25.2339528",
 	"geoLong": "51.5770444",
 	"txtName": "DOHA/DOHA INTL",
 	"codeType": "VOR"
+},
+{
+	"codeId": "GAL",
+	"geoLat": "64.73812778",
+	"geoLong": "-156.77713611",
+	"txtName": "GALENA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IAB",
@@ -51605,17 +51451,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "HIL",
-	"geoLat": "27.425056",
-	"geoLong": "41.682917",
-	"txtName": "HAIL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "XDX",
 	"geoLat": "35.97833",
 	"geoLong": "120.29",
 	"txtName": "XUEJIADAO",
+	"codeType": "VOR"
+},
+{
+	"codeId": "HIL",
+	"geoLat": "27.425056",
+	"geoLong": "41.682917",
+	"txtName": "HAIL",
 	"codeType": "VOR"
 },
 {
@@ -51675,18 +51521,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ML",
-	"geoLat": "43.4442389",
-	"geoLong": "5.20215",
-	"txtName": "",
-	"codeType": "DME"
-},
-{
 	"codeId": "VR",
 	"geoLat": "35.342667",
 	"geoLong": "51.637167",
 	"txtName": "VARAMIN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ML",
+	"geoLat": "43.4442389",
+	"geoLong": "5.20215",
+	"txtName": "",
+	"codeType": "DME"
 },
 {
 	"codeId": "EEL",
@@ -51738,6 +51584,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "KG",
+	"geoLat": "-30.789833",
+	"geoLong": "121.452778",
+	"txtName": "KALGOORLIE",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "TTR",
 	"geoLat": "10.7686722",
 	"geoLong": "78.7247667",
@@ -51745,11 +51598,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KG",
-	"geoLat": "-30.789833",
-	"geoLong": "121.452778",
-	"txtName": "KALGOORLIE",
-	"codeType": "VOR/DME"
+	"codeId": "RN",
+	"geoLat": "45.90056",
+	"geoLong": "134.86667",
+	"txtName": "BOGUSLAVETS",
+	"codeType": "DME"
 },
 {
 	"codeId": "DCR",
@@ -51825,7 +51678,7 @@ export const navaids: EADdata[] = [
 	"codeId": "WS",
 	"geoLat": "45.3623472",
 	"geoLong": "5.152975",
-	"txtName": "GRENOBLE ALPES ISERE",
+	"txtName": "",
 	"codeType": "NDB"
 },
 {
@@ -51906,18 +51759,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "RAJ",
-	"geoLat": "24.4389889",
-	"geoLong": "88.6152306",
-	"txtName": "RAJSHAHI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "B",
 	"geoLat": "46.882056",
 	"geoLong": "74.981917",
 	"txtName": "BALKHASH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RAJ",
+	"geoLat": "24.4389889",
+	"geoLong": "88.6152306",
+	"txtName": "RAJSHAHI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FNV",
@@ -51990,18 +51843,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "GGT",
-	"geoLat": "26.134125",
-	"geoLong": "91.5979167",
-	"txtName": "GUWAHATI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LIL",
 	"geoLat": "50.56615",
 	"geoLong": "3.1142861",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "GGT",
+	"geoLat": "26.134125",
+	"geoLong": "91.5979194",
+	"txtName": "GUWAHATI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VMH",
@@ -52074,18 +51927,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "",
-	"geoLat": "4.8272389",
-	"geoLong": "-52.3455361",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "IBRI",
 	"geoLat": "39.608639",
 	"geoLong": "27.924028",
 	"txtName": "BALIKESIR/MERKEZ",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "4.8272389",
+	"geoLong": "-52.3455361",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "PDD",
@@ -52116,18 +51969,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "OLS",
-	"geoLat": "31.41495417",
-	"geoLong": "-110.84889778",
-	"txtName": "NOGALES",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KI",
 	"geoLat": "25.9905056",
 	"geoLong": "95.6783972",
 	"txtName": "KANTI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OLS",
+	"geoLat": "31.41495417",
+	"geoLong": "-110.84889778",
+	"txtName": "NOGALES",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TG",
@@ -52165,17 +52018,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TRH",
-	"geoLat": "-27.4967583",
-	"geoLong": "-64.9337167",
-	"txtName": "TERMAS DE RIO HONDO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PWK",
 	"geoLat": "69.802417",
 	"geoLong": "170.591833",
 	"txtName": "PEVEK",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "TRH",
+	"geoLat": "-27.4967583",
+	"geoLong": "-64.9337167",
+	"txtName": "TERMAS DE RIO HONDO",
 	"codeType": "VOR/DME"
 },
 {
@@ -52313,17 +52166,17 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BL",
-	"geoLat": "50.636889",
-	"geoLong": "36.608528",
-	"txtName": "BELGOROD",
-	"codeType": "VOR"
-},
-{
-	"codeId": "BL",
 	"geoLat": "44.20111",
 	"geoLong": "133.12111",
 	"txtName": "CHERNYSHEVKA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BL",
+	"geoLat": "50.636889",
+	"geoLong": "36.608528",
+	"txtName": "BELGOROD",
+	"codeType": "VOR"
 },
 {
 	"codeId": "PMS",
@@ -52382,18 +52235,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LV",
-	"geoLat": "0.4798472",
-	"geoLong": "9.4019833",
-	"txtName": "LIBREVILLE LEON M'BA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PA",
 	"geoLat": "48.05283",
 	"geoLong": "-122.28867",
 	"txtName": "RITTS (EVERETT)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LV",
+	"geoLat": "0.4798472",
+	"geoLong": "9.4019833",
+	"txtName": "LIBREVILLE LEON M'BA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NK",
@@ -52501,18 +52354,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MGR",
-	"geoLat": "31.3966222",
-	"geoLong": "-9.6845583",
-	"txtName": "ESSAOUIRA / MOGADOR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "POR",
 	"geoLat": "45.474773611",
 	"geoLong": "13.612085472",
 	"txtName": "PORTOROZ",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "MGR",
+	"geoLat": "31.3966222",
+	"geoLong": "-9.6845583",
+	"txtName": "ESSAOUIRA / MOGADOR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DBL",
@@ -52529,6 +52382,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "XV",
+	"geoLat": "52.761389",
+	"geoLong": "41.5195",
+	"txtName": "TAMBOV/DONSKOE",
+	"codeType": "NDB"
+},
+{
 	"codeId": "AA",
 	"geoLat": "-37.0046333",
 	"geoLong": "174.8136306",
@@ -52536,10 +52396,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "XV",
-	"geoLat": "52.761389",
-	"geoLong": "41.5195",
-	"txtName": "TAMBOV/DONSKOE",
+	"codeId": "CP",
+	"geoLat": "-17.751389",
+	"geoLong": "30.926639",
+	"txtName": "CHARLES PRINCE",
 	"codeType": "NDB"
 },
 {
@@ -52548,13 +52408,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "27.975972",
 	"txtName": "BALIKESIR/BANDIRMA",
 	"codeType": "DME"
-},
-{
-	"codeId": "CP",
-	"geoLat": "-17.751389",
-	"geoLong": "30.926639",
-	"txtName": "CHARLES PRINCE",
-	"codeType": "NDB"
 },
 {
 	"codeId": "",
@@ -52599,13 +52452,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "NL",
-	"geoLat": "64.546778",
-	"geoLong": "18.716139",
-	"txtName": "LYCKSELE",
-	"codeType": "DME"
-},
-{
 	"codeId": "MR",
 	"geoLat": "-29.5925",
 	"geoLong": "27.49333",
@@ -52613,11 +52459,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HDH",
-	"geoLat": "14.772806",
-	"geoLong": "42.986417",
-	"txtName": "HODEIDAH",
-	"codeType": "VOR"
+	"codeId": "NL",
+	"geoLat": "64.546778",
+	"geoLong": "18.716139",
+	"txtName": "LYCKSELE",
+	"codeType": "DME"
 },
 {
 	"codeId": "DMX",
@@ -52625,6 +52471,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-8.614492222",
 	"txtName": "MEXILHOEIRA GRANDE",
 	"codeType": "DME"
+},
+{
+	"codeId": "HDH",
+	"geoLat": "14.772806",
+	"geoLong": "42.986417",
+	"txtName": "HODEIDAH",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CKG",
@@ -52650,7 +52503,7 @@ export const navaids: EADdata[] = [
 {
 	"codeId": "UHA",
 	"geoLat": "22.9788389",
-	"geoLong": "-82.4266472",
+	"geoLong": "-82.4263889",
 	"txtName": "HABANA",
 	"codeType": "VOR/DME"
 },
@@ -52662,18 +52515,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "53.804317167",
-	"geoLong": "10.708114389",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "VRN",
 	"geoLat": "42.555361",
 	"geoLong": "21.911444",
 	"txtName": "VRANJE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "53.804317167",
+	"geoLong": "10.708114389",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "WUR",
@@ -52690,18 +52543,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TOY",
-	"geoLat": "38.73914972",
-	"geoLong": "-89.9185925",
-	"txtName": "TROY",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "MOE",
 	"geoLat": "34.0710417",
 	"geoLong": "139.5612889",
 	"txtName": "OYAMA",
 	"codeType": "VOR"
+},
+{
+	"codeId": "TOY",
+	"geoLat": "38.73914972",
+	"geoLong": "-89.9185925",
+	"txtName": "TROY",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "SZ",
@@ -52753,13 +52606,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ETL",
-	"geoLat": "38.04025222",
-	"geoLong": "-108.25857444",
-	"txtName": "CONES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "QIY",
 	"geoLat": "35.79667",
 	"geoLong": "107.59833",
@@ -52771,6 +52617,13 @@ export const navaids: EADdata[] = [
 	"geoLat": "69.302861",
 	"geoLong": "87.303278",
 	"txtName": "NORILSK/ALYKEL",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "ETL",
+	"geoLat": "38.04025222",
+	"geoLong": "-108.25857444",
+	"txtName": "CONES",
 	"codeType": "VOR/DME"
 },
 {
@@ -52788,18 +52641,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PR",
-	"geoLat": "41.2300425",
-	"geoLong": "-8.676531389",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "ZL",
 	"geoLat": "50.362444",
 	"geoLong": "136.946972",
 	"txtName": "KOMSOMOLSK-NA-AMURE/KHURBA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PR",
+	"geoLat": "41.2300425",
+	"geoLong": "-8.676531389",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SN",
@@ -52809,18 +52662,18 @@ export const navaids: EADdata[] = [
 	"codeType": "LOC"
 },
 {
-	"codeId": "SCR",
-	"geoLat": "-22.94972",
-	"geoLong": "-43.7275",
-	"txtName": "SANTA CRUZ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LEH",
 	"geoLat": "34.1326389",
 	"geoLong": "77.54175",
 	"txtName": "LEH",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SCR",
+	"geoLat": "-22.94972",
+	"geoLong": "-43.7275",
+	"txtName": "SANTA CRUZ",
+	"codeType": "VOR"
 },
 {
 	"codeId": "FD",
@@ -52914,13 +52767,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "YYB",
-	"geoLat": "46.363909306",
-	"geoLong": "-79.436404639",
-	"txtName": "NORTH BAY",
-	"codeType": "DME"
-},
-{
 	"codeId": "ANG",
 	"geoLat": "47.5368722",
 	"geoLong": "-0.8518361",
@@ -52928,11 +52774,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "IIM",
-	"geoLat": "24.74646889",
-	"geoLong": "93.89035472",
-	"txtName": "IMPHAL",
-	"codeType": "VOR"
+	"codeId": "YYB",
+	"geoLat": "46.363909306",
+	"geoLong": "-79.436404639",
+	"txtName": "NORTH BAY",
+	"codeType": "DME"
 },
 {
 	"codeId": "BI",
@@ -52949,17 +52795,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HRB",
-	"geoLat": "45.62667",
-	"geoLong": "126.26",
-	"txtName": "HARBIN",
-	"codeType": "VOR/DME"
+	"codeId": "IIM",
+	"geoLat": "24.74646889",
+	"geoLong": "93.89035472",
+	"txtName": "IMPHAL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MID",
 	"geoLat": "51.0539528",
 	"geoLong": "-0.6250028",
 	"txtName": "MIDHURST",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "HRB",
+	"geoLat": "45.62667",
+	"geoLong": "126.26",
+	"txtName": "HARBIN",
 	"codeType": "VOR/DME"
 },
 {
@@ -53054,24 +52907,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LC",
-	"geoLat": "-13.2858833",
-	"geoLong": "35.2311944",
-	"txtName": "LICHINGA",
-	"codeType": "NDB"
-},
-{
 	"codeId": "VFA",
 	"geoLat": "-18.0900361",
 	"geoLong": "25.8143333",
 	"txtName": "VICTORIA FALLS",
-	"codeType": "VOR"
-},
-{
-	"codeId": "KRO",
-	"geoLat": "37.9941389",
-	"geoLong": "24.4949083",
-	"txtName": "KARISTOS",
 	"codeType": "VOR"
 },
 {
@@ -53080,6 +52919,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "63.360389",
 	"txtName": "RODRIGUES",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KRO",
+	"geoLat": "37.9941389",
+	"geoLong": "24.4949083",
+	"txtName": "KARISTOS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "EON",
@@ -53152,6 +52998,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "ZNA",
+	"geoLat": "49.231141417",
+	"geoLong": "18.610007833",
+	"txtName": "ZILINA",
+	"codeType": "DME"
+},
+{
 	"codeId": "IA",
 	"geoLat": "6.52725",
 	"geoLong": "21.985917",
@@ -53164,13 +53017,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-38.547778",
 	"txtName": "FORTALEZA",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "ZNA",
-	"geoLat": "49.231141417",
-	"geoLong": "18.610007833",
-	"txtName": "ZILINA",
-	"codeType": "DME"
 },
 {
 	"codeId": "LA",
@@ -53369,18 +53215,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "36.645972",
-	"geoLong": "-6.366444",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "TN",
 	"geoLat": "6.05445",
 	"geoLong": "-8.138333",
 	"txtName": "TCHIEN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "36.645972",
+	"geoLong": "-6.366444",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "GDL",
@@ -53390,13 +53236,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "TRF",
-	"geoLat": "31.696111",
-	"geoLong": "38.735583",
-	"txtName": "TURAIF",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OH",
 	"geoLat": "42.06917",
 	"geoLong": "-87.99083",
@@ -53404,18 +53243,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FKS",
-	"geoLat": "49.790972222",
-	"geoLong": "8.542361111",
-	"txtName": "FRANKENSTEIN",
+	"codeId": "TRF",
+	"geoLat": "31.696111",
+	"geoLong": "38.735583",
+	"txtName": "TURAIF",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "KRE",
-	"geoLat": "33.5417833",
-	"geoLong": "133.6801583",
-	"txtName": "KOCHI",
-	"codeType": "VOR"
 },
 {
 	"codeId": "MM",
@@ -53430,6 +53262,20 @@ export const navaids: EADdata[] = [
 	"geoLong": "45.02472",
 	"txtName": "LYSKOVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KRE",
+	"geoLat": "33.5417833",
+	"geoLong": "133.6801583",
+	"txtName": "KOCHI",
+	"codeType": "VOR"
+},
+{
+	"codeId": "FKS",
+	"geoLat": "49.790972222",
+	"geoLong": "8.542361111",
+	"txtName": "FRANKENSTEIN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CA",
@@ -53544,18 +53390,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SLA",
-	"geoLat": "31.08615",
-	"geoLong": "77.0633111",
-	"txtName": "SHIMLA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SEM",
 	"geoLat": "50.349639",
 	"geoLong": "80.24375",
 	"txtName": "SEMEY",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SLA",
+	"geoLat": "31.08615",
+	"geoLong": "77.0633111",
+	"txtName": "SHIMLA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "FWA",
@@ -53614,6 +53460,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "PK",
+	"geoLat": "57.737083",
+	"geoLong": "28.366472",
+	"txtName": "PSKOV",
+	"codeType": "NDB"
+},
+{
 	"codeId": "",
 	"geoLat": "63.781639",
 	"geoLong": "20.303139",
@@ -53621,10 +53474,10 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "PK",
-	"geoLat": "57.737083",
-	"geoLong": "28.366472",
-	"txtName": "PSKOV",
+	"codeId": "AP",
+	"geoLat": "51.776944",
+	"geoLong": "39.301389",
+	"txtName": "VORONEZH/CHERTOVITSKOYE",
 	"codeType": "NDB"
 },
 {
@@ -53633,13 +53486,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-96.97893472",
 	"txtName": "VICTORIA",
 	"codeType": "VOR"
-},
-{
-	"codeId": "AP",
-	"geoLat": "51.776944",
-	"geoLong": "39.301389",
-	"txtName": "VORONEZH/CHERTOVITSKOYE",
-	"codeType": "NDB"
 },
 {
 	"codeId": "IIST",
@@ -53728,7 +53574,7 @@ export const navaids: EADdata[] = [
 {
 	"codeId": "ISDP",
 	"geoLat": "42.021417",
-	"geoLong": "35.079472",
+	"geoLong": "35.0795",
 	"txtName": "SINOP",
 	"codeType": "DME"
 },
@@ -53859,18 +53705,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "60.431333",
-	"geoLong": "15.494917",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "ZW",
 	"geoLat": "47.197758333",
 	"geoLong": "14.755938889",
 	"txtName": "ZELTWEG",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "60.431333",
+	"geoLong": "15.494917",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "IFN",
@@ -53894,18 +53740,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SEB",
-	"geoLat": "26.9955944",
-	"geoLong": "14.4597361",
-	"txtName": "SEBHA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "AHT",
 	"geoLat": "33.8874278",
 	"geoLong": "130.6498667",
 	"txtName": "ASHIYA",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "SEB",
+	"geoLat": "26.9955944",
+	"geoLong": "14.4597361",
+	"txtName": "SEBHA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "K",
@@ -53971,18 +53817,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "JJS",
-	"geoLat": "22.8131889",
-	"geoLong": "86.1739306",
-	"txtName": "JAMSHEDPUR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LG",
 	"geoLat": "58.453917",
 	"geoLong": "12.715333",
 	"txtName": "SATENAS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "JJS",
+	"geoLat": "22.8131889",
+	"geoLong": "86.1739306",
+	"txtName": "JAMSHEDPUR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ELB",
@@ -53999,18 +53845,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "JOG",
-	"geoLat": "-7.800333",
-	"geoLong": "110.309333",
-	"txtName": "YOGYAKARTA/ADISUTJIPTO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "51.422754667",
 	"geoLong": "9.357459694",
 	"txtName": "MM EDVK RWY 09",
 	"codeType": "MKR"
+},
+{
+	"codeId": "JOG",
+	"geoLat": "-7.800333",
+	"geoLong": "110.309333",
+	"txtName": "YOGYAKARTA/ADISUTJIPTO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IST",
@@ -54125,18 +53971,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "YWK",
-	"geoLat": "52.9601056",
-	"geoLong": "-66.8538889",
-	"txtName": "WABUSH",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SPA",
 	"geoLat": "65.535278",
 	"geoLong": "22.144667",
 	"txtName": "LULEA",
 	"codeType": "DME"
+},
+{
+	"codeId": "YWK",
+	"geoLat": "52.9601056",
+	"geoLong": "-66.8538889",
+	"txtName": "WABUSH",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AAT",
@@ -54223,18 +54069,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MSO",
-	"geoLat": "46.90796667",
-	"geoLong": "-114.08365222",
-	"txtName": "MISSOULA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ASM",
 	"geoLat": "15.285",
 	"geoLong": "38.9017",
 	"txtName": "ASMARA",
 	"codeType": "VOR"
+},
+{
+	"codeId": "MSO",
+	"geoLat": "46.90796667",
+	"geoLong": "-114.08365222",
+	"txtName": "MISSOULA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BOG",
@@ -54321,18 +54167,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SHD",
-	"geoLat": "37.346028",
-	"geoLong": "46.14275",
-	"txtName": "SAHAND",
-	"codeType": "DME"
-},
-{
 	"codeId": "RL",
 	"geoLat": "46.3705",
 	"geoLong": "-119.25917",
 	"txtName": "RIBOO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SHD",
+	"geoLat": "37.346028",
+	"geoLong": "46.14275",
+	"txtName": "SAHAND",
+	"codeType": "DME"
 },
 {
 	"codeId": "AKO",
@@ -54419,18 +54265,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "MOV",
-	"geoLat": "-3.9485333",
-	"geoLong": "39.6427444",
-	"txtName": "MOVEX",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MIE",
 	"geoLat": "40.2372925",
 	"geoLong": "-85.39403667",
 	"txtName": "MUNCIE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "MOV",
+	"geoLat": "-3.9485333",
+	"geoLong": "39.6427444",
+	"txtName": "MOVEX",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "LSL",
@@ -54482,18 +54328,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PDS",
-	"geoLat": "39.216055",
-	"geoLong": "-8.053787806",
-	"txtName": "PONTE DE SOR",
-	"codeType": "DME"
-},
-{
 	"codeId": "WF",
 	"geoLat": "28.8919722",
 	"geoLong": "10.0834722",
 	"txtName": "WAFA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PDS",
+	"geoLat": "39.216055",
+	"geoLong": "-8.053787806",
+	"txtName": "PONTE DE SOR",
+	"codeType": "DME"
 },
 {
 	"codeId": "MKA",
@@ -54580,18 +54426,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "IMB",
-	"geoLat": "44.64839167",
-	"geoLong": "-119.71163139",
-	"txtName": "KIMBERLY",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SAL",
 	"geoLat": "61.158083",
 	"geoLong": "12.845944",
 	"txtName": "SALEN",
 	"codeType": "DME"
+},
+{
+	"codeId": "IMB",
+	"geoLat": "44.64839167",
+	"geoLong": "-119.71163139",
+	"txtName": "KIMBERLY",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LRA",
@@ -54643,18 +54489,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BRC",
-	"geoLat": "24.012722",
-	"geoLong": "35.442722",
-	"txtName": "BERNICE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "E3",
 	"geoLat": "55.96361",
 	"geoLong": "-113.82361",
 	"txtName": "WABASCA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BRC",
+	"geoLat": "24.012722",
+	"geoLong": "35.442722",
+	"txtName": "BERNICE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MS",
@@ -54678,18 +54524,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "BDT",
-	"geoLat": "9.33889",
-	"geoLong": "-82.25167",
-	"txtName": "BOCAS DEL TORO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TDE",
 	"geoLat": "18.4567139",
 	"geoLong": "94.2957639",
 	"txtName": "THANDWE",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "BDT",
+	"geoLat": "9.33889",
+	"geoLong": "-82.25167",
+	"txtName": "BOCAS DEL TORO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "FGT",
@@ -54846,18 +54692,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "NIS",
-	"geoLat": "1.170278",
-	"geoLong": "97.703333",
-	"txtName": "GUNUNG SITOLI / BINAKA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LWV",
 	"geoLat": "38.76986833",
 	"geoLong": "-87.6038275",
 	"txtName": "LAWRENCEVILLE",
 	"codeType": "DME"
+},
+{
+	"codeId": "NIS",
+	"geoLat": "1.170278",
+	"geoLong": "97.703333",
+	"txtName": "GUNUNG SITOLI / BINAKA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KOZ",
@@ -54909,18 +54755,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NAT",
-	"geoLat": "66.746556",
-	"geoLong": "21.322611",
-	"txtName": "NATTA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OJ",
 	"geoLat": "30.625",
 	"geoLong": "18.35111",
 	"txtName": "ESSIDER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NAT",
+	"geoLat": "66.746556",
+	"geoLong": "21.322611",
+	"txtName": "NATTA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BHY",
@@ -55007,7 +54853,7 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "WT",
+	"codeId": "YWT",
 	"geoLat": "43.458584306",
 	"geoLong": "-80.379383722",
 	"txtName": "WATERLOO",
@@ -55119,18 +54965,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "SKD",
-	"geoLat": "39.7037361",
-	"geoLong": "66.9726611",
-	"txtName": "SAMARKAND",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CAI",
 	"geoLat": "12.6962278",
 	"geoLong": "-61.3392417",
 	"txtName": "CANOUAN",
 	"codeType": "DME"
+},
+{
+	"codeId": "SKD",
+	"geoLat": "39.7037361",
+	"geoLong": "66.9726611",
+	"txtName": "SAMARKAND",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KND",
@@ -55210,18 +55056,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PPD",
-	"geoLat": "49.064755861",
-	"geoLong": "20.350025472",
-	"txtName": "TATRY",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LSV",
 	"geoLat": "39.2313",
 	"geoLong": "26.4253222",
 	"txtName": "LESVOS",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "PPD",
+	"geoLat": "49.064755861",
+	"geoLong": "20.350025472",
+	"txtName": "TATRY",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -55231,18 +55077,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "EQU",
-	"geoLat": "-16.339194",
-	"geoLong": "-71.597167",
-	"txtName": "AREQUIPA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ME",
 	"geoLat": "-29.4198972",
 	"geoLong": "27.5657333",
 	"txtName": "BEREA (MASERU)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "EQU",
+	"geoLat": "-16.339194",
+	"geoLong": "-71.597167",
+	"txtName": "AREQUIPA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MK",
@@ -55301,6 +55147,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "JD",
+	"geoLat": "38.54389",
+	"geoLong": "69.31389",
+	"txtName": "FAYZOBOD",
+	"codeType": "NDB"
+},
+{
 	"codeId": "PSU",
 	"geoLat": "0.832444",
 	"geoLong": "112.94275",
@@ -55313,13 +55166,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "14.74917",
 	"txtName": "ROENNE",
 	"codeType": "DME"
-},
-{
-	"codeId": "JD",
-	"geoLat": "38.54389",
-	"geoLong": "69.31389",
-	"txtName": "FAYZOBOD",
-	"codeType": "NDB"
 },
 {
 	"codeId": "",
@@ -55469,18 +55315,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "RSW",
-	"geoLat": "50.108610444",
-	"geoLong": "22.134028583",
-	"txtName": "LUKAWIEC",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GSY",
 	"geoLat": "50.453917",
 	"geoLong": "4.441389",
 	"txtName": "GOSLY",
 	"codeType": "VOR"
+},
+{
+	"codeId": "RSW",
+	"geoLat": "50.108610444",
+	"geoLong": "22.134028583",
+	"txtName": "LUKAWIEC",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -55518,16 +55364,16 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "41.000556",
-	"geoLong": "39.772",
+	"codeId": "NL",
+	"geoLat": "37.7466833",
+	"geoLong": "-25.7126111",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "NL",
-	"geoLat": "37.7466833",
-	"geoLong": "-25.7126111",
+	"codeId": "",
+	"geoLat": "41.000556",
+	"geoLong": "39.772",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -55665,18 +55511,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SIE",
-	"geoLat": "41.151694",
-	"geoLong": "-3.604667",
-	"txtName": "SOMOSIERRA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "AYT",
 	"geoLat": "36.909222",
 	"geoLong": "30.789778",
 	"txtName": "ANTALYA",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "SIE",
+	"geoLat": "41.151694",
+	"geoLong": "-3.604667",
+	"txtName": "SOMOSIERRA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "VOZ",
@@ -55763,18 +55609,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SRA",
-	"geoLat": "-34.5894444",
-	"geoLong": "-68.3947222",
-	"txtName": "SAN RAFAEL / S.A. S.GERMANO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CTP",
 	"geoLat": "40.737472",
 	"geoLong": "30.071361",
 	"txtName": "CENGIZ TOPEL",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SRA",
+	"geoLat": "-34.5894444",
+	"geoLong": "-68.3947222",
+	"txtName": "SAN RAFAEL / S.A. S.GERMANO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MO",
@@ -55784,18 +55630,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CDC",
-	"geoLat": "38.755869444",
-	"geoLong": "16.369144444",
-	"txtName": "CARAFFA DI CATANZARO",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "RE",
 	"geoLat": "-18.463722",
 	"geoLong": "-136.444194",
 	"txtName": "REAO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CDC",
+	"geoLat": "38.755869444",
+	"geoLong": "16.369144444",
+	"txtName": "CARAFFA DI CATANZARO",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "AI",
@@ -55812,11 +55658,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KIV",
-	"geoLat": "46.926028",
-	"geoLong": "28.9045",
-	"txtName": "CHISINAU",
-	"codeType": "VOR/DME"
+	"codeId": "IN",
+	"geoLat": "7.378",
+	"geoLong": "3.9915",
+	"txtName": "IBADAN",
+	"codeType": "NDB"
 },
 {
 	"codeId": "DPN",
@@ -55826,11 +55672,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "IN",
-	"geoLat": "7.378",
-	"geoLong": "3.9915",
-	"txtName": "IBADAN",
-	"codeType": "NDB"
+	"codeId": "KIV",
+	"geoLat": "46.926028",
+	"geoLong": "28.9045",
+	"txtName": "CHISINAU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ASE",
@@ -55896,18 +55742,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "NMA",
-	"geoLat": "-8.534139",
-	"geoLong": "118.691556",
-	"txtName": "BIMA/SULTAN MUHAMMAD SALAHUDIN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YMT",
 	"geoLat": "49.800050806",
 	"geoLong": "-74.495682194",
 	"txtName": "CHIBOO (CHAPAIS)",
 	"codeType": "DME"
+},
+{
+	"codeId": "NMA",
+	"geoLat": "-8.534139",
+	"geoLong": "118.691556",
+	"txtName": "BIMA/SULTAN MUHAMMAD SALAHUDIN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -56001,18 +55847,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "PAZ",
-	"geoLat": "-16.5120472",
-	"geoLong": "-68.2334722",
-	"txtName": "LA PAZ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KTN",
 	"geoLat": "34.2271806",
 	"geoLong": "37.2336667",
 	"txtName": "KARIATAIN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PAZ",
+	"geoLat": "-16.5120472",
+	"geoLong": "-68.2334722",
+	"txtName": "LA PAZ",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SP",
@@ -56036,18 +55882,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "MMP",
-	"geoLat": "45.640770806",
-	"geoLong": "8.734841333",
-	"txtName": "MALPENSA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KWL",
 	"geoLat": "58.9596722",
 	"geoLong": "-2.8939472",
 	"txtName": "KIRKWALL",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "MMP",
+	"geoLat": "45.640770806",
+	"geoLong": "8.734841333",
+	"txtName": "MALPENSA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SOR",
@@ -56239,18 +56085,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ORU",
-	"geoLat": "-17.9799917",
-	"geoLong": "-67.0768861",
-	"txtName": "ORURO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ITRB",
 	"geoLat": "41.000556",
 	"geoLong": "39.772",
 	"txtName": "TRABZON",
 	"codeType": "DME"
+},
+{
+	"codeId": "ORU",
+	"geoLat": "-17.9799917",
+	"geoLong": "-67.0768861",
+	"txtName": "ORURO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -56281,18 +56127,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SIN",
-	"geoLat": "42.022306",
-	"geoLong": "35.076806",
-	"txtName": "SINOP",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TGZ",
 	"geoLat": "16.5705778",
 	"geoLong": "-93.0300972",
 	"txtName": "TUXTLA",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SIN",
+	"geoLat": "42.022306",
+	"geoLong": "35.076806",
+	"txtName": "SINOP",
+	"codeType": "VOR"
 },
 {
 	"codeId": "EDR",
@@ -56743,17 +56589,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "WK",
-	"geoLat": "-37.92422861",
-	"geoLong": "176.91537583",
-	"txtName": "WHAKATANE",
-	"codeType": "DME"
-},
-{
 	"codeId": "GNL",
 	"geoLat": "31.58147667",
 	"geoLong": "-96.54908944",
 	"txtName": "GROESBECK",
+	"codeType": "DME"
+},
+{
+	"codeId": "WK",
+	"geoLat": "-37.92422861",
+	"geoLong": "176.91537583",
+	"txtName": "WHAKATANE",
 	"codeType": "DME"
 },
 {
@@ -56785,18 +56631,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "60.148694",
-	"geoLong": "12.998611",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "RNW",
 	"geoLat": "35.509655",
 	"geoLong": "-77.10662361",
 	"txtName": "CHOCOWINITY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "60.148694",
+	"geoLong": "12.998611",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "CNP",
@@ -56862,17 +56708,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BUB",
-	"geoLat": "50.9023306",
-	"geoLong": "4.5380861",
-	"txtName": "BRUSSELS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TOU",
 	"geoLat": "43.6808333",
 	"geoLong": "1.3098",
 	"txtName": "TOULOUSE",
+	"codeType": "VOR"
+},
+{
+	"codeId": "BUB",
+	"geoLat": "50.9023306",
+	"geoLong": "4.5380861",
+	"txtName": "BRUSSELS",
 	"codeType": "VOR"
 },
 {
@@ -57003,8 +56849,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "56.282694",
-	"geoLong": "12.870111",
+	"geoLat": "56.296528",
+	"geoLong": "12.849194",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -57044,17 +56890,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TLD",
-	"geoLat": "39.9694472",
-	"geoLong": "-4.337389",
-	"txtName": "TOLEDO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TFN",
 	"geoLat": "28.536833",
 	"geoLong": "-16.268778",
 	"txtName": "TENERIFE NORTE",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "TLD",
+	"geoLat": "39.9694472",
+	"geoLong": "-4.337389",
+	"txtName": "TOLEDO",
 	"codeType": "VOR/DME"
 },
 {
@@ -57122,8 +56968,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "SN",
-	"geoLat": "66.00389",
-	"geoLong": "57.36083",
+	"geoLat": "66.003972",
+	"geoLong": "57.360778",
 	"txtName": "USINSK",
 	"codeType": "DME"
 },
@@ -57310,13 +57156,6 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "PXT",
-	"geoLat": "38.28785639",
-	"geoLong": "-76.40023111",
-	"txtName": "PATUXENT",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MMA",
 	"geoLat": "31.319722",
 	"geoLong": "27.222333",
@@ -57436,18 +57275,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "DRK",
-	"geoLat": "34.70255222",
-	"geoLong": "-112.48034167",
-	"txtName": "DRAKE",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "SRS",
 	"geoLat": "36.495389",
 	"geoLong": "61.074139",
 	"txtName": "SARAKHS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DRK",
+	"geoLat": "34.70255222",
+	"geoLong": "-112.48034167",
+	"txtName": "DRAKE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "CRE",
@@ -57506,18 +57345,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "BKY",
-	"geoLat": "7.7472889",
-	"geoLong": "-5.0749417",
-	"txtName": "BOUAKE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MIT",
 	"geoLat": "34.77167",
 	"geoLong": "131.13806",
 	"txtName": "MISHIMA",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "BKY",
+	"geoLat": "7.7472889",
+	"geoLong": "-5.0749417",
+	"txtName": "BOUAKE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DHA",
@@ -57534,17 +57373,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CHX",
-	"geoLat": "46.8712056",
-	"geoLong": "1.7418722",
-	"txtName": "CHATEAUROUX",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LMN",
 	"geoLat": "23.64833",
 	"geoLong": "114.32667",
 	"txtName": "LONGMEN",
+	"codeType": "VOR"
+},
+{
+	"codeId": "CHX",
+	"geoLat": "46.8712056",
+	"geoLong": "1.7418722",
+	"txtName": "CHATEAUROUX",
 	"codeType": "VOR"
 },
 {
@@ -57639,13 +57478,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BLH",
-	"geoLat": "46.8830917",
-	"geoLong": "74.9838111",
-	"txtName": "BALKHASH",
-	"codeType": "VOR"
-},
-{
 	"codeId": "YQX",
 	"geoLat": "48.8997",
 	"geoLong": "-54.5348833",
@@ -57653,10 +57485,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "PJB",
-	"geoLat": "12.13166667",
-	"geoLong": "-68.24944444",
-	"txtName": "BONAIRE",
+	"codeId": "BLH",
+	"geoLat": "46.8830917",
+	"geoLong": "74.9838111",
+	"txtName": "BALKHASH",
 	"codeType": "VOR"
 },
 {
@@ -57667,11 +57499,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LP",
-	"geoLat": "13.151556",
-	"geoLong": "123.727944",
-	"txtName": "LEGAZPI",
-	"codeType": "VOR/DME"
+	"codeId": "PJB",
+	"geoLat": "12.13166667",
+	"geoLong": "-68.24944444",
+	"txtName": "BONAIRE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KG",
@@ -57679,6 +57511,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "74.554806",
 	"txtName": "KOGALYM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LP",
+	"geoLat": "13.151556",
+	"geoLong": "123.727944",
+	"txtName": "LEGAZPI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -57842,24 +57681,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BOZ",
-	"geoLat": "42.77",
-	"geoLong": "23.19111",
-	"txtName": "BOZHOURISHTE",
-	"codeType": "NDB"
+	"codeId": "SWB",
+	"geoLat": "31.97319444",
+	"geoLong": "-92.67708889",
+	"txtName": "SAWMILL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LJA",
 	"geoLat": "26.77333",
 	"geoLong": "100.27333",
 	"txtName": "LIJIANG",
-	"codeType": "VOR"
-},
-{
-	"codeId": "SWB",
-	"geoLat": "31.97319444",
-	"geoLong": "-92.67708889",
-	"txtName": "SAWMILL",
 	"codeType": "VOR"
 },
 {
@@ -57898,18 +57730,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ALG",
-	"geoLat": "40.628218028",
-	"geoLong": "8.243837083",
-	"txtName": "ALGHERO",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "TGI",
 	"geoLat": "-29.6015167",
 	"geoLong": "31.1298",
 	"txtName": "KING SHAKA",
 	"codeType": "DME"
+},
+{
+	"codeId": "ALG",
+	"geoLat": "40.628218028",
+	"geoLong": "8.243837083",
+	"txtName": "ALGHERO",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "TG",
@@ -57954,13 +57786,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "EJA",
-	"geoLat": "7.0286111",
-	"geoLong": "-73.8055556",
-	"txtName": "BARRANCABERMEJA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CEL",
 	"geoLat": "52.589594944",
 	"geoLong": "10.029460833",
@@ -57968,17 +57793,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "VCE",
-	"geoLat": "34.2815083",
-	"geoLong": "129.3370111",
-	"txtName": "TSUSHIMA",
-	"codeType": "VOR/DME"
+	"codeId": "EJA",
+	"geoLat": "7.0286111",
+	"geoLong": "-73.8055556",
+	"txtName": "BARRANCABERMEJA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CPT",
 	"geoLat": "51.4915722",
 	"geoLong": "-1.2196917",
 	"txtName": "COMPTON",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "VCE",
+	"geoLat": "34.2815083",
+	"geoLong": "129.3370111",
+	"txtName": "TSUSHIMA",
 	"codeType": "VOR/DME"
 },
 {
@@ -58038,18 +57870,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NUK",
-	"geoLat": "64.184027778",
-	"geoLong": "-51.687163889",
-	"txtName": "NUUK",
-	"codeType": "DME"
-},
-{
 	"codeId": "",
 	"geoLat": "53.490668361",
 	"geoLong": "9.74094825",
 	"txtName": "",
 	"codeType": "MKR"
+},
+{
+	"codeId": "NUK",
+	"geoLat": "64.184027778",
+	"geoLong": "-51.687163889",
+	"txtName": "NUUK",
+	"codeType": "DME"
 },
 {
 	"codeId": "CFB",
@@ -58087,17 +57919,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ULQ",
-	"geoLat": "4.0922222",
-	"geoLong": "-76.2233333",
-	"txtName": "TULUA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PNK",
 	"geoLat": "52.15361",
 	"geoLong": "26.13",
 	"txtName": "PINSK",
+	"codeType": "VOR"
+},
+{
+	"codeId": "ULQ",
+	"geoLat": "4.0922222",
+	"geoLong": "-76.2233333",
+	"txtName": "TULUA",
 	"codeType": "VOR"
 },
 {
@@ -58122,17 +57954,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ABQ",
-	"geoLat": "35.04379556",
-	"geoLong": "-106.81631194",
-	"txtName": "ALBUQUERQUE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HEK",
 	"geoLat": "50.16833",
 	"geoLong": "127.31",
 	"txtName": "HEIHE",
+	"codeType": "VOR"
+},
+{
+	"codeId": "ABQ",
+	"geoLat": "35.04379556",
+	"geoLong": "-106.81631194",
+	"txtName": "ALBUQUERQUE",
 	"codeType": "VOR"
 },
 {
@@ -58199,18 +58031,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SHK",
-	"geoLat": "22.49667",
-	"geoLong": "113.90333",
-	"txtName": "SHEKOU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "VS",
 	"geoLat": "50.3521333",
 	"geoLong": "3.3539194",
 	"txtName": "VS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SHK",
+	"geoLat": "22.49667",
+	"geoLong": "113.90333",
+	"txtName": "SHEKOU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KSR",
@@ -58234,18 +58066,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "MNO",
-	"geoLat": "71.205917",
-	"geoLong": "71.97925",
-	"txtName": "SABETTA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IWUW",
 	"geoLat": "52.457529722",
 	"geoLong": "9.441413333",
 	"txtName": "WUNSTORF",
 	"codeType": "DME"
+},
+{
+	"codeId": "MNO",
+	"geoLat": "71.205917",
+	"geoLong": "71.97925",
+	"txtName": "SABETTA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VIS",
@@ -58283,17 +58115,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "WYN",
-	"geoLat": "24.35",
-	"geoLong": "114.11167",
-	"txtName": "WENGYUAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PBC",
 	"geoLat": "19.1609194",
 	"geoLong": "-98.370175",
 	"txtName": "PUEBLA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "WYN",
+	"geoLat": "24.35",
+	"geoLong": "114.11167",
+	"txtName": "WENGYUAN",
 	"codeType": "VOR/DME"
 },
 {
@@ -58311,18 +58143,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SKD",
-	"geoLat": "39.7037361",
-	"geoLong": "66.9726611",
-	"txtName": "SAMARKAND",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HBT",
 	"geoLat": "55.31566639",
 	"geoLong": "-160.51839417",
 	"txtName": "BORLAND",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SKD",
+	"geoLat": "39.7037361",
+	"geoLong": "66.9726611",
+	"txtName": "SAMARKAND",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LB",
@@ -58339,13 +58171,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "53.907917",
-	"geoLong": "-8.838611",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "LS",
 	"geoLat": "5.06833",
 	"geoLong": "97.25306",
@@ -58353,11 +58178,25 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "",
+	"geoLat": "53.907917",
+	"geoLong": "-8.838611",
+	"txtName": "",
+	"codeType": "ILS_DME"
+},
+{
 	"codeId": "ZRT",
 	"geoLat": "22.7585278",
 	"geoLong": "-12.4615833",
 	"txtName": "ZOUERATE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "GED",
+	"geoLat": "50.411950694",
+	"geoLong": "9.249170111",
+	"txtName": "GEDERN",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "CUN",
@@ -58570,18 +58409,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ZIP",
-	"geoLat": "5.01806",
-	"geoLong": "-73.98667",
-	"txtName": "ZIPAQUIRA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LTO",
 	"geoLat": "25.9806556",
 	"geoLong": "-111.3495278",
 	"txtName": "LORETO",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ZIP",
+	"geoLat": "5.01806",
+	"geoLong": "-73.98667",
+	"txtName": "ZIPAQUIRA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FTM",
@@ -58717,18 +58556,18 @@ export const navaids: EADdata[] = [
 	"codeType": "LOC"
 },
 {
-	"codeId": "",
-	"geoLat": "45.715",
-	"geoLong": "25.530778",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "MAR",
 	"geoLat": "36.6847639",
 	"geoLong": "2.7821611",
 	"txtName": "ALGER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "45.715",
+	"geoLong": "25.530778",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "VMA",
@@ -58771,13 +58610,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-160.37566722",
 	"txtName": "TOGIAK",
 	"codeType": "NDB"
-},
-{
-	"codeId": "PXT",
-	"geoLat": "38.28785639",
-	"geoLong": "-76.40023111",
-	"txtName": "PATUXENT",
-	"codeType": "VORTAC"
 },
 {
 	"codeId": "KTZ",
@@ -58843,18 +58675,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HDS",
-	"geoLat": "39.49",
-	"geoLong": "109.86167",
-	"txtName": "ORDOS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "OX",
 	"geoLat": "51.8334111",
 	"geoLong": "-1.3234583",
 	"txtName": "OXFORD",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HDS",
+	"geoLat": "39.49",
+	"geoLong": "109.86167",
+	"txtName": "ORDOS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "OH",
@@ -58892,13 +58724,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "HGE",
-	"geoLat": "34.433775",
-	"geoLong": "132.9239694",
-	"txtName": "HONGO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BDA",
 	"geoLat": "32.3643861",
 	"geoLong": "-64.6895722",
@@ -58911,6 +58736,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "2.7595",
 	"txtName": "PALMA DE MALLORCA",
 	"codeType": "DME"
+},
+{
+	"codeId": "HGE",
+	"geoLat": "34.433775",
+	"geoLong": "132.9239694",
+	"txtName": "HONGO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IGN",
@@ -58969,18 +58801,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "DAW",
-	"geoLat": "24.448944",
-	"geoLong": "44.119194",
-	"txtName": "AL DAWADMI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KTH",
 	"geoLat": "36.2768722",
 	"geoLong": "23.0168444",
 	"txtName": "KITHIRA",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "DAW",
+	"geoLat": "24.448944",
+	"geoLong": "44.119194",
+	"txtName": "AL DAWADMI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SAM",
@@ -59102,13 +58934,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "PTN",
-	"geoLat": "16.8086889",
-	"geoLong": "94.76955",
-	"txtName": "PATHEIN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SH",
 	"geoLat": "52.2434111",
 	"geoLong": "-2.8798417",
@@ -59116,11 +58941,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "65.2925",
-	"geoLong": "-14.391139",
-	"txtName": "",
-	"codeType": "ILS_DME"
+	"codeId": "PTN",
+	"geoLat": "16.8086889",
+	"geoLong": "94.76955",
+	"txtName": "PATHEIN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LC",
@@ -59128,6 +58953,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "30.15583",
 	"txtName": "KYIV/ANTONOV",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "",
+	"geoLat": "65.2925",
+	"geoLong": "-14.391139",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "MSP",
@@ -59172,6 +59004,13 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
+	"codeId": "DZM",
+	"geoLat": "33.88417",
+	"geoLong": "-91.53139",
+	"txtName": "DUMAS",
+	"codeType": "NDB"
+},
+{
 	"codeId": "TDF",
 	"geoLat": "27.7100722",
 	"geoLong": "-8.1308889",
@@ -59184,13 +59023,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "14.2303417",
 	"txtName": "PRAHA/RUZYNE DME 06",
 	"codeType": "DME"
-},
-{
-	"codeId": "DZM",
-	"geoLat": "33.88417",
-	"geoLong": "-91.53139",
-	"txtName": "DUMAS",
-	"codeType": "NDB"
 },
 {
 	"codeId": "ATL",
@@ -59256,13 +59088,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "SDP",
-	"geoLat": "25.7644333",
-	"geoLong": "88.9094306",
-	"txtName": "SAIDPUR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SU",
 	"geoLat": "38.63908028",
 	"geoLong": "-90.76695833",
@@ -59270,11 +59095,25 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "SDP",
+	"geoLat": "25.7644333",
+	"geoLong": "88.9094306",
+	"txtName": "SAIDPUR",
+	"codeType": "VOR"
+},
+{
 	"codeId": "SAT",
-	"geoLat": "37.9166667",
-	"geoLong": "23.9141667",
+	"geoLat": "37.9168389",
+	"geoLong": "23.9144389",
 	"txtName": "ATHINAI",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SMS",
+	"geoLat": "33.99079833",
+	"geoLong": "-80.36002528",
+	"txtName": "SUMTER",
+	"codeType": "NDB"
 },
 {
 	"codeId": "ALA",
@@ -59291,13 +59130,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SMS",
-	"geoLat": "33.99079833",
-	"geoLong": "-80.36002528",
-	"txtName": "SUMTER",
-	"codeType": "NDB"
-},
-{
 	"codeId": "IUM",
 	"geoLat": "58.30722222",
 	"geoLong": "26.66361111",
@@ -59312,18 +59144,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DMD",
-	"geoLat": "55.388306",
-	"geoLong": "37.911556",
-	"txtName": "MOSCOW/DOMODEDOVO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TZK",
 	"geoLat": "38.766917",
 	"geoLong": "34.542944",
 	"txtName": "TUZKOY",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "DMD",
+	"geoLat": "55.388306",
+	"geoLong": "37.911556",
+	"txtName": "MOSCOW/DOMODEDOVO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CCC",
@@ -59410,18 +59242,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "57.647222",
-	"geoLong": "18.335056",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "BWS",
 	"geoLat": "32.82126111",
 	"geoLong": "-106.01315278",
 	"txtName": "BOLES",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "57.647222",
+	"geoLong": "18.335056",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SG",
@@ -59459,17 +59291,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "ROA",
-	"geoLat": "37.34346278",
-	"geoLong": "-80.07039722",
-	"txtName": "ROANOKE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KHN",
 	"geoLat": "28.43",
 	"geoLong": "115.92333",
 	"txtName": "XIANGTANG",
+	"codeType": "VOR"
+},
+{
+	"codeId": "ROA",
+	"geoLat": "37.34346278",
+	"geoLong": "-80.07039722",
+	"txtName": "ROANOKE",
 	"codeType": "VOR"
 },
 {
@@ -59543,17 +59375,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GOM",
-	"geoLat": "-1.6786",
-	"geoLong": "29.2405167",
-	"txtName": "GOMA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PAR",
 	"geoLat": "36.3995111",
 	"geoLong": "28.0648417",
 	"txtName": "RODOS",
+	"codeType": "VOR"
+},
+{
+	"codeId": "GOM",
+	"geoLat": "-1.6786",
+	"geoLong": "29.2405167",
+	"txtName": "GOMA",
 	"codeType": "VOR"
 },
 {
@@ -59725,18 +59557,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "",
-	"geoLat": "53.2178806",
-	"geoLong": "5.7346917",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "DO",
 	"geoLat": "55.386778",
 	"geoLong": "37.913472",
 	"txtName": "MOSCOW/DOMODEDOVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "53.2178806",
+	"geoLong": "5.7346917",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "LAA",
@@ -59760,18 +59592,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AV",
-	"geoLat": "-38.048889",
-	"geoLong": "144.458944",
-	"txtName": "AVALON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "51.414731667",
 	"geoLong": "12.271282222",
 	"txtName": "MM EDDP RWY 26L NEU",
 	"codeType": "MKR"
+},
+{
+	"codeId": "AV",
+	"geoLat": "-38.048889",
+	"geoLong": "144.458944",
+	"txtName": "AVALON",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SLG",
@@ -59830,17 +59662,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "VJK",
-	"geoLat": "-15.865",
-	"geoLong": "-47.900194",
-	"txtName": "KUBITSCHEK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PVD",
 	"geoLat": "41.7243425",
 	"geoLong": "-71.42964111",
 	"txtName": "PROVIDENCE",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "VJK",
+	"geoLat": "-15.865",
+	"geoLong": "-47.900194",
+	"txtName": "KUBITSCHEK",
 	"codeType": "VOR/DME"
 },
 {
@@ -59879,18 +59711,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BAP",
-	"geoLat": "41.135646528",
-	"geoLong": "16.744344389",
-	"txtName": "BARI/PALESE",
-	"codeType": "DME"
-},
-{
 	"codeId": "LK",
 	"geoLat": "19.6904556",
 	"geoLong": "97.213275",
 	"txtName": "LOIKAW",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BAP",
+	"geoLat": "41.135646528",
+	"geoLong": "16.744344389",
+	"txtName": "BARI/PALESE",
+	"codeType": "DME"
 },
 {
 	"codeId": "PVU",
@@ -59956,13 +59788,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TTH",
-	"geoLat": "39.48894167",
-	"geoLong": "-87.24901306",
-	"txtName": "TERRE HAUTE",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "GR",
 	"geoLat": "34.9125",
 	"geoLong": "-78.93967",
@@ -59970,17 +59795,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KLS",
-	"geoLat": "45.4661833",
-	"geoLong": "18.7922667",
-	"txtName": "OSIJEK",
-	"codeType": "DME"
+	"codeId": "TTH",
+	"geoLat": "39.48894167",
+	"geoLong": "-87.24901306",
+	"txtName": "TERRE HAUTE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "IJX",
 	"geoLat": "39.77652111",
 	"geoLong": "-90.23860528",
 	"txtName": "JACKSONVILLE",
+	"codeType": "DME"
+},
+{
+	"codeId": "KLS",
+	"geoLat": "45.4661833",
+	"geoLong": "18.7922667",
+	"txtName": "OSIJEK",
 	"codeType": "DME"
 },
 {
@@ -60089,18 +59921,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LKC",
-	"geoLat": "22.3789222",
-	"geoLong": "113.88375",
-	"txtName": "LUNG KWU CHAU",
+	"codeId": "MAK",
+	"geoLat": "31.61275",
+	"geoLong": "-8.103028",
+	"txtName": "MARRAKECH / MENARA",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "NJT",
-	"geoLat": "34.347775",
-	"geoLong": "139.2717861",
-	"txtName": "NIIJIMA",
-	"codeType": "TACAN"
 },
 {
 	"codeId": "MEL",
@@ -60110,18 +59935,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "MAK",
-	"geoLat": "31.61275",
-	"geoLong": "-8.103028",
-	"txtName": "MARRAKECH / MENARA",
-	"codeType": "VOR/DME"
-},
-{
-	"codeId": "BPT",
-	"geoLat": "29.94605417",
-	"geoLong": "-94.01622083",
-	"txtName": "BEAUMONT",
-	"codeType": "VOR"
+	"codeId": "AT",
+	"geoLat": "10.8293083",
+	"geoLong": "72.1788139",
+	"txtName": "AGATTI",
+	"codeType": "NDB"
 },
 {
 	"codeId": "IGO",
@@ -60129,13 +59947,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "24.17716666666667",
 	"txtName": "AMARI",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "AT",
-	"geoLat": "10.8293083",
-	"geoLong": "72.1788139",
-	"txtName": "AGATTI",
-	"codeType": "NDB"
 },
 {
 	"codeId": "TJ",
@@ -60152,18 +59963,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "38.766667",
-	"geoLong": "35.475556",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "FO",
 	"geoLat": "54.6752639",
 	"geoLong": "-101.6692528",
 	"txtName": "FLIN FLON",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "38.766667",
+	"geoLong": "35.475556",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "CIJ",
@@ -60176,7 +59987,7 @@ export const navaids: EADdata[] = [
 	"codeId": "HSR",
 	"geoLat": "22.36889917",
 	"geoLong": "71.03111111",
-	"txtName": "HIRASAR",
+	"txtName": "RAJKOT",
 	"codeType": "VOR/DME"
 },
 {
@@ -60306,18 +60117,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "PRX",
-	"geoLat": "33.54237861",
-	"geoLong": "-95.44829028",
-	"txtName": "PARIS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "48.29875",
 	"geoLong": "25.949667",
 	"txtName": "UKLN OM 15",
 	"codeType": "MKR"
+},
+{
+	"codeId": "PRX",
+	"geoLat": "33.54237861",
+	"geoLong": "-95.44829028",
+	"txtName": "PARIS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "DA",
@@ -60339,13 +60150,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-4.84075",
 	"txtName": "VALLADOLID",
 	"codeType": "DME"
-},
-{
-	"codeId": "YSJ",
-	"geoLat": "45.40722",
-	"geoLong": "-65.87083",
-	"txtName": "SAINT JOHN",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KT",
@@ -60446,18 +60250,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "EVG",
-	"geoLat": "8.622",
-	"geoLong": "-71.6781111",
-	"txtName": "EL VIGIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "VTK",
 	"geoLat": "1.4153778",
 	"geoLong": "104.0222694",
 	"txtName": "TEKONG",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "EVG",
+	"geoLat": "8.622",
+	"geoLong": "-71.6781111",
+	"txtName": "EL VIGIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KLK",
@@ -60593,18 +60397,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "DOG",
-	"geoLat": "19.1825694",
-	"geoLong": "30.4272833",
-	"txtName": "DONGOLA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "QR",
 	"geoLat": "50.369532917",
 	"geoLong": "-104.57278389",
 	"txtName": "REGINA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DOG",
+	"geoLat": "19.1825694",
+	"geoLong": "30.4272833",
+	"txtName": "DONGOLA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "YEK",
@@ -60656,6 +60460,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "FP",
+	"geoLat": "28.491889",
+	"geoLong": "-16.369333",
+	"txtName": "TENERIFE NORTE",
+	"codeType": "NDB"
+},
+{
 	"codeId": "SHZ",
 	"geoLat": "29.6",
 	"geoLong": "120.81667",
@@ -60668,13 +60479,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-1.650306",
 	"txtName": "",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "FP",
-	"geoLat": "28.491889",
-	"geoLong": "-16.369333",
-	"txtName": "TENERIFE NORTE",
-	"codeType": "NDB"
 },
 {
 	"codeId": "",
@@ -60712,18 +60516,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "PMA",
-	"geoLat": "-3.715111",
-	"geoLong": "128.087528",
-	"txtName": "AMBON/PATTIMURA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SAU",
 	"geoLat": "44.6768139",
 	"geoLong": "-0.1529278",
 	"txtName": "SAUVETERRE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "PMA",
+	"geoLat": "-3.715111",
+	"geoLong": "128.087528",
+	"txtName": "AMBON/PATTIMURA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -60775,18 +60579,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ROP",
-	"geoLat": "32.982528",
-	"geoLong": "35.572778",
-	"txtName": "ROSH-PINA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "XY",
 	"geoLat": "29.9",
 	"geoLong": "23.26667",
 	"txtName": "BOOSTER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ROP",
+	"geoLat": "32.982528",
+	"geoLong": "35.572778",
+	"txtName": "ROSH-PINA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SJU",
@@ -60859,18 +60663,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "RGI",
-	"geoLat": "9.9631556",
-	"geoLong": "105.1521694",
-	"txtName": "RACH GIA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "XAC",
 	"geoLat": "34.7122528",
 	"geoLong": "139.4140167",
 	"txtName": "OSHIMA",
 	"codeType": "VOR"
+},
+{
+	"codeId": "RGI",
+	"geoLat": "9.9631556",
+	"geoLong": "105.1521694",
+	"txtName": "RACH GIA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FRT",
@@ -61076,17 +60880,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LCE",
-	"geoLat": "7.8188889",
-	"geoLong": "-76.7222222",
-	"txtName": "CAREPA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "AAR",
 	"geoLat": "31.7280222",
 	"geoLong": "74.7859111",
 	"txtName": "AMRITSAR",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "LCE",
+	"geoLat": "7.8188889",
+	"geoLong": "-76.7222222",
+	"txtName": "CAREPA",
 	"codeType": "VOR/DME"
 },
 {
@@ -61146,13 +60950,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KY",
-	"geoLat": "52.71444",
-	"geoLong": "35.74472",
-	"txtName": "KROMY",
-	"codeType": "DME"
-},
-{
 	"codeId": "FZ",
 	"geoLat": "37.45167",
 	"geoLong": "121.17833",
@@ -61165,6 +60962,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-110.74556",
 	"txtName": "CONSORT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KY",
+	"geoLat": "52.71444",
+	"geoLong": "35.74472",
+	"txtName": "KROMY",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -61195,18 +60999,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "DPR",
-	"geoLat": "45.07817528",
-	"geoLong": "-101.71507139",
-	"txtName": "DUPREE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ZKN",
 	"geoLat": "47.680194",
 	"geoLong": "67.684583",
 	"txtName": "ZHEZKAZGAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DPR",
+	"geoLat": "45.07817528",
+	"geoLong": "-101.71507139",
+	"txtName": "DUPREE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NI",
@@ -61230,18 +61034,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "CTG",
-	"geoLat": "10.2083333",
-	"geoLong": "-75.5061111",
-	"txtName": "CARTAGENA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KIT",
 	"geoLat": "67.6230722",
 	"geoLong": "24.8974667",
 	"txtName": "KITTILA (KITTILA)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CTG",
+	"geoLat": "10.2083333",
+	"geoLong": "-75.5061111",
+	"txtName": "CARTAGENA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CEF",
@@ -61615,13 +61419,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KNG",
-	"geoLat": "32.1691722",
-	"geoLong": "76.2630917",
-	"txtName": "KANGRA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "VGA",
 	"geoLat": "46.378444",
 	"geoLong": "96.215722",
@@ -61633,6 +61430,13 @@ export const navaids: EADdata[] = [
 	"geoLat": "-34.225194",
 	"geoLong": "142.077278",
 	"txtName": "MILDURA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "KNG",
+	"geoLat": "32.1691722",
+	"geoLong": "76.2630917",
+	"txtName": "KANGRA",
 	"codeType": "VOR/DME"
 },
 {
@@ -61937,18 +61741,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MYG",
-	"geoLat": "31.43333",
-	"geoLong": "104.73333",
-	"txtName": "MIANYANG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "VTN",
 	"geoLat": "43.7175",
 	"geoLong": "20.810333",
 	"txtName": "KRALJEVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MYG",
+	"geoLat": "31.43333",
+	"geoLong": "104.73333",
+	"txtName": "MIANYANG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "GJ",
@@ -61986,11 +61790,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NTS",
-	"geoLat": "47.1608556",
-	"geoLong": "-1.6129611",
-	"txtName": "NANTES",
-	"codeType": "VOR"
+	"codeId": "PYX",
+	"geoLat": "36.41234361",
+	"geoLong": "-100.74774417",
+	"txtName": "PERRYTON",
+	"codeType": "NDB"
 },
 {
 	"codeId": "ISP",
@@ -62000,11 +61804,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PYX",
-	"geoLat": "36.41234361",
-	"geoLong": "-100.74774417",
-	"txtName": "PERRYTON",
-	"codeType": "NDB"
+	"codeId": "NTS",
+	"geoLat": "47.1608556",
+	"geoLong": "-1.6129611",
+	"txtName": "NANTES",
+	"codeType": "VOR"
 },
 {
 	"codeId": "JZ",
@@ -62021,18 +61825,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LON",
-	"geoLat": "22.35667",
-	"geoLong": "106.86833",
-	"txtName": "LONGZHOU",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "41.650556",
 	"geoLong": "44.974556",
 	"txtName": "MM 31L",
 	"codeType": "MKR"
+},
+{
+	"codeId": "LON",
+	"geoLat": "22.35667",
+	"geoLong": "106.86833",
+	"txtName": "LONGZHOU",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ISVS",
@@ -62147,18 +61951,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "",
-	"geoLat": "49.199454528",
-	"geoLong": "-123.150620056",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "SRT",
 	"geoLat": "9.1317",
 	"geoLong": "99.135",
 	"txtName": "SURAT THANI",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "",
+	"geoLat": "49.199454528",
+	"geoLong": "-123.150620056",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SIE",
@@ -62189,17 +61993,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "HFD",
-	"geoLat": "41.64110472",
-	"geoLong": "-72.54741806",
-	"txtName": "HARTFORD",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CAV",
 	"geoLat": "48.7810861",
 	"geoLong": "4.1469306",
 	"txtName": "",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "HFD",
+	"geoLat": "41.64110472",
+	"geoLong": "-72.54741806",
+	"txtName": "HARTFORD",
 	"codeType": "VOR/DME"
 },
 {
@@ -62553,18 +62357,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TME",
-	"geoLat": "6.4530556",
-	"geoLong": "-71.7538889",
-	"txtName": "TAME",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RH",
 	"geoLat": "45.62810139",
 	"geoLong": "-89.61886639",
 	"txtName": "ARSHA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TME",
+	"geoLat": "6.4530556",
+	"geoLong": "-71.7538889",
+	"txtName": "TAME",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -62642,13 +62446,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-108.56175139",
 	"txtName": "CORTEZ",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "",
-	"geoLat": "53.873948278",
-	"geoLong": "14.18199425",
-	"txtName": "HERINGSDORF MM RW28",
-	"codeType": "MKR"
 },
 {
 	"codeId": "ZLO",
@@ -62847,18 +62644,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LTJ",
-	"geoLat": "45.71358333",
-	"geoLong": "-121.10083333",
-	"txtName": "KLICKITAT",
-	"codeType": "VOR"
-},
-{
 	"codeId": "UZ",
 	"geoLat": "43.858139",
 	"geoLong": "19.88825",
 	"txtName": "UZICE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LTJ",
+	"geoLat": "45.71358333",
+	"geoLong": "-121.10083333",
+	"txtName": "KLICKITAT",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ILW",
@@ -62882,18 +62679,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NM",
-	"geoLat": "16.6238333",
-	"geoLong": "-7.297",
-	"txtName": "NEMA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TRE",
 	"geoLat": "35.5273",
 	"geoLong": "134.1648861",
 	"txtName": "TOTTORI",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "NM",
+	"geoLat": "16.6238333",
+	"geoLong": "-7.297",
+	"txtName": "NEMA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SQA",
@@ -62917,18 +62714,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LWT",
-	"geoLat": "47.05297",
-	"geoLong": "-109.60616806",
-	"txtName": "LEWISTOWN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TCL",
 	"geoLat": "33.25861",
 	"geoLong": "-87.53667",
 	"txtName": "TUSCALOOSA",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "LWT",
+	"geoLat": "47.05297",
+	"geoLong": "-109.60616806",
+	"txtName": "LEWISTOWN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BU",
@@ -63106,18 +62903,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IOT",
-	"geoLat": "53.321611",
-	"geoLong": "69.589444",
-	"txtName": "KOKSHETAU",
-	"codeType": "DME"
-},
-{
 	"codeId": "HD",
 	"geoLat": "40.2083",
 	"geoLong": "69.6367",
 	"txtName": "KHUJAND",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IOT",
+	"geoLat": "53.321611",
+	"geoLong": "69.589444",
+	"txtName": "KOKSHETAU",
+	"codeType": "DME"
 },
 {
 	"codeId": "IMB",
@@ -63155,18 +62952,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "QBL",
-	"geoLat": "40.832389",
-	"geoLong": "47.718278",
-	"txtName": "GABALA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RAN",
 	"geoLat": "-14.950417",
 	"geoLong": "-147.673611",
 	"txtName": "RANGIROA",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "QBL",
+	"geoLat": "40.832389",
+	"geoLong": "47.718278",
+	"txtName": "GABALA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ZU",
@@ -63225,18 +63022,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PPR",
-	"geoLat": "16.2651944",
-	"geoLong": "-61.5401389",
-	"txtName": "POINTE A PITRE LE RAIZET",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "STO",
 	"geoLat": "48.417137222",
 	"geoLong": "16.018593861",
 	"txtName": "STOCKERAU",
 	"codeType": "VOR"
+},
+{
+	"codeId": "PPR",
+	"geoLat": "16.2651944",
+	"geoLong": "-61.5401389",
+	"txtName": "POINTE A PITRE LE RAIZET",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ST",
@@ -63253,18 +63050,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "IMD",
-	"geoLat": "55.74139",
-	"geoLong": "51.39361",
-	"txtName": "MAMADYSH",
-	"codeType": "DME"
-},
-{
 	"codeId": "CL",
 	"geoLat": "30.49377222",
 	"geoLong": "-96.337795",
 	"txtName": "ROWDY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IMD",
+	"geoLat": "55.74139",
+	"geoLong": "51.39361",
+	"txtName": "MAMADYSH",
+	"codeType": "DME"
 },
 {
 	"codeId": "INK",
@@ -63540,18 +63337,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "JTG",
-	"geoLat": "30.87167",
-	"geoLong": "104.39",
-	"txtName": "JINTANG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LHO",
 	"geoLat": "41.7928975",
 	"geoLong": "-112.00977083",
 	"txtName": "BRIGHAM CITY",
 	"codeType": "VOR"
+},
+{
+	"codeId": "JTG",
+	"geoLat": "30.87167",
+	"geoLong": "104.39",
+	"txtName": "JINTANG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PTP",
@@ -63582,18 +63379,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "VAB",
-	"geoLat": "38.947111",
-	"geoLong": "-1.859306",
-	"txtName": "ALBACETE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "WEJ",
 	"geoLat": "26.179333",
 	"geoLong": "36.488111",
 	"txtName": "WEJH",
 	"codeType": "VOR"
+},
+{
+	"codeId": "VAB",
+	"geoLat": "38.947111",
+	"geoLong": "-1.859306",
+	"txtName": "ALBACETE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MKS",
@@ -63639,15 +63436,15 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "-13.829825",
-	"geoLong": "-171.9904639",
+	"geoLat": "48.339627139",
+	"geoLong": "11.737518",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
 {
 	"codeId": "",
-	"geoLat": "48.339627139",
-	"geoLong": "11.737518",
+	"geoLat": "-13.829825",
+	"geoLong": "-171.9904639",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -63708,13 +63505,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "AYD",
-	"geoLat": "26.74662806",
-	"geoLong": "82.17267694",
-	"txtName": "AYODHYA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HLM",
 	"geoLat": "-6.271944",
 	"geoLong": "106.886972",
@@ -63722,11 +63512,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LIH",
-	"geoLat": "21.96527139",
-	"geoLong": "-159.33809972",
-	"txtName": "LIHUE",
-	"codeType": "VORTAC"
+	"codeId": "AYD",
+	"geoLat": "26.74662806",
+	"geoLong": "82.17267694",
+	"txtName": "AYODHYA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TA",
@@ -63734,6 +63524,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "90.3421028",
 	"txtName": "TURA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LIH",
+	"geoLat": "21.96527139",
+	"geoLong": "-159.33809972",
+	"txtName": "LIHUE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "GS",
@@ -63883,18 +63680,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "STV",
-	"geoLat": "30.20675944",
-	"geoLong": "-98.70575528",
-	"txtName": "STONEWALL",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "SBT",
 	"geoLat": "22.712472",
 	"geoLong": "53.279472",
 	"txtName": "SHABITAH",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "STV",
+	"geoLat": "30.20675944",
+	"geoLong": "-98.70575528",
+	"txtName": "STONEWALL",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "SRI",
@@ -63946,13 +63743,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LB",
-	"geoLat": "41.06832972",
-	"geoLong": "-100.57243139",
-	"txtName": "PANBE",
-	"codeType": "NDB"
-},
-{
 	"codeId": "TDF",
 	"geoLat": "27.7100722",
 	"geoLong": "-8.1308889",
@@ -63981,18 +63771,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BRT",
-	"geoLat": "56.372083",
-	"geoLong": "101.685806",
-	"txtName": "BRATSK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KT",
 	"geoLat": "55.020917",
 	"geoLong": "82.741194",
 	"txtName": "NOVOSIBIRSK/TOLMACHEVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BRT",
+	"geoLat": "56.372083",
+	"geoLong": "101.685806",
+	"txtName": "BRATSK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SPT",
@@ -64107,18 +63897,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "JDP",
-	"geoLat": "26.2495056",
-	"geoLong": "73.0432583",
-	"txtName": "JODHPUR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MA",
 	"geoLat": "44.23707194",
 	"geoLong": "-85.54734861",
 	"txtName": "WEXOR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "JDP",
+	"geoLat": "26.2495056",
+	"geoLong": "73.0432583",
+	"txtName": "JODHPUR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ZUE",
@@ -64331,13 +64121,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BZ",
-	"geoLat": "43.4705278",
-	"geoLong": "-1.4036917",
-	"txtName": "BIARRITZ PAYS BASQUE",
-	"codeType": "NDB"
-},
-{
 	"codeId": "KR",
 	"geoLat": "54.914528",
 	"geoLong": "20.687111",
@@ -64506,18 +64289,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "YNN",
-	"geoLat": "39.7000333",
-	"geoLong": "20.8213167",
-	"txtName": "IOANNINA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "FOE",
 	"geoLat": "38.94737028",
 	"geoLong": "-95.66117917",
 	"txtName": "FORBES",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "YNN",
+	"geoLat": "39.7000333",
+	"geoLong": "20.8213167",
+	"txtName": "IOANNINA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NWA",
@@ -64681,18 +64464,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PMA",
-	"geoLat": "-3.715111",
-	"geoLong": "128.087528",
-	"txtName": "AMBON/PATTIMURA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LIB",
 	"geoLat": "3.6333333",
 	"geoLong": "18.6333333",
 	"txtName": "LIBENGE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PMA",
+	"geoLat": "-3.715111",
+	"geoLong": "128.087528",
+	"txtName": "AMBON/PATTIMURA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BIS",
@@ -64863,18 +64646,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "MSS",
-	"geoLat": "44.91442167",
-	"geoLong": "-74.72271806",
-	"txtName": "MASSENA",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "AB",
 	"geoLat": "53.701417",
 	"geoLong": "91.355194",
 	"txtName": "ABAKAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MSS",
+	"geoLat": "44.91442167",
+	"geoLong": "-74.72271806",
+	"txtName": "MASSENA",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "SAC",
@@ -64898,18 +64681,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "UCL",
-	"geoLat": "21.6050194",
-	"geoLong": "-81.5326972",
-	"txtName": "CAYO LARGO DEL SUR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "AL",
 	"geoLat": "42.81733",
 	"geoLong": "-73.81067",
 	"txtName": "HAWKY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "UCL",
+	"geoLat": "21.6050194",
+	"geoLong": "-81.5326972",
+	"txtName": "CAYO LARGO DEL SUR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HL",
@@ -64933,18 +64716,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "OSW",
-	"geoLat": "37.15751111",
-	"geoLong": "-95.20363333",
-	"txtName": "OSWEGO",
-	"codeType": "DME"
-},
-{
 	"codeId": "YJI",
 	"geoLat": "67.562129306",
 	"geoLong": "-64.018414889",
 	"txtName": "BROUGHTON (QIKIQTARJUAQ)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OSW",
+	"geoLat": "37.15751111",
+	"geoLong": "-95.20363333",
+	"txtName": "OSWEGO",
+	"codeType": "DME"
 },
 {
 	"codeId": "AYE",
@@ -65031,18 +64814,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "KUL",
-	"geoLat": "31.6846056",
-	"geoLong": "77.2133889",
-	"txtName": "BHUNTAR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "36.942444",
 	"geoLong": "37.504806",
 	"txtName": "",
 	"codeType": "MKR"
+},
+{
+	"codeId": "KUL",
+	"geoLat": "31.6846056",
+	"geoLong": "77.2133889",
+	"txtName": "BHUNTAR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "F",
@@ -65052,18 +64835,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
-	"codeId": "PVH",
-	"geoLat": "-8.714028",
-	"geoLong": "-63.903472",
-	"txtName": "PORTO VELHO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "VMS",
 	"geoLat": "-26.51278",
 	"geoLong": "31.32333",
 	"txtName": "MATSAPHA",
 	"codeType": "DME"
+},
+{
+	"codeId": "PVH",
+	"geoLat": "-8.714028",
+	"geoLong": "-63.903472",
+	"txtName": "PORTO VELHO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BIA",
@@ -65108,18 +64891,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MLF",
-	"geoLat": "38.36035556",
-	"geoLong": "-113.01323278",
-	"txtName": "MILFORD",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "LRD",
 	"geoLat": "27.47873722",
 	"geoLong": "-99.41767889",
 	"txtName": "LAREDO",
 	"codeType": "VOR"
+},
+{
+	"codeId": "MLF",
+	"geoLat": "38.36035556",
+	"geoLong": "-113.01323278",
+	"txtName": "MILFORD",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "CUC",
@@ -65129,18 +64912,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "RK",
-	"geoLat": "51.710472",
-	"geoLong": "46.184806",
-	"txtName": "SARATOV/GAGARIN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LTP",
 	"geoLat": "45.4889806",
 	"geoLong": "5.4390472",
 	"txtName": "TOUR DU PIN",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "RK",
+	"geoLat": "51.710472",
+	"geoLong": "46.184806",
+	"txtName": "SARATOV/GAGARIN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VZ",
@@ -65164,13 +64947,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "53.875509167",
-	"geoLong": "14.163290278",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "N",
 	"geoLat": "25.9567",
 	"geoLong": "119.675",
@@ -65185,18 +64961,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BIL",
-	"geoLat": "55.7413167",
-	"geoLong": "9.1391194",
-	"txtName": "BILLUND",
-	"codeType": "DME"
-},
-{
 	"codeId": "GUY",
 	"geoLat": "36.70536611",
 	"geoLong": "-101.50509528",
 	"txtName": "GUYMON",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BIL",
+	"geoLat": "55.7413167",
+	"geoLong": "9.1391194",
+	"txtName": "BILLUND",
+	"codeType": "DME"
 },
 {
 	"codeId": "PG",
@@ -65395,6 +65171,13 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
+	"codeId": "CML",
+	"geoLat": "52.45375",
+	"geoLong": "-7.480056",
+	"txtName": "CLONMEL",
+	"codeType": "NDB"
+},
+{
 	"codeId": "IJS",
 	"geoLat": "43.662102139",
 	"geoLong": "-79.61955167",
@@ -65402,10 +65185,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "CML",
-	"geoLat": "52.45375",
-	"geoLong": "-7.480056",
-	"txtName": "CLONMEL",
+	"codeId": "LS",
+	"geoLat": "43.365333",
+	"geoLong": "132.071417",
+	"txtName": "VLADIVOSTOK/KNEVICHI",
 	"codeType": "NDB"
 },
 {
@@ -65421,13 +65204,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-75.2336111",
 	"txtName": "TRES ESQUINAS",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "LS",
-	"geoLat": "43.365333",
-	"geoLong": "132.071417",
-	"txtName": "VLADIVOSTOK/KNEVICHI",
-	"codeType": "NDB"
 },
 {
 	"codeId": "FGT",
@@ -65612,18 +65388,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KHR",
-	"geoLat": "25.6146111",
-	"geoLong": "87.5553333",
-	"txtName": "KATIHAR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TDN",
 	"geoLat": "51.553802778",
 	"geoLong": "21.894461111",
 	"txtName": "DEBLIN",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "KHR",
+	"geoLat": "25.6146111",
+	"geoLong": "87.5553333",
+	"txtName": "KATIHAR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SZE",
@@ -65725,9 +65501,9 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "CYR",
-	"geoLat": "4.81361",
-	"geoLong": "-52.36833",
-	"txtName": "",
+	"geoLat": "4.8136389",
+	"geoLong": "-52.3683889",
+	"txtName": "CAYENNE FELIX EBOUE",
 	"codeType": "VOR/DME"
 },
 {
@@ -65745,18 +65521,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TRK",
-	"geoLat": "3.325611",
-	"geoLong": "117.561639",
-	"txtName": "TARAKAN/JUWATA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GRV",
 	"geoLat": "-34.00735",
 	"geoLong": "22.3759611",
 	"txtName": "GEORGE AIRPORT",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "TRK",
+	"geoLat": "3.325611",
+	"geoLong": "117.561639",
+	"txtName": "TARAKAN/JUWATA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "OKC",
@@ -65794,18 +65570,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CHG",
-	"geoLat": "41.53667",
-	"geoLong": "120.43333",
-	"txtName": "CHAOYANG",
-	"codeType": "VOR"
-},
-{
-	"codeId": "ABK",
-	"geoLat": "53.744639",
-	"geoLong": "91.385528",
-	"txtName": "ABAKAN",
-	"codeType": "DME"
+	"codeId": "NV",
+	"geoLat": "64.560139",
+	"geoLong": "17.032306",
+	"txtName": "VILHELMINA",
+	"codeType": "NDB"
 },
 {
 	"codeId": "BRG",
@@ -65815,17 +65584,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "NV",
-	"geoLat": "64.560139",
-	"geoLong": "17.032306",
-	"txtName": "VILHELMINA",
-	"codeType": "NDB"
+	"codeId": "ABK",
+	"geoLat": "53.744639",
+	"geoLong": "91.385528",
+	"txtName": "ABAKAN",
+	"codeType": "DME"
 },
 {
-	"codeId": "ALS",
-	"geoLat": "37.34915889",
-	"geoLong": "-105.81553278",
-	"txtName": "ALAMOSA",
+	"codeId": "CHG",
+	"geoLat": "41.53667",
+	"geoLong": "120.43333",
+	"txtName": "CHAOYANG",
 	"codeType": "VOR"
 },
 {
@@ -65836,11 +65605,25 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "ALS",
+	"geoLat": "37.34915889",
+	"geoLong": "-105.81553278",
+	"txtName": "ALAMOSA",
+	"codeType": "VOR"
+},
+{
 	"codeId": "TBN",
 	"geoLat": "40.995278",
 	"geoLong": "39.795639",
 	"txtName": "TRABZON",
 	"codeType": "VOR"
+},
+{
+	"codeId": "YAM",
+	"geoLat": "6.888879278",
+	"geoLong": "-5.378848972",
+	"txtName": "YAMOUSSOUKRO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "LJA",
@@ -65855,13 +65638,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "11.129386667",
 	"txtName": "WALDA",
 	"codeType": "VOR"
-},
-{
-	"codeId": "YAM",
-	"geoLat": "6.888879278",
-	"geoLong": "-5.378848972",
-	"txtName": "YAMOUSSOUKRO",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IMEN",
@@ -65955,18 +65731,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KPG",
-	"geoLat": "-10.16675",
-	"geoLong": "123.691806",
-	"txtName": "KUPANG/EL TARI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "DMS",
 	"geoLat": "48.340690222",
 	"geoLong": "11.778168556",
 	"txtName": "MUENCHEN",
 	"codeType": "DME"
+},
+{
+	"codeId": "KPG",
+	"geoLat": "-10.16675",
+	"geoLong": "123.691806",
+	"txtName": "KUPANG/EL TARI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SVJ",
@@ -66081,13 +65857,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "VSK",
-	"geoLat": "-26.3794167",
-	"geoLong": "31.7172639",
-	"txtName": "SIKHUPHE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SJ",
 	"geoLat": "18.40890889",
 	"geoLong": "-66.08955833",
@@ -66100,6 +65869,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "4.5388222",
 	"txtName": "",
 	"codeType": "MKR"
+},
+{
+	"codeId": "VSK",
+	"geoLat": "-26.3794167",
+	"geoLong": "31.7172639",
+	"txtName": "SIKHUPHE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "OKG",
@@ -66172,18 +65948,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "KWL",
-	"geoLat": "25.19333",
-	"geoLong": "110.03833",
-	"txtName": "GUILIN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HTY",
 	"geoLat": "6.9340972",
 	"geoLong": "100.3879083",
 	"txtName": "HAT YAI",
 	"codeType": "VOR"
+},
+{
+	"codeId": "KWL",
+	"geoLat": "25.19333",
+	"geoLong": "110.03833",
+	"txtName": "GUILIN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -66207,18 +65983,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "VCL",
-	"geoLat": "-15.6725",
-	"geoLong": "34.91639",
-	"txtName": "CHILEKA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GG",
 	"geoLat": "55.555",
 	"geoLong": "35.02194",
 	"txtName": "GAGARIN",
 	"codeType": "DME"
+},
+{
+	"codeId": "VCL",
+	"geoLat": "-15.6725",
+	"geoLong": "34.91639",
+	"txtName": "CHILEKA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HIG",
@@ -66333,17 +66109,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GI",
-	"geoLat": "22.676028",
-	"geoLong": "121.483",
-	"txtName": "LUDAO",
-	"codeType": "NDB"
-},
-{
 	"codeId": "AV",
 	"geoLat": "-23.8844444",
 	"geoLong": "-147.664806",
 	"txtName": "RAIVAVAE",
+	"codeType": "NDB"
+},
+{
+	"codeId": "GI",
+	"geoLat": "22.676028",
+	"geoLong": "121.483",
+	"txtName": "LUDAO",
 	"codeType": "NDB"
 },
 {
@@ -66621,17 +66397,17 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "",
-	"geoLong": "",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
-	"codeId": "",
 	"geoLat": "51.117151944",
 	"geoLong": "13.745522667",
 	"txtName": "DRESDEN MM RWY 04",
 	"codeType": "MKR"
+},
+{
+	"codeId": "",
+	"geoLat": "",
+	"geoLong": "",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "BVR",
@@ -66725,18 +66501,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SUU",
-	"geoLat": "38.24555917",
-	"geoLong": "-121.94507611",
-	"txtName": "TRAVIS",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "FDR",
 	"geoLat": "34.35383",
 	"geoLong": "-98.9865",
 	"txtName": "FREDERICK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SUU",
+	"geoLat": "38.24555917",
+	"geoLong": "-121.94507611",
+	"txtName": "TRAVIS",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "LY",
@@ -66837,18 +66613,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SLN",
-	"geoLat": "38.92513806",
-	"geoLong": "-97.62133222",
-	"txtName": "SALINA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LCY",
 	"geoLat": "51.50435",
 	"geoLong": "0.0675028",
 	"txtName": "LONDON CITY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SLN",
+	"geoLat": "38.92513806",
+	"geoLong": "-97.62133222",
+	"txtName": "SALINA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ORU",
@@ -66907,18 +66683,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IMRD",
-	"geoLat": "37.215889",
-	"geoLong": "40.626056",
-	"txtName": "MARDIN",
-	"codeType": "DME"
-},
-{
 	"codeId": "O",
 	"geoLat": "38.3",
 	"geoLong": "114.6817",
 	"txtName": "SHIJIAZHUANG / ZHENGDING",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IMRD",
+	"geoLat": "37.215889",
+	"geoLong": "40.626056",
+	"txtName": "MARDIN",
+	"codeType": "DME"
 },
 {
 	"codeId": "SS",
@@ -67033,13 +66809,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PSK",
-	"geoLat": "54.784139",
-	"geoLong": "69.219083",
-	"txtName": "PETROPAVLOVSK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TO",
 	"geoLat": "41.55343778",
 	"geoLong": "-83.9211675",
@@ -67047,17 +66816,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SHM",
-	"geoLat": "50.8355111",
-	"geoLong": "-0.2953861",
-	"txtName": "SHOREHAM",
-	"codeType": "NDB"
+	"codeId": "PSK",
+	"geoLat": "54.784139",
+	"geoLong": "69.219083",
+	"txtName": "PETROPAVLOVSK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TB",
 	"geoLat": "-23.370278",
 	"geoLong": "-149.528306",
 	"txtName": "TUBUAI MATAURA",
+	"codeType": "NDB"
+},
+{
+	"codeId": "SHM",
+	"geoLat": "50.8355111",
+	"geoLong": "-0.2953861",
+	"txtName": "SHOREHAM",
 	"codeType": "NDB"
 },
 {
@@ -67166,18 +66942,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LHS",
-	"geoLat": "34.68297333",
-	"geoLong": "-118.57693806",
-	"txtName": "LAKE HUGHES",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "ALX",
 	"geoLat": "40.8539361",
 	"geoLong": "25.9567333",
 	"txtName": "ALEXANDROUPOLIS",
 	"codeType": "VOR"
+},
+{
+	"codeId": "LHS",
+	"geoLat": "34.68297333",
+	"geoLong": "-118.57693806",
+	"txtName": "LAKE HUGHES",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "BRN",
@@ -67194,18 +66970,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "STO",
-	"geoLat": "65.960425972",
-	"geoLong": "12.469447583",
-	"txtName": "STOKKA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MLL",
 	"geoLat": "35.307389",
 	"geoLong": "-2.955417",
 	"txtName": "MELILLA",
 	"codeType": "DME"
+},
+{
+	"codeId": "STO",
+	"geoLat": "65.960425972",
+	"geoLong": "12.469447583",
+	"txtName": "STOKKA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "DI",
@@ -67278,6 +67054,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "GR",
+	"geoLat": "44.44047111",
+	"geoLong": "-88.23951972",
+	"txtName": "FAMIS",
+	"codeType": "NDB"
+},
+{
 	"codeId": "LAO",
 	"geoLat": "18.178806",
 	"geoLong": "120.529056",
@@ -67290,13 +67073,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "28.705361",
 	"txtName": "ISTANBUL AD",
 	"codeType": "DME"
-},
-{
-	"codeId": "GR",
-	"geoLat": "44.44047111",
-	"geoLong": "-88.23951972",
-	"txtName": "FAMIS",
-	"codeType": "NDB"
 },
 {
 	"codeId": "ENG",
@@ -67362,18 +67138,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MTR",
-	"geoLat": "8.8338889",
-	"geoLong": "-75.8297222",
-	"txtName": "MONTERIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "AC",
 	"geoLat": "41.9137167",
 	"geoLong": "8.7980889",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "MTR",
+	"geoLat": "8.8338889",
+	"geoLong": "-75.8297222",
+	"txtName": "MONTERIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DDY",
@@ -67460,18 +67236,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "PTN",
+	"geoLat": "16.8131",
+	"geoLong": "94.7796944",
+	"txtName": "PATHEIN",
+	"codeType": "NDB"
+},
+{
 	"codeId": "UTI",
 	"geoLat": "37.01761944",
 	"geoLong": "-113.5179",
 	"txtName": "ST GEORGE",
 	"codeType": "VOR"
-},
-{
-	"codeId": "CN",
-	"geoLat": "58.2126025",
-	"geoLong": "8.096497639",
-	"txtName": "KRISTIANSAND/KJEVIK",
-	"codeType": "ILS_DME"
 },
 {
 	"codeId": "IMP",
@@ -67481,11 +67257,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PTN",
-	"geoLat": "16.8131",
-	"geoLong": "94.7796944",
-	"txtName": "PATHEIN",
-	"codeType": "NDB"
+	"codeId": "CN",
+	"geoLat": "58.2126025",
+	"geoLong": "8.096497639",
+	"txtName": "KRISTIANSAND/KJEVIK",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "TBS",
@@ -67509,18 +67285,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MTI",
-	"geoLat": "14.5260556",
-	"geoLong": "-4.0647222",
-	"txtName": "MOPTI / AMBODEDJO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SMS",
 	"geoLat": "55.526167",
 	"geoLong": "13.38075",
 	"txtName": "STURUP",
 	"codeType": "DME"
+},
+{
+	"codeId": "MTI",
+	"geoLat": "14.5260556",
+	"geoLong": "-4.0647222",
+	"txtName": "MOPTI / AMBODEDJO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IPL",
@@ -67537,18 +67313,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "XDY",
-	"geoLat": "31.66667",
-	"geoLong": "118.71667",
-	"txtName": "XIAODANYANG",
-	"codeType": "VOR"
-},
-{
 	"codeId": "EED",
 	"geoLat": "34.76600417",
 	"geoLong": "-114.47410417",
 	"txtName": "NEEDLES",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "XDY",
+	"geoLat": "31.66667",
+	"geoLong": "118.71667",
+	"txtName": "XIAODANYANG",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SOR",
@@ -67579,17 +67355,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "INDR",
-	"geoLat": "53.436639",
-	"geoLong": "-6.249639",
-	"txtName": "ILS DME RWY 28R",
-	"codeType": "DME"
-},
-{
 	"codeId": "PRT",
 	"geoLat": "43.809759139",
 	"geoLong": "11.200572028",
 	"txtName": "PERETOLA",
+	"codeType": "DME"
+},
+{
+	"codeId": "INDR",
+	"geoLat": "53.436639",
+	"geoLong": "-6.249639",
+	"txtName": "ILS DME RWY 28R",
 	"codeType": "DME"
 },
 {
@@ -67656,18 +67432,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FOW",
-	"geoLat": "44.20444444",
-	"geoLong": "-93.3705",
-	"txtName": "HALFWAY",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ORA",
 	"geoLat": "47.1003472",
 	"geoLong": "21.9241306",
 	"txtName": "ORADEA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FOW",
+	"geoLat": "44.20444444",
+	"geoLong": "-93.3705",
+	"txtName": "HALFWAY",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IGSA",
@@ -67754,18 +67530,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PTS",
-	"geoLat": "-31.718889",
-	"geoLong": "-52.327444",
-	"txtName": "PELOTAS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SON",
 	"geoLat": "-15.5061917",
 	"geoLong": "167.2165611",
 	"txtName": "SANTO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PTS",
+	"geoLat": "-31.718889",
+	"geoLong": "-52.327444",
+	"txtName": "PELOTAS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BPN",
@@ -68000,8 +67776,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "45.321929444",
-	"geoLong": "-65.878160583",
+	"geoLat": "45.304064611",
+	"geoLong": "-65.891111778",
 	"txtName": "",
 	"codeType": "ILS"
 },
@@ -68083,18 +67859,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "ALB",
-	"geoLat": "42.74728056",
-	"geoLong": "-73.80318389",
-	"txtName": "ALBANY",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "HLM",
 	"geoLat": "-6.271944",
 	"geoLong": "106.886972",
 	"txtName": "JAKARTA/HALIM PERDANAKUSUMA",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ALB",
+	"geoLat": "42.74728056",
+	"geoLong": "-73.80318389",
+	"txtName": "ALBANY",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "AAU",
@@ -68125,18 +67901,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "DIG",
-	"geoLat": "28.5421806",
-	"geoLong": "77.0804611",
-	"txtName": "DELHI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "RO",
 	"geoLat": "43.1265",
 	"geoLong": "-77.55383",
 	"txtName": "BREIT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DIG",
+	"geoLat": "28.5421806",
+	"geoLong": "77.0804611",
+	"txtName": "DELHI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MQU",
@@ -68216,13 +67992,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "NN",
-	"geoLat": "0.053",
-	"geoLong": "32.4380083",
-	"txtName": "ENTEBBE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MLT",
 	"geoLat": "45.58670917",
 	"geoLong": "-68.51546306",
@@ -68230,10 +67999,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PSK",
-	"geoLat": "37.08768556",
-	"geoLong": "-80.7128825",
-	"txtName": "PULASKI",
+	"codeId": "NN",
+	"geoLat": "0.053",
+	"geoLong": "32.4380083",
+	"txtName": "ENTEBBE",
 	"codeType": "VOR"
 },
 {
@@ -68244,10 +68013,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "OBK",
-	"geoLat": "42.22137667",
-	"geoLong": "-87.95167028",
-	"txtName": "NORTHBROOK",
+	"codeId": "PSK",
+	"geoLat": "37.08768556",
+	"geoLong": "-80.7128825",
+	"txtName": "PULASKI",
 	"codeType": "VOR"
 },
 {
@@ -68256,6 +68025,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "11.0231889",
 	"txtName": "MONGOMEYEN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OBK",
+	"geoLat": "42.22137667",
+	"geoLong": "-87.95167028",
+	"txtName": "NORTHBROOK",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -68405,18 +68181,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "VGE",
-	"geoLat": "40.289833",
-	"geoLong": "-3.726167",
-	"txtName": "MADRID/GETAFE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IWD",
 	"geoLat": "46.53225639",
 	"geoLong": "-90.12585028",
 	"txtName": "IRONWOOD",
 	"codeType": "DME"
+},
+{
+	"codeId": "VGE",
+	"geoLat": "40.289833",
+	"geoLong": "-3.726167",
+	"txtName": "MADRID/GETAFE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MAN",
@@ -68510,18 +68286,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KKU",
-	"geoLat": "24.9146139",
-	"geoLong": "92.984675",
-	"txtName": "SILCHAR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PIR",
 	"geoLat": "61.4099111",
 	"geoLong": "23.5776611",
 	"txtName": "PIRKKA",
 	"codeType": "VOR"
+},
+{
+	"codeId": "KKU",
+	"geoLat": "24.9146139",
+	"geoLong": "92.984675",
+	"txtName": "SILCHAR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MLN",
@@ -68573,13 +68349,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LM",
-	"geoLat": "-22.234833",
-	"geoLong": "114.094139",
-	"txtName": "LEARMONTH",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MER",
 	"geoLat": "36.006446361",
 	"geoLong": "37.307552861",
@@ -68592,6 +68361,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "9.602010889",
 	"txtName": "FRIEDRICHSH. OM RW24",
 	"codeType": "MKR"
+},
+{
+	"codeId": "LM",
+	"geoLat": "-22.234833",
+	"geoLong": "114.094139",
+	"txtName": "LEARMONTH",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FEE",
@@ -68636,6 +68412,13 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
+	"codeId": "GUA",
+	"geoLat": "-33.00972",
+	"geoLong": "-58.61417",
+	"txtName": "GUALEGUAYCHU",
+	"codeType": "VOR"
+},
+{
 	"codeId": "SKA",
 	"geoLat": "27.8489472",
 	"geoLong": "77.008325",
@@ -68643,11 +68426,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GUA",
-	"geoLat": "-33.00972",
-	"geoLong": "-58.61417",
-	"txtName": "GUALEGUAYCHU",
-	"codeType": "VOR"
+	"codeId": "HRT",
+	"geoLat": "30.42803389",
+	"geoLong": "-86.69029583",
+	"txtName": "HURLBURT",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "EAT",
@@ -68662,13 +68445,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "17.972472",
 	"txtName": "ARLANDA",
 	"codeType": "DME"
-},
-{
-	"codeId": "HRT",
-	"geoLat": "30.42803389",
-	"geoLong": "-86.69029583",
-	"txtName": "HURLBURT",
-	"codeType": "TACAN"
 },
 {
 	"codeId": "LWL",
@@ -68832,6 +68608,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "GIO",
+	"geoLat": "40.801255556",
+	"geoLong": "16.901255556",
+	"txtName": "GIOIA DEL COLLE",
+	"codeType": "TACAN"
+},
+{
 	"codeId": "MRD",
 	"geoLat": "37.227667",
 	"geoLong": "40.638528",
@@ -68846,11 +68629,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GIO",
-	"geoLat": "40.801255556",
-	"geoLong": "16.901255556",
-	"txtName": "GIOIA DEL COLLE",
-	"codeType": "TACAN"
+	"codeId": "OSJ",
+	"geoLat": "45.4554194",
+	"geoLong": "18.8376083",
+	"txtName": "OSIJEK",
+	"codeType": "NDB"
 },
 {
 	"codeId": "TMR",
@@ -68867,25 +68650,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "52.200472",
-	"geoLong": "77.084556",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
-	"codeId": "OSJ",
-	"geoLat": "45.4554194",
-	"geoLong": "18.8376083",
-	"txtName": "OSIJEK",
-	"codeType": "NDB"
-},
-{
 	"codeId": "AE",
 	"geoLat": "35.21740111",
 	"geoLong": "-106.71280028",
 	"txtName": "DUDLE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "52.200472",
+	"geoLong": "77.084556",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "LD",
@@ -68937,18 +68713,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LBB",
-	"geoLat": "33.70495083",
-	"geoLong": "-101.91401028",
-	"txtName": "LUBBOCK",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "FME",
 	"geoLat": "39.08444",
 	"geoLong": "-76.75972",
 	"txtName": "FORT MEADE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LBB",
+	"geoLat": "33.70495083",
+	"geoLong": "-101.91401028",
+	"txtName": "LUBBOCK",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "TB",
@@ -69035,18 +68811,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "ICO",
-	"geoLat": "-34.96778",
-	"geoLong": "-71.21583",
-	"txtName": "CURICO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NT",
 	"geoLat": "39.225917",
 	"geoLong": "45.414333",
 	"txtName": "NAKHCHIVAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ICO",
+	"geoLat": "-34.96778",
+	"geoLong": "-71.21583",
+	"txtName": "CURICO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HLC",
@@ -69469,18 +69245,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "YVQ",
-	"geoLat": "65.264966194",
-	"geoLong": "-126.724103694",
-	"txtName": "NORMAN WELLS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "QTV",
 	"geoLat": "43.98833",
 	"geoLong": "89.61167",
 	"txtName": "QITAI",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "YVQ",
+	"geoLat": "65.264966194",
+	"geoLong": "-126.724103694",
+	"txtName": "NORMAN WELLS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "YQM",
@@ -69504,13 +69280,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "64.622889",
-	"geoLong": "21.100944",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "YG",
 	"geoLat": "59.368850056",
 	"geoLong": "10.829462028",
@@ -69518,11 +69287,25 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "",
+	"geoLat": "64.622889",
+	"geoLong": "21.100944",
+	"txtName": "",
+	"codeType": "ILS_DME"
+},
+{
 	"codeId": "INK",
 	"geoLat": "31.87476333",
 	"geoLong": "-103.24377722",
 	"txtName": "WINK",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "SP",
+	"geoLat": "56.69139",
+	"geoLong": "85.32917",
+	"txtName": "MALINOVKA",
+	"codeType": "NDB"
 },
 {
 	"codeId": "TGL",
@@ -69533,9 +69316,9 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "SP",
-	"geoLat": "56.69139",
-	"geoLong": "85.32917",
-	"txtName": "MALINOVKA",
+	"geoLat": "0.3748583",
+	"geoLong": "6.7166361",
+	"txtName": "SAO TOME",
 	"codeType": "NDB"
 },
 {
@@ -69544,13 +69327,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "110.311583",
 	"txtName": "KUCHING",
 	"codeType": "VOR"
-},
-{
-	"codeId": "SP",
-	"geoLat": "0.3748583",
-	"geoLong": "6.7166361",
-	"txtName": "SAO TOME",
-	"codeType": "NDB"
 },
 {
 	"codeId": "ENA",
@@ -69609,17 +69385,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ISO",
-	"geoLat": "35.3709475",
-	"geoLong": "-77.55831528",
-	"txtName": "KINSTON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "UNG",
 	"geoLat": "21.8348778",
 	"geoLong": "-82.7808556",
 	"txtName": "GERONA",
+	"codeType": "VOR"
+},
+{
+	"codeId": "ISO",
+	"geoLat": "35.3709475",
+	"geoLong": "-77.55831528",
+	"txtName": "KINSTON",
 	"codeType": "VOR"
 },
 {
@@ -69672,18 +69448,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
-	"codeId": "IBA",
-	"geoLat": "38.868333",
-	"geoLong": "1.365944",
-	"txtName": "IBIZA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "OJR",
 	"geoLat": "20.1242",
 	"geoLong": "73.9302",
 	"txtName": "OZAR",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "IBA",
+	"geoLat": "38.868333",
+	"geoLong": "1.365944",
+	"txtName": "IBIZA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HIB",
@@ -69784,18 +69560,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ISW",
-	"geoLat": "46.248998083",
-	"geoLong": "6.123020861",
-	"txtName": "LSGG 22",
-	"codeType": "DME"
-},
-{
 	"codeId": "Y",
 	"geoLat": "25.1717",
 	"geoLong": "110.3183",
 	"txtName": "QIFENGLING",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ISW",
+	"geoLat": "46.248998083",
+	"geoLong": "6.123020861",
+	"txtName": "LSGG 22",
+	"codeType": "DME"
 },
 {
 	"codeId": "UCM",
@@ -69826,18 +69602,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TUM",
-	"geoLat": "9.0515611",
-	"geoLong": "-79.4000583",
-	"txtName": "TOCUMEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NQ",
 	"geoLat": "67.828333",
 	"geoLong": "20.351556",
 	"txtName": "KIRUNA",
 	"codeType": "DME"
+},
+{
+	"codeId": "TUM",
+	"geoLat": "9.0515611",
+	"geoLong": "-79.4000583",
+	"txtName": "TOCUMEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "YQH",
@@ -69959,6 +69735,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "BJA",
+	"geoLat": "-3.346339222",
+	"geoLong": "29.32202625",
+	"txtName": "BUJUMBURA",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "SLA",
 	"geoLat": "31.08615",
 	"geoLong": "77.0633111",
@@ -69966,10 +69749,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BJA",
-	"geoLat": "-3.346339222",
-	"geoLong": "29.32202625",
-	"txtName": "BUJUMBURA",
+	"codeId": "JTN",
+	"geoLat": "31.1233",
+	"geoLong": "121.3417",
+	"txtName": "JIUTING",
 	"codeType": "VOR/DME"
 },
 {
@@ -69978,13 +69761,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-83.78313278",
 	"txtName": "GREENVILLE",
 	"codeType": "VOR"
-},
-{
-	"codeId": "JTN",
-	"geoLat": "31.1233",
-	"geoLong": "121.3417",
-	"txtName": "JIUTING",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "YWI",
@@ -70022,6 +69798,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "GON",
+	"geoLat": "41.33040194",
+	"geoLong": "-72.05198472",
+	"txtName": "GROTON",
+	"codeType": "VOR"
+},
+{
 	"codeId": "RNA",
 	"geoLat": "37.365083",
 	"geoLong": "42.061444",
@@ -70029,11 +69812,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GON",
-	"geoLat": "41.33040194",
-	"geoLong": "-72.05198472",
-	"txtName": "GROTON",
-	"codeType": "VOR"
+	"codeId": "ONO",
+	"geoLat": "51.2203167",
+	"geoLong": "3.0116167",
+	"txtName": "OOSTENDE",
+	"codeType": "NDB"
+},
+{
+	"codeId": "OEZ",
+	"geoLat": "48.117542",
+	"geoLong": "16.58138575",
+	"txtName": "WIEN-SCHWECHAT-RWY16",
+	"codeType": "DME"
 },
 {
 	"codeId": "SME",
@@ -70050,20 +69840,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "OEZ",
-	"geoLat": "48.117542",
-	"geoLong": "16.58138575",
-	"txtName": "WIEN-SCHWECHAT-RWY16",
-	"codeType": "DME"
-},
-{
-	"codeId": "ONO",
-	"geoLat": "51.2203167",
-	"geoLong": "3.0116167",
-	"txtName": "OOSTENDE",
-	"codeType": "NDB"
-},
-{
 	"codeId": "ENE",
 	"geoLat": "43.42567222",
 	"geoLong": "-70.61352556",
@@ -70078,18 +69854,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SIE",
-	"geoLat": "41.151694",
-	"geoLong": "-3.604667",
-	"txtName": "SOMOSIERRA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IBC",
 	"geoLat": "58.435722",
 	"geoLong": "12.714361",
 	"txtName": "SATENAS",
 	"codeType": "DME"
+},
+{
+	"codeId": "SIE",
+	"geoLat": "41.151694",
+	"geoLong": "-3.604667",
+	"txtName": "SOMOSIERRA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "EMG",
@@ -70113,13 +69889,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "CZA",
-	"geoLat": "20.6430583",
-	"geoLong": "-88.4482306",
-	"txtName": "KAUA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "FST",
 	"geoLat": "30.95210694",
 	"geoLong": "-102.97571139",
@@ -70127,11 +69896,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BGS",
-	"geoLat": "32.38558833",
-	"geoLong": "-101.48368278",
-	"txtName": "BIG SPRING",
-	"codeType": "VORTAC"
+	"codeId": "CZA",
+	"geoLat": "20.6430583",
+	"geoLong": "-88.4482306",
+	"txtName": "KAUA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "N",
@@ -70139,6 +69908,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "76.516889",
 	"txtName": "NIZHNEVARTOVSK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BGS",
+	"geoLat": "32.38558833",
+	"geoLong": "-101.48368278",
+	"txtName": "BIG SPRING",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "VLH",
@@ -70246,18 +70022,18 @@ export const navaids: EADdata[] = [
 	"codeType": "LOC"
 },
 {
-	"codeId": "KAM",
-	"geoLat": "37.0664472",
-	"geoLong": "22.023917",
-	"txtName": "KALAMATA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MYV",
 	"geoLat": "39.09864472",
 	"geoLong": "-121.5730575",
 	"txtName": "MARYSVILLE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "KAM",
+	"geoLat": "37.0664472",
+	"geoLong": "22.023917",
+	"txtName": "KALAMATA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ISY",
@@ -70302,13 +70078,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GEM",
-	"geoLat": "39.153806",
-	"geoLong": "36.0285",
-	"txtName": "GEMEREK",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PCK",
 	"geoLat": "52.711649167",
 	"geoLong": "19.5699775",
@@ -70321,6 +70090,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "2.770167",
 	"txtName": "GERONA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GEM",
+	"geoLat": "39.153806",
+	"geoLong": "36.0285",
+	"txtName": "GEMEREK",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DUB",
@@ -70414,18 +70190,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BVT",
-	"geoLat": "40.55617167",
-	"geoLong": "-87.06937444",
-	"txtName": "BOILER",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "CMP",
 	"geoLat": "16.636472",
 	"geoLong": "101.984833",
 	"txtName": "CHUM PHAE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "BVT",
+	"geoLat": "40.55617167",
+	"geoLong": "-87.06937444",
+	"txtName": "BOILER",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "A",
@@ -70442,13 +70218,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KVY",
-	"geoLat": "50.2012194",
-	"geoLong": "12.9259528",
-	"txtName": "KARLOVY VARY DME 29",
-	"codeType": "DME"
-},
-{
 	"codeId": "KP",
 	"geoLat": "19.4291944",
 	"geoLong": "93.5366389",
@@ -70456,17 +70225,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SKG",
-	"geoLat": "68.578352083",
-	"geoLong": "15.034926972",
-	"txtName": "SKAGEN",
-	"codeType": "VOR/DME"
+	"codeId": "KVY",
+	"geoLat": "50.2012194",
+	"geoLong": "12.9259528",
+	"txtName": "KARLOVY VARY DME 29",
+	"codeType": "DME"
 },
 {
 	"codeId": "CF",
 	"geoLat": "-0.0215",
 	"geoLong": "15.5791639",
 	"txtName": "MAKOUA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SKG",
+	"geoLat": "68.578352083",
+	"geoLong": "15.034926972",
+	"txtName": "SKAGEN",
 	"codeType": "VOR/DME"
 },
 {
@@ -70743,18 +70519,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "BRI",
-	"geoLat": "39.63175",
-	"geoLong": "27.92875",
-	"txtName": "BALIKESIR/MERKEZ",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OG",
 	"geoLat": "46.211167",
 	"geoLong": "102.852444",
 	"txtName": "ARVAIKHEER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BRI",
+	"geoLat": "39.63175",
+	"geoLong": "27.92875",
+	"txtName": "BALIKESIR/MERKEZ",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AMB",
@@ -70806,13 +70582,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LOR",
-	"geoLat": "11.8047222",
-	"geoLong": "-66.1887222",
-	"txtName": "LA ORCHILA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LG",
 	"geoLat": "40.7145",
 	"geoLong": "-73.92933",
@@ -70820,10 +70589,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NBR",
-	"geoLat": "-3.383056",
-	"geoLong": "135.501417",
-	"txtName": "NABIRE",
+	"codeId": "LOR",
+	"geoLat": "11.8047222",
+	"geoLong": "-66.1887222",
+	"txtName": "LA ORCHILA",
 	"codeType": "VOR"
 },
 {
@@ -70834,6 +70603,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "NBR",
+	"geoLat": "-3.383056",
+	"geoLong": "135.501417",
+	"txtName": "NABIRE",
+	"codeType": "VOR"
+},
+{
 	"codeId": "VMG",
 	"geoLat": "37.845989694",
 	"geoLong": "-25.758146639",
@@ -70842,8 +70618,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "59.890889",
-	"geoLong": "17.580333",
+	"geoLat": "59.904472",
+	"geoLong": "17.600611",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -70926,17 +70702,10 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "42.012278",
-	"geoLong": "35.060778",
+	"geoLat": "42.021417",
+	"geoLong": "35.0795",
 	"txtName": "",
 	"codeType": "ILS"
-},
-{
-	"codeId": "WG",
-	"geoLat": "-35.16575",
-	"geoLong": "147.469083",
-	"txtName": "WAGGA WAGGA",
-	"codeType": "VOR"
 },
 {
 	"codeId": "PNH",
@@ -70951,6 +70720,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "124.28333",
 	"txtName": "DANDONG",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "WG",
+	"geoLat": "-35.16575",
+	"geoLong": "147.469083",
+	"txtName": "WAGGA WAGGA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BTH",
@@ -70974,18 +70750,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "49.201989861",
-	"geoLong": "-123.164024611",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "N",
 	"geoLat": "62.13111",
 	"geoLong": "65.61556",
 	"txtName": "NYAGAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "49.201989861",
+	"geoLong": "-123.164024611",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "DBA",
@@ -71051,13 +70827,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KNA",
-	"geoLat": "54.960389",
-	"geoLong": "24.066417",
-	"txtName": "KAUNAS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PAO",
 	"geoLat": "37.0115472",
 	"geoLong": "25.1290778",
@@ -71065,10 +70834,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BMN",
-	"geoLat": "53.046252861",
-	"geoLong": "8.760446444",
-	"txtName": "BREMEN",
+	"codeId": "KNA",
+	"geoLat": "54.960389",
+	"geoLong": "24.066417",
+	"txtName": "KAUNAS",
 	"codeType": "VOR/DME"
 },
 {
@@ -71077,6 +70846,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-159.59789278",
 	"txtName": "ANIAK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BMN",
+	"geoLat": "53.046252861",
+	"geoLong": "8.760446444",
+	"txtName": "BREMEN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "Z2",
@@ -71114,18 +70890,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "",
-	"geoLat": "60.843212639",
-	"geoLong": "-115.790175",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "UZ",
 	"geoLat": "34.89002528",
 	"geoLong": "-81.08092361",
 	"txtName": "RALLY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "60.835195556",
+	"geoLong": "-115.782174306",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "GAL",
@@ -71149,18 +70925,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "WTM",
-	"geoLat": "30.75333",
-	"geoLong": "113.14167",
-	"txtName": "TIANMEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ZK",
 	"geoLat": "28.0183",
 	"geoLong": "112.9633",
 	"txtName": "DATUOPU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "WTM",
+	"geoLat": "30.75333",
+	"geoLong": "113.14167",
+	"txtName": "TIANMEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -71191,18 +70967,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "39.101278",
-	"geoLong": "30.145167",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "KSR",
 	"geoLat": "31.925278",
 	"geoLong": "-4.362333",
 	"txtName": "ERRACHIDIA / MOULAY ALI CHERIF",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "39.101278",
+	"geoLong": "30.145167",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "IM",
@@ -71331,18 +71107,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BSH",
-	"geoLat": "19.977667",
-	"geoLong": "42.624556",
-	"txtName": "BISHA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CR",
 	"geoLat": "27.8345",
 	"geoLong": "-97.5765",
 	"txtName": "CONOR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BSH",
+	"geoLat": "19.977667",
+	"geoLong": "42.624556",
+	"txtName": "BISHA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ILB",
@@ -71457,18 +71233,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NSA",
-	"geoLat": "39.564631278",
-	"geoLong": "-7.91460525",
-	"txtName": "NISA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HMR",
 	"geoLat": "60.279222",
 	"geoLong": "18.391556",
 	"txtName": "HAMMAR",
 	"codeType": "VOR"
+},
+{
+	"codeId": "NSA",
+	"geoLat": "39.564631278",
+	"geoLong": "-7.91460525",
+	"txtName": "NISA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IRK",
@@ -71660,18 +71436,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ONC",
-	"geoLat": "27.4328833",
-	"geoLong": "128.6989639",
-	"txtName": "ERABU",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "CVG",
 	"geoLat": "39.01598083",
 	"geoLong": "-84.70334639",
 	"txtName": "CINCINNATI",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ONC",
+	"geoLat": "27.4328833",
+	"geoLong": "128.6989639",
+	"txtName": "ERABU",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "LX",
@@ -71716,18 +71492,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "LNY",
-	"geoLat": "20.7645",
-	"geoLong": "-156.96888889",
-	"txtName": "LANAI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ABY",
 	"geoLat": "49.9718083",
 	"geoLong": "2.7049528",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "LNY",
+	"geoLat": "20.7645",
+	"geoLong": "-156.96888889",
+	"txtName": "LANAI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "RVS",
@@ -71786,13 +71562,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SOA",
-	"geoLat": "4.6030556",
-	"geoLong": "-74.2730556",
-	"txtName": "SOACHA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SOC",
 	"geoLat": "12.638861",
 	"geoLong": "53.905944",
@@ -71800,11 +71569,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KKU",
-	"geoLat": "24.9146139",
-	"geoLong": "92.984675",
-	"txtName": "SILCHAR",
-	"codeType": "VOR"
+	"codeId": "SOA",
+	"geoLat": "4.6030556",
+	"geoLong": "-74.2730556",
+	"txtName": "SOACHA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SHX",
@@ -71821,18 +71590,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "KKU",
+	"geoLat": "24.9146139",
+	"geoLong": "92.984675",
+	"txtName": "SILCHAR",
+	"codeType": "VOR"
+},
+{
 	"codeId": "P",
 	"geoLat": "47.3447972",
 	"geoLong": "17.5106306",
 	"txtName": "PAPA LM34",
 	"codeType": "NDB"
-},
-{
-	"codeId": "GIJ",
-	"geoLat": "41.76861139",
-	"geoLong": "-86.31845194",
-	"txtName": "GIPPER",
-	"codeType": "VORTAC"
 },
 {
 	"codeId": "",
@@ -71842,11 +71611,11 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "",
-	"geoLat": "48.024917",
-	"geoLong": "33.205389",
-	"txtName": "",
-	"codeType": "ILS_DME"
+	"codeId": "GIJ",
+	"geoLat": "41.76861139",
+	"geoLong": "-86.31845194",
+	"txtName": "GIPPER",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "RM",
@@ -71854,6 +71623,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "79.882944",
 	"txtName": "RATMALANA / COLOMBO INTL. AIRPORT RATMALANA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "48.024917",
+	"geoLong": "33.205389",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "BEB",
@@ -71891,6 +71667,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "RW",
+	"geoLat": "44.20083",
+	"geoLong": "133.12111",
+	"txtName": "CHERNYSHEVKA",
+	"codeType": "DME"
+},
+{
 	"codeId": "NA",
 	"geoLat": "53.15222",
 	"geoLong": "140.68806",
@@ -71905,18 +71688,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "APE",
-	"geoLat": "40.15106278",
-	"geoLong": "-82.58830139",
-	"txtName": "APPLETON",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "CNE",
 	"geoLat": "36.1903028",
 	"geoLong": "6.727175",
 	"txtName": "CONSTANTINE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "APE",
+	"geoLat": "40.15106278",
+	"geoLong": "-82.58830139",
+	"txtName": "APPLETON",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "BLV",
@@ -71982,18 +71765,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "DMN",
-	"geoLat": "20.4423667",
-	"geoLong": "72.8544306",
-	"txtName": "DAMAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "M",
 	"geoLat": "62.113667",
 	"geoLong": "129.807583",
 	"txtName": "YAKUTSK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DMN",
+	"geoLat": "20.4423667",
+	"geoLong": "72.8544306",
+	"txtName": "DAMAN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TBG",
@@ -72129,17 +71912,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MOK",
-	"geoLat": "21.3826",
-	"geoLong": "0.9506917",
-	"txtName": "BORDJ MOKHTAR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SJI",
 	"geoLat": "30.72598",
 	"geoLong": "-88.35929389",
 	"txtName": "SEMMES",
+	"codeType": "VOR"
+},
+{
+	"codeId": "MOK",
+	"geoLat": "21.3826",
+	"geoLong": "0.9506917",
+	"txtName": "BORDJ MOKHTAR",
 	"codeType": "VOR"
 },
 {
@@ -72162,6 +71945,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "17.484083",
 	"txtName": "CORNER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "VAL",
+	"geoLat": "10.1478611",
+	"geoLong": "-67.92275",
+	"txtName": "VALENCIA",
+	"codeType": "DME"
 },
 {
 	"codeId": "HMV",
@@ -72304,18 +72094,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "63.403806",
-	"geoLong": "19.008",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "MKR",
 	"geoLat": "57.0649444",
 	"geoLong": "8.7453278",
 	"txtName": "MM 28",
 	"codeType": "MKR"
+},
+{
+	"codeId": "",
+	"geoLat": "63.403806",
+	"geoLong": "19.008",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "ABA",
@@ -72346,18 +72136,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NAH",
-	"geoLat": "20.38722",
-	"geoLong": "106.11778",
-	"txtName": "NAM HA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SAT",
 	"geoLat": "29.64403",
 	"geoLong": "-98.46131583",
 	"txtName": "SAN ANTONIO",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "NAH",
+	"geoLat": "20.38722",
+	"geoLong": "106.11778",
+	"txtName": "NAM HA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HV",
@@ -72465,18 +72255,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LUZ",
-	"geoLat": "-16.26083",
-	"geoLong": "-47.97111",
-	"txtName": "LUZIANIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SG",
 	"geoLat": "58.380583",
 	"geoLong": "12.705389",
 	"txtName": "SATENAS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LUZ",
+	"geoLat": "-16.26083",
+	"geoLong": "-47.97111",
+	"txtName": "LUZIANIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "EVD",
@@ -72535,18 +72325,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "HHN",
-	"geoLat": "-16.6854611",
-	"geoLong": "-151.0105139",
-	"txtName": "HUAHINE FARE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BIG",
 	"geoLat": "40.284389",
 	"geoLong": "27.365528",
 	"txtName": "BIGA",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "HHN",
+	"geoLat": "-16.6854611",
+	"geoLong": "-151.0105139",
+	"txtName": "HUAHINE FARE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NTG",
@@ -72564,8 +72354,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BTY",
-	"geoLat": "36.80059694",
-	"geoLong": "-116.74764083",
+	"geoLat": "36.80059722",
+	"geoLong": "-116.74764028",
 	"txtName": "BEATTY",
 	"codeType": "VORTAC"
 },
@@ -72626,18 +72416,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "HLZ",
-	"geoLat": "52.363395583",
-	"geoLong": "10.795220556",
-	"txtName": "HEHLINGEN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MS",
 	"geoLat": "-20.440278",
 	"geoLong": "57.69075",
 	"txtName": "PLAISANCE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HLZ",
+	"geoLat": "52.363395583",
+	"geoLong": "10.795220556",
+	"txtName": "HEHLINGEN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "YQB",
@@ -72689,17 +72479,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SSF",
-	"geoLat": "29.25838278",
-	"geoLong": "-98.44348028",
-	"txtName": "STINSON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ZHO",
 	"geoLat": "33.665",
 	"geoLong": "114.655",
 	"txtName": "ZHOUKOU",
+	"codeType": "VOR"
+},
+{
+	"codeId": "SSF",
+	"geoLat": "29.25838278",
+	"geoLong": "-98.44348028",
+	"txtName": "STINSON",
 	"codeType": "VOR"
 },
 {
@@ -72724,20 +72514,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CLP",
-	"geoLat": "-7.644639",
-	"geoLong": "109.035667",
-	"txtName": "CILACAP/TUNGGUL WULUNG",
-	"codeType": "VOR"
-},
-{
-	"codeId": "",
-	"geoLat": "61.6832694",
-	"geoLong": "27.2192972",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "NF",
 	"geoLat": "43.533583",
 	"geoLong": "43.692194",
@@ -72750,6 +72526,20 @@ export const navaids: EADdata[] = [
 	"geoLong": "15.3264556",
 	"txtName": "MM13",
 	"codeType": "MKR"
+},
+{
+	"codeId": "CLP",
+	"geoLat": "-7.644639",
+	"geoLong": "109.035667",
+	"txtName": "CILACAP/TUNGGUL WULUNG",
+	"codeType": "VOR"
+},
+{
+	"codeId": "",
+	"geoLat": "61.6832694",
+	"geoLong": "27.2192972",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "GGW",
@@ -72822,17 +72612,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "EQU",
-	"geoLat": "-16.339194",
-	"geoLong": "-71.597167",
-	"txtName": "AREQUIPA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "VUE",
 	"geoLat": "-11.76583",
 	"geoLong": "19.8975",
 	"txtName": "LUENA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "EQU",
+	"geoLat": "-16.339194",
+	"geoLong": "-71.597167",
+	"txtName": "AREQUIPA",
 	"codeType": "VOR/DME"
 },
 {
@@ -72857,18 +72647,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HHN",
-	"geoLat": "12.6344556",
-	"geoLong": "99.951175",
-	"txtName": "HUA HIN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "40.199805972",
 	"geoLong": "-3.844191583",
 	"txtName": "OM 05",
 	"codeType": "MKR"
+},
+{
+	"codeId": "HHN",
+	"geoLat": "12.6344556",
+	"geoLong": "99.951175",
+	"txtName": "HUA HIN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "THX",
@@ -72934,6 +72724,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
+	"codeId": "OA",
+	"geoLat": "47.1632417",
+	"geoLong": "20.2586222",
+	"txtName": "SZOLNOK LO20",
+	"codeType": "NDB"
+},
+{
 	"codeId": "PVL",
 	"geoLat": "52.209611",
 	"geoLong": "77.095028",
@@ -72946,13 +72743,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "5.227101444",
 	"txtName": "HAUGESUND/KARMOY",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "OA",
-	"geoLat": "47.1632417",
-	"geoLong": "20.2586222",
-	"txtName": "SZOLNOK LO20",
-	"codeType": "NDB"
 },
 {
 	"codeId": "MRD",
@@ -73123,18 +72913,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "TIR",
-	"geoLat": "56.4932139",
-	"geoLong": "-6.8755889",
-	"txtName": "TIREE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CP",
 	"geoLat": "-13.5639667",
 	"geoLong": "32.5854667",
 	"txtName": "CHIPATA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TIR",
+	"geoLat": "56.4932139",
+	"geoLong": "-6.8755889",
+	"txtName": "TIREE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -73151,17 +72941,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MSS",
-	"geoLat": "-5.19722",
-	"geoLong": "-37.36444",
-	"txtName": "MOSSORO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "JAC",
 	"geoLat": "43.6210375",
 	"geoLong": "-110.73168528",
 	"txtName": "JACKSON",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "MSS",
+	"geoLat": "-5.19722",
+	"geoLong": "-37.36444",
+	"txtName": "MOSSORO",
 	"codeType": "VOR/DME"
 },
 {
@@ -73242,18 +73032,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "EDW",
-	"geoLat": "34.98236278",
-	"geoLong": "-117.73260833",
-	"txtName": "EDWARDS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DO",
 	"geoLat": "-6.1689861",
 	"geoLong": "35.7465056",
 	"txtName": "DODOMA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "EDW",
+	"geoLat": "34.98236278",
+	"geoLong": "-117.73260833",
+	"txtName": "EDWARDS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LHS",
@@ -73382,18 +73172,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TKE",
-	"geoLat": "27.8247778",
-	"geoLong": "128.8822167",
-	"txtName": "TOKUNOSHIMA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YI",
 	"geoLat": "-3.47472",
 	"geoLong": "30.24806",
 	"txtName": "RUYIGI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TKE",
+	"geoLat": "27.8247778",
+	"geoLong": "128.8822167",
+	"txtName": "TOKUNOSHIMA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KE",
@@ -73508,18 +73298,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MWB",
-	"geoLat": "1.323278",
-	"geoLong": "124.954944",
-	"txtName": "MANADO/SAM RATULANGI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ITL",
 	"geoLat": "38.88625",
 	"geoLong": "-6.809889",
 	"txtName": "BADAJOZ",
 	"codeType": "DME"
+},
+{
+	"codeId": "MWB",
+	"geoLat": "1.323278",
+	"geoLong": "124.954944",
+	"txtName": "MANADO/SAM RATULANGI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MDU",
@@ -73585,18 +73375,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "DAO",
-	"geoLat": "7.13125",
-	"geoLong": "125.653972",
-	"txtName": "DAVAO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CBL",
 	"geoLat": "8.1212778",
 	"geoLong": "-63.5328889",
 	"txtName": "CIUDAD BOLIVAR",
 	"codeType": "VOR"
+},
+{
+	"codeId": "DAO",
+	"geoLat": "7.13125",
+	"geoLong": "125.653972",
+	"txtName": "DAVAO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "YDC",
@@ -73641,18 +73431,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "SHL",
-	"geoLat": "23.09167",
-	"geoLong": "113.85",
-	"txtName": "SHILONG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BLK",
 	"geoLat": "51.3232889",
 	"geoLong": "-0.8447944",
 	"txtName": "BLACKBUSHE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SHL",
+	"geoLat": "23.09167",
+	"geoLong": "113.85",
+	"txtName": "SHILONG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AAR",
@@ -73746,18 +73536,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "EWN",
-	"geoLat": "35.07314139",
-	"geoLong": "-77.04506583",
-	"txtName": "NEW BERN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YJQ",
 	"geoLat": "52.1852167",
 	"geoLong": "-128.113528",
 	"txtName": "BELLA BELLA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "EWN",
+	"geoLat": "35.07314139",
+	"geoLong": "-77.04506583",
+	"txtName": "NEW BERN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PXR",
@@ -73844,18 +73634,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "STN",
-	"geoLat": "-23.4875",
-	"geoLong": "-46.92333",
-	"txtName": "SANTANA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TZ",
 	"geoLat": "38.362556",
 	"geoLong": "67.974806",
 	"txtName": "SARIASIYA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "STN",
+	"geoLat": "-23.4875",
+	"geoLong": "-46.92333",
+	"txtName": "SANTANA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OIN",
@@ -73865,18 +73655,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "EPL",
-	"geoLat": "48.3178222",
-	"geoLong": "6.0594028",
-	"txtName": "EPINAL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HAB",
 	"geoLat": "35.209444",
 	"geoLong": "48.658611",
 	"txtName": "HAMADAN / NOGEH",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "EPL",
+	"geoLat": "48.3178222",
+	"geoLong": "6.0594028",
+	"txtName": "EPINAL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TVM",
@@ -73886,18 +73676,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CBM",
-	"geoLat": "33.64153333",
-	"geoLong": "-88.43857222",
-	"txtName": "CALEDONIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MBI",
 	"geoLat": "-64.25556",
 	"geoLong": "-56.64722",
 	"txtName": "BASE MARAMBIO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CBM",
+	"geoLat": "33.64153333",
+	"geoLong": "-88.43857222",
+	"txtName": "CALEDONIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CH",
@@ -73998,6 +73788,13 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
+	"codeId": "ER",
+	"geoLat": "40.145925",
+	"geoLong": "44.48245",
+	"txtName": "EREBUNI",
+	"codeType": "NDB"
+},
+{
 	"codeId": "EWM",
 	"geoLat": "31.95178611",
 	"geoLong": "-106.27245833",
@@ -74010,13 +73807,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-2.310333",
 	"txtName": "",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "ER",
-	"geoLat": "40.145925",
-	"geoLong": "44.48245",
-	"txtName": "EREBUNI",
-	"codeType": "NDB"
 },
 {
 	"codeId": "GRV",
@@ -74110,13 +73900,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "IHD",
-	"geoLat": "39.97424167",
-	"geoLong": "-79.3583675",
-	"txtName": "INDIAN HEAD",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "MN",
 	"geoLat": "-4.760278",
 	"geoLong": "122.566028",
@@ -74124,11 +73907,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "OAX",
-	"geoLat": "16.9722556",
-	"geoLong": "-96.7313611",
-	"txtName": "OAXACA",
-	"codeType": "VOR/DME"
+	"codeId": "IHD",
+	"geoLat": "39.97424167",
+	"geoLong": "-79.3583675",
+	"txtName": "INDIAN HEAD",
+	"codeType": "TACAN"
+},
+{
+	"codeId": "PS",
+	"geoLat": "55.51194",
+	"geoLong": "37.58306",
+	"txtName": "OSTAFYEVO",
+	"codeType": "NDB"
 },
 {
 	"codeId": "OSS",
@@ -74138,11 +73928,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PS",
-	"geoLat": "55.51194",
-	"geoLong": "37.58306",
-	"txtName": "OSTAFYEVO",
-	"codeType": "NDB"
+	"codeId": "OAX",
+	"geoLat": "16.9722556",
+	"geoLong": "-96.7313611",
+	"txtName": "OAXACA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NDG",
@@ -74173,11 +73963,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BSA",
-	"geoLat": "31.286139",
-	"geoLong": "34.721528",
-	"txtName": "BEER-SHEBA",
-	"codeType": "VOR/DME"
+	"codeId": "IMG",
+	"geoLat": "36.690694",
+	"geoLong": "-4.504056",
+	"txtName": "MALAGA",
+	"codeType": "DME"
 },
 {
 	"codeId": "DWA",
@@ -74187,11 +73977,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "IMG",
-	"geoLat": "36.690694",
-	"geoLong": "-4.504056",
-	"txtName": "MALAGA",
-	"codeType": "DME"
+	"codeId": "BSA",
+	"geoLat": "31.286139",
+	"geoLong": "34.721528",
+	"txtName": "BEER-SHEBA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MDG",
@@ -74201,18 +73991,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BEA",
-	"geoLat": "12.50161778",
-	"geoLong": "-70.02077472",
-	"txtName": "BEATRIX",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TNT",
 	"geoLat": "46.020239111",
 	"geoLong": "11.139826194",
 	"txtName": "TRENTO",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "BEA",
+	"geoLat": "12.50161889",
+	"geoLong": "-70.0208",
+	"txtName": "BEATRIX",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CVM",
@@ -74264,18 +74054,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "AS",
-	"geoLat": "47.5617583",
-	"geoLong": "-0.3078306",
-	"txtName": "",
-	"codeType": "DME"
-},
-{
 	"codeId": "KA",
 	"geoLat": "0.1883389",
 	"geoLong": "30.0990472",
 	"txtName": "KASESE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "AS",
+	"geoLat": "47.5617583",
+	"geoLong": "-0.3078306",
+	"txtName": "",
+	"codeType": "DME"
 },
 {
 	"codeId": "FAY",
@@ -74418,13 +74208,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ELY",
-	"geoLat": "39.29812583",
-	"geoLong": "-114.84830472",
-	"txtName": "ELY",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "UTO",
 	"geoLat": "65.99516139",
 	"geoLong": "-153.69375944",
@@ -74437,6 +74220,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "36.548861",
 	"txtName": "CARSAMBA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ELY",
+	"geoLat": "39.29812583",
+	"geoLong": "-114.84830472",
+	"txtName": "ELY",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MKE",
@@ -74467,6 +74257,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "MF",
+	"geoLat": "56.02611",
+	"geoLong": "39.63417",
+	"txtName": "LARIONOVO",
+	"codeType": "NDB"
+},
+{
 	"codeId": "AHR",
 	"geoLat": "34.206944",
 	"geoLong": "62.232778",
@@ -74474,10 +74271,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "MF",
-	"geoLat": "56.02611",
-	"geoLong": "39.63417",
-	"txtName": "LARIONOVO",
+	"codeId": "WOL",
+	"geoLat": "-34.557944",
+	"geoLong": "150.791",
+	"txtName": "WOLLONGONG",
 	"codeType": "NDB"
 },
 {
@@ -74486,13 +74283,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-68.3947222",
 	"txtName": "SAN RAFAEL / S.A. S.GERMANO",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "WOL",
-	"geoLat": "-34.557944",
-	"geoLong": "150.791",
-	"txtName": "WOLLONGONG",
-	"codeType": "NDB"
 },
 {
 	"codeId": "ATV",
@@ -74572,18 +74362,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "VXV",
-	"geoLat": "35.90483861",
-	"geoLong": "-83.89472028",
-	"txtName": "VOLUNTEER",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IBT",
 	"geoLat": "58.420639",
 	"geoLong": "12.712056",
 	"txtName": "SATENAS",
 	"codeType": "DME"
+},
+{
+	"codeId": "VXV",
+	"geoLat": "35.90483861",
+	"geoLong": "-83.89472028",
+	"txtName": "VOLUNTEER",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HEN",
@@ -74593,13 +74383,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HIB",
-	"geoLat": "47.30153139",
-	"geoLong": "-92.70404306",
-	"txtName": "HIBBING",
-	"codeType": "VOR"
-},
-{
 	"codeId": "WEH",
 	"geoLat": "37.18333",
 	"geoLong": "122.22667",
@@ -74607,10 +74390,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KAX",
-	"geoLat": "50.477681111",
-	"geoLong": "19.085111667",
-	"txtName": "KATOWICE/PYRZOWICE",
+	"codeId": "HIB",
+	"geoLat": "47.30153139",
+	"geoLong": "-92.70404306",
+	"txtName": "HIBBING",
 	"codeType": "VOR"
 },
 {
@@ -74619,6 +74402,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "8.12761025",
 	"txtName": "ALBENGA",
 	"codeType": "DME"
+},
+{
+	"codeId": "KAX",
+	"geoLat": "50.477681111",
+	"geoLong": "19.085111667",
+	"txtName": "KATOWICE/PYRZOWICE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LCZ",
@@ -74635,18 +74425,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PKY",
-	"geoLat": "-2.247806",
-	"geoLong": "113.951278",
-	"txtName": "PALANGKA RAYA / TJILIK RIWUT",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "AO",
 	"geoLat": "47.0810028",
 	"geoLong": "20.2117944",
 	"txtName": "SZOLNOK LO02",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PKY",
+	"geoLat": "-2.247806",
+	"geoLong": "113.951278",
+	"txtName": "PALANGKA RAYA / TJILIK RIWUT",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "SHA",
@@ -74656,18 +74446,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "IMN",
-	"geoLat": "43.0598194",
-	"geoLong": "74.45555",
-	"txtName": "MANAS",
-	"codeType": "DME"
-},
-{
 	"codeId": "KRY",
 	"geoLat": "12.833611",
 	"geoLong": "45.04775",
 	"txtName": "ADEN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IMN",
+	"geoLat": "43.0598194",
+	"geoLong": "74.45555",
+	"txtName": "MANAS",
+	"codeType": "DME"
 },
 {
 	"codeId": "DK",
@@ -74733,18 +74523,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "JOA",
-	"geoLat": "39.564667",
-	"geoLong": "2.746639",
-	"txtName": "PALMA DON SANT JOAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KTB",
 	"geoLat": "37.859722",
 	"geoLong": "68.861917",
 	"txtName": "BOKHTAR",
 	"codeType": "DME"
+},
+{
+	"codeId": "JOA",
+	"geoLat": "39.564667",
+	"geoLong": "2.746639",
+	"txtName": "PALMA DON SANT JOAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LEG",
@@ -74852,18 +74642,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "AGG",
-	"geoLat": "27.1572806",
-	"geoLong": "77.9565528",
-	"txtName": "AGRA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ITS",
 	"geoLat": "28.039333",
 	"geoLong": "-16.583639",
 	"txtName": "TENERIFE SUR",
 	"codeType": "DME"
+},
+{
+	"codeId": "AGG",
+	"geoLat": "27.1572806",
+	"geoLong": "77.9565528",
+	"txtName": "AGRA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BDA",
@@ -74923,8 +74713,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "NOW",
-	"geoLat": "53.81806",
-	"geoLong": "86.88583",
+	"geoLat": "53.818167",
+	"geoLong": "86.885722",
 	"txtName": "NOVOKUZNETSK/SPICHENKOVO",
 	"codeType": "VOR/DME"
 },
@@ -74957,18 +74747,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "47.3513056",
-	"geoLong": "17.5072167",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "ILG",
 	"geoLat": "50.646361",
 	"geoLong": "5.456056",
 	"txtName": "LIEGE",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "47.3513056",
+	"geoLong": "17.5072167",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SIA",
@@ -75126,8 +74916,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "NOW",
-	"geoLat": "53.81806",
-	"geoLong": "86.88583",
+	"geoLat": "53.818167",
+	"geoLong": "86.885722",
 	"txtName": "NOVOKUZNETSK/SPICHENKOVO",
 	"codeType": "VOR"
 },
@@ -75153,18 +74943,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NGJ",
-	"geoLat": "28.10139",
-	"geoLong": "81.65083",
-	"txtName": "NEPALGUNJ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TII",
 	"geoLat": "41.09466556",
 	"geoLong": "-83.21497111",
 	"txtName": "TIFFIN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NGJ",
+	"geoLat": "28.10139",
+	"geoLong": "81.65083",
+	"txtName": "NEPALGUNJ",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SLN",
@@ -75202,18 +74992,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LEQ",
-	"geoLat": "50.5617722",
-	"geoLong": "3.0891611",
-	"txtName": "",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SLG",
 	"geoLat": "54.279389",
 	"geoLong": "-8.600111",
 	"txtName": "DME SLIGO",
 	"codeType": "DME"
+},
+{
+	"codeId": "LEQ",
+	"geoLat": "50.5617722",
+	"geoLong": "3.0891611",
+	"txtName": "",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CXR",
@@ -75244,17 +75034,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SJU",
-	"geoLat": "-49.30972",
-	"geoLong": "-67.81278",
-	"txtName": "SAN JULIAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SRC",
 	"geoLat": "-32.3726139",
 	"geoLong": "-65.1832472",
 	"txtName": "STA. ROSA DE CONLARA",
+	"codeType": "VOR"
+},
+{
+	"codeId": "SJU",
+	"geoLat": "-49.30972",
+	"geoLong": "-67.81278",
+	"txtName": "SAN JULIAN",
 	"codeType": "VOR"
 },
 {
@@ -75272,17 +75062,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "CUL",
-	"geoLat": "24.7644806",
-	"geoLong": "-107.4773389",
-	"txtName": "CULIACAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PAD",
 	"geoLat": "39.603111",
 	"geoLong": "47.889944",
 	"txtName": "PARSABADE MOGHAN",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "CUL",
+	"geoLat": "24.7644806",
+	"geoLong": "-107.4773389",
+	"txtName": "CULIACAN",
 	"codeType": "VOR/DME"
 },
 {
@@ -75291,6 +75081,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "8.537765556",
 	"txtName": "",
 	"codeType": "ILS_DME"
+},
+{
+	"codeId": "PE",
+	"geoLat": "49.062714972",
+	"geoLong": "20.442366778",
+	"txtName": "TATRY EAST",
+	"codeType": "NDB"
 },
 {
 	"codeId": "LUC",
@@ -75305,13 +75102,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-79.647816389",
 	"txtName": "",
 	"codeType": "ILS"
-},
-{
-	"codeId": "PE",
-	"geoLat": "49.062714972",
-	"geoLong": "20.442366778",
-	"txtName": "TATRY EAST",
-	"codeType": "NDB"
 },
 {
 	"codeId": "KBV",
@@ -75356,18 +75146,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "FIG",
-	"geoLat": "-29.998167",
-	"geoLong": "-50.975556",
-	"txtName": "FIGUEIRAS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "R",
 	"geoLat": "55.530556",
 	"geoLong": "38.194111",
 	"txtName": "RAMENSKOYE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FIG",
+	"geoLat": "-29.998167",
+	"geoLong": "-50.975556",
+	"txtName": "FIGUEIRAS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CHS",
@@ -75419,6 +75209,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "",
+	"geoLat": "45.4554556",
+	"geoLong": "18.8374722",
+	"txtName": "MM29",
+	"codeType": "MKR"
+},
+{
 	"codeId": "MRW",
 	"geoLat": "18.4135583",
 	"geoLong": "31.8302639",
@@ -75433,13 +75230,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "45.4554556",
-	"geoLong": "18.8374722",
-	"txtName": "MM29",
-	"codeType": "MKR"
-},
-{
 	"codeId": "AUH",
 	"geoLat": "40.8925",
 	"geoLong": "-97.99694",
@@ -75448,15 +75238,15 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "49.236801972",
-	"geoLong": "18.624418278",
+	"geoLat": "54.6414",
+	"geoLong": "25.2928278",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
 {
 	"codeId": "",
-	"geoLat": "54.6414",
-	"geoLong": "25.2928278",
+	"geoLat": "49.236801972",
+	"geoLong": "18.624418278",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -75510,18 +75300,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LJB",
-	"geoLat": "46.2156722",
-	"geoLong": "14.47065",
-	"txtName": "LJUBLJANA",
-	"codeType": "DME"
-},
-{
 	"codeId": "MT",
 	"geoLat": "49.799422722",
 	"geoLong": "-74.495405472",
 	"txtName": "CHIBOO (CHAPAIS)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LJB",
+	"geoLat": "46.2156722",
+	"geoLong": "14.47065",
+	"txtName": "LJUBLJANA",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -75538,18 +75328,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LCZ",
-	"geoLat": "34.45167",
-	"geoLong": "108.79333",
-	"txtName": "LONGZAOCUN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ALJ",
 	"geoLat": "60.47982222",
 	"geoLong": "-146.58743056",
 	"txtName": "ORCA BAY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LCZ",
+	"geoLat": "34.45167",
+	"geoLong": "108.79333",
+	"txtName": "LONGZAOCUN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -75566,17 +75356,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "NII",
-	"geoLat": "43.336774611",
-	"geoLong": "21.850315778",
-	"txtName": "NIS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HSL",
 	"geoLat": "65.70787611",
 	"geoLong": "-156.36308667",
 	"txtName": "HUSLIA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "NII",
+	"geoLat": "43.336774611",
+	"geoLong": "21.850315778",
+	"txtName": "NIS",
 	"codeType": "VOR/DME"
 },
 {
@@ -75671,18 +75461,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "JCL",
-	"geoLat": "-12.039667",
-	"geoLong": "-77.105556",
-	"txtName": "JORGE CHAVEZ",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LNZ",
 	"geoLat": "48.229711528",
 	"geoLong": "14.103154694",
 	"txtName": "LINZ",
 	"codeType": "VOR"
+},
+{
+	"codeId": "JCL",
+	"geoLat": "-12.039667",
+	"geoLong": "-77.105556",
+	"txtName": "JORGE CHAVEZ",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "XI",
@@ -75825,18 +75615,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TZH",
-	"geoLat": "40.40833",
-	"geoLong": "114.05167",
-	"txtName": "TIANZHEN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "XT",
 	"geoLat": "44.96222",
 	"geoLong": "39.57639",
 	"txtName": "RYAZANSKAYA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TZH",
+	"geoLat": "40.40833",
+	"geoLong": "114.05167",
+	"txtName": "TIANZHEN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -75860,17 +75650,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SVN",
-	"geoLat": "32.01194306",
-	"geoLong": "-81.14086389",
-	"txtName": "HUNTER",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GAS",
 	"geoLat": "26.298083",
 	"geoLong": "43.779611",
 	"txtName": "GASSIM / PRINCE NAIF BIN ABDULAZIZ",
+	"codeType": "VOR"
+},
+{
+	"codeId": "SVN",
+	"geoLat": "32.01194306",
+	"geoLong": "-81.14086389",
+	"txtName": "HUNTER",
 	"codeType": "VOR"
 },
 {
@@ -75881,13 +75671,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PRG",
-	"geoLat": "27.360333",
-	"geoLong": "52.764444",
-	"txtName": "PERSIAN GULF",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HUW",
 	"geoLat": "36.87138417",
 	"geoLong": "-91.89999167",
@@ -75895,11 +75678,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "GNV",
-	"geoLat": "-16.641083",
-	"geoLong": "-49.21125",
-	"txtName": "GOIANIA",
-	"codeType": "VOR"
+	"codeId": "PRG",
+	"geoLat": "27.360333",
+	"geoLong": "52.764444",
+	"txtName": "PERSIAN GULF",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -75909,17 +75692,24 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "IEL",
-	"geoLat": "39.243277778",
-	"geoLong": "9.061104444",
-	"txtName": "CAGLIARI/ELMAS",
-	"codeType": "DME"
+	"codeId": "GNV",
+	"geoLat": "-16.641083",
+	"geoLong": "-49.21125",
+	"txtName": "GOIANIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SK",
 	"geoLat": "67.47333",
 	"geoLong": "153.7225",
 	"txtName": "SREDNEKOLYMSK",
+	"codeType": "DME"
+},
+{
+	"codeId": "IEL",
+	"geoLat": "39.243277778",
+	"geoLong": "9.061104444",
+	"txtName": "CAGLIARI/ELMAS",
 	"codeType": "DME"
 },
 {
@@ -76091,18 +75881,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "LKH",
-	"geoLat": "11.754139",
-	"geoLong": "108.355167",
-	"txtName": "LIEN KHUONG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "T",
 	"geoLat": "57.194194",
 	"geoLong": "65.331722",
 	"txtName": "TYUMEN/ROSHCHINO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LKH",
+	"geoLat": "11.754139",
+	"geoLong": "108.355167",
+	"txtName": "LIEN KHUONG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "KGE",
@@ -76196,18 +75986,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ALG",
-	"geoLat": "40.628134194",
-	"geoLong": "8.243887694",
-	"txtName": "ALGHERO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MHN",
 	"geoLat": "63.88389806",
 	"geoLong": "-152.31651028",
 	"txtName": "MINCHUMINA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ALG",
+	"geoLat": "40.628134194",
+	"geoLong": "8.243887694",
+	"txtName": "ALGHERO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KG",
@@ -76322,13 +76112,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BHS",
-	"geoLat": "30.5117",
-	"geoLong": "104.2",
-	"txtName": "BAIHESI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "VNA",
 	"geoLat": "63.832667",
 	"geoLong": "19.847972",
@@ -76336,25 +76119,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MOL",
-	"geoLat": "52.452375",
-	"geoLong": "20.677772222",
-	"txtName": "WARSZAWA/MODLIN",
+	"codeId": "BHS",
+	"geoLat": "30.5117",
+	"geoLong": "104.2",
+	"txtName": "BAIHESI",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "ELV",
-	"geoLat": "-33.0369889",
-	"geoLong": "27.8231556",
-	"txtName": "KING PHALO",
-	"codeType": "VOR"
-},
-{
-	"codeId": "THX",
-	"geoLat": "19.884722",
-	"geoLong": "105.492694",
-	"txtName": "THO XUAN",
-	"codeType": "VOR"
 },
 {
 	"codeId": "Z",
@@ -76369,6 +76138,27 @@ export const navaids: EADdata[] = [
 	"geoLong": "-104.20689722",
 	"txtName": "KENT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ELV",
+	"geoLat": "-33.0369889",
+	"geoLong": "27.8231556",
+	"txtName": "KING PHALO",
+	"codeType": "VOR"
+},
+{
+	"codeId": "MOL",
+	"geoLat": "52.452375",
+	"geoLong": "20.677772222",
+	"txtName": "WARSZAWA/MODLIN",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "THX",
+	"geoLat": "19.884722",
+	"geoLong": "105.492694",
+	"txtName": "THO XUAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IRE",
@@ -76434,13 +76224,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "DNZ",
-	"geoLat": "36.670139",
-	"geoLong": "53.177667",
-	"txtName": "DASHT-E-NAZ",
-	"codeType": "NDB"
-},
-{
 	"codeId": "DIN",
 	"geoLat": "48.5860611",
 	"geoLong": "-2.0823389",
@@ -76469,18 +76252,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "TRK",
-	"geoLat": "43.325625",
-	"geoLong": "68.579475",
-	"txtName": "TURKISTAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "UI",
 	"geoLat": "50.52925",
 	"geoLong": "137.080583",
 	"txtName": "KOMSOMOLSK-NA-AMURE/DZEMGI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TRK",
+	"geoLat": "43.325625",
+	"geoLong": "68.579475",
+	"txtName": "TURKISTAN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NO",
@@ -76826,18 +76609,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "65.9921889",
-	"geoLong": "29.22285",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "BKV",
 	"geoLat": "-2.3161444",
 	"geoLong": "28.8117917",
 	"txtName": "BUKAVU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "65.9921889",
+	"geoLong": "29.22285",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "VBV",
@@ -76945,18 +76728,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NDO",
-	"geoLat": "53.768981111",
-	"geoLong": "8.653551944",
-	"txtName": "NORDHOLZ",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "MQI",
 	"geoLat": "35.91531944",
 	"geoLong": "-75.69505222",
 	"txtName": "MANTEO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NDO",
+	"geoLat": "53.768981111",
+	"geoLong": "8.653551944",
+	"txtName": "NORDHOLZ",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "MLP",
@@ -77008,18 +76791,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MLK",
-	"geoLat": "9.5631667",
-	"geoLong": "31.6531694",
-	"txtName": "MALAKAL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "Y",
 	"geoLat": "40.1046083",
 	"geoLong": "44.4505806",
 	"txtName": "EREBUNI",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "MLK",
+	"geoLat": "9.5631667",
+	"geoLong": "31.6531694",
+	"txtName": "MALAKAL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LO",
@@ -77050,17 +76833,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KCH",
-	"geoLat": "26.4055889",
-	"geoLong": "80.420825",
-	"txtName": "KANPUR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "JDG",
 	"geoLat": "36.37833",
 	"geoLong": "120.06667",
 	"txtName": "JIAODONG",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "KCH",
+	"geoLat": "26.4055889",
+	"geoLong": "80.420825",
+	"txtName": "KANPUR",
 	"codeType": "VOR/DME"
 },
 {
@@ -77218,18 +77001,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "GNV",
-	"geoLat": "-16.641083",
-	"geoLong": "-49.21125",
-	"txtName": "GOIANIA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "AG",
 	"geoLat": "1.424",
 	"geoLong": "103.820278",
 	"txtName": "SEMBAWANG",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GNV",
+	"geoLat": "-16.641083",
+	"geoLong": "-49.21125",
+	"txtName": "GOIANIA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FRS",
@@ -77281,18 +77064,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "DUG",
-	"geoLat": "31.47267361",
-	"geoLong": "-109.60205361",
-	"txtName": "DOUGLAS",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "FO",
 	"geoLat": "23.1383",
 	"geoLong": "113.2417",
 	"txtName": "GUANGZHOU / BAIYUN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DUG",
+	"geoLat": "31.47267361",
+	"geoLong": "-109.60205361",
+	"txtName": "DOUGLAS",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "TRN",
@@ -77323,18 +77106,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "INTW",
-	"geoLat": "53.548774194",
-	"geoLong": "7.682675722",
-	"txtName": "WITTMUNDHAFEN",
-	"codeType": "DME"
-},
-{
 	"codeId": "VA",
 	"geoLat": "29.49722",
 	"geoLong": "21.11222",
 	"txtName": "AMAL",
 	"codeType": "NDB"
+},
+{
+	"codeId": "INTW",
+	"geoLat": "53.548774194",
+	"geoLong": "7.682675722",
+	"txtName": "WITTMUNDHAFEN",
+	"codeType": "DME"
 },
 {
 	"codeId": "TUC",
@@ -77400,18 +77183,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "CMX",
-	"geoLat": "47.17026167",
-	"geoLong": "-88.48539306",
-	"txtName": "HOUGHTON",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IMO",
 	"geoLat": "51.012639",
 	"geoLong": "71.453333",
 	"txtName": "ASTANA",
 	"codeType": "DME"
+},
+{
+	"codeId": "CMX",
+	"geoLat": "47.17026167",
+	"geoLong": "-88.48539306",
+	"txtName": "HOUGHTON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HLS",
@@ -77498,18 +77281,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DOH",
-	"geoLat": "17.516222",
-	"geoLong": "106.593306",
-	"txtName": "DONG HOI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BN",
 	"geoLat": "4.4905",
 	"geoLong": "18.4956111",
 	"txtName": "BANGUI / M'POKO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DOH",
+	"geoLat": "17.516222",
+	"geoLong": "106.593306",
+	"txtName": "DONG HOI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SVC",
@@ -77575,18 +77358,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "PAD",
-	"geoLat": "39.603111",
-	"geoLong": "47.889944",
-	"txtName": "PARSABADE MOGHAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IZD",
 	"geoLat": "41.34306",
 	"geoLong": "20.82056",
 	"txtName": "IZDEGLAVJE",
 	"codeType": "DME"
+},
+{
+	"codeId": "PAD",
+	"geoLat": "39.603111",
+	"geoLong": "47.889944",
+	"txtName": "PARSABADE MOGHAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ERL",
@@ -77666,18 +77449,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KOK",
-	"geoLat": "51.0946833",
-	"geoLong": "2.651625",
-	"txtName": "KOKSY",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "KRH",
 	"geoLat": "45.31",
 	"geoLong": "36.44306",
 	"txtName": "KERCH",
 	"codeType": "DME"
+},
+{
+	"codeId": "KOK",
+	"geoLat": "51.0946833",
+	"geoLong": "2.651625",
+	"txtName": "KOKSY",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "DYG",
@@ -77715,17 +77498,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "YXC",
-	"geoLat": "49.554275111",
-	"geoLong": "-116.08830175",
-	"txtName": "CRANBROOK",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BLC",
 	"geoLat": "43.248694",
 	"geoLong": "21.361639",
 	"txtName": "BLACE",
+	"codeType": "VOR"
+},
+{
+	"codeId": "YXC",
+	"geoLat": "49.554275111",
+	"geoLong": "-116.08830175",
+	"txtName": "CRANBROOK",
 	"codeType": "VOR"
 },
 {
@@ -77750,11 +77533,11 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS"
 },
 {
-	"codeId": "FFU",
-	"geoLat": "40.27489472",
-	"geoLong": "-111.94053139",
-	"txtName": "FAIRFIELD",
-	"codeType": "VOR"
+	"codeId": "COR",
+	"geoLat": "10.1762222",
+	"geoLong": "-70.0671389",
+	"txtName": "CARORA",
+	"codeType": "DME"
 },
 {
 	"codeId": "YTP",
@@ -77764,10 +77547,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "JAC",
-	"geoLat": "43.6210375",
-	"geoLong": "-110.73168528",
-	"txtName": "JACKSON",
+	"codeId": "FFU",
+	"geoLat": "40.27489472",
+	"geoLong": "-111.94053139",
+	"txtName": "FAIRFIELD",
 	"codeType": "VOR"
 },
 {
@@ -77776,6 +77559,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "155.74639",
 	"txtName": "OMSUKCHAN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "JAC",
+	"geoLat": "43.6210375",
+	"geoLong": "-110.73168528",
+	"txtName": "JACKSON",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ESC",
@@ -77807,17 +77597,10 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "CYR",
-	"geoLat": "4.81361",
-	"geoLong": "-52.36833",
-	"txtName": "",
+	"geoLat": "4.8136389",
+	"geoLong": "-52.3683889",
+	"txtName": "CAYENNE FELIX EBOUE",
 	"codeType": "VOR"
-},
-{
-	"codeId": "KAX",
-	"geoLat": "50.477681111",
-	"geoLong": "19.085111667",
-	"txtName": "KATOWICE/PYRZOWICE",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -77825,6 +77608,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "5.772275",
 	"txtName": "",
 	"codeType": "ILS_DME"
+},
+{
+	"codeId": "KAX",
+	"geoLat": "50.477681111",
+	"geoLong": "19.085111667",
+	"txtName": "KATOWICE/PYRZOWICE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "AAR",
@@ -77877,8 +77667,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "60.30565",
-	"geoLong": "24.9897361",
+	"geoLat": "60.3283361",
+	"geoLong": "24.9689222",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -77911,11 +77701,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ZWN",
-	"geoLat": "49.229070917",
-	"geoLong": "7.417890472",
-	"txtName": "ZWEIBRUECKEN",
-	"codeType": "VOR/DME"
+	"codeId": "SEG",
+	"geoLat": "46.240049722",
+	"geoLong": "20.0891825",
+	"txtName": "SZEGED",
+	"codeType": "NDB"
 },
 {
 	"codeId": "COM",
@@ -77925,16 +77715,16 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SEG",
-	"geoLat": "46.240049722",
-	"geoLong": "20.0891825",
-	"txtName": "SZEGED",
-	"codeType": "NDB"
+	"codeId": "ZWN",
+	"geoLat": "49.229070917",
+	"geoLong": "7.417890472",
+	"txtName": "ZWEIBRUECKEN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "LET",
-	"geoLat": "-4.195",
-	"geoLong": "-69.94",
+	"geoLat": "-4.18778",
+	"geoLong": "-69.93944",
 	"txtName": "LETICIA",
 	"codeType": "VOR"
 },
@@ -78009,18 +77799,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "45.4574667",
-	"geoLong": "18.8298667",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "PG",
 	"geoLat": "-6.755417",
 	"geoLong": "108.538861",
 	"txtName": "CIREBON/CAKRABHUWANA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "45.4574667",
+	"geoLong": "18.8298667",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "WRN",
@@ -78044,18 +77834,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TNT",
-	"geoLat": "35.7165667",
-	"geoLong": "139.3994917",
-	"txtName": "TACHIKAWA",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "4O",
 	"geoLat": "54.675",
 	"geoLong": "-115.42444",
 	"txtName": "SWAN HILLS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TNT",
+	"geoLat": "35.7165667",
+	"geoLong": "139.3994917",
+	"txtName": "TACHIKAWA",
+	"codeType": "TACAN"
 },
 {
 	"codeId": "M3",
@@ -78079,13 +77869,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TNO",
-	"geoLat": "48.7546611",
-	"geoLong": "2.1090278",
-	"txtName": "",
-	"codeType": "DME"
-},
-{
 	"codeId": "PWF",
 	"geoLat": "39.07670917",
 	"geoLong": "-84.2154025",
@@ -78093,10 +77876,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IIF",
-	"geoLat": "37.012975",
-	"geoLong": "-7.9625528",
-	"txtName": "FARO",
+	"codeId": "TNO",
+	"geoLat": "48.7546611",
+	"geoLong": "2.1090278",
+	"txtName": "",
 	"codeType": "DME"
 },
 {
@@ -78104,6 +77887,13 @@ export const navaids: EADdata[] = [
 	"geoLat": "41.36629944",
 	"geoLong": "-91.14927917",
 	"txtName": "PORT CITY",
+	"codeType": "DME"
+},
+{
+	"codeId": "IIF",
+	"geoLat": "37.012975",
+	"geoLong": "-7.9625528",
+	"txtName": "FARO",
 	"codeType": "DME"
 },
 {
@@ -78163,18 +77953,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ECA",
-	"geoLat": "-50.2784389",
-	"geoLong": "-72.045625",
-	"txtName": "EL CALAFATE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LAS",
 	"geoLat": "36.07970139",
 	"geoLong": "-115.15979806",
 	"txtName": "LAS VEGAS",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ECA",
+	"geoLat": "-50.2784389",
+	"geoLong": "-72.045625",
+	"txtName": "EL CALAFATE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BCN",
@@ -78237,7 +78027,7 @@ export const navaids: EADdata[] = [
 	"geoLat": "29.94605417",
 	"geoLong": "-94.01622083",
 	"txtName": "BEAUMONT",
-	"codeType": "VOR/DME"
+	"codeType": "DME"
 },
 {
 	"codeId": "SM",
@@ -78261,18 +78051,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KTH",
-	"geoLat": "39.106778",
-	"geoLong": "30.134778",
-	"txtName": "ZAFER",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MAZ",
 	"geoLat": "18.25375806",
 	"geoLong": "-67.15248528",
 	"txtName": "MAYAGUEZ",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KTH",
+	"geoLat": "39.106778",
+	"geoLong": "30.134778",
+	"txtName": "ZAFER",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CDU",
@@ -78303,18 +78093,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "42.40596222",
-	"geoLong": "-83.00416167",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "B",
 	"geoLat": "55.978417",
 	"geoLong": "37.461639",
 	"txtName": "MOSCOW/SHEREMETYEVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "42.40596222",
+	"geoLong": "-83.00416167",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "VAN",
@@ -78360,8 +78150,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "CKV",
-	"geoLat": "36.62198556",
-	"geoLong": "-87.41265333",
+	"geoLat": "36.62198611",
+	"geoLong": "-87.41265917",
 	"txtName": "CLARKSVILLE",
 	"codeType": "VOR"
 },
@@ -78443,18 +78233,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "LKA",
-	"geoLat": "28.189006222",
-	"geoLong": "74.111299611",
-	"txtName": "BIKANER",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SX",
 	"geoLat": "17.69167",
 	"geoLong": "-64.88444",
 	"txtName": "PESTE (ST CROIX)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LKA",
+	"geoLat": "28.189006222",
+	"geoLong": "74.111299611",
+	"txtName": "BIKANER",
+	"codeType": "VOR"
 },
 {
 	"codeId": "VLG",
@@ -78513,18 +78303,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BBM",
-	"geoLat": "15.85712833",
-	"geoLong": "74.61929083",
-	"txtName": "BELAGAVI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SW",
 	"geoLat": "54.2975",
 	"geoLong": "155.95639",
 	"txtName": "SOBOLEVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BBM",
+	"geoLat": "15.85712833",
+	"geoLong": "74.61929083",
+	"txtName": "BELAGAVI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PTC",
@@ -78583,18 +78373,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "HOL",
-	"geoLat": "26.9656972",
-	"geoLong": "93.6226",
-	"txtName": "HOLLONGI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CHW",
 	"geoLat": "48.4800028",
 	"geoLong": "0.98705",
 	"txtName": "CHARTRES",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "HOL",
+	"geoLat": "26.9656972",
+	"geoLong": "93.6226",
+	"txtName": "HOLLONGI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SIV",
@@ -78639,17 +78429,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "WUN",
-	"geoLat": "52.454855556",
-	"geoLong": "9.4293825",
-	"txtName": "WUNSTORF",
-	"codeType": "TACAN"
-},
-{
 	"codeId": "YAA",
 	"geoLat": "40.685944",
 	"geoLong": "29.374417",
 	"txtName": "YALOVA",
+	"codeType": "TACAN"
+},
+{
+	"codeId": "WUN",
+	"geoLat": "52.454855556",
+	"geoLong": "9.4293825",
+	"txtName": "WUNSTORF",
 	"codeType": "TACAN"
 },
 {
@@ -78709,13 +78499,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NX",
-	"geoLat": "65.587222",
-	"geoLong": "19.295306",
-	"txtName": "ARVIDSJAUR",
-	"codeType": "DME"
-},
-{
 	"codeId": "ITU",
 	"geoLat": "-25.40861",
 	"geoLong": "-54.62194",
@@ -78723,11 +78506,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "YXS",
-	"geoLat": "53.8942694",
-	"geoLong": "-122.455625",
-	"txtName": "PRINCE GEORGE",
-	"codeType": "VOR"
+	"codeId": "NX",
+	"geoLat": "65.587222",
+	"geoLong": "19.295306",
+	"txtName": "ARVIDSJAUR",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -78735,6 +78518,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "6.266321389",
 	"txtName": "NIEDERRHEIN OM RW27",
 	"codeType": "MKR"
+},
+{
+	"codeId": "YXS",
+	"geoLat": "53.8942694",
+	"geoLong": "-122.455625",
+	"txtName": "PRINCE GEORGE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "UKW",
@@ -78772,18 +78562,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "BUK",
-	"geoLat": "40.241861",
-	"geoLong": "33.104917",
-	"txtName": "CUBUK",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SIE",
 	"geoLat": "52.155377778",
 	"geoLong": "22.200791667",
 	"txtName": "SIEDLCE",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "BUK",
+	"geoLat": "40.241861",
+	"geoLong": "33.104917",
+	"txtName": "CUBUK",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CRV",
@@ -78821,18 +78611,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "HMF",
-	"geoLat": "70.704244111",
-	"geoLong": "23.690744278",
-	"txtName": "HAMMERFEST",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NI",
 	"geoLat": "49.72833",
 	"geoLong": "-105.94917",
 	"txtName": "ASSINIBOIA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "HMF",
+	"geoLat": "70.704244111",
+	"geoLong": "23.690744278",
+	"txtName": "HAMMERFEST",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "VSB",
@@ -78856,18 +78646,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "WBV",
-	"geoLat": "-22.9821083",
-	"geoLong": "14.6445778",
-	"txtName": "WALVIS BAY",
-	"codeType": "VOR"
-},
-{
 	"codeId": "EW",
 	"geoLat": "35.02162417",
 	"geoLong": "-77.07946194",
 	"txtName": "KATFI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "WBV",
+	"geoLat": "-22.9821083",
+	"geoLong": "14.6445778",
+	"txtName": "WALVIS BAY",
+	"codeType": "VOR"
 },
 {
 	"codeId": "",
@@ -78891,13 +78681,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BF",
-	"geoLat": "5.5349278",
-	"geoLong": "10.3542778",
-	"txtName": "BAFOUSSAM",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GP09",
 	"geoLat": "40.1460944",
 	"geoLong": "44.3771306",
@@ -78910,6 +78693,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "15.497279778",
 	"txtName": "CERKLJE-HRASTJE",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "BF",
+	"geoLat": "5.5349278",
+	"geoLong": "10.3542778",
+	"txtName": "BAFOUSSAM",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KFK",
@@ -79115,13 +78905,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "JRZ",
-	"geoLat": "36.815194",
-	"geoLong": "-6.026528",
-	"txtName": "JEREZ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BRL",
 	"geoLat": "28.41694",
 	"geoLong": "79.45694",
@@ -79129,17 +78912,24 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "JRZ",
+	"geoLat": "36.815194",
+	"geoLong": "-6.026528",
+	"txtName": "JEREZ",
+	"codeType": "VOR"
+},
+{
+	"codeId": "TKT",
+	"geoLat": "42.89333",
+	"geoLong": "143.16583",
+	"txtName": "TOKACHI",
+	"codeType": "TACAN"
+},
+{
 	"codeId": "PDV",
 	"geoLat": "42.053417",
 	"geoLong": "24.876306",
 	"txtName": "PLOVDIV",
-	"codeType": "VOR"
-},
-{
-	"codeId": "RID",
-	"geoLat": "49.781691028",
-	"geoLong": "8.541485",
-	"txtName": "RIED",
 	"codeType": "VOR"
 },
 {
@@ -79150,18 +78940,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TKT",
-	"geoLat": "42.89333",
-	"geoLong": "143.16583",
-	"txtName": "TOKACHI",
-	"codeType": "TACAN"
-},
-{
-	"codeId": "VMZ",
-	"geoLat": "-11.41361",
-	"geoLong": "34.00167",
-	"txtName": "MZUZU",
-	"codeType": "VOR/DME"
+	"codeId": "RID",
+	"geoLat": "49.781691028",
+	"geoLong": "8.541485",
+	"txtName": "RIED",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DAL",
@@ -79169,6 +78952,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "100.32333",
 	"txtName": "DALI",
 	"codeType": "VOR"
+},
+{
+	"codeId": "VMZ",
+	"geoLat": "-11.41361",
+	"geoLong": "34.00167",
+	"txtName": "MZUZU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HET",
@@ -79276,13 +79066,6 @@ export const navaids: EADdata[] = [
 	"codeType": "LOC"
 },
 {
-	"codeId": "SLV",
-	"geoLat": "50.1867917",
-	"geoLong": "29.5701417",
-	"txtName": "SOLOVIIVKA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GV",
 	"geoLat": "55.32139",
 	"geoLong": "82.70333",
@@ -79295,6 +79078,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "27.5796806",
 	"txtName": "IASI",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SLV",
+	"geoLat": "50.1867917",
+	"geoLong": "29.5701417",
+	"txtName": "SOLOVIIVKA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PI",
@@ -79480,17 +79270,10 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "LUN",
-	"geoLat": "28.5527778",
-	"geoLong": "73.7877778",
+	"geoLat": "28.55273556",
+	"geoLong": "73.78747167",
 	"txtName": "BIKANER",
 	"codeType": "VOR"
-},
-{
-	"codeId": "GRD",
-	"geoLat": "53.607639",
-	"geoLong": "24.055944",
-	"txtName": "HRODNA",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PCS",
@@ -79498,6 +79281,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "18.2430306",
 	"txtName": "PECS-POGANY",
 	"codeType": "DME"
+},
+{
+	"codeId": "GRD",
+	"geoLat": "53.607639",
+	"geoLong": "24.055944",
+	"txtName": "HRODNA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BA",
@@ -79598,17 +79388,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "NGB",
-	"geoLat": "29.83",
-	"geoLong": "121.46333",
-	"txtName": "NINGBO / LISHE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "TGE",
 	"geoLat": "32.48486806",
 	"geoLong": "-85.66931861",
 	"txtName": "TUSKEGEE",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "NGB",
+	"geoLat": "29.83",
+	"geoLong": "121.46333",
+	"txtName": "NINGBO / LISHE",
 	"codeType": "VOR/DME"
 },
 {
@@ -79626,18 +79416,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KRH",
-	"geoLat": "48.992943556",
-	"geoLong": "8.584235861",
-	"txtName": "KARLSRUHE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KP",
 	"geoLat": "49.6966389",
 	"geoLong": "31.5642917",
 	"txtName": "KANIV",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KRH",
+	"geoLat": "48.992943556",
+	"geoLong": "8.584235861",
+	"txtName": "KARLSRUHE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "QQZ",
@@ -79654,18 +79444,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "VVZ",
-	"geoLat": "17.668825",
-	"geoLong": "83.2528667",
-	"txtName": "VISHAKHAPATNAM",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IBI",
 	"geoLat": "40.4875",
 	"geoLong": "50.029694",
 	"txtName": "BAKU",
 	"codeType": "DME"
+},
+{
+	"codeId": "VVZ",
+	"geoLat": "17.668825",
+	"geoLong": "83.2528667",
+	"txtName": "VISHAKHAPATNAM",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "VKU",
@@ -79704,8 +79494,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "VBA",
-	"geoLat": "3.324806",
-	"geoLong": "101.456917",
+	"geoLat": "3.324825",
+	"geoLong": "101.4605861",
 	"txtName": "BATU ARANG",
 	"codeType": "VOR/DME"
 },
@@ -79752,18 +79542,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "43.295417",
-	"geoLong": "-2.895111",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "NVK",
 	"geoLat": "30.76861",
 	"geoLong": "-87.0725",
 	"txtName": "ALLENTOWN (MILTON)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "43.295417",
+	"geoLong": "-2.895111",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "IAU",
@@ -79822,18 +79612,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "RZC",
-	"geoLat": "36.24642667",
-	"geoLong": "-94.12139056",
-	"txtName": "RAZORBACK",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "AIK",
 	"geoLat": "33.65180056",
 	"geoLong": "-81.67697222",
 	"txtName": "AIKEN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RZC",
+	"geoLat": "36.24642667",
+	"geoLong": "-94.12139056",
+	"txtName": "RAZORBACK",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "YVV",
@@ -79871,18 +79661,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "DPR",
-	"geoLat": "45.07817528",
-	"geoLong": "-101.71507139",
-	"txtName": "DUPREE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GDE",
 	"geoLat": "30.07047222",
 	"geoLong": "-94.21103556",
 	"txtName": "GOODHUE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DPR",
+	"geoLat": "45.07817528",
+	"geoLong": "-101.71507139",
+	"txtName": "DUPREE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BPK",
@@ -80081,18 +79871,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "50.83549",
-	"geoLong": "6.669507583",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "BY",
 	"geoLat": "28.40784056",
 	"geoLong": "79.45469278",
 	"txtName": "BAREILLY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "50.83549",
+	"geoLong": "6.669507583",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "IMOW",
@@ -80123,18 +79913,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BRY",
-	"geoLat": "40.262528",
-	"geoLong": "29.594028",
-	"txtName": "BURSA/YENISEHIR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KZ",
 	"geoLat": "56.33833",
 	"geoLong": "78.35722",
 	"txtName": "SEVERNOYE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BRY",
+	"geoLat": "40.262528",
+	"geoLong": "29.594028",
+	"txtName": "BURSA/YENISEHIR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HPE",
@@ -80201,8 +79991,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BIS",
-	"geoLat": "34.77595",
-	"geoLong": "5.7636167",
+	"geoLat": "34.7760861",
+	"geoLong": "5.7637306",
 	"txtName": "BISKRA",
 	"codeType": "VOR"
 },
@@ -80298,18 +80088,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BHA",
-	"geoLat": "20.292472",
-	"geoLong": "41.629139",
-	"txtName": "AL BAHA / KING SAUD BIN ABDULAZIZ AIRPORT",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "USU",
 	"geoLat": "-54.837944",
 	"geoLong": "-68.284194",
 	"txtName": "USHUAIA / M. ARGENTINAS",
 	"codeType": "VOR"
+},
+{
+	"codeId": "BHA",
+	"geoLat": "20.292472",
+	"geoLong": "41.629139",
+	"txtName": "AL BAHA / KING SAUD BIN ABDULAZIZ AIRPORT",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "",
@@ -80473,18 +80263,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "CRN",
-	"geoLat": "38.996099833",
-	"geoLong": "17.083175056",
-	"txtName": "CROTONE",
-	"codeType": "DME"
-},
-{
 	"codeId": "MS",
 	"geoLat": "16.7019361",
 	"geoLong": "98.5397917",
 	"txtName": "MAE SOT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CRN",
+	"geoLat": "38.996099833",
+	"geoLong": "17.083175056",
+	"txtName": "CROTONE",
+	"codeType": "DME"
 },
 {
 	"codeId": "XSY",
@@ -80499,13 +80289,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "107.512333",
 	"txtName": "BANDUNG/HUSEIN SASTRANEGARA",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "CTG",
-	"geoLat": "22.25775",
-	"geoLong": "91.8274944",
-	"txtName": "CHATTOGRAM",
-	"codeType": "VOR"
 },
 {
 	"codeId": "VA",
@@ -80527,6 +80310,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "32.93917",
 	"txtName": "BELY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CTG",
+	"geoLat": "22.25775",
+	"geoLong": "91.8274944",
+	"txtName": "CHATTOGRAM",
+	"codeType": "VOR"
 },
 {
 	"codeId": "RP",
@@ -80676,17 +80466,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TBS",
-	"geoLat": "33.672556",
-	"geoLong": "56.891917",
-	"txtName": "TABAS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BJA",
 	"geoLat": "36.7145694",
 	"geoLong": "5.0803972",
 	"txtName": "BEJAIA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "TBS",
+	"geoLat": "33.672556",
+	"geoLong": "56.891917",
+	"txtName": "TABAS",
 	"codeType": "VOR/DME"
 },
 {
@@ -80697,18 +80487,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "ZNT",
-	"geoLat": "31.80806",
-	"geoLong": "12.26389",
-	"txtName": "ZINTAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SG",
 	"geoLat": "45.3641222",
 	"geoLong": "5.3131083",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "ZNT",
+	"geoLat": "31.80806",
+	"geoLong": "12.26389",
+	"txtName": "ZINTAN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "DNW",
@@ -80907,25 +80697,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ER",
-	"geoLat": "39.96028",
-	"geoLong": "41.29472",
-	"txtName": "ERZURUM",
-	"codeType": "NDB"
-},
-{
 	"codeId": "NUC",
 	"geoLat": "33.02693083",
 	"geoLong": "-118.57959889",
 	"txtName": "SAN CLEMENTE",
 	"codeType": "TACAN"
-},
-{
-	"codeId": "TAC",
-	"geoLat": "11.232",
-	"geoLong": "125.026",
-	"txtName": "TACLOBAN",
-	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MCB",
@@ -80940,6 +80716,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-17.483",
 	"txtName": "DAKAR L.S. SENGHOR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TAC",
+	"geoLat": "11.232",
+	"geoLong": "125.026",
+	"txtName": "TACLOBAN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -81306,13 +81089,6 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "BQU",
-	"geoLat": "40.75967667",
-	"geoLong": "-115.76137639",
-	"txtName": "BULLION",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IDU",
 	"geoLat": "47.3953556",
 	"geoLong": "8.6595111",
@@ -81325,6 +81101,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-88.95388806",
 	"txtName": "ELWIN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BQU",
+	"geoLat": "40.75967667",
+	"geoLong": "-115.76137639",
+	"txtName": "BULLION",
+	"codeType": "VOR"
 },
 {
 	"codeId": "AUR",
@@ -81341,17 +81124,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ABA",
-	"geoLat": "52.293733694",
-	"geoLong": "4.775032111",
-	"txtName": "AMSTERDAM/SCHIPHOL",
-	"codeType": "DME"
-},
-{
 	"codeId": "GL",
 	"geoLat": "53.62778",
 	"geoLong": "44.12278",
 	"txtName": "GOLITSYNO",
+	"codeType": "DME"
+},
+{
+	"codeId": "ABA",
+	"geoLat": "52.293733694",
+	"geoLong": "4.775032111",
+	"txtName": "AMSTERDAM/SCHIPHOL",
 	"codeType": "DME"
 },
 {
@@ -81383,18 +81166,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "MTR",
-	"geoLat": "8.8338889",
-	"geoLong": "-75.8297222",
-	"txtName": "MONTERIA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OR",
 	"geoLat": "51.083333",
 	"geoLong": "58.66875",
 	"txtName": "ORSK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MTR",
+	"geoLat": "8.8338889",
+	"geoLong": "-75.8297222",
+	"txtName": "MONTERIA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "RAF",
@@ -81404,18 +81187,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PAP",
-	"geoLat": "42.688389",
-	"geoLong": "-1.660778",
-	"txtName": "PAMPLONA SUR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KMN",
 	"geoLat": "-3.641972",
 	"geoLong": "133.694583",
 	"txtName": "KAIMANA / UTAROM",
 	"codeType": "VOR"
+},
+{
+	"codeId": "PAP",
+	"geoLat": "42.688389",
+	"geoLong": "-1.660778",
+	"txtName": "PAMPLONA SUR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BRW",
@@ -81719,18 +81502,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GSN",
-	"geoLat": "30.327972",
-	"geoLong": "50.847556",
-	"txtName": "GACHSARAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "NK",
 	"geoLat": "55.598028",
 	"geoLong": "52.156194",
 	"txtName": "BEGISHEVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GSN",
+	"geoLat": "30.327972",
+	"geoLong": "50.847556",
+	"txtName": "GACHSARAN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IFZ",
@@ -81761,6 +81544,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
+	"codeId": "DBL",
+	"geoLat": "39.43934528",
+	"geoLong": "-106.89468028",
+	"txtName": "RED TABLE",
+	"codeType": "VOR"
+},
+{
 	"codeId": "HGE",
 	"geoLat": "34.433775",
 	"geoLong": "132.9239694",
@@ -81772,13 +81562,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "51.646025",
 	"geoLong": "0.1517028",
 	"txtName": "LAMBOURNE",
-	"codeType": "VOR"
-},
-{
-	"codeId": "DBL",
-	"geoLat": "39.43934528",
-	"geoLong": "-106.89468028",
-	"txtName": "RED TABLE",
 	"codeType": "VOR"
 },
 {
@@ -81824,18 +81607,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "BYZ",
-	"geoLat": "53.098404944",
-	"geoLong": "17.971709889",
-	"txtName": "BYDGOSZCZ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HEL",
 	"geoLat": "60.3378167",
 	"geoLong": "24.9537306",
 	"txtName": "HELSINKI",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "BYZ",
+	"geoLat": "53.098404944",
+	"geoLong": "17.971709889",
+	"txtName": "BYDGOSZCZ",
+	"codeType": "VOR"
 },
 {
 	"codeId": "PDK",
@@ -81849,6 +81632,13 @@ export const navaids: EADdata[] = [
 	"geoLat": "42.358417",
 	"geoLong": "69.506222",
 	"txtName": "SHYMKENT",
+	"codeType": "NDB"
+},
+{
+	"codeId": "DS",
+	"geoLat": "-6.9273917",
+	"geoLong": "39.1536028",
+	"txtName": "DAR ES SALAAM",
 	"codeType": "NDB"
 },
 {
@@ -81866,13 +81656,6 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "DS",
-	"geoLat": "-6.9273917",
-	"geoLong": "39.1536028",
-	"txtName": "DAR ES SALAAM",
-	"codeType": "NDB"
-},
-{
 	"codeId": "",
 	"geoLat": "64.575889",
 	"geoLong": "16.86525",
@@ -81887,18 +81670,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "RAL",
-	"geoLat": "33.95518056",
-	"geoLong": "-117.44982778",
-	"txtName": "RIVERSIDE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KA",
 	"geoLat": "-20.706083",
 	"geoLong": "116.783972",
 	"txtName": "KARRATHA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RAL",
+	"geoLat": "33.95518056",
+	"geoLong": "-117.44982778",
+	"txtName": "RIVERSIDE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TD",
@@ -81908,18 +81691,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IOLB",
-	"geoLat": "40.903391944",
-	"geoLong": "9.530175",
-	"txtName": "OLBIA/COSTA SMERALDA",
-	"codeType": "DME"
-},
-{
 	"codeId": "RF",
 	"geoLat": "45.28667",
 	"geoLong": "39.9175",
 	"txtName": "LADOZHSKAYA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IOLB",
+	"geoLat": "40.903391944",
+	"geoLong": "9.530175",
+	"txtName": "OLBIA/COSTA SMERALDA",
+	"codeType": "DME"
 },
 {
 	"codeId": "PR",
@@ -81950,13 +81733,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "LBJ",
-	"geoLat": "-8.4814556",
-	"geoLong": "119.8847861",
-	"txtName": "LABUAN BAJO / KOMODO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CCT",
 	"geoLat": "37.38242167",
 	"geoLong": "-87.26370361",
@@ -81964,10 +81740,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PA",
-	"geoLat": "9.3701222",
-	"geoLong": "2.6191111",
-	"txtName": "PARAKOU",
+	"codeId": "LBJ",
+	"geoLat": "-8.4814556",
+	"geoLong": "119.8847861",
+	"txtName": "LABUAN BAJO / KOMODO",
 	"codeType": "VOR"
 },
 {
@@ -81976,6 +81752,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "15.391442",
 	"txtName": "CERKLJE-RAKA",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "PA",
+	"geoLat": "9.3701222",
+	"geoLong": "2.6191111",
+	"txtName": "PARAKOU",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ADN",
@@ -81992,18 +81775,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "OVR",
-	"geoLat": "41.16716694",
-	"geoLong": "-95.73685333",
-	"txtName": "OMAHA",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "DMA",
 	"geoLat": "32.15991583",
 	"geoLong": "-110.88090944",
 	"txtName": "DAVIS MONTHAN",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "OVR",
+	"geoLat": "41.16716694",
+	"geoLong": "-95.73685333",
+	"txtName": "OMAHA",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "SKA",
@@ -82028,8 +81811,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "45.300147333",
-	"geoLong": "-65.896704611",
+	"geoLat": "45.3165615",
+	"geoLong": "-65.884662722",
 	"txtName": "",
 	"codeType": "ILS"
 },
@@ -82055,18 +81838,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TNY",
-	"geoLat": "21.4265167",
-	"geoLong": "-104.8369806",
-	"txtName": "TEPIC",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "HEC",
 	"geoLat": "34.79701806",
 	"geoLong": "-116.46292194",
 	"txtName": "HECTOR",
 	"codeType": "VOR"
+},
+{
+	"codeId": "TNY",
+	"geoLat": "21.4265167",
+	"geoLong": "-104.8369806",
+	"txtName": "TEPIC",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NN",
@@ -82146,18 +81929,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "NIE",
-	"geoLat": "52.625841",
-	"geoLong": "9.37215",
-	"txtName": "NIENBURG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CS",
 	"geoLat": "53.38111",
 	"geoLong": "103.87556",
 	"txtName": "OSA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NIE",
+	"geoLat": "52.625841",
+	"geoLong": "9.37215",
+	"txtName": "NIENBURG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ANW",
@@ -82251,18 +82034,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "OWR",
-	"geoLat": "5.447778",
-	"geoLong": "7.201306",
-	"txtName": "OWERRI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NCA",
 	"geoLat": "34.70714111",
 	"geoLong": "-77.44030083",
 	"txtName": "NEW RIVER",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "OWR",
+	"geoLat": "5.447778",
+	"geoLong": "7.201306",
+	"txtName": "OWERRI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "YGH",
@@ -82426,11 +82209,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KMS",
-	"geoLat": "34.339722",
-	"geoLong": "47.169139",
-	"txtName": "KERMANSHAH",
-	"codeType": "VOR/DME"
+	"codeId": "ULT",
+	"geoLat": "82.51722",
+	"geoLong": "-62.31194",
+	"txtName": "ALERT",
+	"codeType": "DME"
 },
 {
 	"codeId": "FES",
@@ -82440,11 +82223,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ULT",
-	"geoLat": "82.51722",
-	"geoLong": "-62.31194",
-	"txtName": "ALERT",
-	"codeType": "DME"
+	"codeId": "KMS",
+	"geoLat": "34.339722",
+	"geoLong": "47.169139",
+	"txtName": "KERMANSHAH",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OK",
@@ -82475,18 +82258,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "YUX",
-	"geoLat": "68.778325694",
-	"geoLong": "-81.239401167",
-	"txtName": "HALL BEACH",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MLC",
 	"geoLat": "34.84944083",
 	"geoLong": "-95.78234417",
 	"txtName": "MC ALESTER",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "YUX",
+	"geoLat": "68.778325694",
+	"geoLong": "-81.239401167",
+	"txtName": "HALL BEACH",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PF",
@@ -82531,17 +82314,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "HOT",
-	"geoLat": "64.23425",
-	"geoLong": "15.933278",
-	"txtName": "HOTING",
-	"codeType": "DME"
-},
-{
 	"codeId": "NTA",
 	"geoLat": "49.342494444",
 	"geoLong": "19.967491667",
 	"txtName": "NOWY TARG",
+	"codeType": "DME"
+},
+{
+	"codeId": "HOT",
+	"geoLat": "64.23425",
+	"geoLong": "15.933278",
+	"txtName": "HOTING",
 	"codeType": "DME"
 },
 {
@@ -82580,18 +82363,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KAS",
-	"geoLat": "55.5905194",
-	"geoLong": "12.6136028",
-	"txtName": "KASTRUP",
-	"codeType": "VOR"
-},
-{
 	"codeId": "NUW",
 	"geoLat": "48.35493444",
 	"geoLong": "-122.66178806",
 	"txtName": "WHIDBEY ISLAND",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "KAS",
+	"geoLat": "55.5905194",
+	"geoLong": "12.6136028",
+	"txtName": "KASTRUP",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SMI",
@@ -82643,13 +82426,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "GGB",
-	"geoLat": "17.3063611",
-	"geoLong": "76.9684833",
-	"txtName": "KALABURAGI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PZA",
 	"geoLat": "14.045208361",
 	"geoLong": "-83.388281083",
@@ -82662,6 +82438,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "120.326361",
 	"txtName": "KAOHSIUNG",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GGB",
+	"geoLat": "17.3063611",
+	"geoLong": "76.9684833",
+	"txtName": "KALABURAGI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "WHV",
@@ -82860,18 +82643,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
-	"codeId": "VLI",
-	"geoLat": "-17.66213083",
-	"geoLong": "168.24389",
-	"txtName": "PORT VILA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "48.241167",
 	"geoLong": "25.993778",
 	"txtName": "UKLN MM 33",
 	"codeType": "MKR"
+},
+{
+	"codeId": "VLI",
+	"geoLat": "-17.66213083",
+	"geoLong": "168.24389",
+	"txtName": "PORT VILA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "ASB",
@@ -82965,13 +82748,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CLO",
-	"geoLat": "3.4008333",
-	"geoLong": "-76.4063889",
-	"txtName": "CALI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ICA",
 	"geoLat": "15.17675",
 	"geoLong": "120.56",
@@ -82979,10 +82755,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "ALC",
-	"geoLat": "-19.26778",
-	"geoLong": "-65.14306",
-	"txtName": "ALCANTARI",
+	"codeId": "CLO",
+	"geoLat": "3.4008333",
+	"geoLong": "-76.4063889",
+	"txtName": "CALI",
 	"codeType": "VOR/DME"
 },
 {
@@ -82990,6 +82766,13 @@ export const navaids: EADdata[] = [
 	"geoLat": "33.52353083",
 	"geoLong": "-90.9829375",
 	"txtName": "GREENVILLE",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "ALC",
+	"geoLat": "-19.26778",
+	"geoLong": "-65.14306",
+	"txtName": "ALCANTARI",
 	"codeType": "VOR/DME"
 },
 {
@@ -83196,13 +82979,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "WUR",
-	"geoLat": "43.91333",
-	"geoLong": "87.50833",
-	"txtName": "URUMQI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KL",
 	"geoLat": "-1.17",
 	"geoLong": "12.43278",
@@ -83210,10 +82986,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "WUR",
+	"geoLat": "43.91333",
+	"geoLong": "87.50833",
+	"txtName": "URUMQI",
+	"codeType": "VOR"
+},
+{
 	"codeId": "SMR",
 	"geoLat": "36.6928861",
 	"geoLong": "3.0898722",
 	"txtName": "SEMMAR",
+	"codeType": "NDB"
+},
+{
+	"codeId": "SYR",
+	"geoLat": "37.4235361",
+	"geoLong": "24.9481722",
+	"txtName": "SYROS",
 	"codeType": "NDB"
 },
 {
@@ -83229,13 +83019,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "26.9155",
 	"txtName": "",
 	"codeType": "ILS"
-},
-{
-	"codeId": "SYR",
-	"geoLat": "37.4235361",
-	"geoLong": "24.9481722",
-	"txtName": "SYROS",
-	"codeType": "NDB"
 },
 {
 	"codeId": "TVC",
@@ -83259,18 +83042,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "IZN",
-	"geoLat": "39.1037222",
-	"geoLong": "46.73705",
-	"txtName": "ZANGILAN",
-	"codeType": "DME"
-},
-{
 	"codeId": "DYS",
 	"geoLat": "32.41851111",
 	"geoLong": "-99.85705",
 	"txtName": "DYESS",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "IZN",
+	"geoLat": "39.1037222",
+	"geoLong": "46.73705",
+	"txtName": "ZANGILAN",
+	"codeType": "DME"
 },
 {
 	"codeId": "PHP",
@@ -83322,18 +83105,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "BUN",
-	"geoLat": "1.5666667",
-	"geoLong": "30.2233333",
-	"txtName": "BUNIA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KER",
 	"geoLat": "30.2645",
 	"geoLong": "56.958361",
 	"txtName": "KERMAN",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "BUN",
+	"geoLat": "1.5666667",
+	"geoLong": "30.2233333",
+	"txtName": "BUNIA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "EEL",
@@ -83371,18 +83154,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "NI",
-	"geoLat": "43.6548611",
-	"geoLong": "7.2061111",
-	"txtName": "",
-	"codeType": "DME"
-},
-{
 	"codeId": "DM",
 	"geoLat": "55.604917",
 	"geoLong": "38.045917",
 	"txtName": "RAMENSKOYE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NI",
+	"geoLat": "43.6548611",
+	"geoLong": "7.2061111",
+	"txtName": "",
+	"codeType": "DME"
 },
 {
 	"codeId": "WAK",
@@ -83469,13 +83252,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "OEJ",
-	"geoLat": "47.31482575",
-	"geoLong": "11.602231028",
-	"txtName": "INNSBRUCK-RWY26",
-	"codeType": "DME"
-},
-{
 	"codeId": "CO",
 	"geoLat": "39.65683",
 	"geoLong": "-86.1855",
@@ -83483,18 +83259,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "OEJ",
+	"geoLat": "47.31482575",
+	"geoLong": "11.602231028",
+	"txtName": "INNSBRUCK-RWY26",
+	"codeType": "DME"
+},
+{
 	"codeId": "TNL",
 	"geoLat": "64.9375",
 	"geoLong": "77.81861",
 	"txtName": "TARKO-SALE",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "LDP",
-	"geoLat": "4.6945139",
-	"geoLong": "-61.0296972",
-	"txtName": "LA DIVINA PASTORA",
-	"codeType": "VOR"
 },
 {
 	"codeId": "OZN",
@@ -83735,18 +83511,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KPL",
-	"geoLat": "40.9126639",
-	"geoLong": "24.6147611",
-	"txtName": "KAVALA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HAB",
 	"geoLat": "35.2",
 	"geoLong": "48.66667",
 	"txtName": "HAMADAN / NOGEH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KPL",
+	"geoLat": "40.9126639",
+	"geoLong": "24.6147611",
+	"txtName": "KAVALA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BBS",
@@ -83770,6 +83546,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "INE",
+	"geoLat": "46.23054222",
+	"geoLong": "6.09550722",
+	"txtName": "LSGG 05",
+	"codeType": "DME"
+},
+{
 	"codeId": "CDX",
 	"geoLat": "31.25",
 	"geoLong": "104.38",
@@ -83789,13 +83572,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "",
 	"txtName": "",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "INE",
-	"geoLat": "46.23054222",
-	"geoLong": "6.09550722",
-	"txtName": "LSGG 05",
-	"codeType": "DME"
 },
 {
 	"codeId": "ZZV",
@@ -83917,18 +83693,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "SJD",
-	"geoLat": "23.1461611",
-	"geoLong": "-109.7215389",
-	"txtName": "CABOS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "CSC",
 	"geoLat": "43.5226111",
 	"geoLong": "7.0451111",
 	"txtName": "CSC",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SJD",
+	"geoLat": "23.1461611",
+	"geoLong": "-109.7215389",
+	"txtName": "CABOS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "Z",
@@ -83959,18 +83735,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CLO",
-	"geoLat": "3.4008333",
-	"geoLong": "-76.4063889",
-	"txtName": "CALI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CNT",
 	"geoLat": "38.66833333",
 	"geoLong": "-115.59888889",
 	"txtName": "CURRANT",
 	"codeType": "DME"
+},
+{
+	"codeId": "CLO",
+	"geoLat": "3.4008333",
+	"geoLong": "-76.4063889",
+	"txtName": "CALI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DUG",
@@ -84064,17 +83840,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "KTS",
-	"geoLat": "42.175722",
-	"geoLong": "42.484806",
-	"txtName": "KUTAISI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SKO",
 	"geoLat": "11.5922222",
 	"geoLong": "-5.8158333",
 	"txtName": "SIKASSO",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "KTS",
+	"geoLat": "42.175722",
+	"geoLong": "42.484806",
+	"txtName": "KUTAISI",
 	"codeType": "VOR/DME"
 },
 {
@@ -84085,18 +83861,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SV",
-	"geoLat": "68.245830028",
-	"geoLong": "14.672071028",
-	"txtName": "SVOLVAER/HELLE",
-	"codeType": "LOC_DME"
-},
-{
 	"codeId": "GCR",
 	"geoLat": "60.49875639",
 	"geoLong": "-145.47446722",
 	"txtName": "GLACIER RIVER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SV",
+	"geoLat": "68.245830028",
+	"geoLong": "14.672071028",
+	"txtName": "SVOLVAER/HELLE",
+	"codeType": "LOC_DME"
 },
 {
 	"codeId": "SIR",
@@ -84134,13 +83910,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BKZ",
-	"geoLat": "41.126972",
-	"geoLong": "29.142889",
-	"txtName": "BEYKOZ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HOC",
 	"geoLat": "47.466556",
 	"geoLong": "7.665444",
@@ -84148,10 +83917,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "LIV",
-	"geoLat": "49.811944",
-	"geoLong": "23.951389",
-	"txtName": "LVIV",
+	"codeId": "BKZ",
+	"geoLat": "41.126972",
+	"geoLong": "29.142889",
+	"txtName": "BEYKOZ",
 	"codeType": "VOR"
 },
 {
@@ -84160,6 +83929,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "44.317194",
 	"txtName": "MORONDAVA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LIV",
+	"geoLat": "49.811944",
+	"geoLong": "23.951389",
+	"txtName": "LVIV",
+	"codeType": "VOR"
 },
 {
 	"codeId": "LNN",
@@ -84204,18 +83980,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "MGA",
-	"geoLat": "36.814306",
-	"geoLong": "-4.369583",
-	"txtName": "MALAGA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SAL",
 	"geoLat": "43.6106361",
 	"geoLong": "5.101083",
 	"txtName": "SALON DE PROVENCE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MGA",
+	"geoLat": "36.814306",
+	"geoLong": "-4.369583",
+	"txtName": "MALAGA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HOT",
@@ -84232,18 +84008,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "ILA",
-	"geoLat": "39.07117361",
-	"geoLong": "-122.02726972",
-	"txtName": "WILLIAMS",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "HCM",
 	"geoLat": "37.44866",
 	"geoLong": "-76.71135389",
 	"txtName": "HARCUM",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ILA",
+	"geoLat": "39.07117361",
+	"geoLong": "-122.02726972",
+	"txtName": "WILLIAMS",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "BES",
@@ -84260,6 +84036,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "GJ",
+	"geoLat": "65.994806",
+	"geoLong": "-21.330083",
+	"txtName": "GJOGUR",
+	"codeType": "NDB"
+},
+{
 	"codeId": "UL",
 	"geoLat": "57.111249444",
 	"geoLong": "2.847374722",
@@ -84272,13 +84055,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-28.454510639",
 	"txtName": "",
 	"codeType": "LOC"
-},
-{
-	"codeId": "GJ",
-	"geoLat": "65.994806",
-	"geoLong": "-21.330083",
-	"txtName": "GJOGUR",
-	"codeType": "NDB"
 },
 {
 	"codeId": "OAL",
@@ -84309,18 +84085,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ORM",
-	"geoLat": "60.8335",
-	"geoLong": "25.7620917",
-	"txtName": "ORIMAA",
-	"codeType": "DME"
-},
-{
 	"codeId": "HY",
 	"geoLat": "41.716",
 	"geoLong": "-70.20283",
 	"txtName": "BOGEY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ORM",
+	"geoLat": "60.8335",
+	"geoLong": "25.7620917",
+	"txtName": "ORIMAA",
+	"codeType": "DME"
 },
 {
 	"codeId": "PCK",
@@ -84519,18 +84295,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SYX",
-	"geoLat": "18.31",
-	"geoLong": "109.17333",
-	"txtName": "SANYA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "DUS",
 	"geoLat": "51.283187556",
 	"geoLong": "6.753726333",
 	"txtName": "DUESSELDORF",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SYX",
+	"geoLat": "18.31",
+	"geoLong": "109.17333",
+	"txtName": "SANYA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -84608,13 +84384,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-97.93415139",
 	"txtName": "HUTCHINSON",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "UW",
-	"geoLat": "55.51667",
-	"geoLong": "46.44806",
-	"txtName": "SHUMERLYA",
-	"codeType": "NDB"
 },
 {
 	"codeId": "FJV",
@@ -84729,18 +84498,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SSO",
-	"geoLat": "32.269245",
-	"geoLong": "-109.2630875",
-	"txtName": "SAN SIMON",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "NVI",
 	"geoLat": "40.114833",
 	"geoLong": "65.176444",
 	"txtName": "NAVOI",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SSO",
+	"geoLat": "32.269245",
+	"geoLong": "-109.2630875",
+	"txtName": "SAN SIMON",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "YBR",
@@ -84820,18 +84589,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FQF",
-	"geoLat": "39.69013889",
-	"geoLong": "-104.62097222",
-	"txtName": "FALCON",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "HUG",
 	"geoLat": "-20.820611",
 	"geoLong": "144.229028",
 	"txtName": "HUGHENDEN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FQF",
+	"geoLat": "39.69013889",
+	"geoLong": "-104.62097222",
+	"txtName": "FALCON",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "KTG",
@@ -84841,17 +84610,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "INS",
-	"geoLat": "57.5426361",
-	"geoLong": "-4.0411083",
-	"txtName": "INVERNESS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "WFX",
 	"geoLat": "30.6067",
 	"geoLong": "104.4917",
 	"txtName": "WUFENGXI",
+	"codeType": "VOR"
+},
+{
+	"codeId": "INS",
+	"geoLat": "57.5426361",
+	"geoLong": "-4.0411083",
+	"txtName": "INVERNESS",
 	"codeType": "VOR"
 },
 {
@@ -84953,17 +84722,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "VFL",
-	"geoLat": "38.51941575",
-	"geoLong": "-28.623561111",
-	"txtName": "HORTA",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "BIG",
 	"geoLat": "64.00446111",
 	"geoLong": "-145.71724722",
 	"txtName": "BIG DELTA",
+	"codeType": "VORTAC"
+},
+{
+	"codeId": "VFL",
+	"geoLat": "38.51941575",
+	"geoLong": "-28.623561111",
+	"txtName": "HORTA",
 	"codeType": "VORTAC"
 },
 {
@@ -85051,18 +84820,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TNA",
-	"geoLat": "-5.0625",
-	"geoLong": "-42.825",
-	"txtName": "TERESINA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SP",
 	"geoLat": "43.23400472",
 	"geoLong": "-95.32789333",
 	"txtName": "SNORE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TNA",
+	"geoLat": "-5.0625",
+	"geoLong": "-42.825",
+	"txtName": "TERESINA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -85100,10 +84869,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "RCH",
-	"geoLat": "45.829814528",
-	"geoLong": "13.480286361",
-	"txtName": "RONCHI DEI LEGIONARI",
+	"codeId": "BIL",
+	"geoLat": "45.80855917",
+	"geoLong": "-108.6246475",
+	"txtName": "BILLINGS",
 	"codeType": "VOR"
 },
 {
@@ -85114,18 +84883,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "BIL",
-	"geoLat": "45.80855917",
-	"geoLong": "-108.6246475",
-	"txtName": "BILLINGS",
+	"codeId": "RCH",
+	"geoLat": "45.829814528",
+	"geoLong": "13.480286361",
+	"txtName": "RONCHI DEI LEGIONARI",
 	"codeType": "VOR"
 },
 {
-	"codeId": "RIL",
-	"geoLat": "39.52832167",
-	"geoLong": "-107.7196575",
-	"txtName": "RIFLE",
-	"codeType": "VOR/DME"
+	"codeId": "IKR",
+	"geoLat": "52.182111",
+	"geoLong": "-9.524472",
+	"txtName": "KERRY",
+	"codeType": "DME"
 },
 {
 	"codeId": "DSH",
@@ -85135,11 +84904,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "IKR",
-	"geoLat": "52.182111",
-	"geoLong": "-9.524472",
-	"txtName": "KERRY",
-	"codeType": "DME"
+	"codeId": "RIL",
+	"geoLat": "39.52832167",
+	"geoLong": "-107.7196575",
+	"txtName": "RIFLE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PPN",
@@ -85170,13 +84939,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "51.8513417",
-	"geoLong": "-8.4970694",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "DR",
 	"geoLat": "48.357444",
 	"geoLong": "35.174917",
@@ -85184,17 +84946,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB_MKR"
 },
 {
+	"codeId": "",
+	"geoLat": "51.8513417",
+	"geoLong": "-8.4970694",
+	"txtName": "",
+	"codeType": "ILS_DME"
+},
+{
 	"codeId": "SUM",
 	"geoLat": "64.955444",
 	"geoLong": "17.708278",
 	"txtName": "STORUMAN",
-	"codeType": "VOR/DME"
-},
-{
-	"codeId": "PRF",
-	"geoLat": "-21.3197861",
-	"geoLong": "55.4203083",
-	"txtName": "SAINT PIERRE PIERREFONDS",
 	"codeType": "VOR/DME"
 },
 {
@@ -85205,10 +84967,24 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "PRF",
+	"geoLat": "-21.3197861",
+	"geoLong": "55.4203083",
+	"txtName": "SAINT PIERRE PIERREFONDS",
+	"codeType": "VOR/DME"
+},
+{
 	"codeId": "MLY",
 	"geoLat": "17.9302472",
 	"geoLong": "-76.7776278",
 	"txtName": "MANLEY",
+	"codeType": "VOR"
+},
+{
+	"codeId": "CLJ",
+	"geoLat": "46.8001194",
+	"geoLong": "23.7872528",
+	"txtName": "CLUJ",
 	"codeType": "VOR"
 },
 {
@@ -85217,13 +84993,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "45.44528",
 	"txtName": "BOPAN",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "CLJ",
-	"geoLat": "46.8001194",
-	"geoLong": "23.7872528",
-	"txtName": "CLUJ",
-	"codeType": "VOR"
 },
 {
 	"codeId": "CGW",
@@ -85275,18 +85044,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ATF",
-	"geoLat": "-9.86833",
-	"geoLong": "-56.105",
-	"txtName": "ALTA FLORESTA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PNZ",
 	"geoLat": "53.113861",
 	"geoLong": "45.017667",
 	"txtName": "PENZA",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ATF",
+	"geoLat": "-9.86833",
+	"geoLong": "-56.105",
+	"txtName": "ALTA FLORESTA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -85534,18 +85303,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ERH",
-	"geoLat": "38.462528",
-	"geoLong": "38.112139",
-	"txtName": "MALATYA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ISI",
 	"geoLat": "46.215194",
 	"geoLong": "7.312833",
 	"txtName": "LSGS 25",
 	"codeType": "DME"
+},
+{
+	"codeId": "ERH",
+	"geoLat": "38.462528",
+	"geoLong": "38.112139",
+	"txtName": "MALATYA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "GNL",
@@ -85870,18 +85639,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "POS",
-	"geoLat": "-27.3855694",
-	"geoLong": "-55.9689972",
-	"txtName": "POSADAS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IAS",
 	"geoLat": "51.546777778",
 	"geoLong": "19.198055556",
 	"txtName": "LASK",
 	"codeType": "DME"
+},
+{
+	"codeId": "POS",
+	"geoLat": "-27.3855694",
+	"geoLong": "-55.9689972",
+	"txtName": "POSADAS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BRY",
@@ -85961,18 +85730,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SWR",
-	"geoLat": "39.18032278",
-	"geoLong": "-120.26961222",
-	"txtName": "PALISADES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "48.2475",
 	"geoLong": "25.989167",
 	"txtName": "",
 	"codeType": "ILS"
+},
+{
+	"codeId": "SWR",
+	"geoLat": "39.18032278",
+	"geoLong": "-120.26961222",
+	"txtName": "PALISADES",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CEN",
@@ -86129,18 +85898,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "PNK",
-	"geoLat": "-0.079167",
-	"geoLong": "109.374944",
-	"txtName": "PONTIANAK/SUPADIO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HI",
 	"geoLat": "48.568444",
 	"geoLong": "135.246111",
 	"txtName": "KHABAROVSK/NOVY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PNK",
+	"geoLat": "-0.079167",
+	"geoLong": "109.374944",
+	"txtName": "PONTIANAK/SUPADIO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IABT",
@@ -86164,18 +85933,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "BBI",
-	"geoLat": "52.342014083",
-	"geoLong": "13.454047389",
-	"txtName": "BERLIN-BRANDENBURG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IQAR",
 	"geoLat": "31.7328472",
 	"geoLong": "36.0041806",
 	"txtName": "QUEEN ALIA",
 	"codeType": "DME"
+},
+{
+	"codeId": "BBI",
+	"geoLat": "52.342014083",
+	"geoLong": "13.454047389",
+	"txtName": "BERLIN-BRANDENBURG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IAYT",
@@ -86227,18 +85996,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "DAG",
-	"geoLat": "34.96245694",
-	"geoLong": "-116.57816639",
-	"txtName": "DAGGETT",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SCV",
 	"geoLat": "47.6706917",
 	"geoLong": "26.3615417",
 	"txtName": "SUCEAVA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DAG",
+	"geoLat": "34.96245694",
+	"geoLong": "-116.57816639",
+	"txtName": "DAGGETT",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CVS",
@@ -86360,18 +86129,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "OAK",
-	"geoLat": "37.72592556",
-	"geoLong": "-122.22359194",
-	"txtName": "OAKLAND",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LSE",
 	"geoLat": "45.7455194",
 	"geoLong": "5.0905861",
 	"txtName": "SAINT EXUPERY",
 	"codeType": "VOR"
+},
+{
+	"codeId": "OAK",
+	"geoLat": "37.72592556",
+	"geoLong": "-122.22359194",
+	"txtName": "OAKLAND",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "RMC",
@@ -86430,18 +86199,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CJU",
-	"geoLat": "33.38472",
-	"geoLong": "126.62417",
-	"txtName": "JEJU",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "PLB",
 	"geoLat": "-2.878583",
 	"geoLong": "104.653167",
 	"txtName": "PALEMBANG/SULTAN MAHMUD BADARUDDIN II",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "CJU",
+	"geoLat": "33.38472",
+	"geoLong": "126.62417",
+	"txtName": "JEJU",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "PAR",
@@ -86458,18 +86227,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BRO",
-	"geoLat": "25.92407222",
-	"geoLong": "-97.37526833",
-	"txtName": "BROWNSVILLE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "DYB",
 	"geoLat": "33.06145778",
 	"geoLong": "-80.27718611",
 	"txtName": "DORCHESTER COUNTY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "BRO",
+	"geoLat": "25.92407222",
+	"geoLong": "-97.37526833",
+	"txtName": "BROWNSVILLE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "P",
@@ -86682,6 +86451,13 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
+	"codeId": "DTM",
+	"geoLat": "27.98333",
+	"geoLong": "113.125",
+	"txtName": "TIAOMA",
+	"codeType": "VOR"
+},
+{
 	"codeId": "PAV",
 	"geoLat": "-1.515972",
 	"geoLong": "-78.043361",
@@ -86689,11 +86465,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DTM",
-	"geoLat": "27.98333",
-	"geoLong": "113.125",
-	"txtName": "TIAOMA",
-	"codeType": "VOR"
+	"codeId": "IKA",
+	"geoLat": "37.6827611",
+	"geoLong": "26.3457417",
+	"txtName": "IKARIA",
+	"codeType": "NDB"
 },
 {
 	"codeId": "HZN",
@@ -86708,13 +86484,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-35.786861",
 	"txtName": "ZUMBI",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "IKA",
-	"geoLat": "37.6827611",
-	"geoLong": "26.3457417",
-	"txtName": "IKARIA",
-	"codeType": "NDB"
 },
 {
 	"codeId": "YIN",
@@ -86906,18 +86675,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "LPD",
-	"geoLat": "35.49975225",
-	"geoLong": "12.630912972",
-	"txtName": "LAMPEDUSA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "EYW",
 	"geoLat": "24.58587833",
 	"geoLong": "-81.80047639",
 	"txtName": "KEY WEST",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "LPD",
+	"geoLat": "35.49975225",
+	"geoLong": "12.630912972",
+	"txtName": "LAMPEDUSA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "RER",
@@ -87144,18 +86913,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DWN",
-	"geoLat": "45.0874625",
-	"geoLong": "-94.45384972",
-	"txtName": "DARWIN",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "IMM",
 	"geoLat": "52.194358333",
 	"geoLong": "21.668897222",
 	"txtName": "MINSK MAZOWIECKI",
 	"codeType": "DME"
+},
+{
+	"codeId": "DWN",
+	"geoLat": "45.0874625",
+	"geoLong": "-94.45384972",
+	"txtName": "DARWIN",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "HLC",
@@ -87235,18 +87004,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "DIG",
-	"geoLat": "28.5421806",
-	"geoLong": "77.0804611",
-	"txtName": "DELHI",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "AE",
 	"geoLat": "69.755444",
 	"geoLong": "61.697611",
 	"txtName": "AMDERMA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DIG",
+	"geoLat": "28.5421806",
+	"geoLong": "77.0804611",
+	"txtName": "DELHI",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ADX",
@@ -87536,17 +87305,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SAT",
-	"geoLat": "47.7274167",
-	"geoLong": "22.8938722",
-	"txtName": "SATU MARE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "ORF",
 	"geoLat": "36.89190472",
 	"geoLong": "-76.20032694",
 	"txtName": "NORFOLK",
+	"codeType": "VOR"
+},
+{
+	"codeId": "SAT",
+	"geoLat": "47.7274167",
+	"geoLong": "22.8938722",
+	"txtName": "SATU MARE",
 	"codeType": "VOR"
 },
 {
@@ -87655,6 +87424,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "",
+	"geoLat": "39.71944",
+	"geoLong": "36.86333",
+	"txtName": "OM SIVAS",
+	"codeType": "MKR"
+},
+{
 	"codeId": "WAV",
 	"geoLat": "1.7468139",
 	"geoLong": "40.082425",
@@ -87667,13 +87443,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "13.177461833",
 	"txtName": "PALERMO/PUNTA RAISI",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "",
-	"geoLat": "39.71944",
-	"geoLong": "36.86333",
-	"txtName": "OM SIVAS",
-	"codeType": "MKR"
 },
 {
 	"codeId": "",
@@ -87711,18 +87480,18 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "PMA",
-	"geoLat": "24.547472",
-	"geoLong": "39.705278",
-	"txtName": "MADINAH/PRINCE MOHAMMAD BIN ABDULAZIZ INTL",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IKW",
 	"geoLat": "53.337972",
 	"geoLong": "69.606389",
 	"txtName": "KOKSHETAU",
 	"codeType": "DME"
+},
+{
+	"codeId": "PMA",
+	"geoLat": "24.547472",
+	"geoLong": "39.705278",
+	"txtName": "MADINAH/PRINCE MOHAMMAD BIN ABDULAZIZ INTL",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -87753,18 +87522,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SAF",
-	"geoLat": "35.54054111",
-	"geoLong": "-106.06493583",
-	"txtName": "SANTA FE",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "ISNK",
 	"geoLat": "37.370278",
 	"geoLong": "42.046444",
 	"txtName": "SIRNAK/SERAFETTIN ELCI",
 	"codeType": "DME"
+},
+{
+	"codeId": "SAF",
+	"geoLat": "35.54054111",
+	"geoLong": "-106.06493583",
+	"txtName": "SANTA FE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "FJA",
@@ -87774,18 +87543,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "YTZ",
-	"geoLat": "-5.52389",
-	"geoLong": "-47.44972",
-	"txtName": "IMPERATRIZ",
-	"codeType": "VOR"
-},
-{
 	"codeId": "L",
 	"geoLat": "47.7787333",
 	"geoLong": "22.9115639",
 	"txtName": "SATU MARE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "YTZ",
+	"geoLat": "-5.52389",
+	"geoLong": "-47.44972",
+	"txtName": "IMPERATRIZ",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SGD",
@@ -87873,8 +87642,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "CK",
-	"geoLat": "36.52705833",
-	"geoLong": "-87.38675861",
+	"geoLat": "36.52705722",
+	"geoLong": "-87.38675639",
 	"txtName": "SNUFF",
 	"codeType": "NDB"
 },
@@ -87942,13 +87711,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "FAM",
-	"geoLat": "37.67346139",
-	"geoLong": "-90.23405972",
-	"txtName": "FARMINGTON",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "FRA",
 	"geoLat": "37.10442083",
 	"geoLong": "-119.59544556",
@@ -87956,11 +87718,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SVB",
-	"geoLat": "13.659028",
-	"geoLong": "100.731444",
-	"txtName": "SUVARNABHUMI",
-	"codeType": "VOR/DME"
+	"codeId": "FAM",
+	"geoLat": "37.67346139",
+	"geoLong": "-90.23405972",
+	"txtName": "FARMINGTON",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "SOA",
@@ -87970,10 +87732,10 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ADA",
-	"geoLat": "36.940583",
-	"geoLong": "35.210389",
-	"txtName": "ADANA",
+	"codeId": "SVB",
+	"geoLat": "13.659028",
+	"geoLong": "100.731444",
+	"txtName": "SUVARNABHUMI",
 	"codeType": "VOR/DME"
 },
 {
@@ -87982,6 +87744,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "104.576",
 	"txtName": "SINGKEP/DABO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ADA",
+	"geoLat": "36.940583",
+	"geoLong": "35.210389",
+	"txtName": "ADANA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "HV",
@@ -88047,18 +87816,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "41.1659083",
-	"geoLong": "20.7364028",
-	"txtName": "",
-	"codeType": "MKR"
-},
-{
 	"codeId": "MK",
 	"geoLat": "-16.587806",
 	"geoLong": "-143.65525",
 	"txtName": "MAKEMO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "41.1659083",
+	"geoLong": "20.7364028",
+	"txtName": "",
+	"codeType": "MKR"
 },
 {
 	"codeId": "R",
@@ -88096,17 +87865,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CBH",
-	"geoLat": "25.444972",
-	"geoLong": "60.414361",
-	"txtName": "CHAH BAHAR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BNN",
 	"geoLat": "21.98",
 	"geoLong": "100.755",
 	"txtName": "XISHUANGBANNA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "CBH",
+	"geoLat": "25.444972",
+	"geoLong": "60.414361",
+	"txtName": "CHAH BAHAR",
 	"codeType": "VOR/DME"
 },
 {
@@ -88145,13 +87914,6 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "MML",
-	"geoLat": "12.9516194",
-	"geoLong": "74.8854611",
-	"txtName": "MANGALURU",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "WE",
 	"geoLat": "5.8764028",
 	"geoLong": "95.3373556",
@@ -88159,11 +87921,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LS",
-	"geoLat": "-34.862222",
-	"geoLong": "-55.100306",
-	"txtName": "CAPITAN CURBELO (MALDONADO)",
-	"codeType": "NDB"
+	"codeId": "MML",
+	"geoLat": "12.9516194",
+	"geoLong": "74.8854611",
+	"txtName": "MANGALURU",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ICO",
@@ -88257,18 +88019,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AUC",
-	"geoLat": "7.0672222",
-	"geoLong": "-70.7327778",
-	"txtName": "ARAUCA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "DOR",
 	"geoLat": "51.525341167",
 	"geoLong": "7.631056306",
 	"txtName": "WICKEDE",
 	"codeType": "VOR"
+},
+{
+	"codeId": "AUC",
+	"geoLat": "7.0672222",
+	"geoLong": "-70.7327778",
+	"txtName": "ARAUCA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "BLD",
@@ -88516,13 +88278,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "",
-	"geoLat": "52.9180528",
-	"geoLong": "4.7745861",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "PK",
 	"geoLat": "50.0119639",
 	"geoLong": "15.7518611",
@@ -88530,11 +88285,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TDE",
-	"geoLat": "18.4567139",
-	"geoLong": "94.2957639",
-	"txtName": "THANDWE",
-	"codeType": "VOR"
+	"codeId": "",
+	"geoLat": "52.9180528",
+	"geoLong": "4.7745861",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "LB",
@@ -88542,6 +88297,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "10.23194",
 	"txtName": "LAMBARENE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TDE",
+	"geoLat": "18.4567139",
+	"geoLong": "94.2957639",
+	"txtName": "THANDWE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "WK",
@@ -88719,13 +88481,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SKD",
-	"geoLat": "32.279833",
-	"geoLong": "50.854917",
-	"txtName": "SHAHRE KORD",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SPO",
 	"geoLat": "68.091944",
 	"geoLong": "21.6905",
@@ -88733,11 +88488,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "RD",
-	"geoLat": "54.8875",
-	"geoLong": "49.92028",
-	"txtName": "BAZARNYYE MATAKI",
-	"codeType": "DME"
+	"codeId": "SKD",
+	"geoLat": "32.279833",
+	"geoLong": "50.854917",
+	"txtName": "SHAHRE KORD",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DPY",
@@ -88745,6 +88500,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-117.42632889",
 	"txtName": "DEER PARK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RD",
+	"geoLat": "54.8875",
+	"geoLong": "49.92028",
+	"txtName": "BAZARNYYE MATAKI",
+	"codeType": "DME"
 },
 {
 	"codeId": "KF",
@@ -88782,18 +88544,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "58.842538222",
-	"geoLong": "-122.584156972",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "BZ",
 	"geoLat": "28.1017",
 	"geoLong": "119.5617",
 	"txtName": "YUNHE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "58.842538222",
+	"geoLong": "-122.584156972",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "ASP",
@@ -88824,18 +88586,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "NGA",
-	"geoLat": "13.582222",
-	"geoLong": "123.269528",
-	"txtName": "NAGA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KIT",
 	"geoLat": "36.2767417",
 	"geoLong": "23.0148222",
 	"txtName": "KITHIRA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NGA",
+	"geoLat": "13.582222",
+	"geoLong": "123.269528",
+	"txtName": "NAGA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MNW",
@@ -88901,18 +88663,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "ODN",
-	"geoLat": "55.5810111",
-	"geoLong": "10.6529889",
-	"txtName": "ODIN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "MD",
 	"geoLat": "40.24638778",
 	"geoLong": "-76.90069528",
 	"txtName": "ENOLA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ODN",
+	"geoLat": "55.5810111",
+	"geoLong": "10.6529889",
+	"txtName": "ODIN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "HET",
@@ -88964,17 +88726,17 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "BTA",
-	"geoLat": "42.5735833",
-	"geoLong": "9.4748222",
-	"txtName": "BASTIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GZD",
 	"geoLat": "54.387793306",
 	"geoLong": "18.425264333",
 	"txtName": "GDANSK",
+	"codeType": "VOR"
+},
+{
+	"codeId": "BTA",
+	"geoLat": "42.5735833",
+	"geoLong": "9.4748222",
+	"txtName": "BASTIA",
 	"codeType": "VOR"
 },
 {
@@ -89146,17 +88908,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "DBQ",
-	"geoLat": "42.40146917",
-	"geoLong": "-90.70907806",
-	"txtName": "DUBUQUE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KYU",
 	"geoLat": "42.63167",
 	"geoLong": "124.00667",
 	"txtName": "KAIYUAN",
+	"codeType": "VOR"
+},
+{
+	"codeId": "DBQ",
+	"geoLat": "42.40146917",
+	"geoLong": "-90.70907806",
+	"txtName": "DUBUQUE",
 	"codeType": "VOR"
 },
 {
@@ -89209,18 +88971,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "EYP",
-	"geoLat": "5.2761111",
-	"geoLong": "-72.4266667",
-	"txtName": "EL YOPAL",
-	"codeType": "VOR"
-},
-{
 	"codeId": "WMD",
 	"geoLat": "-32.755056",
 	"geoLong": "151.53275",
 	"txtName": "WEST MAITLAND",
 	"codeType": "NDB"
+},
+{
+	"codeId": "EYP",
+	"geoLat": "5.2761111",
+	"geoLong": "-72.4266667",
+	"txtName": "EL YOPAL",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IHAT",
@@ -89293,6 +89055,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "KM",
+	"geoLat": "64.594611",
+	"geoLong": "40.833278",
+	"txtName": "ARKHANGELSK/TALAGI",
+	"codeType": "NDB"
+},
+{
 	"codeId": "YBC",
 	"geoLat": "49.134021611",
 	"geoLong": "-68.222030111",
@@ -89304,13 +89073,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "68.326168583",
 	"geoLong": "-133.592772528",
 	"txtName": "INUVIK",
-	"codeType": "NDB"
-},
-{
-	"codeId": "KM",
-	"geoLat": "64.594611",
-	"geoLong": "40.833278",
-	"txtName": "ARKHANGELSK/TALAGI",
 	"codeType": "NDB"
 },
 {
@@ -89384,18 +89146,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "ADA",
-	"geoLat": "36.940583",
-	"geoLong": "35.210389",
-	"txtName": "ADANA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KS",
 	"geoLat": "55.82556",
 	"geoLong": "37.27111",
 	"txtName": "OPALIKHA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ADA",
+	"geoLat": "36.940583",
+	"geoLong": "35.210389",
+	"txtName": "ADANA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "SBY",
@@ -89440,18 +89202,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SCB",
-	"geoLat": "41.60475444",
-	"geoLong": "-96.62883861",
-	"txtName": "SCRIBNER",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SB",
 	"geoLat": "48.5675222",
 	"geoLong": "-2.7824333",
 	"txtName": "SAINT BRIEUC ARMOR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SCB",
+	"geoLat": "41.60475444",
+	"geoLong": "-96.62883861",
+	"txtName": "SCRIBNER",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TUT",
@@ -89517,18 +89279,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "REP",
-	"geoLat": "13.360556",
-	"geoLong": "104.219694",
-	"txtName": "SIEM REAP ANGKOR",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "F",
 	"geoLat": "53.514028",
 	"geoLong": "50.182972",
 	"txtName": "SAMARA/KURUMOCH",
 	"codeType": "NDB"
+},
+{
+	"codeId": "REP",
+	"geoLat": "13.360556",
+	"geoLong": "104.219694",
+	"txtName": "SIEM REAP ANGKOR",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OK",
@@ -89713,18 +89475,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "48.944899056",
-	"geoLong": "-54.546743389",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "PT",
 	"geoLat": "27.32605",
 	"geoLong": "97.4241556",
 	"txtName": "PUTAO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "48.944899056",
+	"geoLong": "-54.546743389",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "SPI",
@@ -89748,17 +89510,17 @@ export const navaids: EADdata[] = [
 	"codeType": "DF"
 },
 {
-	"codeId": "YFF",
-	"geoLat": "56.6532806",
-	"geoLong": "-111.3354361",
-	"txtName": "FORT MCMURRAY",
-	"codeType": "DME"
-},
-{
 	"codeId": "IALY",
 	"geoLat": "36.883389",
 	"geoLong": "30.808917",
 	"txtName": "ANTALYA",
+	"codeType": "DME"
+},
+{
+	"codeId": "YFF",
+	"geoLat": "56.6532806",
+	"geoLong": "-111.3354361",
+	"txtName": "FORT MCMURRAY",
 	"codeType": "DME"
 },
 {
@@ -89867,13 +89629,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "HE",
-	"geoLat": "49.3865194",
-	"geoLong": "-121.42417",
-	"txtName": "HOPE",
-	"codeType": "NDB"
-},
-{
 	"codeId": "PKU",
 	"geoLat": "0.425583",
 	"geoLong": "101.441611",
@@ -89916,18 +89671,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NNK",
-	"geoLat": "4.137833",
-	"geoLong": "117.664056",
-	"txtName": "NUNUKAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LP",
 	"geoLat": "-24.58333",
 	"geoLong": "33.06667",
 	"txtName": "LIMPOPO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NNK",
+	"geoLat": "4.137833",
+	"geoLong": "117.664056",
+	"txtName": "NUNUKAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "YBG",
@@ -90105,18 +89860,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "HCH",
-	"geoLat": "37.655",
-	"geoLong": "120.545",
-	"txtName": "HUANGCHENG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "40.744861",
 	"geoLong": "47.744444",
 	"txtName": "OM",
 	"codeType": "MKR"
+},
+{
+	"codeId": "HCH",
+	"geoLat": "37.655",
+	"geoLong": "120.545",
+	"txtName": "HUANGCHENG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NG",
@@ -90350,6 +90105,13 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "SZ",
+	"geoLat": "38.62861",
+	"geoLong": "-93.57222",
+	"txtName": "HAWKS",
+	"codeType": "NDB"
+},
+{
 	"codeId": "RTM",
 	"geoLat": "51.973706389",
 	"geoLong": "4.480980278",
@@ -90362,13 +90124,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "32.564694",
 	"txtName": "KONYA",
 	"codeType": "VOR"
-},
-{
-	"codeId": "SZ",
-	"geoLat": "38.62861",
-	"geoLong": "-93.57222",
-	"txtName": "HAWKS",
-	"codeType": "NDB"
 },
 {
 	"codeId": "YAG",
@@ -90385,18 +90140,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "IZW",
-	"geoLat": "47.457521556",
-	"geoLong": "8.566605639",
-	"txtName": "LSZH 28",
-	"codeType": "DME"
-},
-{
 	"codeId": "YDP",
 	"geoLat": "56.533798806",
 	"geoLong": "-61.691777722",
 	"txtName": "NAIN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IZW",
+	"geoLat": "47.457521556",
+	"geoLong": "8.566605639",
+	"txtName": "LSZH 28",
+	"codeType": "DME"
 },
 {
 	"codeId": "ZIN",
@@ -90511,13 +90266,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ABN",
-	"geoLat": "44.055978556",
-	"geoLong": "8.220986389",
-	"txtName": "ALBENGA",
-	"codeType": "NDB"
-},
-{
 	"codeId": "KMN",
 	"geoLat": "-3.641972",
 	"geoLong": "133.694583",
@@ -90588,11 +90336,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "YSJ",
-	"geoLat": "45.40722",
-	"geoLong": "-65.87083",
-	"txtName": "SAINT JOHN",
-	"codeType": "VOR"
+	"codeId": "SHH",
+	"geoLat": "66.25808528",
+	"geoLong": "-166.05238889",
+	"txtName": "SHISHMAREF",
+	"codeType": "NDB"
 },
 {
 	"codeId": "CHP",
@@ -90602,13 +90350,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "SHH",
-	"geoLat": "66.25808528",
-	"geoLong": "-166.05238889",
-	"txtName": "SHISHMAREF",
-	"codeType": "NDB"
-},
-{
 	"codeId": "QJG",
 	"geoLat": "29.05167",
 	"geoLong": "106.665",
@@ -90616,18 +90357,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "MTW",
-	"geoLat": "44.12849861",
-	"geoLong": "-87.67991806",
-	"txtName": "MANITOWOC",
-	"codeType": "DME"
-},
-{
 	"codeId": "UAW",
 	"geoLat": "44.633146111",
 	"geoLong": "-63.499956639",
 	"txtName": "SHEARWATER",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "MTW",
+	"geoLat": "44.12849861",
+	"geoLong": "-87.67991806",
+	"txtName": "MANITOWOC",
+	"codeType": "DME"
 },
 {
 	"codeId": "CCY",
@@ -90693,17 +90434,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "BIZ",
-	"geoLat": "37.236611",
-	"geoLong": "9.766389",
-	"txtName": "BIZERTE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CEN",
 	"geoLat": "23.15167",
 	"geoLong": "113.41667",
 	"txtName": "CENCUN",
+	"codeType": "VOR"
+},
+{
+	"codeId": "BIZ",
+	"geoLat": "37.236611",
+	"geoLong": "9.766389",
+	"txtName": "BIZERTE",
 	"codeType": "VOR"
 },
 {
@@ -90735,13 +90476,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "15.17675",
-	"geoLong": "120.56",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "RBT",
 	"geoLat": "42.526389",
 	"geoLong": "21.042167",
@@ -90754,6 +90488,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "64.477083",
 	"txtName": "BUKHARA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "15.17675",
+	"geoLong": "120.56",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "NL",
@@ -90770,6 +90511,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "JW",
+	"geoLat": "49.2059139",
+	"geoLong": "-2.219925",
+	"txtName": "JERSEY",
+	"codeType": "NDB"
+},
+{
 	"codeId": "UJM",
 	"geoLat": "34.57504667",
 	"geoLong": "-90.67440139",
@@ -90782,13 +90530,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-8.062536889",
 	"txtName": "",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "JW",
-	"geoLat": "49.2059139",
-	"geoLong": "-2.219925",
-	"txtName": "JERSEY",
-	"codeType": "NDB"
 },
 {
 	"codeId": "PEI",
@@ -90819,18 +90560,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "ESV",
-	"geoLat": "0.971889",
-	"geoLong": "-79.628528",
-	"txtName": "ESMERALDAS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "YOE",
 	"geoLat": "34.5984583",
 	"geoLong": "135.5937056",
 	"txtName": "YAO",
 	"codeType": "VOR"
+},
+{
+	"codeId": "ESV",
+	"geoLat": "0.971889",
+	"geoLong": "-79.628528",
+	"txtName": "ESMERALDAS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MID",
@@ -90854,6 +90595,13 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
+	"codeId": "LU",
+	"geoLat": "43.3868639",
+	"geoLong": "6.5251722",
+	"txtName": "LE LUC LE CANNET",
+	"codeType": "NDB"
+},
+{
 	"codeId": "TZU",
 	"geoLat": "44.4567583",
 	"geoLong": "18.735425",
@@ -90866,13 +90614,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "-101.099907139",
 	"txtName": "THE PAS",
 	"codeType": "DME"
-},
-{
-	"codeId": "LU",
-	"geoLat": "43.3868639",
-	"geoLong": "6.5251722",
-	"txtName": "LE LUC LE CANNET",
-	"codeType": "NDB"
 },
 {
 	"codeId": "KI",
@@ -90903,18 +90644,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "FLO",
-	"geoLat": "61.581561722",
-	"geoLong": "5.020182167",
-	"txtName": "FLORO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "VPG",
 	"geoLat": "5.2794",
 	"geoLong": "100.2607722",
 	"txtName": "PENANG",
 	"codeType": "VOR"
+},
+{
+	"codeId": "FLO",
+	"geoLat": "61.581561722",
+	"geoLong": "5.020182167",
+	"txtName": "FLORO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TGM",
@@ -91218,13 +90959,6 @@ export const navaids: EADdata[] = [
 	"codeType": "MKR"
 },
 {
-	"codeId": "NAX",
-	"geoLat": "39.201639",
-	"geoLong": "45.440944",
-	"txtName": "NAKHCHIVAN",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PTI",
 	"geoLat": "42.16167",
 	"geoLong": "41.69722",
@@ -91232,11 +90966,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "FLM",
-	"geoLat": "38.64944167",
-	"geoLong": "-84.31060167",
-	"txtName": "FALMOUTH",
-	"codeType": "VOR/DME"
+	"codeId": "NAX",
+	"geoLat": "39.201639",
+	"geoLong": "45.440944",
+	"txtName": "NAKHCHIVAN",
+	"codeType": "VOR"
 },
 {
 	"codeId": "DV",
@@ -91244,6 +90978,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-90.65583",
 	"txtName": "AUNEY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FLM",
+	"geoLat": "38.64944167",
+	"geoLong": "-84.31060167",
+	"txtName": "FALMOUTH",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MRN",
@@ -91309,18 +91050,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "YQL",
-	"geoLat": "49.634399222",
-	"geoLong": "-112.667784694",
-	"txtName": "LETHBRIDGE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BRL",
 	"geoLat": "40.72345583",
 	"geoLong": "-90.92588972",
 	"txtName": "BURLINGTON",
 	"codeType": "VOR"
+},
+{
+	"codeId": "YQL",
+	"geoLat": "49.634399222",
+	"geoLong": "-112.667784694",
+	"txtName": "LETHBRIDGE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ZSJ",
@@ -91330,17 +91071,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "SCZ",
-	"geoLat": "53.595406694",
-	"geoLong": "14.88148725",
-	"txtName": "SZCZECIN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "PTN",
 	"geoLat": "16.8086889",
 	"geoLong": "94.76955",
 	"txtName": "PATHEIN",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "SCZ",
+	"geoLat": "53.595406694",
+	"geoLong": "14.88148725",
+	"txtName": "SZCZECIN",
 	"codeType": "VOR/DME"
 },
 {
@@ -91456,18 +91197,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "YWL",
-	"geoLat": "52.2371056",
-	"geoLong": "-122.1685778",
-	"txtName": "WILLIAMS LAKE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "KNS",
 	"geoLat": "68.4539972",
 	"geoLong": "27.4515139",
 	"txtName": "KAUNIS",
 	"codeType": "DME"
+},
+{
+	"codeId": "YWL",
+	"geoLat": "52.2371056",
+	"geoLong": "-122.1685778",
+	"txtName": "WILLIAMS LAKE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -91477,18 +91218,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "",
-	"geoLat": "51.715527778",
-	"geoLong": "19.369008333",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "VTI",
 	"geoLat": "60.45925",
 	"geoLong": "24.2440694",
 	"txtName": "VIHTI",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "51.715527778",
+	"geoLong": "19.369008333",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "SSB",
@@ -91540,18 +91281,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "SOR",
-	"geoLat": "40.582449889",
-	"geoLong": "14.335026889",
-	"txtName": "SORRENTO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "AST",
 	"geoLat": "43.557833",
 	"geoLong": "-6.028389",
 	"txtName": "ASTURIAS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "SOR",
+	"geoLat": "40.582449889",
+	"geoLong": "14.335026889",
+	"txtName": "SORRENTO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "WU",
@@ -91589,18 +91330,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "SEL",
-	"geoLat": "37.948861",
-	"geoLong": "27.333611",
-	"txtName": "SELCUK EFES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MSD",
 	"geoLat": "36.233111",
 	"geoLong": "59.6485",
 	"txtName": "MASHHAD",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "SEL",
+	"geoLat": "37.948861",
+	"geoLong": "27.333611",
+	"txtName": "SELCUK EFES",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "FOC",
@@ -91617,18 +91358,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "59.2105",
-	"geoLong": "15.030472",
-	"txtName": "",
-	"codeType": "ILS"
-},
-{
 	"codeId": "LY",
 	"geoLat": "37.2624225",
 	"geoLong": "-79.24313056",
 	"txtName": "BOJAR",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "59.2105",
+	"geoLong": "15.030472",
+	"txtName": "",
+	"codeType": "ILS"
 },
 {
 	"codeId": "",
@@ -91645,13 +91386,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ZVD",
-	"geoLat": "53.556028",
-	"geoLong": "28.130389",
-	"txtName": "ZVIAZDA",
-	"codeType": "DME"
-},
-{
 	"codeId": "SKC",
 	"geoLat": "39.1741917",
 	"geoLong": "23.5008806",
@@ -91659,11 +91393,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TAM",
-	"geoLat": "22.2896028",
-	"geoLong": "-97.8630222",
-	"txtName": "TAMPICO",
-	"codeType": "VOR"
+	"codeId": "ZVD",
+	"geoLat": "53.556028",
+	"geoLong": "28.130389",
+	"txtName": "ZVIAZDA",
+	"codeType": "DME"
 },
 {
 	"codeId": "YXC",
@@ -91671,6 +91405,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-116.08830175",
 	"txtName": "CRANBROOK",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "TAM",
+	"geoLat": "22.2896028",
+	"geoLong": "-97.8630222",
+	"txtName": "TAMPICO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BHZ",
@@ -91708,18 +91449,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DPR",
-	"geoLat": "37.447000556",
-	"geoLong": "-7.590223583",
-	"txtName": "PEREIRO",
-	"codeType": "DME"
-},
-{
 	"codeId": "VON",
 	"geoLat": "42.186056",
 	"geoLong": "-8.639",
 	"txtName": "VIGO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DPR",
+	"geoLat": "37.447000556",
+	"geoLong": "-7.590223583",
+	"txtName": "PEREIRO",
+	"codeType": "DME"
 },
 {
 	"codeId": "FLO",
@@ -91771,18 +91512,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "GOG",
-	"geoLat": "35.89425",
-	"geoLong": "-115.49608333",
-	"txtName": "GOODSPRINGS",
-	"codeType": "DME"
-},
-{
 	"codeId": "OW",
 	"geoLat": "42.11973056",
 	"geoLong": "-71.12845278",
 	"txtName": "STOGE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GOG",
+	"geoLat": "35.89425",
+	"geoLong": "-115.49608333",
+	"txtName": "GOODSPRINGS",
+	"codeType": "DME"
 },
 {
 	"codeId": "",
@@ -91799,17 +91540,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "YDC",
-	"geoLat": "49.381540528",
-	"geoLong": "-120.373772639",
-	"txtName": "PRINCETON",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ASM",
 	"geoLat": "15.285",
 	"geoLong": "38.9017",
 	"txtName": "ASMARA",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "YDC",
+	"geoLat": "49.381540528",
+	"geoLong": "-120.373772639",
+	"txtName": "PRINCETON",
 	"codeType": "VOR/DME"
 },
 {
@@ -91862,18 +91603,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "OPH",
-	"geoLat": "55.82528",
-	"geoLong": "37.27056",
-	"txtName": "OPALIKHA",
-	"codeType": "DME"
-},
-{
 	"codeId": "KR",
 	"geoLat": "14.9564667",
 	"geoLong": "102.3147028",
 	"txtName": "NAKHON RATCHASIMA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "OPH",
+	"geoLat": "55.82528",
+	"geoLong": "37.27056",
+	"txtName": "OPALIKHA",
+	"codeType": "DME"
 },
 {
 	"codeId": "MLD",
@@ -91939,13 +91680,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MTG",
-	"geoLat": "32.89361",
-	"geoLong": "13.27278",
-	"txtName": "MITIGA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GNB",
 	"geoLat": "59.82222",
 	"geoLong": "32.35194",
@@ -91953,10 +91687,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "TFE",
-	"geoLat": "-3.38778",
-	"geoLong": "-64.72806",
-	"txtName": "TEFE",
+	"codeId": "MTG",
+	"geoLat": "32.89361",
+	"geoLong": "13.27278",
+	"txtName": "MITIGA",
 	"codeType": "VOR/DME"
 },
 {
@@ -91964,6 +91698,13 @@ export const navaids: EADdata[] = [
 	"geoLat": "31.13",
 	"geoLong": "121.67167",
 	"txtName": "LIUZAO",
+	"codeType": "VOR/DME"
+},
+{
+	"codeId": "TFE",
+	"geoLat": "-3.38778",
+	"geoLong": "-64.72806",
+	"txtName": "TEFE",
 	"codeType": "VOR/DME"
 },
 {
@@ -92002,18 +91743,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
-	"codeId": "DKH",
-	"geoLat": "23.7448778",
-	"geoLong": "-15.9198278",
-	"txtName": "DAKHLA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "WT",
 	"geoLat": "55.58889",
 	"geoLong": "37.78583",
 	"txtName": "KARTINO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "DKH",
+	"geoLat": "23.7448778",
+	"geoLong": "-15.9198278",
+	"txtName": "DAKHLA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BGI",
@@ -92135,18 +91876,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "KUE",
-	"geoLat": "32.8348028",
-	"geoLong": "130.8415139",
-	"txtName": "KUMAMOTO",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MHD",
 	"geoLat": "51.234911611",
 	"geoLong": "6.491969722",
 	"txtName": "MOENCHENGLADBACH",
 	"codeType": "DME"
+},
+{
+	"codeId": "KUE",
+	"geoLat": "32.8348028",
+	"geoLong": "130.8415139",
+	"txtName": "KUMAMOTO",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "ATE",
@@ -92254,11 +91995,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CHX",
-	"geoLat": "46.8712056",
-	"geoLong": "1.7418722",
-	"txtName": "CHATEAUROUX",
-	"codeType": "VOR/DME"
+	"codeId": "PIK",
+	"geoLat": "55.5060889",
+	"geoLong": "-4.5772528",
+	"txtName": "PRESTWICK",
+	"codeType": "NDB"
 },
 {
 	"codeId": "DAR",
@@ -92268,11 +92009,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "PIK",
-	"geoLat": "55.5060889",
-	"geoLong": "-4.5772528",
-	"txtName": "PRESTWICK",
-	"codeType": "NDB"
+	"codeId": "CHX",
+	"geoLat": "46.8712056",
+	"geoLong": "1.7418722",
+	"txtName": "CHATEAUROUX",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OCK",
@@ -92317,18 +92058,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "GEF",
-	"geoLat": "30.55134167",
-	"geoLong": "-83.78313278",
-	"txtName": "GREENVILLE",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "ZA",
 	"geoLat": "47.821611",
 	"geoLong": "35.286389",
 	"txtName": "ZAPORIZHZHIA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "GEF",
+	"geoLat": "30.55134167",
+	"geoLong": "-83.78313278",
+	"txtName": "GREENVILLE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "DB",
@@ -92373,18 +92114,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ARL",
-	"geoLat": "46.8256333",
-	"geoLong": "61.6181611",
-	"txtName": "ARALSK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "ZHH",
 	"geoLat": "-15.93333",
 	"geoLong": "-5.71667",
 	"txtName": "ST HELENA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ARL",
+	"geoLat": "46.8256333",
+	"geoLong": "61.6181611",
+	"txtName": "ARALSK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "OKS",
@@ -92492,11 +92233,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "CNK",
-	"geoLat": "40.135306",
-	"geoLong": "26.427472",
-	"txtName": "CANAKKALE",
-	"codeType": "VOR"
+	"codeId": "D",
+	"geoLat": "63.5865",
+	"geoLong": "53.81675",
+	"txtName": "UKHTA",
+	"codeType": "NDB"
 },
 {
 	"codeId": "ICRD",
@@ -92506,17 +92247,10 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "D",
-	"geoLat": "63.5865",
-	"geoLong": "53.81675",
-	"txtName": "UKHTA",
-	"codeType": "NDB"
-},
-{
-	"codeId": "LAV",
-	"geoLat": "57.656111",
-	"geoLong": "12.289861",
-	"txtName": "LANDVETTER",
+	"codeId": "CNK",
+	"geoLat": "40.135306",
+	"geoLong": "26.427472",
+	"txtName": "CANAKKALE",
 	"codeType": "VOR"
 },
 {
@@ -92525,6 +92259,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "34.096167",
 	"txtName": "PETROZAVODSK/BESOVETS",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LAV",
+	"geoLat": "57.656111",
+	"geoLong": "12.289861",
+	"txtName": "LANDVETTER",
+	"codeType": "VOR"
 },
 {
 	"codeId": "GJA",
@@ -92597,13 +92338,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MSL",
-	"geoLat": "34.70686861",
-	"geoLong": "-87.49151722",
-	"txtName": "MUSCLE SHOALS",
-	"codeType": "DME"
-},
-{
 	"codeId": "ET",
 	"geoLat": "60.7966361",
 	"geoLong": "-161.8214083",
@@ -92616,6 +92350,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "53.907972",
 	"txtName": "SOCOTRA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "MSL",
+	"geoLat": "34.70686861",
+	"geoLong": "-87.49151722",
+	"txtName": "MUSCLE SHOALS",
+	"codeType": "DME"
 },
 {
 	"codeId": "WG",
@@ -92723,6 +92464,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "KBD",
+	"geoLat": "48.780225722",
+	"geoLong": "8.088487306",
+	"txtName": "KARLSRUHE/BADEN-BADEN",
+	"codeType": "DME"
+},
+{
 	"codeId": "JUJ",
 	"geoLat": "-24.3935",
 	"geoLong": "-65.092806",
@@ -92737,11 +92485,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "KBD",
-	"geoLat": "48.780225722",
-	"geoLong": "8.088487306",
-	"txtName": "KARLSRUHE/BADEN-BADEN",
-	"codeType": "DME"
+	"codeId": "OCN",
+	"geoLat": "33.24063389",
+	"geoLong": "-117.41772083",
+	"txtName": "OCEANSIDE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "BRV",
@@ -92749,13 +92497,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "25.5646806",
 	"txtName": "BRASOV",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "OCN",
-	"geoLat": "33.24063389",
-	"geoLong": "-117.41772083",
-	"txtName": "OCEANSIDE",
-	"codeType": "VORTAC"
 },
 {
 	"codeId": "I",
@@ -92903,13 +92644,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "11.676191667",
 	"txtName": "VICENZA",
 	"codeType": "VOR/DME"
-},
-{
-	"codeId": "ECY",
-	"geoLat": "30.559825",
-	"geoLong": "-92.44808056",
-	"txtName": "DURALDE",
-	"codeType": "NDB"
 },
 {
 	"codeId": "OMA",
@@ -93157,13 +92891,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "YPE",
-	"geoLat": "56.206921583",
-	"geoLong": "-117.511799639",
-	"txtName": "PEACE RIVER",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "JIL",
 	"geoLat": "36.797583",
 	"geoLong": "5.875472",
@@ -93171,10 +92898,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "POT",
-	"geoLat": "5.036194",
-	"geoLong": "6.960639",
-	"txtName": "PORT HARCOURT",
+	"codeId": "YPE",
+	"geoLat": "56.206921583",
+	"geoLong": "-117.511799639",
+	"txtName": "PEACE RIVER",
 	"codeType": "VOR/DME"
 },
 {
@@ -93185,11 +92912,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TFD",
-	"geoLat": "32.88585444",
-	"geoLong": "-111.90873444",
-	"txtName": "STANFIELD",
-	"codeType": "VOR"
+	"codeId": "POT",
+	"geoLat": "5.036194",
+	"geoLong": "6.960639",
+	"txtName": "PORT HARCOURT",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "PIS",
@@ -93197,6 +92924,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "15.8439972",
 	"txtName": "PISAROVINA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TFD",
+	"geoLat": "32.88585444",
+	"geoLong": "-111.90873444",
+	"txtName": "STANFIELD",
+	"codeType": "VOR"
 },
 {
 	"codeId": "TOR",
@@ -93283,13 +93017,6 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "NRK",
-	"geoLat": "51.077028",
-	"geoLong": "58.626333",
-	"txtName": "ORSK",
-	"codeType": "VOR"
-},
-{
 	"codeId": "GB",
 	"geoLat": "7.255278",
 	"geoLong": "9.004972",
@@ -93297,11 +93024,11 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "59.575889",
-	"geoLong": "16.628194",
-	"txtName": "",
-	"codeType": "ILS_DME"
+	"codeId": "NRK",
+	"geoLat": "51.077028",
+	"geoLong": "58.626333",
+	"txtName": "ORSK",
+	"codeType": "VOR"
 },
 {
 	"codeId": "IZFE",
@@ -93309,6 +93036,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "30.139694",
 	"txtName": "ZAFER",
 	"codeType": "DME"
+},
+{
+	"codeId": "",
+	"geoLat": "59.575889",
+	"geoLong": "16.628194",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "KKP",
@@ -93374,6 +93108,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VORTAC"
 },
 {
+	"codeId": "UG",
+	"geoLat": "57.67139",
+	"geoLong": "134.36917",
+	"txtName": "URGALAN",
+	"codeType": "NDB"
+},
+{
 	"codeId": "DS",
 	"geoLat": "14.6443306",
 	"geoLong": "-17.0725694",
@@ -93385,13 +93126,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "34.28722",
 	"geoLong": "-6.62056",
 	"txtName": "KENITRA",
-	"codeType": "NDB"
-},
-{
-	"codeId": "UG",
-	"geoLat": "57.67139",
-	"geoLong": "134.36917",
-	"txtName": "URGALAN",
 	"codeType": "NDB"
 },
 {
@@ -93545,7 +93279,7 @@ export const navaids: EADdata[] = [
 	"codeId": "DBN",
 	"geoLat": "21.3735",
 	"geoLong": "103.007889",
-	"txtName": "PUT DIEN BIEN",
+	"txtName": "DIEN BIEN",
 	"codeType": "VOR/DME"
 },
 {
@@ -93556,13 +93290,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GLD",
-	"geoLat": "39.38786778",
-	"geoLong": "-101.69229667",
-	"txtName": "GOODLAND",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HT",
 	"geoLat": "60.109639",
 	"geoLong": "13.5675",
@@ -93570,9 +93297,16 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
+	"codeId": "GLD",
+	"geoLat": "39.38786778",
+	"geoLong": "-101.69229667",
+	"txtName": "GOODLAND",
+	"codeType": "VOR"
+},
+{
 	"codeId": "LUN",
-	"geoLat": "28.5527778",
-	"geoLong": "73.7877778",
+	"geoLat": "28.55273556",
+	"geoLong": "73.78747167",
 	"txtName": "BIKANER",
 	"codeType": "VOR/DME"
 },
@@ -93633,13 +93367,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LA",
-	"geoLat": "49.1600889",
-	"geoLong": "16.1329194",
-	"txtName": "NAMEST DME 30",
-	"codeType": "DME"
-},
-{
 	"codeId": "LR",
 	"geoLat": "32.219",
 	"geoLong": "-106.83633",
@@ -93647,11 +93374,11 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "COL",
-	"geoLat": "40.31162944",
-	"geoLong": "-74.15972861",
-	"txtName": "COLTS NECK",
-	"codeType": "VOR/DME"
+	"codeId": "LA",
+	"geoLat": "49.1600889",
+	"geoLong": "16.1329194",
+	"txtName": "NAMEST DME 30",
+	"codeType": "DME"
 },
 {
 	"codeId": "NRR",
@@ -93659,6 +93386,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-65.64372778",
 	"txtName": "ROOSEVELT ROADS",
 	"codeType": "TACAN"
+},
+{
+	"codeId": "COL",
+	"geoLat": "40.31162944",
+	"geoLong": "-74.15972861",
+	"txtName": "COLTS NECK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "NGJ",
@@ -93710,10 +93444,10 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "MHZ",
-	"geoLat": "32.43406944",
-	"geoLong": "-90.09977222",
-	"txtName": "MAGNOLIA",
+	"codeId": "WHA",
+	"geoLat": "30.78167",
+	"geoLong": "114.20333",
+	"txtName": "TIANHE",
 	"codeType": "VOR"
 },
 {
@@ -93724,10 +93458,10 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "WHA",
-	"geoLat": "30.78167",
-	"geoLong": "114.20333",
-	"txtName": "TIANHE",
+	"codeId": "MHZ",
+	"geoLat": "32.43406944",
+	"geoLong": "-90.09977222",
+	"txtName": "MAGNOLIA",
 	"codeType": "VOR"
 },
 {
@@ -93837,8 +93571,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "NVS",
-	"geoLat": "40.36861",
-	"geoLong": "-4.24944",
+	"geoLat": "40.368667",
+	"geoLong": "-4.249333",
 	"txtName": "NAVAS DEL REY",
 	"codeType": "VOR"
 },
@@ -93941,18 +93675,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TAU",
-	"geoLat": "50.250465083",
-	"geoLong": "8.162525333",
-	"txtName": "TAUNUS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TYN",
 	"geoLat": "10.362993889",
 	"geoLong": "1.351238306",
 	"txtName": "NATITINGOU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "TAU",
+	"geoLat": "50.250465083",
+	"geoLong": "8.162525333",
+	"txtName": "TAUNUS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "L",
@@ -93969,18 +93703,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ITU",
-	"geoLat": "50.237083",
-	"geoLong": "57.216111",
-	"txtName": "AKTOBE",
-	"codeType": "DME"
-},
-{
 	"codeId": "OM",
 	"geoLat": "31.8541389",
 	"geoLong": "24.5924722",
 	"txtName": "KAMBUT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ITU",
+	"geoLat": "50.237083",
+	"geoLong": "57.216111",
+	"txtName": "AKTOBE",
+	"codeType": "DME"
 },
 {
 	"codeId": "GAZ",
@@ -94019,10 +93753,17 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "BAC",
-	"geoLat": "5.5226306",
-	"geoLong": "95.4222917",
+	"geoLat": "5.522639",
+	"geoLong": "95.422306",
 	"txtName": "BANDA ACEH/SULTAN ISKANDAR MUDA",
 	"codeType": "VOR"
+},
+{
+	"codeId": "HYR",
+	"geoLat": "46.01900694",
+	"geoLong": "-91.44639583",
+	"txtName": "HAYWARD",
+	"codeType": "DME"
 },
 {
 	"codeId": "BNG",
@@ -94039,13 +93780,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "HYR",
-	"geoLat": "46.01900694",
-	"geoLong": "-91.44639583",
-	"txtName": "HAYWARD",
-	"codeType": "DME"
-},
-{
 	"codeId": "MKR",
 	"geoLat": "56.3083",
 	"geoLong": "10.5711306",
@@ -94060,13 +93794,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "MR",
-	"geoLat": "55.97889",
-	"geoLong": "37.32806",
-	"txtName": "MOSCOW/SHEREMETYEVO",
-	"codeType": "VOR"
-},
-{
 	"codeId": "IMLY",
 	"geoLat": "38.446583",
 	"geoLong": "38.098167",
@@ -94079,6 +93806,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "9.08254725",
 	"txtName": "GENOVA",
 	"codeType": "DME"
+},
+{
+	"codeId": "MR",
+	"geoLat": "55.97889",
+	"geoLong": "37.32806",
+	"txtName": "MOSCOW/SHEREMETYEVO",
+	"codeType": "VOR"
 },
 {
 	"codeId": "KT",
@@ -94137,18 +93871,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "SOM",
-	"geoLat": "8.9410556",
-	"geoLong": "-64.15775",
-	"txtName": "SAN TOME",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "GLV",
 	"geoLat": "-0.461083",
 	"geoLong": "-90.258556",
 	"txtName": "GALAPAGOS",
 	"codeType": "VOR"
+},
+{
+	"codeId": "SOM",
+	"geoLat": "8.9410556",
+	"geoLong": "-64.15775",
+	"txtName": "SAN TOME",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IBG",
@@ -94368,18 +94102,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CYY",
-	"geoLat": "26.1534275",
-	"geoLong": "-81.77810333",
-	"txtName": "CYPRESS",
-	"codeType": "VOR"
-},
-{
 	"codeId": "TV",
 	"geoLat": "44.73455361",
 	"geoLong": "-85.42904611",
 	"txtName": "GWENN",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CYY",
+	"geoLat": "26.1534275",
+	"geoLong": "-81.77810333",
+	"txtName": "CYPRESS",
+	"codeType": "VOR"
 },
 {
 	"codeId": "NMS",
@@ -94417,18 +94151,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "LBV",
-	"geoLat": "26.828185",
-	"geoLong": "-81.39143833",
-	"txtName": "LA BELLE",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "KA",
 	"geoLat": "24.8279333",
 	"geoLong": "66.664425",
 	"txtName": "CAPE MONZE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LBV",
+	"geoLat": "26.828185",
+	"geoLong": "-81.39143833",
+	"txtName": "LA BELLE",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "STW",
@@ -94466,6 +94200,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
+	"codeId": "FOR",
+	"geoLat": "6.2",
+	"geoLong": "-10.36667",
+	"txtName": "MONROVIA/ROBERTS",
+	"codeType": "NDB"
+},
+{
 	"codeId": "TXC",
 	"geoLat": "39.6983175",
 	"geoLong": "-103.21493861",
@@ -94478,13 +94219,6 @@ export const navaids: EADdata[] = [
 	"geoLong": "118.745194",
 	"txtName": "",
 	"codeType": "ILS_DME"
-},
-{
-	"codeId": "FOR",
-	"geoLat": "6.2",
-	"geoLong": "-10.36667",
-	"txtName": "MONROVIA/ROBERTS",
-	"codeType": "NDB"
 },
 {
 	"codeId": "ZDN",
@@ -94732,13 +94466,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "PCB",
-	"geoLat": "16.6760167",
-	"geoLong": "101.1967",
-	"txtName": "PHETCHABUN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "FKE",
 	"geoLat": "37.2243056",
 	"geoLong": "140.4370861",
@@ -94751,6 +94478,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "0.7001472",
 	"txtName": "SOUTHEND",
 	"codeType": "NDB"
+},
+{
+	"codeId": "PCB",
+	"geoLat": "16.6760167",
+	"geoLong": "101.1967",
+	"txtName": "PHETCHABUN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "UHM",
@@ -94851,11 +94585,11 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "",
-	"geoLat": "52.461583556",
-	"geoLong": "5.529538417",
-	"txtName": "",
-	"codeType": "ILS_DME"
+	"codeId": "FF",
+	"geoLat": "46.21981639",
+	"geoLong": "-96.05768472",
+	"txtName": "HAMRE",
+	"codeType": "NDB"
 },
 {
 	"codeId": "",
@@ -94865,11 +94599,11 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "FF",
-	"geoLat": "46.21981639",
-	"geoLong": "-96.05768472",
-	"txtName": "HAMRE",
-	"codeType": "NDB"
+	"codeId": "",
+	"geoLat": "52.461583556",
+	"geoLong": "5.529538417",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "TJR",
@@ -94900,18 +94634,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "RAZ",
-	"geoLat": "24.604194",
-	"geoLong": "46.925556",
-	"txtName": "KHASHM ALAN",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "LST",
 	"geoLat": "-19.658899722",
 	"geoLong": "-43.896933333",
 	"txtName": "LAGOA SANTA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "RAZ",
+	"geoLat": "24.604194",
+	"geoLong": "46.925556",
+	"txtName": "KHASHM ALAN",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -94949,18 +94683,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "VKZ",
-	"geoLat": "25.75190167",
-	"geoLong": "-80.15444333",
-	"txtName": "VIRGINIA KEY",
-	"codeType": "VOR"
-},
-{
 	"codeId": "PP",
 	"geoLat": "-40.903",
 	"geoLong": "174.983361",
 	"txtName": "PARAPARAUMU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "VKZ",
+	"geoLat": "25.75190167",
+	"geoLong": "-80.15444333",
+	"txtName": "VIRGINIA KEY",
+	"codeType": "VOR"
 },
 {
 	"codeId": "L",
@@ -95229,18 +94963,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "IPI",
-	"geoLat": "0.8622222",
-	"geoLong": "-77.6730556",
-	"txtName": "IPIALES",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "JDP",
 	"geoLat": "26.2495056",
 	"geoLong": "73.0432583",
 	"txtName": "JODHPUR",
 	"codeType": "VOR"
+},
+{
+	"codeId": "IPI",
+	"geoLat": "0.8622222",
+	"geoLong": "-77.6730556",
+	"txtName": "IPIALES",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "CKL",
@@ -95264,18 +94998,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "FRH",
-	"geoLat": "10.05083",
-	"geoLong": "-10.76",
-	"txtName": "FARANAH",
-	"codeType": "VOR"
-},
-{
 	"codeId": "HIN",
 	"geoLat": "42.82883472",
 	"geoLong": "-103.09374389",
 	"txtName": "WHITNEY",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FRH",
+	"geoLat": "10.05083",
+	"geoLong": "-10.76",
+	"txtName": "FARANAH",
+	"codeType": "VOR"
 },
 {
 	"codeId": "XC",
@@ -95446,17 +95180,17 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "ICNG",
-	"geoLat": "40.734833",
-	"geoLong": "30.097056",
-	"txtName": "KOCAELI/CENGIZ TOPEL",
-	"codeType": "DME"
-},
-{
 	"codeId": "IMA",
 	"geoLat": "43.34975",
 	"geoLong": "77.027417",
 	"txtName": "ALMATY",
+	"codeType": "DME"
+},
+{
+	"codeId": "ICNG",
+	"geoLat": "40.734833",
+	"geoLong": "30.097056",
+	"txtName": "KOCAELI/CENGIZ TOPEL",
 	"codeType": "DME"
 },
 {
@@ -95635,17 +95369,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "LBR",
-	"geoLat": "27.2936028",
-	"geoLong": "94.097925",
-	"txtName": "LILABARI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "KRS",
 	"geoLat": "56.163",
 	"geoLong": "92.536167",
 	"txtName": "KRASNOYARSK",
+	"codeType": "VOR"
+},
+{
+	"codeId": "LBR",
+	"geoLat": "27.2936028",
+	"geoLong": "94.097925",
+	"txtName": "LILABARI",
 	"codeType": "VOR"
 },
 {
@@ -95663,18 +95397,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "RDU",
-	"geoLat": "35.87252111",
-	"geoLong": "-78.78334222",
-	"txtName": "RALEIGH/DURHAM",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "VIW",
 	"geoLat": "46.696350944",
 	"geoLong": "13.914892417",
 	"txtName": "VILLACH",
 	"codeType": "DME"
+},
+{
+	"codeId": "RDU",
+	"geoLat": "35.87252111",
+	"geoLong": "-78.78334222",
+	"txtName": "RALEIGH/DURHAM",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "MLY",
@@ -95712,18 +95446,18 @@ export const navaids: EADdata[] = [
 	"codeType": "DME"
 },
 {
-	"codeId": "VTB",
-	"geoLat": "55.127889",
-	"geoLong": "30.359944",
-	"txtName": "VICIEBSK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "",
 	"geoLat": "38.95333",
 	"geoLong": "-1.73778",
 	"txtName": "OM 27",
 	"codeType": "MKR"
+},
+{
+	"codeId": "VTB",
+	"geoLat": "55.127889",
+	"geoLong": "30.359944",
+	"txtName": "VICIEBSK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TAB",
@@ -95761,13 +95495,6 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "TYI",
-	"geoLat": "35.97672361",
-	"geoLong": "-77.70373167",
-	"txtName": "TAR RIVER",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "MTT",
 	"geoLat": "18.1028806",
 	"geoLong": "-94.5822889",
@@ -95775,18 +95502,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "TYI",
+	"geoLat": "35.97672361",
+	"geoLong": "-77.70373167",
+	"txtName": "TAR RIVER",
+	"codeType": "VORTAC"
+},
+{
 	"codeId": "BJX",
 	"geoLat": "20.9975583",
 	"geoLong": "-101.4825889",
 	"txtName": "LEON",
 	"codeType": "VOR"
-},
-{
-	"codeId": "",
-	"geoLat": "67.809389",
-	"geoLong": "20.314556",
-	"txtName": "",
-	"codeType": "ILS_DME"
 },
 {
 	"codeId": "M",
@@ -95797,8 +95524,8 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "",
-	"geoLat": "51.098955306",
-	"geoLong": "16.893077667",
+	"geoLat": "67.809389",
+	"geoLong": "20.314556",
 	"txtName": "",
 	"codeType": "ILS_DME"
 },
@@ -95808,6 +95535,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-90.42117083",
 	"txtName": "ANGER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "51.098955306",
+	"geoLong": "16.893077667",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "F",
@@ -95929,18 +95663,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "COA",
-	"geoLat": "51.3480083",
-	"geoLong": "3.3553278",
-	"txtName": "COSTA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "DA",
 	"geoLat": "29.14433",
 	"geoLong": "-81.14783",
 	"txtName": "TOMOK",
 	"codeType": "NDB"
+},
+{
+	"codeId": "COA",
+	"geoLat": "51.3480083",
+	"geoLong": "3.3553278",
+	"txtName": "COSTA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "",
@@ -96007,7 +95741,7 @@ export const navaids: EADdata[] = [
 },
 {
 	"codeId": "TUL",
-	"geoLat": "36.19625361",
+	"geoLat": "36.19625333",
 	"geoLong": "-95.78809028",
 	"txtName": "TULSA",
 	"codeType": "VOR"
@@ -96216,18 +95950,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "FYG",
-	"geoLat": "32.88333",
-	"geoLong": "115.73333",
-	"txtName": "FUYANG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "OL",
 	"geoLat": "62.145778",
 	"geoLong": "74.517972",
 	"txtName": "KOGALYM",
 	"codeType": "NDB"
+},
+{
+	"codeId": "FYG",
+	"geoLat": "32.88333",
+	"geoLong": "115.73333",
+	"txtName": "FUYANG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "XLN",
@@ -96279,18 +96013,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "IPE",
-	"geoLat": "43.090271944",
-	"geoLong": "12.513391194",
-	"txtName": "PERUGIA/S.FRANCESCO",
-	"codeType": "DME"
-},
-{
 	"codeId": "KQ",
 	"geoLat": "-21.1048611",
 	"geoLong": "164.87225",
 	"txtName": "",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IPE",
+	"geoLat": "43.090271944",
+	"geoLong": "12.513391194",
+	"txtName": "PERUGIA/S.FRANCESCO",
+	"codeType": "DME"
 },
 {
 	"codeId": "ELI",
@@ -96363,13 +96097,6 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "",
-	"geoLat": "49.501052556",
-	"geoLong": "11.054055694",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "KL",
 	"geoLat": "-3.4359667",
 	"geoLong": "36.9248194",
@@ -96382,6 +96109,13 @@ export const navaids: EADdata[] = [
 	"geoLong": "-141.14",
 	"txtName": "EAGLE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "49.501052556",
+	"geoLong": "11.054055694",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "KVH",
@@ -96412,6 +96146,13 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
+	"codeId": "CF",
+	"geoLat": "-0.0215",
+	"geoLong": "15.5791639",
+	"txtName": "MAKOUA",
+	"codeType": "VOR"
+},
+{
 	"codeId": "LGM",
 	"geoLat": "28.02875",
 	"geoLong": "-17.214889",
@@ -96423,13 +96164,6 @@ export const navaids: EADdata[] = [
 	"geoLat": "26.22922472",
 	"geoLong": "-97.65226472",
 	"txtName": "HARLINGEN",
-	"codeType": "VOR"
-},
-{
-	"codeId": "CF",
-	"geoLat": "-0.0215",
-	"geoLong": "15.5791639",
-	"txtName": "MAKOUA",
 	"codeType": "VOR"
 },
 {
@@ -96468,18 +96202,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "OCS",
-	"geoLat": "41.59021111",
-	"geoLong": "-109.01532861",
-	"txtName": "ROCK SPRINGS",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "UGN",
 	"geoLat": "47.0928389",
 	"geoLong": "81.6591111",
 	"txtName": "URDZHAR",
 	"codeType": "NDB_MKR"
+},
+{
+	"codeId": "OCS",
+	"geoLat": "41.59021111",
+	"geoLong": "-109.01532861",
+	"txtName": "ROCK SPRINGS",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "IBM",
@@ -96524,18 +96258,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "CBL",
-	"geoLat": "33.4205056",
-	"geoLong": "-7.6060333",
-	"txtName": "CASABLANCA / MOHAMMED V",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "IMH",
 	"geoLat": "39.854417",
 	"geoLong": "4.215306",
 	"txtName": "MENORCA",
 	"codeType": "DME"
+},
+{
+	"codeId": "CBL",
+	"geoLat": "33.4205056",
+	"geoLong": "-7.6060333",
+	"txtName": "CASABLANCA / MOHAMMED V",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "VSI",
@@ -96573,18 +96307,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "ALS",
-	"geoLat": "54.9054139",
-	"geoLong": "9.9933778",
-	"txtName": "ALSIE",
-	"codeType": "VOR"
-},
-{
 	"codeId": "LE",
 	"geoLat": "6.230722",
 	"geoLong": "1.306167",
 	"txtName": "LOME/GNASSINGBE EYADEMA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ALS",
+	"geoLat": "54.9054139",
+	"geoLong": "9.9933778",
+	"txtName": "ALSIE",
+	"codeType": "VOR"
 },
 {
 	"codeId": "MEK",
@@ -96706,18 +96440,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "KRS",
-	"geoLat": "58.22833333",
-	"geoLong": "22.51536111",
-	"txtName": "KURESSAARE",
-	"codeType": "DME"
-},
-{
 	"codeId": "ZHM",
 	"geoLat": "43.144239528",
 	"geoLong": "-79.7931925",
 	"txtName": "BINBROOK (HAMILTON)",
 	"codeType": "NDB"
+},
+{
+	"codeId": "KRS",
+	"geoLat": "58.22833333",
+	"geoLong": "22.51536111",
+	"txtName": "KURESSAARE",
+	"codeType": "DME"
 },
 {
 	"codeId": "NT",
@@ -96832,18 +96566,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "DHN",
-	"geoLat": "35.254167",
-	"geoLong": "52.72",
-	"txtName": "DEHNAMAK",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "BLH",
 	"geoLat": "33.59606472",
 	"geoLong": "-114.76127333",
 	"txtName": "BLYTHE",
 	"codeType": "VORTAC"
+},
+{
+	"codeId": "DHN",
+	"geoLat": "35.254167",
+	"geoLong": "52.72",
+	"txtName": "DEHNAMAK",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "TYN",
@@ -96909,18 +96643,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "CMP",
-	"geoLat": "16.636472",
-	"geoLong": "101.984833",
-	"txtName": "CHUM PHAE",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "FHL",
 	"geoLat": "47.431972222",
 	"geoLong": "19.245305556",
 	"txtName": "BUDAPEST 31L",
 	"codeType": "DME"
+},
+{
+	"codeId": "CMP",
+	"geoLat": "16.636472",
+	"geoLong": "101.984833",
+	"txtName": "CHUM PHAE",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MF",
@@ -96937,18 +96671,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "",
-	"geoLat": "",
-	"geoLong": "",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "RYV",
 	"geoLat": "43.17367111",
 	"geoLong": "-88.72528056",
 	"txtName": "ROCK RIVER",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "",
+	"geoLong": "",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "",
@@ -96979,18 +96713,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "RBL",
-	"geoLat": "40.09890972",
-	"geoLong": "-122.23635028",
-	"txtName": "RED BLUFF",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CVD",
 	"geoLat": "48.7775694",
 	"geoLong": "4.1632944",
 	"txtName": "",
 	"codeType": "DME"
+},
+{
+	"codeId": "RBL",
+	"geoLat": "40.09890972",
+	"geoLong": "-122.23635028",
+	"txtName": "RED BLUFF",
+	"codeType": "VOR"
 },
 {
 	"codeId": "V2",
@@ -97035,18 +96769,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "LNZ",
-	"geoLat": "48.229711528",
-	"geoLong": "14.103154694",
-	"txtName": "LINZ",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "AO",
 	"geoLat": "12.058667",
 	"geoLong": "8.54175",
 	"txtName": "KANO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "LNZ",
+	"geoLat": "48.229711528",
+	"geoLong": "14.103154694",
+	"txtName": "LINZ",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "MPI",
@@ -97070,18 +96804,18 @@ export const navaids: EADdata[] = [
 	"codeType": "TACAN"
 },
 {
-	"codeId": "AMR",
-	"geoLat": "36.833167",
-	"geoLong": "-2.259417",
-	"txtName": "ALMERIA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BA",
 	"geoLat": "42.622222",
 	"geoLong": "21.030472",
 	"txtName": "PRISTINA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "AMR",
+	"geoLat": "36.833167",
+	"geoLong": "-2.259417",
+	"txtName": "ALMERIA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "AMB",
@@ -97217,18 +96951,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "NTG",
-	"geoLat": "32.09667",
-	"geoLong": "120.97833",
-	"txtName": "NANTONG",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "SL",
 	"geoLat": "46.833778",
 	"geoLong": "142.715306",
 	"txtName": "YUZHNO-SAKHALINSK/KHOMUTOVO",
 	"codeType": "NDB"
+},
+{
+	"codeId": "NTG",
+	"geoLat": "32.09667",
+	"geoLong": "120.97833",
+	"txtName": "NANTONG",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "DO",
@@ -97287,18 +97021,18 @@ export const navaids: EADdata[] = [
 	"codeType": "ILS_DME"
 },
 {
-	"codeId": "YSE",
-	"geoLat": "38.8107806",
-	"geoLong": "139.7993083",
-	"txtName": "SHONAI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "BIK",
 	"geoLat": "-1.182472",
 	"geoLong": "136.086139",
 	"txtName": "BIAK/FRANS KAISIEPO",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "YSE",
+	"geoLat": "38.8107806",
+	"geoLong": "139.7993083",
+	"txtName": "SHONAI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "RHI",
@@ -97329,18 +97063,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "IMR",
-	"geoLat": "38.317444",
-	"geoLong": "27.007222",
-	"txtName": "IZMIR",
-	"codeType": "VOR"
-},
-{
 	"codeId": "CO",
 	"geoLat": "6.3708056",
 	"geoLong": "2.4025",
 	"txtName": "COTONOU",
 	"codeType": "NDB"
+},
+{
+	"codeId": "IMR",
+	"geoLat": "38.317444",
+	"geoLong": "27.007222",
+	"txtName": "IZMIR",
+	"codeType": "VOR"
 },
 {
 	"codeId": "BUR",
@@ -97357,18 +97091,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR/DME"
 },
 {
-	"codeId": "CEW",
-	"geoLat": "30.82617389",
-	"geoLong": "-86.67914333",
-	"txtName": "CRESTVIEW",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "EW",
 	"geoLat": "40.59367",
 	"geoLong": "-74.23",
 	"txtName": "CHESA",
 	"codeType": "NDB"
+},
+{
+	"codeId": "CEW",
+	"geoLat": "30.82617389",
+	"geoLong": "-86.67914333",
+	"txtName": "CRESTVIEW",
+	"codeType": "VORTAC"
 },
 {
 	"codeId": "HHN",
@@ -97462,18 +97196,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "ABA",
-	"geoLat": "12.50567778",
-	"geoLong": "-69.9431",
-	"txtName": "ARUBA",
-	"codeType": "VOR/DME"
-},
-{
 	"codeId": "MP",
 	"geoLat": "-51.82417",
 	"geoLong": "-58.47111",
 	"txtName": "MOUNT PLEASANT",
 	"codeType": "NDB"
+},
+{
+	"codeId": "ABA",
+	"geoLat": "12.5056806",
+	"geoLong": "-69.9431028",
+	"txtName": "ARUBA",
+	"codeType": "VOR/DME"
 },
 {
 	"codeId": "UKM",
@@ -97483,18 +97217,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "GKA",
-	"geoLat": "40.179722",
-	"geoLong": "25.923667",
-	"txtName": "GOKCEADA",
-	"codeType": "VOR"
-},
-{
 	"codeId": "SWT",
 	"geoLat": "61.28722",
 	"geoLong": "63.66472",
 	"txtName": "SOVETSKIY",
 	"codeType": "DME"
+},
+{
+	"codeId": "GKA",
+	"geoLat": "40.179722",
+	"geoLong": "25.923667",
+	"txtName": "GOKCEADA",
+	"codeType": "VOR"
 },
 {
 	"codeId": "GN",
@@ -97511,18 +97245,18 @@ export const navaids: EADdata[] = [
 	"codeType": "VOR"
 },
 {
-	"codeId": "JPA",
-	"geoLat": "-2.578389",
-	"geoLong": "140.5166667",
-	"txtName": "JAYAPURA/SENTANI",
-	"codeType": "VOR"
-},
-{
 	"codeId": "",
 	"geoLat": "46.4276167",
 	"geoLong": "15.7365028",
 	"txtName": "",
 	"codeType": "MKR"
+},
+{
+	"codeId": "JPA",
+	"geoLat": "-2.578389",
+	"geoLong": "140.5166667",
+	"txtName": "JAYAPURA/SENTANI",
+	"codeType": "VOR"
 },
 {
 	"codeId": "CW",
@@ -97532,18 +97266,18 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "",
-	"geoLat": "51.114630389",
-	"geoLong": "-114.378733806",
-	"txtName": "",
-	"codeType": "ILS_DME"
-},
-{
 	"codeId": "BMR",
 	"geoLat": "47.6712167",
 	"geoLong": "23.3459694",
 	"txtName": "BAIA MARE",
 	"codeType": "NDB"
+},
+{
+	"codeId": "",
+	"geoLat": "51.114630389",
+	"geoLong": "-114.378733806",
+	"txtName": "",
+	"codeType": "ILS_DME"
 },
 {
 	"codeId": "IVP",
@@ -97714,17 +97448,17 @@ export const navaids: EADdata[] = [
 	"codeType": "NDB"
 },
 {
-	"codeId": "AAL",
-	"geoLat": "57.1037194",
-	"geoLong": "9.9955778",
-	"txtName": "AALBORG",
-	"codeType": "VORTAC"
-},
-{
 	"codeId": "MBW",
 	"geoLat": "41.84552222",
 	"geoLong": "-106.00428389",
 	"txtName": "MEDICINE BOW",
 	"codeType": "VOR/DME"
+},
+{
+	"codeId": "AAL",
+	"geoLat": "57.1037194",
+	"geoLong": "9.9955778",
+	"txtName": "AALBORG",
+	"codeType": "VORTAC"
 },
 ]
