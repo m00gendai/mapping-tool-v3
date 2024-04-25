@@ -443,7 +443,7 @@ async function queryTriggerAll(from: string){
     })
   })
 
-const sortedMarkerArray = state.routePredictionActive ? value.split(" ").length > 1 ? routePrediction(value, markerArray) : markerArray : markerArray
+const sortedMarkerArray: L.Marker<any>[] = state.routePredictionActive ? value.split(" ").length > 1 ? routePrediction(value, markerArray) : markerArray : markerArray
 
 
 sortedMarkerArray.forEach((marker) =>{
