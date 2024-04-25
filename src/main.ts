@@ -20,6 +20,7 @@ import "leaflet.geodesic"
 import { coordinateBox } from "./components/CoordinateBox"
 import { createDialog } from "./components/Dialog"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
+import { routePrediction } from "./utils/routePrediction";
 
 if(!state.acceptedLegality){
 createDialog()
@@ -442,13 +443,17 @@ async function queryTriggerAll(from: string){
     })
   })
 
-markerArray.forEach((marker) =>{
+const sortedMarkerArray = routePrediction(value, markerArray)
+
+
+sortedMarkerArray.forEach((marker) =>{
   marker.addTo(map)
   marker.addEventListener("dblclick", function(){
     plotMarker(marker)
   })
 })
-const bounds: L.LatLngBoundsExpression = markerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
+
+const bounds: L.LatLngBoundsExpression = sortedMarkerArray.map(marker => [marker.getLatLng().lat, marker.getLatLng().lng]) as LatLngBoundsLiteral
 const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
 const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
 const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
