@@ -11,11 +11,10 @@ export function routePrediction(value: string, markerArray:L.Marker<any>[]){
 
     const valueArray:string[] = value.toUpperCase().split(" ")
     const sortedMarkerArray: (L.Marker<any> | L.Marker<any>[])[] = []
-
     for(const item of valueArray){
       const temp:L.Marker<any>[] = []
       for(const entry of markerArray){
-        if(entry?.getPopup()?.getContent()?.toString().split("<br>")[0].includes(item)){
+        if(entry?.getPopup()?.getContent()?.toString().split("<br>")[0].toUpperCase().includes(item) || entry?.getPopup()?.getContent()?.toString().split("<br>")[0].toUpperCase().split(" ").includes(item)){ // place is plz first, then name
           temp.push(entry)
         }
       }
@@ -25,6 +24,7 @@ export function routePrediction(value: string, markerArray:L.Marker<any>[]){
     const arr: L.Marker<any>[] = []
 
     sortedMarkerArray.forEach((marker, index)=>{
+        console.log(marker)
       if(index === 0){
         arr.push(marker as L.Marker<any>)
       } else {
