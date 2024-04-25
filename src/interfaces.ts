@@ -42,6 +42,7 @@ export interface State{
     coordinateBoxSelect: string[]
     contextMenuVisible: boolean
     placeCoordinateOptIn: boolean
+    routePredictionActive: boolean
 }
 
 export interface SidebarFlag{
