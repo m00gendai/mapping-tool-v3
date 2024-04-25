@@ -1,13 +1,17 @@
 import * as L from "leaflet"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 
+/*
+    If you wish to know how this works,
+    you must first create an Apple Pie from scratch
+    (ask Carl Sagan about it)
+*/
+
 export function routePrediction(value: string, markerArray:L.Marker<any>[]){
-    console.log(value)
-    console.log(markerArray)
-  
+
     const valueArray:string[] = value.toUpperCase().split(" ")
-    console.log(valueArray)
     const sortedMarkerArray: (L.Marker<any> | L.Marker<any>[])[] = []
+
     for(const item of valueArray){
       const temp:L.Marker<any>[] = []
       for(const entry of markerArray){
@@ -18,8 +22,8 @@ export function routePrediction(value: string, markerArray:L.Marker<any>[]){
       temp.length === 1 ? sortedMarkerArray.push(temp[0]) : sortedMarkerArray.push(temp)
     }
   
-    console.log(sortedMarkerArray)
     const arr: L.Marker<any>[] = []
+
     sortedMarkerArray.forEach((marker, index)=>{
       if(index === 0){
         arr.push(marker as L.Marker<any>)
@@ -29,7 +33,6 @@ export function routePrediction(value: string, markerArray:L.Marker<any>[]){
         } 
         if(Array.isArray(marker)) {
           const p: L.Marker<any> = arr[index-1] as L.Marker<any>
-          console.log(p)
           const p1: LatLon = new LatLon(p.getLatLng().lat, p.getLatLng().lng)
           const dists:number[] = []
           marker.map(item=>{
@@ -43,6 +46,6 @@ export function routePrediction(value: string, markerArray:L.Marker<any>[]){
         }
       } 
     })
-    console.log(arr)
+
     return arr
 }
