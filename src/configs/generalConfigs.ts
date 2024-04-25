@@ -303,5 +303,5 @@ Example: LSZG - KLO - LSZR:
 Without Route Prediction, KLO VOR/DME in Zurich and KLO VOR/DME in the Philippines will be placed on the map.
 With Route Prediction, only KLO VOR/DME in Zurich will be placed on the map.
 
-For a detailed explanation on how the algorhythm works, refer to https://github.com/m00gendai/mapping-tool-v3/tree/main/src/utils.
+For a detailed explanation on how the algorhythm works, refer to https://github.com/m00gendai/mapping-tool-v3/tree/main/src/utils/routePrediction.ts
 `
