@@ -135,6 +135,15 @@ export const settings:Setting[] = [
     max: "1",
     min: "0",
     step: "1",
+  },
+  {
+    id: "routePredictionActive",
+    name: "Route Prediction",
+    type: "range",
+    description: "Opt in or out of the Route Prediction functionality",
+    max: "1",
+    min: "0",
+    step: "1"
   }
 ]
 
@@ -279,3 +288,20 @@ export const toolbarFunctions: ToolbarFunctions ={
   toggleVFR: () => toggleVFR(),
   clearTextareas: () => clearTextareas()
 }
+
+export const warning_routePrediction:string = `
+WARNING WARNING WARNING:
+
+The Route Prediction is an unstable experimental setting.
+It can return erroneous data or break the application.
+Always verify and cross-check results.
+
+The Route Prediction is an algorhythm that analyzes a route input (only from the "ALL" input field) and predicts the most
+probable routing if multiple routing options exist.
+
+Example: LSZG - KLO - LSZR:
+Without Route Prediction, KLO VOR/DME in Zurich and KLO VOR/DME in the Philippines will be placed on the map.
+With Route Prediction, only KLO VOR/DME in Zurich will be placed on the map.
+
+For a detailed explanation on how the algorhythm works, refer to https://github.com/m00gendai/mapping-tool-v3/tree/main/src/utils.
+`
