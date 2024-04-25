@@ -416,8 +416,8 @@ async function queryTriggerAll(from: string){
     textarea.value = deconstructedBrgDist.join(" ")
   }
   if(deconstructedOther.length !== 0){
-    const results: string[][] = await placePlace(deconstructedOther.join(","))
     const textarea = document.getElementById("sidebar_textarea_PLACE")! as HTMLTextAreaElement
+    const results: string[][] = await placePlace(deconstructedOther.join(","))
     if(results.length === 0){
       textarea.value = deconstructedOther.join(",")
     }
