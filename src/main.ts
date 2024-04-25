@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, settings, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs/generalConfigs"
+import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, settings, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions, warning_routePrediction } from "./configs/generalConfigs"
 import { baseMaps } from "./configs/baseMaps"
 import { layerGroups } from "./configs/layerGroups"
 import { chartLayers } from "./configs/chartLayers";
@@ -443,7 +443,7 @@ async function queryTriggerAll(from: string){
     })
   })
 
-const sortedMarkerArray = routePrediction(value, markerArray)
+const sortedMarkerArray = state.routePredictionActive ? value.split(" ").length > 1 ? routePrediction(value, markerArray) : markerArray : markerArray
 
 
 sortedMarkerArray.forEach((marker) =>{
@@ -1273,6 +1273,24 @@ settings.forEach(setting =>{
           state.placeCoordinateOptIn = false
           toggleSwitchOff(customElement)
           localStorage.setItem("AMTV3_placeCoordOptIn", JSON.stringify(state.placeCoordinateOptIn))
+        }
+        range.value = range.value === "1" ? "0" : "1"
+      })
+    }
+    if(setting.id === "routePredictionActive"){
+      range.value = state.routePredictionActive ? "1" : "0"
+      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
+      rangeBox.addEventListener("click", function(){
+        if(range.value === "0"){
+          if(confirm(warning_routePrediction)){
+          state.routePredictionActive = true
+          toggleSwitchOn(customElement)
+          localStorage.setItem("AMTV3_routePredictionActive", JSON.stringify(state.routePredictionActive))
+        }}
+        if(range.value === "1"){
+          state.routePredictionActive = false
+          toggleSwitchOff(customElement)
+          localStorage.setItem("AMTV3_routePredictionActive", JSON.stringify(state.routePredictionActive))
         }
         range.value = range.value === "1" ? "0" : "1"
       })
