@@ -171,7 +171,7 @@ export async function placePlace(placeField:string){
                 if(!(place.properties.result_type === "amenity" && place.properties.street)){
                     const extractCoords:Parsed = parseCoordinates(`${place.properties.lat},${place.properties.lon}`, "Decimal")
 
-                    multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}${state.placeCoordinateOptIn ? `<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ``}`])
+                    multiPlaces.push([place.geometry.coordinates[1], place.geometry.coordinates[0], `${place.properties.address_line1}<br>${place.properties.address_line2}${state.placeCoordOptIn ? `<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ``}`])
                 }
             }
         } else {
