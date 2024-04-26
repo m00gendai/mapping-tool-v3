@@ -1,4 +1,4 @@
-import { QueryInput, SidebarFlag, Setting, Parsed, Distance, Speed, ToolbarFunctions } from "../interfaces"
+import { QueryInput, SidebarFlag, Parsed, Distance, Speed, ToolbarFunctions } from "../interfaces"
 import { map, markerArray, polylineArray, polylineDecoratorArry, polylineMarkerArray, speedInput } from "../main"
 import { state } from "./state"
 import { toggleCharts } from "../charts"
@@ -97,54 +97,6 @@ export const distanceConversions: string[] = [
 
 export const speedConversions: string[] = [
   "km/h", "mph", "m/s", "Knots", "Mach"
-]
-
-export const settings:Setting[] = [
-  {
-    id: "darkmodeToggle",
-    name: "Darkmode",
-    type: "range",
-    description: "Switches between a light and dark background for the interface",
-    max: "1",
-    min: "0",
-    step: "1"
-  },
-  {
-    id: "coordinateBox",
-    name: "Coordinate Tooltip",
-    type: "range",
-    description: "Switches the box that displays the current coordinates when moving the cursor around the map on or off",
-    max: "1",
-    min: "0",
-    step: "1",
-  },
-  {
-    id: "sidebarToggle",
-    name: "Show sidebar by default",
-    type: "range",
-    description: "Sets if the sidebar is hidden or visible on start. Does not impact the sidebar functionality",
-    max: "1",
-    min: "0",
-    step: "1",
-  },
-  {
-    id: "placeCoordOptIn",
-    name: "Show Coordinates in Place Popups",
-    type: "range",
-    description: "Opt in or out of including coordinates in Place Marker Popup",
-    max: "1",
-    min: "0",
-    step: "1",
-  },
-  {
-    id: "routePredictionActive",
-    name: "Route Prediction",
-    type: "range",
-    description: "Opt in or out of the Route Prediction functionality",
-    max: "1",
-    min: "0",
-    step: "1"
-  }
 ]
 
 export const distances:Distance = {
@@ -288,20 +240,3 @@ export const toolbarFunctions: ToolbarFunctions ={
   toggleVFR: () => toggleVFR(),
   clearTextareas: () => clearTextareas()
 }
-
-export const warning_routePrediction:string = `
-WARNING WARNING WARNING:
-
-The Route Prediction is an unstable experimental setting.
-It can return erroneous data or break the application.
-Always verify and cross-check results.
-
-The Route Prediction is an algorhythm that analyzes a route input (only from the "ALL" input field) and predicts the most
-probable routing if multiple routing options exist.
-
-Example: LSZG - KLO - LSZR:
-Without Route Prediction, KLO VOR/DME in Zurich and KLO VOR/DME in the Philippines will be placed on the map.
-With Route Prediction, only KLO VOR/DME in Zurich will be placed on the map.
-
-For a detailed explanation on how the algorhythm works, refer to https://github.com/m00gendai/mapping-tool-v3/tree/main/src/utils/routePrediction.ts
-`
