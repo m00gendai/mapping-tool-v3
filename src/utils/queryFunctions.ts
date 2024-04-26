@@ -59,7 +59,8 @@ export function placeNavaid(navaidValue:String){
         multiAids.forEach(multiAid => {
             for(const navaid of newNavaids){
                 if(multiAid.toUpperCase() == navaid[0]!.toUpperCase()){
-                    multiNavs.push([navaid[1]!, navaid[2]!, `${navaid[0]} ${navaid[4]}<br>${navaid[3]}`])
+                    const extractCoords:Parsed = parseCoordinates(`${navaid[1]},${navaid[2]}`, "Decimal")
+                    multiNavs.push([navaid[1]!, navaid[2]!, `${navaid[0]} ${navaid[4]}<br>${navaid[3]}${state.navaidCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
                 }
             }
         })

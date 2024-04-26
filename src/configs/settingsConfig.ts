@@ -72,6 +72,16 @@ export const settings:Setting[] = [
         step: "1",
         function: lociCoordinateToggle
       },
+      {
+        id: "navaidCoordOptIn",
+        name: "Show Coordinates in NAVAID Popups",
+        type: "range",
+        description: "Opt in or out of including coordinates in NAVAID Marker Popup",
+        max: "1",
+        min: "0",
+        step: "1",
+        function: navaidCoordinateToggle
+      },
     {
       id: "routePredictionActive",
       name: "Route Prediction",
@@ -113,6 +123,10 @@ export const settings:Setting[] = [
 
   function lociCoordinateToggle(){
     state.lociCoordOptIn = !state.lociCoordOptIn
+  }
+
+  function navaidCoordinateToggle(){
+    state.navaidCoordOptIn = !state.navaidCoordOptIn
   }
 
   function routePredictionToggle(){

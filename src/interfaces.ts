@@ -43,6 +43,7 @@ export interface State{
     contextMenuVisible: boolean
     placeCoordOptIn: boolean
     lociCoordOptIn: boolean
+    navaidCoordOptIn: boolean
     routePredictionActive: boolean
 }
 
