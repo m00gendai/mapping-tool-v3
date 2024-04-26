@@ -53,16 +53,6 @@ export const settings:Setting[] = [
       function: sidebarVisibility
     },
     {
-      id: "placeCoordOptIn",
-      name: "Show Coordinates in Place Popups",
-      type: "range",
-      description: "Opt in or out of including coordinates in Place Marker Popup",
-      max: "1",
-      min: "0",
-      step: "1",
-      function: placeCoordinateToggle
-    },
-    {
         id: "lociCoordOptIn",
         name: "Show Coordinates in LOCI Popups",
         type: "range",
@@ -72,6 +62,16 @@ export const settings:Setting[] = [
         step: "1",
         function: lociCoordinateToggle
       },
+    {
+      id: "placeCoordOptIn",
+      name: "Show Coordinates in Place Popups",
+      type: "range",
+      description: "Opt in or out of including coordinates in Place Marker Popup",
+      max: "1",
+      min: "0",
+      step: "1",
+      function: placeCoordinateToggle
+    },
       {
         id: "navaidCoordOptIn",
         name: "Show Coordinates in NAVAID Popups",
@@ -81,6 +81,16 @@ export const settings:Setting[] = [
         min: "0",
         step: "1",
         function: navaidCoordinateToggle
+      },
+      {
+        id: "waypointCoordOptIn",
+        name: "Show Coordinates in WAYPOINT Popups",
+        type: "range",
+        description: "Opt in or out of including coordinates in WAYPOINT Marker Popup",
+        max: "1",
+        min: "0",
+        step: "1",
+        function: waypointCoordinateToggle
       },
     {
       id: "routePredictionActive",
@@ -127,6 +137,10 @@ export const settings:Setting[] = [
 
   function navaidCoordinateToggle(){
     state.navaidCoordOptIn = !state.navaidCoordOptIn
+  }
+
+  function waypointCoordinateToggle(){
+    state.waypointCoordOptIn = !state.waypointCoordOptIn
   }
 
   function routePredictionToggle(){

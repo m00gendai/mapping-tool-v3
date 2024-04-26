@@ -85,7 +85,8 @@ export function placeRep(repField:string){
     multiReps.forEach(multiRep => {
         for(const rep of newReps){
             if(multiRep.toUpperCase() == rep[0].toUpperCase()){
-                multiWays.push([rep[1], rep[2], rep[0]])
+                const extractCoords:Parsed = parseCoordinates(`${rep[1]},${rep[2]}`, "Decimal")
+                multiWays.push([rep[1], rep[2], `${rep[0]}${state.waypointCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
             }
         }
     })
