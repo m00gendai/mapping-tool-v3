@@ -92,6 +92,16 @@ export const settings:Setting[] = [
         step: "1",
         function: waypointCoordinateToggle
       },
+      {
+        id: "brgDistCoordOptIn",
+        name: "Show Coordinates in BRG/DIST Popups",
+        type: "range",
+        description: "Opt in or out of including coordinates in BRG/DIST Marker Popup",
+        max: "1",
+        min: "0",
+        step: "1",
+        function: brgDistCoordinateToggle
+      },
     {
       id: "routePredictionActive",
       name: "Route Prediction",
@@ -141,6 +151,10 @@ export const settings:Setting[] = [
 
   function waypointCoordinateToggle(){
     state.waypointCoordOptIn = !state.waypointCoordOptIn
+  }
+
+  function brgDistCoordinateToggle(){
+    state.bgrDistCoordOptIn = !state.bgrDistCoordOptIn
   }
 
   function routePredictionToggle(){

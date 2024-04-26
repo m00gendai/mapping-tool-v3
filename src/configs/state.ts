@@ -37,5 +37,6 @@ export const state: State ={
     lociCoordOptIn: typeof localStorage.getItem("AMTV3_lociCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_lociCoordOptIn") || "{}") : false,
     navaidCoordOptIn: typeof localStorage.getItem("AMTV3_navaidCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_navaidCoordOptIn") || "{}") : false,
     waypointCoordOptIn: typeof localStorage.getItem("AMTV3_waypointCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_waypointCoordOptIn") || "{}") : false,
+    bgrDistCoordOptIn: typeof localStorage.getItem("AMTV3_bgrDistCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_bgrDistCoordOptIn") || "{}") : false,
     routePredictionActive: typeof localStorage.getItem("AMTV3_routePredictionActive") === "string" ? JSON.parse(localStorage.getItem("AMTV3_routePredictionActive") || "{}") : false,
 }

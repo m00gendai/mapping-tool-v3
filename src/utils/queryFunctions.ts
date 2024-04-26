@@ -124,7 +124,8 @@ export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert
                     const lon:number = parseFloat(mappedNavaid[2]!)
                     const p1 = new LatLon(lat, lon)
                     const p2 = p1.destinationPoint(distanceM, bearing)
-                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${navaid}${brgDist.substring(3,6)}${brgDist.substring(6,9)}`])
+                    const extractCoords:Parsed = parseCoordinates(`${p2._lat.toString()},${p2._lon.toString()}`, "Decimal")
+                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${navaid}${brgDist.substring(3,6)}${brgDist.substring(6,9)}${state.bgrDistCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
                 }
             }
         }
@@ -139,7 +140,8 @@ export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert
                     const lon:number = parseFloat(mappedWaypoint[2])
                     const p1 = new LatLon(lat, lon)
                     const p2 = p1.destinationPoint(distanceM, bearing)
-                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${waypoint}${brgDist.substring(5,8)}${brgDist.substring(8,11)}`])
+                    const extractCoords:Parsed = parseCoordinates(`${p2._lat.toString()},${p2._lon.toString()}`, "Decimal")
+                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${waypoint}${brgDist.substring(5,8)}${brgDist.substring(8,11)}${state.bgrDistCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
                 }
             }
         }

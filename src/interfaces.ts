@@ -45,6 +45,7 @@ export interface State{
     lociCoordOptIn: boolean
     navaidCoordOptIn: boolean
     waypointCoordOptIn: boolean
+    bgrDistCoordOptIn: boolean
     routePredictionActive: boolean
 }
 
