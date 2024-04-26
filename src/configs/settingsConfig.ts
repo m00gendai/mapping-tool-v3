@@ -63,6 +63,16 @@ export const settings:Setting[] = [
       function: placeCoordinateToggle
     },
     {
+        id: "lociCoordOptIn",
+        name: "Show Coordinates in LOCI Popups",
+        type: "range",
+        description: "Opt in or out of including coordinates in LOCI Marker Popup",
+        max: "1",
+        min: "0",
+        step: "1",
+        function: lociCoordinateToggle
+      },
+    {
       id: "routePredictionActive",
       name: "Route Prediction",
       type: "range",
@@ -99,6 +109,10 @@ export const settings:Setting[] = [
 
   function placeCoordinateToggle(){
     state.placeCoordOptIn = !state.placeCoordOptIn
+  }
+
+  function lociCoordinateToggle(){
+    state.lociCoordOptIn = !state.lociCoordOptIn
   }
 
   function routePredictionToggle(){

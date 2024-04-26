@@ -42,6 +42,7 @@ export interface State{
     coordinateBoxSelect: string[]
     contextMenuVisible: boolean
     placeCoordOptIn: boolean
+    lociCoordOptIn: boolean
     routePredictionActive: boolean
 }
 

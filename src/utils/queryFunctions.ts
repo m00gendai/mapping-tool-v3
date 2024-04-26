@@ -30,7 +30,8 @@ export function placeLoci(lociValue:string){
     multiPorts.forEach(multiPort => { // for every searched loci...
         for(const airport of newAirports){ // ...and for every airport array of the multi dimensional airport data array...
             if(multiPort.toUpperCase() == airport[0]!.toUpperCase()){ // if the searched loci equals the airport code of the airport data array...
-                multiLocis.push([airport[1]!, airport[2]!, `${airport[0]}<br>${airport[3]}`])
+                const extractCoords:Parsed = parseCoordinates(`${airport[1]},${airport[2]}`, "Decimal")
+                multiLocis.push([airport[1]!, airport[2]!, `${airport[0]}<br>${airport[3]}${state.lociCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
             } 
         }
     })
