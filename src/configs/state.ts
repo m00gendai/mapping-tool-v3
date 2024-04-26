@@ -20,7 +20,7 @@ export const state: State ={
     checkedAllLayers: typeof localStorage.getItem("AMTV3_layersAll") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layersAll") || "{}") : [],
     layerGroupBuffer: true,
     darkmode: typeof localStorage.getItem("AMTV3_darkmode") !== null ? JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}") : true,
-    sidebarVisible: typeof localStorage.getItem("AMTV3_sidebar") !== null ? JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}") : true,
+    sidebar: typeof localStorage.getItem("AMTV3_sidebar") !== null ? JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}") : true,
     basemapSelect: typeof localStorage.getItem("AMTV3_basemap") === "string" ? localStorage.getItem("AMTV3_basemap") || "{}" : "OSM",
     baseLayer: L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
       attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
@@ -30,9 +30,9 @@ export const state: State ={
     distanceConversionSelect: "Feet",
     speedConversionSelect: "km/h",
     parsedDecimalCoordinates: [],
-    coordinateBoxVisible: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
+    coordinatebox: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
     coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
     contextMenuVisible: false,
-    placeCoordinateOptIn: typeof localStorage.getItem("AMTV3_placeCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_placeCoordOptIn") || "{}") : false,
+    placeCoordOptIn: typeof localStorage.getItem("AMTV3_placeCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_placeCoordOptIn") || "{}") : false,
     routePredictionActive: typeof localStorage.getItem("AMTV3_routePredictionActive") === "string" ? JSON.parse(localStorage.getItem("AMTV3_routePredictionActive") || "{}") : false,
 }

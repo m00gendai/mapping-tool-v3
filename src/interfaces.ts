@@ -30,7 +30,7 @@ export interface State{
     checkedAllLayers: string[]
     layerGroupBuffer: boolean
     darkmode: boolean
-    sidebarVisible: boolean
+    sidebar: boolean
     basemapSelect: string
     baseLayer: L.TileLayer
     drawerVisible: boolean
@@ -38,10 +38,10 @@ export interface State{
     distanceConversionSelect: string
     speedConversionSelect: string
     parsedDecimalCoordinates: string[]
-    coordinateBoxVisible: boolean
+    coordinatebox: boolean
     coordinateBoxSelect: string[]
     contextMenuVisible: boolean
-    placeCoordinateOptIn: boolean
+    placeCoordOptIn: boolean
     routePredictionActive: boolean
 }
 
@@ -155,6 +155,8 @@ export interface Setting{
   min?: string | undefined
   step?: string | undefined
   item?: Item[] | undefined
+  function?: () => void
+  warning?: string
 }
 
 interface Item{
