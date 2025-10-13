@@ -9,7 +9,7 @@ import { baseMaps } from "./configs/baseMaps"
 import { layerGroups } from "./configs/layerGroups"
 import { chartLayers } from "./configs/chartLayers";
 import { state } from "./configs/state"
-import { infos } from "./information"
+import { infos, updates } from "./information"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
 import { QueryInput, State, Parsed, LayerGroup_layer, FrenchPrivateAirport } from "./interfaces"
@@ -293,6 +293,43 @@ function setSidebarVisibility(state:State){
     })
   }
   if(state.sidebarSelect === "info" && document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.childElementCount === 0){
+    const newsSpoilerWrapper = document.createElement("div")
+    newsSpoilerWrapper.setAttribute("class", "toolboxUpdatesWrapper")
+    const newsSpoiler = document.createElement("details")
+    newsSpoiler.setAttribute("class", "toolboxUpdatesSpoiler")
+    
+    const newsSpoilerSummary = document.createElement("summary")
+    
+    newsSpoilerSummary.setAttribute("class", "toolboxUpdatesSpoiler_title")
+    newsSpoiler.appendChild(newsSpoilerSummary)
+    newsSpoilerSummary.textContent = "Toolbox Updates"
+
+    const newsSpoilerContent = document.createElement("div")
+    newsSpoilerContent.setAttribute("class", "toolboxUpdatesSpoiler_content")
+    newsSpoiler.appendChild(newsSpoilerContent)
+    updates.forEach(update =>{
+      const date = document.createElement("p")
+      date.setAttribute("class", "toolboxUpdatesSpoiler_newsTitle")
+      newsSpoilerContent.appendChild(date)
+      date.innerText = update.date
+
+      const news = document.createElement("div")
+      newsSpoilerContent.appendChild(news)
+      news.innerHTML = update.content
+
+      const hr = document.createElement("hr")
+      hr.setAttribute("class", "toolboxUpdatesSpoiler_hr")
+      newsSpoilerContent.appendChild(hr)
+    })
+    
+    document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.appendChild(newsSpoilerWrapper)
+    newsSpoilerWrapper.appendChild(newsSpoiler)
+    const newestUpdateDate = new Date(updates[0].date).getTime()
+      if(new Date(state.updatesReadDate).getTime() < newestUpdateDate){
+        const updateAlert = document.createElement("div")
+        updateAlert.setAttribute("class", "updateAlert2")
+        newsSpoilerWrapper.appendChild(updateAlert)
+      }
     infos.forEach(info =>{
       const title:HTMLHeadingElement = document.createElement("h1")
       title.innerHTML = info.title
@@ -301,6 +338,19 @@ function setSidebarVisibility(state:State){
       content.className="textcontent"
       content.innerHTML = info.content
       document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.appendChild(content)
+    })
+
+    newsSpoiler.addEventListener("click", function(){
+      localStorage.setItem("AMTV3_updatesReadDate", `${new Date().getTime()}`)
+      const notification1 = document.querySelector(".updateAlert1")
+      const notification2 = document.querySelector(".updateAlert2")
+      console.log(notification1)
+      if(notification1 && notification2){
+        console.log("yes")
+        notification1.remove()
+        notification2.remove()
+      }
+
     })
   }
 }
@@ -326,6 +376,14 @@ export function buildSidebarFlags(){
       state.sidebarSelect = flag.type
       setSidebarVisibility(state)
     })
+    if(flag.type === "info"){
+      const newestUpdateDate = new Date(updates[0].date).getTime()
+      if(new Date(state.updatesReadDate).getTime() < newestUpdateDate){
+        const updateAlert = document.createElement("div")
+        updateAlert.setAttribute("class", "updateAlert1")
+        button.appendChild(updateAlert)
+      }
+    }
   })
 }
 
