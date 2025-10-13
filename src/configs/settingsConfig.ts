@@ -154,7 +154,7 @@ export const settings:Setting[] = [
   }
 
   function brgDistCoordinateToggle(){
-    state.bgrDistCoordOptIn = !state.bgrDistCoordOptIn
+    state.brgDistCoordOptIn = !state.brgDistCoordOptIn
   }
 
   function routePredictionToggle(){
