@@ -2,22 +2,25 @@ import { airports } from "../EAD_Data/EAD_AD_ALL"
 import { navaids } from "../EAD_Data/EAD_NAV_ALL"
 import { waypoints } from "../EAD_Data/EAD_WPT_ALL"
 import _ from "lodash"
+import { frenchPrivateAirports } from "../main"
 
 const sameNameLocationsWaypoints = [
     "EVIAN", "ROCHE"
     ]
 
-export function routeDeconstructor(rte:string){
+export async function routeDeconstructor(rte:string){
     const mappedAirports:string[] = airports.map(airport => {return airport.codeId})
+    const filteredFrenchPrivateAirports: string[] = frenchPrivateAirports.filter(item => item.codeterrain).map(item => item.codeterrain)
     const mappedWaypoints:string[] = waypoints.map(waypoint => {return waypoint.codeId})
     const mappedNavaids:string[] = navaids.map(navaid => {return navaid.codeId})
     const foundNavaids:string[] = checkNavaids(rte, mappedNavaids)
     const foundWaypoints:string[] = checkWaypoints(rte, mappedWaypoints)
     const foundBearingDistance:string[] = checkBearingDistance(rte)
     const foundLocis:string[] = checkLocis(rte, mappedAirports)
+    const foundFrenchPrivateAirports:string[] = checkFrenchPrivateAirports(rte, filteredFrenchPrivateAirports)
     const foundOther = checkOther(rte, foundNavaids, foundWaypoints, foundLocis)
     const foundCoordinates = checkCoordinates(rte)
-    return [foundNavaids, foundLocis, foundWaypoints, foundCoordinates, foundBearingDistance, foundOther]
+    return [foundNavaids, foundLocis, foundWaypoints, foundCoordinates, foundBearingDistance, foundOther, foundFrenchPrivateAirports]
 }
 
 function checkNavaids(rte:string, mappedNavaids:string[]){
@@ -57,6 +60,19 @@ function checkLocis(rte:string, mappedAirports:string[]){
         for(const matchingLoci of lociMatch){
             if(mappedAirports.includes((matchingLoci.replace(/[0-9]+/, "")))){
                 locis.push(matchingLoci.replace(/[0-9]+/, ""))
+            }
+        }
+    }
+    return locis
+}
+
+function checkFrenchPrivateAirports(rte:string, filteredFrenchPrivateAirports:string[]){
+    const lociMatch = rte.match(/\b(LF|SO|RM)[0-9]{4}\b/g)
+    let locis = []
+    if (lociMatch) {
+        for(const matchingLoci of lociMatch){
+            if(filteredFrenchPrivateAirports.includes((matchingLoci))){
+                locis.push(matchingLoci)
             }
         }
     }
