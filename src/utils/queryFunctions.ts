@@ -5,6 +5,7 @@ import { waypoints } from "../EAD_Data/EAD_WPT_ALL"
 import { state } from "../configs/state"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 import { Parsed } from "../interfaces"
+import { frenchPrivateAirports } from "../main"
 
 // RETURNS QUERY RESULTS FOR COORDINATES
 export function placeCoords(coordinatesValue:string){
@@ -18,12 +19,45 @@ export function placeCoords(coordinatesValue:string){
 }
 
 // RETURNS QUERY RESULT FOR LOCATION INDICATOR
-export function placeLoci(lociValue:string){
-    const newAirports = airports.map(data => {return [
+export async function placeLoci(lociValue:string){
+
+    const newAirports1 = airports.map(data => {return [
         data.codeId, 
         data.geoLat,
         data.geoLong,
         data.txtName]}) 
+
+    const newAirports2 = frenchPrivateAirports.map(item => {return [
+        item.codeterrain, 
+        item.lat.toString(),
+        item.lon.toString(),
+        item.toponyme]})
+    const newAirports = [...newAirports1, ...newAirports2]
+    const newAirportCodes:string[] = newAirports.map(code => {return code[0] || ""}) // makes a one dimensional array just with airport codes
+    const multiLocis:string[][] = []
+    const multiPorts = lociValue.toUpperCase().split(" ") // splits the input separated by space and makes an array
+    multiPorts.forEach(multiPort => { // for every searched loci...
+        for(const airport of newAirports){ // ...and for every airport array of the multi dimensional airport data array...
+            if(multiPort.toUpperCase() == airport[0]!.toUpperCase()){ // if the searched loci equals the airport code of the airport data array...
+                const extractCoords:Parsed = parseCoordinates(`${airport[1]},${airport[2]}`, "Decimal")
+                multiLocis.push([airport[1]!, airport[2]!, `${airport[0]}<br>${airport[3]}${state.lociCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
+            } 
+        }
+    })
+    const unknownAirports = multiPorts.filter(airport => { return newAirportCodes.indexOf(airport) == -1; }) // filters the searched locis array for items not present in the airport codes array...
+    if(unknownAirports.length > 0){
+        alert(`Airports ${unknownAirports.join(" ")} not found`) //... and alerts each one
+    }
+    
+    return multiLocis
+}
+
+export async function placeFrenchPrivateAirport(lociValue:string){
+    const newAirports = frenchPrivateAirports.map(item => {return [
+        item.codeterrain, 
+        item.lat.toString(),
+        item.lon.toString(),
+        item.toponyme]})
     const newAirportCodes:string[] = newAirports.map(code => {return code[0] || ""}) // makes a one dimensional array just with airport codes
     const multiLocis:string[][] = []
     const multiPorts = lociValue.toUpperCase().split(" ") // splits the input separated by space and makes an array
@@ -125,7 +159,7 @@ export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert
                     const p1 = new LatLon(lat, lon)
                     const p2 = p1.destinationPoint(distanceM, bearing)
                     const extractCoords:Parsed = parseCoordinates(`${p2._lat.toString()},${p2._lon.toString()}`, "Decimal")
-                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${navaid}${brgDist.substring(3,6)}${brgDist.substring(6,9)}${state.bgrDistCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
+                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${navaid}${brgDist.substring(3,6)}${brgDist.substring(6,9)}${state.brgDistCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
                 }
             }
         }
@@ -141,7 +175,7 @@ export function placeBrgDist(BrgDistValue:string){ //TODO: Find a way to convert
                     const p1 = new LatLon(lat, lon)
                     const p2 = p1.destinationPoint(distanceM, bearing)
                     const extractCoords:Parsed = parseCoordinates(`${p2._lat.toString()},${p2._lon.toString()}`, "Decimal")
-                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${waypoint}${brgDist.substring(5,8)}${brgDist.substring(8,11)}${state.bgrDistCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
+                    newMarkerArray.push([p2._lat.toString(), p2._lon.toString(), `${waypoint}${brgDist.substring(5,8)}${brgDist.substring(8,11)}${state.brgDistCoordOptIn ?`<br>${extractCoords.wgs84degMin.coordinates}<br>${extractCoords.decimal.coordinates}` : ""}`])
                 }
             }
         }
