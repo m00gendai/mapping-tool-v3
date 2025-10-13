@@ -184,3 +184,27 @@ export interface EADdata{
 	txtName?: string
 	codeType?: string
 }
+
+export interface FrenchPrivateAirport{
+  lon: number
+  lat: number
+  type: string
+  idfic: string
+  etat: number
+  layer: number
+  order: number
+  toponyme: string
+  codeterrain: string
+  gestionnaire: string
+  adresse: string
+  cp: string
+  ville: string
+  date_maj: string
+  nom_contact: string
+  mail_contact: string
+  tel1: string
+  tel2: string
+  picto: string
+  libpicto: string
+  consignes: string
+}
