@@ -67,7 +67,7 @@ function checkLocis(rte:string, mappedAirports:string[]){
 }
 
 function checkFrenchPrivateAirports(rte:string, filteredFrenchPrivateAirports:string[]){
-    const lociMatch = rte.match(/\b(LF|SO|RM)[0-9]{4}\b/g)
+    const lociMatch = rte.match(/\b(FM|LF|NW|SO|TF)[0-9]{4,5}\b/g)
     let locis = []
     if (lociMatch) {
         for(const matchingLoci of lociMatch){
