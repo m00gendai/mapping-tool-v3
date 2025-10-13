@@ -1,5 +1,18 @@
-import { Info } from "./interfaces"
+import { Info, Update } from "./interfaces"
 import { currentYear } from "./configs/generalConfigs"
+
+export const updates:Update[] = [
+  {
+    date: "13. Oct 2025",
+    content: `
+      <ul>
+        <li>Fixed Setting "Show Coordinates in BRG/DIST Popups not working</li>
+        <li>Added possibility to query French Private Airfields (eg. LF1234) within ALL and LOCI queries</li>
+        <li>Implemented update notifications</li>
+      </ul>
+      `
+  },
+]
 
 export const infos:Info[] = [
   {
