@@ -39,4 +39,5 @@ export const state: State ={
     waypointCoordOptIn: typeof localStorage.getItem("AMTV3_waypointCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_waypointCoordOptIn") || "{}") : false,
     brgDistCoordOptIn: typeof localStorage.getItem("AMTV3_brgDistCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_brgDistCoordOptIn") || "{}") : false,
     routePredictionActive: typeof localStorage.getItem("AMTV3_routePredictionActive") === "string" ? JSON.parse(localStorage.getItem("AMTV3_routePredictionActive") || "{}") : false,
+    updatesReadDate: typeof localStorage.getItem("AMTV3_updatesReadDate") === "string" ? JSON.parse(localStorage.getItem("AMTV3_updatesReadDate") || "{}") : "0",
 }
