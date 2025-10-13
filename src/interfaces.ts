@@ -47,6 +47,7 @@ export interface State{
     waypointCoordOptIn: boolean
     brgDistCoordOptIn: boolean
     routePredictionActive: boolean
+    updatesReadDate: string
 }
 
 export interface SidebarFlag{
@@ -170,6 +171,11 @@ interface Item{
 
 export interface Info{
   title: string
+  content: string
+}
+
+export interface Update{
+  date: string
   content: string
 }
 
