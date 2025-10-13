@@ -444,8 +444,8 @@ async function queryTriggerAll(from: string){
   if(deconstructedFrenchPrivateAirports.length !== 0){
     const results: string[][] = await placeFrenchPrivateAirport(deconstructedFrenchPrivateAirports.join(" "))
     addMarker(results, "airport")
-    const textarea = document.getElementById("sidebar_textarea_BRG/DIST")! as HTMLTextAreaElement
-    textarea.value = deconstructedBrgDist.join(" ")
+    const textarea = document.getElementById("sidebar_textarea_LOCI")! as HTMLTextAreaElement
+    textarea.value += ` ${deconstructedFrenchPrivateAirports.join(" ")}`
   }
 
 
