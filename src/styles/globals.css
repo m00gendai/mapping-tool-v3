@@ -896,3 +896,64 @@ a:visited{
 .layerItem:hover{
     cursor: crosshair;
 }
+.toolboxUpdatesWrapper{
+    position: relative;
+    width: 100%;
+}
+
+.toolboxUpdatesSpoiler{
+    position: relative;
+    width: 100%;
+    background: var(--backgroundColor_highlight);
+    color: black;
+    font-size: 0.8rem;
+}
+
+.toolboxUpdatesSpoiler:hover{
+    cursor: pointer;
+}
+
+.toolboxUpdatesSpoiler_title{
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.toolboxUpdatesSpoiler_content{
+    position: relative;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.toolboxUpdatesSpoiler_newsTitle{
+    font-weight: bold;
+    margin: 0;
+}
+
+.toolboxUpdatesSpoiler_hr{
+    position: relative;
+    width: 100%;
+}
+
+.updateAlert1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background: red;
+}
+
+.updateAlert2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background: red;
+}
