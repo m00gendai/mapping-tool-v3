@@ -2,7 +2,7 @@ import * as L from "leaflet"
 import { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
-import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
+import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace, placeFrenchPrivateAirport } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs/generalConfigs"
 import { baseMaps } from "./configs/baseMaps"
@@ -12,7 +12,7 @@ import { state } from "./configs/state"
 import { infos } from "./information"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
-import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
+import { QueryInput, State, Parsed, LayerGroup_layer, FrenchPrivateAirport } from "./interfaces"
 import { getLayer } from "./layers"
 import { toggleCharts } from "./charts"
 import { parseCoordinates, calcDegToDec, eetToDecimalHours, convertDistance, convertSpeed } from "./utils/conversions"
@@ -22,6 +22,7 @@ import { createDialog } from "./components/Dialog"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 import { routePrediction } from "./utils/routePrediction";
 import { generateSettings } from "./utils/settings";
+import { LFprivateAirports } from "./Offline_Backup_Data/LF_Private_Airports";
 
 if(!state.acceptedLegality){
 createDialog()
@@ -71,6 +72,26 @@ export const chartArray: L.TileLayer[] = []
 const geodesicCircleArray: L.GeodesicCircle[] = []
 const balloonMarkerArray: L.Marker[] = []
 const geodesicLineArray: L.Geodesic[] = []
+
+export const frenchPrivateAirports:FrenchPrivateAirport[] = await (async () => {
+  try {
+      // Await the fetch call to get the data
+      const response = await fetch("https://basulm.ffplum.fr/x_load_terrains_carto.php", { method: "POST" });
+      
+      // Check if the fetch was successful
+      if (!response.ok) {
+      throw new Error(`Fetch failed: ${response.statusText}`);
+      }
+      
+      // Parse and return the JSON data
+      return await response.json();
+  } catch (err) {
+      // If there's an error, return the fallback data
+      console.error("Fetch failed, using fallback data:", err);
+      
+      return LFprivateAirports; // Make sure LFprivateAirports is defined elsewhere in your code
+  }
+  })();
 
 map.addEventListener("mousemove", function(e){
   if(state.coordinatebox && !state.contextMenuVisible){
@@ -379,7 +400,7 @@ async function queryTriggerAll(from: string){
   targetA.value = queryAllState.value.toUpperCase()
   targetB.value = queryAllState.value.toUpperCase()
 
-  const deconstructedRte:string[][] = routeDeconstructor(value.toUpperCase())
+  const deconstructedRte:string[][] = await routeDeconstructor(value.toUpperCase())
   // navaids, locis, waypoints, coordinates, brgDistypeof localStorage.getItem("AMTV3_basemap") !== null ? localStorage.getItem("AMTV
   const deconstructedNavaids:string[] = deconstructedRte[0]
   const deconstructedLocis:string[] = deconstructedRte[1]
@@ -387,6 +408,7 @@ async function queryTriggerAll(from: string){
   const deconstructedCoord:string[] = deconstructedRte[3]
   const deconstructedBrgDist:string[] = deconstructedRte[4]
   const deconstructedOther:string[] = deconstructedRte[5]
+  const deconstructedFrenchPrivateAirports:string[] = deconstructedRte[6]
 
   if(deconstructedNavaids.length !== 0){
     const results: string[][] = placeNavaid(deconstructedNavaids.join(" "))
@@ -396,7 +418,7 @@ async function queryTriggerAll(from: string){
 
   }
   if(deconstructedLocis.length !== 0){
-    const results: string[][] = placeLoci(deconstructedLocis.join(" "))
+    const results: string[][] = await placeLoci(deconstructedLocis.join(" "))
     addMarker(results, "airport")
     const textarea = document.getElementById("sidebar_textarea_LOCI")! as HTMLTextAreaElement
     textarea.value = deconstructedLocis.join(" ")
@@ -419,6 +441,14 @@ async function queryTriggerAll(from: string){
     const textarea = document.getElementById("sidebar_textarea_BRG/DIST")! as HTMLTextAreaElement
     textarea.value = deconstructedBrgDist.join(" ")
   }
+  if(deconstructedFrenchPrivateAirports.length !== 0){
+    const results: string[][] = await placeFrenchPrivateAirport(deconstructedFrenchPrivateAirports.join(" "))
+    addMarker(results, "airport")
+    const textarea = document.getElementById("sidebar_textarea_BRG/DIST")! as HTMLTextAreaElement
+    textarea.value = deconstructedBrgDist.join(" ")
+  }
+
+
   if(deconstructedOther.length !== 0){
     const textarea = document.getElementById("sidebar_textarea_PLACE")! as HTMLTextAreaElement
     const results: string[][] = await placePlace(deconstructedOther.join(","))
@@ -486,7 +516,7 @@ async function queryTrigger(field:QueryInput){
       }
       document.getElementById("api")!.style.display = "flex"
       const results:string[][] = field.designation === "COORD" ? placeCoords(value)! : 
-                                  field.designation === "LOCI" ? placeLoci(value)!  :
+                                  field.designation === "LOCI" ? await placeLoci(value)!  :
                                   field.designation === "NAVAID" ? placeNavaid(value)! :
                                   field.designation === "WAYPOINT" ? placeRep(value)! :
                                   field.designation === "BRG/DIST" ? placeBrgDist(value)! :
