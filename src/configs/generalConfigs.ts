@@ -12,7 +12,7 @@ export const fieldDesignations: QueryInput[] = [
       designation: "LOCI",
       value: "",
       type: "airport",
-      placeholder: "LSPF LOWI LIML",
+      placeholder: "LSPF LOWI LF7421 K93SC",
     },
     {
       designation: "PLACE",
@@ -24,13 +24,13 @@ export const fieldDesignations: QueryInput[] = [
       designation: "NAVAID",
       value: "",
       type: "navaid",
-      placeholder: "TRA ZUE KLO",
+      placeholder: "TRA ZUE J KY",
     },
     {
       designation: "WAYPOINT",
       value: "",
       type: "waypoint",
-      placeholder: "TITIX SONGI AMIKI",
+      placeholder: "TITIX SONGI AMIKI TH904",
     },
     {
       designation: "COORD", 
