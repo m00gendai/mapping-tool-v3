@@ -30,7 +30,7 @@ export interface State{
     checkedAllLayers: string[]
     layerGroupBuffer: boolean
     darkmode: boolean
-    sidebarVisible: boolean
+    sidebar: boolean
     basemapSelect: string
     baseLayer: L.TileLayer
     drawerVisible: boolean
@@ -38,11 +38,16 @@ export interface State{
     distanceConversionSelect: string
     speedConversionSelect: string
     parsedDecimalCoordinates: string[]
-    coordinateBoxVisible: boolean
+    coordinatebox: boolean
     coordinateBoxSelect: string[]
     contextMenuVisible: boolean
-    placeCoordinateOptIn: boolean
+    placeCoordOptIn: boolean
+    lociCoordOptIn: boolean
+    navaidCoordOptIn: boolean
+    waypointCoordOptIn: boolean
+    brgDistCoordOptIn: boolean
     routePredictionActive: boolean
+    updatesReadDate: string
 }
 
 export interface SidebarFlag{
@@ -155,6 +160,8 @@ export interface Setting{
   min?: string | undefined
   step?: string | undefined
   item?: Item[] | undefined
+  function?: () => void
+  warning?: string
 }
 
 interface Item{
@@ -164,6 +171,11 @@ interface Item{
 
 export interface Info{
   title: string
+  content: string
+}
+
+export interface Update{
+  date: string
   content: string
 }
 
@@ -177,4 +189,28 @@ export interface EADdata{
 	geoLong: string
 	txtName?: string
 	codeType?: string
+}
+
+export interface FrenchPrivateAirport{
+  lon: number
+  lat: number
+  type: string
+  idfic: string
+  etat: number
+  layer: number
+  order: number
+  toponyme: string
+  codeterrain: string
+  gestionnaire: string
+  adresse: string
+  cp: string
+  ville: string
+  date_maj: string
+  nom_contact: string
+  mail_contact: string
+  tel1: string
+  tel2: string
+  picto: string
+  libpicto: string
+  consignes: string
 }

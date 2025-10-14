@@ -2,17 +2,17 @@ import * as L from "leaflet"
 import { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
-import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace } from "./utils/queryFunctions"
+import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace, placeFrenchPrivateAirport } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
-import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, settings, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions, warning_routePrediction } from "./configs/generalConfigs"
+import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs/generalConfigs"
 import { baseMaps } from "./configs/baseMaps"
 import { layerGroups } from "./configs/layerGroups"
 import { chartLayers } from "./configs/chartLayers";
 import { state } from "./configs/state"
-import { infos } from "./information"
+import { infos, updates } from "./information"
 import { generateArcLine, createIcon, buildTable, createSVG, getBaseLayer, getBaseAttribution, sortLayersByName, disableControls } from "./utils/generalUtils"
 import "leaflet-polylinedecorator"
-import { QueryInput, State, Parsed, LayerGroup_layer } from "./interfaces"
+import { QueryInput, State, Parsed, LayerGroup_layer, FrenchPrivateAirport } from "./interfaces"
 import { getLayer } from "./layers"
 import { toggleCharts } from "./charts"
 import { parseCoordinates, calcDegToDec, eetToDecimalHours, convertDistance, convertSpeed } from "./utils/conversions"
@@ -21,6 +21,8 @@ import { coordinateBox } from "./components/CoordinateBox"
 import { createDialog } from "./components/Dialog"
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 import { routePrediction } from "./utils/routePrediction";
+import { generateSettings } from "./utils/settings";
+import { LFprivateAirports } from "./Offline_Backup_Data/LF_Private_Airports";
 
 if(!state.acceptedLegality){
 createDialog()
@@ -71,8 +73,28 @@ const geodesicCircleArray: L.GeodesicCircle[] = []
 const balloonMarkerArray: L.Marker[] = []
 const geodesicLineArray: L.Geodesic[] = []
 
+export const frenchPrivateAirports:FrenchPrivateAirport[] = await (async () => {
+  try {
+      // Await the fetch call to get the data
+      const response = await fetch("https://basulm.ffplum.fr/x_load_terrains_carto.php", { method: "POST" });
+      
+      // Check if the fetch was successful
+      if (!response.ok) {
+      throw new Error(`Fetch failed: ${response.statusText}`);
+      }
+      
+      // Parse and return the JSON data
+      return await response.json();
+  } catch (err) {
+      // If there's an error, return the fallback data
+      console.error("Fetch failed, using fallback data:", err);
+      
+      return LFprivateAirports; // Make sure LFprivateAirports is defined elsewhere in your code
+  }
+  })();
+
 map.addEventListener("mousemove", function(e){
-  if(state.coordinateBoxVisible && !state.contextMenuVisible){
+  if(state.coordinatebox && !state.contextMenuVisible){
     document.getElementById("coords")!.style.display = "flex"
     const coordinates:Parsed = parseCoordinates(`${e.latlng.lat},${e.latlng.lng}`, "Decimal")
     document.getElementById("coords")!.innerHTML = ""
@@ -232,6 +254,8 @@ function resizeMinimap(map:L.Map){
   },100)
 }
 
+
+
 function setSidebarVisibility(state:State){
   const sidebars:NodeList = document.querySelectorAll(".sidebarInner")
   sidebars.forEach(sidebar =>{
@@ -269,6 +293,43 @@ function setSidebarVisibility(state:State){
     })
   }
   if(state.sidebarSelect === "info" && document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.childElementCount === 0){
+    const newsSpoilerWrapper = document.createElement("div")
+    newsSpoilerWrapper.setAttribute("class", "toolboxUpdatesWrapper")
+    const newsSpoiler = document.createElement("details")
+    newsSpoiler.setAttribute("class", "toolboxUpdatesSpoiler")
+    
+    const newsSpoilerSummary = document.createElement("summary")
+    
+    newsSpoilerSummary.setAttribute("class", "toolboxUpdatesSpoiler_title")
+    newsSpoiler.appendChild(newsSpoilerSummary)
+    newsSpoilerSummary.textContent = "Toolbox Updates"
+
+    const newsSpoilerContent = document.createElement("div")
+    newsSpoilerContent.setAttribute("class", "toolboxUpdatesSpoiler_content")
+    newsSpoiler.appendChild(newsSpoilerContent)
+    updates.forEach(update =>{
+      const date = document.createElement("p")
+      date.setAttribute("class", "toolboxUpdatesSpoiler_newsTitle")
+      newsSpoilerContent.appendChild(date)
+      date.innerText = update.date
+
+      const news = document.createElement("div")
+      newsSpoilerContent.appendChild(news)
+      news.innerHTML = update.content
+
+      const hr = document.createElement("hr")
+      hr.setAttribute("class", "toolboxUpdatesSpoiler_hr")
+      newsSpoilerContent.appendChild(hr)
+    })
+    
+    document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.appendChild(newsSpoilerWrapper)
+    newsSpoilerWrapper.appendChild(newsSpoiler)
+    const newestUpdateDate = new Date(updates[0].date).getTime()
+      if(new Date(state.updatesReadDate).getTime() < newestUpdateDate){
+        const updateAlert = document.createElement("div")
+        updateAlert.setAttribute("class", "updateAlert2")
+        newsSpoilerWrapper.appendChild(updateAlert)
+      }
     infos.forEach(info =>{
       const title:HTMLHeadingElement = document.createElement("h1")
       title.innerHTML = info.title
@@ -277,6 +338,18 @@ function setSidebarVisibility(state:State){
       content.className="textcontent"
       content.innerHTML = info.content
       document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.appendChild(content)
+    })
+
+    newsSpoiler.addEventListener("click", function(){
+      localStorage.setItem("AMTV3_updatesReadDate", `${new Date().getTime()}`)
+      const notification1 = document.querySelector(".updateAlert1")
+      const notification2 = document.querySelector(".updateAlert2")
+      console.log(notification1)
+      if(notification1 && notification2){
+        notification1.remove()
+        notification2.remove()
+      }
+
     })
   }
 }
@@ -290,7 +363,7 @@ setSidebarVisibility(state)
 const inputArea = document.createElement("div")
 inputArea.className="sidebar_inputArea"
 
-function buildSidebarFlags(){
+export function buildSidebarFlags(){
   document.getElementById("sidebarFlags")!.innerHTML = ""
   sidebarFlags.forEach(flag =>{
     const button:HTMLButtonElement = document.createElement("button")
@@ -302,6 +375,14 @@ function buildSidebarFlags(){
       state.sidebarSelect = flag.type
       setSidebarVisibility(state)
     })
+    if(flag.type === "info"){
+      const newestUpdateDate = new Date(updates[0].date).getTime()
+      if(new Date(state.updatesReadDate).getTime() < newestUpdateDate){
+        const updateAlert = document.createElement("div")
+        updateAlert.setAttribute("class", "updateAlert1")
+        button.appendChild(updateAlert)
+      }
+    }
   })
 }
 
@@ -376,7 +457,7 @@ async function queryTriggerAll(from: string){
   targetA.value = queryAllState.value.toUpperCase()
   targetB.value = queryAllState.value.toUpperCase()
 
-  const deconstructedRte:string[][] = routeDeconstructor(value.toUpperCase())
+  const deconstructedRte:string[][] = await routeDeconstructor(value.toUpperCase())
   // navaids, locis, waypoints, coordinates, brgDistypeof localStorage.getItem("AMTV3_basemap") !== null ? localStorage.getItem("AMTV
   const deconstructedNavaids:string[] = deconstructedRte[0]
   const deconstructedLocis:string[] = deconstructedRte[1]
@@ -384,6 +465,7 @@ async function queryTriggerAll(from: string){
   const deconstructedCoord:string[] = deconstructedRte[3]
   const deconstructedBrgDist:string[] = deconstructedRte[4]
   const deconstructedOther:string[] = deconstructedRte[5]
+  const deconstructedFrenchPrivateAirports:string[] = deconstructedRte[6]
 
   if(deconstructedNavaids.length !== 0){
     const results: string[][] = placeNavaid(deconstructedNavaids.join(" "))
@@ -393,7 +475,7 @@ async function queryTriggerAll(from: string){
 
   }
   if(deconstructedLocis.length !== 0){
-    const results: string[][] = placeLoci(deconstructedLocis.join(" "))
+    const results: string[][] = await placeLoci(deconstructedLocis.join(" "))
     addMarker(results, "airport")
     const textarea = document.getElementById("sidebar_textarea_LOCI")! as HTMLTextAreaElement
     textarea.value = deconstructedLocis.join(" ")
@@ -416,6 +498,14 @@ async function queryTriggerAll(from: string){
     const textarea = document.getElementById("sidebar_textarea_BRG/DIST")! as HTMLTextAreaElement
     textarea.value = deconstructedBrgDist.join(" ")
   }
+  if(deconstructedFrenchPrivateAirports.length !== 0){
+    const results: string[][] = await placeFrenchPrivateAirport(deconstructedFrenchPrivateAirports.join(" "))
+    addMarker(results, "airport")
+    const textarea = document.getElementById("sidebar_textarea_LOCI")! as HTMLTextAreaElement
+    textarea.value += ` ${deconstructedFrenchPrivateAirports.join(" ")}`
+  }
+
+
   if(deconstructedOther.length !== 0){
     const textarea = document.getElementById("sidebar_textarea_PLACE")! as HTMLTextAreaElement
     const results: string[][] = await placePlace(deconstructedOther.join(","))
@@ -457,7 +547,7 @@ const bounds: L.LatLngBoundsExpression = sortedMarkerArray.map(marker => [marker
 const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
 const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
 const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
-map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebarVisible ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
+map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebar ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
 }
 
 queryAllButton.addEventListener("click", function(){
@@ -483,7 +573,7 @@ async function queryTrigger(field:QueryInput){
       }
       document.getElementById("api")!.style.display = "flex"
       const results:string[][] = field.designation === "COORD" ? placeCoords(value)! : 
-                                  field.designation === "LOCI" ? placeLoci(value)!  :
+                                  field.designation === "LOCI" ? await placeLoci(value)!  :
                                   field.designation === "NAVAID" ? placeNavaid(value)! :
                                   field.designation === "WAYPOINT" ? placeRep(value)! :
                                   field.designation === "BRG/DIST" ? placeBrgDist(value)! :
@@ -512,7 +602,7 @@ async function queryTrigger(field:QueryInput){
       const bnds: L.LatLngBounds = new L.LatLngBounds(bounds)
       const sidebarWidth: string = getComputedStyle(document.getElementById("sidebar")!).width
       const sidebarToggleWidth:string = getComputedStyle(document.getElementById("sidebarToggle")!).width
-        map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebarVisible ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
+        map.fitBounds(bnds, {maxZoom:8, paddingTopLeft: [state.sidebar ? parseInt(sidebarWidth+sidebarToggleWidth) : 0, 0]})
      
 }
 
@@ -579,21 +669,9 @@ toolbarButtons.forEach(btn =>{
   })
 })
 
-function triggerColorChange(){
-  document.body.classList.toggle("lightMode")
-  state.darkmode = !state.darkmode
-  buildSidebarFlags()
-  layerGroup.innerHTML = createSVG("layerGroup", state)
-  document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
-  document.getElementById("zoomIn")!.innerHTML = createSVG("zoomIn", state)
-  document.getElementById("zoomOut")!.innerHTML = createSVG("zoomOut", state)
-  vfrLayerDrawerTrigger.innerHTML = createSVG("drawer", state)
-  toolbarButtons.forEach(btn =>{
-    document.getElementById(`toolbar_button_${btn.name}`)!.innerHTML = createSVG(btn.name, state)
-  })
-}
 
-const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
+
+export const layerGroup = document.getElementById("layerGroup") as HTMLDivElement
 layerGroup.innerHTML = createSVG("layerGroup", state)
 layerGroup.style.width ="3rem"
 layerGroup.style.height = "3rem"
@@ -747,17 +825,17 @@ layerGroup.addEventListener("mouseenter", function(){
 
 document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
 document.getElementById("sidebarToggle")!.addEventListener("click", function(){
-  if(state.sidebarVisible){
+  if(state.sidebar){
     document.getElementById("sidebar")!.style.left = "calc(-25vw - 2rem)"
     document.getElementById("coords")!.style.left = "calc(1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_right", state)
   }
-  if(!state.sidebarVisible){
+  if(!state.sidebar){
     document.getElementById("sidebar")!.style.left = "0rem"
     document.getElementById("coords")!.style.left ="calc(25vw + 1rem + 10px)"
     document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
   }
-  state.sidebarVisible = !state.sidebarVisible
+  state.sidebar = !state.sidebar
 })
 document.getElementById("zoomIn")!.innerHTML = createSVG("zoomIn", state)
 document.getElementById("zoomOut")!.innerHTML = createSVG("zoomOut", state)
@@ -773,7 +851,7 @@ const vfrLayerDrawer = document.createElement("div")
 document.getElementById("app")?.appendChild(vfrLayerDrawer)
 vfrLayerDrawer.id = "vfrLayerDrawer"
 
-const vfrLayerDrawerTrigger = document.createElement("div")
+export const vfrLayerDrawerTrigger = document.createElement("div")
 vfrLayerDrawer.appendChild(vfrLayerDrawerTrigger)
 vfrLayerDrawerTrigger.id = "vfrLayerDrawerTrigger"
 vfrLayerDrawerTrigger.innerHTML = createSVG("drawer", state)
@@ -1184,144 +1262,9 @@ removeBalloonCircle.addEventListener("click", function(){
   clearBalloonCircle()
 })
 
-settings.forEach(setting =>{
-  const settingsItem: HTMLDivElement = document.createElement("div")
-  document.getElementById("sidebarInner_settings")!.appendChild(settingsItem)
-  settingsItem.className="sidebarInner_settings_item"
 
-  const settingsTitle = document.createElement("div")
-  settingsItem.appendChild(settingsTitle)
-  settingsTitle.innerText = setting.name
-  settingsTitle.title = setting.description
-  settingsTitle.className = "sidebarInner_settings_title"
 
-  if(setting.type === "range"){
-    const rangeBox: HTMLDivElement = document.createElement("div")
-    settingsItem.appendChild(rangeBox)
-    rangeBox.className="sidebarInner_settings_rangebox"
-    const range: HTMLInputElement = document.createElement("input")
-    rangeBox.appendChild(range)
-    range.type = setting.type
-    range.min = setting.min || ""
-    range.max = setting.max || ""
-    range.step = setting.step || ""
-    const customElement: HTMLDivElement = createRangeInput(setting.name)
-    customElement.id = `range_${setting.name}`
-    rangeBox.appendChild(customElement)
-    if(setting.id === "darkmodeToggle"){
-      range.value = state.darkmode ? "1" : "0"
-      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
-      rangeBox.addEventListener("click", function(){
-        if(range.value === "0"){
-          triggerColorChange()
-          toggleSwitchOn(customElement)
-          localStorage.setItem("AMTV3_darkmode", JSON.stringify(state.darkmode))
-        }
-        if(range.value === "1"){
-          triggerColorChange()
-          toggleSwitchOff(customElement)
-          localStorage.setItem("AMTV3_darkmode", JSON.stringify(state.darkmode))
-        }
-        range.value = range.value === "1" ? "0" : "1"
-      })
-    }
-    if(setting.id === "coordinateBox"){
-      range.value = state.coordinateBoxVisible ? "1" : "0"
-      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
-      rangeBox.addEventListener("click", function(){
-        if(range.value === "0"){
-          state.coordinateBoxVisible = true
-          toggleSwitchOn(customElement)
-          localStorage.setItem("AMTV3_coordinatebox", JSON.stringify(state.coordinateBoxVisible))
-        }
-        if(range.value === "1"){
-          state.coordinateBoxVisible = false
-          toggleSwitchOff(customElement)
-          localStorage.setItem("AMTV3_coordinatebox", JSON.stringify(state.coordinateBoxVisible))
-          document.getElementById("coords")!.style.display = "none"
-        }
-        range.value = range.value === "1" ? "0" : "1"
-      })
-    }
-    if(setting.id === "sidebarToggle"){
-      range.value = state.sidebarVisible ? "1" : "0"
-      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
-      rangeBox.addEventListener("click", function(){
-        if(range.value === "0"){
-          state.sidebarVisible = true
-          toggleSwitchOn(customElement)
-          localStorage.setItem("AMTV3_sidebar", JSON.stringify(state.sidebarVisible))
-        }
-        if(range.value === "1"){
-          state.sidebarVisible = false
-          toggleSwitchOff(customElement)
-          localStorage.setItem("AMTV3_sidebar", JSON.stringify(state.sidebarVisible))
-        }
-        range.value = range.value === "1" ? "0" : "1"
-      })
-    }
-    if(setting.id === "placeCoordOptIn"){
-      range.value = state.placeCoordinateOptIn ? "1" : "0"
-      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
-      rangeBox.addEventListener("click", function(){
-        if(range.value === "0"){
-          state.placeCoordinateOptIn = true
-          toggleSwitchOn(customElement)
-          localStorage.setItem("AMTV3_placeCoordOptIn", JSON.stringify(state.placeCoordinateOptIn))
-        }
-        if(range.value === "1"){
-          state.placeCoordinateOptIn = false
-          toggleSwitchOff(customElement)
-          localStorage.setItem("AMTV3_placeCoordOptIn", JSON.stringify(state.placeCoordinateOptIn))
-        }
-        range.value = range.value === "1" ? "0" : "1"
-      })
-    }
-    if(setting.id === "routePredictionActive"){
-      range.value = state.routePredictionActive ? "1" : "0"
-      range.value === "1" ? toggleSwitchOn(customElement) : toggleSwitchOff(customElement)
-      rangeBox.addEventListener("click", function(){
-        if(range.value === "0"){
-          if(confirm(warning_routePrediction)){
-          state.routePredictionActive = true
-          toggleSwitchOn(customElement)
-          localStorage.setItem("AMTV3_routePredictionActive", JSON.stringify(state.routePredictionActive))
-        }}
-        if(range.value === "1"){
-          state.routePredictionActive = false
-          toggleSwitchOff(customElement)
-          localStorage.setItem("AMTV3_routePredictionActive", JSON.stringify(state.routePredictionActive))
-        }
-        range.value = range.value === "1" ? "0" : "1"
-      })
-    }
-  }
-})
-
-function toggleSwitchOn(customElement:HTMLDivElement){
-  customElement.children[0].classList.remove("range_thumb_left")
-  customElement.children[0].classList.add("range_thumb_right")
-  customElement.children[0].classList.remove("off")
-  customElement.children[0].classList.add("on")
-}
-
-function toggleSwitchOff(customElement:HTMLDivElement){
-  customElement.children[0].classList.remove("range_thumb_right")
-  customElement.children[0].classList.add("range_thumb_left")
-  customElement.children[0].classList.remove("on")
-  customElement.children[0].classList.add("off")
-}
-
-function createRangeInput(name:string){
-  const track: HTMLDivElement = document.createElement("div")
-  track.className = "custom_range_track"
-  
-  const thumb: HTMLDivElement = document.createElement("div")
-  thumb.className = "custom_range_thumb"
-  track.appendChild(thumb)
-  track.id = `range_${name}`
-  return track
-}
+generateSettings()
 
 const minimalQueryAllTextBox: HTMLTextAreaElement = document.createElement("textarea")
 document.getElementById("alternativeQueryAll")!.appendChild(minimalQueryAllTextBox)

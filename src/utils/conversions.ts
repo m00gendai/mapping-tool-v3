@@ -1,9 +1,30 @@
 import convert from "geo-coordinates-parser"
 import { Coord, Forwarded } from "../interfaces"
 import { parsed, distances, speeds } from "../configs/generalConfigs"
-import "proj4"
 import { Dms } from "geodesy/latlon-ellipsoidal-datum"
-import transformation from "transform-coordinates"
+import proj4 from "proj4"
+import epsg from "epsg-index/all.json"
+
+// The following is the transform-coordinates npm package, but since it throws a proj4 error that screws with the dev environment, I have
+// extracted it here and installed proj4 and epsg manually.
+
+const leadingEPSG:RegExp = /^epsg:/i
+
+function transformation(from:any, to:any) {
+	if ('string' !== typeof from) throw new Error('from must be a string')
+	from = from.replace(leadingEPSG, '')
+	// @ts-expect-error
+	const fromEPSG = epsg[from]
+	if (!fromEPSG) throw new Error(from + ' is not a valid EPSG coordinate system')
+
+	if ('string' !== typeof to) throw new Error('to must be a string')
+	to = to.replace(leadingEPSG, '')
+	// @ts-expect-error
+	const toEPSG = epsg[to]
+	if (!toEPSG) throw new Error(to + ' is not a valid EPSG coordinate system')
+
+	return proj4(fromEPSG.proj4, toEPSG.proj4)
+}
 
 export function parseCoordinates(value:string, option:string){
 	// Options: "WGS84 Deg Min", "WGS84 Deg Min Sec", "Decimal", "Swissgrid"	
