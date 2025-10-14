@@ -1,43 +1,64 @@
 import { State } from "../interfaces"
 import L from "leaflet"
 
-export const state: State ={
-    acceptedLegality: typeof localStorage.getItem("AMTV3_agb") === "string" ? JSON.parse(localStorage.getItem("AMTV3_agb") || "{}") : false,
-    popupVisible: false,
-    sidebarSelect: "query",
-    totalDistance: 0,
-    setSpeed: 0,
-    setDep: "",
-    setDist: [],
-    setDest: "",
-    setTime: [],
-    setTimeFields: 0,
-    setTotalDist: 0,
-    setTotalTime: 0,
-    markerClicks: 0,
-    layerGroupVisible: false,
-    checkedLayers: typeof localStorage.getItem("AMTV3_layers") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layers") || "{}") : [],
-    checkedAllLayers: typeof localStorage.getItem("AMTV3_layersAll") === "string" ? JSON.parse(localStorage.getItem("AMTV3_layersAll") || "{}") : [],
-    layerGroupBuffer: true,
-    darkmode: typeof localStorage.getItem("AMTV3_darkmode") !== null ? JSON.parse(localStorage.getItem("AMTV3_darkmode") || "{}") : true,
-    sidebar: typeof localStorage.getItem("AMTV3_sidebar") !== null ? JSON.parse(localStorage.getItem("AMTV3_sidebar") || "{}") : true,
-    basemapSelect: typeof localStorage.getItem("AMTV3_basemap") === "string" ? localStorage.getItem("AMTV3_basemap") || "{}" : "OSM",
-    baseLayer: L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
-      attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
+// ✅ Helper to safely read from localStorage
+function getLocalStorage<T>(key: string, fallback: T): T {
+  try {
+    const item = localStorage.getItem(key)
+    if (item === null || item === undefined) return fallback
+    return JSON.parse(item)
+  } catch {
+    return fallback
+  }
+}
+
+export const state: State = {
+  acceptedLegality: getLocalStorage("AMTV3_agb", false),
+  popupVisible: false,
+  sidebarSelect: "query",
+  totalDistance: 0,
+  setSpeed: 0,
+  setDep: "",
+  setDist: [],
+  setDest: "",
+  setTime: [],
+  setTimeFields: 0,
+  setTotalDist: 0,
+  setTotalTime: 0,
+  markerClicks: 0,
+  layerGroupVisible: false,
+  checkedLayers: getLocalStorage("AMTV3_layers", []),
+  checkedAllLayers: getLocalStorage("AMTV3_layersAll", []),
+  layerGroupBuffer: true,
+
+  // ✅ Corrected null checks
+  darkmode: getLocalStorage("AMTV3_darkmode", true),
+  sidebar: getLocalStorage("AMTV3_sidebar", true),
+
+  basemapSelect:
+    localStorage.getItem("AMTV3_basemap") ||
+    "OSM",
+
+  baseLayer: L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
+    attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`,
   }),
-    drawerVisible: false,
-    coordinateConversionSelect: "WGS84 Deg Min",
-    distanceConversionSelect: "Feet",
-    speedConversionSelect: "km/h",
-    parsedDecimalCoordinates: [],
-    coordinatebox: typeof localStorage.getItem("AMTV3_coordinatebox") !== null ? JSON.parse(localStorage.getItem("AMTV3_coordinatebox") || "{}") : true,
-    coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
-    contextMenuVisible: false,
-    placeCoordOptIn: typeof localStorage.getItem("AMTV3_placeCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_placeCoordOptIn") || "{}") : false,
-    lociCoordOptIn: typeof localStorage.getItem("AMTV3_lociCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_lociCoordOptIn") || "{}") : false,
-    navaidCoordOptIn: typeof localStorage.getItem("AMTV3_navaidCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_navaidCoordOptIn") || "{}") : false,
-    waypointCoordOptIn: typeof localStorage.getItem("AMTV3_waypointCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_waypointCoordOptIn") || "{}") : false,
-    brgDistCoordOptIn: typeof localStorage.getItem("AMTV3_brgDistCoordOptIn") === "string" ? JSON.parse(localStorage.getItem("AMTV3_brgDistCoordOptIn") || "{}") : false,
-    routePredictionActive: typeof localStorage.getItem("AMTV3_routePredictionActive") === "string" ? JSON.parse(localStorage.getItem("AMTV3_routePredictionActive") || "{}") : false,
-    updatesReadDate: typeof localStorage.getItem("AMTV3_updatesReadDate") === "string" ? JSON.parse(localStorage.getItem("AMTV3_updatesReadDate") || "{}") : "0",
+
+  drawerVisible: false,
+  coordinateConversionSelect: "WGS84 Deg Min",
+  distanceConversionSelect: "Feet",
+  speedConversionSelect: "km/h",
+  parsedDecimalCoordinates: [],
+
+  coordinatebox: getLocalStorage("AMTV3_coordinatebox", true),
+  coordinateBoxSelect: ["WGS84", "Decimal", "Swissgrid"],
+  contextMenuVisible: false,
+
+  placeCoordOptIn: getLocalStorage("AMTV3_placeCoordOptIn", false),
+  lociCoordOptIn: getLocalStorage("AMTV3_lociCoordOptIn", false),
+  navaidCoordOptIn: getLocalStorage("AMTV3_navaidCoordOptIn", false),
+  waypointCoordOptIn: getLocalStorage("AMTV3_waypointCoordOptIn", false),
+  brgDistCoordOptIn: getLocalStorage("AMTV3_brgDistCoordOptIn", false),
+  routePredictionActive: getLocalStorage("AMTV3_routePredictionActive", false),
+
+  updatesReadDate: getLocalStorage("AMTV3_updatesReadDate", "0"),
 }
