@@ -346,7 +346,6 @@ function setSidebarVisibility(state:State){
       const notification2 = document.querySelector(".updateAlert2")
       console.log(notification1)
       if(notification1 && notification2){
-        console.log("yes")
         notification1.remove()
         notification2.remove()
       }
