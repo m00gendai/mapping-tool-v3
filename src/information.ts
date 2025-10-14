@@ -3,11 +3,14 @@ import { currentYear } from "./configs/generalConfigs"
 
 export const updates:Update[] = [
   {
-    date: "13. Oct 2025",
+    date: "14. Oct 2025",
     content: `
       <ul>
         <li>Fixed Setting "Show Coordinates in BRG/DIST Popups not working</li>
-        <li>Added possibility to query French Private Airfields (eg. LF1234) within ALL and LOCI queries</li>
+        <li>Added possibility to query French Private Airfields (eg. LF1234) in ALL and LOCI queries</li>
+        <li>Added possibility to query non ICAO Airfields (eg. K6MN3) in LOCI query only</p>
+        <li>Added possibility to query non ICAO Waypoints (eg. TH904) in WAYPOINT query only</p>
+        <li>Added possibility to query one and two letter Navaids (eg. J or KY) in NAVAID query only</p>
         <li>Implemented update notifications</li>
       </ul>
       `
@@ -24,7 +27,7 @@ export const infos:Info[] = [
   },
   {
     title: "EAD Data AIRAC Date",
-    content: `18 APR 24 uploaded 24.04.2024`
+    content: `30 OCT 25 uploaded 14.10.2025`
   },
   {
     title: "Overlay Data Sources",
