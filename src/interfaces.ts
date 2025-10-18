@@ -214,3 +214,40 @@ export interface FrenchPrivateAirport{
   libpicto: string
   consignes: string
 }
+
+export interface FAANOTAM{
+  facilityDesignator: string
+  notamNumber: string
+  featureName: string
+  issueDate: string
+  startDate: string
+  endDate: string
+  source: string
+  sourceType: string
+  icaoMessage: string
+  traditionalMessage: string
+  plainLanguageMessage: string
+  traditionalMessageFrom4thWord: string
+  icaoId: string
+  accountId: string
+  airportName: string
+  procedure: boolean
+  userID: number
+  transactionID: number
+  cancelledOrExpired: boolean
+  digitalTppLink: boolean
+  status: string
+  contractionsExpandedForPlainLanguage: boolean
+  keyword: string
+  snowtam: boolean
+  digitallyTransformed: boolean
+  messageDisplayed: string
+  hasHistory: boolean
+  moreThan300Chars: boolean
+  showingFullText: boolean
+  locID: number
+  defaultIcao: boolean
+  crossoverTransactionID: number
+  crossoverAccountID: string
+  requestID: number
+}
