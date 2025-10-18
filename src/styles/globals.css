@@ -957,3 +957,37 @@ a:visited{
     border-radius: 100%;
     background: red;
 }
+
+.notamContainer{
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.notamSpoiler{
+position: relative;
+    overflow: hidden;
+}
+
+.notamSpoilerTitle{
+
+    padding: 8px; /* Add some padding */
+    cursor: pointer;
+    
+    /* Ellipsis setup */
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ white-space: nowrap;
+    
+    /* Remove default marker */
+    list-style: none;
+}
+.notamSpoilerContent{
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    overflow: auto; /* Allow scrolling if content is too long */
+    word-wrap: break-word; /* Break long words */
+}
