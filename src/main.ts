@@ -23,6 +23,7 @@ import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js'
 import { routePrediction } from "./utils/routePrediction";
 import { generateSettings } from "./utils/settings";
 import { LFprivateAirports } from "./Offline_Backup_Data/LF_Private_Airports";
+import sidebar_liveDabs from "./components/sidebar_liveDabs";
 
 if(!state.acceptedLegality){
 createDialog()
@@ -67,7 +68,7 @@ export const markerArray: L.Marker[] = []
 export const polylineMarkerArray: L.Marker[] = []
 export const polylineArray: L.Polyline[] = []
 export const polylineDecoratorArry: L.PolylineDecorator[] = []
-const layerArray: (string | L.GeoJSON)[][] = []
+export const layerArray: (string | L.GeoJSON)[][] = []
 export const chartArray: L.TileLayer[] = []
 const geodesicCircleArray: L.GeodesicCircle[] = []
 const balloonMarkerArray: L.Marker[] = []
@@ -1262,6 +1263,7 @@ removeBalloonCircle.addEventListener("click", function(){
   clearBalloonCircle()
 })
 
+document.getElementById("sidebarInner_liveDabs")?.appendChild(await sidebar_liveDabs())
 
 
 generateSettings()
