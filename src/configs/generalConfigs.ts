@@ -71,6 +71,10 @@ export const sidebarFlags:SidebarFlag[] = [
       text: "Balloon Flight Area"
     },
     {
+      type: "liveDabs",
+      text: "Display Live DABS Data"
+    },
+    {
       type: "settings",
       text: "Settings"
     },
@@ -238,5 +242,5 @@ export const toolbarFunctions: ToolbarFunctions ={
   removePolyline: () => clearPolylineArray(),
   togglePopup: () => togglePopup(),
   toggleVFR: () => toggleVFR(),
-  clearTextareas: () => clearTextareas()
+  clearTextareas: () => clearTextareas(),
 }
