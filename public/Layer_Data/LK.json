@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-		"ICAO": "LKKN",
+		"ICAO": "LKKV",
 		"Type": "CTR",
         "Name": "CTR KARLOVY VARY 121.230"
       },
@@ -196,7 +196,7 @@
     {
       "type": "Feature",
       "properties": {
-		"ICAO": "LKKN",
+		"ICAO": "LKKV",
 		"Type": "TMA",
         "Name": "TMA III KARLOVY VARY 118.650"
       },
@@ -244,7 +244,7 @@
     {
       "type": "Feature",
       "properties": {
-		"ICAO": "LKKN",
+		"ICAO": "LKKV",
 		"Type": "TMA",
         "Name": "TMA II KARLOVY VARY 118.650"
       },
@@ -308,7 +308,7 @@
     {
       "type": "Feature",
       "properties": {
-		"ICAO": "LKKN",
+		"ICAO": "LKKV",
 		"Type": "TMA",
         "Name": "TMA I KARLOVY VARY 118.650"
       },
