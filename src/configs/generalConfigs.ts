@@ -18,7 +18,7 @@ export const fieldDesignations: QueryInput[] = [
       designation: "PLACE",
       value: "",
       type: "location",
-      placeholder: "Hallau,Bad Zurzach,Freiburg im Breisgau,Dübendorf",
+      placeholder: "Hallau,Bad Zurzach,Freiburg im Breisgau,Matterhorn,Flugsicherungsstrasse 1",
     },
     {
       designation: "NAVAID",
@@ -87,8 +87,11 @@ export const parsed: Parsed = {
   swissgrid: {name: "Swissgrid", coordinates: []},
 }
 
-export const coordinateConversions:string[] = [
-  "WGS84 Deg Min", "WGS84 Deg Min Sec", "Decimal", "Swissgrid"
+export const coordinateConversions:{type: string, placeholder: string}[] = [
+  {type: "WGS84 Deg Min", placeholder: "4742N00827E 4724N00838E"}, 
+  {type: "WGS84 Deg Min Sec", placeholder: "474136N0082711E 472424N0083822E"},
+    {type: "Decimal", placeholder: "47.6934,8.4531, 47.4067,8.6395"},
+      {type: "Swissgrid", placeholder: "2676159,1283026, 2690642,1251352"},
 ]
 
 export const distanceConversions: string[] = [
