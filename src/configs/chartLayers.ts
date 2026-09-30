@@ -36,13 +36,13 @@ export const chartLayers:ChartLayer[] = [
     url: "https://wmts.geo.admin.ch/1.0.0/ch.vbs.sperr-gefahrenzonenkarte/default/current/3857/{z}/{x}/{y}.png",
     description: "Switzerland Sperr- und Gefahrenzonen Chart"
   },
-  {
+ /* {
     id: "LFVFR",
     country: "LF",
     type: "VFR",
     url: `https://wxs.ign.fr/${import.meta.env.VITE_IGN_FRANCE_API_KEY}/geoportail/wmts?service=WMTS&request=GetTile&version=1.0.0&tilematrixset=PM&tilematrix={z}&tilecol={x}&tilerow={y}&layer=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-OACI&format=image/jpeg&style=normal`,
     description: "France VFR Chart"
-  },
+  }, */
   {
     id: "EDVFR",
     country: "ED",
@@ -51,17 +51,31 @@ export const chartLayers:ChartLayer[] = [
     description: "Germany VFR Chart"
   },
   {
-    id: "USIFRHI",
+    id: "USVFRS",
     country: "KD",
-    type: "IFR",
-    url: "https://wms.chartbundle.com/tms/v1.0/enrh/{z}/{x}/{y}.png?type=google",
-    description: "USA IFR ENR High"
+    type: "VFR",
+    url: "https://tiles.arcgis.com/tiles/ssFJjBXIUyZDrSYZ/arcgis/rest/services/VFR_Sectional/MapServer/tile/{z}/{y}/{x}",
+    description: "USA VFR Sectional"
   },
   {
-    id: "USIFRLO",
+    id: "USVFRT",
+    country: "KD",
+    type: "VFR",
+    url: "https://tiles.arcgis.com/tiles/ssFJjBXIUyZDrSYZ/arcgis/rest/services/VFR_Terminal/MapServer/tile/{z}/{y}/{x}",
+    description: "USA VFR Terminal"
+  },
+  {
+    id: "USIFRL",
     country: "KD",
     type: "IFR",
-    url: "https://wms.chartbundle.com/tms/v1.0/enrl/{z}/{x}/{y}.png?type=google",
-    description: "USA IFR ENR Low"
+    url: "https://tiles.arcgis.com/tiles/ssFJjBXIUyZDrSYZ/arcgis/rest/services/IFR_AreaLow/MapServer/tile/{z}/{y}/{x}",
+    description: "USA IFR Low"
+  },
+  {
+    id: "USIFRH",
+    country: "KD",
+    type: "IFR",
+    url: "https://tiles.arcgis.com/tiles/ssFJjBXIUyZDrSYZ/arcgis/rest/services/IFR_High/MapServer/tile/{z}/{y}/{x}",
+    description: "USA IFR High"
   },
 ]
