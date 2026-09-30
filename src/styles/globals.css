@@ -3,6 +3,8 @@
     --backgroundColor_light: #444;
     --backgroundColor_highlight: darkgoldenrod;
     --fontColor: #cacaca;
+    --fontColor_inverse: #050505;
+    --fontColor_onHighlight: #050505;
     --fontColor_persistent: #cacaca;
     --fontColor_highlight: darkgoldenrod;
     --border_color: #cacaca;
@@ -58,6 +60,8 @@
     --backgroundColor_light: #d2d2d2;
     --backgroundColor_highlight: goldenrod;
     --fontColor: #050505;
+    --fontColor_inverse: #EDEADE;
+    --fontColor_onHighlight: #050505;
     --fontColor_highlight: goldenrod;
     --border_color: #050505;
     --border_highlight: goldenrod;
@@ -101,10 +105,18 @@ a:visited{
     color: var(--link_visited);
 }
 
+
+
 .textcontent{
     position: relative;
     width: 100%;
     color: var(--fontColor);
+}
+
+.textContent_inverse{
+    position: relative;
+    width: 100%;
+    color: var(--fontColor_onHighlight);
 }
 
 #app{
@@ -684,6 +696,10 @@ a:visited{
     cursor: pointer;
     user-select: none;
     background-color: var(--button_body_hover);
+}
+
+.buttonActive{
+    border: 2px solid var(--border_highlight);
 }
 
 .sidebarInner_settings_item{
