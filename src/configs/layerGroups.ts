@@ -9,11 +9,11 @@ export const layerGroups:LayerGroup[] = [
         id: "LSASBDRY",
         data: "",
       },
-      {
+      /*{
         name: "LI - Italy ARO Boundary",
         id: "LIMMBDRY",
         data: "",
-      },
+      },*/
       {
         name: "LS - Drone Areas",
         id: "LSASDRONE",
