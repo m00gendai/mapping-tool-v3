@@ -335,7 +335,7 @@ function setSidebarVisibility(state:State){
       title.innerHTML = info.title
       document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.appendChild(title)
       const content:HTMLDivElement = document.createElement("div")
-      content.className="textcontent"
+      content.setAttribute("class", "textcontent")
       content.innerHTML = info.content
       document.getElementById(`sidebarInner_${state.sidebarSelect}`)!.appendChild(content)
     })

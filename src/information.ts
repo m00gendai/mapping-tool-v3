@@ -3,6 +3,15 @@ import { currentYear } from "./configs/generalConfigs"
 
 export const updates:Update[] = [
   {
+    date: "21. Mar 2026",
+    content: `
+      <ul>
+        <li>Updated to EAD Data AIRAC 19 MAR 26</li>
+        <li>Corrected Karlovy Vary TMA Location Indicator to LKKV instead of LKKN</li>
+      </ul>
+      `
+  },
+  {
     date: "26. Nov 2025",
     content: `
       <ul>
