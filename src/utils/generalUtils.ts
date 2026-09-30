@@ -181,7 +181,7 @@ export function buildTable(polylineMarkerArray:L.Marker[], state:State){
 export function getBaseLayer(type:string){
   const map:BaseMap[] = baseMaps.filter(basemap =>  basemap.type === type
   )
-  return map[0].layer
+  return map[0]?.layer ?? baseMaps[0].layer
 }
 export function getBaseAttribution(type:string){
   const map:BaseMap[] = baseMaps.filter(basemap =>  basemap.type === type
