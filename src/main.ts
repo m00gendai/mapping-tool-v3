@@ -2,6 +2,11 @@ import * as L from "leaflet"
 import { LatLngBoundsLiteral } from "leaflet"
 import 'leaflet/dist/leaflet.css';
 import "./styles/globals.css"
+import 'maplibre-gl/dist/maplibre-gl.css';
+import {Map, setWorkerUrl} from 'maplibre-gl';
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
+import '@maplibre/maplibre-gl-leaflet';   // registers L.maplibreGL
+import { osm, inlineSources } from '@versatiles/style';
 import { placeCoords, placeLoci, placeNavaid, placeBrgDist, placeRep, placePlace, placeFrenchPrivateAirport } from "./utils/queryFunctions"
 import { routeDeconstructor } from "./utils/routeDeconstructor"
 import { fieldDesignations, queryAllState, sidebarFlags, coordinateConversions, distanceConversions, distances, speeds, speedConversions, toolbarButtons, toolbarFunctions } from "./configs/generalConfigs"
@@ -28,7 +33,79 @@ if(!state.acceptedLegality){
 createDialog()
 }
 
-document.onreadystatechange = function() {
+let labelLayerPromise: Promise<L.Layer> | null = null;
+
+async function buildLabelLayer(): Promise<L.Layer> {
+  const osmStyle = await inlineSources(
+    osm({
+      theme: 'colorful',
+      projection: 'mercator',
+      urls: { base: 'https://tiles.versatiles.org' },
+    })
+  );
+
+  const labelLayers = osmStyle.layers
+    .filter(l =>
+      l.type === 'symbol' ||
+      (l.type === 'line' && l['source-layer'] === 'boundaries'))
+    .map(l => {
+      if(l.type === 'symbol'){
+        return { ...l, paint: {
+          ...l.paint,
+          'text-color': '#ffffff',
+          'text-halo-color': 'rgba(0,0,0,0.7)',
+          'text-halo-width': 1.5,
+        } }
+      }
+      if(l.type === "line"){
+        return { ...l, paint: {
+          ...l.paint,
+          'line-width': ['case',
+            ['==', ['get', 'admin_level'], 2], 2,
+            1
+          ],
+          'line-color': "rgba(255,255,255,0.3)"
+        } }
+      }
+    })
+
+  const labelStyle = {
+    version: 8 as const,
+    glyphs: osmStyle.glyphs,
+    sprite: osmStyle.sprite,
+    sources: osmStyle.sources,
+    layers: labelLayers,
+  };
+
+  if (!map.getPane('labels')) {
+    const pane = map.createPane('labels');
+    pane.style.zIndex = '250';
+    pane.style.pointerEvents = 'none';
+  }
+
+  return L.maplibreGL({ style: labelStyle, pane: 'labels' } as any);
+}
+
+export function getLabelLayer(): Promise<L.Layer> {
+  if (!labelLayerPromise) {
+    labelLayerPromise = buildLabelLayer().catch(err => {
+      labelLayerPromise = null;   // allow a retry if the fetch failed
+      throw err;
+    });
+  }
+  return labelLayerPromise;
+}
+
+let labelsWanted = false;
+export async function setLabelsVisible(visible: boolean) {
+  labelsWanted = visible;
+  const layer = await getLabelLayer();
+  // Re-check after the await, in case it was toggled again while loading
+  if (labelsWanted && !map.hasLayer(layer)) layer.addTo(map);
+  if (!labelsWanted && map.hasLayer(layer)) layer.removeFrom(map);
+}
+
+document.onreadystatechange = async function() {
   if (document.readyState === "complete") {
     document.getElementById("loader")!.style.display = "none"
     document.getElementById("app")!.style.display = "flex"
@@ -58,9 +135,16 @@ document.onreadystatechange = function() {
         document.getElementById("sidebarToggle")!.innerHTML = createSVG("sidebarToggle_left", state)
       }
     }
+    const currentMap = baseMaps.find(e => e.type === state.basemapSelect)
+    if(currentMap?.needsLabels){
+      setLabelsVisible(true)
+    } else {
+      setLabelsVisible(false)
+    }
   }
 };
 
+setWorkerUrl(workerUrl);
 
 export const map: L.Map = L.map('map', {zoomControl:false}).setView([46.80, 8.22], 8);
 export const markerArray: L.Marker[] = []
@@ -279,13 +363,24 @@ function setSidebarVisibility(state:State){
         basemapButton.classList.toggle("selectedBorder")
       }
       basemapButton.addEventListener("click", function(){
-        document.getElementById(`basemapSelect_${state.basemapSelect}`)!.classList.toggle("selectedBorder")
+        if(document.getElementById(`basemapSelect_${state.basemapSelect}`)){
+          document.getElementById(`basemapSelect_${state.basemapSelect}`)!.classList.toggle("selectedBorder")
+        } else {
+          document.getElementById(`basemapSelect_OSM`)!.classList.toggle("selectedBorder")
+        }
+        
         basemapButton.classList.toggle("selectedBorder")
         state.baseLayer.removeFrom(map)
         state.baseLayer = L.tileLayer(getBaseLayer(basemap.type), {
           attribution: getBaseAttribution(basemap.type)
         })
         state.baseLayer.addTo(map)
+        const currentMap = baseMaps.find(e => e.type === basemap.type)
+    if(currentMap?.needsLabels){
+      setLabelsVisible(true)
+    } else {
+      setLabelsVisible(false)
+    }
         state.basemapSelect = basemap.type
         localStorage.setItem("AMTV3_basemap", state.basemapSelect)
       })
@@ -314,6 +409,7 @@ function setSidebarVisibility(state:State){
       date.innerText = update.date
 
       const news = document.createElement("div")
+      news.setAttribute("class", "textContent_inverse")
       newsSpoilerContent.appendChild(news)
       news.innerHTML = update.content
 
@@ -877,6 +973,7 @@ chartLayers.forEach(layer =>{
   layerButton.className = "layerButton"
   layerButton.addEventListener("click", function(){
     toggleCharts(layer)
+    layerButton.classList.contains("buttonActive") ? layerButton.classList.remove("buttonActive") : layerButton.classList.add("buttonActive")
   })
 })
 
@@ -894,14 +991,32 @@ coordinateConversionInput.className="sidebar_area_select"
 detailsCoordinate.appendChild(coordinateConversionInput)
 coordinateConversionInput.addEventListener("change", function(){
   state.coordinateConversionSelect = coordinateConversionInput.value
+  if(coordinateConversionInputField){
+    coordinateConversionInputField.placeholder = coordinateConversions.find(e => e.type === coordinateConversionInput.value)!.placeholder
+  }
 })
 
 coordinateConversions.forEach(conversion =>{
   const option:HTMLOptionElement = document.createElement("option")
-  option.value = conversion
-  option.text = conversion
+  option.value = conversion.type
+  option.text = conversion.type
   coordinateConversionInput.appendChild(option)
 })
+
+const coordinateConversionInputField:HTMLTextAreaElement = document.createElement("textarea")
+detailsCoordinate.appendChild(coordinateConversionInputField)
+coordinateConversionInputField.className="sidebar_textarea_large_noMargin"
+coordinateConversionInputField.placeholder = coordinateConversions[0].placeholder
+coordinateConversionInputField.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    e.preventDefault()
+    calculateCoordinates()
+  }
+})
+
+
+
+
 
 function calculateCoordinates(){
   const parsedCoordinates: Parsed = parseCoordinates(coordinateConversionInputField.value, state.coordinateConversionSelect)
@@ -925,16 +1040,6 @@ function calculateCoordinates(){
       }
     }
 }
-
-const coordinateConversionInputField:HTMLTextAreaElement = document.createElement("textarea")
-detailsCoordinate.appendChild(coordinateConversionInputField)
-coordinateConversionInputField.className="sidebar_textarea_large_noMargin"
-coordinateConversionInputField.addEventListener("keypress", function(e){
-  if(e.key === "Enter"){
-    e.preventDefault()
-    calculateCoordinates()
-  }
-})
 
 const convertCoordinates: HTMLButtonElement = document.createElement("button")
 detailsCoordinate.appendChild(convertCoordinates)
@@ -965,7 +1070,7 @@ coordinateConversions.forEach((conversion, index) =>{
   textareaField.className=`sidebar_area_wrap`
   const label:HTMLLabelElement = document.createElement("label")
   label.htmlFor = "sidebar_textarea_conversion_${index}"
-  label.innerText=conversion
+  label.innerText=conversion.type
   label.className = "sidebar_area_label"
   textareaField.appendChild(label)
   const textarea: HTMLTextAreaElement = document.createElement("textarea")
