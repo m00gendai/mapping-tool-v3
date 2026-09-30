@@ -9,6 +9,7 @@ export interface BaseMap{
   type: string
   layer: string
   attribution: string
+  needsLabels: boolean
 }
 
 export interface State{
