@@ -3,6 +3,22 @@ import { currentYear } from "./configs/generalConfigs"
 
 export const updates:Update[] = [
   {
+    date: "30. Sep 2026",
+    content: `
+      <ul>
+        <li>Updated to EAD Data AIRAC 30 SEP 26</li>
+        <li>Removed broken Stadia Base Maps</li>
+        <li>Added new Satellite Base Map</li>
+        <li>Added place labels to Satellite Base Maps</li>
+        <li>Removed Broken France VFR Chart</li>
+        <li>Fixed broken US IFR Low & High Charts</li>
+        <li>Added US VFR Sectional & Terminal Charts</li>
+        <li>Added formatting guide to Coordinate Conversion input field</li>
+        <li>Removed Italian ARO Boundary</li>
+      </ul>
+      `
+  },
+  {
     date: "21. Mar 2026",
     content: `
       <ul>
